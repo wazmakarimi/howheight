@@ -88,3 +88,5 @@ export function buildWebAppSchema(canonicalUrl: string, title?: string, descript
     },
   };
 }
+
+export * from './seo/site';

@@ -2,7 +2,8 @@
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE } from '../config/site';
-import { getLocaleFromUrl, getAlternateLocaleLinks, isRTL, t, LOCALES, getLocalizedPath } from '../i18n';
+import { getCanonicalUrl } from '../lib/seo/site';
+import { getLocaleFromUrl, getAlternateLocaleLinks, isRTL, t, LOCALES } from '../i18n';
 import type { Locale } from '../i18n/locales';
 import '../styles/global.css';
 
@@ -19,14 +20,14 @@ const currentPath = Astro.url.pathname;
 const resolvedLocale = Astro.props.locale || getLocaleFromUrl(Astro.url);
 const localeInfo = LOCALES[resolvedLocale] || LOCALES.en;
 
-const defaultCanonical = `${SITE.siteUrl}${getLocalizedPath(currentPath, resolvedLocale)}`;
+const defaultCanonical = getCanonicalUrl(currentPath, resolvedLocale);
 const {
   title = t(resolvedLocale, 'meta.defaultTitle'),
   description = t(resolvedLocale, 'meta.defaultDesc'),
-  canonicalUrl = defaultCanonical,
+  noindex = false,
+  canonicalUrl = noindex ? undefined : defaultCanonical,
   ogImage = SITE.defaultOgImage,
   locale = resolvedLocale,
-  noindex = false,
 } = Astro.props;
 
 // Alternate hreflang tags for all supported languages + x-default (omit on private noindex pages)
@@ -37,7 +38,7 @@ const webAppSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   'name': SITE.name,
-  'url': canonicalUrl,
+  'url': canonicalUrl || defaultCanonical,
   'description': description,
   'applicationCategory': 'UtilityApplication',
   'operatingSystem': 'All modern web browsers',
@@ -58,9 +59,22 @@ const webAppSchema = {
     <title>{title}</title>
     <meta name="description" content={description} />
     {noindex && <meta name="robots" content="noindex, nofollow" />}
-    <link rel="canonical" href={canonicalUrl} />
+    {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Hostname-Aware Environment Control: Non-production preview protection -->
+    <script is:inline>
+      (function () {
+        var h = window.location.hostname;
+        if (h && (h === 'howheight.pages.dev' || h.endsWith('.pages.dev'))) {
+          var m = document.createElement('meta');
+          m.name = 'robots';
+          m.content = 'noindex, nofollow';
+          document.head.appendChild(m);
+        }
+      })();
+    </script>
     <meta name="google-site-verification" content="p9fcyt7e535QpafRqct5b2LZ_RUGUVSViapPgsKCJA0" />
     <meta name="msvalidate.01" content="2A730A2FAF8DA672C0BDBCC548BEB4FA" />
     <meta name="yandex-verification" content="3130af4a5ddbefa4" />

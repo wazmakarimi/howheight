@@ -3,7 +3,9 @@
 # Canonical Domain: https://howheight.org
 # ==============================================================================
 
-# Canonical Domain Enforcement (Single-hop redirect from www and HTTP)
+# Canonical Domain Enforcement (Single-hop redirect from www, HTTP, and preview domain)
+https://howheight.pages.dev/*  https://howheight.org/:splat  301
+http://howheight.pages.dev/*   https://howheight.org/:splat  301
 https://www.howheight.org/*   https://howheight.org/:splat  301!
 http://www.howheight.org/*    https://howheight.org/:splat  301!
 http://howheight.org/*        https://howheight.org/:splat  301!

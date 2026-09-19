@@ -2,14 +2,12 @@
 import Layout from '../layouts/Layout.astro';
 import CategoryIcon from '../components/brand/CategoryIcon.astro';
 import { SITE } from '../config/site';
-
-const canonical = `${SITE.siteUrl}/404/`;
 ---
 
 <Layout
   title={`Page Not Found | ${SITE.name}`}
   description="The page you requested could not be found. Explore our height comparison categories or return to the interactive comparison tool on HowHeight."
-  canonicalUrl={canonical}
+  noindex={true}
 >
   <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
     <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-blue-400 font-black text-2xl mb-6 shadow-soft-sm">

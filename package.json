@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "i18n:check": "node scripts/i18n-check.mjs",
-    "indexnow": "node scripts/submit-indexnow.mjs"
+    "indexnow": "node scripts/submit-indexnow.mjs",
+    "test:seo": "npx --yes tsx scripts/test-domain-seo.mjs"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.5",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.10.2",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.2"
   }
 }
