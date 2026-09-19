@@ -1,9 +1,27 @@
-/*
+# ==============================================================================
+# Cloudflare Pages Domain-Specific Headers: HowHeight
+# ==============================================================================
+
+# Production Custom Domain (Authoritative & Indexable)
+https://howheight.org/*
   X-Robots-Tag: all
   Cache-Control: public, max-age=0, must-revalidate
 
+https://www.howheight.org/*
+  X-Robots-Tag: all
+  Cache-Control: public, max-age=0, must-revalidate
+
+# Cloudflare Pages Preview Domain & Subdomains (Non-Indexable)
+https://howheight.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+# Static Hashed Assets (1 year immutable)
 /_astro/*
   Cache-Control: public, max-age=31536000, immutable
 
+# Static Public Assets (1 day revalidation)
 /assets/*
   Cache-Control: public, max-age=86400, must-revalidate

@@ -102,11 +102,15 @@ runTest('11. public/_redirects routes howheight.pages.dev to howheight.org', () 
   assert(content.includes('http://howheight.pages.dev/*   https://howheight.org/:splat  301'), 'Must have http://howheight.pages.dev/* 301 rule');
 });
 
-runTest('12. public/_headers enforces X-Robots-Tag: all and proper caching', () => {
+runTest('12. public/_headers enforces domain-specific rules (all for prod, noindex for pages.dev)', () => {
   const headersPath = path.resolve(rootDir, 'public/_headers');
   assert(fs.existsSync(headersPath), '_headers file must exist');
   const content = fs.readFileSync(headersPath, 'utf-8');
+  assert(content.includes('https://howheight.org/*'), 'Must have specific rule for howheight.org');
+  assert(content.includes('https://howheight.pages.dev/*'), 'Must have specific rule for howheight.pages.dev');
   assert(content.includes('X-Robots-Tag: all'), 'Must allow indexing on production headers');
+  assert(content.includes('X-Robots-Tag: noindex, nofollow'), 'Must block indexing on pages.dev headers');
+  assert(!content.match(/^\/\*\s*\r?\n\s*X-Robots-Tag:\s*noindex/m), 'Must NOT have global /* noindex rule');
   assert(content.includes('/_astro/*'), 'Must include /_astro/* cache rule');
   assert(content.includes('max-age=31536000, immutable'), 'Must have immutable caching for _astro chunks');
   assert(content.includes('/assets/*'), 'Must include /assets/* cache rule');
