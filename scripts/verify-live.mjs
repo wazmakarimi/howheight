@@ -41,13 +41,14 @@ async function verifyLive() {
   }
 
   console.log('\n====================================================');
-  console.log('3. Checking Sample Subpages: /compare/, /celebrity-height-comparison/');
+  console.log('3. Checking Sample Subpages: /compare/, /celebrity-height-comparison/, /celebrity-height/brad-pitt/');
   console.log('====================================================');
-  for (const p of ['/compare/', '/celebrity-height-comparison/']) {
+  for (const p of ['/compare/', '/celebrity-height-comparison/', '/celebrity-height/brad-pitt/']) {
     const res = await fetch(`https://howheight.org${p}`, { headers: browserHeaders });
     const text = await res.text();
     const c = text.match(/<link rel="canonical" href="([^"]+)"/);
-    console.log(`${p} -> status: ${res.status}, x-robots-tag: ${res.headers.get('x-robots-tag')}, canonical: ${c ? c[1] : 'NONE'}`);
+    const noindex = text.includes('meta name="robots" content="noindex');
+    console.log(`${p} -> status: ${res.status}, x-robots-tag: ${res.headers.get('x-robots-tag')}, canonical: ${c ? c[1] : 'NONE'}, has-meta-noindex: ${noindex}`);
   }
 
   console.log('\n====================================================');
