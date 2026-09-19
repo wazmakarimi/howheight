@@ -1,0 +1,98 @@
+# HowHeight — Comprehensive LLM Knowledge Base
+
+> Website: https://howheight.org  
+> Purpose: Visual height comparison engine, anatomical scaling reference, and height difference calculator.
+
+---
+
+## 1. System Architecture & Measurement Engine
+
+HowHeight uses a mathematically calibrated scaling pipeline designed to render side-by-side silhouettes and models with accurate real-world proportions:
+- Ground Anchor: All standing figures share a common floor baseline ($Y = 0$).
+- Proportional Scaling: Heights are converted from centimeters to stage pixels according to dynamic canvas heights (default ~620px viewport baseline).
+- Unit Conversions:
+  - $1 \text{ inch} = 2.54 \text{ cm}$
+  - $\text{Feet \& Inches}: \text{feet} = \lfloor \frac{\text{cm}}{30.48} \rfloor, \text{inches} = \text{round}((\frac{\text{cm}}{30.48} - \text{feet}) \times 12)$
+- Supported Formats: Metric (meters, centimeters), Imperial (feet, inches).
+
+---
+
+## 2. Tools and URLs
+
+### Core Platform
+- **Visual Canvas:** `https://howheight.org/`  
+  Supports up to 10 entities simultaneously. Features include color assignment, opacity adjustment, drag-and-drop manual positioning, auto-align mode, zoom (50%–200%), ruler toggle (cm/ft), difference indicators, and high-resolution PNG export.
+- **Height Difference Calculator:** `https://howheight.org/height-difference-calculator/`  
+  Direct input calculator showing absolute difference, percentage difference, ratio comparison, eye-level alignment estimate, and contextual comparisons (e.g. difference in terms of soda cans, tennis balls, or step heights).
+- **Height Comparison Chart:** `https://howheight.org/height-comparison-chart/`  
+  Visual scale benchmark reference ranging from 50 cm to 300+ cm.
+- **How to Use:** `https://howheight.org/how-to-use/`  
+  Comprehensive instructional guide for accurate height measurements, standing posture tips, and visual scale interpretation.
+
+---
+
+## 3. Entity Classification & Taxonomies
+
+HowHeight organizes over 1,400 entities across 10 structured categories:
+
+1. **Celebrities (`/celebrity-height-comparison/`)**:
+   Actors, athletes, public figures, historical leaders.
+   - Example routes:
+     - `/celebrity-height/brad-pitt/` (180 cm / 5'11")
+     - `/celebrity-height/taylor-swift/` (180 cm / 5'11")
+     - `/celebrity-height/dwayne-johnson/` (196 cm / 6'5")
+     - `/celebrity-height/tom-cruise/` (170 cm / 5'7")
+     - `/celebrity-height/virat-kohli/` (175 cm / 5'9")
+
+2. **Animals (`/animal-height-comparison/`)**:
+   Terrestrial and aquatic fauna measured by standing height or shoulder height.
+   - Example routes:
+     - `/animal-height-comparison/giraffe/` (550 cm / 18'0")
+     - `/animal-height-comparison/african-elephant/` (330 cm / 10'10")
+     - `/animal-height-comparison/lion/` (120 cm / 3'11")
+     - `/animal-height-comparison/horse/` (160 cm / 5'3")
+
+3. **Anime & Manga (`/anime-height-comparison/`)**:
+   Canonical character heights from popular series including Dragon Ball, One Piece, Naruto, Attack on Titan, and Bleach.
+
+4. **Films & Characters (`/film-height-comparison/`, `/fictional-character-height-comparison/`)**:
+   Cinematic creatures, superheroes, video game figures, comic characters.
+
+5. **Everyday Objects & Architecture (`/object-height-comparison/`)**:
+   Standard physical items providing real-world spatial anchors.
+   - Examples: Door (203 cm), Refrigerator (175 cm), Sedan Car (145 cm), Dining Table (76 cm), Chair (85 cm), Bicycle (100 cm).
+
+6. **Plants & Trees (`/plant-height-comparison/`)**:
+   Botanical specimens from standard indoor potted plants (40 cm) to giant sequoias and palm trees.
+
+7. **Sports Equipment (`/sports-height-comparison/`)**:
+   Regulation basketball hoops (305 cm / 10'0"), tennis nets (91 cm), soccer goals (244 cm), volleyball nets (243 cm).
+
+8. **Human Demographic Benchmarks (`/people-height-comparison/`)**:
+   Global statistical averages for adult males (175 cm) and adult females (163 cm).
+
+---
+
+## 4. Multilingual Coverage & Locales
+
+HowHeight supports complete bidirectional localization across 9 languages:
+- `en` (English) — Source of truth
+- `hi` (Hindi) — `/hi/`
+- `es` (Spanish) — `/es/`
+- `fr` (French) — `/fr/`
+- `de` (German) — `/de/`
+- `pt` (Portuguese) — `/pt/`
+- `ja` (Japanese) — `/ja/`
+- `ko` (Korean) — `/ko/`
+- `ar` (Arabic, RTL) — `/ar/`
+
+All localized hubs include native translations, canonical links, and alternate hreflang annotations.
+
+---
+
+## 5. Metadata, Robots, & Sitemaps
+
+- Sitemap: `https://howheight.org/sitemap.xml`
+- Robots: `https://howheight.org/robots.txt`
+- LLM Manifest: `https://howheight.org/llms.txt`
+- Full Knowledge Base: `https://howheight.org/llms-full.txt`
