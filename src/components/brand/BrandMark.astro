@@ -1,0 +1,29 @@
+---
+interface Props {
+  className?: string;
+  size?: 'sm' | 'md' | 'lg';
+}
+
+const { className = '', size = 'md' } = Astro.props;
+
+const dimensions = {
+  sm: 'w-7 h-7',
+  md: 'w-9 h-9',
+  lg: 'w-11 h-11',
+}[size];
+---
+
+<div class={`relative rounded-xl bg-gradient-to-tr from-brand-600 via-blue-600 to-indigo-600 flex items-center justify-center text-white shadow-soft-sm flex-shrink-0 ${dimensions} ${className}`} aria-hidden="true">
+  <!-- Minimal geometric symbol: Two vertical measurement marks with different heights & tick marks on aligned baseline -->
+  <svg viewBox="0 0 28 28" fill="none" class="w-5 h-5 text-white" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Baseline floor -->
+    <path d="M4 23H24" stroke-width="2.2" stroke-opacity="0.9" />
+    <!-- Taller figure/ruler mark (Left) -->
+    <path d="M9 23V6" stroke-width="2.6" />
+    <path d="M9 11H12" stroke-width="2" />
+    <path d="M9 17H12" stroke-width="2" />
+    <!-- Shorter figure/ruler mark (Right) -->
+    <path d="M19 23V12" stroke-width="2.6" stroke="#93c5fd" />
+    <path d="M16 17H19" stroke-width="2" stroke="#93c5fd" />
+  </svg>
+</div>

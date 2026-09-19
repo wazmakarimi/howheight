@@ -1,0 +1,202 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../ComparisonTool.astro';
+import Breadcrumbs from '../seo/Breadcrumbs.astro';
+import RelatedComparisons from '../seo/RelatedComparisons.astro';
+import RelatedCategories from '../seo/RelatedCategories.astro';
+import FAQSection from '../seo/FAQSection.astro';
+import { type ComparisonDefinition, resolveComparisonItems } from '../../data/comparisons';
+import { cmToFeetInches } from '../../lib/height';
+import { SITE } from '../../config/site';
+import { getLocalizedPath, getLocalizedEntityName, t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+import {
+  getEntityRoute,
+  getCategoryRoute,
+  getSafeInternalUrl,
+  getRelatedComparisons,
+  getRelatedCategories,
+} from '../../lib/internal-linking';
+
+interface Props {
+  comp: ComparisonDefinition;
+  locale?: Locale;
+}
+
+const { comp, locale = 'en' } = Astro.props;
+const canonical = `${SITE.siteUrl}${getLocalizedPath(`/compare/${comp.slug}/`, locale)}`;
+const preloadedItems = resolveComparisonItems(comp.items);
+
+// Calculate difference between first two items
+const itemA = preloadedItems[0];
+const itemB = preloadedItems[1];
+
+let diffCm = 0;
+let diffStatement = '';
+let tallerItem = itemA;
+let shorterItem = itemB;
+
+const nameA = itemA ? getLocalizedEntityName(itemA.id, itemA.name, locale) : '';
+const nameB = itemB ? getLocalizedEntityName(itemB.id, itemB.name, locale) : '';
+
+if (itemA && itemB) {
+  diffCm = Math.abs(itemA.heightCm - itemB.heightCm);
+  const diffInches = (diffCm / 2.54).toFixed(1);
+  if (itemA.heightCm === itemB.heightCm) {
+    diffStatement = `${nameA} and ${nameB} have the exact same reference height (${itemA.heightCm} cm).`;
+  } else if (itemA.heightCm > itemB.heightCm) {
+    tallerItem = itemA;
+    shorterItem = itemB;
+    diffStatement = `${nameA} is ${diffCm} cm (${diffInches} inches) taller than ${nameB}.`;
+  } else {
+    tallerItem = itemB;
+    shorterItem = itemA;
+    diffStatement = `${nameB} is ${diffCm} cm (${diffInches} inches) taller than ${nameA}.`;
+  }
+}
+
+// Entity Profiles and Parent Category Routes
+const refA = comp.items[0];
+const refB = comp.items[1];
+const rawRouteA = refA ? getEntityRoute(refA.category, refA.id) : null;
+const rawRouteB = refB ? getEntityRoute(refB.category, refB.id) : null;
+const urlA = rawRouteA ? getSafeInternalUrl(rawRouteA, locale) : null;
+const urlB = rawRouteB ? getSafeInternalUrl(rawRouteB, locale) : null;
+const catUrlA = refA ? getSafeInternalUrl(getCategoryRoute(refA.category), locale) : null;
+const catUrlB = refB ? getSafeInternalUrl(getCategoryRoute(refB.category), locale) : null;
+
+// Related Comparisons via Central Engine
+const relatedComparisons = getRelatedComparisons({
+  excludeSlug: comp.slug,
+  entityId: refA?.id || refB?.id,
+  category: refA?.category,
+  limit: 6,
+  locale,
+});
+
+// Related Categories via Deterministic Topic Graph
+const primaryCategory = refA?.category || 'celebrities';
+const relatedCategories = getRelatedCategories(primaryCategory, 3, locale);
+
+const ftA = itemA ? cmToFeetInches(itemA.heightCm) : null;
+const ftB = itemB ? cmToFeetInches(itemB.heightCm) : null;
+
+// Localized H1
+const pageH1 = `${nameA} vs ${nameB} ${t(locale, 'nav.compare')}`;
+---
+
+<Layout
+  title={`${pageH1} | ${SITE.name}`}
+  description={comp.description}
+  canonicalUrl={canonical}
+  locale={locale}
+>
+  <div class="max-w-[1720px] mx-auto px-2 sm:px-4 lg:px-6 py-3 sm:py-6">
+    <div class="mb-4 px-2">
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { name: 'Home', url: '/' },
+          { name: t(locale, 'nav.compare'), url: '/compare/' },
+          { name: `${nameA} vs ${nameB}`, url: `/compare/${comp.slug}/` },
+        ]}
+      />
+    </div>
+
+    <!-- Comparison Header Banner -->
+    <header class="mb-6 px-2 text-center max-w-4xl mx-auto">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-blue-400 bg-brand-50 dark:bg-slate-800 px-3 py-1 rounded-full">
+        {t(locale, 'section.curatedMatchup')}
+      </span>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+        {pageH1}
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
+        {comp.description}
+      </p>
+
+      <!-- Quick Stats Card with Entity Profile & Category Links -->
+      {itemA && itemB && (
+        <div class="mt-4 p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft max-w-2xl mx-auto grid grid-cols-2 gap-4 text-center">
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700 flex flex-col justify-between">
+            <div>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium block">{nameA}</span>
+              <span class="text-lg sm:text-xl font-black text-slate-900 dark:text-white block mt-0.5">{itemA.heightCm} {t(locale, 'unit.cm')}</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-bold block">{ftA?.formatted}</span>
+            </div>
+            <div class="mt-3 pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex flex-col gap-1 text-[11px]">
+              {urlA ? (
+                <a href={urlA} class="font-bold text-brand-600 dark:text-blue-400 hover:underline">
+                  {nameA} {t(locale, 'nav.compare')} →
+                </a>
+              ) : null}
+              {catUrlA ? (
+                <a href={catUrlA} class="text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-blue-400 hover:underline">
+                  {refA?.category} Hub
+                </a>
+              ) : null}
+            </div>
+          </div>
+
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-100 dark:border-slate-700 flex flex-col justify-between">
+            <div>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-medium block">{nameB}</span>
+              <span class="text-lg sm:text-xl font-black text-slate-900 dark:text-white block mt-0.5">{itemB.heightCm} {t(locale, 'unit.cm')}</span>
+              <span class="text-xs text-slate-500 dark:text-slate-400 font-bold block">{ftB?.formatted}</span>
+            </div>
+            <div class="mt-3 pt-2 border-t border-slate-200/60 dark:border-slate-700/60 flex flex-col gap-1 text-[11px]">
+              {urlB ? (
+                <a href={urlB} class="font-bold text-brand-600 dark:text-blue-400 hover:underline">
+                  {nameB} {t(locale, 'nav.compare')} →
+                </a>
+              ) : null}
+              {catUrlB ? (
+                <a href={catUrlB} class="text-slate-500 dark:text-slate-400 hover:text-brand-600 dark:hover:text-blue-400 hover:underline">
+                  {refB?.category} Hub
+                </a>
+              ) : null}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {diffStatement && (
+        <p class="mt-3 text-xs sm:text-sm font-semibold text-brand-700 dark:text-blue-300 bg-brand-50 dark:bg-blue-950/40 border border-brand-200/80 dark:border-blue-800/60 rounded-xl py-2 px-4 inline-block">
+          📏 {diffStatement}
+        </p>
+      )}
+    </header>
+
+    <!-- Main Interactive Comparison Tool -->
+    <ComparisonTool initialComparisonSlug={comp.slug} locale={locale} />
+
+    <!-- Related Comparisons via Central Engine -->
+    {relatedComparisons.length > 0 && (
+      <div class="max-w-5xl mx-auto mt-16 px-4">
+        <RelatedComparisons
+          comparisons={relatedComparisons}
+          title={t(locale, 'section.comparisonsTitle') || 'Related Height Comparisons'}
+          locale={locale}
+        />
+      </div>
+    )}
+
+    <!-- Related Categories Hub -->
+    {relatedCategories.length > 0 && (
+      <div class="max-w-5xl mx-auto mt-12 px-4">
+        <RelatedCategories
+          categories={relatedCategories}
+          locale={locale}
+        />
+      </div>
+    )}
+
+    <!-- Curated FAQs -->
+    <div class="max-w-4xl mx-auto mt-12 px-4 mb-16">
+      <FAQSection
+        title={`${nameA} vs ${nameB} FAQ`}
+        faqs={comp.faqs}
+      />
+    </div>
+  </div>
+</Layout>

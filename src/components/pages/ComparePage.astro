@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../ComparisonTool.astro';
+import { SITE } from '../../config/site';
+import Breadcrumbs from '../seo/Breadcrumbs.astro';
+import { getLocalizedPath, t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/compare/', locale)}`;
+---
+
+<Layout
+  title={t(locale, 'compare.title')}
+  description={t(locale, 'compare.desc')}
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+>
+  <div class="max-w-[1720px] mx-auto px-2 sm:px-4 lg:px-6 py-3 sm:py-6">
+    <div class="mb-3 px-2">
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { name: 'Home', url: '/' },
+          { name: t(locale, 'nav.compare'), url: '/compare/' },
+        ]}
+      />
+    </div>
+
+    <!-- Main Comparison Workspace -->
+    <ComparisonTool locale={locale} />
+  </div>
+</Layout>

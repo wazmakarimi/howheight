@@ -1,0 +1,73 @@
+---
+import { getLocaleFromUrl, t } from '../i18n';
+import type { Locale } from '../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+  showSchema?: boolean;
+}
+
+const { locale = getLocaleFromUrl(Astro.url), showSchema = true } = Astro.props;
+
+const faqItems = [
+  { question: t(locale, 'faq.q1'), answer: t(locale, 'faq.a1') },
+  { question: t(locale, 'faq.q2'), answer: t(locale, 'faq.a2') },
+  { question: t(locale, 'faq.q3'), answer: t(locale, 'faq.a3') },
+  { question: t(locale, 'faq.q4'), answer: t(locale, 'faq.a4') },
+  { question: t(locale, 'faq.q5'), answer: t(locale, 'faq.a5') },
+  { question: t(locale, 'faq.q6'), answer: t(locale, 'faq.a6') },
+  { question: t(locale, 'faq.q7'), answer: t(locale, 'faq.a7') },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  'mainEntity': faqItems.map((item) => ({
+    '@type': 'Question',
+    'name': item.question,
+    'acceptedAnswer': {
+      '@type': 'Answer',
+      'text': item.answer,
+    },
+  })),
+};
+---
+
+<section id="faq" class="mt-16 pt-10 border-t border-slate-200 dark:border-slate-800 scroll-mt-20">
+  {showSchema && (
+    <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />
+  )}
+
+  <div class="max-w-3xl mx-auto">
+    <div class="text-center mb-10">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-blue-400 bg-brand-50 dark:bg-slate-800 px-3 py-1 rounded-full">
+        {t(locale, 'faq.badge')}
+      </span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mt-3">
+        {t(locale, 'faq.title')}
+      </h2>
+      <p class="text-sm text-slate-500 dark:text-slate-400 mt-2">
+        {t(locale, 'faq.subtitle')}
+      </p>
+    </div>
+
+    <!-- Accordion List -->
+    <div class="space-y-3">
+      {faqItems.map((item) => (
+        <details class="group bg-white dark:bg-slate-800 rounded-2xl border border-slate-200/80 dark:border-slate-700 shadow-soft-sm p-4 sm:p-5 [&_summary::-webkit-details-marker]:hidden">
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-slate-900 dark:text-white text-sm sm:text-base hover:text-brand-600 dark:hover:text-blue-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 rounded-lg">
+            <span>{item.question}</span>
+            <span class="ml-4 flex-shrink-0 w-7 h-7 rounded-full bg-slate-100 dark:bg-slate-700 flex items-center justify-center text-slate-500 dark:text-slate-400 group-open:rotate-180 group-open:bg-brand-50 dark:group-open:bg-blue-950/40 group-open:text-brand-600 dark:group-open:text-blue-400 transition-transform">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-3 text-sm text-slate-600 dark:text-slate-300 leading-relaxed pt-2 border-t border-slate-100 dark:border-slate-700/60">
+            {item.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

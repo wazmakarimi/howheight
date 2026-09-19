@@ -1,0 +1,196 @@
+---
+import BrandLogo from './brand/BrandLogo.astro';
+import LanguageSwitcher from './i18n/LanguageSwitcher.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import { getLocaleFromUrl, getLocalizedPath, t } from '../i18n';
+import type { Locale } from '../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = getLocaleFromUrl(Astro.url) } = Astro.props;
+
+const mainNav = [
+  { label: t(locale, 'nav.compare'), href: getLocalizedPath('/compare/', locale) },
+  { label: t(locale, 'nav.celebrities'), href: getLocalizedPath('/celebrity-height-comparison/', locale) },
+  { label: t(locale, 'nav.anime'), href: getLocalizedPath('/anime-height-comparison/', locale) },
+  { label: t(locale, 'nav.films'), href: getLocalizedPath('/film-height-comparison/', locale) },
+  { label: t(locale, 'nav.animals'), href: getLocalizedPath('/animal-height-comparison/', locale) },
+  { label: t(locale, 'nav.objects'), href: getLocalizedPath('/object-height-comparison/', locale) },
+];
+
+const moreNav = [
+  { label: t(locale, 'nav.plants'), href: getLocalizedPath('/plant-height-comparison/', locale) },
+  { label: t(locale, 'nav.sports'), href: getLocalizedPath('/sports-height-comparison/', locale) },
+  { label: t(locale, 'nav.apparel'), href: getLocalizedPath('/apparel-height-comparison/', locale) },
+  { label: t(locale, 'nav.fictional'), href: getLocalizedPath('/fictional-character-height-comparison/', locale) },
+  { label: t(locale, 'nav.people'), href: getLocalizedPath('/people-height-comparison/', locale) },
+  { label: t(locale, 'nav.calculator'), href: getLocalizedPath('/height-difference-calculator/', locale) },
+  { label: t(locale, 'nav.chart'), href: getLocalizedPath('/height-comparison-chart/', locale) },
+  { label: t(locale, 'nav.howToUse'), href: getLocalizedPath('/how-to-use/', locale) },
+];
+---
+
+<header class="sticky top-0 z-40 w-full bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors shadow-xs">
+  <div class="max-w-[1680px] mx-auto px-4 sm:px-6 lg:px-8 h-15 flex items-center justify-between gap-4">
+    <!-- Brand Logo -->
+    <BrandLogo size="md" showTagline={false} />
+
+    <!-- Desktop Navigation -->
+    <nav class="hidden lg:flex items-center gap-5 text-[13px] font-semibold text-slate-600 dark:text-slate-300">
+      {mainNav.map((item) => (
+        <a
+          href={item.href}
+          class="hover:text-brand-600 dark:hover:text-blue-400 transition-colors py-1 hover:border-b-2 hover:border-brand-600"
+        >
+          {item.label}
+        </a>
+      ))}
+
+      <!-- "More" Dropdown Menu -->
+      <div class="relative group">
+        <button
+          type="button"
+          class="flex items-center gap-1 hover:text-brand-600 dark:hover:text-blue-400 py-1 transition-colors focus:outline-none"
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
+          <span>{t(locale, 'nav.more')}</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 group-hover:rotate-180 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </button>
+
+        <!-- Dropdown Content -->
+        <div class="absolute right-0 top-full pt-2 hidden group-hover:block group-focus-within:block w-52">
+          <div class="rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft-lg py-2 text-xs">
+            <div class="px-3 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">{t(locale, 'nav.categoriesHeader')}</div>
+            {moreNav.slice(0, 5).map((m) => (
+              <a
+                href={m.href}
+                class="block px-3 py-1.5 font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-brand-600 dark:hover:text-blue-400 transition-colors"
+              >
+                {m.label}
+              </a>
+            ))}
+            <div class="my-1 border-t border-slate-100 dark:border-slate-700"></div>
+            <div class="px-3 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">{t(locale, 'nav.utilitiesHeader')}</div>
+            {moreNav.slice(5).map((m) => (
+              <a
+                href={m.href}
+                class="block px-3 py-1.5 font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-brand-600 dark:hover:text-blue-400 transition-colors"
+              >
+                {m.label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Desktop CTA, Language Switcher & Theme Toggle -->
+    <div class="hidden sm:flex items-center gap-2.5 flex-shrink-0">
+      <!-- Language Switcher -->
+      <LanguageSwitcher currentLocale={locale} />
+
+      <!-- Dark / Night Theme Toggle Button -->
+      <ThemeToggle />
+
+      <a
+        href={getLocalizedPath('/height-difference-calculator/', locale)}
+        class="hidden xl:inline-flex items-center px-3 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-lg transition-colors"
+      >
+        {t(locale, 'nav.calculator')}
+      </a>
+      <a
+        href={getLocalizedPath('/compare/', locale)}
+        class="inline-flex items-center justify-center px-4 py-2 text-xs sm:text-sm font-bold text-white bg-brand-600 hover:bg-brand-700 active:bg-brand-800 rounded-lg shadow-soft-sm transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+      >
+        {t(locale, 'nav.startComparing')}
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 ml-1.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="5" y1="12" x2="19" y2="12"></line>
+          <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+      </a>
+    </div>
+
+    <!-- Mobile Hamburger Menu Button, Language Switcher & Theme Toggle -->
+    <div class="flex sm:hidden items-center gap-2">
+      <LanguageSwitcher currentLocale={locale} />
+      <ThemeToggle />
+      <button
+        id="mobile-menu-btn"
+        type="button"
+        class="inline-flex items-center justify-center p-2 rounded-lg text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Toggle navigation menu"
+      >
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu Dropdown -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 px-4 pt-3 pb-6 space-y-1 shadow-soft-md max-h-[85vh] overflow-y-auto">
+    <div class="font-bold text-[11px] uppercase tracking-wider text-slate-400 px-3 py-1">{t(locale, 'nav.categoriesHeader')}</div>
+    {mainNav.map((item) => (
+      <a
+        href={item.href}
+        class="block px-3 py-2 rounded-md text-sm font-semibold text-slate-700 dark:text-slate-200 hover:text-brand-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 mobile-link"
+      >
+        {item.label}
+      </a>
+    ))}
+
+    <div class="font-bold text-[11px] uppercase tracking-wider text-slate-400 px-3 pt-3 pb-1 border-t border-slate-100 dark:border-slate-800 mt-2">{t(locale, 'nav.utilitiesHeader')}</div>
+    {moreNav.map((item) => (
+      <a
+        href={item.href}
+        class="block px-3 py-1.5 rounded-md text-xs font-semibold text-slate-600 dark:text-slate-300 hover:text-brand-600 dark:hover:text-blue-400 hover:bg-slate-50 dark:hover:bg-slate-800 mobile-link"
+      >
+        {item.label}
+      </a>
+    ))}
+
+    <div class="pt-3">
+      <a href={getLocalizedPath('/compare/', locale)} class="w-full inline-flex items-center justify-center px-4 py-2.5 text-sm font-bold text-white bg-brand-600 hover:bg-brand-700 rounded-lg shadow-sm mobile-link">
+        {t(locale, 'nav.startComparing')}
+      </a>
+    </div>
+  </div>
+</header>
+
+<script>
+  const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const hamburgerIcon = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+  const mobileLinks = document.querySelectorAll('.mobile-link');
+
+  if (mobileMenuBtn && mobileMenu && hamburgerIcon && closeIcon) {
+    const toggleMenu = () => {
+      const isExpanded = mobileMenuBtn.getAttribute('aria-expanded') === 'true';
+      mobileMenuBtn.setAttribute('aria-expanded', String(!isExpanded));
+      mobileMenu.classList.toggle('hidden');
+      hamburgerIcon.classList.toggle('hidden');
+      closeIcon.classList.toggle('hidden');
+    };
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        if (!mobileMenu.classList.contains('hidden')) {
+          toggleMenu();
+        }
+      });
+    });
+  }
+</script>

@@ -1,0 +1,48 @@
+---
+import type { FAQItem } from '../../lib/seo';
+import { buildFaqSchema } from '../../lib/seo';
+
+interface Props {
+  title?: string;
+  faqs: FAQItem[];
+}
+
+const { title = 'Frequently Asked Questions', faqs } = Astro.props;
+const faqSchema = buildFaqSchema(faqs);
+---
+
+{faqs && faqs.length > 0 && (
+  <section class="mt-16 pt-10 border-t border-slate-200">
+    {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}
+
+    <div class="mb-6">
+      <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+        {title}
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-500 mt-1">
+        Common questions and reference measurement data.
+      </p>
+    </div>
+
+    <div class="space-y-3">
+      {faqs.map((faq, index) => (
+        <details 
+          class="group p-4 sm:p-5 rounded-2xl bg-white border border-slate-200/80 shadow-soft-sm open:border-brand-200 transition-colors"
+          open={index === 0}
+        >
+          <summary class="flex items-center justify-between cursor-pointer font-bold text-sm sm:text-base text-slate-900 list-none select-none">
+            <span>{faq.question}</span>
+            <span class="w-6 h-6 rounded-full bg-slate-100 group-open:bg-brand-50 group-open:text-brand-600 flex items-center justify-center text-slate-500 text-xs font-bold transition-all flex-shrink-0 ml-3">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 transition-transform group-open:rotate-180" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </span>
+          </summary>
+          <p class="mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed pt-2 border-t border-slate-100">
+            {faq.answer}
+          </p>
+        </details>
+      ))}
+    </div>
+  </section>
+)}

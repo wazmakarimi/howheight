@@ -1,0 +1,43 @@
+---
+import { getAssetById } from '../lib/assetRegistry';
+
+interface Props {
+  name: string;
+  gender: 'male' | 'female';
+  heightCm: number;
+  color: string;
+  heightPx?: number;
+  class?: string;
+}
+
+const {
+  name,
+  gender,
+  heightCm,
+  color,
+  heightPx = 300,
+  class: className = '',
+} = Astro.props;
+
+const asset = getAssetById(gender === 'female' ? 'female-01' : 'male-01')!;
+---
+
+<div 
+  class={`human-model-container flex flex-col items-center justify-end ${className}`} 
+  style={`height: ${heightPx}px; width: auto;`}
+  data-name={name}
+  data-gender={gender}
+  data-height-cm={heightCm}
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox={asset.viewBox}
+    preserveAspectRatio="xMidYMax meet"
+    class="human-svg w-auto h-full block"
+    aria-label={`${name}, ${gender}, ${heightCm} cm`}
+  >
+    <g fill={color}>
+      <Fragment set:html={asset.innerMarkup} />
+    </g>
+  </svg>
+</div>

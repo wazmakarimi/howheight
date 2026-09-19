@@ -1,0 +1,110 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE } from '../config/site';
+import { getLocaleFromUrl, getAlternateLocaleLinks, isRTL, t, LOCALES, getLocalizedPath } from '../i18n';
+import type { Locale } from '../i18n/locales';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+  canonicalUrl?: string;
+  ogImage?: string;
+  locale?: Locale;
+  noindex?: boolean;
+}
+
+const currentPath = Astro.url.pathname;
+const resolvedLocale = Astro.props.locale || getLocaleFromUrl(Astro.url);
+const localeInfo = LOCALES[resolvedLocale] || LOCALES.en;
+
+const defaultCanonical = `${SITE.siteUrl}${getLocalizedPath(currentPath, resolvedLocale)}`;
+const {
+  title = t(resolvedLocale, 'meta.defaultTitle'),
+  description = t(resolvedLocale, 'meta.defaultDesc'),
+  canonicalUrl = defaultCanonical,
+  ogImage = SITE.defaultOgImage,
+  locale = resolvedLocale,
+  noindex = false,
+} = Astro.props;
+
+// Alternate hreflang tags for all supported languages + x-default (omit on private noindex pages)
+const alternateLinks = noindex ? [] : getAlternateLocaleLinks(currentPath);
+
+// JSON-LD Structured Data
+const webAppSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  'name': SITE.name,
+  'url': canonicalUrl,
+  'description': description,
+  'applicationCategory': 'UtilityApplication',
+  'operatingSystem': 'All modern web browsers',
+  'browserRequirements': 'Requires JavaScript enabled for interactive visual scaling',
+  'offers': {
+    '@type': 'Offer',
+    'price': '0',
+    'priceCurrency': 'USD',
+  },
+};
+---
+
+<!doctype html>
+<html lang={locale} dir={isRTL(locale) ? 'rtl' : 'ltr'} class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
+    <link rel="canonical" href={canonicalUrl} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- Alternate Hreflang Tags (Official Internationalization SEO) -->
+    {alternateLinks.map((alt) => (
+      <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
+    ))}
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content={SITE.name} />
+    <meta property="og:locale" content={localeInfo.ogLocale} />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalUrl} />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Google Fonts: Inter & Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800&display=swap" rel="stylesheet" />
+
+    <!-- Dark mode initializer -->
+    <script is:inline>
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
+    <slot name="head" />
+  </head>
+  <body class="bg-slate-50 dark:bg-slate-900 font-sans text-slate-900 dark:text-slate-100 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen transition-colors duration-200">
+    <Header locale={locale} />
+    <main class="flex-grow">
+      <slot />
+    </main>
+    <Footer locale={locale} />
+  </body>
+</html>

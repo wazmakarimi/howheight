@@ -1,0 +1,55 @@
+---
+---
+
+<div id="comparison-summary-section" class="bg-white rounded-2xl border border-slate-200/80 shadow-soft p-5 sm:p-7 mt-8">
+  <div class="flex items-center justify-between pb-4 mb-4 border-b border-slate-100">
+    <div class="flex items-center gap-2.5">
+      <div class="w-8 h-8 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="20" x2="18" y2="10"></line>
+          <line x1="12" y1="20" x2="12" y2="4"></line>
+          <line x1="6" y1="20" x2="6" y2="14"></line>
+        </svg>
+      </div>
+      <div>
+        <h3 class="font-bold text-slate-900 text-base leading-tight">Comparison Summary</h3>
+        <p class="text-xs text-slate-500">Overview of all active comparison items</p>
+      </div>
+    </div>
+    <!-- Stats Badge -->
+    <div id="summary-stats-badge" class="hidden sm:flex items-center gap-3 text-xs text-slate-600">
+      <span id="summary-tallest-stat" class="font-medium"></span>
+      <span class="text-slate-300">•</span>
+      <span id="summary-average-stat" class="font-medium"></span>
+    </div>
+  </div>
+
+  <!-- Desktop Table (hidden on small screens) -->
+  <div class="hidden md:block overflow-x-auto">
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr class="border-b border-slate-200 text-xs font-semibold uppercase tracking-wider text-slate-500 bg-slate-50/50">
+          <th class="py-3 px-4 rounded-l-lg">Name</th>
+          <th class="py-3 px-4">Category</th>
+          <th class="py-3 px-4">Type / Details</th>
+          <th class="py-3 px-4">Height (Imperial)</th>
+          <th class="py-3 px-4">Height (Metric)</th>
+          <th class="py-3 px-4 rounded-r-lg">Relative Diff</th>
+        </tr>
+      </thead>
+      <tbody id="summary-table-body" class="divide-y divide-slate-100 text-sm text-slate-700">
+        <!-- Rows rendered dynamically -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Mobile Card View (visible on small screens) -->
+  <div id="summary-cards-container" class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:hidden">
+    <!-- Responsive cards rendered dynamically -->
+  </div>
+
+  <!-- Empty Summary Note -->
+  <div id="summary-empty-state" class="hidden py-8 text-center text-sm text-slate-400">
+    Add humans, animals, objects, or celebrities to the comparison chart to view their summary data here.
+  </div>
+</div>

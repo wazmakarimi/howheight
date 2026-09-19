@@ -1,0 +1,79 @@
+---
+import type { RelatedEntityResult } from '../../lib/internal-linking/types';
+import { t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  entities: RelatedEntityResult[];
+  title?: string;
+  subtitle?: string;
+  locale?: Locale;
+}
+
+const {
+  entities,
+  title,
+  subtitle,
+  locale = 'en',
+} = Astro.props;
+
+const defaultTitle = t(locale, 'section.relatedEntities') || 'Related Heights & Profiles';
+const defaultSubtitle = 'Compare these related figures with similar stature or background.';
+const sectionTitle = title || defaultTitle;
+const sectionSubtitle = subtitle || defaultSubtitle;
+---
+
+{entities && entities.length > 0 && (
+  <section class="mt-14 pt-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-3 mb-6">
+      <div>
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+          {sectionTitle}
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+          {sectionSubtitle}
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3.5">
+      {entities.map((entity) => (
+        <a
+          href={entity.url}
+          aria-label={entity.anchorText}
+          class="p-3.5 sm:p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group flex flex-col justify-between"
+        >
+          <div>
+            {entity.imagePath && (
+              <div class="h-24 w-full flex items-center justify-center p-2 mb-2 bg-slate-50 dark:bg-slate-900/60 rounded-xl">
+                <img
+                  src={entity.imagePath}
+                  alt={entity.name}
+                  class="max-h-full max-w-full object-contain"
+                  loading="lazy"
+                />
+              </div>
+            )}
+            <div class="flex items-center justify-between text-[10px] text-slate-400 mb-1">
+              <span class="font-bold text-brand-600 dark:text-blue-400 uppercase truncate max-w-[120px]">
+                {entity.subcategory || entity.category}
+              </span>
+            </div>
+            <h3 class="font-bold text-xs sm:text-sm text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors truncate">
+              {entity.name}
+            </h3>
+          </div>
+
+          <div class="mt-3 pt-2 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs">
+            <span class="font-bold text-slate-800 dark:text-slate-200">
+              {entity.formattedHeight}
+            </span>
+            <span class="w-6 h-6 rounded-lg bg-slate-100 dark:bg-slate-700 group-hover:bg-brand-600 group-hover:text-white text-slate-600 dark:text-slate-300 flex items-center justify-center text-xs font-bold transition-colors">
+              →
+            </span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

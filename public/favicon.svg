@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <defs>
+    <linearGradient id="hh-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2563eb" />
+      <stop offset="100%" stop-color="#1d4ed8" />
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="8" fill="url(#hh-grad)" />
+  <!-- Baseline floor -->
+  <line x1="5" y1="26" x2="27" y2="26" stroke="#ffffff" stroke-width="2" stroke-linecap="round" opacity="0.9" />
+  <!-- Taller figure / measurement mark (Left: 180cm concept) -->
+  <line x1="11" y1="26" x2="11" y2="7" stroke="#ffffff" stroke-width="3" stroke-linecap="round" />
+  <line x1="11" y1="12" x2="15" y2="12" stroke="#ffffff" stroke-width="2" stroke-linecap="round" />
+  <line x1="11" y1="18" x2="14" y2="18" stroke="#ffffff" stroke-width="1.8" stroke-linecap="round" />
+  <!-- Shorter figure / measurement mark (Right: 160cm concept) -->
+  <line x1="21" y1="26" x2="21" y2="13" stroke="#93c5fd" stroke-width="3" stroke-linecap="round" />
+  <line x1="18" y1="18" x2="21" y2="18" stroke="#93c5fd" stroke-width="1.8" stroke-linecap="round" />
+</svg>

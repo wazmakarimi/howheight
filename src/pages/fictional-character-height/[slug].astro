@@ -1,0 +1,160 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../../components/ComparisonTool.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import ComparisonIntro from '../../components/seo/ComparisonIntro.astro';
+import FAQSection from '../../components/seo/FAQSection.astro';
+import { ASSET_REGISTRY, type AssetMetadata } from '../../data/assetRegistry';
+import { cmToFeetInches } from '../../lib/height';
+import { SITE } from '../../config/site';
+import type { ComparisonItem } from '../../lib/constants';
+
+export function getStaticPaths() {
+  const verifiedFictional = ASSET_REGISTRY.filter(
+    (a) => a.category === 'fictional' && a.status === 'verified' && a.heightCm !== null && a.indexable !== false
+  ).slice(0, 25);
+
+  return verifiedFictional.map((character) => ({
+    params: { slug: character.slug },
+    props: { character },
+  }));
+}
+
+interface Props {
+  character: AssetMetadata;
+}
+
+const { character } = Astro.props;
+const charHeight = character.heightCm || 180;
+const ftIn = cmToFeetInches(charHeight);
+const canonical = `${SITE.siteUrl}/fictional-character-height/${character.slug}/`;
+
+const initialItems: ComparisonItem[] = [
+  {
+    id: `seo-fic-${character.id}`,
+    category: 'fictional',
+    assetId: character.id,
+    name: character.name,
+    heightCm: charHeight,
+    referenceHeightCm: charHeight,
+    isCustomHeight: false,
+    color: '#7c3aed',
+  },
+  {
+    id: 'seo-human-ref',
+    category: 'human',
+    name: 'Average Human (176 cm)',
+    gender: 'male',
+    heightCm: 176,
+    referenceHeightCm: 176,
+    isCustomHeight: false,
+    color: '#2563eb',
+  },
+];
+
+import RelatedEntities from '../../components/seo/RelatedEntities.astro';
+import RelatedComparisons from '../../components/seo/RelatedComparisons.astro';
+import RelatedCategories from '../../components/seo/RelatedCategories.astro';
+import {
+  getRelatedEntities,
+  getRelatedComparisons,
+  getRelatedCategories,
+} from '../../lib/internal-linking';
+
+// Related fictional figures via deterministic scoring
+const relatedEntities = getRelatedEntities(
+  {
+    id: character.id,
+    category: 'fictional',
+    name: character.name,
+    heightCm: charHeight,
+    tags: character.tags,
+  },
+  8,
+  'en'
+);
+
+// Curated matchups featuring fantastical scale
+const relatedComparisons = getRelatedComparisons({
+  entityId: character.id,
+  category: 'fictional',
+  limit: 6,
+  locale: 'en',
+});
+
+// Category relationships
+const relatedCategories = getRelatedCategories('fictional', 3, 'en');
+
+const faqs = [
+  {
+    question: `How is the height of ${character.name} derived?`,
+    answer: `Fictional character dimensions are cataloged from canonical world sourcebooks, tabletop RPG bestiaries, and creator design archives.`,
+  },
+  {
+    question: `How does ${character.name} compare to a normal human?`,
+    answer: `An average adult human stands 176 cm (5'9.3"). In comparison, ${character.name} stands ${charHeight} cm (${ftIn.formatted}), making it ${Math.abs(176 - charHeight)} cm ${charHeight >= 176 ? 'taller' : 'shorter'} than an average human.`,
+  },
+];
+---
+
+<Layout
+  title={`${character.name} Height – Height Comparison | ${SITE.name}`}
+  description={`Compare canonical height of ${character.name} (${charHeight} cm / ${ftIn.formatted}) with real humans, beasts, and architectural structures on HowHeight.`}
+  canonicalUrl={canonical}
+>
+  <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      items={[
+        { name: 'Home', url: '/' },
+        { name: 'Fictional Characters', url: '/fictional-character-height-comparison/' },
+        { name: character.name, url: `/fictional-character-height/${character.slug}/` },
+      ]}
+    />
+
+    <ComparisonIntro
+      h1={`${character.name} Height Comparison`}
+      badge="Fantasy & Sci-Fi Stature"
+      badgeColor="purple"
+      introText={`Accurate visual scale comparison for ${character.name}. Discover how mythological, tabletop, and sci-fi beings measure up against normal human proportions.`}
+      measurementAnchor="Official world sourcebook and creature compendium stature."
+    />
+
+    <div class="grid grid-cols-2 gap-3.5 max-w-md mx-auto my-6">
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Canonical Height</span>
+        <span class="text-2xl font-black text-slate-900 block mt-0.5">{charHeight} cm</span>
+      </div>
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Imperial Dimension</span>
+        <span class="text-2xl font-black text-purple-700 block mt-0.5">{ftIn.formatted}</span>
+      </div>
+    </div>
+
+    <!-- Interactive Comparison Workspace -->
+    <ComparisonTool initialItems={initialItems} />
+
+    <!-- Related Profiles via Deterministic Scoring -->
+    <RelatedEntities
+      entities={relatedEntities}
+      title="Compare Other Fictional Characters & Creatures"
+      subtitle={`Explore fantasy, comic, and mythological beings near ${charHeight} cm.`}
+    />
+
+    <!-- Relevant Curated Matchups -->
+    {relatedComparisons.length > 0 && (
+      <RelatedComparisons
+        comparisons={relatedComparisons}
+        title={`${character.name} Comparisons`}
+        subtitle="Compare fantasy scale against real-world human proportions."
+      />
+    )}
+
+    <!-- Category Hubs -->
+    <RelatedCategories
+      categories={relatedCategories}
+    />
+
+    <!-- FAQs -->
+    <FAQSection faqs={faqs} />
+  </div>
+</Layout>

@@ -1,0 +1,154 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../../components/ComparisonTool.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import ComparisonIntro from '../../components/seo/ComparisonIntro.astro';
+import RelatedPages from '../../components/seo/RelatedPages.astro';
+import FAQSection from '../../components/seo/FAQSection.astro';
+import { OBJECTS, type ObjectDefinition } from '../../data/objects';
+import { cmToFeetInches } from '../../lib/height';
+import { SITE } from '../../config/site';
+import type { ComparisonItem } from '../../lib/constants';
+
+export function getStaticPaths() {
+  return OBJECTS.filter((o) => o.indexable !== false).map((object) => ({
+    params: { slug: object.id },
+    props: { object },
+  }));
+}
+
+interface Props {
+  object: ObjectDefinition;
+}
+
+const { object } = Astro.props;
+const ftIn = cmToFeetInches(object.typicalHeightCm);
+const canonical = `${SITE.siteUrl}/object-height-comparison/${object.id}/`;
+
+const initialItems: ComparisonItem[] = [
+  {
+    id: `seo-obj-${object.id}`,
+    category: 'object',
+    name: object.name,
+    objectType: object.id,
+    heightCm: object.typicalHeightCm,
+    referenceHeightCm: object.typicalHeightCm,
+    isCustomHeight: false,
+    color: '#0284c7',
+  },
+  {
+    id: 'seo-human-ref',
+    category: 'human',
+    name: 'Average Human (176 cm)',
+    gender: 'male',
+    heightCm: 176,
+    referenceHeightCm: 176,
+    isCustomHeight: false,
+    color: '#2563eb',
+  },
+];
+
+const faqs = [
+  {
+    question: `How is a ${object.name} measured?`,
+    answer: object.helpText || `A ${object.name} is measured from the level floor base to its uppermost functional plane.`
+  },
+  {
+    question: `Why compare human height against a ${object.name}?`,
+    answer: `Everyday objects like chairs, doors, and cars provide an intuitive real-world baseline that humans interact with daily, making differences in stature immediately tangible.`
+  }
+];
+
+import RelatedEntities from '../../components/seo/RelatedEntities.astro';
+import RelatedComparisons from '../../components/seo/RelatedComparisons.astro';
+import RelatedCategories from '../../components/seo/RelatedCategories.astro';
+import {
+  getRelatedEntities,
+  getRelatedComparisons,
+  getRelatedCategories,
+} from '../../lib/internal-linking';
+
+// Related objects via deterministic scoring
+const relatedEntities = getRelatedEntities(
+  {
+    id: object.id,
+    category: 'object',
+    name: object.name,
+    heightCm: object.typicalHeightCm,
+    subcategory: object.subcategory,
+    tags: [object.subcategory],
+  },
+  8,
+  'en'
+);
+
+// Curated matchups featuring this object
+const relatedComparisons = getRelatedComparisons({
+  entityId: object.id,
+  category: 'object',
+  limit: 6,
+  locale: 'en',
+});
+
+// Category relationships
+const relatedCategories = getRelatedCategories('objects', 3, 'en');
+---
+
+<Layout
+  title={`${object.name} Height – Height Comparison | ${SITE.name}`}
+  description={`Explore verified standard dimensions for a ${object.name} (${object.typicalHeightCm} cm / ${ftIn.formatted}). Compare ${object.name} to people, animals, and vehicles side-by-side with HowHeight.`}
+  canonicalUrl={canonical}
+>
+  <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      items={[
+        { name: 'Home', url: '/' },
+        { name: 'Object Height Comparison', url: '/object-height-comparison/' },
+        { name: `${object.name} Height`, url: `/object-height-comparison/${object.id}/` },
+      ]}
+    />
+
+    <ComparisonIntro
+      h1={`${object.name} Height Comparison`}
+      badge="Architectural & Object Scale"
+      badgeColor="blue"
+      introText={`Visual scale comparison for ${object.name}. Manufactured objects and architectural elements provide concrete, real-world reference frames for human stature.`}
+      measurementAnchor={object.helpText || 'Floor to uppermost structural plane.'}
+    />
+
+    <div class="grid grid-cols-2 gap-3.5 max-w-md mx-auto my-6">
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Metric Dimension</span>
+        <span class="text-2xl font-black text-slate-900 block mt-0.5">{object.typicalHeightCm} cm</span>
+      </div>
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Imperial Dimension</span>
+        <span class="text-2xl font-black text-brand-600 block mt-0.5">{ftIn.formatted}</span>
+      </div>
+    </div>
+
+    <!-- Related Profiles via Deterministic Scoring -->
+    <RelatedEntities
+      entities={relatedEntities}
+      title="Compare Other Everyday Objects & Structures"
+      subtitle={`Explore manufactured objects and furniture near ${object.typicalHeightCm} cm.`}
+    />
+
+    <!-- Relevant Curated Matchups -->
+    {relatedComparisons.length > 0 && (
+      <RelatedComparisons
+        comparisons={relatedComparisons}
+        title={`${object.name} Height Comparisons`}
+        subtitle="Compare object clearance and dimensions side-by-side with humans."
+      />
+    )}
+
+    <!-- Category Hubs -->
+    <RelatedCategories
+      categories={relatedCategories}
+    />
+
+    <!-- FAQs -->
+    <FAQSection faqs={faqs} />
+  </div>
+</Layout>

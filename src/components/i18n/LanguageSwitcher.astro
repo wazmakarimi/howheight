@@ -1,0 +1,102 @@
+---
+import { LOCALES, SUPPORTED_LOCALES, type Locale } from '../../i18n/locales';
+import { getLocalizedPath } from '../../i18n/utils';
+import { isRouteLocalized, getParentCategoryForRoute } from '../../lib/internal-linking/routeRegistry';
+
+interface Props {
+  currentLocale?: Locale;
+  className?: string;
+}
+
+const { currentLocale = 'en', className = '' } = Astro.props;
+const currentPath = Astro.url.pathname;
+const currentInfo = LOCALES[currentLocale] || LOCALES.en;
+
+const isCurrentLocalized = isRouteLocalized(currentPath);
+const fallbackCategory = !isCurrentLocalized ? getParentCategoryForRoute(currentPath) : '';
+---
+
+<div class={`relative inline-block text-left group ${className}`} id="language-switcher">
+  <!-- Dropdown Trigger Button -->
+  <button
+    type="button"
+    class="inline-flex items-center gap-1.5 px-2.5 py-1.5 text-xs font-semibold text-slate-700 dark:text-slate-200 bg-white/80 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xs transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500"
+    id="lang-dropdown-btn"
+    aria-expanded="false"
+    aria-haspopup="true"
+    aria-label="Select language"
+  >
+    <!-- Globe Icon -->
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-slate-500 dark:text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="2" y1="12" x2="22" y2="12"></line>
+      <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+    </svg>
+    <span>{currentInfo.nativeName}</span>
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3 text-slate-400 group-hover:rotate-180 transition-transform duration-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+  </button>
+
+  <!-- Dropdown Menu (Direct crawlable <a> links for maximum SEO and reliability) -->
+  <div
+    class="absolute right-0 mt-1 w-48 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft-lg py-1.5 text-xs z-50 hidden group-hover:block group-focus-within:block focus-within:block"
+    id="lang-dropdown-menu"
+    role="menu"
+    aria-orientation="vertical"
+    aria-labelledby="lang-dropdown-btn"
+  >
+    <div class="px-3 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100 dark:border-slate-700/60 mb-1">
+      Select Language
+    </div>
+
+    {SUPPORTED_LOCALES.map((loc) => {
+      const info = LOCALES[loc];
+      const isActive = loc === currentLocale;
+      const targetHref = isCurrentLocalized
+        ? getLocalizedPath(currentPath, loc)
+        : (loc === 'en' ? currentPath : getLocalizedPath(fallbackCategory, loc));
+
+      return (
+        <a
+          href={targetHref}
+          class={`flex items-center justify-between px-3 py-1.5 transition-colors lang-link ${
+            isActive
+              ? 'bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-blue-300 font-bold'
+              : 'text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 font-medium'
+          }`}
+          role="menuitem"
+          hreflang={info.code}
+          data-locale={info.code}
+        >
+          <div class="flex items-center gap-2">
+            <span>{info.flag}</span>
+            <span class="font-medium">{info.nativeName}</span>
+            {info.name !== info.nativeName && (
+              <span class="text-[10px] text-slate-400">({info.name})</span>
+            )}
+          </div>
+          {isActive && (
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-brand-600 dark:text-blue-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          )}
+        </a>
+      );
+    })}
+  </div>
+</div>
+
+<script>
+  // Progressive enhancement: remember language preference
+  document.querySelectorAll('.lang-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      const loc = link.getAttribute('data-locale');
+      if (loc) {
+        try {
+          localStorage.setItem('preferredLocale', loc);
+        } catch (e) {}
+      }
+    });
+  });
+</script>

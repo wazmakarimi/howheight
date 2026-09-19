@@ -1,0 +1,86 @@
+---
+import { ANIMALS } from '../data/animals';
+---
+
+<div id="animal-selector-container" class="relative">
+  <label for="animal-search-input" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">
+    Select Animal Species <span class="text-rose-500">*</span>
+  </label>
+
+  <div class="relative">
+    <input
+      type="text"
+      id="animal-search-input"
+      placeholder="Search animal (e.g. Dog, Horse, Elephant)..."
+      autocomplete="off"
+      class="w-full pl-9 pr-8 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all"
+    />
+    <div class="absolute left-3 top-3 text-slate-400 pointer-events-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </div>
+    <button
+      type="button"
+      id="animal-dropdown-toggle"
+      class="absolute right-2 top-2.5 p-1 text-slate-400 hover:text-slate-700 rounded transition-colors"
+      aria-label="Toggle animal list"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <input type="hidden" id="selected-animal-type" value="dog" />
+
+  <!-- Dropdown Menu -->
+  <div
+    id="animal-dropdown-list"
+    class="hidden absolute left-0 right-0 top-full mt-1.5 z-50 bg-white border border-slate-200 rounded-xl shadow-soft-lg max-h-56 overflow-y-auto custom-scrollbar p-1.5 divide-y divide-slate-100"
+    role="listbox"
+  >
+    {ANIMALS.map((animal) => (
+      <div
+        class="animal-option flex items-center justify-between p-2 rounded-lg cursor-pointer hover:bg-brand-50 hover:text-brand-900 transition-colors"
+        role="option"
+        data-id={animal.id}
+        data-name={animal.name}
+        data-measurement={animal.measurementType}
+        data-typical={animal.typicalHeightCm}
+        data-min={animal.minHeightCm}
+        data-max={animal.maxHeightCm}
+        data-help={animal.helpText}
+      >
+        <div class="flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-slate-300"></span>
+          <span class="font-bold text-xs text-slate-900">{animal.name}</span>
+          <span class="text-[10px] px-1.5 py-0.5 rounded bg-slate-100 text-slate-500 font-medium">
+            {animal.subcategory}
+          </span>
+        </div>
+        <div class="text-[11px] text-slate-400 flex items-center gap-1">
+          <span>ref: ~{animal.typicalHeightCm} cm</span>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <!-- Selected Animal Info Banner -->
+  <div id="animal-info-banner" class="mt-2 p-2.5 rounded-lg bg-amber-50/70 border border-amber-200/60 text-xs text-amber-900 flex items-start gap-2">
+    <div class="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+    </div>
+    <div class="leading-relaxed">
+      <span class="font-bold" id="animal-info-title">Dog:</span>
+      <span id="animal-info-help" class="text-amber-800">
+        Measured from ground to shoulder/withers.
+      </span>
+    </div>
+  </div>
+</div>

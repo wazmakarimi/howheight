@@ -1,0 +1,86 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { FEATURE_FLAGS, PLANS } from '../../config/features';
+
+// The dashboard is strictly an application page, not a public SEO document
+const isSaasEnabled = FEATURE_FLAGS.SAAS_ENABLED;
+---
+
+<Layout
+  title="Dashboard | HowHeight"
+  description="Manage your saved comparisons, custom entities, and account settings on HowHeight."
+  noindex={true}
+>
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <!-- Breadcrumb & Header -->
+    <div class="mb-8">
+      <nav class="text-xs text-slate-500 mb-2">
+        <a href="/" class="hover:underline">Home</a> &gt; <span>Dashboard</span>
+      </nav>
+      <h1 class="text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+        User Dashboard
+      </h1>
+      <p class="text-slate-600 dark:text-slate-400 mt-1">
+        Manage saved comparisons, custom entities, and height visualizer preferences.
+      </p>
+    </div>
+
+    {isSaasEnabled ? (
+      <div id="saas-dashboard-app" class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 shadow-sm">
+        <div class="flex items-center justify-between pb-6 border-b border-slate-200 dark:border-slate-700">
+          <div>
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white">Overview</h2>
+            <p class="text-sm text-slate-500">Welcome to your personal height comparison workspace.</p>
+          </div>
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300">
+            Active
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6">
+          <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Saved Comparisons</span>
+            <p class="text-2xl font-black text-slate-900 dark:text-white mt-2">0</p>
+          </div>
+          <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Custom Entities</span>
+            <p class="text-2xl font-black text-slate-900 dark:text-white mt-2">0</p>
+          </div>
+          <div class="p-5 rounded-xl bg-slate-50 dark:bg-slate-700/50 border border-slate-200 dark:border-slate-600">
+            <span class="text-xs font-semibold uppercase tracking-wider text-slate-500">Current Plan</span>
+            <p class="text-2xl font-black text-brand-600 dark:text-brand-400 mt-2">Free</p>
+          </div>
+        </div>
+      </div>
+    ) : (
+      <div class="bg-white dark:bg-slate-800 rounded-2xl p-8 border border-slate-200 dark:border-slate-700 shadow-sm text-center max-w-2xl mx-auto my-12">
+        <div class="w-16 h-16 mx-auto mb-4 bg-brand-50 dark:bg-brand-900/30 text-brand-600 dark:text-brand-400 rounded-2xl flex items-center justify-center">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+          </svg>
+        </div>
+        <h2 class="text-2xl font-bold text-slate-900 dark:text-white">
+          SaaS Platform Layer
+        </h2>
+        <p class="text-slate-600 dark:text-slate-400 mt-2 text-sm leading-relaxed">
+          The HowHeight user accounts, cloud saved comparisons, and custom entity systems are currently in architectural readiness.
+          The public comparison engine remains 100% free and accessible without login.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+          <a
+            href="/"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-brand-600 hover:bg-brand-700 text-white transition-colors shadow-sm"
+          >
+            Launch Comparison Engine
+          </a>
+          <a
+            href="/celebrity-height-comparison/"
+            class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl text-sm font-semibold bg-slate-100 dark:bg-slate-700 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-600 transition-colors"
+          >
+            Browse Public Entities
+          </a>
+        </div>
+      </div>
+    )}
+  </div>
+</Layout>

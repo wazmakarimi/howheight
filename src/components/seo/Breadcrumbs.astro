@@ -1,0 +1,55 @@
+---
+import type { BreadcrumbItem } from '../../lib/seo';
+import { buildBreadcrumbSchema } from '../../lib/seo';
+import { getLocaleFromUrl, t } from '../../i18n';
+import { getSafeInternalUrl } from '../../lib/internal-linking';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  items: BreadcrumbItem[];
+  locale?: Locale;
+}
+
+const { items, locale = getLocaleFromUrl(Astro.url) } = Astro.props;
+
+// Localize items
+const localizedItems = items.map((item, idx) => {
+  let name = item.name;
+  if (idx === 0 && (name.toLowerCase() === 'home' || item.url === '/')) {
+    name = t(locale, 'nav.home');
+  }
+  const localizedUrl = getSafeInternalUrl(item.url, locale);
+  return {
+    ...item,
+    name,
+    url: localizedUrl,
+  };
+});
+
+const breadcrumbSchema = buildBreadcrumbSchema(localizedItems);
+---
+
+<nav aria-label="Breadcrumb" class="flex items-center gap-1.5 text-xs text-slate-500 mb-6 flex-wrap">
+  <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
+
+  {localizedItems.map((item, index) => {
+    const isLast = index === localizedItems.length - 1;
+    return (
+      <div class="flex items-center gap-1.5">
+        {index > 0 && <span class="text-slate-300">/</span>}
+        {isLast ? (
+          <span class="text-slate-900 font-bold truncate max-w-[240px]" aria-current="page">
+            {item.name}
+          </span>
+        ) : (
+          <a
+            href={item.url}
+            class="text-slate-500 hover:text-brand-600 font-medium transition-colors"
+          >
+            {item.name}
+          </a>
+        )}
+      </div>
+    );
+  })}
+</nav>

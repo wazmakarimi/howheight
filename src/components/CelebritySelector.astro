@@ -1,0 +1,99 @@
+---
+import { CELEBRITIES } from '../data/celebrities';
+import { cmToFeetInches } from '../lib/height';
+---
+
+<div id="celebrity-selector-container" class="relative">
+  <label for="celebrity-search-input" class="block text-xs font-semibold uppercase tracking-wider text-slate-700 mb-1.5">
+    Select Verified Celebrity <span class="text-rose-500">*</span>
+  </label>
+
+  <div class="relative">
+    <input
+      type="text"
+      id="celebrity-search-input"
+      placeholder="Search celebrity (e.g. Virat Kohli, Shah Rukh Khan, Zendaya)..."
+      autocomplete="off"
+      class="w-full pl-9 pr-8 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-900 placeholder:text-slate-400 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-brand-500 transition-all"
+    />
+    <div class="absolute left-3 top-3 text-slate-400 pointer-events-none">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+      </svg>
+    </div>
+    <button
+      type="button"
+      id="celebrity-dropdown-toggle"
+      class="absolute right-2 top-2.5 p-1 text-slate-400 hover:text-slate-700 rounded transition-colors"
+      aria-label="Toggle celebrity list"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+
+  <input type="hidden" id="selected-celebrity-id" value="virat-kohli" />
+
+  <!-- Dropdown Menu -->
+  <div
+    id="celebrity-dropdown-list"
+    class="hidden absolute left-0 right-0 top-full mt-1.5 z-50 bg-white border border-slate-200 rounded-xl shadow-soft-lg max-h-56 overflow-y-auto custom-scrollbar p-1.5 divide-y divide-slate-100"
+    role="listbox"
+  >
+    {CELEBRITIES.map((celebrity) => {
+      const ftIn = cmToFeetInches(celebrity.heightCm);
+      return (
+        <div
+          class="celebrity-option flex items-center justify-between p-2 rounded-lg cursor-pointer hover:bg-brand-50 hover:text-brand-900 transition-colors"
+          role="option"
+          data-id={celebrity.id}
+          data-name={celebrity.name}
+          data-slug={celebrity.slug}
+          data-gender={celebrity.gender}
+          data-height={celebrity.heightCm}
+          data-profession={celebrity.profession}
+          data-country={celebrity.country}
+          data-aliases={celebrity.aliases?.join(',') || ''}
+          data-source={celebrity.heightSource || ''}
+          data-bio={celebrity.bioSnippet || ''}
+        >
+          <div class="flex items-center gap-2 min-w-0 pr-2">
+            <span class="w-2 h-2 rounded-full bg-purple-500 flex-shrink-0"></span>
+            <span class="font-bold text-xs text-slate-900 truncate">{celebrity.name}</span>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-purple-50 text-purple-700 font-medium whitespace-nowrap">
+              {celebrity.profession}
+            </span>
+          </div>
+          <div class="text-[11px] text-slate-500 font-medium whitespace-nowrap flex items-center gap-1.5 flex-shrink-0">
+            <span>{ftIn.formatted}</span>
+            <span class="text-slate-300">•</span>
+            <span>{celebrity.heightCm} cm</span>
+          </div>
+        </div>
+      );
+    })}
+  </div>
+
+  <!-- Selected Celebrity Verified Info Banner -->
+  <div id="celebrity-info-banner" class="mt-2 p-2.5 rounded-lg bg-purple-50/80 border border-purple-200/70 text-xs text-purple-950 flex items-start gap-2.5">
+    <div class="w-4 h-4 text-purple-600 flex-shrink-0 mt-0.5">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+        <path d="m9 12 2 2 4-4"></path>
+      </svg>
+    </div>
+    <div class="leading-relaxed min-w-0">
+      <div class="flex items-center gap-1.5 flex-wrap">
+        <span class="font-bold text-purple-900" id="celebrity-info-name">Virat Kohli</span>
+        <span class="text-[10px] px-1.5 py-0.2 rounded bg-purple-200/70 text-purple-800 font-semibold uppercase tracking-wide" id="celebrity-info-badge">
+          Verified Height
+        </span>
+      </div>
+      <p id="celebrity-info-source" class="text-purple-800/90 text-[11px] mt-0.5">
+        BCCI official player bio & standard sporting profiles (5 ft 9 in / 175 cm).
+      </p>
+    </div>
+  </div>
+</div>

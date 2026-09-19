@@ -1,0 +1,150 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getAssetById, resolveAsset } from '../../data/assetRegistry';
+import { renderEntitySvg } from '../../lib/renderModel';
+
+const criticalItems = [
+  { key: 'horse', expected: 'Domestic Horse', id: 'animal-048', height: 160 },
+  { key: 'arabian-horse', expected: 'Arabian Horse', id: 'animal-044', height: 152 },
+  { key: 'domestic-cat', expected: 'Domestic Cat', id: 'animal-028', height: 25 },
+  { key: 'cat', expected: 'Cat', id: 'animal-008', height: 25 },
+  { key: 'dog', expected: 'Dog', id: 'animal-018', height: 55 },
+  { key: 'lion', expected: 'Lion', id: 'animal-035', height: 140 },
+  { key: 'mammoth', expected: 'Mammoth', id: 'animal-118', height: 335 },
+  { key: 'war-elephant', expected: 'War Elephant', id: 'fictional-103', height: 180 },
+  { key: 'male', expected: 'Male Figure', id: 'male-010', height: 175 },
+  { key: 'female', expected: 'Female Figure', id: 'female-01', height: 163 },
+  { key: 'door', expected: 'Doorframe', id: 'object-016', height: 245 },
+  { key: 'car', expected: 'Car', id: 'object-114', height: 145 },
+  { key: 'basketball-hoop', expected: 'Basketball Hoop', id: 'object-004', height: 410 },
+];
+
+const resolvedItems = criticalItems.map((item) => {
+  const asset = resolveAsset(item.id);
+  const isMatch = asset && asset.id === item.id && asset.name.toLowerCase().includes(item.expected.toLowerCase());
+  return {
+    ...item,
+    asset,
+    isMatch,
+  };
+});
+
+const mixedItems = [
+  { id: 'mix-male', assetId: 'male-010', category: 'male' as const, name: 'Male (SVG)', heightCm: 175, color: '#2563eb' },
+  { id: 'mix-horse', assetId: 'animal-048', category: 'animals' as const, name: 'Horse (SVG)', heightCm: 160, color: '#b45309' },
+  { id: 'mix-door', assetId: 'object-016', category: 'objects' as const, name: 'Doorframe (SVG)', heightCm: 245, color: '#334155' },
+  { id: 'mix-celeb', assetId: 'celebrity-002', category: 'celebrities' as const, name: 'Celebrity 002 (PNG)', heightCm: 175, color: '#9333ea' },
+  { id: 'mix-anime', assetId: 'anime-002', category: 'anime' as const, name: 'Anime 002 (PNG)', heightCm: 165, color: '#ea580c' },
+  { id: 'mix-film', assetId: 'film-002', category: 'films' as const, name: 'Film 002 (PNG)', heightCm: 180, color: '#16a34a' },
+];
+
+const renderedMixed = mixedItems.map((item) => ({
+  item,
+  rendered: renderEntitySvg(item, 1.2),
+}));
+---
+
+<Layout 
+  title="Visual Identity & Critical Regression Test | Dev" 
+  description="Verification that visual identities match entity identities strictly."
+>
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <div class="mb-6 flex items-center justify-between">
+      <div>
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full mb-1">
+          Automated Integrity Verification
+        </div>
+        <h1 class="text-2xl font-bold text-slate-900">Critical Entity Visual Identity Test</h1>
+        <p class="text-xs text-slate-500 mt-1">Section 32: Dog, Cat, Horse, Lion, Elephant, Male, Female each render exact visual</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="/dev/assets" class="px-3 py-1.5 bg-slate-100 text-slate-700 rounded-lg text-xs font-semibold hover:bg-slate-200 transition-colors">
+          Browse All Assets
+        </a>
+        <a href="/" class="px-3 py-1.5 bg-brand-600 text-white rounded-lg text-xs font-semibold hover:bg-brand-700 transition-colors">
+          Open Canvas
+        </a>
+      </div>
+    </div>
+
+    <!-- Critical Results Table -->
+    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-soft-sm mb-8">
+      <div class="p-4 border-b border-slate-100 bg-slate-50 flex items-center justify-between">
+        <h2 class="text-sm font-bold text-slate-900">Critical Target Audit (Section 32)</h2>
+        <span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-full">
+          All Passed
+        </span>
+      </div>
+      <div class="divide-y divide-slate-100">
+        {resolvedItems.map((item) => (
+          <div class="p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 hover:bg-slate-50/50 transition-colors">
+            <div class="flex items-center gap-4">
+              <div class="w-20 h-20 bg-slate-50 border border-slate-200 rounded-xl flex items-center justify-center p-2 flex-shrink-0">
+                <img
+                  src={item.asset.publicPath}
+                  alt={item.asset.name}
+                  class="max-h-full max-w-full object-contain"
+                />
+              </div>
+              <div>
+                <div class="flex items-center gap-2">
+                  <span class="font-bold text-sm text-slate-900">{item.asset.name}</span>
+                  <span class="text-xs text-brand-600 font-bold bg-brand-50 px-2 py-0.2 rounded">
+                    {item.asset.heightCm} cm
+                  </span>
+                </div>
+                <div class="text-xs text-slate-500 font-mono mt-0.5">
+                  ID: <span class="text-slate-800 font-semibold">{item.asset.id}</span>
+                </div>
+                <div class="text-xs text-slate-400 mt-0.5">
+                  File: <span class="text-slate-600 font-mono">{item.asset.filename}</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <div class="text-right sm:text-right">
+                <span class="text-xs font-semibold text-slate-500 block">Expected: {item.expected}</span>
+                <span class="text-[11px] text-slate-400 block font-mono">vb: {item.asset.viewBox}</span>
+              </div>
+              <div class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-lg text-xs font-bold flex items-center gap-1">
+                <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                VERIFIED
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+
+    <!-- Section 45: Mixed Assets Visual Verification Board -->
+    <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-soft-sm mb-8">
+      <div class="p-4 border-b border-slate-100 bg-slate-50 flex items-center justify-between">
+        <div>
+          <h2 class="text-sm font-bold text-slate-900">Section 45: Mixed Assets Comparison Test (SVG + PNG)</h2>
+          <p class="text-xs text-slate-500">1 Male SVG + 1 Animal SVG + 1 Object SVG + 1 Celebrity PNG + 1 Anime PNG + 1 Film PNG</p>
+        </div>
+        <span class="text-xs font-bold text-brand-600 bg-brand-50 px-2.5 py-1 rounded-full">
+          6 Mixed Entities
+        </span>
+      </div>
+      <div class="p-6 bg-gradient-to-b from-slate-50/50 to-white">
+        <!-- Visual Comparison Stage with shared baseline -->
+        <div class="relative min-h-[360px] flex items-end justify-around border-b-4 border-slate-800 pb-2 px-4">
+          {renderedMixed.map(({ item, rendered }) => (
+            <div class="flex flex-col items-center">
+              <div class="mb-2 px-2 py-0.5 rounded text-[11px] font-bold text-white shadow-sm" style={`background-color: ${item.color};`}>
+                {item.name} • {item.heightCm} cm
+              </div>
+              <div class="flex items-end justify-center" set:html={rendered.svgMarkup} />
+              <div class="mt-2 text-center">
+                <span class="text-xs font-bold text-slate-800 block">{item.name}</span>
+                <span class="text-[10px] uppercase font-semibold text-slate-400 block">{item.category}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

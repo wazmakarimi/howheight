@@ -1,0 +1,224 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { ASSET_REGISTRY, TOTAL_ASSETS } from '../../data/assetRegistry';
+
+const verifiedCount = ASSET_REGISTRY.filter((a) => a.status === 'verified').length;
+const needsReviewCount = ASSET_REGISTRY.filter((a) => a.status === 'needs-review').length;
+const invalidCount = ASSET_REGISTRY.filter((a) => a.status === 'invalid').length;
+const missingHeightCount = ASSET_REGISTRY.filter((a) => !a.heightCm && a.status !== 'invalid').length;
+
+const categories = ['all', 'male', 'female', 'apparel', 'animals', 'objects', 'fictional', 'plants', 'sports', 'anime', 'films', 'celebrities'];
+---
+
+<Layout 
+  title="Asset Review & Audit Tool | Dev" 
+  description="Internal development asset audit and verification tool."
+>
+  <div class="max-w-7xl mx-auto px-4 py-8">
+    <div class="mb-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+      <div>
+        <div class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 bg-brand-50 px-2 py-0.5 rounded-full mb-1">
+          Internal Dev Tool
+        </div>
+        <h1 class="text-2xl font-bold text-slate-900">Asset Audit & Verification System</h1>
+        <p class="text-xs text-slate-500 mt-1">Single source of truth inspection: File -> Raw Asset ID -> Entity Metadata -> Visual</p>
+      </div>
+      <div class="flex items-center gap-2">
+        <a href="/dev/asset-test" class="px-3 py-1.5 bg-slate-900 text-white rounded-lg text-xs font-semibold hover:bg-slate-800 transition-colors">
+          Critical Regression Test
+        </a>
+        <a href="/" class="px-3 py-1.5 bg-white border border-slate-200 text-slate-700 rounded-lg text-xs font-semibold hover:bg-slate-50 transition-colors">
+          Back to Canvas
+        </a>
+      </div>
+    </div>
+
+    <!-- Audit Stats Cards -->
+    <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 mb-6">
+      <div class="bg-white border border-slate-200 rounded-xl p-3 shadow-soft-sm">
+        <span class="text-[11px] font-bold uppercase text-slate-400">Total Assets</span>
+        <div class="text-2xl font-extrabold text-slate-900 mt-0.5">{TOTAL_ASSETS}</div>
+        <span class="text-[10px] text-slate-500">100% Filesystem Fact</span>
+      </div>
+      <div class="bg-white border border-emerald-200 rounded-xl p-3 shadow-soft-sm bg-emerald-50/20">
+        <span class="text-[11px] font-bold uppercase text-emerald-700">Verified</span>
+        <div class="text-2xl font-extrabold text-emerald-600 mt-0.5">{verifiedCount}</div>
+        <span class="text-[10px] text-emerald-600 font-medium">Identity & Height Match</span>
+      </div>
+      <div class="bg-white border border-amber-200 rounded-xl p-3 shadow-soft-sm bg-amber-50/20">
+        <span class="text-[11px] font-bold uppercase text-amber-700">Needs Review</span>
+        <div class="text-2xl font-extrabold text-amber-600 mt-0.5">{needsReviewCount}</div>
+        <span class="text-[10px] text-amber-600 font-medium">Unconfirmed Metadata</span>
+      </div>
+      <div class="bg-white border border-rose-200 rounded-xl p-3 shadow-soft-sm bg-rose-50/20">
+        <span class="text-[11px] font-bold uppercase text-rose-700">Invalid</span>
+        <div class="text-2xl font-extrabold text-rose-600 mt-0.5">{invalidCount}</div>
+        <span class="text-[10px] text-rose-600 font-medium">UI Icons & Artifacts</span>
+      </div>
+      <div class="bg-white border border-blue-200 rounded-xl p-3 shadow-soft-sm bg-blue-50/20">
+        <span class="text-[11px] font-bold uppercase text-blue-700">Missing Height</span>
+        <div class="text-2xl font-extrabold text-blue-600 mt-0.5">{missingHeightCount}</div>
+        <span class="text-[10px] text-blue-600 font-medium">Uncalibrated Dimension</span>
+      </div>
+    </div>
+
+    <!-- Filters & Search -->
+    <div class="bg-white border border-slate-200 rounded-xl p-3.5 mb-6 shadow-soft-sm space-y-3">
+      <div class="flex flex-col sm:flex-row gap-3 items-center justify-between">
+        <div class="w-full sm:w-72">
+          <input
+            type="text"
+            id="review-search-input"
+            placeholder="Search by ID, name, file, or tag..."
+            class="w-full px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:outline-none focus:ring-2 focus:ring-brand-500"
+          />
+        </div>
+        <div class="flex items-center gap-1.5 overflow-x-auto w-full sm:w-auto pb-1 sm:pb-0" id="status-filter-bar">
+          <button type="button" class="status-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-900 text-white" data-status="all">All ({TOTAL_ASSETS})</button>
+          <button type="button" class="status-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200" data-status="verified">Verified ({verifiedCount})</button>
+          <button type="button" class="status-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200" data-status="needs-review">Needs Review ({needsReviewCount})</button>
+          <button type="button" class="status-btn px-2.5 py-1 rounded-lg text-xs font-semibold bg-slate-100 text-slate-600 hover:bg-slate-200" data-status="invalid">Invalid ({invalidCount})</button>
+        </div>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="flex items-center gap-1.5 overflow-x-auto pt-2 border-t border-slate-100" id="cat-filter-bar">
+        {categories.map((c) => (
+          <button
+            type="button"
+            class={`cat-btn px-2.5 py-1 rounded-lg text-xs font-semibold capitalize whitespace-nowrap ${c === 'all' ? 'bg-brand-600 text-white' : 'bg-slate-50 text-slate-600 hover:bg-slate-100'}`}
+            data-category={c}
+          >
+            {c}
+          </button>
+        ))}
+      </div>
+    </div>
+
+    <!-- Asset Cards Grid -->
+    <div id="assets-grid" class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-3">
+      {ASSET_REGISTRY.map((asset) => (
+        <div
+          class="asset-card bg-white border border-slate-200 rounded-xl p-3 flex flex-col justify-between hover:border-brand-500 hover:shadow-soft transition-all text-left"
+          data-id={asset.id}
+          data-name={asset.name}
+          data-category={asset.category}
+          data-status={asset.status}
+          data-file={asset.filename}
+        >
+          <!-- Thumbnail -->
+          <div class="w-full h-24 bg-slate-50 rounded-lg flex items-center justify-center p-2 mb-2 relative overflow-hidden border border-slate-100">
+            <img
+              src={asset.publicPath}
+              alt={asset.name}
+              loading="lazy"
+              class="max-h-full max-w-full object-contain filter drop-shadow-sm"
+            />
+            <span class={`absolute top-1 right-1 text-[9px] font-bold px-1.5 py-0.5 rounded capitalize ${
+              asset.status === 'verified' ? 'bg-emerald-100 text-emerald-800' :
+              asset.status === 'needs-review' ? 'bg-amber-100 text-amber-800' :
+              'bg-rose-100 text-rose-800'
+            }`}>
+              {asset.status}
+            </span>
+          </div>
+
+          <!-- Metadata info -->
+          <div class="space-y-1">
+            <div class="font-bold text-xs text-slate-900 truncate" title={asset.name}>
+              {asset.name}
+            </div>
+            <div class="text-[10px] font-mono text-slate-500 truncate" title={asset.id}>
+              {asset.id}
+            </div>
+            <div class="text-[10px] text-slate-400 truncate" title={asset.filename}>
+              {asset.filename}
+            </div>
+            <div class="flex items-center justify-between text-[11px] pt-1 border-t border-slate-100 font-semibold">
+              <span class="capitalize text-slate-500">{asset.category}</span>
+              <span class={asset.heightCm ? 'text-slate-900 font-bold' : 'text-slate-400 font-normal'}>
+                {asset.heightCm ? `${asset.heightCm} cm` : 'No Height'}
+              </span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div id="no-results" class="hidden text-center py-12 text-slate-400 text-sm font-medium">
+      No assets found matching the selected filters.
+    </div>
+  </div>
+</Layout>
+
+<script>
+  let activeCat = 'all';
+  let activeStatus = 'all';
+  let searchQuery = '';
+
+  const cards = document.querySelectorAll<HTMLElement>('.asset-card');
+  const noResults = document.getElementById('no-results');
+  const searchInput = document.getElementById('review-search-input') as HTMLInputElement;
+
+  function filterCards() {
+    let visible = 0;
+    const q = searchQuery.toLowerCase().trim();
+
+    cards.forEach((card) => {
+      const cat = card.getAttribute('data-category') || '';
+      const stat = card.getAttribute('data-status') || '';
+      const name = (card.getAttribute('data-name') || '').toLowerCase();
+      const id = (card.getAttribute('data-id') || '').toLowerCase();
+      const file = (card.getAttribute('data-file') || '').toLowerCase();
+
+      const matchCat = activeCat === 'all' || cat === activeCat;
+      const matchStat = activeStatus === 'all' || stat === activeStatus;
+      const matchQuery = !q || name.includes(q) || id.includes(q) || file.includes(q);
+
+      if (matchCat && matchStat && matchQuery) {
+        card.style.display = 'flex';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    if (noResults) {
+      noResults.style.display = visible === 0 ? 'block' : 'none';
+    }
+  }
+
+  // Cat buttons
+  document.querySelectorAll('.cat-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.cat-btn').forEach((b) => {
+        b.classList.remove('bg-brand-600', 'text-white');
+        b.classList.add('bg-slate-50', 'text-slate-600');
+      });
+      btn.classList.add('bg-brand-600', 'text-white');
+      btn.classList.remove('bg-slate-50', 'text-slate-600');
+      activeCat = btn.getAttribute('data-category') || 'all';
+      filterCards();
+    });
+  });
+
+  // Status buttons
+  document.querySelectorAll('.status-btn').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.status-btn').forEach((b) => {
+        b.classList.remove('bg-slate-900', 'text-white');
+        b.classList.add('bg-slate-100', 'text-slate-600');
+      });
+      btn.classList.add('bg-slate-900', 'text-white');
+      btn.classList.remove('bg-slate-100', 'text-slate-600');
+      activeStatus = btn.getAttribute('data-status') || 'all';
+      filterCards();
+    });
+  });
+
+  // Search input
+  searchInput?.addEventListener('input', (e) => {
+    searchQuery = (e.target as HTMLInputElement).value;
+    filterCards();
+  });
+</script>

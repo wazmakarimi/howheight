@@ -1,0 +1,30 @@
+---
+import CompareSlugPage from '../../../components/pages/CompareSlugPage.astro';
+import { COMPARISONS, type ComparisonDefinition } from '../../../data/comparisons';
+import { SUPPORTED_LOCALES, type Locale } from '../../../i18n/locales';
+
+export function getStaticPaths() {
+  const nonEnLocales = SUPPORTED_LOCALES.filter((l) => l !== 'en');
+  const validComps = COMPARISONS.filter((c) => c.indexable !== false);
+
+  const paths = [];
+  for (const locale of nonEnLocales) {
+    for (const comp of validComps) {
+      paths.push({
+        params: { locale, slug: comp.slug },
+        props: { comp },
+      });
+    }
+  }
+  return paths;
+}
+
+interface Props {
+  comp: ComparisonDefinition;
+}
+
+const { comp } = Astro.props;
+const { locale } = Astro.params as { locale: Locale };
+---
+
+<CompareSlugPage comp={comp} locale={locale} />

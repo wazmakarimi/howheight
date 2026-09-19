@@ -1,0 +1,164 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../../components/ComparisonTool.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import ComparisonIntro from '../../components/seo/ComparisonIntro.astro';
+import RelatedPages from '../../components/seo/RelatedPages.astro';
+import FAQSection from '../../components/seo/FAQSection.astro';
+import { HUMANS, type HumanDefinition } from '../../data/humans';
+import { cmToFeetInches } from '../../lib/height';
+import { SITE } from '../../config/site';
+import type { ComparisonItem } from '../../lib/constants';
+
+export function getStaticPaths() {
+  return HUMANS.filter((h) => h.indexable !== false).map((human) => ({
+    params: { slug: human.slug },
+    props: { human },
+  }));
+}
+
+interface Props {
+  human: HumanDefinition;
+}
+
+const { human } = Astro.props;
+const ftIn = cmToFeetInches(human.typicalHeightCm);
+const canonical = `${SITE.siteUrl}/people-height-comparison/${human.slug}/`;
+
+const initialItems: ComparisonItem[] = [
+  {
+    id: `seo-human-${human.slug}`,
+    category: 'human',
+    name: human.name,
+    gender: human.gender,
+    heightCm: human.typicalHeightCm,
+    referenceHeightCm: human.typicalHeightCm,
+    isCustomHeight: false,
+    color: '#2563eb',
+  },
+  {
+    id: 'seo-human-counterpart',
+    category: 'human',
+    name: human.gender === 'male' ? 'Average Female (162 cm)' : 'Average Male (176 cm)',
+    gender: human.gender === 'male' ? 'female' : 'male',
+    heightCm: human.gender === 'male' ? 162 : 176,
+    referenceHeightCm: human.gender === 'male' ? 162 : 176,
+    isCustomHeight: false,
+    color: '#9333ea',
+  },
+];
+
+const faqs = [
+  {
+    question: `What is the global percentile for ${human.name}?`,
+    answer: human.percentileGlobal || 'Represents standard median human stature across global health surveys.'
+  },
+  {
+    question: `How is human barefoot standing height measured?`,
+    answer: 'Standard clinical anthropometry measures barefoot standing stature vertically from the bottom of the heels to the cranial vertex while maintaining an erect posture.'
+  }
+];
+
+import RelatedEntities from '../../components/seo/RelatedEntities.astro';
+import RelatedComparisons from '../../components/seo/RelatedComparisons.astro';
+import RelatedCategories from '../../components/seo/RelatedCategories.astro';
+import {
+  getRelatedEntities,
+  getRelatedComparisons,
+  getRelatedCategories,
+} from '../../lib/internal-linking';
+
+// Related human figures via deterministic scoring
+const relatedEntities = getRelatedEntities(
+  {
+    id: human.slug,
+    category: 'human',
+    name: human.name,
+    heightCm: human.typicalHeightCm,
+    subcategory: human.gender,
+  },
+  8,
+  'en'
+);
+
+// Curated matchups featuring human models
+const relatedComparisons = getRelatedComparisons({
+  entityId: human.slug,
+  category: 'human',
+  limit: 6,
+  locale: 'en',
+});
+
+// Category relationships
+const relatedCategories = getRelatedCategories('people', 3, 'en');
+---
+
+<Layout
+  title={`${human.name} Height – Height Comparison | ${SITE.name}`}
+  description={`Detailed visual height profile for ${human.name} (${human.typicalHeightCm} cm / ${ftIn.formatted}). Compare against global averages, celebrities, and objects on HowHeight.`}
+  canonicalUrl={canonical}
+>
+  <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      items={[
+        { name: 'Home', url: '/' },
+        { name: 'People Height Comparison', url: '/people-height-comparison/' },
+        { name: human.name, url: `/people-height-comparison/${human.slug}/` },
+      ]}
+    />
+
+    <ComparisonIntro
+      h1={`${human.name} Comparison`}
+      badge="Anthropometric Benchmark"
+      badgeColor="blue"
+      introText={human.description}
+      measurementAnchor="Standing barefoot height from heel to vertex."
+    />
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5 max-w-2xl mx-auto my-6">
+      <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Height</span>
+        <span class="text-xl font-black text-slate-900 block mt-0.5">{human.typicalHeightCm} cm</span>
+      </div>
+      <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Imperial</span>
+        <span class="text-xl font-black text-brand-600 block mt-0.5">{ftIn.formatted}</span>
+      </div>
+      <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Global Stature</span>
+        <span class="text-xs font-bold text-slate-700 block mt-1">{human.percentileGlobal}</span>
+      </div>
+      <div class="p-3.5 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">US / European</span>
+        <span class="text-xs font-bold text-slate-700 block mt-1">{human.percentileUS}</span>
+      </div>
+    </div>
+
+    <!-- Interactive Comparison Workspace -->
+    <ComparisonTool initialItems={initialItems} />
+
+    <!-- Related Profiles via Deterministic Scoring -->
+    <RelatedEntities
+      entities={relatedEntities}
+      title="Compare Other Anthropometric Models"
+      subtitle={`Explore demographic reference statures near ${human.typicalHeightCm} cm.`}
+    />
+
+    <!-- Relevant Curated Matchups -->
+    {relatedComparisons.length > 0 && (
+      <RelatedComparisons
+        comparisons={relatedComparisons}
+        title={`${human.name} Comparisons`}
+        subtitle="Compare standard human models side-by-side with celebrities and everyday items."
+      />
+    )}
+
+    <!-- Category Hubs -->
+    <RelatedCategories
+      categories={relatedCategories}
+    />
+
+    <!-- FAQs -->
+    <FAQSection faqs={faqs} />
+  </div>
+</Layout>

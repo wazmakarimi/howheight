@@ -1,0 +1,75 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className = '' } = Astro.props;
+---
+
+<button
+  type="button"
+  class={`theme-toggle-btn inline-flex items-center justify-center w-9 h-9 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white bg-white/80 dark:bg-slate-800/80 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 rounded-lg shadow-xs transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 cursor-pointer ${className}`}
+  aria-label="Toggle dark mode"
+  title="Toggle dark / light mode"
+>
+  <!-- Sun Icon: Visible in dark mode (click to switch to Light mode) -->
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-4 h-4 hidden dark:block text-amber-400 hover:rotate-45 transition-transform duration-300"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <circle cx="12" cy="12" r="5"></circle>
+    <line x1="12" y1="1" x2="12" y2="3"></line>
+    <line x1="12" y1="21" x2="12" y2="23"></line>
+    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+    <line x1="1" y1="12" x2="3" y2="12"></line>
+    <line x1="21" y1="12" x2="23" y2="12"></line>
+    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+  </svg>
+
+  <!-- Moon Icon: Visible in light mode (click to switch to Dark mode) -->
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-4 h-4 block dark:hidden text-slate-700 hover:-rotate-12 transition-transform duration-300"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2.2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+  >
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+  </svg>
+</button>
+
+<script is:inline>
+  (function () {
+    function initThemeToggles() {
+      const toggleButtons = document.querySelectorAll('.theme-toggle-btn');
+      toggleButtons.forEach((btn) => {
+        if (btn.dataset.initialized === 'true') return;
+        btn.dataset.initialized = 'true';
+
+        btn.addEventListener('click', () => {
+          const isDark = document.documentElement.classList.toggle('dark');
+          localStorage.theme = isDark ? 'dark' : 'light';
+        });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initThemeToggles);
+    } else {
+      initThemeToggles();
+    }
+  })();
+</script>

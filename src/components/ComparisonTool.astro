@@ -1,0 +1,45 @@
+---
+import PersonForm from './PersonForm.astro';
+import PeopleList from './PeopleList.astro';
+import HeightChart from './HeightChart.astro';
+import QuickCompare from './QuickCompare.astro';
+import ComparisonSummary from './ComparisonSummary.astro';
+import type { ComparisonItem } from '../lib/constants';
+import type { Locale } from '../i18n/locales';
+
+interface Props {
+  initialItems?: ComparisonItem[];
+  initialComparisonSlug?: string;
+  showQuickCompare?: boolean;
+  locale?: Locale;
+}
+
+const { initialItems, initialComparisonSlug, showQuickCompare = true, locale = 'en' } = Astro.props;
+const initialItemsJson = initialItems && initialItems.length > 0 ? JSON.stringify(initialItems) : undefined;
+---
+
+<section 
+  id="comparison-tool" 
+  class="scroll-mt-20 w-full"
+  data-initial-items={initialItemsJson}
+  data-initial-slug={initialComparisonSlug}
+>
+  <div class="flex flex-col lg:flex-row gap-4 lg:gap-5 xl:gap-6 items-start w-full">
+    <!-- Left Sidebar: Compact Asset Library & Controls (Desktop: ~220-250px) -->
+    <aside class="w-full lg:w-[220px] xl:w-[240px] 2xl:w-[260px] shrink-0 space-y-4">
+      <PersonForm locale={locale} />
+      <PeopleList locale={locale} />
+      {showQuickCompare && <QuickCompare locale={locale} />}
+    </aside>
+
+    <!-- Right Hero: Maximized Comparison Canvas & Insights (Takes all remaining width) -->
+    <main class="flex-1 min-w-0 w-full space-y-4">
+      <HeightChart locale={locale} />
+      <ComparisonSummary locale={locale} />
+    </main>
+  </div>
+</section>
+
+<!-- Universal Interactive Engine Script (Bundled & Deduped by Astro) -->
+<script src="../scripts/comparison-app.ts"></script>
+

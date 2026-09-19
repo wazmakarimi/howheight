@@ -1,0 +1,124 @@
+---
+import Layout from '../layouts/Layout.astro';
+import CategoryIcon from '../components/brand/CategoryIcon.astro';
+import { SITE } from '../config/site';
+
+const canonical = `${SITE.siteUrl}/404/`;
+---
+
+<Layout
+  title={`Page Not Found | ${SITE.name}`}
+  description="The page you requested could not be found. Explore our height comparison categories or return to the interactive comparison tool on HowHeight."
+  canonicalUrl={canonical}
+>
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+    <div class="inline-flex items-center justify-center w-20 h-20 rounded-3xl bg-brand-50 dark:bg-slate-800 text-brand-600 dark:text-blue-400 font-black text-2xl mb-6 shadow-soft-sm">
+      404
+    </div>
+
+    <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight mb-4">
+      Page Not Found
+    </h1>
+
+    <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 max-w-lg mx-auto mb-8 leading-relaxed">
+      We couldn't find the height comparison page you're looking for. It may have moved or been updated.
+    </p>
+
+    <!-- Quick Navigation Actions -->
+    <div class="flex flex-wrap items-center justify-center gap-3 mb-12">
+      <a
+        href="/compare/"
+        class="px-6 py-3 rounded-xl font-bold text-sm text-white bg-brand-600 hover:bg-brand-700 shadow-soft-sm transition-all"
+      >
+        Start Comparing →
+      </a>
+      <a
+        href="/celebrity-height-comparison/"
+        class="px-5 py-3 rounded-xl font-bold text-sm text-slate-700 dark:text-slate-200 bg-white dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 border border-slate-200 dark:border-slate-700 transition-colors shadow-soft-sm"
+      >
+        Explore Celebrities
+      </a>
+    </div>
+
+    <!-- Category Hub Navigation -->
+    <div class="pt-10 border-t border-slate-200 dark:border-slate-800 text-left">
+      <h2 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-4 text-center">
+        Explore HowHeight Categories
+      </h2>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 max-w-xl mx-auto">
+        <a
+          href="/people-height-comparison/"
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all flex items-center justify-between group"
+        >
+          <div class="flex items-center gap-3">
+            <CategoryIcon categoryId="people" className="w-5 h-5 text-slate-400 group-hover:text-brand-600" />
+            <div>
+              <div class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-brand-600 transition-colors">
+                People Height Comparison
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                Male &amp; female anthropometric percentiles
+              </div>
+            </div>
+          </div>
+          <span class="text-brand-600 font-bold text-xs group-hover:translate-x-0.5 transition-transform">→</span>
+        </a>
+
+        <a
+          href="/animal-height-comparison/"
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all flex items-center justify-between group"
+        >
+          <div class="flex items-center gap-3">
+            <CategoryIcon categoryId="animals" className="w-5 h-5 text-slate-400 group-hover:text-brand-600" />
+            <div>
+              <div class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-brand-600 transition-colors">
+                Animal Height Comparison
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                Horses, dogs, cats, elephants &amp; withers standards
+              </div>
+            </div>
+          </div>
+          <span class="text-brand-600 font-bold text-xs group-hover:translate-x-0.5 transition-transform">→</span>
+        </a>
+
+        <a
+          href="/object-height-comparison/"
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all flex items-center justify-between group"
+        >
+          <div class="flex items-center gap-3">
+            <CategoryIcon categoryId="objects" className="w-5 h-5 text-slate-400 group-hover:text-brand-600" />
+            <div>
+              <div class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-brand-600 transition-colors">
+                Object Height Comparison
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                Doors, chairs, vehicles &amp; architectural objects
+              </div>
+            </div>
+          </div>
+          <span class="text-brand-600 font-bold text-xs group-hover:translate-x-0.5 transition-transform">→</span>
+        </a>
+
+        <a
+          href="/celebrity-height-comparison/"
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all flex items-center justify-between group"
+        >
+          <div class="flex items-center gap-3">
+            <CategoryIcon categoryId="celebrities" className="w-5 h-5 text-slate-400 group-hover:text-brand-600" />
+            <div>
+              <div class="font-bold text-sm text-slate-900 dark:text-white group-hover:text-brand-600 transition-colors">
+                Celebrity Height Comparison
+              </div>
+              <div class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                25+ verified athletes, cricketers &amp; actors
+              </div>
+            </div>
+          </div>
+          <span class="text-brand-600 font-bold text-xs group-hover:translate-x-0.5 transition-transform">→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</Layout>

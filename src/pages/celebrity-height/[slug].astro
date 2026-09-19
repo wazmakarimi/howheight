@@ -1,0 +1,267 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../../components/ComparisonTool.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import RelatedEntities from '../../components/seo/RelatedEntities.astro';
+import RelatedComparisons from '../../components/seo/RelatedComparisons.astro';
+import RelatedCategories from '../../components/seo/RelatedCategories.astro';
+import FAQSection from '../../components/seo/FAQSection.astro';
+import { CELEBRITIES, type Celebrity } from '../../data/celebrities';
+import { cmToFeetInches } from '../../lib/height';
+import { buildCanonicalUrl } from '../../lib/seo';
+import type { ComparisonItem } from '../../lib/constants';
+import {
+  getRelatedEntities,
+  getRelatedComparisons,
+  getRelatedCategories,
+} from '../../lib/internal-linking';
+
+export function getStaticPaths() {
+  return CELEBRITIES.map((celebrity) => ({
+    params: { slug: celebrity.slug },
+    props: { celebrity },
+  }));
+}
+
+interface Props {
+  celebrity: Celebrity;
+}
+
+const { celebrity } = Astro.props;
+const ftIn = cmToFeetInches(celebrity.heightCm);
+const canonical = buildCanonicalUrl(`/celebrity-height/${celebrity.slug}/`);
+
+// Preloaded items for the universal engine on this page
+const initialItems: ComparisonItem[] = [
+  {
+    id: `seo-cel-${celebrity.id}`,
+    category: 'celebrity',
+    name: celebrity.name,
+    gender: celebrity.gender,
+    celebrityId: celebrity.id,
+    profession: celebrity.profession,
+    heightCm: celebrity.heightCm,
+    referenceHeightCm: celebrity.heightCm,
+    isCustomHeight: false,
+    color: '#9333ea',
+  },
+  {
+    id: 'seo-human-ref',
+    category: 'human',
+    name: 'Average Adult (176 cm)',
+    gender: 'male',
+    heightCm: 176,
+    referenceHeightCm: 176,
+    isCustomHeight: false,
+    color: '#2563eb',
+  },
+];
+
+// Related entities via central scoring engine
+const relatedEntities = getRelatedEntities(
+  {
+    id: celebrity.id,
+    category: 'celebrities',
+    name: celebrity.name,
+    heightCm: celebrity.heightCm,
+    profession: celebrity.profession,
+    country: celebrity.country,
+    tags: celebrity.aliases,
+  },
+  8,
+  'en'
+);
+
+// Curated comparisons involving or relating to this celebrity
+const relatedComparisons = getRelatedComparisons({
+  entityId: celebrity.id,
+  category: 'celebrities',
+  limit: 6,
+  locale: 'en',
+});
+
+// Category relationships
+const relatedCategories = getRelatedCategories('celebrities', 3, 'en');
+
+// Comparison with average human heights
+const avgHeightCm = celebrity.gender === 'male' ? 176 : 162;
+const diffFromAvgCm = celebrity.heightCm - avgHeightCm;
+const diffFromAvgInches = (diffFromAvgCm / 2.54).toFixed(1);
+const avgLabel = celebrity.gender === 'male' ? 'Average Adult Male (176 cm / 5\'9.3")' : 'Average Adult Female (162 cm / 5\'3.8")';
+
+// Person Schema.org JSON-LD
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  'name': celebrity.name,
+  'height': {
+    '@type': 'QuantitativeValue',
+    'value': celebrity.heightCm,
+    'unitCode': 'CMT',
+  },
+  'jobTitle': celebrity.profession,
+  'nationality': celebrity.country,
+  'description': celebrity.bioSnippet || `${celebrity.name} is a verified public figure with a verified height of ${celebrity.heightCm} cm (${ftIn.formatted}).`,
+};
+
+const faqs = [
+  {
+    question: `How tall is ${celebrity.name}?`,
+    answer: `${celebrity.name}'s verified canonical height is ${celebrity.heightCm} cm (${ftIn.formatted}).`
+  },
+  {
+    question: `How tall is ${celebrity.name} in feet and inches?`,
+    answer: `${celebrity.name} stands at ${ftIn.formatted} (${celebrity.heightCm} cm).`
+  },
+  {
+    question: `Where does ${celebrity.name}'s height measurement come from?`,
+    answer: celebrity.heightSource || `${celebrity.name}'s height is sourced from verified athletic board listings and standardized talent biographies.`
+  },
+  {
+    question: `How does ${celebrity.name} compare to the average person?`,
+    answer: diffFromAvgCm === 0
+      ? `${celebrity.name} matches the exact global median height for ${celebrity.gender === 'male' ? 'adult men' : 'adult women'} (${avgHeightCm} cm).`
+      : diffFromAvgCm > 0
+      ? `${celebrity.name} is approximately ${diffFromAvgCm} cm (${diffFromAvgInches} inches) taller than the ${avgLabel}.`
+      : `${celebrity.name} is approximately ${Math.abs(diffFromAvgCm)} cm (${Math.abs(Number(diffFromAvgInches))} inches) shorter than the ${avgLabel}.`
+  }
+];
+---
+
+<Layout
+  title={`${celebrity.name} Height – Height Comparison | HowHeight`}
+  description={`How tall is ${celebrity.name}? Verified height: ${ftIn.formatted} (${celebrity.heightCm} cm). Compare ${celebrity.name}'s height side-by-side with other celebrities, humans, animals, and objects on HowHeight.`}
+  canonicalUrl={canonical}
+>
+  <script type="application/ld+json" set:html={JSON.stringify(personSchema)} slot="head" />
+
+  <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      items={[
+        { name: 'Home', url: '/' },
+        { name: 'Celebrity Height Comparison', url: '/celebrity-height-comparison/' },
+        { name: celebrity.name, url: `/celebrity-height/${celebrity.slug}/` },
+      ]}
+    />
+
+    <!-- Header & Profile Information -->
+    <header class="mb-8">
+      <div class="flex items-center gap-2 flex-wrap mb-3">
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-purple-50 text-purple-700 border border-purple-200/70">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+          </svg>
+          {celebrity.profession}
+        </span>
+        <span class="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-100 text-slate-600">
+          {celebrity.country}
+        </span>
+        <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200/60">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M20 6 9 17l-5-5"></path>
+          </svg>
+          Verified Height
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-3">
+        How Tall is {celebrity.name}?
+      </h1>
+
+      {celebrity.aliases && celebrity.aliases.length > 0 && (
+        <p class="text-xs text-slate-400 mb-2">
+          Also known as: <span class="font-medium text-slate-600">{celebrity.aliases.join(', ')}</span>
+        </p>
+      )}
+
+      {celebrity.bioSnippet && (
+        <p class="text-sm sm:text-base text-slate-600 max-w-3xl leading-relaxed mb-4">
+          {celebrity.bioSnippet}
+        </p>
+      )}
+
+      <!-- Quick Metrics Pill -->
+      <div class="flex flex-wrap items-center gap-3 pt-2">
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-purple-200/80 shadow-soft-sm text-xs font-bold text-slate-800">
+          <span class="text-slate-400 font-medium">Verified Height:</span>
+          <span class="text-purple-700 font-black">{ftIn.formatted}</span>
+          <span class="text-slate-400 font-normal">({celebrity.heightCm} cm)</span>
+        </div>
+        <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-slate-50 border border-slate-200/60 text-xs text-slate-600">
+          <span><strong>Source:</strong> {celebrity.heightSource || 'Official Athletic / Talent Registry'}</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Embedded Preloaded Universal Comparison Tool -->
+    <ComparisonTool initialItems={initialItems} />
+
+    <!-- Detailed Statistics Grid -->
+    <section class="mt-14 p-6 sm:p-8 rounded-3xl bg-white border border-slate-200/80 shadow-soft">
+      <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight mb-4">
+        {celebrity.name} Physical Stature Analysis
+      </h2>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200/70">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+            Compared to Average
+          </span>
+          <div class="font-extrabold text-base text-slate-900">
+            {diffFromAvgCm === 0 ? 'Exact Average' : diffFromAvgCm > 0 ? `${diffFromAvgCm} cm (${diffFromAvgInches} in) taller` : `${Math.abs(diffFromAvgCm)} cm (${Math.abs(Number(diffFromAvgInches))} in) shorter`}
+          </div>
+          <p class="text-xs text-slate-500 mt-1">
+            than the {avgLabel}
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200/70">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+            Door Frame Ratio
+          </span>
+          <div class="font-extrabold text-base text-slate-900">
+            {((celebrity.heightCm / 210) * 100).toFixed(0)}% of Standard Door
+          </div>
+          <p class="text-xs text-slate-500 mt-1">
+            Standard residential interior door is 210 cm (6'11")
+          </p>
+        </div>
+
+        <div class="p-4 rounded-2xl bg-slate-50/80 border border-slate-200/70">
+          <span class="text-[11px] font-bold uppercase tracking-wider text-slate-400 block mb-1">
+            Model Silhouette
+          </span>
+          <div class="font-extrabold text-base text-slate-900 capitalize">
+            Neutral {celebrity.gender} Silhouette
+          </div>
+          <p class="text-xs text-slate-500 mt-1">
+            Accurately scaled anatomical SVG standing on 0 cm floor
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Related Profiles via Deterministic Scoring -->
+    <RelatedEntities
+      entities={relatedEntities}
+      title="Compare Other Celebrities & Public Figures"
+      subtitle={`Explore verified profiles with similar profession, background, or stature near ${celebrity.heightCm} cm.`}
+    />
+
+    <!-- Relevant Curated Matchups -->
+    {relatedComparisons.length > 0 && (
+      <RelatedComparisons
+        comparisons={relatedComparisons}
+        title={`${celebrity.name} Height Comparisons`}
+        subtitle="Compare verified measurements side-by-side on an aligned floor baseline."
+      />
+    )}
+
+    <!-- Category Hubs -->
+    <RelatedCategories
+      categories={relatedCategories}
+    />
+
+    <!-- FAQ Section -->
+    <FAQSection faqs={faqs} />
+  </div>
+</Layout>

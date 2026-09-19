@@ -1,0 +1,77 @@
+---
+import type { RelatedComparisonResult } from '../../lib/internal-linking/types';
+import { t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  comparisons: RelatedComparisonResult[];
+  title?: string;
+  subtitle?: string;
+  locale?: Locale;
+}
+
+const {
+  comparisons,
+  title,
+  subtitle,
+  locale = 'en',
+} = Astro.props;
+
+const defaultTitle = t(locale, 'section.comparisonsTitle') || 'Popular Height Comparisons';
+const defaultSubtitle = 'Compare these figures side-by-side with mathematically aligned scale.';
+const sectionTitle = title || defaultTitle;
+const sectionSubtitle = subtitle || defaultSubtitle;
+---
+
+{comparisons && comparisons.length > 0 && (
+  <section class="mt-14 pt-10 border-t border-slate-200 dark:border-slate-800">
+    <div class="mb-6">
+      <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-blue-400 bg-brand-50 dark:bg-slate-800 px-3 py-1 rounded-full">
+        {t(locale, 'section.curatedMatchup') || 'Curated Matchups'}
+      </span>
+      <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight mt-2">
+        {sectionTitle}
+      </h2>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+        {sectionSubtitle}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {comparisons.map((comp) => (
+        <a
+          href={comp.url}
+          aria-label={comp.anchorText}
+          class="p-4 sm:p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group flex flex-col justify-between"
+        >
+          <div>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors">
+              {comp.h1}
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2 leading-relaxed">
+              {comp.description}
+            </p>
+
+            {comp.items && comp.items.length >= 2 && (
+              <div class="mt-3 grid grid-cols-2 gap-2 text-center text-[11px] bg-slate-50 dark:bg-slate-900/60 p-2 rounded-xl border border-slate-100 dark:border-slate-700/60">
+                <div class="truncate">
+                  <span class="font-semibold text-slate-700 dark:text-slate-300 block truncate">{comp.items[0].name}</span>
+                  <span class="text-brand-600 dark:text-blue-400 font-bold">{comp.items[0].heightCm} cm</span>
+                </div>
+                <div class="truncate border-l border-slate-200 dark:border-slate-700">
+                  <span class="font-semibold text-slate-700 dark:text-slate-300 block truncate">{comp.items[1].name}</span>
+                  <span class="text-brand-600 dark:text-blue-400 font-bold">{comp.items[1].heightCm} cm</span>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700 flex items-center justify-between text-xs font-semibold text-slate-600 dark:text-slate-300">
+            <span>{t(locale, 'section.viewComparison') || 'View comparison'}</span>
+            <span class="text-brand-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform">→</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </section>
+)}

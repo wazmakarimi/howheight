@@ -1,0 +1,98 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../seo/Breadcrumbs.astro';
+import CategoryIcon from '../brand/CategoryIcon.astro';
+import { SITE } from '../../config/site';
+import { CATEGORIES } from '../../data/categories';
+import { getLocalizedCategory, getLocalizedPath, t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/about/', locale)}`;
+---
+
+<Layout
+  title={`${t(locale, 'footer.about')} HowHeight – ${t(locale, 'brand.tagline')} | ${SITE.name}`}
+  description={t(locale, 'about.desc')}
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+    <Breadcrumbs
+      locale={locale}
+      items={[
+        { name: 'Home', url: '/' },
+        { name: t(locale, 'footer.about'), url: '/about/' },
+      ]}
+    />
+
+    <!-- Header -->
+    <header class="text-center my-6 sm:my-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-50 text-brand-700 border border-brand-200/80 mb-3 shadow-soft-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="12" y1="16" x2="12" y2="12"></line>
+          <line x1="12" y1="8" x2="12.01" y2="8"></line>
+        </svg>
+        <span>{t(locale, 'footer.platformStatement')}</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
+        {t(locale, 'about.title')}
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 mt-3 leading-relaxed max-w-2xl mx-auto">
+        {t(locale, 'brand.tagline')}. {t(locale, 'brand.description')}
+      </p>
+    </header>
+
+    <!-- Main Content Articles -->
+    <article class="prose prose-slate max-w-none space-y-10 text-sm sm:text-base leading-relaxed text-slate-700">
+      <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-4">
+          Our Core Mission
+        </h2>
+        <p>
+          Human beings are inherently visual creatures, yet traditional numbers and measurement charts struggle to convey what physical heights truly look and feel like in real space. Comparing an actor listed at 170 cm with a doorway listed at 210 cm or an African Elephant listed at 320 cm shoulder height requires intuitive geometric perspective.
+        </p>
+        <p class="mt-3">
+          <strong>HowHeight</strong> was built to solve this problem across ten diverse categories—spanning humans, verified celebrities, anime heroes, cinema figures, zoological species, architectural elements, plants, sports equipment, and footwear—on a unified, mathematically rigorous digital canvas.
+        </p>
+      </div>
+
+      <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-4">
+          Scientific Measurement Methodology
+        </h2>
+        <ul class="space-y-3 list-disc pl-5">
+          <li><strong>Universal Mathematical Scale:</strong> Every silhouette and photo is projected using strict pixel-to-centimeter ratios.</li>
+          <li><strong>Strict Baseline Anchoring:</strong> Every entity stands anchored to the exact same 0 cm baseline floor plane.</li>
+          <li><strong>Dual Vector &amp; Raster Projection:</strong> Supports both precision vector SVGs and transparent cutout PNGs with preserved aspect ratio.</li>
+        </ul>
+      </div>
+
+      <!-- Categories Supported -->
+      <div class="p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 mb-4">
+          Supported Categories
+        </h2>
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {CATEGORIES.map((rawCat) => {
+            const cat = getLocalizedCategory(rawCat, locale);
+            return (
+              <a
+                href={getLocalizedPath(cat.route, locale)}
+                class="p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-brand-500 transition-all text-xs font-semibold text-slate-800 hover:text-brand-600 flex items-center gap-2"
+              >
+                <CategoryIcon categoryId={cat.id} className="w-4 h-4 text-brand-600" />
+                <span>{cat.name}</span>
+              </a>
+            );
+          })}
+        </div>
+      </div>
+    </article>
+  </div>
+</Layout>

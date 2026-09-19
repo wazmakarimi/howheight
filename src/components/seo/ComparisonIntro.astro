@@ -1,0 +1,79 @@
+---
+interface Props {
+  h1: string;
+  badge?: string;
+  badgeColor?: 'blue' | 'purple' | 'amber' | 'emerald' | 'slate';
+  introText: string;
+  heightCm?: number;
+  heightRange?: { min: number; max: number };
+  heightFtIn?: string;
+  measurementAnchor?: string;
+}
+
+const {
+  h1,
+  badge,
+  badgeColor = 'blue',
+  introText,
+  heightCm,
+  heightRange,
+  heightFtIn,
+  measurementAnchor,
+} = Astro.props;
+
+const badgeClasses = {
+  blue: 'bg-blue-50 text-blue-700 border-blue-200/70',
+  purple: 'bg-purple-50 text-purple-700 border-purple-200/70',
+  amber: 'bg-amber-50 text-amber-700 border-amber-200/70',
+  emerald: 'bg-emerald-50 text-emerald-700 border-emerald-200/70',
+  slate: 'bg-slate-100 text-slate-700 border-slate-200',
+}[badgeColor];
+---
+
+<header class="mb-8">
+  {badge && (
+    <div class="mb-3">
+      <span class={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider border shadow-soft-sm ${badgeClasses}`}>
+        {badge}
+      </span>
+    </div>
+  )}
+
+  <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+    {h1}
+  </h1>
+
+  <p class="text-base sm:text-lg text-slate-600 leading-relaxed max-w-3xl mb-5">
+    {introText}
+  </p>
+
+  {(heightCm || heightRange || measurementAnchor) && (
+    <div class="flex flex-wrap items-center gap-3 pt-2">
+      {heightCm && (
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/80 shadow-soft-sm text-xs font-bold text-slate-800">
+          <span class="text-slate-400 font-medium">Reference Height:</span>
+          <span class="text-brand-600 font-extrabold">{heightCm} cm</span>
+          {heightFtIn && <span class="text-slate-400 font-normal">({heightFtIn})</span>}
+        </div>
+      )}
+
+      {heightRange && (
+        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-xl bg-white border border-slate-200/80 shadow-soft-sm text-xs font-bold text-slate-800">
+          <span class="text-slate-400 font-medium">Typical Range:</span>
+          <span class="text-amber-600 font-extrabold">{heightRange.min}–{heightRange.max} cm</span>
+        </div>
+      )}
+
+      {measurementAnchor && (
+        <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-50 border border-slate-200/60 text-xs text-slate-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="12" y1="16" x2="12" y2="12"></line>
+            <line x1="12" y1="8" x2="12.01" y2="8"></line>
+          </svg>
+          <span><strong>Measurement Point:</strong> {measurementAnchor}</span>
+        </div>
+      )}
+    </div>
+  )}
+</header>

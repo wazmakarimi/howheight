@@ -1,0 +1,15 @@
+# ==============================================================================
+# Cloudflare Pages Direct 301 Redirects: HowHeight.org
+# Canonical Domain: https://howheight.org
+# ==============================================================================
+
+# Canonical Domain Enforcement (Single-hop redirect from www and HTTP)
+https://www.howheight.org/*   https://howheight.org/:splat  301!
+http://www.howheight.org/*    https://howheight.org/:splat  301!
+http://howheight.org/*        https://howheight.org/:splat  301!
+
+# Category Hub Shortlink Aliases (Direct 301 redirects to authoritative category hubs)
+/celebrity-height/            /celebrity-height-comparison/  301
+/celebrity-height             /celebrity-height-comparison/  301
+/fictional-character-height/  /fictional-character-height-comparison/  301
+/fictional-character-height   /fictional-character-height-comparison/  301

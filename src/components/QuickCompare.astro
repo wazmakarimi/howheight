@@ -1,0 +1,67 @@
+---
+import {
+  QUICK_PRESETS,
+  QUICK_COMPARE_HUMAN_PRESETS,
+  QUICK_COMPARE_ANIMAL_PRESETS,
+  QUICK_COMPARE_OBJECT_PRESETS,
+  BENCHMARK_SCALE_PRESET,
+} from '../lib/constants';
+---
+
+<div class="bg-white rounded-2xl border border-slate-200/80 shadow-soft p-3.5 sm:p-4 space-y-3">
+  <div class="flex items-center gap-2 pb-2 border-b border-slate-100">
+    <div class="w-7 h-7 rounded-md bg-amber-50 text-amber-600 flex items-center justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+      </svg>
+    </div>
+    <div>
+      <h3 class="font-bold text-slate-900 text-sm leading-tight">Quick Presets</h3>
+      <p class="text-[11px] text-slate-500">Popular comparisons with verified reference scales</p>
+    </div>
+  </div>
+
+  <!-- Primary Presets from Specifications -->
+  <div class="space-y-1.5">
+    {QUICK_PRESETS.map((preset) => (
+      <button
+        type="button"
+        class="quick-preset-btn w-full text-left p-2.5 rounded-xl border border-slate-200/80 hover:border-brand-500 hover:bg-brand-50/40 hover:shadow-soft-sm transition-all group focus:outline-none focus:ring-2 focus:ring-brand-500"
+        data-preset-id={preset.id}
+      >
+        <div class="flex items-center justify-between">
+          <span class="text-xs font-bold text-slate-800 group-hover:text-brand-600 transition-colors">
+            {preset.label}
+          </span>
+          <span class="text-[10px] text-brand-600 bg-brand-50 font-bold px-1.5 py-0.5 rounded">
+            LOAD
+          </span>
+        </div>
+        <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">
+          {preset.description}
+        </p>
+      </button>
+    ))}
+  </div>
+
+  <!-- Universal 8-Category Benchmark Scale -->
+  <div class="p-2.5 rounded-xl bg-gradient-to-r from-blue-50/80 via-indigo-50/50 to-purple-50/80 border border-blue-200/70">
+    <div class="flex items-center justify-between mb-1.5">
+      <span class="text-[11px] font-bold uppercase tracking-wider text-blue-700 flex items-center gap-1">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+          <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+          <line x1="12" y1="22.08" x2="12" y2="12"></line>
+        </svg>
+        Full Benchmark Scale
+      </span>
+      <span class="text-[10px] text-slate-500 font-medium">8 Categories</span>
+    </div>
+    <button
+      type="button"
+      class="quick-preset-benchmark-btn w-full text-xs font-bold py-2 px-3 rounded-lg bg-white border border-blue-300 text-blue-800 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all text-center shadow-soft-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+    >
+      Load All 8 Categories on Stage
+    </button>
+  </div>
+</div>

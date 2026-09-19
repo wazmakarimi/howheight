@@ -1,0 +1,161 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../../components/ComparisonTool.astro';
+import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
+import ComparisonIntro from '../../components/seo/ComparisonIntro.astro';
+import FAQSection from '../../components/seo/FAQSection.astro';
+import { ASSET_REGISTRY, type AssetMetadata } from '../../data/assetRegistry';
+import { cmToFeetInches } from '../../lib/height';
+import { SITE } from '../../config/site';
+import type { ComparisonItem } from '../../lib/constants';
+
+export function getStaticPaths() {
+  // Only indexable verified plants with verified names & heights
+  const verifiedPlants = ASSET_REGISTRY.filter(
+    (a) => a.category === 'plants' && a.status === 'verified' && a.heightCm !== null && a.indexable !== false
+  ).slice(0, 25);
+
+  return verifiedPlants.map((plant) => ({
+    params: { slug: plant.slug },
+    props: { plant },
+  }));
+}
+
+interface Props {
+  plant: AssetMetadata;
+}
+
+const { plant } = Astro.props;
+const plantHeight = plant.heightCm || 100;
+const ftIn = cmToFeetInches(plantHeight);
+const canonical = `${SITE.siteUrl}/plant-height-comparison/${plant.slug}/`;
+
+const initialItems: ComparisonItem[] = [
+  {
+    id: `seo-plant-${plant.id}`,
+    category: 'plants',
+    assetId: plant.id,
+    name: plant.name,
+    heightCm: plantHeight,
+    referenceHeightCm: plantHeight,
+    isCustomHeight: false,
+    color: '#16a34a',
+  },
+  {
+    id: 'seo-human-ref',
+    category: 'human',
+    name: 'Average Human (176 cm)',
+    gender: 'male',
+    heightCm: 176,
+    referenceHeightCm: 176,
+    isCustomHeight: false,
+    color: '#2563eb',
+  },
+];
+
+import RelatedEntities from '../../components/seo/RelatedEntities.astro';
+import RelatedComparisons from '../../components/seo/RelatedComparisons.astro';
+import RelatedCategories from '../../components/seo/RelatedCategories.astro';
+import {
+  getRelatedEntities,
+  getRelatedComparisons,
+  getRelatedCategories,
+} from '../../lib/internal-linking';
+
+// Related plants via deterministic scoring
+const relatedEntities = getRelatedEntities(
+  {
+    id: plant.id,
+    category: 'plants',
+    name: plant.name,
+    heightCm: plantHeight,
+    tags: plant.tags,
+  },
+  8,
+  'en'
+);
+
+// Curated matchups featuring plants or natural scale
+const relatedComparisons = getRelatedComparisons({
+  entityId: plant.id,
+  category: 'plants',
+  limit: 6,
+  locale: 'en',
+});
+
+// Category relationships
+const relatedCategories = getRelatedCategories('plants', 3, 'en');
+
+const faqs = [
+  {
+    question: `How is the height of ${plant.name} measured?`,
+    answer: `Botanical heights measure the vertical distance from the ground soil level to the uppermost foliage or canopy apex in natural growth posture.`,
+  },
+  {
+    question: `How does ${plant.name} compare to an average adult human?`,
+    answer: `An average adult human stands 176 cm (5'9.3"). ${plant.name} stands ${plantHeight} cm (${ftIn.formatted}), making it ${Math.abs(176 - plantHeight)} cm ${176 >= plantHeight ? 'shorter' : 'taller'} than an average human.`,
+  },
+];
+---
+
+<Layout
+  title={`${plant.name} Height – Height Comparison | ${SITE.name}`}
+  description={`Compare ${plant.name} height (${plantHeight} cm / ${ftIn.formatted}) with humans, trees, and everyday objects side-by-side on an aligned floor baseline with HowHeight.`}
+  canonicalUrl={canonical}
+>
+  <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-10">
+    <Breadcrumbs
+      items={[
+        { name: 'Home', url: '/' },
+        { name: 'Plant Height Comparison', url: '/plant-height-comparison/' },
+        { name: plant.name, url: `/plant-height-comparison/${plant.slug}/` },
+      ]}
+    />
+
+    <ComparisonIntro
+      h1={`${plant.name} Height Comparison`}
+      badge="Botanical Stature Reference"
+      badgeColor="emerald"
+      introText={`Visual scale comparison for ${plant.name}. Comparing botanical specimens with human stature provides essential spatial perspective for landscaping, gardening, and natural scale.`}
+      measurementAnchor="Ground soil grade to highest natural canopy branch."
+    />
+
+    <div class="grid grid-cols-2 gap-3.5 max-w-md mx-auto my-6">
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Botanical Height</span>
+        <span class="text-2xl font-black text-slate-900 block mt-0.5">{plantHeight} cm</span>
+      </div>
+      <div class="p-4 rounded-2xl bg-white border border-slate-200 shadow-soft text-center">
+        <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Imperial Dimension</span>
+        <span class="text-2xl font-black text-emerald-600 block mt-0.5">{ftIn.formatted}</span>
+      </div>
+    </div>
+
+    <!-- Interactive Comparison Workspace -->
+    <ComparisonTool initialItems={initialItems} />
+
+    <!-- Related Profiles via Deterministic Scoring -->
+    <RelatedEntities
+      entities={relatedEntities}
+      title="Compare Other Plants & Trees"
+      subtitle={`Explore botanical canopies and flora specimens near ${plantHeight} cm.`}
+    />
+
+    <!-- Relevant Curated Matchups -->
+    {relatedComparisons.length > 0 && (
+      <RelatedComparisons
+        comparisons={relatedComparisons}
+        title={`${plant.name} Comparisons`}
+        subtitle="Compare plant heights side-by-side with humans and structures."
+      />
+    )}
+
+    <!-- Category Hubs -->
+    <RelatedCategories
+      categories={relatedCategories}
+    />
+
+    <!-- FAQs -->
+    <FAQSection faqs={faqs} />
+  </div>
+</Layout>
