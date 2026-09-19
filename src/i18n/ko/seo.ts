@@ -5,6 +5,7 @@ export default {
   'meta.keywords': '키 비교, 신장 차이 계산기, 연예인 키, 시각적 키 비교, 애니 캐릭터 키',
 
   // Compare Tool SEO
+  'compare.h1': '키 비교 도구',
   'compare.title': '키 비교 도구 – 실시간 인터랙티브 나란히 비교 | HowHeight',
   'compare.desc': '원하는 인물이나 사용자 지정 측정값을 추가하여 실시간으로 신장을 시각 비교하세요. 동일한 0cm 기준선 위에 비례 정렬된 정밀 SVG 및 PNG 모델을 제공합니다.',
 

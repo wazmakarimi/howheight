@@ -31,6 +31,20 @@ const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/compare/', locale)}`;
       />
     </div>
 
+    <!-- Page Header -->
+    <header class="text-center max-w-4xl mx-auto mb-4 sm:mb-6 px-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-blue-300 border border-brand-200/80 dark:border-brand-800 mb-2.5 shadow-soft-sm">
+        <span class="w-2 h-2 rounded-full bg-brand-600 dark:bg-blue-400 animate-pulse"></span>
+        <span>{t(locale, 'section.liveToolBadge')}</span>
+      </div>
+      <h1 class="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
+        {t(locale, 'compare.h1')}
+      </h1>
+      <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 mt-2 leading-relaxed max-w-2xl mx-auto">
+        {t(locale, 'compare.desc')}
+      </p>
+    </header>
+
     <!-- Main Comparison Workspace -->
     <ComparisonTool locale={locale} />
   </div>

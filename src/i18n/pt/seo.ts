@@ -5,6 +5,7 @@ export default {
   'meta.keywords': 'comparação de altura, calculadora de diferença de altura, altura de famosos, comparar alturas visualmente, altura anime',
 
   // Compare Tool SEO
+  'compare.h1': 'Comparador de Altura',
   'compare.title': 'Comparador de Altura – Visualizador Lado a Lado Interativo | HowHeight',
   'compare.desc': 'Adicione qualquer figura ou medida personalizada para comparar estaturas em tempo real. Modelos proporcionais SVG e PNG ancorados em uma linha de solo de 0 cm.',
 

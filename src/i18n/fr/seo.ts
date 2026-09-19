@@ -5,6 +5,7 @@ export default {
   'meta.keywords': 'comparateur de taille, calcul différence de taille, taille des célébrités, comparaison visuelle taille, taille anime',
 
   // Compare Tool SEO
+  'compare.h1': 'Comparateur de Taille',
   'compare.title': 'Comparateur de Taille – Visualiseur Vis-à-Vis Interactif | HowHeight',
   'compare.desc': 'Ajoutez n\'importe quel modèle ou mesure sur mesure pour comparer les tailles visuellement en temps réel. Modèles SVG et PNG proportionnels alignés sur un sol à 0 cm.',
 

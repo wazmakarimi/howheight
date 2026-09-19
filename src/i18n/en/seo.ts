@@ -5,6 +5,7 @@ export default {
   'meta.keywords': 'height comparison, height difference calculator, celebrity heights, compare heights visual, anime height comparison',
 
   // Compare Tool SEO
+  'compare.h1': 'Height Comparison Tool',
   'compare.title': 'Height Comparison Tool – Interactive Side-by-Side Visualizer | HowHeight',
   'compare.desc': 'Add any figure or custom measurement to compare heights visually in real time. Features proportional SVG and PNG models on a shared 0 cm baseline.',
 

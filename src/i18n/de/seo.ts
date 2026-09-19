@@ -5,6 +5,7 @@ export default {
   'meta.keywords': 'Größenvergleich, Körpergröße vergleichen, Größenunterschied Rechner, Promi Größen, Anime Größenvergleich',
 
   // Compare Tool SEO
+  'compare.h1': 'Größenvergleichs-Tool',
   'compare.title': 'Größenvergleichs-Tool – Interaktiver visueller Direktvergleich | HowHeight',
   'compare.desc': 'Fügen Sie beliebige Figuren oder eigene Messwerte hinzu, um Körpergrößen in Echtzeit visuell zu vergleichen. Proportionale SVG- und PNG-Modelle auf einer 0-cm-Grundlinie.',
 

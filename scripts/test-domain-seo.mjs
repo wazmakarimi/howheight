@@ -177,12 +177,13 @@ if (fs.existsSync(distDir)) {
     assert(!content.includes('<link rel="alternate" hreflang='), '404.html must NOT have alternate hreflang tags');
   });
 
-  runTest('20. dist/compare/index.html has production self-canonical and no static noindex', () => {
+  runTest('20. dist/compare/index.html has production self-canonical, h1 tag, and no static noindex', () => {
     const comparePath = path.resolve(distDir, 'compare/index.html');
     if (fs.existsSync(comparePath)) {
       const content = fs.readFileSync(comparePath, 'utf-8');
       assert(!content.includes('<meta name="robots" content="noindex'), 'Compare page must NOT have static noindex');
       assert(content.includes('<link rel="canonical" href="https://howheight.org/compare/"'), 'Compare page must have self-canonical');
+      assert(content.includes('<h1') && content.includes('Height Comparison Tool'), 'Compare page must contain <h1> tag with Height Comparison Tool');
     } else {
       console.log('       (Notice: dist/compare/index.html not found, will verify after rebuild)');
     }

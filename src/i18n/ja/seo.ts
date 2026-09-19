@@ -5,6 +5,7 @@ export default {
   'meta.keywords': '身長比較, 身長差計算, 芸能人の身長, 身長比較ツール, アニメキャラ身長',
 
   // Compare Tool SEO
+  'compare.h1': '身長比較ツール',
   'compare.title': '身長比較ツール – リアルタイム並列ビジュアライザー | HowHeight',
   'compare.desc': '任意の人物や数値を自由に追加し、リアルタイムで身長を並べて比較できます。共通の0cm接地線上に配置された高精度SVG・PNGモデルを搭載。',
 
