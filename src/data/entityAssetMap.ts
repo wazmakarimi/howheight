@@ -6202,151 +6202,194 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
   },
   "animal-bear-01": {
     "rawAssetId": "animal-bear-01",
-    "name": "Cat 5",
+    "name": "Grizzly Bear",
     "category": "animals",
-    "heightCm": 25,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 135,
+    "measurementType": "shoulder-height",
+    "subgroup": "[A] Cattle, Horses & Bears",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "bear",
+      "grizzly"
     ],
-    "aliases": [],
+    "aliases": [
+      "bear",
+      "grizzly"
+    ],
     "status": "verified",
     "indexable": true
   },
   "animal-blue-whale-01": {
     "rawAssetId": "animal-blue-whale-01",
-    "name": "Cat 3",
+    "name": "Blue Whale",
     "category": "animals",
-    "heightCm": 25,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 450,
+    "measurementType": "shoulder-height",
+    "subgroup": "[A] Marine Life",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "whale",
+      "blue whale"
     ],
-    "aliases": [],
+    "aliases": [
+      "blue-whale",
+      "whale"
+    ],
     "status": "verified",
     "indexable": true
   },
   "animal-cat-01": {
     "rawAssetId": "animal-cat-01",
-    "name": "Arctic Wolf",
+    "name": "Domestic Cat",
     "category": "animals",
-    "heightCm": 85,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 25,
+    "measurementType": "shoulder-height",
+    "subgroup": "[A] Felines",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "cat",
+      "feline",
+      "kitten"
     ],
-    "aliases": [],
+    "aliases": [
+      "cat",
+      "feline"
+    ],
     "status": "verified",
     "indexable": true
   },
   "animal-dog-01": {
     "rawAssetId": "animal-dog-01",
-    "name": "Arctic Fox",
+    "name": "Domestic Dog",
     "category": "animals",
-    "heightCm": 28,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 60,
+    "measurementType": "shoulder-height",
+    "subgroup": "[A] Canines",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "dog",
+      "canine",
+      "puppy"
     ],
-    "aliases": [],
+    "aliases": [
+      "dog",
+      "canine"
+    ],
     "status": "verified",
     "indexable": true
   },
   "animal-elephant-01": {
     "rawAssetId": "animal-elephant-01",
-    "name": "Cat",
+    "name": "African Elephant",
     "category": "animals",
-    "heightCm": 25,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 320,
+    "measurementType": "shoulder-height",
+    "subgroup": "[A] Elephants",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "elephant",
+      "african elephant"
     ],
-    "aliases": [],
+    "aliases": [
+      "elephant"
+    ],
     "status": "verified",
     "indexable": true
   },
   "animal-giraffe-01": {
     "rawAssetId": "animal-giraffe-01",
-    "name": "Cat 2",
+    "name": "Giraffe",
     "category": "animals",
-    "heightCm": 25,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 500,
+    "measurementType": "ground-to-top",
+    "subgroup": "[A] Giraffes",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "giraffe",
+      "tallest animal"
     ],
-    "aliases": [],
+    "aliases": [
+      "giraffe"
+    ],
     "status": "verified",
     "indexable": true
   },
   "animal-horse-01": {
     "rawAssetId": "animal-horse-01",
-    "name": "Big Cats",
+    "name": "Horse",
     "category": "animals",
-    "heightCm": 40,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 160,
+    "measurementType": "shoulder-height",
+    "subgroup": "[A] Cattle, Horses & Bears",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "horse",
+      "equine",
+      "stallion",
+      "riding horse"
     ],
-    "aliases": [],
+    "aliases": [
+      "horse",
+      "horse-standing",
+      "equine"
+    ],
     "status": "verified",
     "indexable": true
   },
   "animal-lion-01": {
     "rawAssetId": "animal-lion-01",
-    "name": "British Shorthair Cat",
+    "name": "Lion",
     "category": "animals",
-    "heightCm": 25,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 120,
+    "measurementType": "shoulder-height",
+    "subgroup": "[A] Big Cats",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "lion",
+      "big cat",
+      "panthera leo"
     ],
-    "aliases": [],
+    "aliases": [
+      "lion"
+    ],
     "status": "verified",
     "indexable": true
   },
   "animal-tiger-01": {
     "rawAssetId": "animal-tiger-01",
-    "name": "Cat 4",
+    "name": "Bengal Tiger",
     "category": "animals",
-    "heightCm": 25,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 100,
+    "measurementType": "shoulder-height",
+    "subgroup": "[A] Big Cats",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "tiger",
+      "big cat",
+      "bengal tiger"
     ],
-    "aliases": [],
+    "aliases": [
+      "tiger",
+      "bengal-tiger"
+    ],
     "status": "verified",
     "indexable": true
   },
   "animal-wolf-01": {
     "rawAssetId": "animal-wolf-01",
-    "name": "Cat 6",
+    "name": "Gray Wolf",
     "category": "animals",
-    "heightCm": 25,
-    "measurementType": "height",
-    "subgroup": "[A] Cats & Dogs",
+    "heightCm": 80,
+    "measurementType": "shoulder-height",
+    "subgroup": "[A] Canines",
     "tags": [
       "animals",
-      "[a] cats & dogs"
+      "wolf",
+      "gray wolf"
     ],
-    "aliases": [],
+    "aliases": [
+      "wolf"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -7061,9 +7104,15 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
     "subgroup": "[A] Cattle, Horses & Bears",
     "tags": [
       "animals",
-      "[a] cattle, horses & bears"
+      "horse",
+      "domestic horse",
+      "equine"
     ],
-    "aliases": [],
+    "aliases": [
+      "horse",
+      "domestic-horse",
+      "equine"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -9612,45 +9661,61 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
   },
   "object-car-01": {
     "rawAssetId": "object-car-01",
-    "name": "Object 001",
+    "name": "Sedan Car",
     "category": "objects",
-    "heightCm": null,
-    "measurementType": null,
-    "subgroup": null,
+    "heightCm": 148,
+    "measurementType": "ground-to-top",
+    "subgroup": "[O] Vehicles & Machinery",
     "tags": [
-      "objects"
+      "objects",
+      "car",
+      "sedan",
+      "automobile"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "car",
+      "automobile"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "object-chair-01": {
     "rawAssetId": "object-chair-01",
-    "name": "Object 001",
+    "name": "Office Chair",
     "category": "objects",
-    "heightCm": null,
-    "measurementType": null,
-    "subgroup": null,
+    "heightCm": 95,
+    "measurementType": "ground-to-top",
+    "subgroup": "[O] Furniture",
     "tags": [
-      "objects"
+      "objects",
+      "chair",
+      "furniture"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "chair",
+      "office-chair"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "object-door-01": {
     "rawAssetId": "object-door-01",
-    "name": "Object 001",
+    "name": "Standard Door",
     "category": "objects",
-    "heightCm": null,
-    "measurementType": null,
-    "subgroup": null,
+    "heightCm": 210,
+    "measurementType": "ground-to-top",
+    "subgroup": "[O] Architecture & Entryways",
     "tags": [
-      "objects"
+      "objects",
+      "door",
+      "doorway"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "door",
+      "standard-door"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "object-lamp-01": {
     "rawAssetId": "object-lamp-01",
@@ -9668,17 +9733,22 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
   },
   "object-phone-01": {
     "rawAssetId": "object-phone-01",
-    "name": "Object 001",
+    "name": "Smartphone",
     "category": "objects",
-    "heightCm": null,
-    "measurementType": null,
-    "subgroup": null,
+    "heightCm": 15,
+    "measurementType": "ground-to-top",
+    "subgroup": "[O] Consumer Electronics",
     "tags": [
-      "objects"
+      "objects",
+      "phone",
+      "smartphone"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "phone",
+      "smartphone"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "object-sofa-01": {
     "rawAssetId": "object-sofa-01",
@@ -9696,17 +9766,21 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
   },
   "object-table-01": {
     "rawAssetId": "object-table-01",
-    "name": "Object 001",
+    "name": "Dining Table",
     "category": "objects",
-    "heightCm": null,
-    "measurementType": null,
-    "subgroup": null,
+    "heightCm": 76,
+    "measurementType": "ground-to-top",
+    "subgroup": "[O] Furniture",
     "tags": [
-      "objects"
+      "objects",
+      "table",
+      "dining table"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "table"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "object-001": {
     "rawAssetId": "object-001",
@@ -18884,2822 +18958,3745 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
   },
   "anime-002": {
     "rawAssetId": "anime-002",
-    "name": "Anime 002",
+    "name": "Brook",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 277,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "brook",
+      "brook"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "brook",
+      "brook"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-003": {
     "rawAssetId": "anime-003",
-    "name": "Anime 003",
+    "name": "Charlotte Linlin Big Mom",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 880,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "charlotte-linlin-big-mom",
+      "charlotte linlin big mom"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "charlotte-linlin-big-mom",
+      "charlotte linlin big mom"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-004": {
     "rawAssetId": "anime-004",
-    "name": "Anime 004",
+    "name": "Chopper",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 90,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "chopper",
+      "chopper"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "chopper",
+      "chopper"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-005": {
     "rawAssetId": "anime-005",
-    "name": "Anime 005",
+    "name": "Edward Newgate Whitebeard",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 666,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "edward-newgate-whitebeard",
+      "edward newgate whitebeard"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "edward-newgate-whitebeard",
+      "edward newgate whitebeard"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-006": {
     "rawAssetId": "anime-006",
-    "name": "Anime 006",
+    "name": "Franky",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 240,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "franky",
+      "franky"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "franky",
+      "franky"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-007": {
     "rawAssetId": "anime-007",
-    "name": "Anime 007",
+    "name": "Jinbe",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 301,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "jinbe",
+      "jinbe"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jinbe",
+      "jinbe"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-008": {
     "rawAssetId": "anime-008",
-    "name": "Anime 008",
+    "name": "Kaido",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 710,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "kaido",
+      "kaido"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "kaido",
+      "kaido"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-009": {
     "rawAssetId": "anime-009",
-    "name": "Anime 009",
+    "name": "Monkey D. Luffy",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 174,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "monkey-d-luffy",
+      "monkey d. luffy"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "monkey-d-luffy",
+      "monkey d. luffy"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-010": {
     "rawAssetId": "anime-010",
-    "name": "Anime 010",
+    "name": "Nami",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 170,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "nami",
+      "nami"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "nami",
+      "nami"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-011": {
     "rawAssetId": "anime-011",
-    "name": "Anime 011",
+    "name": "Nico Robin",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 188,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "nico-robin",
+      "nico robin"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "nico-robin",
+      "nico robin"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-012": {
     "rawAssetId": "anime-012",
-    "name": "Anime 012",
+    "name": "Roronoa Zoro",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 181,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "roronoa-zoro",
+      "roronoa zoro"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "roronoa-zoro",
+      "roronoa zoro"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-013": {
     "rawAssetId": "anime-013",
-    "name": "Anime 013",
+    "name": "Sanji",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "sanji",
+      "sanji"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "sanji",
+      "sanji"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-014": {
     "rawAssetId": "anime-014",
-    "name": "Anime 014",
+    "name": "Usopp",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 176,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] one piece",
     "tags": [
       "anime",
-      "anime"
+      "usopp",
+      "usopp"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "usopp",
+      "usopp"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-015": {
     "rawAssetId": "anime-015",
-    "name": "Anime 015",
+    "name": "Armin Arlert",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 163,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] attack on titan",
     "tags": [
       "anime",
-      "anime"
+      "armin-arlert",
+      "armin arlert"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "armin-arlert",
+      "armin arlert"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-016": {
     "rawAssetId": "anime-016",
-    "name": "Anime 016",
+    "name": "colossal titan",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 6000,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] attack on titan",
     "tags": [
       "anime",
-      "anime"
+      "colossal-titan",
+      "colossal titan"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "colossal-titan",
+      "colossal titan"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-017": {
     "rawAssetId": "anime-017",
-    "name": "Anime 017",
+    "name": "Eren Yeager",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 170,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] attack on titan",
     "tags": [
       "anime",
-      "anime"
+      "eren-yeager",
+      "eren yeager"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "eren-yeager",
+      "eren yeager"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "anime-018": {
     "rawAssetId": "anime-018",
-    "name": "Anime 018",
+    "name": "Levi Ackerman",
     "category": "anime",
-    "heightCm": null,
+    "heightCm": 160,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[AN] attack on titan",
     "tags": [
       "anime",
-      "anime"
+      "levi-ackerman",
+      "levi ackerman"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "levi-ackerman",
+      "levi ackerman"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-002": {
     "rawAssetId": "film-002",
-    "name": "Film 002",
+    "name": "aat",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 919,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "aat",
+      "aat"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "aat",
+      "aat"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-003": {
     "rawAssetId": "film-003",
-    "name": "Film 003",
+    "name": "acklay",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 305,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "acklay",
+      "acklay"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "acklay",
+      "acklay"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-004": {
     "rawAssetId": "film-004",
-    "name": "Film 004",
+    "name": "admiral ackbar",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "admiral-ackbar",
+      "admiral ackbar"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "admiral-ackbar",
+      "admiral ackbar"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-005": {
     "rawAssetId": "film-005",
-    "name": "Film 005",
+    "name": "anakin skywalker",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "anakin-skywalker",
+      "anakin skywalker"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "anakin-skywalker",
+      "anakin skywalker"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-006": {
     "rawAssetId": "film-006",
-    "name": "Film 006",
+    "name": "at at",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 2253,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "at-at",
+      "at at"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "at-at",
+      "at at"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-007": {
     "rawAssetId": "film-007",
-    "name": "Film 007",
+    "name": "at m6",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 3609,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "at-m6",
+      "at m6"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "at-m6",
+      "at m6"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-008": {
     "rawAssetId": "film-008",
-    "name": "Film 008",
+    "name": "at st",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 861,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "at-st",
+      "at st"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "at-st",
+      "at st"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-009": {
     "rawAssetId": "film-009",
-    "name": "Film 009",
+    "name": "at te",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 960,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "at-te",
+      "at te"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "at-te",
+      "at te"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-010": {
     "rawAssetId": "film-010",
-    "name": "Film 010",
+    "name": "b1 battle droid",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 193,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "b1-battle-droid",
+      "b1 battle droid"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "b1-battle-droid",
+      "b1 battle droid"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-011": {
     "rawAssetId": "film-011",
-    "name": "Film 011",
+    "name": "b2 battle droid",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 191,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "b2-battle-droid",
+      "b2 battle droid"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "b2-battle-droid",
+      "b2 battle droid"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-012": {
     "rawAssetId": "film-012",
-    "name": "Film 012",
+    "name": "baby yoda",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 33,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "baby-yoda",
+      "baby yoda"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "baby-yoda",
+      "baby yoda"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-013": {
     "rawAssetId": "film-013",
-    "name": "Film 013",
+    "name": "bantha",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 251,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "bantha",
+      "bantha"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "bantha",
+      "bantha"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-014": {
     "rawAssetId": "film-014",
-    "name": "Film 014",
+    "name": "bb 8",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 66,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "bb-8",
+      "bb 8"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "bb-8",
+      "bb 8"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-015": {
     "rawAssetId": "film-015",
-    "name": "Film 015",
+    "name": "bb 9e",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 61,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "bb-9e",
+      "bb 9e"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "bb-9e",
+      "bb 9e"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-016": {
     "rawAssetId": "film-016",
-    "name": "Film 016",
+    "name": "boba fett",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "boba-fett",
+      "boba fett"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "boba-fett",
+      "boba fett"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-017": {
     "rawAssetId": "film-017",
-    "name": "Film 017",
+    "name": "c 3po",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 173,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "c-3po",
+      "c 3po"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "c-3po",
+      "c 3po"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-018": {
     "rawAssetId": "film-018",
-    "name": "Film 018",
+    "name": "captain phasma",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 201,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "captain-phasma",
+      "captain phasma"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "captain-phasma",
+      "captain phasma"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-019": {
     "rawAssetId": "film-019",
-    "name": "Film 019",
+    "name": "chewbacca",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 229,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "chewbacca",
+      "chewbacca"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "chewbacca",
+      "chewbacca"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-020": {
     "rawAssetId": "film-020",
-    "name": "Film 020",
+    "name": "count dooku",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 196,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "count-dooku",
+      "count dooku"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "count-dooku",
+      "count dooku"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-021": {
     "rawAssetId": "film-021",
-    "name": "Film 021",
+    "name": "darth maul",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "darth-maul",
+      "darth maul"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "darth-maul",
+      "darth maul"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-022": {
     "rawAssetId": "film-022",
-    "name": "Film 022",
+    "name": "darth vader",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 203,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "darth-vader",
+      "darth vader"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "darth-vader",
+      "darth vader"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-023": {
     "rawAssetId": "film-023",
-    "name": "Film 023",
+    "name": "death trooper",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 191,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "death-trooper",
+      "death trooper"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "death-trooper",
+      "death trooper"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-024": {
     "rawAssetId": "film-024",
-    "name": "Film 024",
+    "name": "droideka",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "droideka",
+      "droideka"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "droideka",
+      "droideka"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-025": {
     "rawAssetId": "film-025",
-    "name": "Film 025",
+    "name": "dwarf spider droid",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 198,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "dwarf-spider-droid",
+      "dwarf spider droid"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "dwarf-spider-droid",
+      "dwarf spider droid"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-026": {
     "rawAssetId": "film-026",
-    "name": "Film 026",
+    "name": "emperor palpatine",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "emperor-palpatine",
+      "emperor palpatine"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "emperor-palpatine",
+      "emperor palpatine"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-027": {
     "rawAssetId": "film-027",
-    "name": "Film 027",
+    "name": "ewok",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 99,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "ewok",
+      "ewok"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "ewok",
+      "ewok"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-028": {
     "rawAssetId": "film-028",
-    "name": "Film 028",
+    "name": "finn",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "finn",
+      "finn"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "finn",
+      "finn"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-029": {
     "rawAssetId": "film-029",
-    "name": "Film 029",
+    "name": "gnk droid",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 109,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "gnk-droid",
+      "gnk droid"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "gnk-droid",
+      "gnk droid"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-030": {
     "rawAssetId": "film-030",
-    "name": "Film 030",
+    "name": "greivous",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 218,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "greivous",
+      "greivous"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "greivous",
+      "greivous"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-031": {
     "rawAssetId": "film-031",
-    "name": "Film 031",
+    "name": "hailfire droid",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 848,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "hailfire-droid",
+      "hailfire droid"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "hailfire-droid",
+      "hailfire droid"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-032": {
     "rawAssetId": "film-032",
-    "name": "Film 032",
+    "name": "han solo",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "han-solo",
+      "han solo"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "han-solo",
+      "han solo"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-033": {
     "rawAssetId": "film-033",
-    "name": "Film 033",
+    "name": "jabba the hutt",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "jabba-the-hutt",
+      "jabba the hutt"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jabba-the-hutt",
+      "jabba the hutt"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-034": {
     "rawAssetId": "film-034",
-    "name": "Film 034",
+    "name": "jango fett",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "jango-fett",
+      "jango fett"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jango-fett",
+      "jango fett"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-035": {
     "rawAssetId": "film-035",
-    "name": "Film 035",
+    "name": "jar jar binks",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 196,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "jar-jar-binks",
+      "jar jar binks"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jar-jar-binks",
+      "jar jar binks"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-036": {
     "rawAssetId": "film-036",
-    "name": "Film 036",
+    "name": "jawa",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 99,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "jawa",
+      "jawa"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jawa",
+      "jawa"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-037": {
     "rawAssetId": "film-037",
-    "name": "Film 037",
+    "name": "jyn erso",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 160,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "jyn-erso",
+      "jyn erso"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jyn-erso",
+      "jyn erso"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-038": {
     "rawAssetId": "film-038",
-    "name": "Film 038",
+    "name": "k 2so",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 218,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "k-2so",
+      "k 2so"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "k-2so",
+      "k 2so"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-039": {
     "rawAssetId": "film-039",
-    "name": "Film 039",
+    "name": "ki adi mundi",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 191,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "ki-adi-mundi",
+      "ki adi mundi"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "ki-adi-mundi",
+      "ki adi mundi"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-040": {
     "rawAssetId": "film-040",
-    "name": "Film 040",
+    "name": "kit fisto",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 196,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "kit-fisto",
+      "kit fisto"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "kit-fisto",
+      "kit fisto"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-041": {
     "rawAssetId": "film-041",
-    "name": "Film 041",
+    "name": "kylo ren",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 188,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "kylo-ren",
+      "kylo ren"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "kylo-ren",
+      "kylo ren"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-042": {
     "rawAssetId": "film-042",
-    "name": "Film 042",
+    "name": "lando calrissian",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "lando-calrissian",
+      "lando calrissian"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "lando-calrissian",
+      "lando calrissian"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-043": {
     "rawAssetId": "film-043",
-    "name": "Film 043",
+    "name": "leia organa",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 150,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "leia-organa",
+      "leia organa"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "leia-organa",
+      "leia organa"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-044": {
     "rawAssetId": "film-044",
-    "name": "Film 044",
+    "name": "luke skywalker",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "luke-skywalker",
+      "luke skywalker"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "luke-skywalker",
+      "luke skywalker"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-045": {
     "rawAssetId": "film-045",
-    "name": "Film 045",
+    "name": "mace windu",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 188,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "mace-windu",
+      "mace windu"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "mace-windu",
+      "mace windu"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-046": {
     "rawAssetId": "film-046",
-    "name": "Film 046",
+    "name": "maz kanata",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 124,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "maz-kanata",
+      "maz kanata"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "maz-kanata",
+      "maz kanata"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-047": {
     "rawAssetId": "film-047",
-    "name": "Film 047",
+    "name": "mouse droid",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 25,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "mouse-droid",
+      "mouse droid"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "mouse-droid",
+      "mouse droid"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-048": {
     "rawAssetId": "film-048",
-    "name": "Film 048",
+    "name": "nexu",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "nexu",
+      "nexu"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "nexu",
+      "nexu"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-049": {
     "rawAssetId": "film-049",
-    "name": "Film 049",
+    "name": "nien nunb",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 160,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "nien-nunb",
+      "nien nunb"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "nien-nunb",
+      "nien nunb"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-050": {
     "rawAssetId": "film-050",
-    "name": "Film 050",
+    "name": "obi wan kenobi",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "obi-wan-kenobi",
+      "obi wan kenobi"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "obi-wan-kenobi",
+      "obi wan kenobi"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-051": {
     "rawAssetId": "film-051",
-    "name": "Film 051",
+    "name": "orson krennic",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 185,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "orson-krennic",
+      "orson krennic"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "orson-krennic",
+      "orson krennic"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-052": {
     "rawAssetId": "film-052",
-    "name": "Film 052",
+    "name": "padme amidala",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 160,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "padme-amidala",
+      "padme amidala"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "padme-amidala",
+      "padme amidala"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-053": {
     "rawAssetId": "film-053",
-    "name": "Film 053",
+    "name": "pao",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "pao",
+      "pao"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "pao",
+      "pao"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-054": {
     "rawAssetId": "film-054",
-    "name": "Film 054",
+    "name": "poe dameron",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 173,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "poe-dameron",
+      "poe dameron"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "poe-dameron",
+      "poe dameron"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-055": {
     "rawAssetId": "film-055",
-    "name": "Film 055",
+    "name": "qui gon jinn",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 193,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "qui-gon-jinn",
+      "qui gon jinn"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "qui-gon-jinn",
+      "qui gon jinn"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-056": {
     "rawAssetId": "film-056",
-    "name": "Film 056",
+    "name": "r2 d2",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 109,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "r2-d2",
+      "r2 d2"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "r2-d2",
+      "r2 d2"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-057": {
     "rawAssetId": "film-057",
-    "name": "Film 057",
+    "name": "rancor",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 498,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "rancor",
+      "rancor"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "rancor",
+      "rancor"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-058": {
     "rawAssetId": "film-058",
-    "name": "Film 058",
+    "name": "reek",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 305,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "reek",
+      "reek"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "reek",
+      "reek"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-059": {
     "rawAssetId": "film-059",
-    "name": "Film 059",
+    "name": "rey",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 170,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "rey",
+      "rey"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "rey",
+      "rey"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-060": {
     "rawAssetId": "film-060",
-    "name": "Film 060",
+    "name": "rose tico",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 157,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "rose-tico",
+      "rose tico"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "rose-tico",
+      "rose tico"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-061": {
     "rawAssetId": "film-061",
-    "name": "Film 061",
+    "name": "stromtrooper",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "stromtrooper",
+      "stromtrooper"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "stromtrooper",
+      "stromtrooper"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-062": {
     "rawAssetId": "film-062",
-    "name": "Film 062",
+    "name": "tauntaun",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 201,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "tauntaun",
+      "tauntaun"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "tauntaun",
+      "tauntaun"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-063": {
     "rawAssetId": "film-063",
-    "name": "Film 063",
+    "name": "wampa",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 244,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "wampa",
+      "wampa"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "wampa",
+      "wampa"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-064": {
     "rawAssetId": "film-064",
-    "name": "Film 064",
+    "name": "watto",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 137,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "watto",
+      "watto"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "watto",
+      "watto"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-065": {
     "rawAssetId": "film-065",
-    "name": "Film 065",
+    "name": "yoda",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 66,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "yoda",
+      "yoda"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "yoda",
+      "yoda"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-066": {
     "rawAssetId": "film-066",
-    "name": "Film 066",
+    "name": "zillo",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 3998,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] star wars",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "zillo",
+      "zillo"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "zillo",
+      "zillo"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-067": {
     "rawAssetId": "film-067",
-    "name": "Film 067",
+    "name": "aaron twd",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 185,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "aaron-twd",
+      "aaron twd"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "aaron-twd",
+      "aaron twd"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-068": {
     "rawAssetId": "film-068",
-    "name": "Film 068",
+    "name": "andrea twd",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 165,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "andrea-twd",
+      "andrea twd"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "andrea-twd",
+      "andrea twd"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-069": {
     "rawAssetId": "film-069",
-    "name": "Film 069",
+    "name": "beth greene",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 165,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "beth-greene",
+      "beth greene"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "beth-greene",
+      "beth greene"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-070": {
     "rawAssetId": "film-070",
-    "name": "Film 070",
+    "name": "carl grimes",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 173,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "carl-grimes",
+      "carl grimes"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "carl-grimes",
+      "carl grimes"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-071": {
     "rawAssetId": "film-071",
-    "name": "Film 071",
+    "name": "carol peletier",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 168,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "carol-peletier",
+      "carol peletier"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "carol-peletier",
+      "carol peletier"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-072": {
     "rawAssetId": "film-072",
-    "name": "Film 072",
+    "name": "daryl dixon",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 177,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "daryl-dixon",
+      "daryl dixon"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "daryl-dixon",
+      "daryl dixon"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-073": {
     "rawAssetId": "film-073",
-    "name": "Film 073",
+    "name": "eugene porter",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "eugene-porter",
+      "eugene porter"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "eugene-porter",
+      "eugene porter"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-074": {
     "rawAssetId": "film-074",
-    "name": "Film 074",
+    "name": "glenn rhee",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 173,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "glenn-rhee",
+      "glenn rhee"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "glenn-rhee",
+      "glenn rhee"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-075": {
     "rawAssetId": "film-075",
-    "name": "Film 075",
+    "name": "hershel greene",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "hershel-greene",
+      "hershel greene"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "hershel-greene",
+      "hershel greene"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-076": {
     "rawAssetId": "film-076",
-    "name": "Film 076",
+    "name": "maggie rhee",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 173,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "maggie-rhee",
+      "maggie rhee"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "maggie-rhee",
+      "maggie rhee"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-077": {
     "rawAssetId": "film-077",
-    "name": "Film 077",
+    "name": "merle dixon",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "merle-dixon",
+      "merle dixon"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "merle-dixon",
+      "merle dixon"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-078": {
     "rawAssetId": "film-078",
-    "name": "Film 078",
+    "name": "michonne hawthorne",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 170,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "michonne-hawthorne",
+      "michonne hawthorne"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "michonne-hawthorne",
+      "michonne hawthorne"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-079": {
     "rawAssetId": "film-079",
-    "name": "Film 079",
+    "name": "morgan jones",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "morgan-jones",
+      "morgan jones"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "morgan-jones",
+      "morgan jones"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-080": {
     "rawAssetId": "film-080",
-    "name": "Film 080",
+    "name": "negan smith",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 185,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "negan-smith",
+      "negan smith"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "negan-smith",
+      "negan smith"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-081": {
     "rawAssetId": "film-081",
-    "name": "Film 081",
+    "name": "rick grimes",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "rick-grimes",
+      "rick grimes"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "rick-grimes",
+      "rick grimes"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-082": {
     "rawAssetId": "film-082",
-    "name": "Film 082",
+    "name": "rosita espinosa",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 160,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "rosita-espinosa",
+      "rosita espinosa"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "rosita-espinosa",
+      "rosita espinosa"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-083": {
     "rawAssetId": "film-083",
-    "name": "Film 083",
+    "name": "sasha williams",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 164,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "sasha-williams",
+      "sasha williams"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "sasha-williams",
+      "sasha williams"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-084": {
     "rawAssetId": "film-084",
-    "name": "Film 084",
+    "name": "shane walsh",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "shane-walsh",
+      "shane walsh"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "shane-walsh",
+      "shane walsh"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-085": {
     "rawAssetId": "film-085",
-    "name": "Film 085",
+    "name": "the governor",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "the-governor",
+      "the governor"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "the-governor",
+      "the governor"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "film-086": {
     "rawAssetId": "film-086",
-    "name": "Film 086",
+    "name": "tyreese williams",
     "category": "films",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[F] walking dead",
     "tags": [
       "films",
-      "film"
+      "movie",
+      "tyreese-williams",
+      "tyreese williams"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "tyreese-williams",
+      "tyreese williams"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-002": {
     "rawAssetId": "celebrity-002",
-    "name": "Celebrity 002",
+    "name": "Aaron Kwok",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 165,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "aaron-kwok",
+      "aaron kwok"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "aaron-kwok",
+      "aaron kwok"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-003": {
     "rawAssetId": "celebrity-003",
-    "name": "Celebrity 003",
+    "name": "Ariana Grande",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 153,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "ariana-grande",
+      "ariana grande"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "ariana-grande",
+      "ariana grande"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-004": {
     "rawAssetId": "celebrity-004",
-    "name": "Celebrity 004",
+    "name": "Ashby Gentry",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 170,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "ashby-gentry",
+      "ashby gentry"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "ashby-gentry",
+      "ashby gentry"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-005": {
     "rawAssetId": "celebrity-005",
-    "name": "Celebrity 005",
+    "name": "Benedict Cumberbatch",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "benedict-cumberbatch",
+      "benedict cumberbatch"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "benedict-cumberbatch",
+      "benedict cumberbatch"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-006": {
     "rawAssetId": "celebrity-006",
-    "name": "Celebrity 006",
+    "name": "Blake Lively",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "blake-lively",
+      "blake lively"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "blake-lively",
+      "blake lively"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-007": {
     "rawAssetId": "celebrity-007",
-    "name": "Celebrity 007",
+    "name": "Brad Pitt",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "brad-pitt",
+      "brad pitt"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "brad-pitt",
+      "brad pitt"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-008": {
     "rawAssetId": "celebrity-008",
-    "name": "Celebrity 008",
+    "name": "Bruno Mars",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 165,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "bruno-mars",
+      "bruno mars"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "bruno-mars",
+      "bruno mars"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-009": {
     "rawAssetId": "celebrity-009",
-    "name": "Celebrity 009",
+    "name": "Charlize Theron",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "charlize-theron",
+      "charlize theron"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "charlize-theron",
+      "charlize theron"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-010": {
     "rawAssetId": "celebrity-010",
-    "name": "Celebrity 010",
+    "name": "Connor Stanhope",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "connor-stanhope",
+      "connor stanhope"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "connor-stanhope",
+      "connor stanhope"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-011": {
     "rawAssetId": "celebrity-011",
-    "name": "Celebrity 011",
+    "name": "Corey Fogelmanis",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 177,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "corey-fogelmanis",
+      "corey fogelmanis"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "corey-fogelmanis",
+      "corey fogelmanis"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-012": {
     "rawAssetId": "celebrity-012",
-    "name": "Celebrity 012",
+    "name": "Dwayne Johnson",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 196,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "dwayne-johnson",
+      "dwayne johnson"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "dwayne-johnson",
+      "dwayne johnson"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-013": {
     "rawAssetId": "celebrity-013",
-    "name": "Celebrity 013",
+    "name": "Famke Janssen",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "famke-janssen",
+      "famke janssen"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "famke-janssen",
+      "famke janssen"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-014": {
     "rawAssetId": "celebrity-014",
-    "name": "Celebrity 014",
+    "name": "Gal Gadot",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "gal-gadot",
+      "gal gadot"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "gal-gadot",
+      "gal gadot"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-015": {
     "rawAssetId": "celebrity-015",
-    "name": "Celebrity 015",
+    "name": "Guo Jingming",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 147,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "guo-jingming",
+      "guo jingming"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "guo-jingming",
+      "guo jingming"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-016": {
     "rawAssetId": "celebrity-016",
-    "name": "Celebrity 016",
+    "name": "He Jiong",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 165,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "he-jiong",
+      "he jiong"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "he-jiong",
+      "he jiong"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-017": {
     "rawAssetId": "celebrity-017",
-    "name": "Celebrity 017",
+    "name": "Huang Xiaoming",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 172,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "huang-xiaoming",
+      "huang xiaoming"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "huang-xiaoming",
+      "huang xiaoming"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-018": {
     "rawAssetId": "celebrity-018",
-    "name": "Celebrity 018",
+    "name": "Jennifer Lawrence",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "jennifer-lawrence",
+      "jennifer lawrence"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jennifer-lawrence",
+      "jennifer lawrence"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-019": {
     "rawAssetId": "celebrity-019",
-    "name": "Celebrity 019",
+    "name": "Johnny Depp",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "johnny-depp",
+      "johnny depp"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "johnny-depp",
+      "johnny depp"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-020": {
     "rawAssetId": "celebrity-020",
-    "name": "Celebrity 020",
+    "name": "Johnny Link",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "johnny-link",
+      "johnny link"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "johnny-link",
+      "johnny link"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-021": {
     "rawAssetId": "celebrity-021",
-    "name": "Celebrity 021",
+    "name": "Joseph Gordon-Levitt",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "joseph-gordon-levitt",
+      "joseph gordon-levitt"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "joseph-gordon-levitt",
+      "joseph gordon-levitt"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-022": {
     "rawAssetId": "celebrity-022",
-    "name": "Celebrity 022",
+    "name": "Kate Upton",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "kate-upton",
+      "kate upton"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "kate-upton",
+      "kate upton"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-023": {
     "rawAssetId": "celebrity-023",
-    "name": "Celebrity 023",
+    "name": "kevin-hart",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 165,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "kevin-hart",
+      "kevin-hart"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "kevin-hart",
+      "kevin-hart"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-024": {
     "rawAssetId": "celebrity-024",
-    "name": "Celebrity 024",
+    "name": "Khloé Kardashian",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 179,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "khlo-kardashian",
+      "khloé kardashian"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "khlo-kardashian",
+      "khloé kardashian"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-025": {
     "rawAssetId": "celebrity-025",
-    "name": "Celebrity 025",
+    "name": "Lady Gaga",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 155,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "lady-gaga",
+      "lady gaga"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "lady-gaga",
+      "lady gaga"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-026": {
     "rawAssetId": "celebrity-026",
-    "name": "Celebrity 026",
+    "name": "Laura Dern",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 179,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "laura-dern",
+      "laura dern"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "laura-dern",
+      "laura dern"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-027": {
     "rawAssetId": "celebrity-027",
-    "name": "Celebrity 027",
+    "name": "Leonardo DiCaprio",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "leonardo-dicaprio",
+      "leonardo dicaprio"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "leonardo-dicaprio",
+      "leonardo dicaprio"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-028": {
     "rawAssetId": "celebrity-028",
-    "name": "Celebrity 028",
+    "name": "Mandy Moore",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "mandy-moore",
+      "mandy moore"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "mandy-moore",
+      "mandy moore"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-029": {
     "rawAssetId": "celebrity-029",
-    "name": "Celebrity 029",
+    "name": "Marc Blucas",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 188,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "marc-blucas",
+      "marc blucas"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "marc-blucas",
+      "marc blucas"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-030": {
     "rawAssetId": "celebrity-030",
-    "name": "Celebrity 030",
+    "name": "Neil Fingleton",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 231,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "neil-fingleton",
+      "neil fingleton"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "neil-fingleton",
+      "neil fingleton"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-031": {
     "rawAssetId": "celebrity-031",
-    "name": "Celebrity 031",
+    "name": "Nicole Kidman",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "nicole-kidman",
+      "nicole kidman"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "nicole-kidman",
+      "nicole kidman"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-032": {
     "rawAssetId": "celebrity-032",
-    "name": "Celebrity 032",
+    "name": "nikki rodriguez",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 163,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "nikki-rodriguez",
+      "nikki rodriguez"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "nikki-rodriguez",
+      "nikki rodriguez"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-033": {
     "rawAssetId": "celebrity-033",
-    "name": "Celebrity 033",
+    "name": "Noah Lalonde",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "noah-lalonde",
+      "noah lalonde"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "noah-lalonde",
+      "noah lalonde"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-034": {
     "rawAssetId": "celebrity-034",
-    "name": "Celebrity 034",
+    "name": "Rocky Emerson",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 190,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "rocky-emerson",
+      "rocky emerson"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "rocky-emerson",
+      "rocky emerson"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-035": {
     "rawAssetId": "celebrity-035",
-    "name": "Celebrity 035",
+    "name": "Sarah Rafferty",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 176,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "sarah-rafferty",
+      "sarah rafferty"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "sarah-rafferty",
+      "sarah rafferty"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-036": {
     "rawAssetId": "celebrity-036",
-    "name": "Celebrity 036",
+    "name": "Scarlett Johansson",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 160,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "scarlett-johansson",
+      "scarlett johansson"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "scarlett-johansson",
+      "scarlett johansson"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-037": {
     "rawAssetId": "celebrity-037",
-    "name": "Celebrity 037",
+    "name": "Show Lo",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "show-lo",
+      "show lo"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "show-lo",
+      "show lo"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-038": {
     "rawAssetId": "celebrity-038",
-    "name": "Celebrity 038",
+    "name": "Sophie Turner",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "sophie-turner",
+      "sophie turner"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "sophie-turner",
+      "sophie turner"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-039": {
     "rawAssetId": "celebrity-039",
-    "name": "Celebrity 039",
+    "name": "Taylor Swift",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "taylor-swift",
+      "taylor swift"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "taylor-swift",
+      "taylor swift"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-040": {
     "rawAssetId": "celebrity-040",
-    "name": "Celebrity 040",
+    "name": "tom-cruise",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 173,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "tom-cruise",
+      "tom-cruise"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "tom-cruise",
+      "tom-cruise"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-041": {
     "rawAssetId": "celebrity-041",
-    "name": "Celebrity 041",
+    "name": "Zendaya",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] entertainment celebs",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "zendaya",
+      "zendaya"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "zendaya",
+      "zendaya"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-042": {
     "rawAssetId": "celebrity-042",
-    "name": "Celebrity 042",
+    "name": "Cristiano Ronaldo",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 187,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] sports stars",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "cristiano-ronaldo",
+      "cristiano ronaldo"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "cristiano-ronaldo",
+      "cristiano ronaldo"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-043": {
     "rawAssetId": "celebrity-043",
-    "name": "Celebrity 043",
+    "name": "David-Beckham",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 183,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] sports stars",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "david-beckham",
+      "david-beckham"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "david-beckham",
+      "david-beckham"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-044": {
     "rawAssetId": "celebrity-044",
-    "name": "Celebrity 044",
+    "name": "Kobe Bryant",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 198,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] sports stars",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "kobe-bryant",
+      "kobe bryant"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "kobe-bryant",
+      "kobe bryant"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-045": {
     "rawAssetId": "celebrity-045",
-    "name": "Celebrity 045",
+    "name": "LeBron James",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 204,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] sports stars",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "lebron-james",
+      "lebron james"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "lebron-james",
+      "lebron james"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-046": {
     "rawAssetId": "celebrity-046",
-    "name": "Celebrity 046",
+    "name": "Lionel Messi",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 170,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] sports stars",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "lionel-messi",
+      "lionel messi"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "lionel-messi",
+      "lionel messi"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-047": {
     "rawAssetId": "celebrity-047",
-    "name": "Celebrity 047",
+    "name": "Simone Biles",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 142,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] sports stars",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "simone-biles",
+      "simone biles"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "simone-biles",
+      "simone biles"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-048": {
     "rawAssetId": "celebrity-048",
-    "name": "Celebrity 048",
+    "name": "Yao Ming",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 229,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] sports stars",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "yao-ming",
+      "yao ming"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "yao-ming",
+      "yao ming"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-049": {
     "rawAssetId": "celebrity-049",
-    "name": "Celebrity 049",
+    "name": "Abraham Lincoln",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 193,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "abraham-lincoln",
+      "abraham lincoln"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "abraham-lincoln",
+      "abraham lincoln"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-050": {
     "rawAssetId": "celebrity-050",
-    "name": "Celebrity 050",
+    "name": "Adolf Hitler",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 165,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "adolf-hitler",
+      "adolf hitler"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "adolf-hitler",
+      "adolf hitler"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-051": {
     "rawAssetId": "celebrity-051",
-    "name": "Celebrity 051",
+    "name": "Barack Obama",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 185,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "barack-obama",
+      "barack obama"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "barack-obama",
+      "barack obama"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-052": {
     "rawAssetId": "celebrity-052",
-    "name": "Celebrity 052",
+    "name": "Deng Xiaoping",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 157,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "deng-xiaoping",
+      "deng xiaoping"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "deng-xiaoping",
+      "deng xiaoping"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-053": {
     "rawAssetId": "celebrity-053",
-    "name": "Celebrity 053",
+    "name": "Donald Trump",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 190,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "donald-trump",
+      "donald trump"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "donald-trump",
+      "donald trump"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-054": {
     "rawAssetId": "celebrity-054",
-    "name": "Celebrity 054",
+    "name": "George Washington",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 188,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "george-washington",
+      "george washington"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "george-washington",
+      "george washington"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-055": {
     "rawAssetId": "celebrity-055",
-    "name": "Celebrity 055",
+    "name": "Jack Ma",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 166,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "jack-ma",
+      "jack ma"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jack-ma",
+      "jack ma"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-056": {
     "rawAssetId": "celebrity-056",
-    "name": "Celebrity 056",
+    "name": "Joseph Stalin",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 162,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "joseph-stalin",
+      "joseph stalin"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "joseph-stalin",
+      "joseph stalin"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-057": {
     "rawAssetId": "celebrity-057",
-    "name": "Celebrity 057",
+    "name": "Masayoshi Son",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 150,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "masayoshi-son",
+      "masayoshi son"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "masayoshi-son",
+      "masayoshi son"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-058": {
     "rawAssetId": "celebrity-058",
-    "name": "Celebrity 058",
+    "name": "Napoleon Bonaparte",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 165,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "napoleon-bonaparte",
+      "napoleon bonaparte"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "napoleon-bonaparte",
+      "napoleon bonaparte"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-059": {
     "rawAssetId": "celebrity-059",
-    "name": "Celebrity 059",
+    "name": "Vladimir Lenin",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 164,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "vladimir-lenin",
+      "vladimir lenin"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "vladimir-lenin",
+      "vladimir lenin"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-060": {
     "rawAssetId": "celebrity-060",
-    "name": "Celebrity 060",
+    "name": "Vladimir Putin",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 170,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] politician",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "vladimir-putin",
+      "vladimir putin"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "vladimir-putin",
+      "vladimir putin"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-061": {
     "rawAssetId": "celebrity-061",
-    "name": "Celebrity 061",
+    "name": "John Rogan",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 267,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] height record holders",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "john-rogan",
+      "john rogan"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "john-rogan",
+      "john rogan"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-062": {
     "rawAssetId": "celebrity-062",
-    "name": "Celebrity 062",
+    "name": "Robert Wadlow",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 272,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] height record holders",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "robert-wadlow",
+      "robert wadlow"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "robert-wadlow",
+      "robert wadlow"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-063": {
     "rawAssetId": "celebrity-063",
-    "name": "Celebrity 063",
+    "name": "Sultan Kösen",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 251,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] height record holders",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "sultan-k-sen",
+      "sultan kösen"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "sultan-k-sen",
+      "sultan kösen"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-064": {
     "rawAssetId": "celebrity-064",
-    "name": "Celebrity 064",
+    "name": "Zeng Jinlian",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 248,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] height record holders",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "zeng-jinlian",
+      "zeng jinlian"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "zeng-jinlian",
+      "zeng jinlian"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-065": {
     "rawAssetId": "celebrity-065",
-    "name": "Celebrity 065",
+    "name": "Zhang Juncai",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 242,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] height record holders",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "zhang-juncai",
+      "zhang juncai"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "zhang-juncai",
+      "zhang juncai"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-066": {
     "rawAssetId": "celebrity-066",
-    "name": "Celebrity 066",
+    "name": "Apollo",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 185,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "apollo",
+      "apollo"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "apollo",
+      "apollo"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-067": {
     "rawAssetId": "celebrity-067",
-    "name": "Celebrity 067",
+    "name": "Ares",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 190,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "ares",
+      "ares"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "ares",
+      "ares"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-068": {
     "rawAssetId": "celebrity-068",
-    "name": "Celebrity 068",
+    "name": "Athena",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "athena",
+      "athena"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "athena",
+      "athena"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-069": {
     "rawAssetId": "celebrity-069",
-    "name": "Celebrity 069",
+    "name": "Erlang Shen",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 185,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "erlang-shen",
+      "erlang shen"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "erlang-shen",
+      "erlang shen"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-070": {
     "rawAssetId": "celebrity-070",
-    "name": "Celebrity 070",
+    "name": "Guanyin Bodhisattva",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 200,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "guanyin-bodhisattva",
+      "guanyin bodhisattva"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "guanyin-bodhisattva",
+      "guanyin bodhisattva"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-071": {
     "rawAssetId": "celebrity-071",
-    "name": "Celebrity 071",
+    "name": "Jade Emperor",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "jade-emperor",
+      "jade emperor"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jade-emperor",
+      "jade emperor"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-072": {
     "rawAssetId": "celebrity-072",
-    "name": "Celebrity 072",
+    "name": "Jesus Christ",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "jesus-christ",
+      "jesus christ"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "jesus-christ",
+      "jesus christ"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-073": {
     "rawAssetId": "celebrity-073",
-    "name": "Celebrity 073",
+    "name": "Li Jing Pagoda-Bearing Heavenly King",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "li-jing-pagoda-bearing-heavenly-king",
+      "li jing pagoda-bearing heavenly king"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "li-jing-pagoda-bearing-heavenly-king",
+      "li jing pagoda-bearing heavenly king"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-074": {
     "rawAssetId": "celebrity-074",
-    "name": "Celebrity 074",
+    "name": "Loki",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 188,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "loki",
+      "loki"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "loki",
+      "loki"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-075": {
     "rawAssetId": "celebrity-075",
-    "name": "Celebrity 075",
+    "name": "Moses",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 178,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "moses",
+      "moses"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "moses",
+      "moses"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-076": {
     "rawAssetId": "celebrity-076",
-    "name": "Celebrity 076",
+    "name": "Muhammad",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 170,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "muhammad",
+      "muhammad"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "muhammad",
+      "muhammad"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-077": {
     "rawAssetId": "celebrity-077",
-    "name": "Celebrity 077",
+    "name": "Nezha",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 140,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "nezha",
+      "nezha"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "nezha",
+      "nezha"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-078": {
     "rawAssetId": "celebrity-078",
-    "name": "Celebrity 078",
+    "name": "Odin",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 195,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "odin",
+      "odin"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "odin",
+      "odin"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-079": {
     "rawAssetId": "celebrity-079",
-    "name": "Celebrity 079",
+    "name": "Poseidon",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 200,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "poseidon",
+      "poseidon"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "poseidon",
+      "poseidon"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-080": {
     "rawAssetId": "celebrity-080",
-    "name": "Celebrity 080",
+    "name": "Sha Wujing",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 400,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "sha-wujing",
+      "sha wujing"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "sha-wujing",
+      "sha wujing"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-081": {
     "rawAssetId": "celebrity-081",
-    "name": "Celebrity 081",
+    "name": "Shakyamuni",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 180,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "shakyamuni",
+      "shakyamuni"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "shakyamuni",
+      "shakyamuni"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-082": {
     "rawAssetId": "celebrity-082",
-    "name": "Celebrity 082",
+    "name": "Sun Wukong",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 130,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "sun-wukong",
+      "sun wukong"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "sun-wukong",
+      "sun wukong"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-083": {
     "rawAssetId": "celebrity-083",
-    "name": "Celebrity 083",
+    "name": "Tai Shang Lao Jun Grand Supreme Elderly Lord",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 170,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "tai-shang-lao-jun-grand-supreme-elderly-lord",
+      "tai shang lao jun grand supreme elderly lord"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "tai-shang-lao-jun-grand-supreme-elderly-lord",
+      "tai shang lao jun grand supreme elderly lord"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-084": {
     "rawAssetId": "celebrity-084",
-    "name": "Celebrity 084",
+    "name": "Tang Sanzang",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 175,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "tang-sanzang",
+      "tang sanzang"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "tang-sanzang",
+      "tang sanzang"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-085": {
     "rawAssetId": "celebrity-085",
-    "name": "Celebrity 085",
+    "name": "Tathāgata Buddha",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 512,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "tath-gata-buddha",
+      "tathāgata buddha"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "tath-gata-buddha",
+      "tathāgata buddha"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-086": {
     "rawAssetId": "celebrity-086",
-    "name": "Celebrity 086",
+    "name": "Zeus",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 300,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "zeus",
+      "zeus"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "zeus",
+      "zeus"
+    ],
+    "status": "verified",
+    "indexable": true
   },
   "celebrity-087": {
     "rawAssetId": "celebrity-087",
-    "name": "Celebrity 087",
+    "name": "Zhu Bajie",
     "category": "celebrities",
-    "heightCm": null,
+    "heightCm": 350,
     "measurementType": "height",
-    "subgroup": null,
+    "subgroup": "[C] religious mythological",
     "tags": [
       "celebrities",
-      "celebrity"
+      "celebrity",
+      "zhu-bajie",
+      "zhu bajie"
     ],
-    "aliases": [],
-    "status": "needs-review",
-    "indexable": false
+    "aliases": [
+      "zhu-bajie",
+      "zhu bajie"
+    ],
+    "status": "verified",
+    "indexable": true
   }
 };

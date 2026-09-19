@@ -271,10 +271,24 @@ export const QUICK_COMPARE_OBJECT_PRESETS = [
 
 export const QUICK_COMPARE_CELEBRITY_PRESETS = [
   {
+    label: 'Dwayne Johnson vs Horse',
+    items: [
+      { category: 'celebrities' as const, assetId: 'celebrity-012', name: 'Dwayne Johnson', heightCm: 196, color: '#2563eb' },
+      { category: 'animals' as const, assetId: 'animal-048', name: 'Domestic Horse', heightCm: 160, color: '#b45309' },
+    ],
+  },
+  {
+    label: 'Tom Cruise vs Dwayne Johnson',
+    items: [
+      { category: 'celebrities' as const, assetId: 'celebrity-040', name: 'Tom Cruise', heightCm: 170, color: '#16a34a' },
+      { category: 'celebrities' as const, assetId: 'celebrity-012', name: 'Dwayne Johnson', heightCm: 196, color: '#2563eb' },
+    ],
+  },
+  {
     label: 'Virat Kohli vs MS Dhoni',
     items: [
-      { category: 'male' as const, assetId: 'male-01', name: 'Virat Kohli', heightCm: 175, color: '#ea580c' },
-      { category: 'male' as const, assetId: 'male-02', name: 'MS Dhoni', heightCm: 178, color: '#0284c7' },
+      { category: 'male' as const, assetId: 'male-010', name: 'Virat Kohli', heightCm: 175, color: '#ea580c' },
+      { category: 'male' as const, assetId: 'male-010', name: 'MS Dhoni', heightCm: 178, color: '#0284c7' },
     ],
   },
 ];

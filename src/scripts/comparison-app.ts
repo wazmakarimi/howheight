@@ -16,7 +16,7 @@ import { copyToClipboard, decodePeopleFromUrl, encodePeopleToUrl } from '../lib/
 import { downloadChartAsPng } from '../lib/exportChart';
 import { renderEntitySvg } from '../lib/renderModel';
 import { resolveMigratedAssetId } from '../lib/migrationMap';
-import { getAssetById, getAllAssets, type AssetMetadata } from '../data/assetRegistry';
+import { getAssetById, getAllAssets, resolveAsset, type AssetMetadata } from '../data/assetRegistry';
 
 class HeightComparisonApp {
   private allAssets: AssetMetadata[] = [];
@@ -329,11 +329,9 @@ class HeightComparisonApp {
       };
     }
 
-    const assetId = resolveMigratedAssetId(
-      item.assetId || item.animalType || item.objectType || (item.category === 'human' ? item.gender : item.id),
-      item.category
-    );
-    const resolved = getAssetById(assetId);
+    const rawLookup = item.assetId || item.celebrityId || item.animalType || item.objectType || (item.category === 'human' ? item.gender : item.id);
+    const resolved = resolveAsset(rawLookup, item.category);
+    const assetId = resolved.id;
     const category: EntityCategory = (resolved?.category || item.category || 'male') as EntityCategory;
 
     return {
@@ -341,7 +339,7 @@ class HeightComparisonApp {
       assetId,
       category,
       name: item.name || resolved?.name || 'Entity',
-      heightCm: typeof item.heightCm === 'number' ? item.heightCm : (resolved?.heightCm ?? 175),
+      heightCm: typeof item.heightCm === 'number' && item.heightCm > 0 ? item.heightCm : (resolved?.heightCm ?? 175),
       referenceHeightCm: item.referenceHeightCm ?? item.heightCm ?? resolved?.heightCm ?? 175,
       isCustomHeight: Boolean(item.isCustomHeight),
       color: item.color || PRESET_COLORS[0].value,

@@ -10,6 +10,7 @@ export interface Celebrity {
   heightSource?: string;
   bioSnippet?: string;
   indexable?: boolean;
+  assetId?: string;
 }
 
 export const CELEBRITIES: Celebrity[] = [
@@ -233,6 +234,7 @@ export const CELEBRITIES: Celebrity[] = [
     aliases: ['Cruise', 'Maverick'],
     heightSource: 'Widely documented Hollywood casting records (5 ft 7 in / 170 cm).',
     bioSnippet: 'One of the world’s biggest blockbuster action stars, famous for performing his own stunts.',
+    assetId: 'celebrity-040',
   },
   {
     id: 'dwayne-johnson',
@@ -245,6 +247,7 @@ export const CELEBRITIES: Celebrity[] = [
     aliases: ['The Rock', 'Dwayne'],
     heightSource: 'WWE athlete measurement & university football records (6 ft 5 in / 196 cm).',
     bioSnippet: 'Former college footballer, WWE legend, and one of cinema’s top box-office draws.',
+    assetId: 'celebrity-012',
   },
   {
     id: 'leonardo-dicaprio',
@@ -257,6 +260,7 @@ export const CELEBRITIES: Celebrity[] = [
     aliases: ['Leo', 'DiCaprio'],
     heightSource: 'Academy Award bio & casting records (6 ft 0 in / 183 cm).',
     bioSnippet: 'Oscar-winning actor renowned for iconic collaborations with legendary directors.',
+    assetId: 'celebrity-027',
   },
   {
     id: 'brad-pitt',
@@ -269,6 +273,7 @@ export const CELEBRITIES: Celebrity[] = [
     aliases: ['Pitt'],
     heightSource: 'Hollywood casting archives (5 ft 11 in / 180 cm).',
     bioSnippet: 'Academy Award-winning actor and producer, celebrated for his charm and cinematic range.',
+    assetId: 'celebrity-007',
   },
   {
     id: 'chris-hemsworth',
@@ -281,6 +286,7 @@ export const CELEBRITIES: Celebrity[] = [
     aliases: ['Thor', 'Hemsworth'],
     heightSource: 'Marvel Studios casting bio & industry profiles (6 ft 3 in / 190 cm).',
     bioSnippet: 'Australian actor best known for portraying Thor in the Marvel Cinematic Universe.',
+    assetId: 'male-010',
   },
   {
     id: 'robert-downey-jr',
@@ -293,6 +299,7 @@ export const CELEBRITIES: Celebrity[] = [
     aliases: ['RDJ', 'Iron Man'],
     heightSource: 'Documented agency casting bio (5 ft 8.5 in / 174 cm).',
     bioSnippet: 'Oscar-winning actor globally revered for launching the MCU as Tony Stark / Iron Man.',
+    assetId: 'male-010',
   },
   {
     id: 'zendaya',
@@ -305,6 +312,7 @@ export const CELEBRITIES: Celebrity[] = [
     aliases: ['Zendaya Coleman'],
     heightSource: 'Modeling agency records & documented interviews (5 ft 10 in / 178 cm).',
     bioSnippet: 'Emmy and Golden Globe-winning actress known for Euphoria, Dune, and Spider-Man.',
+    assetId: 'celebrity-041',
   },
   {
     id: 'scarlett-johansson',
@@ -317,6 +325,7 @@ export const CELEBRITIES: Celebrity[] = [
     aliases: ['ScarJo', 'Black Widow'],
     heightSource: 'Documented agency bio & studio records (5 ft 3 in / 160 cm).',
     bioSnippet: 'Critically and commercially acclaimed actress, widely known as Black Widow.',
+    assetId: 'celebrity-036',
   },
 ];
 
@@ -327,4 +336,11 @@ export function getCelebrityBySlug(slug: string): Celebrity | undefined {
 
 export function getCelebrityById(id: string): Celebrity | undefined {
   return CELEBRITIES.find((c) => c.id === id);
+}
+
+export function getCelebrityAssetId(idOrSlug: string): string | undefined {
+  const cel = getCelebrityBySlug(idOrSlug) || getCelebrityById(idOrSlug);
+  if (cel?.assetId) return cel.assetId;
+  if (cel) return cel.gender === 'female' ? 'female-01' : 'male-010';
+  return undefined;
 }

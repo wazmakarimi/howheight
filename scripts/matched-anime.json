@@ -1,0 +1,155 @@
+[
+  {
+    "id": "anime-010",
+    "filename": "anime_img_10.png",
+    "name": "Nami",
+    "slug": "nami",
+    "heightCm": 170,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Nami-1.7.png"
+  },
+  {
+    "id": "anime-011",
+    "filename": "anime_img_11.png",
+    "name": "Nico Robin",
+    "slug": "nico-robin",
+    "heightCm": 188,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Nico Robin-1.88.png"
+  },
+  {
+    "id": "anime-012",
+    "filename": "anime_img_12.png",
+    "name": "Roronoa Zoro",
+    "slug": "roronoa-zoro",
+    "heightCm": 181,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Roronoa Zoro-1.81.png"
+  },
+  {
+    "id": "anime-013",
+    "filename": "anime_img_13.png",
+    "name": "Sanji",
+    "slug": "sanji",
+    "heightCm": 180,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Sanji-1.8.png"
+  },
+  {
+    "id": "anime-014",
+    "filename": "anime_img_14.png",
+    "name": "Usopp",
+    "slug": "usopp",
+    "heightCm": 176,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Usopp-1.76.png"
+  },
+  {
+    "id": "anime-015",
+    "filename": "anime_img_15.png",
+    "name": "Armin Arlert",
+    "slug": "armin-arlert",
+    "heightCm": 163,
+    "subgroup": "attack_on_titan",
+    "remotePath": "anime/attack_on_titan/Armin Arlert-1.63.png"
+  },
+  {
+    "id": "anime-016",
+    "filename": "anime_img_16.png",
+    "name": "colossal titan",
+    "slug": "colossal-titan",
+    "heightCm": 6000,
+    "subgroup": "attack_on_titan",
+    "remotePath": "anime/attack_on_titan/colossal_titan-60.png"
+  },
+  {
+    "id": "anime-017",
+    "filename": "anime_img_17.png",
+    "name": "Eren Yeager",
+    "slug": "eren-yeager",
+    "heightCm": 170,
+    "subgroup": "attack_on_titan",
+    "remotePath": "anime/attack_on_titan/Eren Yeager-1.7.png"
+  },
+  {
+    "id": "anime-018",
+    "filename": "anime_img_18.png",
+    "name": "Levi Ackerman",
+    "slug": "levi-ackerman",
+    "heightCm": 160,
+    "subgroup": "attack_on_titan",
+    "remotePath": "anime/attack_on_titan/Levi Ackerman-1.6.png"
+  },
+  {
+    "id": "anime-002",
+    "filename": "anime_img_2.png",
+    "name": "Brook",
+    "slug": "brook",
+    "heightCm": 277,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Brook-2.77.png"
+  },
+  {
+    "id": "anime-003",
+    "filename": "anime_img_3.png",
+    "name": "Charlotte Linlin Big Mom",
+    "slug": "charlotte-linlin-big-mom",
+    "heightCm": 880,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Charlotte Linlin Big Mom-8.8.png"
+  },
+  {
+    "id": "anime-004",
+    "filename": "anime_img_4.png",
+    "name": "Chopper",
+    "slug": "chopper",
+    "heightCm": 90,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Chopper-0.9.png"
+  },
+  {
+    "id": "anime-005",
+    "filename": "anime_img_5.png",
+    "name": "Edward Newgate Whitebeard",
+    "slug": "edward-newgate-whitebeard",
+    "heightCm": 666,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Edward Newgate Whitebeard-6.66.png"
+  },
+  {
+    "id": "anime-006",
+    "filename": "anime_img_6.png",
+    "name": "Franky",
+    "slug": "franky",
+    "heightCm": 240,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Franky-2.4.png"
+  },
+  {
+    "id": "anime-007",
+    "filename": "anime_img_7.png",
+    "name": "Jinbe",
+    "slug": "jinbe",
+    "heightCm": 301,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Jinbe-3.01.png"
+  },
+  {
+    "id": "anime-008",
+    "filename": "anime_img_8.png",
+    "name": "Kaido",
+    "slug": "kaido",
+    "heightCm": 710,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Kaido-7.1.png"
+  },
+  {
+    "id": "anime-009",
+    "filename": "anime_img_9.png",
+    "name": "Monkey D. Luffy",
+    "slug": "monkey-d-luffy",
+    "heightCm": 174,
+    "subgroup": "one_piece",
+    "remotePath": "anime/one_piece/Monkey D. Luffy-1.74.png"
+  }
+]

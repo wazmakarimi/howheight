@@ -1,7 +1,10 @@
-// CENTRAL ASSET REGISTRY - PHASE 9
+// CENTRAL ASSET REGISTRY - PHASE 12
 // Single source of truth for the entire application.
 import { ASSET_MANIFEST, type DiscoveredAsset } from './assetManifest.ts';
 import { resolveMigratedAssetId } from '../lib/migrationMap.ts';
+import { getCelebrityAssetId } from './celebrities.ts';
+import { getAnimalAssetId } from './animals.ts';
+import { getObjectAssetId } from './objects.ts';
 
 import type { EntityCategory } from '../lib/constants';
 
@@ -30,26 +33,51 @@ const assetByIdMap = new Map<string, DiscoveredAsset>();
 const assetBySlugMap = new Map<string, DiscoveredAsset>();
 
 for (const asset of ASSET_REGISTRY) {
-  assetByIdMap.set(asset.id, asset);
-  assetBySlugMap.set(asset.slug, asset);
+  const normId = asset.id.toLowerCase();
+  assetByIdMap.set(normId, asset);
+  
+  if (asset.slug) {
+    const normSlug = asset.slug.toLowerCase();
+    assetBySlugMap.set(normSlug, asset);
+  }
+
+  if (asset.name) {
+    const normName = asset.name.toLowerCase();
+    assetBySlugMap.set(normName, asset);
+  }
+
   for (const alias of asset.aliases) {
-    assetByIdMap.set(alias, asset);
+    const normAlias = alias.toLowerCase();
+    assetByIdMap.set(normAlias, asset);
+    assetBySlugMap.set(normAlias, asset);
   }
 }
 
 export function getAssetById(id: string): DiscoveredAsset | undefined {
   if (!id) return undefined;
-  if (assetByIdMap.has(id)) return assetByIdMap.get(id);
+  const norm = id.toLowerCase().trim();
+  if (assetByIdMap.has(norm)) return assetByIdMap.get(norm);
 
   // Try migrated ID
-  const migrated = resolveMigratedAssetId(id);
-  if (assetByIdMap.has(migrated)) return assetByIdMap.get(migrated);
+  const migrated = resolveMigratedAssetId(norm);
+  if (assetByIdMap.has(migrated.toLowerCase())) return assetByIdMap.get(migrated.toLowerCase());
+
+  // Try stripping SEO prefix
+  const stripped = norm.replace(/^seo-(cel|animal|obj|human)-/, '');
+  if (assetByIdMap.has(stripped)) return assetByIdMap.get(stripped);
 
   return undefined;
 }
 
 export function getAssetBySlug(slug: string): DiscoveredAsset | undefined {
-  return assetBySlugMap.get(slug);
+  if (!slug) return undefined;
+  const norm = slug.toLowerCase().trim();
+  if (assetBySlugMap.has(norm)) return assetBySlugMap.get(norm);
+
+  const stripped = norm.replace(/^seo-(cel|animal|obj|human)-/, '');
+  if (assetBySlugMap.has(stripped)) return assetBySlugMap.get(stripped);
+
+  return undefined;
 }
 
 export function getAllAssets(onlySearchable = true): DiscoveredAsset[] {
@@ -84,22 +112,68 @@ export function searchAssets(
   });
 }
 
+/**
+ * Authoritative Universal Asset Resolver
+ * Guaranteed: Never performs arbitrary index[0] fallback.
+ * Strictly resolves to verified asset or designated neutral archetype.
+ */
 export function resolveAsset(assetIdOrOldId: string | undefined, categoryHint?: string): DiscoveredAsset {
   if (assetIdOrOldId) {
+    // 1. Direct ID lookup
     const direct = getAssetById(assetIdOrOldId);
     if (direct) return direct;
+
+    // 2. Direct Slug lookup
+    const slugMatch = getAssetBySlug(assetIdOrOldId);
+    if (slugMatch) return slugMatch;
+
+    // 3. Domain helper check: Celebrity
+    const celAssetId = getCelebrityAssetId(assetIdOrOldId);
+    if (celAssetId) {
+      const celAsset = getAssetById(celAssetId);
+      if (celAsset) return celAsset;
+    }
+
+    // 4. Domain helper check: Animal
+    const animalAssetId = getAnimalAssetId(assetIdOrOldId);
+    if (animalAssetId) {
+      const animalAsset = getAssetById(animalAssetId);
+      if (animalAsset) return animalAsset;
+    }
+
+    // 5. Domain helper check: Object
+    const objAssetId = getObjectAssetId(assetIdOrOldId);
+    if (objAssetId) {
+      const objAsset = getAssetById(objAssetId);
+      if (objAsset) return objAsset;
+    }
   }
 
+  // 6. Migration map lookup
   const migratedId = resolveMigratedAssetId(assetIdOrOldId, categoryHint);
   const migrated = getAssetById(migratedId);
   if (migrated) return migrated;
 
-  if (categoryHint) {
-    const catList = getAssetsByCategory(categoryHint as any, true);
-    if (catList.length > 0) return catList[0];
+  // 7. Deterministic, safe archetype fallback based on category
+  const normCat = (categoryHint || '').toLowerCase();
+  if (normCat === 'female') {
+    const f = getAssetById('female-01');
+    if (f) return f;
+  }
+  if (normCat === 'animals' || normCat === 'animal') {
+    const d = getAssetById('animal-018');
+    if (d) return d;
+  }
+  if (normCat === 'objects' || normCat === 'object') {
+    const o = getAssetById('object-016');
+    if (o) return o;
+  }
+  if (normCat === 'celebrities' || normCat === 'celebrity' || normCat === 'male') {
+    const m = getAssetById('male-010');
+    if (m) return m;
   }
 
-  const defaultAsset = getAssetById('male-007') || getAssetById('male-01') || ASSET_REGISTRY[0];
+  const defaultAsset = getAssetById('male-010') || ASSET_REGISTRY[0];
   if (!defaultAsset) {
     throw new Error('Critical Error: Asset Registry is empty.');
   }

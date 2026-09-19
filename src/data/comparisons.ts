@@ -1,8 +1,8 @@
-import { ANIMALS, getAnimalDefinition } from './animals';
-import { OBJECTS, getObjectDefinition } from './objects';
-import { CELEBRITIES, getCelebrityById } from './celebrities';
-import { HUMANS, getHumanDefinition } from './humans';
-import type { ComparisonItem } from '../lib/constants';
+import { ANIMALS, getAnimalDefinition } from './animals.ts';
+import { OBJECTS, getObjectDefinition } from './objects.ts';
+import { CELEBRITIES, getCelebrityById } from './celebrities.ts';
+import { HUMANS, getHumanDefinition } from './humans.ts';
+import type { ComparisonItem } from '../lib/constants.ts';
 
 export interface ComparisonEntityRef {
   category: 'human' | 'animal' | 'object' | 'celebrity';
@@ -318,7 +318,8 @@ export function resolveComparisonItems(refs: ComparisonEntityRef[]): ComparisonI
       if (cel) {
         return {
           id: `seo-cel-${cel.id}`,
-          category: 'celebrity',
+          assetId: cel.assetId || (cel.gender === 'female' ? 'female-01' : 'male-010'),
+          category: 'celebrities' as any,
           name: cel.name,
           gender: cel.gender,
           celebrityId: cel.id,
@@ -336,7 +337,8 @@ export function resolveComparisonItems(refs: ComparisonEntityRef[]): ComparisonI
       if (animal) {
         return {
           id: `seo-animal-${animal.id}`,
-          category: 'animal',
+          assetId: animal.assetId || (animal.id === 'horse' ? 'animal-048' : 'animal-018'),
+          category: 'animals' as any,
           name: animal.name,
           animalType: animal.id,
           heightCm: animal.typicalHeightCm,
@@ -352,7 +354,8 @@ export function resolveComparisonItems(refs: ComparisonEntityRef[]): ComparisonI
       if (obj) {
         return {
           id: `seo-obj-${obj.id}`,
-          category: 'object',
+          assetId: obj.assetId || (obj.id === 'door' ? 'object-016' : (obj.id === 'car' ? 'object-114' : 'object-016')),
+          category: 'objects' as any,
           name: obj.name,
           objectType: obj.id,
           heightCm: obj.typicalHeightCm,
@@ -365,13 +368,15 @@ export function resolveComparisonItems(refs: ComparisonEntityRef[]): ComparisonI
 
     // Default Human
     const human = getHumanDefinition(ref.id);
+    const isFemale = human?.gender === 'female' || ref.id === 'female';
     return {
       id: `seo-human-${ref.id}`,
-      category: 'human',
-      name: human?.name || (ref.id === 'female' ? 'Average Female' : 'Average Male'),
-      gender: human?.gender || (ref.id === 'female' ? 'female' : 'male'),
-      heightCm: human?.typicalHeightCm || (ref.id === 'female' ? 162 : 176),
-      referenceHeightCm: human?.typicalHeightCm || (ref.id === 'female' ? 162 : 176),
+      assetId: isFemale ? 'female-01' : 'male-010',
+      category: isFemale ? 'female' : 'male',
+      name: human?.name || (isFemale ? 'Average Female' : 'Average Male'),
+      gender: isFemale ? 'female' : 'male',
+      heightCm: human?.typicalHeightCm || (isFemale ? 162 : 176),
+      referenceHeightCm: human?.typicalHeightCm || (isFemale ? 162 : 176),
       isCustomHeight: false,
       color,
     };

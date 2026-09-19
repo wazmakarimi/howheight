@@ -1,5 +1,5 @@
-import type { ComparisonItem } from './constants';
-import { resolveAsset, type AssetMetadata } from '../data/assetRegistry';
+import type { ComparisonItem } from './constants.ts';
+import { resolveAsset, type AssetMetadata } from '../data/assetRegistry.ts';
 
 export interface RenderResult {
   svgMarkup: string;

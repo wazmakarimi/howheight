@@ -24,7 +24,16 @@ for (const raw of RAW_ASSET_INVENTORY) {
     measurementY: vbParts[1]
   } : null;
 
-  const isSearchable = !raw.isUiIcon && raw.isValidSvg;
+  const isSearchable = !raw.isUiIcon && (raw.isValidSvg || raw.isValidPng || raw.assetType === 'png' || raw.extension === 'png');
+
+  // Authoritative slug: use alias slug if available (e.g. 'dwayne-johnson') else raw.id
+  const slug = meta.aliases && meta.aliases[0] ? meta.aliases[0] : raw.id;
+
+  const aliases = Array.from(new Set([
+    ...(meta.aliases || []),
+    raw.id,
+    raw.filename.replace(/\.(png|svg)$/, '')
+  ]));
 
   manifest.push({
     id: raw.id,
@@ -33,7 +42,7 @@ for (const raw of RAW_ASSET_INVENTORY) {
     sourceFile: raw.sourceFile,
     publicPath: raw.publicPath,
     name: meta.name,
-    slug: raw.id,
+    slug,
     heightCm: meta.heightCm,
     referenceHeightCm: meta.heightCm,
     measurementType: meta.measurementType || 'height',
@@ -44,7 +53,7 @@ for (const raw of RAW_ASSET_INVENTORY) {
     status: meta.status,
     subgroup: meta.subgroup || null,
     tags: meta.tags || [raw.category],
-    aliases: meta.aliases || [],
+    aliases,
     searchable: isSearchable,
     indexable: meta.indexable && meta.status === 'verified',
   });
@@ -56,7 +65,7 @@ const manifestCode = `// AUTOMATICALLY GENERATED ASSET MANIFEST - PHASE 11
 
 export interface DiscoveredAsset {
   id: string;
-  category: 'male' | 'female' | 'apparel' | 'animals' | 'objects' | 'fictional' | 'plants' | 'sports';
+  category: 'male' | 'female' | 'apparel' | 'animals' | 'objects' | 'fictional' | 'plants' | 'sports' | 'anime' | 'films' | 'celebrities';
   filename: string;
   sourceFile: string;
   publicPath: string;

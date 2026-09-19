@@ -12,6 +12,7 @@ export interface ObjectDefinition {
   helpText: string;
   modelType: string;
   indexable?: boolean;
+  assetId?: string;
 }
 
 export const OBJECTS: ObjectDefinition[] = [
@@ -113,6 +114,7 @@ export const OBJECTS: ObjectDefinition[] = [
     maxHeightCm: 260,
     helpText: 'Measured from the floor to the top of the door frame (standard 6 ft 8 in to 7 ft).',
     modelType: 'door',
+    assetId: 'object-016',
   },
   {
     id: 'refrigerator',
@@ -125,6 +127,7 @@ export const OBJECTS: ObjectDefinition[] = [
     maxHeightCm: 220,
     helpText: 'Measured from floor to the top hinge of the refrigerator door.',
     modelType: 'refrigerator',
+    assetId: 'object-016',
   },
   {
     id: 'washing-machine',
@@ -137,6 +140,7 @@ export const OBJECTS: ObjectDefinition[] = [
     maxHeightCm: 105,
     helpText: 'Standard front-load or top-load height from floor.',
     modelType: 'washing-machine',
+    assetId: 'object-004',
   },
   {
     id: 'wardrobe',
@@ -149,6 +153,7 @@ export const OBJECTS: ObjectDefinition[] = [
     maxHeightCm: 240,
     helpText: 'Floor to top of wardrobe.',
     modelType: 'bookshelf',
+    assetId: 'object-016',
   },
   {
     id: 'lamp',
@@ -161,6 +166,7 @@ export const OBJECTS: ObjectDefinition[] = [
     maxHeightCm: 210,
     helpText: 'Floor to top of the lampshade or finial.',
     modelType: 'lamp',
+    assetId: 'object-016',
   },
 
   // Vehicles
@@ -175,6 +181,7 @@ export const OBJECTS: ObjectDefinition[] = [
     maxHeightCm: 165,
     helpText: 'Measured from ground contact point of tires to the highest point on the roof.',
     modelType: 'car',
+    assetId: 'object-114',
   },
   {
     id: 'suv',
@@ -305,4 +312,9 @@ export const OBJECTS: ObjectDefinition[] = [
 export function getObjectDefinition(idOrType: string): ObjectDefinition | undefined {
   const normalized = idOrType.toLowerCase().trim();
   return OBJECTS.find((o) => o.id === normalized || o.name.toLowerCase() === normalized);
+}
+
+export function getObjectAssetId(idOrType: string): string | undefined {
+  const obj = getObjectDefinition(idOrType);
+  return obj?.assetId || (idOrType === 'door' ? 'object-016' : (idOrType === 'car' ? 'object-114' : undefined));
 }

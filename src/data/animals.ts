@@ -13,6 +13,7 @@ export interface AnimalDefinition {
   helpText: string;
   modelType: string;
   indexable?: boolean;
+  assetId?: string;
 }
 
 export const ANIMALS: AnimalDefinition[] = [
@@ -27,6 +28,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 110,
     helpText: 'Measured from ground to shoulder/withers (varies greatly by breed, e.g. 20 cm Chihuahua to 90 cm Great Dane).',
     modelType: 'dog',
+    assetId: 'animal-018',
   },
   {
     id: 'cat',
@@ -39,6 +41,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 45,
     helpText: 'Measured from ground to shoulder (domestic cats typically range from 23 to 28 cm).',
     modelType: 'cat',
+    assetId: 'animal-028',
   },
   {
     id: 'horse',
@@ -51,6 +54,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 210,
     helpText: 'Standard equine height is measured from ground to the highest point of the withers.',
     modelType: 'horse',
+    assetId: 'animal-048',
   },
   {
     id: 'cow',
@@ -63,6 +67,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 190,
     helpText: 'Measured from the ground to the shoulder/withers.',
     modelType: 'cow',
+    assetId: 'animal-048',
   },
   {
     id: 'elephant',
@@ -75,6 +80,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 420,
     helpText: 'Measured from ground to the top of the shoulder (African bush elephants average 3.2 m).',
     modelType: 'elephant',
+    assetId: 'animal-118',
   },
   {
     id: 'giraffe',
@@ -87,6 +93,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 600,
     helpText: 'Total standing height measured from ground to the top of the horns (ossicones).',
     modelType: 'giraffe',
+    assetId: 'animal-giraffe-01',
   },
   {
     id: 'lion',
@@ -99,6 +106,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 140,
     helpText: 'Measured from the ground to the top of the shoulder.',
     modelType: 'lion',
+    assetId: 'animal-035',
   },
   {
     id: 'tiger',
@@ -111,6 +119,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 130,
     helpText: 'Measured from the ground to the top of the shoulder.',
     modelType: 'tiger',
+    assetId: 'animal-035',
   },
   {
     id: 'bear',
@@ -123,6 +132,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 170,
     helpText: 'Measured at the shoulder while walking on all fours (stands up to 2.5 m on hind legs).',
     modelType: 'bear',
+    assetId: 'animal-bear-01',
   },
   {
     id: 'wolf',
@@ -135,6 +145,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 95,
     helpText: 'Measured from the ground to the shoulder/withers.',
     modelType: 'wolf',
+    assetId: 'animal-wolf-01',
   },
   {
     id: 'deer',
@@ -147,6 +158,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 150,
     helpText: 'Measured from ground to shoulder (excludes antlers).',
     modelType: 'deer',
+    assetId: 'animal-048',
   },
   {
     id: 'goat',
@@ -159,6 +171,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 100,
     helpText: 'Measured from the ground to the withers.',
     modelType: 'goat',
+    assetId: 'animal-018',
   },
   {
     id: 'sheep',
@@ -171,6 +184,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 100,
     helpText: 'Measured from the ground to the withers.',
     modelType: 'sheep',
+    assetId: 'animal-018',
   },
   {
     id: 'pig',
@@ -183,6 +197,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 110,
     helpText: 'Measured from the ground to the top of the shoulder.',
     modelType: 'pig',
+    assetId: 'animal-018',
   },
   {
     id: 'rabbit',
@@ -195,6 +210,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 50,
     helpText: 'Sitting height from ground to head/ears.',
     modelType: 'rabbit',
+    assetId: 'animal-028',
   },
   {
     id: 'kangaroo',
@@ -207,6 +223,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 210,
     helpText: 'Total upright standing height from ground to head.',
     modelType: 'kangaroo',
+    assetId: 'animal-018',
   },
   {
     id: 'gorilla',
@@ -219,6 +236,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 190,
     helpText: 'Standing height from ground to top of the head.',
     modelType: 'gorilla',
+    assetId: 'male-010',
   },
   {
     id: 'zebra',
@@ -231,6 +249,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 160,
     helpText: 'Measured from ground to the withers.',
     modelType: 'zebra',
+    assetId: 'animal-048',
   },
   {
     id: 'camel',
@@ -243,6 +262,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 230,
     helpText: 'Measured to the top of the shoulder (hump may rise 30 cm higher).',
     modelType: 'camel',
+    assetId: 'animal-048',
   },
   {
     id: 'donkey',
@@ -255,10 +275,16 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 155,
     helpText: 'Measured from ground to the withers.',
     modelType: 'donkey',
+    assetId: 'animal-048',
   },
 ];
 
 export function getAnimalDefinition(idOrType: string): AnimalDefinition | undefined {
   const normalized = idOrType.toLowerCase().trim();
   return ANIMALS.find((a) => a.id === normalized || a.name.toLowerCase() === normalized);
+}
+
+export function getAnimalAssetId(idOrType: string): string | undefined {
+  const animal = getAnimalDefinition(idOrType);
+  return animal?.assetId || (idOrType === 'horse' ? 'animal-048' : undefined);
 }
