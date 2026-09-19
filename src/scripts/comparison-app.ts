@@ -14,7 +14,7 @@ import { calculateDifference, calculateScale, generateRulerTicks, sortPeople } f
 import { cmToFeetInches, feetInchesToCm, formatHeight, formatHeightFull } from '../lib/height';
 import { copyToClipboard, decodePeopleFromUrl, encodePeopleToUrl } from '../lib/share';
 import { downloadChartAsPng } from '../lib/exportChart';
-import { renderEntitySvg } from '../lib/renderModel';
+import { renderEntitySvg, fetchSvgData, hasCachedSvg } from '../lib/renderModel';
 import { resolveMigratedAssetId } from '../lib/migrationMap';
 import { getAssetById, getAllAssets, resolveAsset, type AssetMetadata } from '../data/assetRegistry';
 
@@ -203,6 +203,25 @@ class HeightComparisonApp {
 
     if (this.state.people.length > 0) {
       this.selectItem(this.state.people[0].id);
+    }
+
+    // Warm SVG vector cache for all initial entities
+    const initialAssets = this.state.people
+      .map((it) => resolveAsset(it.assetId || (it as any).modelType || it.id, it.category))
+      .filter(
+        (a) =>
+          a &&
+          !a.filename?.endsWith('.png') &&
+          !a.publicPath?.endsWith('.png') &&
+          a.publicPath?.endsWith('.svg')
+      );
+
+    if (initialAssets.length > 0) {
+      Promise.all(initialAssets.map((a) => fetchSvgData(a.publicPath))).then((results) => {
+        if (results.some(Boolean)) {
+          this.renderChart();
+        }
+      });
     }
   }
 
@@ -639,6 +658,13 @@ class HeightComparisonApp {
     this.selectItem(newItem.id);
     this.persistState();
     this.render();
+
+    const asset = resolveAsset(assetId, category);
+    if (asset && !asset.filename?.endsWith('.png') && !asset.publicPath?.endsWith('.png') && asset.publicPath?.endsWith('.svg') && !hasCachedSvg(asset.publicPath)) {
+      fetchSvgData(asset.publicPath).then(() => {
+        this.renderChart();
+      });
+    }
 
     if (window.innerWidth < 768 && this.modelsContainer) {
       this.modelsContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -2154,6 +2180,26 @@ class HeightComparisonApp {
     this.modelsContainer.className = `relative z-10 w-full h-full pb-0 mb-[36px] ${
       isManual ? 'block' : 'flex items-end justify-around'
     }`;
+
+    // Ensure all SVGs for currently rendered items are cached for responsive recoloring
+    const uncachedAssets = items
+      .map((it) => resolveAsset(it.assetId || (it as any).modelType || it.id, it.category))
+      .filter(
+        (a) =>
+          a &&
+          !a.filename?.endsWith('.png') &&
+          !a.publicPath?.endsWith('.png') &&
+          a.publicPath?.endsWith('.svg') &&
+          !hasCachedSvg(a.publicPath)
+      );
+
+    if (uncachedAssets.length > 0) {
+      Promise.all(uncachedAssets.map((a) => fetchSvgData(a.publicPath))).then((results) => {
+        if (results.some(Boolean)) {
+          this.renderChart();
+        }
+      });
+    }
 
     this.modelsContainer.innerHTML = items
       .map((item, itemIndex) => {

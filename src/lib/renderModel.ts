@@ -9,6 +9,65 @@ export interface RenderResult {
   groundOffsetPx: number;
 }
 
+export interface CachedSvgData {
+  innerMarkup: string;
+  viewBox: string;
+}
+
+const svgCache = new Map<string, CachedSvgData>();
+const inflightSvgFetches = new Map<string, Promise<CachedSvgData | null>>();
+
+export function hasCachedSvg(publicPath: string): boolean {
+  return svgCache.has(publicPath);
+}
+
+export function getCachedSvg(publicPath: string): CachedSvgData | undefined {
+  return svgCache.get(publicPath);
+}
+
+export async function fetchSvgData(publicPath: string): Promise<CachedSvgData | null> {
+  if (!publicPath || !publicPath.endsWith('.svg')) return null;
+  if (svgCache.has(publicPath)) {
+    return svgCache.get(publicPath)!;
+  }
+  if (inflightSvgFetches.has(publicPath)) {
+    return inflightSvgFetches.get(publicPath)!;
+  }
+
+  const promise = (async () => {
+    try {
+      const res = await fetch(publicPath);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const rawText = await res.text();
+      // Replace dark silhouette fills with currentColor so parent fill/color controls it
+      const sanitized = rawText.replace(
+        /fill=["']#(?:000(?:000)?|0d2337|0f172a|1e293b|334155|475569|64748b|111827)[\"']/gi,
+        'fill="currentColor"'
+      );
+      const match = sanitized.match(/<svg\b([^>]*)>([\s\S]*?)<\/svg>/i);
+      if (match) {
+        const attrs = match[1];
+        const inner = match[2].trim();
+        const vbMatch = attrs.match(/viewBox=["']([^"']+)["']/i);
+        const data: CachedSvgData = {
+          innerMarkup: inner,
+          viewBox: vbMatch ? vbMatch[1] : '',
+        };
+        svgCache.set(publicPath, data);
+        return data;
+      }
+    } catch (err) {
+      console.warn(`[renderModel] Failed to fetch SVG from ${publicPath}:`, err);
+    } finally {
+      inflightSvgFetches.delete(publicPath);
+    }
+    return null;
+  })();
+
+  inflightSvgFetches.set(publicPath, promise);
+  return promise;
+}
+
 /**
  * Universal Entity Renderer: Resolves any entity from the Central Asset Registry
  * and renders its vector SVG scaled proportionally based strictly on its
@@ -64,7 +123,7 @@ export function renderEntitySvg(item: ComparisonItem, chartScale: number): Rende
 
   const asset: AssetMetadata = resolveAsset(item.assetId || (item as any).modelType || item.id, item.category);
 
-  const isPngAsset = asset.assetType === 'png' || (asset as any).extension === 'png';
+  const isPngAsset = (asset.filename && asset.filename.endsWith('.png')) || (asset.publicPath && asset.publicPath.endsWith('.png')) || asset.assetType === 'png';
 
   // Height conversion: chartScale represents pixelsPerCm on the viewport
   const pixelsPerCm = chartScale;
@@ -103,14 +162,22 @@ export function renderEntitySvg(item: ComparisonItem, chartScale: number): Rende
   const color = item.color || '#2563eb';
   const opacity = typeof item.opacity === 'number' ? item.opacity : 1.0;
 
-  // Inner vector markup: either pure vector paths or direct SVG/PNG image reference
-  const innerContent = (asset as any).innerMarkup
-    ? (asset as any).innerMarkup
-    : `<image href="${asset.publicPath}" x="${vbX}" y="${vbY}" width="${totalVbWidth}" height="${totalVbHeight}" preserveAspectRatio="xMidYMax meet" />`;
+  const cachedSvg = !isPngAsset && asset.publicPath ? svgCache.get(asset.publicPath) : undefined;
+
+  // Inner vector markup: inlined vector SVG with active color inheritance, or direct SVG/PNG fallback
+  let innerContent: string;
+  if (cachedSvg && cachedSvg.innerMarkup) {
+    const fileVb = cachedSvg.viewBox || asset.viewBox;
+    innerContent = `<svg viewBox="${fileVb}" x="${vbX}" y="${vbY}" width="${totalVbWidth}" height="${totalVbHeight}" preserveAspectRatio="xMidYMax meet" overflow="visible" style="color: inherit; fill: inherit;">${cachedSvg.innerMarkup}</svg>`;
+  } else if ((asset as any).innerMarkup) {
+    innerContent = (asset as any).innerMarkup;
+  } else {
+    innerContent = `<image href="${asset.publicPath}" x="${vbX}" y="${vbY}" width="${totalVbWidth}" height="${totalVbHeight}" preserveAspectRatio="xMidYMax meet" />`;
+  }
 
   const styledMarkup = isPngAsset
     ? `<g class="entity-png-group" style="opacity: ${opacity};">${innerContent}</g>`
-    : `<g class="entity-vector-group" fill="${color}" style="opacity: ${opacity};">${innerContent}</g>`;
+    : `<g class="entity-vector-group" fill="${color}" style="color: ${color}; fill: ${color}; opacity: ${opacity};">${innerContent}</g>`;
 
   const svgMarkup = `
     <svg 
@@ -118,7 +185,7 @@ export function renderEntitySvg(item: ComparisonItem, chartScale: number): Rende
       viewBox="${asset.viewBox}" 
       preserveAspectRatio="xMidYMax meet"
       class="entity-svg pointer-events-none block overflow-visible"
-      style="height: ${totalSvgHeightPx.toFixed(2)}px; width: ${totalSvgWidthPx.toFixed(2)}px; transform-origin: bottom center;"
+      style="height: ${totalSvgHeightPx.toFixed(2)}px; width: ${totalSvgWidthPx.toFixed(2)}px; transform-origin: bottom center; color: ${color}; fill: ${color};"
       data-id="${item.id}"
       data-asset-id="${asset.id}"
       data-category="${asset.category}"
