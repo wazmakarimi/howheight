@@ -5,6 +5,7 @@ Disallow: /api/
 Disallow: /compare/share/
 
 Sitemap: https://howheight.org/sitemap.xml
+Sitemap: https://howheight.pages.dev/sitemap.xml
 
 # LLM & AI Agent Reference
 # https://llmstxt.org
