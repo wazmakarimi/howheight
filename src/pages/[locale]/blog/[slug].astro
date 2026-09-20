@@ -1,0 +1,30 @@
+---
+import BlogArticlePage from '../../../components/pages/BlogArticlePage.astro';
+import { BLOG_ARTICLES, type BlogArticle } from '../../../data/blog';
+import { SUPPORTED_LOCALES, type Locale } from '../../../i18n/locales';
+
+export function getStaticPaths() {
+  const nonEnLocales = SUPPORTED_LOCALES.filter((l) => l !== 'en');
+  const paths = [];
+
+  for (const locale of nonEnLocales) {
+    for (const article of BLOG_ARTICLES) {
+      paths.push({
+        params: { locale, slug: article.slug },
+        props: { article },
+      });
+    }
+  }
+
+  return paths;
+}
+
+interface Props {
+  article: BlogArticle;
+}
+
+const { article } = Astro.props;
+const { locale } = Astro.params as { locale: Locale };
+---
+
+<BlogArticlePage article={article} locale={locale} />

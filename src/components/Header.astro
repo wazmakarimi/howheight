@@ -13,6 +13,7 @@ const { locale = getLocaleFromUrl(Astro.url) } = Astro.props;
 
 const mainNav = [
   { label: t(locale, 'nav.compare'), href: getLocalizedPath('/compare/', locale) },
+  { label: 'Blog', href: getLocalizedPath('/blog/', locale) },
   { label: t(locale, 'nav.celebrities'), href: getLocalizedPath('/celebrity-height-comparison/', locale) },
   { label: t(locale, 'nav.anime'), href: getLocalizedPath('/anime-height-comparison/', locale) },
   { label: t(locale, 'nav.films'), href: getLocalizedPath('/film-height-comparison/', locale) },

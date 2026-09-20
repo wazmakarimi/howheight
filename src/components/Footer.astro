@@ -23,6 +23,7 @@ const categories = [
 ];
 
 const companyLinks = [
+  { label: 'Blog & Research', href: getLocalizedPath('/blog/', locale) },
   { label: t(locale, 'footer.about'), href: getLocalizedPath('/about/', locale) },
   { label: t(locale, 'footer.contact'), href: `${getLocalizedPath('/about/', locale)}#contact` },
   { label: t(locale, 'footer.privacy'), href: `${getLocalizedPath('/about/', locale)}#privacy` },
@@ -36,6 +37,7 @@ const utilityLinks = [
   { label: t(locale, 'nav.chart'), href: getLocalizedPath('/height-comparison-chart/', locale) },
   { label: 'Couple Comparison', href: getLocalizedPath('/height-comparison-couple/', locale) },
   { label: 'Human Size Comparison', href: getLocalizedPath('/size-comparison/', locale) },
+  { label: 'Articles & Guides', href: getLocalizedPath('/blog/', locale) },
   { label: t(locale, 'nav.howToUse'), href: getLocalizedPath('/how-to-use/', locale) },
 ];
 ---

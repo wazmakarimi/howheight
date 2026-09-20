@@ -327,6 +327,32 @@ export const CELEBRITIES: Celebrity[] = [
     bioSnippet: 'Critically and commercially acclaimed actress, widely known as Black Widow.',
     assetId: 'celebrity-036',
   },
+  {
+    id: 'lionel-messi',
+    name: 'Lionel Messi',
+    slug: 'lionel-messi',
+    heightCm: 170,
+    gender: 'male',
+    profession: 'Footballer',
+    country: 'Argentina',
+    aliases: ['Leo Messi', 'La Pulga'],
+    heightSource: 'Official club measurement register & FIFA documentation (5 ft 7 in / 170 cm).',
+    bioSnippet: 'Eight-time Ballon d’Or winner, World Cup champion, and globally celebrated football icon.',
+    assetId: 'celebrity-046',
+  },
+  {
+    id: 'cristiano-ronaldo',
+    name: 'Cristiano Ronaldo',
+    slug: 'cristiano-ronaldo',
+    heightCm: 187,
+    gender: 'male',
+    profession: 'Footballer',
+    country: 'Portugal',
+    aliases: ['CR7', 'Ronaldo'],
+    heightSource: 'Official club medical and sporting measurement register (6 ft 1.6 in / 187 cm).',
+    bioSnippet: 'Five-time Ballon d’Or winner, all-time international top scorer, and athletic phenomenon.',
+    assetId: 'celebrity-042',
+  },
 ];
 
 export function getCelebrityBySlug(slug: string): Celebrity | undefined {

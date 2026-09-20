@@ -7,6 +7,8 @@ import type { ComparisonItem } from '../lib/constants.ts';
 export interface ComparisonEntityRef {
   category: 'human' | 'animal' | 'object' | 'celebrity';
   id: string;
+  customHeightCm?: number;
+  label?: string;
 }
 
 export interface ComparisonDefinition {
@@ -369,15 +371,16 @@ export function resolveComparisonItems(refs: ComparisonEntityRef[]): ComparisonI
     // Default Human
     const human = getHumanDefinition(ref.id);
     const isFemale = human?.gender === 'female' || ref.id === 'female';
+    const finalHeight = ref.customHeightCm || human?.typicalHeightCm || (isFemale ? 162 : 176);
     return {
       id: `seo-human-${ref.id}`,
       assetId: isFemale ? 'female-01' : 'male-010',
       category: isFemale ? 'female' : 'male',
-      name: human?.name || (isFemale ? 'Average Female' : 'Average Male'),
+      name: ref.label || human?.name || (isFemale ? 'Average Female' : 'Average Male'),
       gender: isFemale ? 'female' : 'male',
-      heightCm: human?.typicalHeightCm || (isFemale ? 162 : 176),
-      referenceHeightCm: human?.typicalHeightCm || (isFemale ? 162 : 176),
-      isCustomHeight: false,
+      heightCm: finalHeight,
+      referenceHeightCm: finalHeight,
+      isCustomHeight: Boolean(ref.customHeightCm),
       color,
     };
   });

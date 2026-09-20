@@ -89,4 +89,48 @@ export function buildWebAppSchema(canonicalUrl: string, title?: string, descript
   };
 }
 
+/**
+ * Generates Schema.org BlogPosting JSON-LD object.
+ */
+export function buildBlogPostingSchema(article: {
+  title: string;
+  description: string;
+  canonicalUrl: string;
+  publishedDate: string;
+  updatedDate: string;
+  author: { name: string; role?: string };
+  image?: string;
+  category?: string;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    description: article.description,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': article.canonicalUrl,
+    },
+    url: article.canonicalUrl,
+    datePublished: article.publishedDate,
+    dateModified: article.updatedDate,
+    author: {
+      '@type': 'Person',
+      name: article.author.name,
+      jobTitle: article.author.role,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE.name,
+      url: SITE.siteUrl,
+      logo: {
+        '@type': 'ImageObject',
+        url: `${SITE.siteUrl}/favicon.svg`,
+      },
+    },
+    image: article.image || `${SITE.siteUrl}/social-preview.png`,
+    articleSection: article.category,
+  };
+}
+
 export * from './seo/site';

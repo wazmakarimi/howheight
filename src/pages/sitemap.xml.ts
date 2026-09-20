@@ -10,6 +10,8 @@ import { ASSET_REGISTRY } from '../data/assetRegistry';
 import { SUPPORTED_LOCALES, DEFAULT_LOCALE } from '../i18n/locales';
 import { getLocalizedPath } from '../i18n/utils';
 
+import { BLOG_ARTICLES } from '../data/blog';
+
 interface SitemapEntry {
   loc: string;
   priority: string;
@@ -31,6 +33,7 @@ export const GET: APIRoute = async () => {
     { path: '/', priority: '1.0', changefreq: 'daily' },
     { path: '/height-comparison/', priority: '0.98', changefreq: 'daily' },
     { path: '/compare/', priority: '0.95', changefreq: 'daily' },
+    { path: '/blog/', priority: '0.92', changefreq: 'daily' },
     { path: '/height-comparison-calculator/', priority: '0.95', changefreq: 'weekly' },
     { path: '/height-comparison-visualizer/', priority: '0.95', changefreq: 'weekly' },
     { path: '/height-comparison-chart/', priority: '0.9', changefreq: 'weekly' },
@@ -38,6 +41,13 @@ export const GET: APIRoute = async () => {
     { path: '/height-comparison-couple/', priority: '0.9', changefreq: 'weekly' },
     { path: '/how-to-use/', priority: '0.85', changefreq: 'weekly' },
     { path: '/about/', priority: '0.7', changefreq: 'monthly' },
+
+    // Master SEO Blog Articles
+    ...BLOG_ARTICLES.map((art) => ({
+      path: `/blog/${art.slug}/`,
+      priority: '0.88',
+      changefreq: 'weekly',
+    })),
 
     // 10 Canonical Category Hub Routes
     ...CATEGORIES.map((cat) => ({

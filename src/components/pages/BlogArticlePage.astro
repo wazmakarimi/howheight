@@ -1,0 +1,348 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../ComparisonTool.astro';
+import Breadcrumbs from '../seo/Breadcrumbs.astro';
+import FAQSection from '../seo/FAQSection.astro';
+import { SITE } from '../../config/site';
+import { type BlogArticle, BLOG_CATEGORIES, getRelatedArticles } from '../../data/blog';
+import { resolveComparisonItems } from '../../data/comparisons';
+import { buildBlogPostingSchema } from '../../lib/seo';
+import { getLocalizedPath, t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+import { getSafeInternalUrl } from '../../lib/internal-linking';
+
+interface Props {
+  article: BlogArticle;
+  locale?: Locale;
+}
+
+const { article, locale = 'en' } = Astro.props;
+const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath(`/blog/${article.slug}/`, locale)}`;
+const preloadedItems = resolveComparisonItems(article.featuredEntities);
+const relatedArticles = getRelatedArticles(article.slug, 3);
+const catMeta = BLOG_CATEGORIES[article.category];
+
+const blogPostingSchema = buildBlogPostingSchema({
+  title: article.title,
+  description: article.description,
+  canonicalUrl,
+  publishedDate: article.publishedDate,
+  updatedDate: article.updatedDate,
+  author: {
+    name: article.author.name,
+    role: article.author.role,
+  },
+  category: catMeta?.name || article.category,
+});
+---
+
+<Layout
+  title={`${article.title} | ${SITE.name}`}
+  description={article.description}
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+  type="article"
+>
+  <!-- Schema.org BlogPosting JSON-LD -->
+  <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />
+
+  <div class="max-w-[1720px] mx-auto px-3 sm:px-6 lg:px-8 py-4 sm:py-8">
+    <div class="max-w-4xl mx-auto mb-4">
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Blog', url: '/blog/' },
+          { name: article.title, url: `/blog/${article.slug}/` },
+        ]}
+      />
+    </div>
+
+    <!-- Article Header Banner -->
+    <header class="max-w-4xl mx-auto mb-8 text-center sm:text-left">
+      <div class="flex items-center justify-center sm:justify-start gap-3 mb-3 flex-wrap">
+        <span class={`px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider ${catMeta?.badgeColor || 'bg-slate-100 text-slate-800'}`}>
+          {catMeta?.name || article.category}
+        </span>
+        <span class="text-xs text-slate-500 dark:text-slate-400 font-medium">
+          {article.readingTimeMinutes} min read
+        </span>
+        <span class="text-xs text-slate-400 dark:text-slate-500">
+          • Updated {new Date(article.updatedDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+        </span>
+      </div>
+
+      <h1 class="text-2xl sm:text-4xl lg:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight mb-4">
+        {article.h1}
+      </h1>
+
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
+        {article.description}
+      </p>
+
+      <!-- Author Card -->
+      <div class="flex items-center justify-center sm:justify-start gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+        <div class="w-10 h-10 rounded-full bg-brand-100 dark:bg-brand-900/60 border border-brand-300 dark:border-brand-700 flex items-center justify-center font-bold text-sm text-brand-700 dark:text-brand-300">
+          {article.author.name.charAt(0)}
+        </div>
+        <div>
+          <span class="text-sm font-bold text-slate-900 dark:text-white block">{article.author.name}</span>
+          <span class="text-xs text-slate-500 dark:text-slate-400 block">{article.author.role}</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Quick Answer Box (Direct Answer Card) -->
+    <div class="max-w-4xl mx-auto mb-10">
+      <div class="p-5 sm:p-7 rounded-3xl bg-blue-50/60 dark:bg-slate-800/80 border border-blue-200/80 dark:border-blue-900/50 shadow-soft">
+        <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-brand-700 dark:text-blue-400 mb-2">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-600 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span>Key Measurement Summary</span>
+        </div>
+
+        <p class="text-sm sm:text-base font-semibold text-slate-900 dark:text-slate-100 leading-relaxed mb-3">
+          {article.quickAnswer.summary}
+        </p>
+
+        <div class="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed p-3 rounded-xl bg-white/70 dark:bg-slate-900/50 border border-blue-100 dark:border-slate-700/60 mb-4">
+          <span class="font-bold text-brand-800 dark:text-blue-300">Core Takeaway: </span>
+          {article.quickAnswer.keyTakeaway}
+        </div>
+
+        {article.quickAnswer.dataPoints && article.quickAnswer.dataPoints.length > 0 && (
+          <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-2 border-t border-blue-200/60 dark:border-slate-700/60">
+            {article.quickAnswer.dataPoints.map((dp) => (
+              <div class="p-2.5 rounded-xl bg-white dark:bg-slate-900 border border-blue-100 dark:border-slate-700 text-center">
+                <span class="text-[11px] text-slate-500 dark:text-slate-400 block font-medium">{dp.label}</span>
+                <span class="text-xs sm:text-sm font-black text-slate-900 dark:text-white block mt-0.5">{dp.value}</span>
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
+    </div>
+
+    <!-- Preloaded Interactive Comparison Tool -->
+    <section class="mb-14 scroll-mt-20">
+      <div class="max-w-4xl mx-auto mb-4 text-center sm:text-left">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+          {article.toolActionTitle || 'Interactive Visual Scale Comparison'}
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
+          {article.toolActionDescription || 'Observe these entities side-by-side on our precision orthographic canvas. Add or remove figures to test relative proportions.'}
+        </p>
+      </div>
+
+      <!-- Main Tool with preloaded items -->
+      <ComparisonTool
+        initialItems={preloadedItems}
+        locale={locale}
+        showQuickCompare={false}
+      />
+    </section>
+
+    <!-- Comparison Data Table (if provided) -->
+    {article.comparisonTable && (
+      <section class="max-w-4xl mx-auto mb-12">
+        <div class="rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft overflow-hidden p-6">
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white mb-2">
+            Reference Data &amp; Metric Breakdown
+          </h2>
+          {article.comparisonTable.caption && (
+            <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">
+              {article.comparisonTable.caption}
+            </p>
+          )}
+
+          <div class="overflow-x-auto -mx-6 sm:mx-0">
+            <table class="w-full text-left text-xs sm:text-sm border-collapse">
+              <thead>
+                <tr class="bg-slate-50 dark:bg-slate-900/60 border-b border-slate-200 dark:border-slate-700">
+                  {article.comparisonTable.headers.map((hdr) => (
+                    <th class="p-3.5 font-bold text-slate-900 dark:text-slate-200 first:pl-6 last:pr-6">
+                      {hdr}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-slate-100 dark:divide-slate-700/60">
+                {article.comparisonTable.rows.map((row) => (
+                  <tr class="hover:bg-slate-50/50 dark:hover:bg-slate-700/30 transition-colors">
+                    {row.map((cell, cIdx) => (
+                      <td class={`p-3.5 text-slate-700 dark:text-slate-300 first:pl-6 last:pr-6 ${cIdx === 0 ? 'font-semibold text-slate-900 dark:text-white' : ''}`}>
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    )}
+
+    <!-- In-Depth Analysis Content Sections -->
+    <article class="max-w-4xl mx-auto space-y-10 mb-14 text-slate-800 dark:text-slate-200">
+      {article.contentSections.map((sec) => (
+        <section id={sec.id} class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight mb-1">
+            {sec.heading}
+          </h2>
+          {sec.subheading && (
+            <p class="text-xs sm:text-sm font-medium text-brand-600 dark:text-blue-400 mb-4">
+              {sec.subheading}
+            </p>
+          )}
+
+          <div class="space-y-4 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+            {sec.paragraphs.map((p) => (
+              <p>{p}</p>
+            ))}
+          </div>
+
+          {sec.callout && (
+            <div class={`mt-6 p-4 sm:p-5 rounded-2xl border text-xs sm:text-sm leading-relaxed ${
+              sec.callout.type === 'tip'
+                ? 'bg-amber-50/80 dark:bg-amber-950/30 border-amber-200 dark:border-amber-800/60 text-amber-900 dark:text-amber-200'
+                : sec.callout.type === 'stat'
+                ? 'bg-emerald-50/80 dark:bg-emerald-950/30 border-emerald-200 dark:border-emerald-800/60 text-emerald-900 dark:text-emerald-200'
+                : 'bg-brand-50/80 dark:bg-blue-950/30 border-brand-200 dark:border-blue-800/60 text-brand-900 dark:text-blue-200'
+            }`}>
+              <span class="font-bold block mb-1">💡 {sec.callout.title}</span>
+              <p>{sec.callout.text}</p>
+            </div>
+          )}
+        </section>
+      ))}
+    </article>
+
+    <!-- Frequently Asked Questions with Schema.org FAQPage -->
+    <div class="max-w-4xl mx-auto mb-14">
+      <FAQSection
+        title={`Questions About ${article.title.replace(/:.*$/, '')}`}
+        faqs={article.faq}
+      />
+    </div>
+
+    <!-- Verified References and Sources Box -->
+    {article.sources && article.sources.length > 0 && (
+      <section class="max-w-4xl mx-auto mb-14">
+        <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+          <div class="flex items-center gap-2 mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+            </svg>
+            <h2 class="text-sm font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300">
+              Verified Sources &amp; Scientific References
+            </h2>
+          </div>
+          <ul class="space-y-2.5 text-xs text-slate-600 dark:text-slate-400">
+            {article.sources.map((src) => (
+              <li class="flex items-start gap-2">
+                <span class="text-slate-400 font-bold">•</span>
+                <div>
+                  <span class="font-semibold text-slate-800 dark:text-slate-200">{src.title}: </span>
+                  <span>{src.description}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+
+    <!-- Related Articles -->
+    {relatedArticles && relatedArticles.length > 0 && (
+      <section class="max-w-4xl mx-auto mb-14">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+            Related Analysis &amp; Comparisons
+          </h2>
+          <a
+            href={getSafeInternalUrl('/blog/', locale)}
+            class="text-xs font-bold text-brand-600 dark:text-blue-400 hover:underline"
+          >
+            All Articles →
+          </a>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {relatedArticles.map((rel) => {
+            const relMeta = BLOG_CATEGORIES[rel.category];
+            return (
+              <a
+                href={getSafeInternalUrl(`/blog/${rel.slug}/`, locale)}
+                class="p-5 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 hover:border-brand-400 hover:shadow-soft transition-all group flex flex-col justify-between"
+              >
+                <div>
+                  <span class={`px-2 py-0.5 rounded-full text-[10px] font-bold ${relMeta?.badgeColor || 'bg-slate-100 text-slate-700'}`}>
+                    {relMeta?.name || rel.category}
+                  </span>
+                  <h3 class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors mt-2 leading-snug">
+                    {rel.title}
+                  </h3>
+                </div>
+                <span class="text-[11px] font-bold text-brand-600 dark:text-blue-400 mt-4 block">
+                  Read Article →
+                </span>
+              </a>
+            );
+          })}
+        </div>
+      </section>
+    )}
+
+    <!-- Interactive Tools Callout -->
+    <section class="max-w-4xl mx-auto rounded-3xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 p-6 sm:p-8">
+      <div class="mb-4">
+        <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+          Compare More Figures on HowHeight
+        </h2>
+        <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+          Choose from over 1,400 verified human, celebrity, animal, vehicle, and architectural figures.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <a
+          href={getSafeInternalUrl('/height-comparison/', locale)}
+          class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
+            Height Comparison Hub
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">
+            Full visual comparison canvas with all entities.
+          </span>
+        </a>
+
+        <a
+          href={getSafeInternalUrl('/height-comparison-calculator/', locale)}
+          class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
+            Height Calculator
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">
+            Calculate exact differences and height percentiles.
+          </span>
+        </a>
+
+        <a
+          href={getSafeInternalUrl('/height-comparison-visualizer/', locale)}
+          class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
+            Visualizer Tool
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">
+            Compare heights side-by-side in 2D perspective.
+          </span>
+        </a>
+      </div>
+    </section>
+  </div>
+</Layout>

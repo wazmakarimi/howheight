@@ -116,8 +116,11 @@ export function getLocalizedPath(path: string, targetLocale: Locale): string {
   return `/${targetLocale}/${pathWithoutLeadingSlash}`;
 }
 
+import { BLOG_ARTICLES } from '../data/blog';
+
 const STATIC_LOCALIZED_ROUTES = new Set([
   '',
+  'blog',
   'compare',
   'height-comparison',
   'height-comparison-calculator',
@@ -131,6 +134,7 @@ const STATIC_LOCALIZED_ROUTES = new Set([
 ]);
 
 const comparisonSlugsSet = new Set(COMPARISONS.filter((c) => c.indexable !== false).map((c) => c.slug));
+const blogSlugsSet = new Set(BLOG_ARTICLES.map((a) => a.slug));
 const categorySlugsSet = new Set(CATEGORIES.map((c) => c.slug));
 const categoryRoutesSet = new Set(CATEGORIES.map((c) => c.route.replace(/^\/|\/$/g, '')));
 
@@ -153,6 +157,13 @@ export function isRouteLocalized(path: string): boolean {
   if (clean.startsWith('compare/')) {
     const compSlug = clean.replace(/^compare\//, '');
     if (comparisonSlugsSet.has(compSlug)) {
+      return true;
+    }
+  }
+
+  if (clean.startsWith('blog/')) {
+    const articleSlug = clean.replace(/^blog\//, '');
+    if (blogSlugsSet.has(articleSlug)) {
       return true;
     }
   }

@@ -8,6 +8,7 @@ export default {
   // Navigation
   'nav.home': 'Home',
   'nav.compare': 'Height Comparison',
+  'nav.blog': 'Blog',
   'nav.celebrities': 'Celebrities',
   'nav.anime': 'Anime',
   'nav.films': 'Films',

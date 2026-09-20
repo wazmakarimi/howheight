@@ -1,0 +1,21 @@
+---
+import BlogArticlePage from '../../components/pages/BlogArticlePage.astro';
+import { BLOG_ARTICLES, type BlogArticle } from '../../data/blog';
+import { getLocaleFromUrl, type Locale } from '../../i18n';
+
+export function getStaticPaths() {
+  return BLOG_ARTICLES.map((article) => ({
+    params: { slug: article.slug },
+    props: { article },
+  }));
+}
+
+interface Props {
+  article: BlogArticle;
+}
+
+const { article } = Astro.props;
+const locale = (Astro.currentLocale as Locale) || getLocaleFromUrl(Astro.url);
+---
+
+<BlogArticlePage article={article} locale={locale} />
