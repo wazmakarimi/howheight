@@ -29,9 +29,13 @@ export const GET: APIRoute = async () => {
   const multilingualRoutes: Array<{ path: string; priority: string; changefreq: string }> = [
     // Static & Tool Routes
     { path: '/', priority: '1.0', changefreq: 'daily' },
+    { path: '/height-comparison/', priority: '0.98', changefreq: 'daily' },
     { path: '/compare/', priority: '0.95', changefreq: 'daily' },
-    { path: '/height-difference-calculator/', priority: '0.9', changefreq: 'weekly' },
+    { path: '/height-comparison-calculator/', priority: '0.95', changefreq: 'weekly' },
+    { path: '/height-comparison-visualizer/', priority: '0.95', changefreq: 'weekly' },
     { path: '/height-comparison-chart/', priority: '0.9', changefreq: 'weekly' },
+    { path: '/size-comparison/', priority: '0.9', changefreq: 'weekly' },
+    { path: '/height-comparison-couple/', priority: '0.9', changefreq: 'weekly' },
     { path: '/how-to-use/', priority: '0.85', changefreq: 'weekly' },
     { path: '/about/', priority: '0.7', changefreq: 'monthly' },
 

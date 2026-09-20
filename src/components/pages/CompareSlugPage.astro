@@ -97,7 +97,7 @@ const pageH1 = `${nameA} vs ${nameB} ${t(locale, 'nav.compare')}`;
         locale={locale}
         items={[
           { name: 'Home', url: '/' },
-          { name: t(locale, 'nav.compare'), url: '/compare/' },
+          { name: 'Height Comparison', url: '/height-comparison/' },
           { name: `${nameA} vs ${nameB}`, url: `/compare/${comp.slug}/` },
         ]}
       />
@@ -190,6 +190,67 @@ const pageH1 = `${nameA} vs ${nameB} ${t(locale, 'nav.compare')}`;
         />
       </div>
     )}
+
+    <!-- Related Height Comparison Tools -->
+    <section class="max-w-5xl mx-auto mt-12 px-4">
+      <div class="p-6 rounded-3xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+        <div class="mb-4">
+          <h2 class="text-lg sm:text-xl font-bold text-slate-900 dark:text-white">
+            Related Height Comparison Tools
+          </h2>
+          <p class="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+            Use these tools to calculate differences, view conversion tables, and customize visual comparisons.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          <a
+            href={getSafeInternalUrl('/height-comparison/', locale)}
+            class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+          >
+            <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
+              Height Comparison Hub
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">
+              Comprehensive measurement guide &amp; multi-figure visualizer.
+            </span>
+          </a>
+          <a
+            href={getSafeInternalUrl('/height-comparison-calculator/', locale)}
+            class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+          >
+            <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
+              Height Comparison Calculator
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">
+              Calculate exact difference, ratios, and mathematical gap.
+            </span>
+          </a>
+          <a
+            href={getSafeInternalUrl('/height-comparison-visualizer/', locale)}
+            class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+          >
+            <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
+              Height Comparison Visualizer
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">
+              2D visual canvas for animals, celebrities, and objects.
+            </span>
+          </a>
+          <a
+            href={getSafeInternalUrl('/height-comparison-chart/', locale)}
+            class="p-3.5 rounded-xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+          >
+            <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
+              Height Comparison Chart
+            </span>
+            <span class="text-[11px] text-slate-500 dark:text-slate-400 mt-1 block">
+              Stature conversion table in cm, meters, and feet/inches.
+            </span>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <!-- Curated FAQs -->
     <div class="max-w-4xl mx-auto mt-12 px-4 mb-16">

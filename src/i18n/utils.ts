@@ -119,10 +119,15 @@ export function getLocalizedPath(path: string, targetLocale: Locale): string {
 const STATIC_LOCALIZED_ROUTES = new Set([
   '',
   'compare',
+  'height-comparison',
+  'height-comparison-calculator',
+  'height-comparison-visualizer',
+  'height-comparison-chart',
+  'height-difference-calculator',
+  'size-comparison',
+  'height-comparison-couple',
   'how-to-use',
   'about',
-  'height-difference-calculator',
-  'height-comparison-chart',
 ]);
 
 const comparisonSlugsSet = new Set(COMPARISONS.filter((c) => c.indexable !== false).map((c) => c.slug));

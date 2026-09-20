@@ -10,7 +10,9 @@
     "astro": "astro",
     "i18n:check": "node scripts/i18n-check.mjs",
     "indexnow": "node scripts/submit-indexnow.mjs",
-    "test:seo": "npx --yes tsx scripts/test-domain-seo.mjs"
+    "test:seo": "npx --yes tsx scripts/test-domain-seo.mjs",
+    "test:cluster": "node scripts/test-seo-cluster.mjs",
+    "test": "npm run test:seo && npm run test:cluster"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.5",

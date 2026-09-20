@@ -1,0 +1,283 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../ComparisonTool.astro';
+import Breadcrumbs from '../seo/Breadcrumbs.astro';
+import FAQSection from '../seo/FAQSection.astro';
+import RelatedComparisons from '../seo/RelatedComparisons.astro';
+import { SITE } from '../../config/site';
+import { COMPARISONS } from '../../data/comparisons';
+import { getLocalizedPath, t } from '../../i18n';
+import { getSafeInternalUrl } from '../../lib/internal-linking';
+import type { ComparisonItem } from '../../lib/constants';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/height-comparison-couple/', locale)}`;
+
+// Gender-neutral couple default items
+const coupleDefaultItems: ComparisonItem[] = [
+  {
+    id: 'couple-person-a',
+    assetId: 'male-010',
+    category: 'male',
+    name: 'Person A',
+    gender: 'male',
+    heightCm: 178,
+    referenceHeightCm: 178,
+    isCustomHeight: true,
+    color: '#2563eb',
+  },
+  {
+    id: 'couple-person-b',
+    assetId: 'female-01',
+    category: 'female',
+    name: 'Person B',
+    gender: 'female',
+    heightCm: 165,
+    referenceHeightCm: 165,
+    isCustomHeight: true,
+    color: '#9333ea',
+  },
+];
+
+const featuredComparisons = COMPARISONS.filter((c) => 
+  c.slug === 'male-vs-female' || c.slug.includes('celebrity') || c.slug.includes('tom-cruise')
+).slice(0, 3).map((c) => ({
+  slug: c.slug,
+  title: c.title,
+  h1: c.h1,
+  description: c.description,
+  url: getSafeInternalUrl(`/compare/${c.slug}/`, locale),
+  anchorText: c.h1,
+  score: 100,
+  matchType: 'curated' as const,
+  items: c.items.map((item) => ({
+    name: item.id.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+    heightCm: item.id === 'tom-cruise' ? 170 : item.id === 'dwayne-johnson' ? 196 : item.id === 'female' ? 162 : 176,
+  })),
+}));
+
+const coupleFaqs = [
+  {
+    question: 'How do I compare two people\'s heights accurately?',
+    answer: 'Enter the exact standing statures for Person A and Person B in centimeters or feet and inches. The interactive canvas positions both silhouettes side-by-side on a level floor, revealing the true vertical gap and eye-level alignment.',
+  },
+  {
+    question: 'What is the average height difference in couples globally?',
+    answer: 'In heterosexual couples worldwide, the average height difference is approximately 12 to 14 cm (4.7 to 5.5 inches), primarily reflecting biological sexual dimorphism between adult men and women. In same-sex couples, statures are frequently much closer or identical.',
+  },
+  {
+    question: 'How does footwear impact couple height comparisons?',
+    answer: 'Footwear significantly alters perceived height in public. Standard flat shoes or sneakers add 2–3 cm, while high heels often add 7–12 cm, which can completely neutralize or reverse a 10 cm difference between partners.',
+  },
+  {
+    question: 'Can I share our couple height comparison chart?',
+    answer: 'Yes! Click "Save Image" to export a high-resolution PNG silhouette chart with both names, measurements, and ruler ticks, or share the direct URL with pre-filled height parameters.',
+  },
+  {
+    question: 'Are silhouettes gender-locked in the tool?',
+    answer: 'No. HowHeight is completely flexible and gender-neutral. You can choose any silhouette style, name, and color for Person A and Person B.',
+  },
+];
+---
+
+<Layout
+  title={`Couple Height Comparison | Compare Heights Side-by-Side | ${SITE.name}`}
+  description="Compare couple heights side-by-side with an accurate visual canvas. Measure height differences between Person A and Person B in centimeters and feet/inches."
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+>
+  <div class="max-w-[1720px] mx-auto px-2 sm:px-4 lg:px-6 py-4 sm:py-8">
+    <div class="mb-4 px-2">
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Height Comparison', url: '/height-comparison/' },
+          { name: 'Couple Height Comparison', url: '/height-comparison-couple/' },
+        ]}
+      />
+    </div>
+
+    <!-- Header -->
+    <header class="text-center max-w-4xl mx-auto mb-6 sm:mb-8 px-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-rose-50 dark:bg-rose-950/60 text-rose-700 dark:text-rose-300 border border-rose-200/80 dark:border-rose-800 mb-3 shadow-soft-sm">
+        <span class="w-2 h-2 rounded-full bg-rose-600 dark:bg-rose-400 animate-pulse"></span>
+        <span>Side-by-Side Partner Comparison</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Couple Height Comparison
+      </h1>
+      <p class="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-3xl mx-auto">
+        Compare the heights of two partners side-by-side on an accurate visual scale. See eye-level alignment, measure exact height differences in cm and feet/inches, and download shareable comparison charts.
+      </p>
+    </header>
+
+    <!-- Main Comparison Tool Workspace pre-loaded with Person A & Person B -->
+    <div class="mb-14">
+      <ComparisonTool
+        initialItems={coupleDefaultItems}
+        locale={locale}
+      />
+    </div>
+
+    <!-- Educational Guide on Couple Height Gaps -->
+    <article class="max-w-4xl mx-auto space-y-12 text-slate-700 dark:text-slate-300 leading-relaxed">
+      <!-- Section 1: Visualizing Height Differences -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          Visualizing Couple Height Gaps: What Differences Look Like
+        </h2>
+        <p class="mb-6">
+          When standing side-by-side barefoot, different height gaps create distinct physical alignment points between partners:
+        </p>
+
+        <div class="space-y-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div>
+              <span class="font-bold text-slate-900 dark:text-white text-sm block">0 to 5 cm (0 to 2 inches) Difference</span>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
+                Nearly identical eye levels. Foreheads align horizontally. A slight tilt or standard sneakers completely equalizes or inverts the visual height.
+              </p>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-700 dark:text-emerald-300 text-xs font-bold whitespace-nowrap">
+              Eye-Level Match
+            </span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div>
+              <span class="font-bold text-slate-900 dark:text-white text-sm block">10 to 15 cm (4 to 6 inches) Difference</span>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
+                The global median heterosexual couple gap. Shorter partner's eyes align with taller partner's mouth or chin. Natural, comfortable eye contact when standing close.
+              </p>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg bg-blue-100 dark:bg-blue-950 text-blue-700 dark:text-blue-300 text-xs font-bold whitespace-nowrap">
+              Global Average
+            </span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div>
+              <span class="font-bold text-slate-900 dark:text-white text-sm block">20 to 25 cm (8 to 10 inches) Difference</span>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
+                Shorter partner's eye level aligns with taller partner's clavicle/collarbone. Top of shorter partner's head reaches mouth level.
+              </p>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300 text-xs font-bold whitespace-nowrap">
+              Pronounced Contrast
+            </span>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+            <div>
+              <span class="font-bold text-slate-900 dark:text-white text-sm block">30+ cm (12+ inches) Difference</span>
+              <p class="text-xs text-slate-600 dark:text-slate-400 mt-0.5">
+                Shorter partner's head rests below taller partner's shoulder line. Often seen when comparing tall athletes (195+ cm) with average partners.
+              </p>
+            </div>
+            <span class="px-2.5 py-1 rounded-lg bg-rose-100 dark:bg-rose-950 text-rose-700 dark:text-rose-300 text-xs font-bold whitespace-nowrap">
+              High Contrast
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Footwear Adjustments -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          How Shoes and Posture Alter Everyday Perceptions
+        </h2>
+        <p class="mb-4">
+          Couple height differences often appear very different in photographs depending on occasion:
+        </p>
+        <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+          <li><strong>High Heels (7 to 10 cm):</strong> Wearing formal heels can reduce a 15 cm difference down to just 5 cm, shifting alignment from chin-level to direct eye-level.</li>
+          <li><strong>Thick Sole Sneakers &amp; Boots (3 to 5 cm):</strong> Casual boots or chunky athletic shoes add noticeable height that alters perceived standing proportions.</li>
+          <li><strong>Standing Distance &amp; Camera Angle:</strong> Standing even 30 cm closer to the camera lens makes that person appear substantially taller in 2D photographs due to perspective projection.</li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- Related Height Comparison Tools -->
+    <section class="max-w-4xl mx-auto my-16 pt-8 border-t border-slate-200 dark:border-slate-700">
+      <div class="mb-4">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+          Related Height Comparison Tools
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+          Explore additional visualizers and calculation tools.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+        <a
+          href={getSafeInternalUrl('/height-comparison/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Hub
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            Complete measurement guide &amp; multi-category visual library.
+          </span>
+        </a>
+        <a
+          href={getSafeInternalUrl('/height-comparison-calculator/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Calculator
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            Calculate exact mathematical height differences and percentage ratios.
+          </span>
+        </a>
+        <a
+          href={getSafeInternalUrl('/height-comparison-visualizer/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Visualizer
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            2D scale canvas for side-by-side human, celebrity &amp; animal figures.
+          </span>
+        </a>
+        <a
+          href={getSafeInternalUrl('/height-comparison-chart/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Chart
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            Authoritative conversion table in centimeters, meters &amp; feet/inches.
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Curated Couple Matchups -->
+    <div class="max-w-4xl mx-auto my-12">
+      <RelatedComparisons
+        comparisons={featuredComparisons}
+        title="Featured Human &amp; Celebrity Stature Matchups"
+        subtitle="Explore verified real-world stature differences side-by-side."
+        locale={locale}
+      />
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="max-w-4xl mx-auto mb-16">
+      <FAQSection
+        title="Frequently Asked Questions About Couple Height Comparison"
+        faqs={coupleFaqs}
+      />
+    </div>
+  </div>
+</Layout>

@@ -21,13 +21,17 @@ const mainNav = [
 ];
 
 const moreNav = [
+  { label: 'Height Comparison Hub', href: getLocalizedPath('/height-comparison/', locale) },
+  { label: 'Visualizer', href: getLocalizedPath('/height-comparison-visualizer/', locale) },
+  { label: t(locale, 'nav.calculator'), href: getLocalizedPath('/height-comparison-calculator/', locale) },
+  { label: t(locale, 'nav.chart'), href: getLocalizedPath('/height-comparison-chart/', locale) },
+  { label: 'Couple Comparison', href: getLocalizedPath('/height-comparison-couple/', locale) },
+  { label: 'Human Size Comparison', href: getLocalizedPath('/size-comparison/', locale) },
   { label: t(locale, 'nav.plants'), href: getLocalizedPath('/plant-height-comparison/', locale) },
   { label: t(locale, 'nav.sports'), href: getLocalizedPath('/sports-height-comparison/', locale) },
   { label: t(locale, 'nav.apparel'), href: getLocalizedPath('/apparel-height-comparison/', locale) },
   { label: t(locale, 'nav.fictional'), href: getLocalizedPath('/fictional-character-height-comparison/', locale) },
   { label: t(locale, 'nav.people'), href: getLocalizedPath('/people-height-comparison/', locale) },
-  { label: t(locale, 'nav.calculator'), href: getLocalizedPath('/height-difference-calculator/', locale) },
-  { label: t(locale, 'nav.chart'), href: getLocalizedPath('/height-comparison-chart/', locale) },
   { label: t(locale, 'nav.howToUse'), href: getLocalizedPath('/how-to-use/', locale) },
 ];
 ---

@@ -6,6 +6,7 @@ import CategoryIcon from '../../components/brand/CategoryIcon.astro';
 import { SITE } from '../../config/site';
 import { CATEGORIES } from '../../data/categories';
 import { getLocalizedPath, t } from '../../i18n';
+import { getSafeInternalUrl } from '../../lib/internal-linking';
 import type { Locale } from '../../i18n/locales';
 
 interface Props {
@@ -25,14 +26,21 @@ for (let cm = 140; cm <= 215; cm += 2) {
   const exactMeters = (cm / 100).toFixed(2);
   
   let note = '';
-  if (cm === 162) note = 'Global Adult Female Median';
-  else if (cm === 170) note = 'Common Hollywood Actor Stature';
-  else if (cm === 175) note = 'Global Adult Male Median';
-  else if (cm === 178) note = 'US / European Adult Male Median';
-  else if (cm === 183) note = '6\'0" Benchmark (Tall Stature)';
-  else if (cm === 188) note = 'Athletic Forward Stature (6\'2")';
+  if (cm === 140) note = 'Average 10-Year-Old Child / Small Furniture';
+  else if (cm === 150) note = 'Passenger Sedan Car Roofline (150 cm)';
+  else if (cm === 160) note = 'Scarlett Johansson (160 cm) / Riding Horse Withers (160 cm)';
+  else if (cm === 162) note = 'Global Adult Female Median Stature';
+  else if (cm === 166) note = 'Aamir Khan Benchmark (165 cm)';
+  else if (cm === 170) note = 'Tom Cruise (170 cm) / Salman Khan (170 cm)';
+  else if (cm === 174) note = 'Shah Rukh Khan (173 cm) / Rohit Sharma (173 cm)';
+  else if (cm === 176) note = 'Virat Kohli (175 cm) / Standard Adult Human Reference (176 cm)';
+  else if (cm === 178) note = 'MS Dhoni (178 cm) / Zendaya (178 cm) / US Male Median';
+  else if (cm === 180) note = 'Brad Pitt (180 cm)';
+  else if (cm === 182) note = 'Leonardo DiCaprio (183 cm) / 6\'0" Benchmark';
+  else if (cm === 188) note = 'Amitabh Bachchan (188 cm) / Athletic Stature (6\'2")';
+  else if (cm === 196) note = 'Dwayne "The Rock" Johnson (196 cm)';
   else if (cm === 198) note = 'Michael Jordan / NBA Shooting Guard';
-  else if (cm === 210) note = 'Architectural Standard Interior Door';
+  else if (cm === 210) note = 'Architectural Standard Interior Door (210 cm)';
 
   chartRows.push({ cm, meters: exactMeters, feet, inches, formatted, note });
 }
@@ -68,6 +76,7 @@ const faqs = [
       locale={locale}
       items={[
         { name: 'Home', url: '/' },
+        { name: 'Height Comparison', url: '/height-comparison/' },
         { name: 'Height Comparison Chart', url: '/height-comparison-chart/' },
       ]}
     />
@@ -212,6 +221,65 @@ const faqs = [
             The popular height milestone representing approximately the 85th percentile for adult men globally.
           </p>
         </div>
+      </div>
+    </section>
+
+    <!-- Related Height Comparison Tools -->
+    <section class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700 mb-8">
+      <div class="mb-4">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+          Related Height Comparison Tools
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+          Explore additional visual tools and calculators across the HowHeight cluster.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+        <a
+          href={getSafeInternalUrl('/height-comparison/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Hub
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            Complete measurement guide &amp; multi-category visual library.
+          </span>
+        </a>
+        <a
+          href={getSafeInternalUrl('/height-comparison-calculator/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Calculator
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            Calculate exact mathematical height differences and percentage ratios.
+          </span>
+        </a>
+        <a
+          href={getSafeInternalUrl('/height-comparison-visualizer/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Visualizer
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            2D scale canvas for side-by-side human, celebrity &amp; animal figures.
+          </span>
+        </a>
+        <a
+          href={getSafeInternalUrl('/height-comparison-couple/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Couple Height Comparison
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            Partner comparison with eye-level alignment &amp; difference metrics.
+          </span>
+        </a>
       </div>
     </section>
 

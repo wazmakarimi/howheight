@@ -1,0 +1,363 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../ComparisonTool.astro';
+import Breadcrumbs from '../seo/Breadcrumbs.astro';
+import FAQSection from '../seo/FAQSection.astro';
+import RelatedComparisons from '../seo/RelatedComparisons.astro';
+import { SITE } from '../../config/site';
+import { CATEGORIES } from '../../data/categories';
+import { COMPARISONS } from '../../data/comparisons';
+import { getLocalizedPath, t } from '../../i18n';
+import { getSafeInternalUrl } from '../../lib/internal-linking';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/height-comparison/', locale)}`;
+
+// Curated popular comparisons for the hub
+const featuredComparisons = COMPARISONS.slice(0, 6).map((c) => ({
+  slug: c.slug,
+  title: c.title,
+  h1: c.h1,
+  description: c.description,
+  url: getSafeInternalUrl(`/compare/${c.slug}/`, locale),
+  anchorText: c.h1,
+  score: 100,
+  matchType: 'curated' as const,
+  items: c.items.map((item) => ({
+    name: item.id.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+    heightCm: item.id === 'virat-kohli' ? 175 : item.id === 'ms-dhoni' ? 178 : item.id === 'dwayne-johnson' ? 196 : item.id === 'horse' ? 160 : item.id === 'door' ? 210 : 176,
+  })),
+}));
+
+const faqs = [
+  {
+    question: 'What is a height comparison and how does it work?',
+    answer: 'A height comparison is a visual and mathematical method of evaluating the physical stature of two or more entities—such as people, celebrities, animals, or objects—against a shared horizontal floor baseline. HowHeight uses a standardized pixel-per-centimeter scale to ensure every silhouette maintains accurate real-world proportions without optical distortion.',
+  },
+  {
+    question: 'How do I compare two or more heights on HowHeight?',
+    answer: 'Select any preset figure from our curated database of celebrities, animals, and everyday objects, or enter custom names and heights using centimeters or feet and inches. The interactive canvas automatically aligns all figures on the floor, calculates the height difference, and lets you drag and reorder figures side-by-side.',
+  },
+  {
+    question: 'Can I compare heights in both metric (cm, m) and imperial (ft, in) units?',
+    answer: 'Yes. HowHeight supports bidirectional real-time conversion between centimeters, meters, and feet/inches (e.g., 178 cm = 1.78 m = 5 ft 10.1 in). Rulers on the canvas update instantly when switching units.',
+  },
+  {
+    question: 'How does animal height measurement differ from human height measurement?',
+    answer: 'Humans are measured from the floor to the top of the skull (vertex) in an erect standing posture. Most quadrupeds (like horses, dogs, and big cats) are measured to the highest point of the shoulder blades (withers) rather than the head, because head elevation varies constantly with movement.',
+  },
+  {
+    question: 'What does "Hikaku" mean in the context of height comparison?',
+    answer: '"Hikaku" (比較) is the Japanese word for "comparison." It became globally popular through Japanese silhouette comparison charts used by fans to compare anime characters, K-pop idols, and couples side-by-side. HowHeight provides the same intuitive side-by-side silhouette format with verified anthropometric data.',
+  },
+  {
+    question: 'How do body posture, shoes, and poses affect visual height comparisons?',
+    answer: 'Real-world photos are influenced by spinal posture (slouching vs standing erect), shoe sole thickness (heels or sneakers adding 2–8 cm), head tilt, and camera perspective (angles and lens focal length). HowHeight eliminates these confounding variables by rendering figures on an orthographic 2D plane with feet firmly planted on a zero baseline.',
+  },
+  {
+    question: 'Does HowHeight use scalable vector graphics (SVG) for comparisons?',
+    answer: 'Yes. All silhouettes and rulers are rendered using mathematically defined vector paths (SVGs). This ensures that figures scale smoothly without blurriness or pixelation at any zoom level, while the high-resolution export tool produces crisp PNG downloads for sharing.',
+  },
+  {
+    question: 'Can I download or share my height comparison chart?',
+    answer: 'Yes. Click the "Save Image" button on the canvas to download a high-resolution PNG chart complete with measurement rulers, entity labels, and floor baseline, or share your custom comparison via direct URL parameters.',
+  },
+];
+---
+
+<Layout
+  title={`Height Comparison | Compare Heights Online Accurately | ${SITE.name}`}
+  description="Accurately compare heights of humans, celebrities, animals, and objects side-by-side on an aligned floor baseline. Interactive visual scale in cm, meters, and feet/inches."
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+>
+  <div class="max-w-[1720px] mx-auto px-2 sm:px-4 lg:px-6 py-4 sm:py-8">
+    <div class="mb-4 px-2">
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Height Comparison', url: '/height-comparison/' },
+        ]}
+      />
+    </div>
+
+    <!-- Hero Header -->
+    <header class="text-center max-w-4xl mx-auto mb-6 sm:mb-8 px-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-blue-300 border border-brand-200/80 dark:border-brand-800 mb-3 shadow-soft-sm">
+        <span class="w-2 h-2 rounded-full bg-brand-600 dark:bg-blue-400 animate-pulse"></span>
+        <span>Universal Height &amp; Stature Comparison Hub</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Height Comparison: The Complete Visual &amp; Measurement Guide
+      </h1>
+      <p class="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-3xl mx-auto">
+        Compare the physical heights of people, celebrities, animals, and everyday objects side-by-side with true proportional scale, calibrated metric and imperial rulers, and interactive 2D visualization.
+      </p>
+    </header>
+
+    <!-- Main Interactive Comparison Tool -->
+    <div class="mb-14">
+      <ComparisonTool locale={locale} />
+    </div>
+
+    <!-- Cluster Navigation Quick Bar -->
+    <section class="mb-16 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-8 shadow-soft">
+      <div class="text-center max-w-2xl mx-auto mb-6">
+        <span class="text-xs font-bold uppercase tracking-widest text-brand-600 dark:text-blue-400">
+          Topical Comparison Tools
+        </span>
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mt-1">
+          Explore Specialized Height Comparison Tools
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+          Choose the right comparison mode tailored to your specific search intent.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <a
+          href={getSafeInternalUrl('/height-comparison-calculator/', locale)}
+          class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group flex flex-col justify-between"
+        >
+          <div>
+            <div class="w-9 h-9 rounded-xl bg-blue-100 dark:bg-blue-900/60 text-blue-600 dark:text-blue-300 flex items-center justify-center font-bold text-sm mb-3">
+              📐
+            </div>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors">
+              Height Comparison Calculator
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
+              Calculate exact absolute differences, percentage ratios, and comparative statements in cm, m, and ft/in.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-brand-600 dark:text-blue-400 mt-3 inline-flex items-center gap-1">
+            Open Calculator &rarr;
+          </span>
+        </a>
+
+        <a
+          href={getSafeInternalUrl('/height-comparison-visualizer/', locale)}
+          class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group flex flex-col justify-between"
+        >
+          <div>
+            <div class="w-9 h-9 rounded-xl bg-purple-100 dark:bg-purple-900/60 text-purple-600 dark:text-purple-300 flex items-center justify-center font-bold text-sm mb-3">
+              👁️
+            </div>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors">
+              Height Comparison Visualizer
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
+              Full-featured 2D visual canvas for side-by-side human, animal, celebrity, and object comparisons.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-brand-600 dark:text-blue-400 mt-3 inline-flex items-center gap-1">
+            Open Visualizer &rarr;
+          </span>
+        </a>
+
+        <a
+          href={getSafeInternalUrl('/height-comparison-chart/', locale)}
+          class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group flex flex-col justify-between"
+        >
+          <div>
+            <div class="w-9 h-9 rounded-xl bg-emerald-100 dark:bg-emerald-900/60 text-emerald-600 dark:text-emerald-300 flex items-center justify-center font-bold text-sm mb-3">
+              📊
+            </div>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors">
+              Height Comparison Chart
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
+              Authoritative stature conversion table mapping centimeters, meters, and feet/inches to verified entities.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-brand-600 dark:text-blue-400 mt-3 inline-flex items-center gap-1">
+            View Chart Table &rarr;
+          </span>
+        </a>
+
+        <a
+          href={getSafeInternalUrl('/height-comparison-couple/', locale)}
+          class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group flex flex-col justify-between"
+        >
+          <div>
+            <div class="w-9 h-9 rounded-xl bg-rose-100 dark:bg-rose-900/60 text-rose-600 dark:text-rose-300 flex items-center justify-center font-bold text-sm mb-3">
+              👥
+            </div>
+            <h3 class="font-bold text-sm sm:text-base text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors">
+              Couple Height Comparison
+            </h3>
+            <p class="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
+              Gender-neutral partner comparison with eye-level alignment, difference metrics, and shareable graphics.
+            </p>
+          </div>
+          <span class="text-xs font-semibold text-brand-600 dark:text-blue-400 mt-3 inline-flex items-center gap-1">
+            Compare Couples &rarr;
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- In-Depth Content Guide -->
+    <article class="max-w-4xl mx-auto space-y-12 text-slate-700 dark:text-slate-300 leading-relaxed">
+      <!-- Section 1: What is Height Comparison? -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          What is Height Comparison?
+        </h2>
+        <p class="mb-4">
+          Height comparison is the systematic visual and quantitative assessment of physical stature across biological organisms, manufactured structures, and everyday objects. In anthropometry, human stature is defined as the distance from the soles of the feet to the highest point of the skull (vertex) when standing erect in standard anatomical position.
+        </p>
+        <p class="mb-4">
+          Evaluating height purely from photographs or isolated measurements is notoriously misleading. Lens focal length, camera elevation, perspective foreshortening, and background depth can make shorter individuals appear taller or make substantial differences seem imperceptible. A standardized height comparison eliminates these perceptual distortions by rendering all entities on an orthographic 2D projection aligned to an identical horizontal floor plane.
+        </p>
+        <div class="p-4 rounded-2xl bg-brand-50/60 dark:bg-brand-950/30 border border-brand-200/60 dark:border-brand-800 text-xs sm:text-sm text-brand-900 dark:text-blue-200">
+          <strong>Key Principle:</strong> True height comparison requires three constants: a shared horizontal baseline (0 cm), a uniform linear scale factor (pixels per centimeter), and uncompressed aspect ratios.
+        </div>
+      </section>
+
+      <!-- Section 2: How Height Comparison Works -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          How the HowHeight Visual Engine Works
+        </h2>
+        <p class="mb-4">
+          The HowHeight comparison workspace is powered by an interactive vector graphics pipeline calibrated to real-world measurements:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 my-6">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">1. Calibrated Linear Scaling</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400">
+              The canvas calculates a dynamic scale factor. Whether an entity is a 60 cm domestic dog or a 320 cm bull elephant, every centimeter translates to the exact same vertical pixel count.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">2. Zero Baseline Alignment</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400">
+              All entities rest on a shared ground plane. Feet, paws, wheels, and bases touch the floor line, eliminating the elevation discrepancies common in casual photo collages.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">3. Vector Silhouette Precision</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400">
+              Figures are rendered from vector paths (SVGs) rather than low-resolution bitmaps. Silhouettes scale infinitely without pixelation, blurriness, or aspect ratio distortion across mobile, tablet, and desktop screens.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">4. Dual-Unit Precision</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400">
+              Rulers and data indicators instantly toggle between metric (centimeters, meters) and imperial (feet, inches) units using international conversion standards (1 inch = 2.54 cm).
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: The "Hikaku" Height Comparison Concept -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-indigo-50 dark:bg-indigo-950/60 text-indigo-700 dark:text-indigo-300 border border-indigo-200/80 dark:border-indigo-800 mb-3">
+          <span>Cultural &amp; Global Context</span>
+        </div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          The "Hikaku" Height Comparison Concept Explained
+        </h2>
+        <p class="mb-4">
+          Online search queries frequently combine the term <strong>"Hikaku"</strong> with height comparison. <em>Hikaku</em> (比較) is the Japanese word for "comparison." The term gained worldwide prominence through Japanese web culture and viral social media trends, where users created minimalist, color-coded human silhouettes side-by-side to compare the statures of favorite anime characters, J-pop and K-pop idols, fictional couples, and prospective partners.
+        </p>
+        <p class="mb-4">
+          What made the Hikaku format so compelling was its simplicity: by stripping away clothing, complex textures, and distracting backgrounds, viewers could appreciate pure geometric proportions and vertical differences instantly.
+        </p>
+        <p>
+          HowHeight builds on this beloved concept by providing an authentic, high-precision side-by-side silhouette workspace that expands far beyond human figures—incorporating verified celebrities, animals, vehicles, architectural elements, and anime figures into a single unified scale.
+        </p>
+      </section>
+
+      <!-- Section 4: Posture, Shoes & Poses -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          Height Comparison Poses: Why Posture and Footwear Matter
+        </h2>
+        <p class="mb-4">
+          When people compare heights in daily life, real-world variables frequently distort perceived differences. Understanding how body posture affects visual comparisons is essential for accurate evaluation:
+        </p>
+        <div class="space-y-4 my-6">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm">1. Standing Posture &amp; Spinal Compression</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+              A relaxed or slouched stance can reduce standing height by 2 to 4 cm (0.8 to 1.6 inches). Furthermore, diurnal spinal disc compression causes humans to stand approximately 1 to 2 cm taller in the morning immediately after waking than in the evening.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm">2. Footwear &amp; Insole Elevation</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+              Footwear substantially alters apparent height. Standard athletic sneakers add 2.5 to 3.5 cm (1 to 1.4 in); boots frequently add 3 to 5 cm (1.2 to 2 in); and high heels can elevate posture by 7 to 12 cm (2.8 to 4.7 in). Scientific height measurement always requires barefoot measurement on a flat stadiometer.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm">3. Head Tilt &amp; The Frankfort Horizontal Plane</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+              In medical anthropometry, stature is measured with the head oriented in the <em>Frankfort horizontal plane</em> (a line connecting the lower border of the eye socket to the upper border of the ear canal is parallel to the ground). Tilting the head back or forward artificially lowers the measured vertex.
+            </p>
+          </div>
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <h3 class="font-bold text-slate-900 dark:text-white text-sm">4. Animal vs. Human Measurement Baselines</h3>
+            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">
+              Four-legged animals cannot be measured to the top of the head because their head position fluctuates continuously. Horses, dogs, big cats, and cattle are measured to the <strong>withers</strong>—the highest fixed point of the thoracic vertebrae at the base of the neck. When comparing a 160 cm horse to a 176 cm person, remember the horse's withers are level with human eye height, but its raised head reaches well over 220 cm.
+            </p>
+          </div>
+        </div>
+        <p class="text-xs text-slate-500 dark:text-slate-400 italic">
+          *Note: In HowHeight, visual silhouettes represent standard anatomical postures with feet grounded on zero. Visual posture modifications do not alter the authoritative underlying metric measurement.
+        </p>
+      </section>
+
+      <!-- Section 5: Multi-Category Coverage -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          Multi-Category Height Comparison Coverage
+        </h2>
+        <p class="mb-6">
+          Explore dedicated directories for every major category of height comparison on HowHeight:
+        </p>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+          {CATEGORIES.map((cat) => (
+            <a
+              href={getSafeInternalUrl(cat.route, locale)}
+              class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all text-center group"
+            >
+              <span class="block font-bold text-xs sm:text-sm text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 transition-colors">
+                {cat.name}
+              </span>
+              <span class="text-[11px] text-slate-500 dark:text-slate-400">
+                {cat.count} verified figures
+              </span>
+            </a>
+          ))}
+        </div>
+      </section>
+    </article>
+
+    <!-- Curated Programmatic Comparisons -->
+    <div class="max-w-4xl mx-auto my-12">
+      <RelatedComparisons
+        comparisons={featuredComparisons}
+        title="Popular Height Comparison Matchups"
+        subtitle="Explore verified head-to-head stature comparisons with accurate mathematical scale."
+        locale={locale}
+      />
+    </div>
+
+    <!-- FAQ Section with Schema.org JSON-LD -->
+    <div class="max-w-4xl mx-auto mb-16">
+      <FAQSection
+        title="Frequently Asked Questions About Height Comparison"
+        faqs={faqs}
+      />
+    </div>
+  </div>
+</Layout>

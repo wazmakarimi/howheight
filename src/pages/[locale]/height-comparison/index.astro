@@ -1,0 +1,14 @@
+---
+import HeightComparisonHubPage from '../../../components/pages/HeightComparisonHubPage.astro';
+import { SUPPORTED_LOCALES, type Locale } from '../../../i18n/locales';
+
+export function getStaticPaths() {
+  return SUPPORTED_LOCALES.filter((l) => l !== 'en').map((locale) => ({
+    params: { locale },
+  }));
+}
+
+const { locale } = Astro.params as { locale: Locale };
+---
+
+<HeightComparisonHubPage locale={locale} />

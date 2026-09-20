@@ -1,0 +1,234 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTool from '../ComparisonTool.astro';
+import Breadcrumbs from '../seo/Breadcrumbs.astro';
+import FAQSection from '../seo/FAQSection.astro';
+import RelatedComparisons from '../seo/RelatedComparisons.astro';
+import { SITE } from '../../config/site';
+import { COMPARISONS } from '../../data/comparisons';
+import { getLocalizedPath, t } from '../../i18n';
+import { getSafeInternalUrl } from '../../lib/internal-linking';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/size-comparison/', locale)}`;
+
+const featuredComparisons = COMPARISONS.filter((c) => 
+  c.slug.includes('human') || c.slug.includes('male-vs-female') || c.slug.includes('elephant')
+).map((c) => ({
+  slug: c.slug,
+  title: c.title,
+  h1: c.h1,
+  description: c.description,
+  url: getSafeInternalUrl(`/compare/${c.slug}/`, locale),
+  anchorText: c.h1,
+  score: 100,
+  matchType: 'curated' as const,
+  items: c.items.map((item) => ({
+    name: item.id.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase()),
+    heightCm: item.id === 'elephant' ? 320 : item.id === 'horse' ? 160 : item.id === 'door' ? 210 : item.id === 'female' ? 162 : 176,
+  })),
+}));
+
+const sizeFaqs = [
+  {
+    question: 'What is human size comparison and why is it useful?',
+    answer: 'Human size comparison is the visual and numerical analysis of human body stature against other individuals, physical objects, and animals. It provides an immediate sense of ergonomic clearance, spatial scale, and biological diversity that numbers alone cannot communicate.',
+  },
+  {
+    question: 'How does human size compare across different populations globally?',
+    answer: 'According to extensive global health studies (such as the NCD Risk Factor Collaboration), adult male height varies from an average of ~160 cm in shorter nations to ~184 cm in the Netherlands and Dinaric Alps. Adult female height ranges globally between ~150 cm and ~170 cm.',
+  },
+  {
+    question: 'Why does a 10 cm (4 inch) height difference look so significant in person?',
+    answer: 'In humans, a 10 cm vertical difference translates to roughly half the height of a human head. When standing side-by-side, this places the shorter person\'s eye level near the taller person\'s mouth or chin, creating an undeniable psychological and visual contrast.',
+  },
+  {
+    question: 'How do everyday objects provide scale for human height?',
+    answer: 'Common architectural standards are engineered directly around human anatomy. A standard interior door (210 cm / 6\'11") provides headroom clearance for 99% of people, while passenger cars (145–155 cm) typically reach around shoulder or chest height on standing adults.',
+  },
+  {
+    question: 'How does human height compare to four-legged animals?',
+    answer: 'Quadrupeds are measured at the shoulder (withers), not the head. A 160 cm riding horse has its back and shoulder level with an adult human\'s eye height, but its elevated neck and head reach 220–240 cm, making it visually dominate the human.',
+  },
+];
+---
+
+<Layout
+  title={`Human Size Comparison | Compare Human Stature & Scale | ${SITE.name}`}
+  description="Compare human size and stature against other people, everyday objects, and animals. Accurate side-by-side scale in centimeters, meters, and feet/inches."
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+>
+  <div class="max-w-[1720px] mx-auto px-2 sm:px-4 lg:px-6 py-4 sm:py-8">
+    <div class="mb-4 px-2">
+      <Breadcrumbs
+        locale={locale}
+        items={[
+          { name: 'Home', url: '/' },
+          { name: 'Height Comparison', url: '/height-comparison/' },
+          { name: 'Human Size Comparison', url: '/size-comparison/' },
+        ]}
+      />
+    </div>
+
+    <!-- Header -->
+    <header class="text-center max-w-4xl mx-auto mb-6 sm:mb-8 px-2">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 border border-blue-200/80 dark:border-blue-800 mb-3 shadow-soft-sm">
+        <span class="w-2 h-2 rounded-full bg-blue-600 dark:bg-blue-400 animate-pulse"></span>
+        <span>Human Anthropometry &amp; Scale Guide</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Human Size Comparison
+      </h1>
+      <p class="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-3xl mx-auto">
+        Analyze human physical stature side-by-side with other people, everyday objects, and animals. Explore ergonomic dimensions and proportional scaling on a true floor baseline.
+      </p>
+    </header>
+
+    <!-- Main Comparison Tool Workspace -->
+    <div class="mb-14">
+      <ComparisonTool locale={locale} />
+    </div>
+
+    <!-- Educational Sections -->
+    <article class="max-w-4xl mx-auto space-y-12 text-slate-700 dark:text-slate-300 leading-relaxed">
+      <!-- Section 1: Human-to-Human Comparison -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          Human-to-Human Size Comparison
+        </h2>
+        <p class="mb-4">
+          Human stature follows a normal Gaussian distribution across biological populations. Globally, the median standing height for adult males is approximately <strong>175 cm (5 ft 9 in)</strong>, while the median for adult females is approximately <strong>162 cm (5 ft 4 in)</strong>. This 13–14 cm difference reflects sexual dimorphism driven by puberty timing and hormonal differences.
+        </p>
+        <p class="mb-4">
+          When comparing humans of different statures:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 my-4 text-xs sm:text-sm">
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <span class="font-bold text-slate-900 dark:text-white block mb-1">5 cm (2 in) Difference</span>
+            <span class="text-slate-600 dark:text-slate-400">Noticeable at eye level; forehead aligns with eye line. Easily equalized by footwear choice.</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <span class="font-bold text-slate-900 dark:text-white block mb-1">15 cm (6 in) Difference</span>
+            <span class="text-slate-600 dark:text-slate-400">Eye-to-mouth/chin alignment. Substantial visual stature contrast in standing posture.</span>
+          </div>
+          <div class="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
+            <span class="font-bold text-slate-900 dark:text-white block mb-1">25+ cm (10+ in) Difference</span>
+            <span class="text-slate-600 dark:text-slate-400">Taller person's shoulder reaches eye level of shorter person. Pronounced vertical disparity.</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 2: Human-to-Object Comparison -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          Human-to-Object Size Comparison
+        </h2>
+        <p class="mb-4">
+          The manufactured world is built around the 5th to 95th percentiles of adult human dimensions. Understanding how the human silhouette scales against architectural items provides grounded spatial context:
+        </p>
+        <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 list-disc list-inside">
+          <li><strong>Standard Interior Door (210 cm / 6'11"):</strong> Designed to allow 99% of adults to walk through without ducking, providing an average 34 cm of head clearance.</li>
+          <li><strong>Kitchen Countertop (90 cm / 35.4 in):</strong> Positioned at standard elbow height to minimize lumbar strain during food preparation.</li>
+          <li><strong>Passenger Sedan (145–150 cm / 4'9"–5'0"):</strong> Roofline sits near shoulder level for an average adult, allowing clear sightlines over the vehicle.</li>
+          <li><strong>Standard Dining Table (75 cm / 29.5 in):</strong> Aligns with mid-thigh on standing adults, pairing with 45 cm seat pans.</li>
+        </ul>
+      </section>
+
+      <!-- Section 3: Human-to-Animal Comparison -->
+      <section class="bg-white dark:bg-slate-800/80 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
+          Human-to-Animal Size Comparison
+        </h2>
+        <p class="mb-4">
+          Comparing bipedal humans against quadrupeds requires understanding measurement conventions. Animals are measured at the <strong>withers</strong> (top of the shoulder blade):
+        </p>
+        <p class="mb-4">
+          While a riding horse (160 cm) appears slightly lower than an adult male (176 cm) on paper, its torso, muscular neck, and elevated head (over 220 cm) give it roughly 5 to 7 times the volume and mass of a human. Similarly, a 320 cm African elephant stands nearly double the vertical stature of a human, but weighs up to 6,000 kg (over 70 times an average person).
+        </p>
+      </section>
+    </article>
+
+    <!-- Related Height Comparison Tools -->
+    <section class="max-w-4xl mx-auto my-16 pt-8 border-t border-slate-200 dark:border-slate-700">
+      <div class="mb-4">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+          Related Height Comparison Tools
+        </h2>
+        <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
+          Explore additional visualizers and calculation tools.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+        <a
+          href={getSafeInternalUrl('/height-comparison/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Hub
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            Complete measurement guide &amp; multi-category visual library.
+          </span>
+        </a>
+        <a
+          href={getSafeInternalUrl('/height-comparison-calculator/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Calculator
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            Calculate exact mathematical height differences and percentage ratios.
+          </span>
+        </a>
+        <a
+          href={getSafeInternalUrl('/height-comparison-visualizer/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Height Comparison Visualizer
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            2D scale canvas for side-by-side human, celebrity &amp; animal figures.
+          </span>
+        </a>
+        <a
+          href={getSafeInternalUrl('/height-comparison-couple/', locale)}
+          class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
+        >
+          <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
+            Couple Height Comparison
+          </span>
+          <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
+            Partner comparison with eye-level alignment &amp; difference metrics.
+          </span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Curated Human Matchups -->
+    <div class="max-w-4xl mx-auto my-12">
+      <RelatedComparisons
+        comparisons={featuredComparisons}
+        title="Curated Human Scale Comparisons"
+        subtitle="Explore verified head-to-head comparisons illustrating human scale."
+        locale={locale}
+      />
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="max-w-4xl mx-auto mb-16">
+      <FAQSection
+        title="Frequently Asked Questions About Human Size Comparison"
+        faqs={sizeFaqs}
+      />
+    </div>
+  </div>
+</Layout>

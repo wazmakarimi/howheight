@@ -30,10 +30,13 @@ const companyLinks = [
 ];
 
 const utilityLinks = [
-  { label: t(locale, 'nav.howToUse'), href: getLocalizedPath('/how-to-use/', locale) },
-  { label: t(locale, 'nav.calculator'), href: getLocalizedPath('/height-difference-calculator/', locale) },
+  { label: 'Height Comparison Hub', href: getLocalizedPath('/height-comparison/', locale) },
+  { label: 'Comparison Visualizer', href: getLocalizedPath('/height-comparison-visualizer/', locale) },
+  { label: t(locale, 'nav.calculator'), href: getLocalizedPath('/height-comparison-calculator/', locale) },
   { label: t(locale, 'nav.chart'), href: getLocalizedPath('/height-comparison-chart/', locale) },
-  { label: t(locale, 'footer.faq'), href: `${getLocalizedPath('/', locale)}#faq` },
+  { label: 'Couple Comparison', href: getLocalizedPath('/height-comparison-couple/', locale) },
+  { label: 'Human Size Comparison', href: getLocalizedPath('/size-comparison/', locale) },
+  { label: t(locale, 'nav.howToUse'), href: getLocalizedPath('/how-to-use/', locale) },
 ];
 ---
 

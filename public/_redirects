@@ -15,3 +15,7 @@ http://howheight.org/*        https://howheight.org/:splat  301!
 /celebrity-height             /celebrity-height-comparison/  301
 /fictional-character-height/  /fictional-character-height-comparison/  301
 /fictional-character-height   /fictional-character-height-comparison/  301
+
+# Calculator Alias Redirects (Consolidate into canonical comparison calculator)
+/height-difference-calculator/  /height-comparison-calculator/  301
+/height-difference-calculator   /height-comparison-calculator/  301
