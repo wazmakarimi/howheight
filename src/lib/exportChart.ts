@@ -30,9 +30,17 @@ async function createEntityImage(
   totalWidthPx: number,
   totalHeightPx: number
 ): Promise<HTMLImageElement> {
-  if (asset.assetType === 'png' || (asset as any).extension === 'png') {
+  const isPng = Boolean(
+    (asset.filename && asset.filename.endsWith('.png')) ||
+    (asset.publicPath && asset.publicPath.endsWith('.png')) ||
+    asset.assetType === 'png' ||
+    (asset as any).extension === 'png'
+  );
+
+  if (isPng) {
     return new Promise((resolve, reject) => {
       const img = new Image();
+      img.crossOrigin = 'anonymous';
       img.onload = () => resolve(img);
       img.onerror = (err) => reject(err);
       img.src = asset.publicPath;
@@ -91,8 +99,83 @@ export async function downloadChartAsPng(
   if (!items || items.length === 0) return false;
 
   const dpr = 2; // High-resolution export
-  const width = Math.max(900, items.length * 160 + 220);
   const height = 640;
+  const chartTop = 110;
+  const chartBottom = height - 90;
+  const chartVisualHeight = chartBottom - chartTop;
+  const { scale, rulerMaxCm } = calculateScale(items, chartVisualHeight);
+
+  const rulerLeft = 40;
+  const rulerWidth = 70;
+  const chartStartX = rulerLeft + rulerWidth + 20;
+
+  // Precompute render metrics for each entity with the exact visual scale
+  const metrics = items.map((item) => {
+    const asset = resolveAsset(item.assetId || (item as any).modelType || item.id, item.category);
+    const render = renderEntitySvg(item, scale);
+    return {
+      item,
+      asset,
+      ...render,
+    };
+  });
+
+  const hasManualPositions = items.some((item) => typeof item.positionX === 'number');
+  const centers: number[] = [];
+  let requiredWidth = 960;
+
+  if (items.length === 1) {
+    const w = metrics[0].totalSvgWidthPx;
+    requiredWidth = Math.max(960, Math.round(chartStartX + w + 160));
+    const available = (requiredWidth - 40) - chartStartX;
+    centers.push(chartStartX + available / 2);
+  } else if (hasManualPositions) {
+    const liveBounds = metrics.map((m) => {
+      const liveCenterX = (m.item.positionX ?? 50) + 70;
+      return {
+        liveCenterX,
+        left: liveCenterX - m.totalSvgWidthPx / 2,
+        right: liveCenterX + m.totalSvgWidthPx / 2,
+      };
+    });
+
+    const minLiveLeft = Math.min(...liveBounds.map((b) => b.left));
+    const maxLiveRight = Math.max(...liveBounds.map((b) => b.right));
+    const offset = (chartStartX + 30) - minLiveLeft;
+    const finalRightEdge = maxLiveRight + offset;
+    requiredWidth = Math.max(960, Math.round(finalRightEdge + 60));
+
+    metrics.forEach((_m, i) => {
+      centers.push(liveBounds[i].liveCenterX + offset);
+    });
+  } else {
+    // Auto layout: distribute entities based on actual physical widths and comfortable spacing
+    const minGap = Math.max(36, 70 - items.length * 4);
+    const baseCenters: number[] = [];
+    let currentLeft = chartStartX + 30;
+
+    for (let i = 0; i < metrics.length; i++) {
+      const w = metrics[i].totalSvgWidthPx;
+      const c = currentLeft + w / 2;
+      baseCenters.push(c);
+      currentLeft = c + w / 2 + minGap;
+    }
+
+    const lastIdx = metrics.length - 1;
+    const lastRight = baseCenters[lastIdx] + metrics[lastIdx].totalSvgWidthPx / 2;
+    requiredWidth = Math.max(960, Math.round(lastRight + 60));
+    const finalChartEndX = requiredWidth - 40;
+    const extraSpace = Math.max(0, (finalChartEndX - 30) - lastRight);
+    const bonusPerItem = extraSpace / (items.length + 1);
+
+    baseCenters.forEach((c, i) => {
+      centers.push(c + bonusPerItem * (i + 1));
+    });
+  }
+
+  const width = requiredWidth;
+  const chartEndX = width - 40;
+  const availableWidth = chartEndX - chartStartX;
 
   const canvas = document.createElement('canvas');
   canvas.width = width * dpr;
@@ -121,18 +204,7 @@ export async function downloadChartAsPng(
   ctx.font = '14px Inter, system-ui, sans-serif';
   ctx.fillText('Human, Celebrity, Animal & Object Comparison • Accurate Scale', 40, 76);
 
-  // 3. Chart Dimensions & Baseline
-  const chartTop = 110;
-  const chartBottom = height - 90;
-  const chartVisualHeight = chartBottom - chartTop;
-  const { scale, rulerMaxCm } = calculateScale(items, chartVisualHeight);
-
-  const rulerLeft = 40;
-  const rulerWidth = 70;
-  const chartStartX = rulerLeft + rulerWidth + 20;
-  const chartEndX = width - 40;
-
-  // 4. Draw Horizontal Grid Lines and Ruler Ticks
+  // 3. Draw Horizontal Grid Lines and Ruler Ticks
   const ticks = generateRulerTicks(rulerMaxCm, rulerUnit);
 
   ctx.lineWidth = 1;
@@ -164,7 +236,7 @@ export async function downloadChartAsPng(
     }
   });
 
-  // 5. Baseline (Floor)
+  // 4. Baseline (Floor)
   ctx.strokeStyle = '#334155';
   ctx.lineWidth = 3;
   ctx.beginPath();
@@ -177,34 +249,10 @@ export async function downloadChartAsPng(
   ctx.textAlign = 'left';
   ctx.fillText('FLOOR (0 cm)', rulerLeft, chartBottom + 20);
 
-  // 6. Draw Entities (Figures, Animals, Objects)
-  const availableWidth = chartEndX - chartStartX;
-  const itemSpacing = availableWidth / (items.length + 1);
-
-  const hasManualPositions = items.some((item) => typeof item.positionX === 'number');
-  let getCenterX: (item: ComparisonItem, index: number) => number;
-
-  if (items.length === 1) {
-    getCenterX = () => chartStartX + availableWidth / 2;
-  } else if (hasManualPositions) {
-    const minX = Math.min(...items.map((it) => it.positionX ?? 0));
-    const maxX = Math.max(...items.map((it) => it.positionX ?? 0));
-    const span = maxX - minX;
-    getCenterX = (item, index) => {
-      if (typeof item.positionX === 'number' && span > 0) {
-        return chartStartX + 60 + ((item.positionX - minX) / span) * (availableWidth - 120);
-      }
-      return chartStartX + (index + 1) * itemSpacing;
-    };
-  } else {
-    getCenterX = (_item, index) => chartStartX + (index + 1) * itemSpacing;
-  }
-
-  for (let i = 0; i < items.length; i++) {
-    const item = items[i];
-    const asset = resolveAsset(item.assetId || (item as any).modelType || item.id, item.category);
-    const { totalSvgHeightPx, totalSvgWidthPx, measurementHeightPx, groundOffsetPx } = renderEntitySvg(item, scale);
-    const centerX = getCenterX(item, i);
+  // 5. Draw Entities (Figures, Animals, Objects)
+  for (let i = 0; i < metrics.length; i++) {
+    const { item, asset, totalSvgHeightPx, totalSvgWidthPx, measurementHeightPx, groundOffsetPx } = metrics[i];
+    const centerX = centers[i];
     const modelLeft = centerX - totalSvgWidthPx / 2;
     const modelTop = chartBottom - totalSvgHeightPx + groundOffsetPx;
 
