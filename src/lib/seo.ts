@@ -98,10 +98,19 @@ export function buildBlogPostingSchema(article: {
   canonicalUrl: string;
   publishedDate: string;
   updatedDate: string;
-  author: { name: string; role?: string };
+  author: {
+    name: string;
+    role?: string;
+    url?: string;
+    sameAs?: string[];
+  };
   image?: string;
   category?: string;
 }) {
+  const authorUrl = article.author.url
+    ? (article.author.url.startsWith('http') ? article.author.url : `${SITE.siteUrl}${article.author.url}`)
+    : `${SITE.siteUrl}/about/`;
+
   return {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
@@ -118,6 +127,13 @@ export function buildBlogPostingSchema(article: {
       '@type': 'Person',
       name: article.author.name,
       jobTitle: article.author.role,
+      url: authorUrl,
+      ...(article.author.sameAs && article.author.sameAs.length > 0 ? { sameAs: article.author.sameAs } : {}),
+      worksFor: {
+        '@type': 'Organization',
+        name: 'FK Digital Media',
+        url: SITE.siteUrl,
+      },
     },
     publisher: {
       '@type': 'Organization',

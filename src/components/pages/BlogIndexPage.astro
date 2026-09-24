@@ -129,7 +129,12 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
                   {featuredArticle.author.name.charAt(0)}
                 </div>
                 <div>
-                  <div class="text-sm font-bold text-white">{featuredArticle.author.name}</div>
+                  <a
+                    href={featuredArticle.author.url ? getSafeInternalUrl(featuredArticle.author.url, locale) : getSafeInternalUrl('/about/', locale)}
+                    class="text-sm font-bold text-white hover:text-brand-300 transition-colors block"
+                  >
+                    {featuredArticle.author.name}
+                  </a>
                   <div class="text-xs text-slate-400">{featuredArticle.author.role}</div>
                 </div>
               </div>
@@ -189,7 +194,12 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
 
               <div class="pt-4 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between">
                 <div class="text-xs text-slate-500 dark:text-slate-400">
-                  <span class="font-medium text-slate-700 dark:text-slate-300 block">{article.author.name}</span>
+                  <a
+                    href={article.author.url ? getSafeInternalUrl(article.author.url, locale) : getSafeInternalUrl('/about/', locale)}
+                    class="font-medium text-slate-700 dark:text-slate-300 hover:text-brand-600 dark:hover:text-blue-400 transition-colors block"
+                  >
+                    {article.author.name}
+                  </a>
                   <span class="text-[11px] text-slate-400">{new Date(article.publishedDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                 </div>
 

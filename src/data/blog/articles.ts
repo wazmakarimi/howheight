@@ -1,4 +1,15 @@
-import type { BlogArticle, BlogCategoryMeta } from './types.ts';
+import type { BlogArticle, BlogAuthor, BlogCategoryMeta } from './types.ts';
+
+export const SITE_AUTHOR: BlogAuthor = {
+  name: 'Firoz Khan',
+  role: 'Full Stack Developer',
+  bio: 'Full Stack Developer and founder of FK Digital Media, building and maintaining HowHeight.org with a focus on mathematical scale modeling and accessible web tools.',
+  url: '/about/',
+  sameAs: [
+    'https://www.linkedin.com/in/firoz-khan-1153358a/',
+    'https://github.com/fkdigitalmedia',
+  ],
+};
 
 export const BLOG_CATEGORIES: Record<string, BlogCategoryMeta> = {
   guides: {
@@ -47,11 +58,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     h1: 'How Height Comparison Works: Visualizing Relative Stature, Eye Lines & Scale',
     description: 'Discover the science of visual height comparison. Learn how eye lines, ground planes, and perspective distortion affect perceived human stature.',
     category: 'guides',
-    author: {
-      name: 'Dr. Evelyn Reed',
-      role: 'Biomechanics Researcher & Spatial Data Analyst',
-      bio: 'Dr. Evelyn Reed focuses on anthropometric ergonomics, spatial visual computing, and human scale perception.',
-    },
+    author: SITE_AUTHOR,
     publishedDate: '2025-01-15T09:00:00Z',
     updatedDate: '2025-02-12T14:30:00Z',
     readingTimeMinutes: 7,
@@ -151,11 +158,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     h1: 'Dwayne \'The Rock\' Johnson Height Comparison: Hollywood Frame vs Real-World Scale',
     description: 'Analyze Dwayne \'The Rock\' Johnson\'s verified height of 196 cm (6 ft 5 in) compared to average humans, fellow action stars, and real-world scale baselines.',
     category: 'celebrities',
-    author: {
-      name: 'Marcus Vance',
-      role: 'Entertainment Data Analyst & Pop Culture Historian',
-      bio: 'Marcus Vance investigates Hollywood casting profiles, physical statistics, and athletic documentation.',
-    },
+    author: SITE_AUTHOR,
     publishedDate: '2025-01-20T10:00:00Z',
     updatedDate: '2025-02-15T11:20:00Z',
     readingTimeMinutes: 6,
@@ -256,11 +259,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     h1: 'Messi vs Ronaldo Height Comparison: Pitch Stature, Center of Gravity & Athletic Physics',
     description: 'Compare the physical stature of football legends Lionel Messi (170 cm) and Cristiano Ronaldo (187 cm). Learn how height shapes agility, center of gravity, and aerial supremacy.',
     category: 'sports',
-    author: {
-      name: 'Julian Ross',
-      role: 'Sports Biomechanics Analyst & Tactical Writer',
-      bio: 'Julian Ross covers kinetic human performance, football analytics, and comparative athletic physical frames.',
-    },
+    author: SITE_AUTHOR,
     publishedDate: '2025-01-25T11:00:00Z',
     updatedDate: '2025-02-18T09:15:00Z',
     readingTimeMinutes: 7,
@@ -360,11 +359,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     h1: 'Human vs Horse Height Comparison: Hands, Withers & True Scale Visualized',
     description: 'See how humans compare to horses. Discover how equine height is measured in hands at the withers, and compare silhouettes side-by-side with true scale.',
     category: 'animals',
-    author: {
-      name: 'Dr. Alistair Finch',
-      role: 'Veterinary Anatomist & Equine Researcher',
-      bio: 'Dr. Finch specializes in comparative mammalian morphology and equine musculoskeletal structure.',
-    },
+    author: SITE_AUTHOR,
     publishedDate: '2025-01-28T08:30:00Z',
     updatedDate: '2025-02-14T16:00:00Z',
     readingTimeMinutes: 6,
@@ -462,11 +457,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     h1: 'Human vs Standard Door Height: Architecture Clearance & Visual Headroom',
     description: 'Explore the relationship between human height and standard residential doors (80 inches / 203 cm). See how clearance standards and headroom perception work.',
     category: 'objects',
-    author: {
-      name: 'Claire Moreau',
-      role: 'Architectural Ergonomist & Spatial Designer',
-      bio: 'Claire Moreau studies building codes, anthropometric ergonomics, and residential spatial perception.',
-    },
+    author: SITE_AUTHOR,
     publishedDate: '2025-02-01T10:00:00Z',
     updatedDate: '2025-02-16T12:00:00Z',
     readingTimeMinutes: 5,
@@ -566,11 +557,7 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     h1: 'What Does 6 Feet (183 cm) Look Like? Real-World Scale & Everyday Benchmarks',
     description: 'See what 6 feet (183 cm) looks like compared to average men, women, everyday objects, and architectural baselines. Accurate visual scale breakdown.',
     category: 'scale',
-    author: {
-      name: 'Dr. Evelyn Reed',
-      role: 'Biomechanics Researcher & Spatial Data Analyst',
-      bio: 'Dr. Evelyn Reed focuses on anthropometric ergonomics, spatial visual computing, and human scale perception.',
-    },
+    author: SITE_AUTHOR,
     publishedDate: '2025-02-05T09:30:00Z',
     updatedDate: '2025-02-17T15:45:00Z',
     readingTimeMinutes: 6,

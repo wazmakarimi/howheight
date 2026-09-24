@@ -20,6 +20,8 @@ export interface BlogAuthor {
   name: string;
   role: string;
   bio: string;
+  url?: string;
+  sameAs?: string[];
 }
 
 export interface QuickAnswer {
