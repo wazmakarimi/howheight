@@ -26,8 +26,10 @@ for (const raw of RAW_ASSET_INVENTORY) {
 
   const isSearchable = !raw.isUiIcon && (raw.isValidSvg || raw.isValidPng || raw.assetType === 'png' || raw.extension === 'png');
 
-  // Authoritative slug: use alias slug if available (e.g. 'dwayne-johnson') else raw.id
-  const slug = meta.aliases && meta.aliases[0] ? meta.aliases[0] : raw.id;
+  // Authoritative slug: use alias slug for external entities (e.g. 'dwayne-johnson') else raw.id
+  const slug = (['celebrities', 'anime', 'films'].includes(raw.category) && meta.aliases && meta.aliases[0])
+    ? meta.aliases[0]
+    : raw.id;
 
   const aliases = Array.from(new Set([
     ...(meta.aliases || []),
@@ -54,12 +56,12 @@ for (const raw of RAW_ASSET_INVENTORY) {
     subgroup: meta.subgroup || null,
     tags: meta.tags || [raw.category],
     aliases,
-    searchable: isSearchable,
+    searchable: isSearchable && meta.status === 'verified',
     indexable: meta.indexable && meta.status === 'verified',
   });
 }
 
-const manifestCode = `// AUTOMATICALLY GENERATED ASSET MANIFEST - PHASE 11
+const manifestCode = `// AUTOMATICALLY GENERATED ASSET MANIFEST - PHASE 12
 // Single Source of Truth: rawAssetInventory.ts + entityAssetMap.ts
 // Total assets: ${manifest.length}
 

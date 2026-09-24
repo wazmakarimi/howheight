@@ -1,0 +1,202 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../seo/Breadcrumbs.astro';
+import { SITE } from '../../config/site';
+import { t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const canonicalUrl = `${SITE.siteUrl}/contact/`;
+---
+
+<Layout
+  title={`Contact Us | ${SITE.name}`}
+  description="Contact HowHeight to report height discrepancies, request image corrections, notify technical issues, or submit feedback."
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+    <Breadcrumbs
+      locale={locale}
+      items={[
+        { name: 'Home', url: '/' },
+        { name: t(locale, 'footer.contact'), url: '/contact/' },
+      ]}
+    />
+
+    <!-- Header -->
+    <header class="text-center my-6 sm:my-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-blue-300 border border-brand-200/80 dark:border-brand-800/60 mb-3 shadow-soft-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-600 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <span>Feedback &amp; Communication</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Contact HowHeight
+      </h1>
+      <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-2xl mx-auto">
+        Have a question, feedback, or noticed a height measurement that needs review? We appreciate your help keeping our comparison data accurate and helpful.
+      </p>
+    </header>
+
+    <!-- Main Content Articles -->
+    <article class="space-y-8 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+      <!-- 1. What You Can Contact Us For -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-4">
+          What We Can Help With
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/80">
+            <div class="flex items-center gap-2.5 font-bold text-slate-900 dark:text-white mb-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>Height Data Corrections</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              Report an incorrect height measurement with official citation or reliable reference documentation.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/80">
+            <div class="flex items-center gap-2.5 font-bold text-slate-900 dark:text-white mb-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                <polyline points="21 15 16 10 5 21"></polyline>
+              </svg>
+              <span>Image / Silhouette Corrections</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              Let us know if an entity displays an incorrect visual silhouette, clipping issue, or aspect ratio defect.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/80">
+            <div class="flex items-center gap-2.5 font-bold text-slate-900 dark:text-white mb-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              </svg>
+              <span>Bug Reports &amp; Technical Glitches</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              Report broken comparisons, mobile layout defects, or export chart malfunctions.
+            </p>
+          </div>
+
+          <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200/80 dark:border-slate-700/80">
+            <div class="flex items-center gap-2.5 font-bold text-slate-900 dark:text-white mb-1.5">
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-600 dark:text-blue-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 16v-4"></path>
+                <path d="M12 8h.01"></path>
+              </svg>
+              <span>Copyright &amp; Privacy Notices</span>
+            </div>
+            <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400">
+              Submit intellectual property inquiries, trademark requests, or privacy concerns.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Data Correction Guidelines -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3">
+          How to Report a Data Correction
+        </h2>
+        <p>
+          HowHeight strives to present authentic comparative dimensions. If you believe a specific measurement or silhouette is inaccurate, please include the following details when contacting us:
+        </p>
+        <ol class="mt-4 space-y-2.5 list-decimal pl-5 text-sm sm:text-base">
+          <li><strong>Entity Name:</strong> The exact name or URL of the entity on HowHeight.</li>
+          <li><strong>Currently Displayed Height:</strong> The measurement shown on the website.</li>
+          <li><strong>Suggested Correction:</strong> The proposed accurate measurement (in cm or ft/in).</li>
+          <li><strong>Reliable Source/Evidence:</strong> Please provide relevant source links or documentation where possible (e.g., official athletic combine report, peer-reviewed biological standard, or official archive).</li>
+        </ol>
+        <p class="mt-4 text-xs sm:text-sm text-slate-500 dark:text-slate-400 bg-slate-50 dark:bg-slate-900/60 p-4 rounded-2xl border border-slate-200/80 dark:border-slate-700/80">
+          <em>Note on Updates:</em> We review submitted corrections thoroughly. However, because public sources frequently disagree, we do not promise that every suggested correction will be adopted, nor do we offer a guaranteed response timeline.
+        </p>
+      </section>
+
+      <!-- 3. Genuine Developer & Contact Information -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-white via-slate-50 to-blue-50/30 dark:from-slate-800 dark:via-slate-800/90 dark:to-brand-950/40 border border-slate-200/90 dark:border-slate-700 shadow-soft">
+        <div class="space-y-4 max-w-2xl">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-blue-300 border border-brand-200/80 dark:border-brand-800/60 shadow-xs">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-brand-600 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6"></polyline>
+              <polyline points="8 6 2 12 8 18"></polyline>
+            </svg>
+            <span>Project Maintainer</span>
+          </div>
+
+          <div>
+            <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
+              Firoz Khan
+            </h2>
+            <p class="text-xs sm:text-sm font-semibold text-brand-600 dark:text-blue-400 mt-0.5">
+              Full Stack Developer &amp; Founder, FK Digital Media
+            </p>
+          </div>
+
+          <p class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed">
+            HowHeight is built and maintained as an independent web project by <strong>Firoz Khan</strong> (FK Digital Media). To report bugs, discuss technical improvements, or reach out regarding data corrections, you can connect directly through the project's official channels:
+          </p>
+
+          <!-- Verified Channels -->
+          <div class="flex flex-wrap sm:flex-nowrap items-center gap-3 pt-2">
+            <!-- LinkedIn -->
+            <a
+              href="https://www.linkedin.com/in/firoz-khan-1153358a/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-[#0A66C2] hover:bg-[#084e96] text-white text-xs sm:text-sm font-bold shadow-soft-sm hover:shadow-soft transition-all active:scale-[0.98] w-full sm:w-auto"
+              aria-label="Connect with Firoz Khan on LinkedIn"
+            >
+              <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.45a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/>
+              </svg>
+              <span>Connect on LinkedIn</span>
+              <svg class="w-3.5 h-3.5 text-blue-200" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+
+            <!-- GitHub -->
+            <a
+              href="https://github.com/fkdigitalmedia"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-slate-900 hover:bg-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600 text-white text-xs sm:text-sm font-bold shadow-soft-sm hover:shadow-soft transition-all active:scale-[0.98] w-full sm:w-auto"
+              aria-label="FK Digital Media on GitHub"
+            >
+              <svg class="w-4 h-4 fill-current shrink-0" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.53 1.032 1.53 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+              </svg>
+              <span>GitHub Issue Tracker</span>
+              <svg class="w-3.5 h-3.5 text-slate-300 dark:text-slate-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                <polyline points="15 3 21 3 21 9"></polyline>
+                <line x1="10" y1="14" x2="21" y2="3"></line>
+              </svg>
+            </a>
+          </div>
+
+          <p class="text-xs text-slate-500 dark:text-slate-400 pt-2">
+            <em>Email Communication Notice:</em> Direct inquiries and bug reports can be submitted via GitHub issues or LinkedIn messaging above. A dedicated domain inbox (<code>contact@howheight.org</code>) is currently being provisioned with our domain mail server.
+          </p>
+        </div>
+      </section>
+    </article>
+  </div>
+</Layout>

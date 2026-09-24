@@ -1,11 +1,13 @@
-// ENTITY ASSET MAP - PHASE 11
+// ENTITY ASSET MAP - PHASE 12
 // Explicit verified metadata connected by stable raw asset ID.
+import type { EntityCategory } from '../lib/constants';
+
 export type EntityReviewStatus = 'verified' | 'needs-review' | 'missing-height' | 'invalid';
 
 export interface EntityMapping {
   rawAssetId: string;
   name: string;
-  category: 'male' | 'female' | 'apparel' | 'animals' | 'objects' | 'fictional' | 'plants' | 'sports' | 'anime' | 'films' | 'celebrities';
+  category: EntityCategory;
   heightCm: number | null;
   measurementType?: string | null;
   subgroup?: string | null;
@@ -5388,8 +5390,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "bear",
       "grizzly"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-blue-whale-01": {
     "rawAssetId": "animal-blue-whale-01",
@@ -5407,8 +5409,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "blue-whale",
       "whale"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-cat-01": {
     "rawAssetId": "animal-cat-01",
@@ -5427,8 +5429,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "cat",
       "feline"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-dog-01": {
     "rawAssetId": "animal-dog-01",
@@ -5447,8 +5449,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "dog",
       "canine"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-elephant-01": {
     "rawAssetId": "animal-elephant-01",
@@ -5465,8 +5467,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
     "aliases": [
       "elephant"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-giraffe-01": {
     "rawAssetId": "animal-giraffe-01",
@@ -5483,8 +5485,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
     "aliases": [
       "giraffe"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-horse-01": {
     "rawAssetId": "animal-horse-01",
@@ -5505,8 +5507,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "horse-standing",
       "equine"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-lion-01": {
     "rawAssetId": "animal-lion-01",
@@ -5524,8 +5526,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
     "aliases": [
       "lion"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-tiger-01": {
     "rawAssetId": "animal-tiger-01",
@@ -5544,8 +5546,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "tiger",
       "bengal-tiger"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-wolf-01": {
     "rawAssetId": "animal-wolf-01",
@@ -5562,8 +5564,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
     "aliases": [
       "wolf"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "animal-001": {
     "rawAssetId": "animal-001",
@@ -8848,8 +8850,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "car",
       "automobile"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "object-chair-01": {
     "rawAssetId": "object-chair-01",
@@ -8867,8 +8869,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "chair",
       "office-chair"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "object-door-01": {
     "rawAssetId": "object-door-01",
@@ -8886,8 +8888,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "door",
       "standard-door"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "object-lamp-01": {
     "rawAssetId": "object-lamp-01",
@@ -8919,8 +8921,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "phone",
       "smartphone"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "object-sofa-01": {
     "rawAssetId": "object-sofa-01",
@@ -8951,8 +8953,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
     "aliases": [
       "table"
     ],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "object-001": {
     "rawAssetId": "object-001",
@@ -9007,7 +9009,12 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "objects",
       "[o] furniture & public fixtures"
     ],
-    "aliases": [],
+    "aliases": [
+      "basketball-hoop",
+      "hoop",
+      "basketball-rim",
+      "nba-hoop"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11208,8 +11215,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[x] fantasy"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "fictional-dragon-01": {
     "rawAssetId": "fictional-dragon-01",
@@ -11223,8 +11230,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[x] fantasy"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "fictional-giant-01": {
     "rawAssetId": "fictional-giant-01",
@@ -11238,8 +11245,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[x] fantasy"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "fictional-goblin-01": {
     "rawAssetId": "fictional-goblin-01",
@@ -11253,8 +11260,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[x] fantasy"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "fictional-mech-01": {
     "rawAssetId": "fictional-mech-01",
@@ -11268,8 +11275,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[x] fantasy"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "fictional-superhero-01": {
     "rawAssetId": "fictional-superhero-01",
@@ -11283,8 +11290,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[x] fantasy"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "fictional-001": {
     "rawAssetId": "fictional-001",
@@ -11339,7 +11346,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "abyss-demon"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11354,7 +11363,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "ancient-dragon"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11369,7 +11380,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "antler-man"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11384,7 +11397,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "arakkoa"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11399,7 +11414,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "armored-knight"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11414,7 +11431,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "armored-rhinoceros"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11429,7 +11448,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "armored-warhorse"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11444,7 +11465,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "assassin"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11459,7 +11482,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "banshee"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11474,7 +11499,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "berserker"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11489,7 +11516,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "cat-people"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11504,7 +11533,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "cavalry"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11519,7 +11550,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "cave-beetle-mount"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11534,7 +11567,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "centaur"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11549,7 +11584,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "centaur-variant"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11564,7 +11601,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "chimera"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11579,7 +11618,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "cursed-knight"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11594,7 +11635,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "cyclops"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11609,7 +11652,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "dark-elf"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11624,7 +11669,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "deep-sea-dragon-turtle"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11639,7 +11686,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "demon-dog"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11654,7 +11703,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "desert-camel-beast"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11669,7 +11720,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "dragon-1"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -11684,7 +11737,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "fictional",
       "[x] fantasy"
     ],
-    "aliases": [],
+    "aliases": [
+      "dragon-2"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15115,8 +15170,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "plant-palm-01": {
     "rawAssetId": "plant-palm-01",
@@ -15130,8 +15185,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "plant-pine-01": {
     "rawAssetId": "plant-pine-01",
@@ -15145,8 +15200,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "plant-potted-01": {
     "rawAssetId": "plant-potted-01",
@@ -15160,8 +15215,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "plant-rose-01": {
     "rawAssetId": "plant-rose-01",
@@ -15175,8 +15230,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "plant-sunflower-01": {
     "rawAssetId": "plant-sunflower-01",
@@ -15190,8 +15245,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "plant-tree-01": {
     "rawAssetId": "plant-tree-01",
@@ -15205,8 +15260,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "plant-001": {
     "rawAssetId": "plant-001",
@@ -15261,7 +15316,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "agave"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15276,7 +15333,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "aloe-vera"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15291,7 +15350,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "ball-cactus"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15306,7 +15367,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "buddha-belly-tree"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15321,7 +15384,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "fan-cactus"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15336,7 +15401,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "golden-amber-cactus"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15351,7 +15418,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "rattle"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15366,7 +15435,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "saguaro-cactus"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15381,7 +15452,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "succulent-rosette"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15396,7 +15469,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] cacti, succulents & unusual forms"
     ],
-    "aliases": [],
+    "aliases": [
+      "yushu"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15411,7 +15486,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "arundodis"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15426,7 +15503,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "bamboo"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15441,7 +15520,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "begonia"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15456,7 +15537,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "begonia-tree"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15471,7 +15554,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "canna"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15486,7 +15571,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "cat-tail"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15501,7 +15588,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "chinese-peony"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15516,7 +15605,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "cockscomb"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15531,7 +15622,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "corn-plant"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15546,7 +15639,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "cotton-plant"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15561,7 +15656,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "dahlia"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15576,7 +15673,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "flower-of-the-other-shore"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -15591,7 +15690,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "plants",
       "[p] flowers, herbaceous, aquatic & crops"
     ],
-    "aliases": [],
+    "aliases": [
+      "foxglove"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17507,8 +17608,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[s] sports"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "sports-bicycle-01": {
     "rawAssetId": "sports-bicycle-01",
@@ -17522,8 +17623,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[s] sports"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "sports-football-goal-01": {
     "rawAssetId": "sports-football-goal-01",
@@ -17537,8 +17638,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[s] sports"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "sports-punching-bag-01": {
     "rawAssetId": "sports-punching-bag-01",
@@ -17552,8 +17653,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[s] sports"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "sports-surfboard-01": {
     "rawAssetId": "sports-surfboard-01",
@@ -17567,8 +17668,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[s] sports"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "sports-tennis-net-01": {
     "rawAssetId": "sports-tennis-net-01",
@@ -17582,8 +17683,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[s] sports"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "sports-volleyball-net-01": {
     "rawAssetId": "sports-volleyball-net-01",
@@ -17597,8 +17698,8 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "[s] sports"
     ],
     "aliases": [],
-    "status": "verified",
-    "indexable": true
+    "status": "needs-review",
+    "indexable": false
   },
   "sports-001": {
     "rawAssetId": "sports-001",
@@ -17653,7 +17754,10 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "american-football",
+      "football"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17668,7 +17772,11 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "balance-ball",
+      "exercise-ball",
+      "swiss-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17683,7 +17791,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "baseball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17698,7 +17808,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "basketball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17713,7 +17825,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "beach-volleyball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17728,7 +17842,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "bowling-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17743,7 +17859,10 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "childrens-ball",
+      "children-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17758,7 +17877,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "cricket-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17773,7 +17894,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "dodgeball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17788,7 +17911,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "field-hockey-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17803,7 +17928,10 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "soccer-ball",
+      "football-soccer"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17818,7 +17946,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "gateball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17833,7 +17963,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "golf-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17848,7 +17980,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "handball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17863,7 +17997,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "hockey-puck"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17878,7 +18014,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "medicine-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17893,7 +18031,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "sepak-takraw-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17908,7 +18048,10 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "shuttlecock",
+      "badminton-shuttlecock"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17923,7 +18066,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "softball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17938,7 +18083,10 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "table-tennis-ball",
+      "ping-pong-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17953,7 +18101,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "tennis-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17968,7 +18118,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "volleyball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17983,7 +18135,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "water-polo-ball"
+    ],
     "status": "verified",
     "indexable": true
   },
@@ -17998,7 +18152,9 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "sports",
       "[s] sports"
     ],
-    "aliases": [],
+    "aliases": [
+      "yoga-ball"
+    ],
     "status": "verified",
     "indexable": true
   },

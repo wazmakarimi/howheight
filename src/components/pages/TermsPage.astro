@@ -1,0 +1,171 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Breadcrumbs from '../seo/Breadcrumbs.astro';
+import { SITE } from '../../config/site';
+import { getLocalizedPath, t } from '../../i18n';
+import type { Locale } from '../../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
+const canonicalUrl = `${SITE.siteUrl}/terms/`;
+const lastUpdated = 'September 24, 2026';
+---
+
+<Layout
+  title={`Terms of Use | ${SITE.name}`}
+  description="HowHeight terms of use outlining platform rules, measurement disclaimers, non-affiliation disclosures, and limitation of liability."
+  canonicalUrl={canonicalUrl}
+  locale={locale}
+>
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
+    <Breadcrumbs
+      locale={locale}
+      items={[
+        { name: 'Home', url: '/' },
+        { name: t(locale, 'footer.terms'), url: '/terms/' },
+      ]}
+    />
+
+    <!-- Header -->
+    <header class="text-center my-6 sm:my-10">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-brand-50 dark:bg-brand-950/60 text-brand-700 dark:text-blue-300 border border-brand-200/80 dark:border-brand-800/60 mb-3 shadow-soft-sm">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-brand-600 dark:text-blue-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+          <polyline points="14 2 14 8 20 8"></polyline>
+          <line x1="16" y1="13" x2="8" y2="13"></line>
+          <line x1="16" y1="17" x2="8" y2="17"></line>
+          <polyline points="10 9 9 9 8 9"></polyline>
+        </svg>
+        <span>Platform Terms &amp; Conditions</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+        Terms of Use
+      </h1>
+      <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-2">
+        Last updated: <time datetime="2026-09-24">{lastUpdated}</time>
+      </p>
+    </header>
+
+    <!-- Main Content Articles -->
+    <article class="prose prose-slate max-w-none space-y-8 text-sm sm:text-base leading-relaxed text-slate-700 dark:text-slate-300">
+      <!-- 1. Agreement to Terms -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3">
+          1. Agreement to Terms
+        </h2>
+        <p>
+          Welcome to <strong>HowHeight.org</strong>. By accessing or using this website, you agree to comply with and be bound by these Terms of Use. If you do not agree with any part of these terms, please discontinue use of the platform.
+        </p>
+        <p class="mt-3">
+          HowHeight is operated and engineered by <strong>Firoz Khan</strong> (FK Digital Media) as a free public utility for visual comparison and comparative dimension analysis.
+        </p>
+      </section>
+
+      <!-- 2. Nature of the Service & Height Data Disclaimer -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3">
+          2. Informational Nature of Measurements &amp; Data Disclaimer
+        </h2>
+        <p>
+          HowHeight provides an interactive, comparative canvas designed to help users visualize physical height and scale differences. Please review the following crucial principles regarding our data:
+        </p>
+        <ul class="mt-3 space-y-3 list-disc pl-5">
+          <li>
+            <strong>Approximations &amp; Public Discrepancies:</strong> Measurements presented on the site are compiled from public encyclopedias, sports association media guides, historical reference texts, agency portfolios, and biological references. Because publicly cited heights frequently vary between sources (for example, barefoot vs. in-shoe athletic listings, conflicting actor agency biographies, or natural biological ranges across animal and plant specimens), measurements should be understood as approximations.
+          </li>
+          <li>
+            <strong>Visual Simulation Only:</strong> The scale silhouettes, raster figures, and dimensional charts rendered on screen are mathematical visual simulations intended for comparative understanding and entertainment.
+          </li>
+          <li>
+            <strong>Not Professionally Certified:</strong> Information on HowHeight is <em>not</em> certified architectural engineering data, medical assessment, biological taxonomy proof, or legal measurement. Users should not treat displayed measurements as officially verified, legally binding, or definitive records.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 3. Non-Affiliation & Nominative Fair Use -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3">
+          3. Non-Affiliation &amp; Trademark Disclaimers
+        </h2>
+        <p>
+          HowHeight is an independent educational and visualization project:
+        </p>
+        <ul class="mt-3 space-y-3 list-disc pl-5">
+          <li>
+            <strong>No Endorsement or Affiliation:</strong> HowHeight is <strong>not</strong> affiliated with, sponsored by, endorsed by, or partnered with any celebrity, athlete, sports league (e.g., NBA, FIFA, NFL), film studio, production company, animation publisher, commercial brand, or corporate entity depicted or mentioned on the website.
+          </li>
+          <li>
+            <strong>Nominative Fair Use:</strong> The inclusion of names, publicly known personae, fictional character titles, and brand trademarks is strictly for descriptive identification, commentary, and comparative scale reference under principles of nominative fair use.
+          </li>
+          <li>
+            <strong>Trademarks:</strong> All character names, logos, franchise properties, and brand trademarks remain the property of their respective trademark and copyright holders.
+          </li>
+        </ul>
+      </section>
+
+      <!-- 4. Intellectual Property Rights -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3">
+          4. Intellectual Property
+        </h2>
+        <p>
+          The HowHeight website structure, proprietary calculation algorithms, user interface code, visual layouts, styling, and custom vector scaling implementations are the intellectual property of FK Digital Media / Firoz Khan.
+        </p>
+        <p class="mt-3">
+          Users may share visual screenshots and exported height comparisons generated by the tool for personal, non-commercial, or editorial purposes, provided attribution to HowHeight.org is preserved. Automated systematic scraping or unauthorized commercial redistribution of the platform code is strictly prohibited.
+        </p>
+      </section>
+
+      <!-- 5. User Conduct & Acceptable Use -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3">
+          5. Acceptable Use
+        </h2>
+        <p>
+          When using HowHeight, you agree that you will not:
+        </p>
+        <ul class="mt-3 space-y-2 list-disc pl-5">
+          <li>Attempt to interfere with, disrupt, or disable the proper operation of the website or its servers.</li>
+          <li>Engage in aggressive automated crawling, denial of service attacks, or vulnerability scanning.</li>
+          <li>Attempt to inject malicious scripts, unauthorized payloads, or reverse-engineer backend infrastructure.</li>
+        </ul>
+      </section>
+
+      <!-- 6. Limitation of Liability -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3">
+          6. Limitation of Liability
+        </h2>
+        <p>
+          HowHeight is provided on an <strong>"as is"</strong> and <strong>"as available"</strong> basis without warranties of any kind, whether express or implied, including but not limited to implied warranties of accuracy, completeness, fitness for a particular purpose, or uninterrupted availability.
+        </p>
+        <p class="mt-3">
+          In no event shall HowHeight, FK Digital Media, or its developers be liable for any direct, indirect, incidental, special, consequential, or punitive damages arising out of your access to, use of, or inability to use the platform, or any reliance placed on comparative height measurements displayed on the site.
+        </p>
+      </section>
+
+      <!-- 7. Modifications to Service & Terms -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3">
+          7. Changes to the Service &amp; Terms
+        </h2>
+        <p>
+          We reserve the right to refine, modify, or update comparison data, features, categories, or these Terms of Use at any time. Continued use of HowHeight following the publication of revised terms constitutes your acceptance of the modifications.
+        </p>
+      </section>
+
+      <!-- 8. Reporting Errors & Contact -->
+      <section class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft">
+        <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white mb-3">
+          8. Reporting Errors &amp; Inquiries
+        </h2>
+        <p>
+          If you identify a measurement discrepancy, an incorrect graphic asset, or have intellectual property concerns, we encourage you to report it via our <a href={getLocalizedPath('/contact/', locale)} class="text-brand-600 dark:text-blue-400 font-semibold underline hover:no-underline">Contact Page</a>. Please provide supporting documentation or reference links where possible.
+        </p>
+      </section>
+    </article>
+  </div>
+</Layout>

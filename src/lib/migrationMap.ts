@@ -94,25 +94,25 @@ export const LEGACY_ID_MAP: Record<string, string> = {
   "seo-animal-elephant": "animal-118",
   "animal-elephant-01": "animal-118",
   
-  "giraffe": "animal-giraffe-01",
-  "seo-animal-giraffe": "animal-giraffe-01",
-  "animal-giraffe-01": "animal-giraffe-01",
+  "giraffe": "animal-032",
+  "seo-animal-giraffe": "animal-032",
+  "animal-giraffe-01": "animal-032",
   
-  "blue-whale": "animal-blue-whale-01",
-  "seo-animal-blue-whale": "animal-blue-whale-01",
-  "animal-blue-whale-01": "animal-blue-whale-01",
+  "blue-whale": "animal-074",      // Blue Whale (571.4 cm, animal_svg_74.svg)
+  "seo-animal-blue-whale": "animal-074",
+  "animal-blue-whale-01": "animal-074",
   
-  "tiger": "animal-035",
-  "seo-animal-tiger": "animal-035",
-  "animal-tiger-01": "animal-035",
+  "tiger": "animal-042",           // Tiger (100 cm, animal_svg_42.svg)
+  "seo-animal-tiger": "animal-042",
+  "animal-tiger-01": "animal-042",
   
-  "bear": "animal-bear-01",
-  "seo-animal-bear": "animal-bear-01",
-  "animal-bear-01": "animal-bear-01",
+  "bear": "animal-046",            // Brown Bear (120 cm, animal_svg_46.svg)
+  "seo-animal-bear": "animal-046",
+  "animal-bear-01": "animal-046",
   
-  "wolf": "animal-wolf-01",
-  "seo-animal-wolf": "animal-wolf-01",
-  "animal-wolf-01": "animal-wolf-01",
+  "wolf": "animal-030",            // Gray Wolf (70 cm, animal_svg_30.svg)
+  "seo-animal-wolf": "animal-030",
+  "animal-wolf-01": "animal-030",
 
   "cow": "animal-048",
   "seo-animal-cow": "animal-048",
@@ -127,32 +127,70 @@ export const LEGACY_ID_MAP: Record<string, string> = {
   "seo-obj-car": "object-114",
   "object-car-01": "object-114",
   
-  "chair": "object-004",
-  "seo-obj-chair": "object-004",
-  "object-chair-01": "object-004",
+  "chair": "object-063",           // Wheelchair / Chair
+  "seo-obj-chair": "object-063",
+  "object-chair-01": "object-063",
   
-  "table": "object-004",
-  "seo-obj-table": "object-004",
-  "object-table-01": "object-004",
+  "table": "object-007",           // Bench / Table
+  "seo-obj-table": "object-007",
+  "object-table-01": "object-007",
   
-  "phone": "object-016",
-  "object-phone-01": "object-016",
+  "phone": "object-014",
+  "object-phone-01": "object-014",
   "bottle": "object-016",
   "object-bottle-01": "object-016",
-  "building": "object-016",
-  "object-building-01": "object-016",
-  "tree": "plant-001",
-  "plant-tree-01": "plant-001",
+  "building": "object-065",
+  "object-building-01": "object-065",
+  "sofa": "object-045",
+  "object-sofa-01": "object-045",
+  "lamp": "object-025",
+  "object-lamp-01": "object-025",
+  "tree": "plant-007",             // Buddha Belly Tree (180 cm, plant_svg_7.svg)
+  "plant-tree-01": "plant-004",    // Agave
 
-  // Legacy Sports & Fictional
+  // Legacy Sports & Fictional - authoritatively corrected
   "basketball-hoop": "object-004", // Basketball Hoop (410 cm, object_svg_4.svg)
-  "sports-basketball-hoop-01": "object-004",
-  "dinosaur": "fictional-103",
-  "fictional-dinosaur-01": "fictional-103",
-  "dragon": "fictional-103",
-  "fictional-dragon-01": "fictional-103",
-  "giant": "fictional-103",
-  "fictional-giant-01": "fictional-103"
+  "sports-basketball-hoop-01": "sports-004", // Point back to American Football SVG
+  "american-football": "sports-004",
+  "basketball": "sports-007",
+  "sports-bicycle-01": "sports-007",
+  "balance-ball": "sports-005",
+  "sports-football-goal-01": "sports-005",
+  "bowling-ball": "sports-009",
+  "sports-punching-bag-01": "sports-009",
+  "baseball": "sports-006",
+  "sports-tennis-net-01": "sports-006",
+  "beach-volleyball": "sports-008",
+  "sports-surfboard-01": "sports-008",
+  "childrens-ball": "sports-010",
+  "sports-volleyball-net-01": "sports-010",
+  
+  // Plants
+  "aloe-vera": "plant-005",
+  "plant-pine-01": "plant-005",
+  "ball-cactus": "plant-006",
+  "plant-palm-01": "plant-006",
+  "agave": "plant-004",
+  "buddha-belly-tree": "plant-007",
+  "plant-sunflower-01": "plant-007",
+  "fan-cactus": "plant-008",
+  "plant-rose-01": "plant-008",
+  "golden-amber-cactus": "plant-009",
+  "plant-cactus-01": "plant-009",
+  "rattle": "plant-010",
+  "plant-potted-01": "plant-010",
+
+  // Fictional
+  "abyss-demon": "fictional-004",
+  "fictional-dinosaur-01": "fictional-004",
+  "dinosaur": "animal-129",        // Tyrannosaurus Rex (600 cm)
+  "dragon": "fictional-005",       // Ancient Dragon (708.1 cm)
+  "fictional-dragon-01": "fictional-005",
+  "giant": "fictional-006",        // Antler Man (180 cm)
+  "fictional-giant-01": "fictional-006",
+  "fictional-goblin-01": "fictional-009",
+  "fictional-mech-01": "fictional-008",
+  "fictional-superhero-01": "fictional-007"
 };
 
 export function resolveMigratedAssetId(oldIdOrAssetId: string | undefined, categoryHint?: string): string {
@@ -161,10 +199,10 @@ export function resolveMigratedAssetId(oldIdOrAssetId: string | undefined, categ
     if (categoryHint === "animals" || categoryHint === "animal") return "animal-018";
     if (categoryHint === "objects" || categoryHint === "object") return "object-016";
     if (categoryHint === "celebrities" || categoryHint === "celebrity") return "male-010";
-    if (categoryHint === "apparel") return "apparel-001";
-    if (categoryHint === "fictional") return "fictional-103";
-    if (categoryHint === "plants" || categoryHint === "plant") return "plant-001";
-    if (categoryHint === "sports" || categoryHint === "sport") return "sports-001";
+    if (categoryHint === "apparel") return "apparel-004";
+    if (categoryHint === "fictional") return "fictional-004";
+    if (categoryHint === "plants" || categoryHint === "plant") return "plant-004";
+    if (categoryHint === "sports" || categoryHint === "sport") return "sports-004";
     if (categoryHint === "anime") return "anime-001";
     if (categoryHint === "films" || categoryHint === "film") return "film-001";
     return "male-010";

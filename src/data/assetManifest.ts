@@ -1,4 +1,4 @@
-// AUTOMATICALLY GENERATED ASSET MANIFEST - PHASE 11
+// AUTOMATICALLY GENERATED ASSET MANIFEST - PHASE 12
 // Single Source of Truth: rawAssetInventory.ts + entityAssetMap.ts
 // Total assets: 1402
 
@@ -320,7 +320,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "male-003",
       "male_svg_3"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -2516,7 +2516,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "male-074",
       "male_svg_74"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -2546,7 +2546,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "male-075",
       "male_svg_75"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -2908,7 +2908,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "female-003",
       "female_svg_3"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8115,7 +8115,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "female-171",
       "female_svg_171"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8175,7 +8175,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "female-173",
       "female_svg_173"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8205,7 +8205,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "female-174",
       "female_svg_174"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8235,7 +8235,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "female-175",
       "female_svg_175"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8265,7 +8265,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "female-176",
       "female_svg_176"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8355,7 +8355,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-003",
       "apparel_svg_3"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8385,7 +8385,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-004",
       "apparel_svg_4"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8415,7 +8415,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-005",
       "apparel_svg_5"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8445,7 +8445,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-006",
       "apparel_svg_6"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8475,7 +8475,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-007",
       "apparel_svg_7"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8505,7 +8505,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-008",
       "apparel_svg_8"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8535,7 +8535,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-009",
       "apparel_svg_9"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8565,7 +8565,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-010",
       "apparel_svg_10"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8595,7 +8595,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-011",
       "apparel_svg_11"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8625,7 +8625,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-012",
       "apparel_svg_12"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8655,7 +8655,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-013",
       "apparel_svg_13"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8685,7 +8685,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-014",
       "apparel_svg_14"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8715,7 +8715,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-015",
       "apparel_svg_15"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8745,7 +8745,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-016",
       "apparel_svg_16"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8775,7 +8775,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-017",
       "apparel_svg_17"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8805,7 +8805,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-018",
       "apparel_svg_18"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8835,7 +8835,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-019",
       "apparel_svg_19"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8865,7 +8865,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-020",
       "apparel_svg_20"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8895,7 +8895,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-021",
       "apparel_svg_21"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8925,7 +8925,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-022",
       "apparel_svg_22"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8955,7 +8955,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-023",
       "apparel_svg_23"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -8985,7 +8985,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-024",
       "apparel_svg_24"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9015,7 +9015,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-025",
       "apparel_svg_25"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9045,7 +9045,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-026",
       "apparel_svg_26"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9075,7 +9075,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-027",
       "apparel_svg_27"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9105,7 +9105,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-028",
       "apparel_svg_28"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9135,7 +9135,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-029",
       "apparel_svg_29"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9165,7 +9165,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-030",
       "apparel_svg_30"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9195,7 +9195,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-031",
       "apparel_svg_31"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9225,7 +9225,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-032",
       "apparel_svg_32"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9255,7 +9255,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-033",
       "apparel_svg_33"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9285,7 +9285,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-034",
       "apparel_svg_34"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9315,7 +9315,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-035",
       "apparel_svg_35"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9345,7 +9345,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-036",
       "apparel_svg_36"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9375,7 +9375,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-037",
       "apparel_svg_37"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9405,7 +9405,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-038",
       "apparel_svg_38"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9435,7 +9435,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-039",
       "apparel_svg_39"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9465,7 +9465,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-040",
       "apparel_svg_40"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9495,7 +9495,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-041",
       "apparel_svg_41"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9525,7 +9525,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-042",
       "apparel_svg_42"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9555,7 +9555,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-043",
       "apparel_svg_43"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9585,7 +9585,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-044",
       "apparel_svg_44"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9615,7 +9615,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-045",
       "apparel_svg_45"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9645,7 +9645,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-046",
       "apparel_svg_46"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9675,7 +9675,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-047",
       "apparel_svg_47"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9705,7 +9705,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-048",
       "apparel_svg_48"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9735,7 +9735,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-049",
       "apparel_svg_49"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9765,7 +9765,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-050",
       "apparel_svg_50"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9795,7 +9795,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-051",
       "apparel_svg_51"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9825,7 +9825,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-052",
       "apparel_svg_52"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9855,7 +9855,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-053",
       "apparel_svg_53"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9885,7 +9885,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-054",
       "apparel_svg_54"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9915,7 +9915,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-055",
       "apparel_svg_55"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9945,7 +9945,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-056",
       "apparel_svg_56"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -9975,7 +9975,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-057",
       "apparel_svg_57"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10005,7 +10005,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-058",
       "apparel_svg_58"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10035,7 +10035,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-059",
       "apparel_svg_59"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10065,7 +10065,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-060",
       "apparel_svg_60"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10095,7 +10095,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-061",
       "apparel_svg_61"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10125,7 +10125,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-062",
       "apparel_svg_62"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10155,7 +10155,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-063",
       "apparel_svg_63"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10185,7 +10185,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-064",
       "apparel_svg_64"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10215,7 +10215,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-065",
       "apparel_svg_65"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10245,7 +10245,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-066",
       "apparel_svg_66"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10275,7 +10275,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-067",
       "apparel_svg_67"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10305,7 +10305,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-068",
       "apparel_svg_68"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10335,7 +10335,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-069",
       "apparel_svg_69"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10365,7 +10365,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-070",
       "apparel_svg_70"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10395,7 +10395,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-071",
       "apparel_svg_71"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10425,7 +10425,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-072",
       "apparel_svg_72"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10455,7 +10455,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-073",
       "apparel_svg_73"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10485,7 +10485,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-074",
       "apparel_svg_74"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10515,7 +10515,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-075",
       "apparel_svg_75"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10545,7 +10545,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-076",
       "apparel_svg_76"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10575,7 +10575,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-077",
       "apparel_svg_77"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10605,7 +10605,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-078",
       "apparel_svg_78"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10635,7 +10635,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-079",
       "apparel_svg_79"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10665,7 +10665,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-080",
       "apparel_svg_80"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10695,7 +10695,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-081",
       "apparel_svg_81"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10725,7 +10725,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-082",
       "apparel_svg_82"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10755,7 +10755,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-083",
       "apparel_svg_83"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10785,7 +10785,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-084",
       "apparel_svg_84"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10815,7 +10815,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-085",
       "apparel_svg_85"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10845,7 +10845,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-086",
       "apparel_svg_86"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10875,7 +10875,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-087",
       "apparel_svg_87"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10905,7 +10905,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-088",
       "apparel_svg_88"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10935,7 +10935,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-089",
       "apparel_svg_89"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10965,7 +10965,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-090",
       "apparel_svg_90"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -10995,7 +10995,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-091",
       "apparel_svg_91"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -11025,7 +11025,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-092",
       "apparel_svg_92"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -11055,7 +11055,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-093",
       "apparel_svg_93"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -11085,7 +11085,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-094",
       "apparel_svg_94"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -11115,7 +11115,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-095",
       "apparel_svg_95"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -11145,7 +11145,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-096",
       "apparel_svg_96"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -11175,7 +11175,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-097",
       "apparel_svg_97"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -11205,7 +11205,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "apparel-098",
       "apparel_svg_98"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -11215,7 +11215,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-bear-01.svg",
     "publicPath": "/assets/entities/animals/animal-bear-01.svg",
     "name": "Grizzly Bear",
-    "slug": "bear",
+    "slug": "animal-bear-01",
     "heightCm": 135,
     "referenceHeightCm": 135,
     "measurementType": "shoulder-height",
@@ -11226,7 +11226,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "48.14 203.72 926.76 582.3",
     "aspectRatio": 1.592,
     "fileSize": 5812,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Cattle, Horses & Bears",
     "tags": [
       "animals",
@@ -11238,8 +11238,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "grizzly",
       "animal-bear-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-blue-whale-01",
@@ -11248,7 +11248,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-blue-whale-01.svg",
     "publicPath": "/assets/entities/animals/animal-blue-whale-01.svg",
     "name": "Blue Whale",
-    "slug": "blue-whale",
+    "slug": "animal-blue-whale-01",
     "heightCm": 450,
     "referenceHeightCm": 450,
     "measurementType": "shoulder-height",
@@ -11259,7 +11259,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "73.21 123.91 909.59 717.15",
     "aspectRatio": 1.268,
     "fileSize": 10574,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Marine Life",
     "tags": [
       "animals",
@@ -11271,8 +11271,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "whale",
       "animal-blue-whale-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-cat-01",
@@ -11281,7 +11281,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-cat-01.svg",
     "publicPath": "/assets/entities/animals/animal-cat-01.svg",
     "name": "Domestic Cat",
-    "slug": "cat",
+    "slug": "animal-cat-01",
     "heightCm": 25,
     "referenceHeightCm": 25,
     "measurementType": "shoulder-height",
@@ -11292,7 +11292,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "245.33 237.05 1124.29 497.17",
     "aspectRatio": 2.261,
     "fileSize": 8397,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Felines",
     "tags": [
       "animals",
@@ -11305,8 +11305,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "feline",
       "animal-cat-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-dog-01",
@@ -11315,7 +11315,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-dog-01.svg",
     "publicPath": "/assets/entities/animals/animal-dog-01.svg",
     "name": "Domestic Dog",
-    "slug": "dog",
+    "slug": "animal-dog-01",
     "heightCm": 60,
     "referenceHeightCm": 60,
     "measurementType": "shoulder-height",
@@ -11326,7 +11326,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "312.28 259.55 989.56 456.7",
     "aspectRatio": 2.167,
     "fileSize": 7899,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Canines",
     "tags": [
       "animals",
@@ -11339,8 +11339,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "canine",
       "animal-dog-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-elephant-01",
@@ -11349,7 +11349,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-elephant-01.svg",
     "publicPath": "/assets/entities/animals/animal-elephant-01.svg",
     "name": "African Elephant",
-    "slug": "elephant",
+    "slug": "animal-elephant-01",
     "heightCm": 320,
     "referenceHeightCm": 320,
     "measurementType": "shoulder-height",
@@ -11360,7 +11360,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "57.5 133.87 870.96 753.46",
     "aspectRatio": 1.156,
     "fileSize": 9290,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Elephants",
     "tags": [
       "animals",
@@ -11371,8 +11371,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "elephant",
       "animal-elephant-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-giraffe-01",
@@ -11381,7 +11381,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-giraffe-01.svg",
     "publicPath": "/assets/entities/animals/animal-giraffe-01.svg",
     "name": "Giraffe",
-    "slug": "giraffe",
+    "slug": "animal-giraffe-01",
     "heightCm": 500,
     "referenceHeightCm": 500,
     "measurementType": "ground-to-top",
@@ -11392,7 +11392,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "251.62 56.37 531.6 920.08",
     "aspectRatio": 0.578,
     "fileSize": 3598,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Giraffes",
     "tags": [
       "animals",
@@ -11403,8 +11403,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "giraffe",
       "animal-giraffe-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-horse-01",
@@ -11413,7 +11413,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-horse-01.svg",
     "publicPath": "/assets/entities/animals/animal-horse-01.svg",
     "name": "Horse",
-    "slug": "horse",
+    "slug": "animal-horse-01",
     "heightCm": 160,
     "referenceHeightCm": 160,
     "measurementType": "shoulder-height",
@@ -11424,7 +11424,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "40.41 235.92 604.64 485.03",
     "aspectRatio": 1.247,
     "fileSize": 45769,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Cattle, Horses & Bears",
     "tags": [
       "animals",
@@ -11439,8 +11439,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "equine",
       "animal-horse-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-lion-01",
@@ -11449,7 +11449,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-lion-01.svg",
     "publicPath": "/assets/entities/animals/animal-lion-01.svg",
     "name": "Lion",
-    "slug": "lion",
+    "slug": "animal-lion-01",
     "heightCm": 120,
     "referenceHeightCm": 120,
     "measurementType": "shoulder-height",
@@ -11460,7 +11460,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "308.36 103.87 672.74 1043.57",
     "aspectRatio": 0.645,
     "fileSize": 5313,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Big Cats",
     "tags": [
       "animals",
@@ -11472,8 +11472,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "lion",
       "animal-lion-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-tiger-01",
@@ -11482,7 +11482,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-tiger-01.svg",
     "publicPath": "/assets/entities/animals/animal-tiger-01.svg",
     "name": "Bengal Tiger",
-    "slug": "tiger",
+    "slug": "animal-tiger-01",
     "heightCm": 100,
     "referenceHeightCm": 100,
     "measurementType": "shoulder-height",
@@ -11493,7 +11493,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "163.73 181.77 742.64 665.84",
     "aspectRatio": 1.115,
     "fileSize": 4083,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Big Cats",
     "tags": [
       "animals",
@@ -11506,8 +11506,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "bengal-tiger",
       "animal-tiger-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-wolf-01",
@@ -11516,7 +11516,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal-wolf-01.svg",
     "publicPath": "/assets/entities/animals/animal-wolf-01.svg",
     "name": "Gray Wolf",
-    "slug": "wolf",
+    "slug": "animal-wolf-01",
     "heightCm": 80,
     "referenceHeightCm": 80,
     "measurementType": "shoulder-height",
@@ -11527,7 +11527,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "137.05 50.11 682.27 924.51",
     "aspectRatio": 0.738,
     "fileSize": 5765,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[A] Canines",
     "tags": [
       "animals",
@@ -11538,8 +11538,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "wolf",
       "animal-wolf-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "animal-001",
@@ -11628,7 +11628,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "animal-003",
       "animal_svg_3"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -13002,7 +13002,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/animals/animal_svg_48.svg",
     "publicPath": "/assets/entities/animals/animal_svg_48.svg",
     "name": "Domestic Horse",
-    "slug": "horse",
+    "slug": "animal-048",
     "heightCm": 160,
     "referenceHeightCm": 160,
     "measurementType": "height",
@@ -18141,7 +18141,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "animal-213",
       "animal_svg_213"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -18171,7 +18171,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "animal-214",
       "animal_svg_214"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -18201,7 +18201,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "animal-215",
       "animal_svg_215"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -18231,7 +18231,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "animal-216",
       "animal_svg_216"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -18260,7 +18260,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "object-bottle-01"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -18289,7 +18289,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "object-building-01"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -18299,7 +18299,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/objects/object-car-01.svg",
     "publicPath": "/assets/entities/objects/object-car-01.svg",
     "name": "Sedan Car",
-    "slug": "car",
+    "slug": "object-car-01",
     "heightCm": 148,
     "referenceHeightCm": 148,
     "measurementType": "ground-to-top",
@@ -18310,7 +18310,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "273.05 255.69 480.89 1001.73",
     "aspectRatio": 0.48,
     "fileSize": 19243,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[O] Vehicles & Machinery",
     "tags": [
       "objects",
@@ -18323,8 +18323,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "automobile",
       "object-car-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "object-chair-01",
@@ -18333,7 +18333,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/objects/object-chair-01.svg",
     "publicPath": "/assets/entities/objects/object-chair-01.svg",
     "name": "Office Chair",
-    "slug": "chair",
+    "slug": "object-chair-01",
     "heightCm": 95,
     "referenceHeightCm": 95,
     "measurementType": "ground-to-top",
@@ -18344,7 +18344,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "238.87 166.54 621.32 1106.99",
     "aspectRatio": 0.561,
     "fileSize": 25928,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[O] Furniture",
     "tags": [
       "objects",
@@ -18356,8 +18356,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "office-chair",
       "object-chair-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "object-door-01",
@@ -18366,7 +18366,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/objects/object-door-01.svg",
     "publicPath": "/assets/entities/objects/object-door-01.svg",
     "name": "Standard Door",
-    "slug": "door",
+    "slug": "object-door-01",
     "heightCm": 210,
     "referenceHeightCm": 210,
     "measurementType": "ground-to-top",
@@ -18377,7 +18377,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "175.06 261.26 739.4 950.41",
     "aspectRatio": 0.778,
     "fileSize": 31988,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[O] Architecture & Entryways",
     "tags": [
       "objects",
@@ -18389,8 +18389,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "standard-door",
       "object-door-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "object-lamp-01",
@@ -18418,7 +18418,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "object-lamp-01"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -18428,7 +18428,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/objects/object-phone-01.svg",
     "publicPath": "/assets/entities/objects/object-phone-01.svg",
     "name": "Smartphone",
-    "slug": "phone",
+    "slug": "object-phone-01",
     "heightCm": 15,
     "referenceHeightCm": 15,
     "measurementType": "ground-to-top",
@@ -18439,7 +18439,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "325.18 108.28 639.68 1176.53",
     "aspectRatio": 0.544,
     "fileSize": 43735,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[O] Consumer Electronics",
     "tags": [
       "objects",
@@ -18451,8 +18451,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "smartphone",
       "object-phone-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "object-sofa-01",
@@ -18480,7 +18480,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "object-sofa-01"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -18490,7 +18490,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "sourceFile": "src/assets/entities/objects/object-table-01.svg",
     "publicPath": "/assets/entities/objects/object-table-01.svg",
     "name": "Dining Table",
-    "slug": "table",
+    "slug": "object-table-01",
     "heightCm": 76,
     "referenceHeightCm": 76,
     "measurementType": "ground-to-top",
@@ -18501,7 +18501,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "297.09 221.53 425.65 1058.81",
     "aspectRatio": 0.402,
     "fileSize": 12657,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[O] Furniture",
     "tags": [
       "objects",
@@ -18512,8 +18512,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "table",
       "object-table-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "object-001",
@@ -18602,7 +18602,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "object-003",
       "object_svg_3"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -18630,6 +18630,10 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[o] furniture & public fixtures"
     ],
     "aliases": [
+      "basketball-hoop",
+      "hoop",
+      "basketball-rim",
+      "nba-hoop",
       "object-004",
       "object_svg_4"
     ],
@@ -23064,7 +23068,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "object-147",
       "object_svg_147"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -23094,7 +23098,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "object-148",
       "object_svg_148"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -23124,7 +23128,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "object-149",
       "object_svg_149"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -23154,7 +23158,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "object-150",
       "object_svg_150"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -23175,7 +23179,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "15.7 248.2 989.11 880.12",
     "aspectRatio": 1.124,
     "fileSize": 39679,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[X] Fantasy",
     "tags": [
       "fictional",
@@ -23184,8 +23188,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "fictional-dinosaur-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "fictional-dragon-01",
@@ -23205,7 +23209,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "17.17 417.17 986.46 580.51",
     "aspectRatio": 1.699,
     "fileSize": 33731,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[X] Fantasy",
     "tags": [
       "fictional",
@@ -23214,8 +23218,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "fictional-dragon-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "fictional-giant-01",
@@ -23235,7 +23239,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "88.47 201.54 810.08 1014.92",
     "aspectRatio": 0.798,
     "fileSize": 29608,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[X] Fantasy",
     "tags": [
       "fictional",
@@ -23244,8 +23248,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "fictional-giant-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "fictional-goblin-01",
@@ -23265,7 +23269,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "81.11 150.85 1422.02 701.44",
     "aspectRatio": 2.027,
     "fileSize": 85170,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[X] Fantasy",
     "tags": [
       "fictional",
@@ -23274,8 +23278,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "fictional-goblin-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "fictional-mech-01",
@@ -23295,7 +23299,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "118.28 69.1 895.51 1372.94",
     "aspectRatio": 0.652,
     "fileSize": 30920,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[X] Fantasy",
     "tags": [
       "fictional",
@@ -23304,8 +23308,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "fictional-mech-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "fictional-superhero-01",
@@ -23325,7 +23329,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "109.73 270.8 869.15 902.46",
     "aspectRatio": 0.963,
     "fileSize": 35852,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[X] Fantasy",
     "tags": [
       "fictional",
@@ -23334,8 +23338,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "fictional-superhero-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "fictional-001",
@@ -23424,7 +23428,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "fictional-003",
       "fictional_svg_3"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -23452,6 +23456,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "abyss-demon",
       "fictional-004",
       "fictional_svg_4"
     ],
@@ -23483,6 +23488,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "ancient-dragon",
       "fictional-005",
       "fictional_svg_5"
     ],
@@ -23514,6 +23520,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "antler-man",
       "fictional-006",
       "fictional_svg_6"
     ],
@@ -23545,6 +23552,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "arakkoa",
       "fictional-007",
       "fictional_svg_7"
     ],
@@ -23576,6 +23584,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "armored-knight",
       "fictional-008",
       "fictional_svg_8"
     ],
@@ -23607,6 +23616,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "armored-rhinoceros",
       "fictional-009",
       "fictional_svg_9"
     ],
@@ -23638,6 +23648,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "armored-warhorse",
       "fictional-010",
       "fictional_svg_10"
     ],
@@ -23669,6 +23680,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "assassin",
       "fictional-011",
       "fictional_svg_11"
     ],
@@ -23700,6 +23712,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "banshee",
       "fictional-012",
       "fictional_svg_12"
     ],
@@ -23731,6 +23744,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "berserker",
       "fictional-013",
       "fictional_svg_13"
     ],
@@ -23762,6 +23776,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "cat-people",
       "fictional-014",
       "fictional_svg_14"
     ],
@@ -23793,6 +23808,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "cavalry",
       "fictional-015",
       "fictional_svg_15"
     ],
@@ -23824,6 +23840,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "cave-beetle-mount",
       "fictional-016",
       "fictional_svg_16"
     ],
@@ -23855,6 +23872,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "centaur",
       "fictional-017",
       "fictional_svg_17"
     ],
@@ -23886,6 +23904,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "centaur-variant",
       "fictional-018",
       "fictional_svg_18"
     ],
@@ -23917,6 +23936,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "chimera",
       "fictional-019",
       "fictional_svg_19"
     ],
@@ -23948,6 +23968,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "cursed-knight",
       "fictional-020",
       "fictional_svg_20"
     ],
@@ -23979,6 +24000,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "cyclops",
       "fictional-021",
       "fictional_svg_21"
     ],
@@ -24010,6 +24032,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "dark-elf",
       "fictional-022",
       "fictional_svg_22"
     ],
@@ -24041,6 +24064,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "deep-sea-dragon-turtle",
       "fictional-023",
       "fictional_svg_23"
     ],
@@ -24072,6 +24096,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "demon-dog",
       "fictional-024",
       "fictional_svg_24"
     ],
@@ -24103,6 +24128,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "desert-camel-beast",
       "fictional-025",
       "fictional_svg_25"
     ],
@@ -24134,6 +24160,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "dragon-1",
       "fictional-026",
       "fictional_svg_26"
     ],
@@ -24165,6 +24192,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[x] fantasy"
     ],
     "aliases": [
+      "dragon-2",
       "fictional-027",
       "fictional_svg_27"
     ],
@@ -31141,7 +31169,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "fictional-252",
       "fictional_svg_252"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -31171,7 +31199,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "fictional-253",
       "fictional_svg_253"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -31201,7 +31229,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "fictional-254",
       "fictional_svg_254"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -31231,7 +31259,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "fictional-255",
       "fictional_svg_255"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -31252,7 +31280,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "110 360 820 644",
     "aspectRatio": 1.273,
     "fileSize": 322564,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[P] Cacti, Succulents & Unusual Forms",
     "tags": [
       "plants",
@@ -31261,8 +31289,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "plant-cactus-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "plant-palm-01",
@@ -31282,7 +31310,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "144 410 744 606",
     "aspectRatio": 1.228,
     "fileSize": 236072,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[P] Cacti, Succulents & Unusual Forms",
     "tags": [
       "plants",
@@ -31291,8 +31319,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "plant-palm-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "plant-pine-01",
@@ -31312,7 +31340,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "40 330 944 694",
     "aspectRatio": 1.36,
     "fileSize": 293902,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[P] Cacti, Succulents & Unusual Forms",
     "tags": [
       "plants",
@@ -31321,8 +31349,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "plant-pine-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "plant-potted-01",
@@ -31342,7 +31370,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "222 80 592 1262",
     "aspectRatio": 0.469,
     "fileSize": 195829,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[P] Cacti, Succulents & Unusual Forms",
     "tags": [
       "plants",
@@ -31351,8 +31379,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "plant-potted-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "plant-rose-01",
@@ -31372,7 +31400,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "106 162 834 1032",
     "aspectRatio": 0.808,
     "fileSize": 311448,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[P] Cacti, Succulents & Unusual Forms",
     "tags": [
       "plants",
@@ -31381,8 +31409,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "plant-rose-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "plant-sunflower-01",
@@ -31402,7 +31430,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "134 116 754 1156",
     "aspectRatio": 0.652,
     "fileSize": 238418,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[P] Cacti, Succulents & Unusual Forms",
     "tags": [
       "plants",
@@ -31411,8 +31439,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "plant-sunflower-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "plant-tree-01",
@@ -31432,7 +31460,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "326.28 191.99 881.23 637.13",
     "aspectRatio": 1.383,
     "fileSize": 15746,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[P] Cacti, Succulents & Unusual Forms",
     "tags": [
       "plants",
@@ -31441,8 +31469,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "plant-tree-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "plant-001",
@@ -31531,7 +31559,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "plant-003",
       "plant_svg_3"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -31559,6 +31587,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "agave",
       "plant-004",
       "plant_svg_4"
     ],
@@ -31590,6 +31619,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "aloe-vera",
       "plant-005",
       "plant_svg_5"
     ],
@@ -31621,6 +31651,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "ball-cactus",
       "plant-006",
       "plant_svg_6"
     ],
@@ -31652,6 +31683,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "buddha-belly-tree",
       "plant-007",
       "plant_svg_7"
     ],
@@ -31683,6 +31715,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "fan-cactus",
       "plant-008",
       "plant_svg_8"
     ],
@@ -31714,6 +31747,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "golden-amber-cactus",
       "plant-009",
       "plant_svg_9"
     ],
@@ -31745,6 +31779,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "rattle",
       "plant-010",
       "plant_svg_10"
     ],
@@ -31776,6 +31811,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "saguaro-cactus",
       "plant-011",
       "plant_svg_11"
     ],
@@ -31807,6 +31843,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "succulent-rosette",
       "plant-012",
       "plant_svg_12"
     ],
@@ -31838,6 +31875,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] cacti, succulents & unusual forms"
     ],
     "aliases": [
+      "yushu",
       "plant-013",
       "plant_svg_13"
     ],
@@ -31869,6 +31907,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "arundodis",
       "plant-014",
       "plant_svg_14"
     ],
@@ -31900,6 +31939,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "bamboo",
       "plant-015",
       "plant_svg_15"
     ],
@@ -31931,6 +31971,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "begonia",
       "plant-016",
       "plant_svg_16"
     ],
@@ -31962,6 +32003,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "begonia-tree",
       "plant-017",
       "plant_svg_17"
     ],
@@ -31993,6 +32035,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "canna",
       "plant-018",
       "plant_svg_18"
     ],
@@ -32024,6 +32067,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "cat-tail",
       "plant-019",
       "plant_svg_19"
     ],
@@ -32055,6 +32099,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "chinese-peony",
       "plant-020",
       "plant_svg_20"
     ],
@@ -32086,6 +32131,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "cockscomb",
       "plant-021",
       "plant_svg_21"
     ],
@@ -32117,6 +32163,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "corn-plant",
       "plant-022",
       "plant_svg_22"
     ],
@@ -32148,6 +32195,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "cotton-plant",
       "plant-023",
       "plant_svg_23"
     ],
@@ -32179,6 +32227,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "dahlia",
       "plant-024",
       "plant_svg_24"
     ],
@@ -32210,6 +32259,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "flower-of-the-other-shore",
       "plant-025",
       "plant_svg_25"
     ],
@@ -32241,6 +32291,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[p] flowers, herbaceous, aquatic & crops"
     ],
     "aliases": [
+      "foxglove",
       "plant-026",
       "plant_svg_26"
     ],
@@ -36086,7 +36137,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "plant-150",
       "plant_svg_150"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -36116,7 +36167,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "plant-151",
       "plant_svg_151"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -36146,7 +36197,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "plant-152",
       "plant_svg_152"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -36176,7 +36227,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "plant-153",
       "plant_svg_153"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -36197,7 +36248,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "175.06 261.26 739.4 950.41",
     "aspectRatio": 0.778,
     "fileSize": 31988,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[S] Sports",
     "tags": [
       "sports",
@@ -36206,8 +36257,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "sports-basketball-hoop-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "sports-bicycle-01",
@@ -36227,7 +36278,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "297.09 221.53 425.65 1058.81",
     "aspectRatio": 0.402,
     "fileSize": 12657,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[S] Sports",
     "tags": [
       "sports",
@@ -36236,8 +36287,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "sports-bicycle-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "sports-football-goal-01",
@@ -36257,7 +36308,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "273.05 255.69 480.89 1001.73",
     "aspectRatio": 0.48,
     "fileSize": 19243,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[S] Sports",
     "tags": [
       "sports",
@@ -36266,8 +36317,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "sports-football-goal-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "sports-punching-bag-01",
@@ -36287,7 +36338,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "147.16 333.01 710.68 811.44",
     "aspectRatio": 0.876,
     "fileSize": 25354,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[S] Sports",
     "tags": [
       "sports",
@@ -36296,8 +36347,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "sports-punching-bag-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "sports-surfboard-01",
@@ -36317,7 +36368,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "325.18 108.28 639.68 1176.53",
     "aspectRatio": 0.544,
     "fileSize": 43735,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[S] Sports",
     "tags": [
       "sports",
@@ -36326,8 +36377,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "sports-surfboard-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "sports-tennis-net-01",
@@ -36347,7 +36398,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "238.87 166.54 621.32 1106.99",
     "aspectRatio": 0.561,
     "fileSize": 25928,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[S] Sports",
     "tags": [
       "sports",
@@ -36356,8 +36407,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "sports-tennis-net-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "sports-volleyball-net-01",
@@ -36377,7 +36428,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "viewBox": "89.38 285.7 834.5 895.45",
     "aspectRatio": 0.932,
     "fileSize": 26387,
-    "status": "verified",
+    "status": "needs-review",
     "subgroup": "[S] Sports",
     "tags": [
       "sports",
@@ -36386,8 +36437,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "aliases": [
       "sports-volleyball-net-01"
     ],
-    "searchable": true,
-    "indexable": true
+    "searchable": false,
+    "indexable": false
   },
   {
     "id": "sports-001",
@@ -36476,7 +36527,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-003",
       "sports_svg_3"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -36504,6 +36555,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "american-football",
+      "football",
       "sports-004",
       "sports_svg_4"
     ],
@@ -36535,6 +36588,9 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "balance-ball",
+      "exercise-ball",
+      "swiss-ball",
       "sports-005",
       "sports_svg_5"
     ],
@@ -36566,6 +36622,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "baseball",
       "sports-006",
       "sports_svg_6"
     ],
@@ -36597,6 +36654,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "basketball",
       "sports-007",
       "sports_svg_7"
     ],
@@ -36628,6 +36686,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "beach-volleyball",
       "sports-008",
       "sports_svg_8"
     ],
@@ -36659,6 +36718,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "bowling-ball",
       "sports-009",
       "sports_svg_9"
     ],
@@ -36690,6 +36750,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "childrens-ball",
+      "children-ball",
       "sports-010",
       "sports_svg_10"
     ],
@@ -36721,6 +36783,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "cricket-ball",
       "sports-011",
       "sports_svg_11"
     ],
@@ -36752,6 +36815,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "dodgeball",
       "sports-012",
       "sports_svg_12"
     ],
@@ -36783,6 +36847,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "field-hockey-ball",
       "sports-013",
       "sports_svg_13"
     ],
@@ -36814,6 +36879,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "soccer-ball",
+      "football-soccer",
       "sports-014",
       "sports_svg_14"
     ],
@@ -36845,6 +36912,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "gateball",
       "sports-015",
       "sports_svg_15"
     ],
@@ -36876,6 +36944,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "golf-ball",
       "sports-016",
       "sports_svg_16"
     ],
@@ -36907,6 +36976,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "handball",
       "sports-017",
       "sports_svg_17"
     ],
@@ -36938,6 +37008,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "hockey-puck",
       "sports-018",
       "sports_svg_18"
     ],
@@ -36969,6 +37040,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "medicine-ball",
       "sports-019",
       "sports_svg_19"
     ],
@@ -37000,6 +37072,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "sepak-takraw-ball",
       "sports-020",
       "sports_svg_20"
     ],
@@ -37031,6 +37104,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "shuttlecock",
+      "badminton-shuttlecock",
       "sports-021",
       "sports_svg_21"
     ],
@@ -37062,6 +37137,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "softball",
       "sports-022",
       "sports_svg_22"
     ],
@@ -37093,6 +37169,8 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "table-tennis-ball",
+      "ping-pong-ball",
       "sports-023",
       "sports_svg_23"
     ],
@@ -37124,6 +37202,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "tennis-ball",
       "sports-024",
       "sports_svg_24"
     ],
@@ -37155,6 +37234,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "volleyball",
       "sports-025",
       "sports_svg_25"
     ],
@@ -37186,6 +37266,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "water-polo-ball",
       "sports-026",
       "sports_svg_26"
     ],
@@ -37217,6 +37298,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "[s] sports"
     ],
     "aliases": [
+      "yoga-ball",
       "sports-027",
       "sports_svg_27"
     ],
@@ -37250,7 +37332,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-028",
       "sports_svg_28"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -37280,7 +37362,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-029",
       "sports_svg_29"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -37310,7 +37392,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-030",
       "sports_svg_30"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -37340,7 +37422,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-031",
       "sports_svg_31"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -37370,7 +37452,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-032",
       "sports_svg_32"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -37400,7 +37482,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-033",
       "sports_svg_33"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -37430,7 +37512,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-034",
       "sports_svg_34"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -37460,7 +37542,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-035",
       "sports_svg_35"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
@@ -37490,7 +37572,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "sports-036",
       "sports_svg_36"
     ],
-    "searchable": true,
+    "searchable": false,
     "indexable": false
   },
   {
