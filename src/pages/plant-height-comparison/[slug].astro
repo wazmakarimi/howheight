@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import ComparisonTool from '../../components/ComparisonTool.astro';
 import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import ComparisonIntro from '../../components/seo/ComparisonIntro.astro';
-import FAQSection from '../../components/seo/FAQSection.astro';
 import { ASSET_REGISTRY, type AssetMetadata } from '../../data/assetRegistry';
 import { cmToFeetInches } from '../../lib/height';
 import { SITE } from '../../config/site';
@@ -85,17 +84,6 @@ const relatedComparisons = getRelatedComparisons({
 
 // Category relationships
 const relatedCategories = getRelatedCategories('plants', 3, 'en');
-
-const faqs = [
-  {
-    question: `How is the height of ${plant.name} measured?`,
-    answer: `Botanical heights measure the vertical distance from the ground soil level to the uppermost foliage or canopy apex in natural growth posture.`,
-  },
-  {
-    question: `How does ${plant.name} compare to an average adult human?`,
-    answer: `An average adult human stands 176 cm (5'9.3"). ${plant.name} stands ${plantHeight} cm (${ftIn.formatted}), making it ${Math.abs(176 - plantHeight)} cm ${176 >= plantHeight ? 'shorter' : 'taller'} than an average human.`,
-  },
-];
 ---
 
 <Layout
@@ -116,7 +104,7 @@ const faqs = [
       h1={`${plant.name} Height Comparison`}
       badge="Botanical Stature Reference"
       badgeColor="emerald"
-      introText={`Visual scale comparison for ${plant.name}. Comparing botanical specimens with human stature provides essential spatial perspective for landscaping, gardening, and natural scale.`}
+      introText={`Botanical scale comparison for ${plant.name}. Calibrated to a typical mature height of ${plantHeight} cm (${ftIn.formatted}), measuring from root collar ground level to uppermost foliage apex.`}
       measurementAnchor="Ground soil grade to highest natural canopy branch."
     />
 
@@ -154,8 +142,5 @@ const faqs = [
     <RelatedCategories
       categories={relatedCategories}
     />
-
-    <!-- FAQs -->
-    <FAQSection faqs={faqs} />
   </div>
 </Layout>

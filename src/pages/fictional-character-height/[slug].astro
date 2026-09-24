@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import ComparisonTool from '../../components/ComparisonTool.astro';
 import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import ComparisonIntro from '../../components/seo/ComparisonIntro.astro';
-import FAQSection from '../../components/seo/FAQSection.astro';
 import { ASSET_REGISTRY, type AssetMetadata } from '../../data/assetRegistry';
 import { cmToFeetInches } from '../../lib/height';
 import { SITE } from '../../config/site';
@@ -84,17 +83,6 @@ const relatedComparisons = getRelatedComparisons({
 
 // Category relationships
 const relatedCategories = getRelatedCategories('fictional', 3, 'en');
-
-const faqs = [
-  {
-    question: `How is the height of ${character.name} derived?`,
-    answer: `Fictional character dimensions are cataloged from canonical world sourcebooks, tabletop RPG bestiaries, and creator design archives.`,
-  },
-  {
-    question: `How does ${character.name} compare to a normal human?`,
-    answer: `An average adult human stands 176 cm (5'9.3"). In comparison, ${character.name} stands ${charHeight} cm (${ftIn.formatted}), making it ${Math.abs(176 - charHeight)} cm ${charHeight >= 176 ? 'taller' : 'shorter'} than an average human.`,
-  },
-];
 ---
 
 <Layout
@@ -115,7 +103,7 @@ const faqs = [
       h1={`${character.name} Height Comparison`}
       badge="Fantasy & Sci-Fi Stature"
       badgeColor="purple"
-      introText={`Accurate visual scale comparison for ${character.name}. Discover how mythological, tabletop, and sci-fi beings measure up against normal human proportions.`}
+      introText={`Canonical lore scale comparison for ${character.name}. Calibrated to an established height of ${charHeight} cm (${ftIn.formatted}) documented in official world sourcebooks and character design sheets.`}
       measurementAnchor="Official world sourcebook and creature compendium stature."
     />
 
@@ -153,8 +141,5 @@ const faqs = [
     <RelatedCategories
       categories={relatedCategories}
     />
-
-    <!-- FAQs -->
-    <FAQSection faqs={faqs} />
   </div>
 </Layout>

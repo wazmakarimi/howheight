@@ -116,7 +116,7 @@ const relatedCategories = getRelatedCategories('animals', 3, 'en');
       h1={`${animal.name} Height Comparison`}
       badge="Zoological Stature Reference"
       badgeColor="amber"
-      introText={`Accurate physical scale comparison for ${animal.name}. In zoological and veterinary science, quadrupeds are measured from ground to withers (shoulder ridge) rather than the head to maintain skeletal consistency.`}
+      introText={animal.helpText ? `${animal.name} stature benchmark: ${animal.helpText}` : `Accurate physical scale comparison for ${animal.name}, calibrated to standardized zoological reference heights.`}
       measurementAnchor={animal.helpText || 'Ground to shoulder withers standard.'}
     />
 
@@ -138,6 +138,9 @@ const relatedCategories = getRelatedCategories('animals', 3, 'en');
         <span class="text-xl font-black text-slate-700 block mt-0.5">{animal.maxHeightCm} cm</span>
       </div>
     </div>
+
+    <!-- Interactive Comparison Workspace -->
+    <ComparisonTool initialItems={initialItems} />
 
     <!-- Related Profiles via Deterministic Scoring -->
     <RelatedEntities

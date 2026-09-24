@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import ComparisonTool from '../../components/ComparisonTool.astro';
 import Breadcrumbs from '../../components/seo/Breadcrumbs.astro';
 import ComparisonIntro from '../../components/seo/ComparisonIntro.astro';
-import FAQSection from '../../components/seo/FAQSection.astro';
 import { ASSET_REGISTRY, type AssetMetadata } from '../../data/assetRegistry';
 import { cmToFeetInches } from '../../lib/height';
 import { SITE } from '../../config/site';
@@ -84,17 +83,6 @@ const relatedComparisons = getRelatedComparisons({
 
 // Category relationships
 const relatedCategories = getRelatedCategories('sports', 3, 'en');
-
-const faqs = [
-  {
-    question: `How is the height of ${sport.name} measured?`,
-    answer: `Sports items and athletic standards are measured from playing surface to top boundary according to official governing body specifications.`,
-  },
-  {
-    question: `How does ${sport.name} compare to human stature?`,
-    answer: `An average adult human stands 176 cm (5'9.3"). In comparison, ${sport.name} measures ${sportHeight} cm (${ftIn.formatted}).`,
-  },
-];
 ---
 
 <Layout
@@ -115,7 +103,7 @@ const faqs = [
       h1={`${sport.name} Height Comparison`}
       badge="Athletic Regulation Scale"
       badgeColor="amber"
-      introText={`Visual scale comparison for ${sport.name}. Regulation athletic equipment and sports benchmarks provide immediate perspective on professional athlete stature and jumping clearance.`}
+      introText={`Athletic regulation scale comparison for ${sport.name}. Calibrated to official league height specifications of ${sportHeight} cm (${ftIn.formatted}), providing real-world perspective for athlete clearance and jumping reach.`}
       measurementAnchor="Official athletic federation regulation height standard."
     />
 
@@ -153,8 +141,5 @@ const faqs = [
     <RelatedCategories
       categories={relatedCategories}
     />
-
-    <!-- FAQs -->
-    <FAQSection faqs={faqs} />
   </div>
 </Layout>

@@ -112,7 +112,7 @@ const relatedCategories = getRelatedCategories('objects', 3, 'en');
       h1={`${object.name} Height Comparison`}
       badge="Architectural & Object Scale"
       badgeColor="blue"
-      introText={`Visual scale comparison for ${object.name}. Manufactured objects and architectural elements provide concrete, real-world reference frames for human stature.`}
+      introText={object.helpText ? `${object.name} dimension benchmark: ${object.helpText}` : `Visual scale comparison for ${object.name}, calibrated to standard architectural and manufacturing specifications.`}
       measurementAnchor={object.helpText || 'Floor to uppermost structural plane.'}
     />
 
@@ -126,6 +126,9 @@ const relatedCategories = getRelatedCategories('objects', 3, 'en');
         <span class="text-2xl font-black text-brand-600 block mt-0.5">{ftIn.formatted}</span>
       </div>
     </div>
+
+    <!-- Interactive Comparison Workspace -->
+    <ComparisonTool initialItems={initialItems} />
 
     <!-- Related Profiles via Deterministic Scoring -->
     <RelatedEntities
