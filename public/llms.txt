@@ -5,7 +5,7 @@
 ## Core Tools & Utilities
 
 - [Height Comparison Canvas](https://howheight.org/): Interactive side-by-side visual comparison stage supporting up to 10 entities simultaneously, real-time metric/imperial ruler scaling, customizable silhouettes, and image exports.
-- [Height Difference Calculator](https://howheight.org/height-difference-calculator/): Calculates exact numerical, imperial (feet/inches), metric (centimeters), and percentage height differences between any two individuals, celebrities, or objects.
+- [Height Comparison Calculator](https://howheight.org/height-comparison-calculator/): Calculates exact numerical, imperial (feet/inches), metric (centimeters), and percentage height differences between any two individuals, celebrities, or objects.
 - [Height Comparison Chart](https://howheight.org/height-comparison-chart/): Visual ruler chart mapping global standard height benchmarks from 50 cm to 300+ cm.
 - [How to Use Guide](https://howheight.org/how-to-use/): Comprehensive educational walkthrough on measuring heights, comparing silhouettes, accounting for footwear/posture, and interpreting visual scale charts.
 

@@ -27,7 +27,7 @@ async function submitIndexNow() {
       `https://${HOST}/anime-height-comparison/`,
       `https://${HOST}/film-height-comparison/`,
       `https://${HOST}/object-height-comparison/`,
-      `https://${HOST}/height-difference-calculator/`,
+      `https://${HOST}/height-comparison-calculator/`,
       `https://${HOST}/height-comparison-chart/`,
       `https://${HOST}/how-to-use/`
     ];

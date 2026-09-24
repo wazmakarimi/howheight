@@ -1,7 +1,7 @@
 # HowHeight — Comprehensive LLM Knowledge Base
 
 > Website: https://howheight.org  
-> Purpose: Visual height comparison engine, anatomical scaling reference, and height difference calculator.
+> Purpose: Visual height comparison engine, anatomical scaling reference, and height comparison calculator.
 
 ---
 
@@ -22,7 +22,7 @@ HowHeight uses a mathematically calibrated scaling pipeline designed to render s
 ### Core Platform
 - **Visual Canvas:** `https://howheight.org/`  
   Supports up to 10 entities simultaneously. Features include color assignment, opacity adjustment, drag-and-drop manual positioning, auto-align mode, zoom (50%–200%), ruler toggle (cm/ft), difference indicators, and high-resolution PNG export.
-- **Height Difference Calculator:** `https://howheight.org/height-difference-calculator/`  
+- **Height Comparison Calculator:** `https://howheight.org/height-comparison-calculator/`  
   Direct input calculator showing absolute difference, percentage difference, ratio comparison, eye-level alignment estimate, and contextual comparisons (e.g. difference in terms of soda cans, tennis balls, or step heights).
 - **Height Comparison Chart:** `https://howheight.org/height-comparison-chart/`  
   Visual scale benchmark reference ranging from 50 cm to 300+ cm.
