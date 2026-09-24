@@ -2,7 +2,7 @@ import type { ComparisonItem, RulerUnit } from './constants';
 import { calculateScale, generateRulerTicks } from './comparison';
 import { formatHeight } from './height';
 import { renderEntitySvg } from './renderModel';
-import { resolveAsset, type AssetMetadata } from '../data/assetRegistry';
+import { getArchetypeAsset, type ArchetypeAsset } from './archetypes';
 
 // In-memory cache for raw SVG content to prevent redundant HTTP requests
 const svgTextCache = new Map<string, string>();
@@ -25,7 +25,7 @@ async function fetchRawSvg(publicPath: string): Promise<string> {
  * so it can be safely rasterized by the browser onto HTML5 Canvas without sub-resource restrictions.
  */
 async function createEntityImage(
-  asset: AssetMetadata,
+  asset: ArchetypeAsset,
   item: ComparisonItem,
   totalWidthPx: number,
   totalHeightPx: number
@@ -111,7 +111,17 @@ export async function downloadChartAsPng(
 
   // Precompute render metrics for each entity with the exact visual scale
   const metrics = items.map((item) => {
-    const asset = resolveAsset(item.assetId || (item as any).modelType || item.id, item.category);
+    const rawId = item.assetId || (item as any).modelType || item.id;
+    const asset: ArchetypeAsset = {
+      id: item.assetId || rawId,
+      category: item.category,
+      name: item.name,
+      heightCm: item.heightCm,
+      publicPath: item.publicPath || getArchetypeAsset(rawId, item.category).publicPath,
+      viewBox: item.viewBox || getArchetypeAsset(rawId, item.category).viewBox,
+      measurementAnchor: item.measurementAnchor || getArchetypeAsset(rawId, item.category).measurementAnchor,
+      isPng: item.isPng ?? (item.publicPath?.endsWith('.png') || getArchetypeAsset(rawId, item.category).isPng),
+    };
     const render = renderEntitySvg(item, scale);
     return {
       item,

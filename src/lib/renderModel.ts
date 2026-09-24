@@ -1,5 +1,5 @@
 import type { ComparisonItem } from './constants.ts';
-import { resolveAsset, type AssetMetadata } from '../data/assetRegistry.ts';
+import { getArchetypeAsset } from './archetypes.ts';
 
 export interface RenderResult {
   svgMarkup: string;
@@ -12,6 +12,23 @@ export interface RenderResult {
 export interface CachedSvgData {
   innerMarkup: string;
   viewBox: string;
+}
+
+export interface AssetRenderProps {
+  id?: string;
+  category?: string;
+  publicPath?: string;
+  viewBox?: string;
+  measurementAnchor?: { groundY: number; measurementY: number } | null;
+  filename?: string;
+  heightCm?: number | null;
+  isPng?: boolean;
+}
+
+let fallbackResolver: ((id: string, category?: string) => AssetRenderProps | undefined) | null = null;
+
+export function setModelResolver(fn: (id: string, category?: string) => AssetRenderProps | undefined) {
+  fallbackResolver = fn;
 }
 
 const svgCache = new Map<string, CachedSvgData>();
@@ -69,9 +86,8 @@ export async function fetchSvgData(publicPath: string): Promise<CachedSvgData | 
 }
 
 /**
- * Universal Entity Renderer: Resolves any entity from the Central Asset Registry
- * and renders its vector SVG scaled proportionally based strictly on its
- * calibrated physical measurement anchor.
+ * Universal Entity Renderer: Resolves entity vector SVG scaled proportionally
+ * based strictly on its calibrated physical measurement anchor.
  */
 export function renderEntitySvg(item: ComparisonItem, chartScale: number): RenderResult {
   // Support user's custom uploaded image
@@ -121,34 +137,53 @@ export function renderEntitySvg(item: ComparisonItem, chartScale: number): Rende
     };
   }
 
-  const asset: AssetMetadata = resolveAsset(item.assetId || (item as any).modelType || item.id, item.category);
+  // 1. If item has its own pre-resolved publicPath and viewBox, use them (fast path)
+  let publicPath = item.publicPath;
+  let viewBox = item.viewBox;
+  let measurementAnchor = item.measurementAnchor;
+  let isPngAsset = item.isPng ?? (publicPath?.endsWith('.png') || false);
+  const defaultHeight = (item.category === 'male' || item.category === 'female' || item.category === 'celebrities')
+    ? 175
+    : (item.category === 'anime' || item.category === 'films' ? 170 : 100);
+  let resolvedHeight = typeof item.heightCm === 'number' && item.heightCm > 0
+    ? item.heightCm
+    : (item.referenceHeightCm || defaultHeight);
 
-  const isPngAsset = (asset.filename && asset.filename.endsWith('.png')) || (asset.publicPath && asset.publicPath.endsWith('.png')) || asset.assetType === 'png';
+  // 2. If missing, check custom resolver or client archetypes
+  if (!publicPath || !viewBox) {
+    const rawId = item.assetId || (item as any).modelType || item.id;
+    const resolved = (fallbackResolver && rawId ? fallbackResolver(rawId, item.category) : undefined)
+      || getArchetypeAsset(rawId, item.category);
+
+    publicPath = publicPath || resolved.publicPath;
+    viewBox = viewBox || resolved.viewBox;
+    measurementAnchor = measurementAnchor !== undefined ? measurementAnchor : resolved.measurementAnchor;
+    isPngAsset = isPngAsset || resolved.isPng || (publicPath?.endsWith('.png') || false);
+    if (!resolvedHeight && resolved.heightCm) {
+      resolvedHeight = resolved.heightCm;
+    }
+  }
 
   // Height conversion: chartScale represents pixelsPerCm on the viewport
   const pixelsPerCm = chartScale;
-  const defaultHeight = (asset.category === 'male' || asset.category === 'female' || asset.category === 'celebrities')
-    ? 175
-    : (asset.category === 'anime' || asset.category === 'films' ? 170 : 100);
-
-  const heightCm = typeof item.heightCm === 'number' && item.heightCm > 0
-    ? item.heightCm
-    : (asset.heightCm || defaultHeight);
-
+  const heightCm = resolvedHeight || 175;
   const measurementHeightPx = heightCm * pixelsPerCm;
 
   // Total SVG viewBox dimensions
-  const vbParts = asset.viewBox ? asset.viewBox.split(/\s+/).map(Number) : [0, 0, 100, 100];
+  const viewBoxStr = typeof viewBox === 'string'
+    ? viewBox
+    : viewBox
+      ? `${viewBox.minX} ${viewBox.minY} ${viewBox.width} ${viewBox.height}`
+      : '0 0 100 100';
+  const vbParts = viewBoxStr.split(/\s+/).map(Number);
   const vbX = vbParts[0] || 0;
   const vbY = vbParts[1] || 0;
   const totalVbWidth = vbParts[2] || 100;
   const totalVbHeight = vbParts[3] || 100;
 
-  // Measurement anchor calibration:
-  // groundY: coordinate where entity sits on the floor
-  // measurementY: coordinate of the reference height measurement point
-  const groundY = asset.measurementAnchor?.groundY ?? (vbY + totalVbHeight);
-  const measurementY = asset.measurementAnchor?.measurementY ?? vbY;
+  // Measurement anchor calibration
+  const groundY = (measurementAnchor as any)?.groundY ?? (measurementAnchor as any)?.baseY ?? (vbY + totalVbHeight);
+  const measurementY = (measurementAnchor as any)?.measurementY ?? (measurementAnchor as any)?.topY ?? vbY;
   const anchorSpan = Math.abs(groundY - measurementY) || totalVbHeight || 100;
 
   // Visual scaling factor: converts viewBox coordinates to rendered pixels
@@ -162,33 +197,36 @@ export function renderEntitySvg(item: ComparisonItem, chartScale: number): Rende
   const color = item.color || '#2563eb';
   const opacity = typeof item.opacity === 'number' ? item.opacity : 1.0;
 
-  const cachedSvg = !isPngAsset && asset.publicPath ? svgCache.get(asset.publicPath) : undefined;
+  const cachedSvg = !isPngAsset && publicPath ? svgCache.get(publicPath) : undefined;
 
   // Inner vector markup: inlined vector SVG with active color inheritance, or direct SVG/PNG fallback
   let innerContent: string;
   if (cachedSvg && cachedSvg.innerMarkup) {
-    const fileVb = cachedSvg.viewBox || asset.viewBox;
+    const fileVb = cachedSvg.viewBox || viewBoxStr;
     innerContent = `<svg viewBox="${fileVb}" x="${vbX}" y="${vbY}" width="${totalVbWidth}" height="${totalVbHeight}" preserveAspectRatio="xMidYMax meet" overflow="visible" style="color: inherit; fill: inherit;">${cachedSvg.innerMarkup}</svg>`;
-  } else if ((asset as any).innerMarkup) {
-    innerContent = (asset as any).innerMarkup;
+  } else if ((item as any).innerMarkup) {
+    innerContent = (item as any).innerMarkup;
   } else {
-    innerContent = `<image href="${asset.publicPath}" x="${vbX}" y="${vbY}" width="${totalVbWidth}" height="${totalVbHeight}" preserveAspectRatio="xMidYMax meet" />`;
+    innerContent = `<image href="${publicPath}" x="${vbX}" y="${vbY}" width="${totalVbWidth}" height="${totalVbHeight}" preserveAspectRatio="xMidYMax meet" />`;
   }
 
   const styledMarkup = isPngAsset
     ? `<g class="entity-png-group" style="opacity: ${opacity};">${innerContent}</g>`
     : `<g class="entity-vector-group" fill="${color}" style="color: ${color}; fill: ${color}; opacity: ${opacity};">${innerContent}</g>`;
 
+  const assetId = item.assetId || item.id;
+  const category = item.category || 'male';
+
   const svgMarkup = `
     <svg 
       xmlns="http://www.w3.org/2000/svg" 
-      viewBox="${asset.viewBox}" 
+      viewBox="${viewBoxStr}" 
       preserveAspectRatio="xMidYMax meet"
       class="entity-svg pointer-events-none block overflow-visible"
       style="height: ${totalSvgHeightPx.toFixed(2)}px; width: ${totalSvgWidthPx.toFixed(2)}px; transform-origin: bottom center; color: ${color}; fill: ${color};"
       data-id="${item.id}"
-      data-asset-id="${asset.id}"
-      data-category="${asset.category}"
+      data-asset-id="${assetId}"
+      data-category="${category}"
       data-height-cm="${heightCm}"
       aria-hidden="true"
     >

@@ -37,6 +37,10 @@ export interface ComparisonItem {
   customImageUrl?: string;
   customImageAspect?: number;
   isCustomUpload?: boolean;
+  publicPath?: string;
+  viewBox?: string;
+  measurementAnchor?: { groundY: number; measurementY: number } | null;
+  isPng?: boolean;
 }
 
 // Backward-compatible alias for codebase integrity

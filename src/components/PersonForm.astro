@@ -132,6 +132,10 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
           data-status={asset.status}
           data-tags={asset.tags.join(',')}
           data-aliases={asset.aliases.join(',')}
+          data-path={asset.publicPath}
+          data-viewbox={asset.viewBox}
+          data-anchor={asset.measurementAnchor ? `${asset.measurementAnchor.groundY},${asset.measurementAnchor.measurementY}` : ''}
+          data-is-png={Boolean(asset.filename?.endsWith('.png') || asset.publicPath?.endsWith('.png')) ? 'true' : 'false'}
           title={asset.status === 'verified' && asset.heightCm 
             ? `Click to add ${asset.name} (${asset.heightCm} cm)` 
             : `Click to add ${asset.name} (Needs review / Height unavailable)`}

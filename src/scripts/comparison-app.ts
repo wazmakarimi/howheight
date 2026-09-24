@@ -13,13 +13,14 @@ import {
 import { calculateDifference, calculateScale, generateRulerTicks, sortPeople } from '../lib/comparison';
 import { cmToFeetInches, feetInchesToCm, formatHeight, formatHeightFull } from '../lib/height';
 import { copyToClipboard, decodePeopleFromUrl, encodePeopleToUrl } from '../lib/share';
-import { downloadChartAsPng } from '../lib/exportChart';
-import { renderEntitySvg, fetchSvgData, hasCachedSvg } from '../lib/renderModel';
+import { renderEntitySvg, fetchSvgData, hasCachedSvg, setModelResolver } from '../lib/renderModel';
 import { resolveMigratedAssetId } from '../lib/migrationMap';
-import { getAssetById, getAllAssets, resolveAsset, type AssetMetadata } from '../data/assetRegistry';
+import { getArchetypeAsset } from '../lib/archetypes';
+import type { CatalogAsset as AssetMetadata } from '../data/assetCatalog';
 
 class HeightComparisonApp {
   private allAssets: AssetMetadata[] = [];
+  private catalogPromise: Promise<AssetMetadata[]> | null = null;
   private state: AppState = {
     people: [...INITIAL_PEOPLE],
     editingId: null,
@@ -206,23 +207,38 @@ class HeightComparisonApp {
     }
 
     // Warm SVG vector cache for all initial entities
-    const initialAssets = this.state.people
-      .map((it) => resolveAsset(it.assetId || (it as any).modelType || it.id, it.category))
-      .filter(
-        (a) =>
-          a &&
-          !a.filename?.endsWith('.png') &&
-          !a.publicPath?.endsWith('.png') &&
-          a.publicPath?.endsWith('.svg')
-      );
+    const initialSvgPaths = this.state.people
+      .map((it) => it.publicPath || getArchetypeAsset(it.assetId || (it as any).modelType || it.id, it.category).publicPath)
+      .filter((p) => p && !p.endsWith('.png') && p.endsWith('.svg'));
 
-    if (initialAssets.length > 0) {
-      Promise.all(initialAssets.map((a) => fetchSvgData(a.publicPath))).then((results) => {
+    if (initialSvgPaths.length > 0) {
+      Promise.all(initialSvgPaths.map((p) => fetchSvgData(p))).then((results) => {
         if (results.some(Boolean)) {
           this.renderChart();
         }
       });
     }
+
+    // Progressively preload asset catalog in background when browser is idle
+    if (typeof window !== 'undefined') {
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(() => this.ensureCatalog(), { timeout: 2500 });
+      } else {
+        setTimeout(() => this.ensureCatalog(), 1200);
+      }
+    }
+  }
+
+  private async ensureCatalog(): Promise<AssetMetadata[]> {
+    if (this.allAssets.length > 0) return this.allAssets;
+    if (!this.catalogPromise) {
+      this.catalogPromise = import('../data/assetCatalog').then((mod) => {
+        this.allAssets = mod.ASSET_CATALOG;
+        setModelResolver((id) => mod.getCatalogAssetById(id));
+        return this.allAssets;
+      });
+    }
+    return this.catalogPromise;
   }
 
   private cacheDomElements() {
@@ -349,21 +365,25 @@ class HeightComparisonApp {
     }
 
     const rawLookup = item.assetId || item.celebrityId || item.animalType || item.objectType || (item.category === 'human' ? item.gender : item.id);
-    const resolved = resolveAsset(rawLookup, item.category);
-    const assetId = resolved.id;
-    const category: EntityCategory = (resolved?.category || item.category || 'male') as EntityCategory;
+    const archetype = getArchetypeAsset(rawLookup, item.category);
+    const assetId = item.assetId || archetype.id;
+    const category: EntityCategory = (item.category || archetype.category || 'male') as EntityCategory;
 
     return {
       id: item.id || `item-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
       assetId,
       category,
-      name: item.name || resolved?.name || 'Entity',
-      heightCm: typeof item.heightCm === 'number' && item.heightCm > 0 ? item.heightCm : (resolved?.heightCm ?? 175),
-      referenceHeightCm: item.referenceHeightCm ?? item.heightCm ?? resolved?.heightCm ?? 175,
+      name: item.name || archetype.name || 'Entity',
+      heightCm: typeof item.heightCm === 'number' && item.heightCm > 0 ? item.heightCm : (archetype.heightCm ?? 175),
+      referenceHeightCm: item.referenceHeightCm ?? item.heightCm ?? archetype.heightCm ?? 175,
       isCustomHeight: Boolean(item.isCustomHeight),
       color: item.color || PRESET_COLORS[0].value,
       opacity: typeof item.opacity === 'number' ? item.opacity : 1.0,
       positionX: typeof item.positionX === 'number' ? item.positionX : undefined,
+      publicPath: item.publicPath || archetype.publicPath,
+      viewBox: item.viewBox || archetype.viewBox,
+      measurementAnchor: item.measurementAnchor || archetype.measurementAnchor,
+      isPng: item.isPng ?? archetype.isPng,
     };
   }
 
@@ -458,7 +478,6 @@ class HeightComparisonApp {
   }
 
   private initAssetGrid() {
-    this.allAssets = getAllAssets(true);
     const categoryTabs = document.querySelectorAll('.category-tab-btn');
 
     let activeCategory = 'all';
@@ -492,6 +511,9 @@ class HeightComparisonApp {
 
       const tagsAttr = (asset.tags || []).join(',');
       const aliasesAttr = (asset.aliases || []).join(',');
+      const viewBoxAttr = asset.viewBox ? `${asset.viewBox.minX} ${asset.viewBox.minY} ${asset.viewBox.width} ${asset.viewBox.height}` : '';
+      const anchorAttr = asset.measurementAnchor ? `${asset.measurementAnchor.baseY},${asset.measurementAnchor.topY}` : '';
+      const isPngAttr = asset.isPng ? 'true' : 'false';
 
       return `
         <button
@@ -501,6 +523,10 @@ class HeightComparisonApp {
           data-category="${asset.category}"
           data-name="${escapeHtml(asset.name)}"
           data-height="${asset.heightCm || ''}"
+          data-path="${asset.publicPath || ''}"
+          data-viewbox="${viewBoxAttr}"
+          data-anchor="${anchorAttr}"
+          data-is-png="${isPngAttr}"
           data-status="${asset.status}"
           data-tags="${escapeHtml(tagsAttr)}"
           data-aliases="${escapeHtml(aliasesAttr)}"
@@ -589,9 +615,14 @@ class HeightComparisonApp {
       { passive: true }
     );
 
+    // Warm catalog on hover/focus
+    this.assetLibraryGrid?.addEventListener('mouseenter', () => this.ensureCatalog(), { once: true });
+    this.assetSearchInput?.addEventListener('focus', () => this.ensureCatalog());
+
     // Category Tabs click
     categoryTabs.forEach((tab) => {
-      tab.addEventListener('click', (e) => {
+      tab.addEventListener('mouseenter', () => this.ensureCatalog(), { once: true });
+      tab.addEventListener('click', async (e) => {
         const target = e.currentTarget as HTMLElement;
         activeCategory = target.getAttribute('data-category') || 'all';
 
@@ -603,14 +634,16 @@ class HeightComparisonApp {
         target.classList.add('bg-white', 'text-brand-600', 'shadow-soft-sm');
 
         visibleLimit = 30;
+        await this.ensureCatalog();
         updateGrid(true);
       });
     });
 
     // Search query input
-    this.assetSearchInput?.addEventListener('input', () => {
+    this.assetSearchInput?.addEventListener('input', async () => {
       searchQuery = this.assetSearchInput?.value || '';
       visibleLimit = 30;
+      await this.ensureCatalog();
       updateGrid(true);
     });
 
@@ -622,6 +655,20 @@ class HeightComparisonApp {
       const category = (card.getAttribute('data-category') || 'male') as EntityCategory;
       const name = card.getAttribute('data-name') || 'Entity';
       const parsedHeight = parseFloat(card.getAttribute('data-height') || '');
+      const publicPath = card.getAttribute('data-path') || undefined;
+      const viewBoxStr = card.getAttribute('data-viewbox');
+      let viewBox = undefined;
+      if (viewBoxStr) {
+        const parts = viewBoxStr.trim().split(/\s+/).map(Number);
+        if (parts.length === 4) viewBox = { minX: parts[0], minY: parts[1], width: parts[2], height: parts[3] };
+      }
+      const anchorStr = card.getAttribute('data-anchor');
+      let measurementAnchor = undefined;
+      if (anchorStr) {
+        const parts = anchorStr.split(',').map(Number);
+        if (parts.length === 2) measurementAnchor = { baseY: parts[0], topY: parts[1] };
+      }
+      const isPng = card.getAttribute('data-is-png') === 'true';
       const defaultHeight =
         !isNaN(parsedHeight) && parsedHeight > 0
           ? parsedHeight
@@ -631,17 +678,36 @@ class HeightComparisonApp {
               ? 163
               : 170;
 
-      this.addAssetToBoard(assetId, category, name, defaultHeight);
+      this.addAssetToBoard(assetId, category, name, defaultHeight, {
+        publicPath,
+        viewBox,
+        measurementAnchor,
+        isPng,
+      });
     });
 
-    // Initial populate on load
-    updateGrid(false);
+    // Initial populate on load once catalog is ready
+    this.ensureCatalog().then(() => {
+      updateGrid(false);
+    });
   }
 
-  private addAssetToBoard(assetId: string, category: EntityCategory, name: string, heightCm: number) {
+  private addAssetToBoard(
+    assetId: string,
+    category: EntityCategory,
+    name: string,
+    heightCm: number,
+    meta?: { publicPath?: string; viewBox?: any; measurementAnchor?: any; isPng?: boolean }
+  ) {
     this.pushHistory();
     const nextColorIdx = this.state.people.length % PRESET_COLORS.length;
     const color = PRESET_COLORS[nextColorIdx].value;
+
+    const archetype = getArchetypeAsset(assetId, category);
+    const publicPath = meta?.publicPath || archetype.publicPath;
+    const viewBox = meta?.viewBox || archetype.viewBox;
+    const measurementAnchor = meta?.measurementAnchor || archetype.measurementAnchor;
+    const isPng = meta?.isPng ?? archetype.isPng;
 
     const newItem: ComparisonItem = {
       id: `item-${Date.now()}-${Math.random().toString(36).substring(2, 7)}`,
@@ -652,6 +718,10 @@ class HeightComparisonApp {
       referenceHeightCm: heightCm,
       isCustomHeight: false,
       color,
+      publicPath,
+      viewBox,
+      measurementAnchor,
+      isPng,
     };
 
     this.state.people.push(newItem);
@@ -659,9 +729,8 @@ class HeightComparisonApp {
     this.persistState();
     this.render();
 
-    const asset = resolveAsset(assetId, category);
-    if (asset && !asset.filename?.endsWith('.png') && !asset.publicPath?.endsWith('.png') && asset.publicPath?.endsWith('.svg') && !hasCachedSvg(asset.publicPath)) {
-      fetchSvgData(asset.publicPath).then(() => {
+    if (publicPath && !isPng && !publicPath.endsWith('.png') && publicPath.endsWith('.svg') && !hasCachedSvg(publicPath)) {
+      fetchSvgData(publicPath).then(() => {
         this.renderChart();
       });
     }
@@ -2023,6 +2092,7 @@ class HeightComparisonApp {
 
     try {
       const sorted = sortPeople(this.state.people, this.state.sortMode);
+      const { downloadChartAsPng } = await import('../lib/exportChart');
       await downloadChartAsPng(sorted, this.state.rulerUnit, 'height-comparison.png', this.drawingCanvas);
     } finally {
       this.downloadBtn.innerHTML = originalBtn;

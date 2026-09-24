@@ -35,7 +35,7 @@ export function calculateScale(
   const maxVisualCm = Math.max(
     ...items.map((item) => {
       try {
-        const visualHeight = getVisualTotalHeightCm(item.heightCm, item.assetId || item.animalType || item.objectType);
+        const visualHeight = getVisualTotalHeightCm(item.heightCm, item.assetId || item.animalType || item.objectType, item);
         return Math.max(item.heightCm, visualHeight || item.heightCm);
       } catch {
         return item.heightCm;

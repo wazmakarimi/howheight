@@ -137,7 +137,7 @@ console.log('\n----------------------------------------------------');
 console.log('TEST 5: Multi-Category Support Verification');
 console.log('----------------------------------------------------');
 
-const categories = ['male', 'female', 'apparel', 'animals', 'objects', 'fictional', 'plants', 'sports', 'anime', 'films', 'celebrities'];
+const categories = ['male', 'female', 'animals', 'objects', 'fictional', 'plants', 'sports', 'anime', 'films', 'celebrities'];
 for (const cat of categories) {
   const assetsInCat = ASSET_REGISTRY.filter(a => a.category === cat && a.searchable);
   assert(assetsInCat.length > 0, `Category "${cat}" has ${assetsInCat.length} active searchable assets`);

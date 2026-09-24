@@ -7,6 +7,9 @@ import ComparisonSummary from './ComparisonSummary.astro';
 import type { ComparisonItem } from '../lib/constants';
 import type { Locale } from '../i18n/locales';
 
+import { INITIAL_PEOPLE } from '../lib/constants';
+import { resolveAsset } from '../data/assetRegistry';
+
 interface Props {
   initialItems?: ComparisonItem[];
   initialComparisonSlug?: string;
@@ -15,7 +18,29 @@ interface Props {
 }
 
 const { initialItems, initialComparisonSlug, showQuickCompare = true, locale = 'en' } = Astro.props;
-const initialItemsJson = initialItems && initialItems.length > 0 ? JSON.stringify(initialItems) : undefined;
+
+// Server-side pre-resolve initial models so client does not need to bundle 1,400+ assets for initial render
+const sourceItems = initialItems && initialItems.length > 0 ? initialItems : INITIAL_PEOPLE;
+const resolvedItems = sourceItems.map((item) => {
+  try {
+    const rawLookup = item.assetId || (item as any).celebrityId || (item as any).animalType || (item as any).objectType || (item.category === 'human' ? (item as any).gender : item.id);
+    const resolved = resolveAsset(rawLookup, item.category);
+    return {
+      ...item,
+      assetId: resolved.id,
+      name: item.name || resolved.name,
+      heightCm: item.heightCm || resolved.heightCm || 175,
+      referenceHeightCm: item.referenceHeightCm || resolved.heightCm || 175,
+      publicPath: resolved.publicPath,
+      viewBox: resolved.viewBox,
+      measurementAnchor: resolved.measurementAnchor,
+      isPng: Boolean(resolved.filename?.endsWith('.png') || resolved.publicPath?.endsWith('.png')),
+    };
+  } catch {
+    return item;
+  }
+});
+const initialItemsJson = JSON.stringify(resolvedItems);
 ---
 
 <section 
