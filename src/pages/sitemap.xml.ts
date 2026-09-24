@@ -49,8 +49,8 @@ export const GET: APIRoute = async () => {
       changefreq: 'weekly',
     })),
 
-    // 10 Canonical Category Hub Routes
-    ...CATEGORIES.map((cat) => ({
+    // Canonical Category Hub Routes (Filter out unverified/non-indexable categories)
+    ...CATEGORIES.filter((cat) => cat.indexable !== false).map((cat) => ({
       path: cat.route,
       priority: '0.9',
       changefreq: 'weekly',
@@ -151,6 +151,11 @@ export const GET: APIRoute = async () => {
       priority: '0.8',
       changefreq: 'monthly',
     })),
+
+    // Authoritative Legal & Trust Pages (English Canonical)
+    { path: '/privacy/', priority: '0.5', changefreq: 'yearly' },
+    { path: '/terms/', priority: '0.5', changefreq: 'yearly' },
+    { path: '/contact/', priority: '0.6', changefreq: 'monthly' },
   ];
 
   for (const route of englishOnlyRoutes) {
