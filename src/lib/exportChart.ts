@@ -31,9 +31,10 @@ async function createEntityImage(
   totalHeightPx: number
 ): Promise<HTMLImageElement> {
   const isPng = Boolean(
-    (asset.filename && asset.filename.endsWith('.png')) ||
+    asset.isPng ||
     (asset.publicPath && asset.publicPath.endsWith('.png')) ||
-    asset.assetType === 'png' ||
+    ((asset as any).filename && (asset as any).filename.endsWith('.png')) ||
+    (asset as any).assetType === 'png' ||
     (asset as any).extension === 'png'
   );
 

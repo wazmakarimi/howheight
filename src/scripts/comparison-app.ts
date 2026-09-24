@@ -511,8 +511,14 @@ class HeightComparisonApp {
 
       const tagsAttr = (asset.tags || []).join(',');
       const aliasesAttr = (asset.aliases || []).join(',');
-      const viewBoxAttr = asset.viewBox ? `${asset.viewBox.minX} ${asset.viewBox.minY} ${asset.viewBox.width} ${asset.viewBox.height}` : '';
-      const anchorAttr = asset.measurementAnchor ? `${asset.measurementAnchor.baseY},${asset.measurementAnchor.topY}` : '';
+      const viewBoxAttr = typeof asset.viewBox === 'string'
+        ? asset.viewBox
+        : asset.viewBox
+          ? `${(asset.viewBox as any).minX} ${(asset.viewBox as any).minY} ${(asset.viewBox as any).width} ${(asset.viewBox as any).height}`
+          : '';
+      const anchorAttr = asset.measurementAnchor
+        ? `${(asset.measurementAnchor as any).groundY ?? (asset.measurementAnchor as any).baseY},${(asset.measurementAnchor as any).measurementY ?? (asset.measurementAnchor as any).topY}`
+        : '';
       const isPngAttr = asset.isPng ? 'true' : 'false';
 
       return `
@@ -656,17 +662,14 @@ class HeightComparisonApp {
       const name = card.getAttribute('data-name') || 'Entity';
       const parsedHeight = parseFloat(card.getAttribute('data-height') || '');
       const publicPath = card.getAttribute('data-path') || undefined;
-      const viewBoxStr = card.getAttribute('data-viewbox');
-      let viewBox = undefined;
-      if (viewBoxStr) {
-        const parts = viewBoxStr.trim().split(/\s+/).map(Number);
-        if (parts.length === 4) viewBox = { minX: parts[0], minY: parts[1], width: parts[2], height: parts[3] };
-      }
+      const viewBox = card.getAttribute('data-viewbox') || undefined;
       const anchorStr = card.getAttribute('data-anchor');
-      let measurementAnchor = undefined;
+      let measurementAnchor: { groundY: number; measurementY: number } | undefined = undefined;
       if (anchorStr) {
         const parts = anchorStr.split(',').map(Number);
-        if (parts.length === 2) measurementAnchor = { baseY: parts[0], topY: parts[1] };
+        if (parts.length === 2 && !isNaN(parts[0]) && !isNaN(parts[1])) {
+          measurementAnchor = { groundY: parts[0], measurementY: parts[1] };
+        }
       }
       const isPng = card.getAttribute('data-is-png') === 'true';
       const defaultHeight =
@@ -697,7 +700,7 @@ class HeightComparisonApp {
     category: EntityCategory,
     name: string,
     heightCm: number,
-    meta?: { publicPath?: string; viewBox?: any; measurementAnchor?: any; isPng?: boolean }
+    meta?: { publicPath?: string; viewBox?: string; measurementAnchor?: { groundY: number; measurementY: number } | null; isPng?: boolean }
   ) {
     this.pushHistory();
     const nextColorIdx = this.state.people.length % PRESET_COLORS.length;
@@ -2253,18 +2256,22 @@ class HeightComparisonApp {
 
     // Ensure all SVGs for currently rendered items are cached for responsive recoloring
     const uncachedAssets = items
-      .map((it) => resolveAsset(it.assetId || (it as any).modelType || it.id, it.category))
+      .map((it) => {
+        const publicPath = it.publicPath || getArchetypeAsset(it.assetId || (it as any).modelType || it.id, it.category)?.publicPath;
+        const isPng = it.isPng ?? (publicPath?.endsWith('.png') || false);
+        return { publicPath, isPng };
+      })
       .filter(
         (a) =>
-          a &&
-          !a.filename?.endsWith('.png') &&
-          !a.publicPath?.endsWith('.png') &&
-          a.publicPath?.endsWith('.svg') &&
+          a.publicPath &&
+          !a.isPng &&
+          !a.publicPath.endsWith('.png') &&
+          a.publicPath.endsWith('.svg') &&
           !hasCachedSvg(a.publicPath)
       );
 
     if (uncachedAssets.length > 0) {
-      Promise.all(uncachedAssets.map((a) => fetchSvgData(a.publicPath))).then((results) => {
+      Promise.all(uncachedAssets.map((a) => fetchSvgData(a.publicPath!))).then((results) => {
         if (results.some(Boolean)) {
           this.renderChart();
         }
@@ -2574,9 +2581,10 @@ class HeightComparisonApp {
         showTooltip(w, rect.left + rect.width / 2, rect.top);
       });
 
-      w.addEventListener('mousemove', (e) => {
-        this.tooltipEl.style.left = `${e.clientX}px`;
-        this.tooltipEl.style.top = `${e.clientY - 15}px`;
+      w.addEventListener('mousemove', (e: Event) => {
+        const me = e as MouseEvent;
+        this.tooltipEl.style.left = `${me.clientX}px`;
+        this.tooltipEl.style.top = `${me.clientY - 15}px`;
       });
 
       w.addEventListener('mouseleave', hideTooltip);

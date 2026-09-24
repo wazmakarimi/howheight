@@ -173,7 +173,7 @@ export function renderEntitySvg(item: ComparisonItem, chartScale: number): Rende
   const viewBoxStr = typeof viewBox === 'string'
     ? viewBox
     : viewBox
-      ? `${viewBox.minX} ${viewBox.minY} ${viewBox.width} ${viewBox.height}`
+      ? `${(viewBox as any).minX} ${(viewBox as any).minY} ${(viewBox as any).width} ${(viewBox as any).height}`
       : '0 0 100 100';
   const vbParts = viewBoxStr.split(/\s+/).map(Number);
   const vbX = vbParts[0] || 0;
