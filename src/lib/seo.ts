@@ -144,7 +144,7 @@ export function buildBlogPostingSchema(article: {
         url: `${SITE.siteUrl}/favicon.svg`,
       },
     },
-    image: article.image || `${SITE.siteUrl}/social-preview.png`,
+    image: article.image || SITE.defaultOgImage,
     articleSection: article.category,
   };
 }

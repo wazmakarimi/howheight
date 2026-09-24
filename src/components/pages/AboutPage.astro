@@ -13,6 +13,29 @@ interface Props {
 
 const { locale = 'en' } = Astro.props;
 const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/about/', locale)}`;
+
+const aboutSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'AboutPage',
+  'name': `${t(locale, 'footer.about')} HowHeight`,
+  'url': canonicalUrl,
+  'description': t(locale, 'about.desc'),
+  'mainEntity': {
+    '@type': 'Person',
+    'name': 'Firoz Khan',
+    'jobTitle': 'Full Stack Developer',
+    'url': `${SITE.siteUrl}/about/`,
+    'sameAs': [
+      'https://www.linkedin.com/in/firoz-khan-1153358a/',
+      'https://github.com/fkdigitalmedia',
+    ],
+    'worksFor': {
+      '@type': 'Organization',
+      'name': 'FK Digital Media',
+      'url': SITE.siteUrl,
+    },
+  },
+};
 ---
 
 <Layout
@@ -20,7 +43,9 @@ const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/about/', locale)}`;
   description={t(locale, 'about.desc')}
   canonicalUrl={canonicalUrl}
   locale={locale}
+  suppressDefaultSchema={true}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(aboutSchema)} slot="head" />
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
     <Breadcrumbs
       locale={locale}

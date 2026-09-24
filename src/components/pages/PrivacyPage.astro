@@ -12,6 +12,14 @@ interface Props {
 const { locale = 'en' } = Astro.props;
 const canonicalUrl = `${SITE.siteUrl}/privacy/`;
 const lastUpdated = 'September 24, 2026';
+
+const privacySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  'name': 'Privacy Policy',
+  'url': canonicalUrl,
+  'description': 'HowHeight privacy policy explaining data collection, analytics usage, cookie handling, and user privacy rights.',
+};
 ---
 
 <Layout
@@ -19,7 +27,9 @@ const lastUpdated = 'September 24, 2026';
   description="HowHeight privacy policy explaining data collection, analytics usage, cookie handling, and user privacy rights."
   canonicalUrl={canonicalUrl}
   locale={locale}
+  suppressDefaultSchema={true}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(privacySchema)} slot="head" />
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
     <Breadcrumbs
       locale={locale}

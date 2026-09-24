@@ -132,6 +132,7 @@ const faqs = [
   title={`${celebrity.name} Height – Height Comparison | HowHeight`}
   description={`How tall is ${celebrity.name}? Verified height: ${ftIn.formatted} (${celebrity.heightCm} cm). Compare ${celebrity.name}'s height side-by-side with other celebrities, humans, animals, and objects on HowHeight.`}
   canonicalUrl={canonical}
+  suppressDefaultSchema={true}
 >
   <script type="application/ld+json" set:html={JSON.stringify(personSchema)} slot="head" />
 

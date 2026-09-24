@@ -12,6 +12,14 @@ interface Props {
 const { locale = 'en' } = Astro.props;
 const canonicalUrl = `${SITE.siteUrl}/terms/`;
 const lastUpdated = 'September 24, 2026';
+
+const termsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  'name': 'Terms of Use',
+  'url': canonicalUrl,
+  'description': 'HowHeight terms of use outlining platform rules, measurement disclaimers, non-affiliation disclosures, and limitation of liability.',
+};
 ---
 
 <Layout
@@ -19,7 +27,9 @@ const lastUpdated = 'September 24, 2026';
   description="HowHeight terms of use outlining platform rules, measurement disclaimers, non-affiliation disclosures, and limitation of liability."
   canonicalUrl={canonicalUrl}
   locale={locale}
+  suppressDefaultSchema={true}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(termsSchema)} slot="head" />
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
     <Breadcrumbs
       locale={locale}

@@ -14,6 +14,8 @@ interface Props {
   ogImage?: string;
   locale?: Locale;
   noindex?: boolean;
+  type?: 'website' | 'article';
+  suppressDefaultSchema?: boolean;
 }
 
 const currentPath = Astro.url.pathname;
@@ -28,13 +30,35 @@ const {
   canonicalUrl = noindex ? undefined : defaultCanonical,
   ogImage = SITE.defaultOgImage,
   locale = resolvedLocale,
+  type = 'website',
+  suppressDefaultSchema = false,
 } = Astro.props;
 
 // Alternate hreflang tags for all supported languages + x-default (omit on private noindex pages)
 const alternateLinks = noindex ? [] : getAlternateLocaleLinks(currentPath);
 
-// JSON-LD Structured Data
-const webAppSchema = {
+// JSON-LD Structured Data: Only emit appropriate schemas for indexable content
+const isHome = currentPath === '/' || currentPath === `/${resolvedLocale}` || currentPath === `/${resolvedLocale}/`;
+
+const siteSchema = isHome && !noindex && !suppressDefaultSchema ? {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  'name': SITE.name,
+  'url': SITE.siteUrl,
+  'description': SITE.defaultDescription,
+  'publisher': {
+    '@type': 'Organization',
+    'name': SITE.name,
+    'url': SITE.siteUrl,
+    'logo': {
+      '@type': 'ImageObject',
+      'url': `${SITE.siteUrl}/favicon.svg`,
+    },
+  },
+} : null;
+
+const shouldEmitWebApp = !noindex && !suppressDefaultSchema && type !== 'article';
+const webAppSchema = shouldEmitWebApp ? {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
   'name': SITE.name,
@@ -48,7 +72,7 @@ const webAppSchema = {
     'price': '0',
     'priceCurrency': 'USD',
   },
-};
+} : null;
 ---
 
 <!doctype html>
@@ -126,7 +150,12 @@ const webAppSchema = {
     </script>
 
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
+    {siteSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(siteSchema)} />
+    )}
+    {webAppSchema && (
+      <script type="application/ld+json" set:html={JSON.stringify(webAppSchema)} />
+    )}
     <slot name="head" />
   </head>
   <body class="bg-slate-50 dark:bg-slate-900 font-sans text-slate-900 dark:text-slate-100 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen transition-colors duration-200">

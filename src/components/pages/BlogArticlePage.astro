@@ -44,6 +44,7 @@ const blogPostingSchema = buildBlogPostingSchema({
   canonicalUrl={canonicalUrl}
   locale={locale}
   type="article"
+  suppressDefaultSchema={true}
 >
   <!-- Schema.org BlogPosting JSON-LD -->
   <script type="application/ld+json" set:html={JSON.stringify(blogPostingSchema)} />

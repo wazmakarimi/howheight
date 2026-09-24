@@ -11,6 +11,14 @@ interface Props {
 
 const { locale = 'en' } = Astro.props;
 const canonicalUrl = `${SITE.siteUrl}/contact/`;
+
+const contactSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ContactPage',
+  'name': `Contact HowHeight`,
+  'url': canonicalUrl,
+  'description': 'Contact HowHeight to report height discrepancies, request image corrections, notify technical issues, or submit feedback.',
+};
 ---
 
 <Layout
@@ -18,7 +26,9 @@ const canonicalUrl = `${SITE.siteUrl}/contact/`;
   description="Contact HowHeight to report height discrepancies, request image corrections, notify technical issues, or submit feedback."
   canonicalUrl={canonicalUrl}
   locale={locale}
+  suppressDefaultSchema={true}
 >
+  <script type="application/ld+json" set:html={JSON.stringify(contactSchema)} slot="head" />
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12">
     <Breadcrumbs
       locale={locale}

@@ -41,9 +41,22 @@ const articleSchema = {
   '@type': 'Article',
   'headline': guide.title,
   'description': guide.metaDescription,
+  'image': SITE.defaultOgImage,
+  'datePublished': '2024-09-19',
+  'dateModified': '2026-09-24',
   'mainEntityOfPage': {
     '@type': 'WebPage',
     '@id': canonicalUrl,
+  },
+  'author': {
+    '@type': 'Person',
+    'name': 'Firoz Khan',
+    'jobTitle': 'Full Stack Developer',
+    'url': `${SITE.siteUrl}/about/`,
+    'sameAs': [
+      'https://www.linkedin.com/in/firoz-khan-1153358a/',
+      'https://github.com/fkdigitalmedia',
+    ],
   },
   'publisher': {
     '@type': 'Organization',
@@ -63,6 +76,7 @@ const articleSchema = {
   description={t(locale, 'howto.desc')}
   canonicalUrl={canonicalUrl}
   locale={locale}
+  suppressDefaultSchema={true}
 >
   <Fragment slot="head">
     <script type="application/ld+json" set:html={JSON.stringify(breadcrumbSchema)} />
