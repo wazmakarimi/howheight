@@ -8,6 +8,7 @@ export default {
   // Navigation
   'nav.home': 'ホーム',
   'nav.compare': '身長・高さ比較',
+  'nav.blog': 'ブログ',
   'nav.celebrities': '芸能人・有名人',
   'nav.anime': 'アニメ',
   'nav.films': '映画',

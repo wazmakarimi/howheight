@@ -7,7 +7,7 @@ const __dirname = path.dirname(__filename);
 const rootDir = path.resolve(__dirname, '..');
 const i18nDir = path.join(rootDir, 'src', 'i18n');
 
-const LOCALES = ['en', 'hi', 'es', 'fr', 'de', 'pt', 'ja', 'ko', 'ar'];
+const LOCALES = ['en', 'hi', 'es', 'fr', 'de', 'pt', 'ja', 'ko', 'ar', 'ru'];
 const MODULES = ['common', 'home', 'comparison', 'categories', 'seo'];
 
 console.log('HOWHEIGHT.ORG - i18n TRANSLATION VALIDATION');

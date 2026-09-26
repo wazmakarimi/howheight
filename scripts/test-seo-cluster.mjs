@@ -36,7 +36,7 @@ const clusterPages = [
   { path: 'height-comparison-couple', expectedH1: 'Couple Height Comparison', maxKb: 150 },
 ];
 
-const locales = ['hi', 'es', 'fr', 'de', 'pt', 'ja', 'ko', 'ar'];
+const locales = ['hi', 'es', 'fr', 'de', 'pt', 'ja', 'ko', 'ar', 'ru'];
 
 // Test Group 1: English Cluster Pages Integrity
 console.log('--- Test Group 1: Core Search Intent Pillar Pages ---');

@@ -8,6 +8,7 @@ export default {
   // Navigation
   'nav.home': '홈',
   'nav.compare': '키 비교',
+  'nav.blog': '블로그',
   'nav.celebrities': '연예인·유명인',
   'nav.anime': '애니메이션',
   'nav.films': '영화',

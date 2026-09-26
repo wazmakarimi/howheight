@@ -8,6 +8,7 @@ export default {
   // Navigation
   'nav.home': 'الرئيسية',
   'nav.compare': 'مقارنة الطول',
+  'nav.blog': 'المدونة',
   'nav.celebrities': 'المشاهير',
   'nav.anime': 'الأنمي',
   'nav.films': 'الأفلام والسينما',

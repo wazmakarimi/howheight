@@ -15,7 +15,7 @@ const EXPECTED_SLUGS = [
   'what-does-6-feet-look-like',
 ];
 
-const LOCALES = ['ar', 'de', 'es', 'fr', 'hi', 'ja', 'ko', 'pt'];
+const LOCALES = ['ar', 'de', 'es', 'fr', 'hi', 'ja', 'ko', 'pt', 'ru'];
 const PRODUCTION_ORIGIN = 'https://howheight.org';
 const FORBIDDEN_HOST = 'howheight.pages.dev';
 

@@ -60,6 +60,12 @@ import arComparison from './ar/comparison';
 import arCategories from './ar/categories';
 import arSeo from './ar/seo';
 
+import ruCommon from './ru/common';
+import ruHome from './ru/home';
+import ruComparison from './ru/comparison';
+import ruCategories from './ru/categories';
+import ruSeo from './ru/seo';
+
 type Dictionary = Record<string, string>;
 
 const DICTIONARIES: Record<Locale, Dictionary> = {
@@ -72,6 +78,7 @@ const DICTIONARIES: Record<Locale, Dictionary> = {
   ja: { ...jaCommon, ...jaHome, ...jaComparison, ...jaCategories, ...jaSeo },
   ko: { ...koCommon, ...koHome, ...koComparison, ...koCategories, ...koSeo },
   ar: { ...arCommon, ...arHome, ...arComparison, ...arCategories, ...arSeo },
+  ru: { ...ruCommon, ...ruHome, ...ruComparison, ...ruCategories, ...ruSeo },
 };
 
 /**

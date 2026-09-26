@@ -8,6 +8,7 @@ export const SUPPORTED_LOCALES = [
   'ja',
   'ko',
   'ar',
+  'ru',
 ] as const;
 
 export type Locale = (typeof SUPPORTED_LOCALES)[number];
@@ -18,7 +19,7 @@ export const DEFAULT_LOCALE: Locale = 'en';
  * Active locales with 100% complete translations ready for sitemap indexing.
  * Other locales are supported via fallback infrastructure.
  */
-export const ACTIVE_INDEXABLE_LOCALES: Locale[] = ['en', 'hi'];
+export const ACTIVE_INDEXABLE_LOCALES: Locale[] = ['en', 'hi', 'ru'];
 
 export interface LocaleInfo {
   code: Locale;
@@ -101,5 +102,13 @@ export const LOCALES: Record<Locale, LocaleInfo> = {
     dir: 'rtl',
     ogLocale: 'ar_AR',
     flag: '🇸🇦',
+  },
+  ru: {
+    code: 'ru',
+    name: 'Russian',
+    nativeName: 'Русский',
+    dir: 'ltr',
+    ogLocale: 'ru_RU',
+    flag: '🇷🇺',
   },
 };
