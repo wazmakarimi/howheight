@@ -471,13 +471,13 @@ const { locale = 'en' } = Astro.props;
       id="chart-viewport" 
       class="relative overflow-x-auto custom-scrollbar flex items-end min-h-[560px] h-[clamp(560px,72vh,800px)] border border-slate-200/80 rounded-2xl bg-gradient-to-b from-slate-50/70 via-white to-slate-50/40 px-1 sm:px-4"
     >
-      <!-- Fixed / Sticky Ruler on the left -->
+      <!-- Fixed / Sticky Ruler on the left (Metric cm) -->
       <div class="sticky left-0 z-20 flex-shrink-0 h-full flex flex-col justify-end bg-white/90 backdrop-blur-sm border-r border-slate-200/80 shadow-soft-sm rounded-l-xl">
-        <HeightRuler />
+        <HeightRuler side="left" />
       </div>
 
       <!-- Models Stage -->
-      <div id="models-stage" class="relative flex-1 flex items-end min-w-[360px] h-full pl-3 sm:pl-6 pr-4">
+      <div id="models-stage" class="relative flex-1 flex items-end min-w-[360px] h-full pl-3 sm:pl-6 pr-3 sm:pr-6">
         <!-- Subtle Horizontal Grid Lines across stage -->
         <div id="chart-grid-lines" class="absolute inset-0 pointer-events-none z-0"></div>
 
@@ -495,7 +495,15 @@ const { locale = 'en' } = Astro.props;
           <div class="absolute left-2 -bottom-5 text-[10px] font-bold uppercase tracking-wider text-slate-500">
             0 cm / Floor Baseline
           </div>
+          <div class="absolute right-2 -bottom-5 text-[10px] font-bold uppercase tracking-wider text-slate-500">
+            0 ft / Floor Baseline
+          </div>
         </div>
+      </div>
+
+      <!-- Fixed / Sticky Ruler on the right (Imperial ft) -->
+      <div class="sticky right-0 z-20 flex-shrink-0 h-full flex flex-col justify-end bg-white/90 backdrop-blur-sm border-l border-slate-200/80 shadow-soft-sm rounded-r-xl">
+        <HeightRuler side="right" />
       </div>
 
       <!-- Empty State Container (shown when items list is empty) -->

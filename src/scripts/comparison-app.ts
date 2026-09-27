@@ -82,6 +82,7 @@ class HeightComparisonApp {
   private modelsStage!: HTMLElement;
   private chartGridLines!: HTMLElement;
   private rulerTicksContainer!: HTMLElement;
+  private rulerTicksRightContainer: HTMLElement | null = null;
   private chartEmptyState!: HTMLElement;
   private chartTotalCount!: HTMLElement;
   private tooltipEl!: HTMLElement;
@@ -274,6 +275,7 @@ class HeightComparisonApp {
     this.modelsStage = document.getElementById('models-stage') as HTMLElement;
     this.chartGridLines = document.getElementById('chart-grid-lines') as HTMLElement;
     this.rulerTicksContainer = document.getElementById('ruler-ticks') as HTMLElement;
+    this.rulerTicksRightContainer = document.getElementById('ruler-ticks-right');
     this.chartEmptyState = document.getElementById('chart-empty-state') as HTMLElement;
     this.chartTotalCount = document.getElementById('chart-total-count') as HTMLElement;
     this.tooltipEl = document.getElementById('chart-tooltip') as HTMLElement;
@@ -2219,6 +2221,9 @@ class HeightComparisonApp {
       this.modelsContainer.innerHTML = '';
       this.chartGridLines.innerHTML = '';
       this.rulerTicksContainer.innerHTML = '';
+      if (this.rulerTicksRightContainer) {
+        this.rulerTicksRightContainer.innerHTML = '';
+      }
       return;
     }
 
@@ -2227,9 +2232,9 @@ class HeightComparisonApp {
     const visualHeightPx = this.getVisualHeightPx();
     const { scale, rulerMaxCm } = calculateScale(items, visualHeightPx);
 
-    const ticks = generateRulerTicks(rulerMaxCm, this.state.rulerUnit);
-    this.renderRuler(ticks, scale);
+    this.renderRulers(scale, rulerMaxCm);
 
+    const ticks = generateRulerTicks(rulerMaxCm, this.state.rulerUnit);
     this.chartGridLines.innerHTML = ticks
       .filter((t) => t.isMajor)
       .map((t) => {
@@ -2521,13 +2526,18 @@ class HeightComparisonApp {
     });
   }
 
-  private renderRuler(ticks: ReturnType<typeof generateRulerTicks>, scale: number) {
+  private renderRulers(scale: number, rulerMaxCm: number) {
     if (!this.rulerTicksContainer) return;
 
-    const maxCm = ticks.length > 0 ? ticks[ticks.length - 1].cm : 200;
-    this.rulerTicksContainer.style.height = `${maxCm * scale}px`;
+    const isCmActive = this.state.rulerUnit === 'cm';
+    const isFtActive = this.state.rulerUnit === 'ft';
 
-    this.rulerTicksContainer.innerHTML = ticks
+    // 1. Left Ruler: Metric (cm)
+    const cmTicks = generateRulerTicks(rulerMaxCm, 'cm');
+    const maxCmLeft = cmTicks.length > 0 ? cmTicks[cmTicks.length - 1].cm : 200;
+    this.rulerTicksContainer.style.height = `${maxCmLeft * scale}px`;
+
+    this.rulerTicksContainer.innerHTML = cmTicks
       .map((tick) => {
         const bottomPx = tick.cm * scale;
         if (tick.isMajor) {
@@ -2536,8 +2546,8 @@ class HeightComparisonApp {
               class="absolute right-0 flex items-center justify-end w-full"
               style="bottom: ${bottomPx}px;"
             >
-              <span class="text-[10px] font-bold text-slate-500 mr-1.5 whitespace-nowrap">${tick.label}</span>
-              <div class="w-2.5 h-[1.5px] bg-slate-400"></div>
+              <span class="text-[10px] ${isCmActive ? 'font-bold text-slate-700' : 'font-medium text-slate-400'} mr-1.5 whitespace-nowrap">${tick.label}</span>
+              <div class="w-2.5 h-[1.5px] ${isCmActive ? 'bg-slate-500' : 'bg-slate-300'}"></div>
             </div>
           `;
         } else {
@@ -2552,6 +2562,39 @@ class HeightComparisonApp {
         }
       })
       .join('');
+
+    // 2. Right Ruler: Imperial (ft)
+    if (this.rulerTicksRightContainer) {
+      const ftTicks = generateRulerTicks(rulerMaxCm, 'ft');
+      const maxCmRight = ftTicks.length > 0 ? ftTicks[ftTicks.length - 1].cm : rulerMaxCm;
+      this.rulerTicksRightContainer.style.height = `${maxCmRight * scale}px`;
+
+      this.rulerTicksRightContainer.innerHTML = ftTicks
+        .map((tick) => {
+          const bottomPx = tick.cm * scale;
+          if (tick.isMajor) {
+            return `
+              <div 
+                class="absolute left-0 flex items-center justify-start w-full"
+                style="bottom: ${bottomPx}px;"
+              >
+                <div class="w-2.5 h-[1.5px] ${isFtActive ? 'bg-slate-500' : 'bg-slate-300'}"></div>
+                <span class="text-[10px] ${isFtActive ? 'font-bold text-slate-700' : 'font-medium text-slate-400'} ml-1.5 whitespace-nowrap">${tick.label}</span>
+              </div>
+            `;
+          } else {
+            return `
+              <div 
+                class="absolute left-0 flex items-center justify-start w-full"
+                style="bottom: ${bottomPx}px;"
+              >
+                <div class="w-1.5 h-[1px] bg-slate-300"></div>
+              </div>
+            `;
+          }
+        })
+        .join('');
+    }
   }
 
   private attachTooltipListeners() {

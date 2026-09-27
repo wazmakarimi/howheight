@@ -76,7 +76,7 @@ export function generateRulerTicks(rulerMaxCm: number, unit: RulerUnit): RulerTi
       const remainingInches = inch % 12;
       const isMajor = remainingInches === 0;
 
-      const label = remainingInches === 0 ? `${feet}'0"` : `${feet}'6"`;
+      const label = remainingInches === 0 ? `${feet} ft` : `${feet}'6"`;
 
       ticks.push({
         cm,

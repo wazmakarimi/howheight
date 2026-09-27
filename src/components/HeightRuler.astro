@@ -1,9 +1,18 @@
 ---
+interface Props {
+  side?: 'left' | 'right';
+}
+
+const { side = 'left' } = Astro.props;
+const isLeft = side === 'left';
 ---
 
-<div id="chart-ruler-container" class="relative flex flex-col justify-end w-14 sm:w-16 select-none pointer-events-none pr-1 h-full mb-[36px]">
+<div 
+  id={isLeft ? 'chart-ruler-container' : 'chart-ruler-right-container'} 
+  class={`relative flex flex-col justify-end w-14 sm:w-16 select-none pointer-events-none ${isLeft ? 'pr-1' : 'pl-1'} h-full mb-[36px]`}
+>
   <!-- Ticks and numbers populated dynamically based on chart scale -->
-  <div id="ruler-ticks" class="relative w-full h-full">
+  <div id={isLeft ? 'ruler-ticks' : 'ruler-ticks-right'} class="relative w-full h-full">
     <!-- Dynamic tick elements -->
   </div>
 </div>

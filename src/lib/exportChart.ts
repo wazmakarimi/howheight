@@ -215,11 +215,12 @@ export async function downloadChartAsPng(
   ctx.font = '14px Inter, system-ui, sans-serif';
   ctx.fillText('Human, Celebrity, Animal & Object Comparison • Accurate Scale', 40, 76);
 
-  // 3. Draw Horizontal Grid Lines and Ruler Ticks
-  const ticks = generateRulerTicks(rulerMaxCm, rulerUnit);
+  // 3. Draw Horizontal Grid Lines and Ruler Ticks (Dual Metric cm & Imperial ft)
+  const cmTicks = generateRulerTicks(rulerMaxCm, 'cm');
+  const ftTicks = generateRulerTicks(rulerMaxCm, 'ft');
 
   ctx.lineWidth = 1;
-  ticks.forEach((tick) => {
+  cmTicks.forEach((tick) => {
     const y = chartBottom - tick.cm * scale;
     if (y < chartTop - 10) return;
 
@@ -230,20 +231,42 @@ export async function downloadChartAsPng(
     ctx.lineTo(chartEndX, y);
     ctx.stroke();
 
-    // Ruler tick mark
+    // Left ruler tick mark (cm)
     ctx.strokeStyle = '#94a3b8';
     ctx.beginPath();
     ctx.moveTo(rulerLeft + rulerWidth - (tick.isMajor ? 12 : 6), y);
     ctx.lineTo(rulerLeft + rulerWidth, y);
     ctx.stroke();
 
-    // Ruler text
+    // Left ruler text (cm)
     if (tick.label) {
       ctx.fillStyle = '#64748b';
       ctx.font = tick.isMajor ? '12px Inter, sans-serif' : '10px Inter, sans-serif';
       ctx.textAlign = 'right';
       ctx.textBaseline = 'middle';
       ctx.fillText(tick.label, rulerLeft + rulerWidth - 16, y);
+    }
+  });
+
+  // Right ruler tick marks (ft)
+  ftTicks.forEach((tick) => {
+    const y = chartBottom - tick.cm * scale;
+    if (y < chartTop - 10) return;
+
+    // Right ruler tick mark (ft)
+    ctx.strokeStyle = '#94a3b8';
+    ctx.beginPath();
+    ctx.moveTo(chartEndX, y);
+    ctx.lineTo(chartEndX + (tick.isMajor ? 12 : 6), y);
+    ctx.stroke();
+
+    // Right ruler text (ft)
+    if (tick.label) {
+      ctx.fillStyle = '#64748b';
+      ctx.font = tick.isMajor ? '12px Inter, sans-serif' : '10px Inter, sans-serif';
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(tick.label, chartEndX + 16, y);
     }
   });
 
@@ -259,6 +282,8 @@ export async function downloadChartAsPng(
   ctx.font = 'bold 12px Inter, sans-serif';
   ctx.textAlign = 'left';
   ctx.fillText('FLOOR (0 cm)', rulerLeft, chartBottom + 20);
+  ctx.textAlign = 'right';
+  ctx.fillText('(0 ft) FLOOR', chartEndX, chartBottom + 20);
 
   // 5. Draw Entities (Figures, Animals, Objects)
   for (let i = 0; i < metrics.length; i++) {
