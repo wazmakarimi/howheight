@@ -1,0 +1,109 @@
+---
+import { t } from '../i18n';
+import type { Locale } from '../i18n/locales';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+---
+
+<div
+  id="cookie-banner"
+  role="region"
+  aria-label="Cookie Consent Banner"
+  class="fixed bottom-3 inset-x-3 sm:inset-x-auto sm:right-5 sm:bottom-5 sm:max-w-md z-50 bg-white/95 dark:bg-slate-900/95 backdrop-blur-md border border-slate-200/90 dark:border-slate-800 rounded-2xl shadow-2xl p-4 sm:p-5 text-slate-800 dark:text-slate-200 transition-all duration-300 transform opacity-0 translate-y-4 pointer-events-none"
+>
+  <div class="flex items-start gap-3.5">
+    <div class="flex-shrink-0 w-9 h-9 rounded-xl bg-brand-500/10 dark:bg-brand-400/10 text-brand-600 dark:text-brand-400 flex items-center justify-center">
+      <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M12 2a10 10 0 1 0 10 10 4 4 0 0 1-5-5 4 4 0 0 1-5-5" />
+        <path d="M8.5 8.5v.01" />
+        <path d="M7 13v.01" />
+        <path d="M12 15v.01" />
+        <path d="M15 11v.01" />
+      </svg>
+    </div>
+    <div class="flex-1 min-w-0">
+      <h3 class="text-sm font-semibold text-slate-900 dark:text-white leading-tight">
+        {t(locale, 'cookie.title')}
+      </h3>
+      <p class="mt-1 text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
+        {t(locale, 'cookie.desc')}{' '}
+        <a href="/privacy/" class="text-brand-600 dark:text-brand-400 underline hover:text-brand-700 dark:hover:text-brand-300 font-medium inline-block">
+          {t(locale, 'cookie.policy')}
+        </a>
+      </p>
+      <div class="mt-3.5 flex items-center gap-2 flex-wrap sm:flex-nowrap">
+        <button
+          type="button"
+          id="cookie-accept-btn"
+          class="flex-1 sm:flex-initial px-4 py-2 text-xs font-semibold rounded-lg bg-brand-600 hover:bg-brand-700 active:scale-[0.98] text-white transition-all shadow-sm focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+        >
+          {t(locale, 'cookie.accept')}
+        </button>
+        <button
+          type="button"
+          id="cookie-essential-btn"
+          class="flex-1 sm:flex-initial px-3.5 py-2 text-xs font-medium rounded-lg border border-slate-200 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 active:scale-[0.98] transition-all focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 dark:focus:ring-offset-slate-900"
+        >
+          {t(locale, 'cookie.essential')}
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var banner = document.getElementById('cookie-banner');
+    if (!banner) return;
+
+    try {
+      var consent = localStorage.getItem('howheight_cookie_consent');
+      if (!consent) {
+        banner.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+        banner.classList.add('opacity-100', 'translate-y-0');
+      }
+    } catch (e) {
+      // In case localStorage is blocked/restricted, keep hidden
+    }
+
+    function setConsent(choice) {
+      try {
+        localStorage.setItem('howheight_cookie_consent', choice);
+      } catch (e) {}
+
+      if (typeof window.gtag === 'function') {
+        window.gtag('consent', 'update', {
+          'analytics_storage': choice === 'accepted' ? 'granted' : 'denied',
+          'ad_storage': choice === 'accepted' ? 'granted' : 'denied'
+        });
+      }
+
+      banner.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+      banner.classList.remove('opacity-100', 'translate-y-0');
+      setTimeout(function () {
+        if (banner.parentNode) {
+          banner.parentNode.removeChild(banner);
+        }
+      }, 350);
+    }
+
+    var acceptBtn = document.getElementById('cookie-accept-btn');
+    var essentialBtn = document.getElementById('cookie-essential-btn');
+
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', function () {
+        setConsent('accepted');
+      });
+    }
+
+    if (essentialBtn) {
+      essentialBtn.addEventListener('click', function () {
+        setConsent('essential');
+      });
+    }
+  })();
+</script>

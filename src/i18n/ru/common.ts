@@ -80,4 +80,11 @@ export default {
   'error.pageNotFound': 'Страница не найдена',
   'error.pageNotFoundDesc': 'Запрошенная страница не существует или была перемещена.',
   'error.backHome': 'Вернуться на главную',
+
+  // Cookie Consent Banner
+  'cookie.title': 'Мы уважаем вашу конфиденциальность',
+  'cookie.desc': 'HowHeight использует основные файлы cookie и локальное хранилище для сохранения настроек и анонимного анализа работы сайта.',
+  'cookie.accept': 'Принять все',
+  'cookie.essential': 'Только необходимые',
+  'cookie.policy': 'Политика конфиденциальности и cookie',
 };

@@ -80,4 +80,11 @@ export default {
   'error.pageNotFound': 'पृष्ठ नहीं मिला',
   'error.pageNotFoundDesc': 'आप जो पृष्ठ खोज रहे हैं वह मौजूद नहीं है या हटा दिया गया है।',
   'error.backHome': 'होम पर लौटें',
+
+  // Cookie Consent Banner
+  'cookie.title': 'हम आपकी गोपनीयता का सम्मान करते हैं',
+  'cookie.desc': 'HowHeight आपकी प्राथमिकताओं को सहेजने और अनाम साइट प्रदर्शन का विश्लेषण करने के लिए कुकीज़ और लोकल स्टोरेज का उपयोग करता है।',
+  'cookie.accept': 'सभी स्वीकार करें',
+  'cookie.essential': 'केवल आवश्यक',
+  'cookie.policy': 'गोपनीयता और कुकी नीति',
 };

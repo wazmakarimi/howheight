@@ -80,4 +80,12 @@ export default {
   'error.pageNotFound': 'الصفحة غير موجودة',
   'error.pageNotFoundDesc': 'الصفحة التي تبحث عنها غير موجودة أو تم نقلها.',
   'error.backHome': 'العودة للرئيسية',
+
+  // Cookie Consent Banner
+  'cookie.title': 'نحن نحترم خصوصيتك',
+  'cookie.desc': 'يستخدم HowHeight ملفات تعريف الارتباط الأساسية والتخزين المحلي لحفظ تفضيلاتك وتحليل أداء الموقع بشكل مجهول.',
+  'cookie.accept': 'قبول الكل',
+  'cookie.essential': 'الأساسية فقط',
+  'cookie.policy': 'سياسة الخصوصية وملفات تعريف الارتباط',
 };
+

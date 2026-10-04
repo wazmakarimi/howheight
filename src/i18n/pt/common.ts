@@ -80,4 +80,11 @@ export default {
   'error.pageNotFound': 'Página Não Encontrada',
   'error.pageNotFoundDesc': 'A página que você procura não existe ou foi movida.',
   'error.backHome': 'Voltar ao Início',
+
+  // Cookie Consent Banner
+  'cookie.title': 'Valorizamos sua privacidade',
+  'cookie.desc': 'O HowHeight utiliza cookies essenciais e armazenamento local para salvar suas preferências e analisar o desempenho anônimo do site.',
+  'cookie.accept': 'Aceitar todos',
+  'cookie.essential': 'Apenas essenciais',
+  'cookie.policy': 'Política de Privacidade e Cookies',
 };

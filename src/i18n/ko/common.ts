@@ -80,4 +80,12 @@ export default {
   'error.pageNotFound': '페이지를 찾을 수 없습니다',
   'error.pageNotFoundDesc': '요청하신 페이지가 존재하지 않거나 이동되었습니다.',
   'error.backHome': '홈으로 돌아가기',
+
+  // Cookie Consent Banner
+  'cookie.title': '개인정보를 소중히 생각합니다',
+  'cookie.desc': 'HowHeight는 사용자 환경 설정 저장 및 익명 사이트 성능 분석을 위해 필수 쿠키와 로컬 스토리지를 사용합니다.',
+  'cookie.accept': '모두 동의',
+  'cookie.essential': '필수 항목만',
+  'cookie.policy': '개인정보 및 쿠키 정책',
 };
+
