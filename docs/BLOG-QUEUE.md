@@ -11,7 +11,7 @@ HowHeight website itself wherever they help. No thin SEO filler.
 ## Ranked queue (from SEO keyword research, 2026-10-05)
 
 - [x] #1 `kpop-idol-height-comparison` — K-Pop Idol Height Comparison: BTS, TXT, SEVENTEEN & Stray Kids Visualized (celebrities) — published 2026-10-05
-- [ ] #2 `wnba-vs-nba-height-comparison` — WNBA vs NBA Height Comparison: Average Player Heights by Position (sports)
+- [x] #2 `wnba-vs-nba-height-comparison` — WNBA vs NBA Height Comparison: Average Player Heights by Position (sports) — published 2026-10-05
 - [ ] #3 `celebrity-couples-biggest-height-differences` — Celebrity Couples With the Biggest Height Differences (celebrities)
 - [ ] #4 `average-nfl-player-height-by-position` — Average NFL Player Height by Position (sports)
 - [ ] #5 `what-does-5ft10-look-like` — What Does 5'10" (178 cm) Look Like? Real-World Visual Height Guide (scale)

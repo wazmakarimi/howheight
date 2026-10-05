@@ -840,4 +840,205 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['dwayne-johnson-height-comparison', 'what-does-6-feet-look-like', 'messi-vs-ronaldo-height-comparison'],
   },
+  // 8. WNBA VS NBA HEIGHT COMPARISON
+  {
+    slug: 'wnba-vs-nba-height-comparison',
+    title: 'WNBA vs NBA Height Comparison: Average Player Heights by Position (2026)',
+    h1: 'WNBA vs NBA Height Comparison: Average Player Heights by Position',
+    description:
+      'How tall are WNBA players compared to NBA players? Compare league averages, position-by-position heights, and the tallest and shortest players in both leagues — visualised to scale.',
+    category: 'sports',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-05T09:00:00Z',
+    updatedDate: '2026-10-05T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'The average NBA player stands around 6 ft 7 in (201 cm), while the average WNBA player stands around 6 ft 0 in to 6 ft 1 in (183–185 cm) — a gap of roughly 6 inches. The gap is consistent at every position: NBA centres average about 6 ft 11 in, WNBA centres about 6 ft 4 in, and even the shortest WNBA position (point guard, ~5 ft 9 in) sits well above the average woman.',
+      keyTakeaway:
+        'Both leagues tower over the general population — the average NBA player is 10 inches taller than the average American man, and the average WNBA player is nearly 9 inches taller than the average American woman. The NBA–WNBA gap simply mirrors the male–female height difference seen worldwide.',
+      dataPoints: [
+        { label: 'Average NBA player height', value: '~6 ft 7 in (201 cm)' },
+        { label: 'Average WNBA player height', value: '~6 ft 1 in (185 cm)' },
+        { label: 'Tallest WNBA player ever', value: 'Margo Dydek — 7 ft 2 in (218 cm)' },
+        { label: 'Tallest NBA players ever', value: 'Manute Bol & Gheorghe Muresan — 7 ft 7 in (231 cm)' },
+        { label: 'Shortest NBA player ever', value: 'Muggsy Bogues — 5 ft 3 in (160 cm)' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 221, label: 'Victor Wembanyama' },
+      { category: 'human', id: 'female', customHeightCm: 218, label: 'Margo Dydek' },
+      { category: 'human', id: 'female', customHeightCm: 206, label: 'Brittney Griner' },
+      { category: 'human', id: 'male', customHeightCm: 199, label: 'Average NBA player' },
+      { category: 'human', id: 'female', customHeightCm: 185, label: 'Average WNBA player' },
+      { category: 'human', id: 'male', customHeightCm: 160, label: 'Muggsy Bogues' },
+      { category: 'human', id: 'female', customHeightCm: 157, label: 'Shannon Bobbitt' },
+    ],
+    toolActionTitle: 'Compare the leagues side-by-side',
+    toolActionDescription:
+      'The visualiser above is preloaded with the key heights from this article. Add your own height and see exactly where you stand next to the average NBA and WNBA player, Victor Wembanyama, Margo Dydek and Brittney Griner.',
+    comparisonTable: {
+      caption: 'Average player height by position: NBA vs WNBA (2024–25 / 2024 season data)',
+      headers: ['Position', 'NBA average', 'WNBA average', 'Gap'],
+      rows: [
+        ['Point guard', '6 ft 1 in – 6 ft 4 in (185–193 cm)', '5 ft 7 in – 5 ft 9 in (170–175 cm)', '~5 in'],
+        ['Shooting guard', '6 ft 5 in – 6 ft 7 in (196–201 cm)', '5 ft 8 in – 5 ft 11 in (173–180 cm)', '~6 in'],
+        ['Small forward', '6 ft 6 in – 6 ft 9 in (198–206 cm)', '5 ft 10 in – 6 ft 0 in (178–183 cm)', '~7 in'],
+        ['Power forward', '6 ft 9 in – 6 ft 11 in (206–211 cm)', '6 ft 0 in – 6 ft 2 in (183–188 cm)', '~8 in'],
+        ['Center', '~6 ft 11 in (211 cm)', '~6 ft 4 in – 6 ft 5 in (194–196 cm)', '~6 in'],
+        ['League average', '~6 ft 7 in (201 cm)', '~6 ft 0 in – 6 ft 1 in (183–185 cm)', '~6 in'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'league-averages-headline',
+        heading: 'The Headline Numbers: ~6 ft 7 in vs ~6 ft 1 in',
+        subheading: 'Six inches — that is the whole story, and it repeats at every position.',
+        paragraphs: [
+          'Entering the 2024–25 season, the NBA league office roster survey put the average player at 78.54 inches — just under 6 ft 7 in (about 201 cm). Thirty-nine players stood 7 ft or taller and only twelve were 6 ft or shorter, out of roughly 560 rostered players. The figure sits squarely in the 6 ft 6 in to 6 ft 7 in band the league has occupied for four decades.',
+          'The WNBA average is most commonly reported at 6 ft 0 in to 6 ft 1 in (183–185 cm), with ESPN putting the league median at 6 ft 1 in for the 2024 season. That leaves a gap of roughly 6 inches between the two leagues — remarkably close to the ~5-inch average height difference between adult men and women in the general US population.',
+          'Here is the striking part: the NBA–WNBA gap is not a quirk of basketball — it is biology. Both leagues select for the tallest athletes available, so the same population-level difference that separates men from women shows up between the leagues at nearly identical magnitude.',
+        ],
+        image: {
+          src: '/assets/blog/wnba-vs-nba-height-comparison/league-averages.png',
+          alt: 'Height comparison chart showing the average NBA player at 199 cm, average WNBA player at 185 cm, average US man at 175 cm and average US woman at 162 cm',
+          caption: 'League averages visualised to scale against the average American man (175 cm) and woman (162 cm).',
+        },
+        callout: {
+          title: 'Perspective',
+          text: 'The average WNBA player (6 ft 1 in) would tower over 99% of women — and is taller than the average American man by a clear 4 inches.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'nba-height-by-position',
+        heading: 'NBA Height by Position: From 6 ft 3 in Point Guards to 7 ft Centres',
+        subheading: 'Point guards have never been taller — but the rest of the league is slightly down from the 1980s peak.',
+        paragraphs: [
+          'Height in the NBA follows a clean ladder by position. Point guards, the traditional floor generals, average between 6 ft 1 in and 6 ft 4 in (185–193 cm) — and a 2024 study found the position at its tallest ever, 6 ft 2.4 in on average. Shooting guards run 6 ft 5 in to 6 ft 7 in, small forwards 6 ft 6 in to 6 ft 9 in, power forwards 6 ft 9 in to 6 ft 11 in, and centres sit at about 6 ft 11 in (211 cm).',
+          'There is an interesting wrinkle in the data. Before the 2019–20 season, the NBA required every team to certify exact barefoot heights — no more shoes-on measurements or rounded-up listings. Fifty-seven players were officially re-listed, most of them losing an inch or two overnight. So part of the "players are getting shorter" story is really "the ruler finally got honest."',
+          'Even so, the long-term trend is real: the league peaked at 6 ft 7.04 in in 1987, slid to 6 ft 6.33 in in 2021, and has ticked back up to about 6 ft 6.5 in–6 ft 7 in in the last two seasons as a new wave of true seven-footers — led by Victor Wembanyama — entered the league.',
+        ],
+        callout: {
+          title: 'The Wembanyama effect',
+          text: 'At 7 ft 3 in (221 cm), Victor Wembanyama is the tallest active star in the NBA — and a throwback: the league had been shrinking its centres for years before he arrived.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'wnba-height-by-position',
+        heading: 'WNBA Height by Position: Guards at 5 ft 9 in, Centres at 6 ft 4 in',
+        subheading: 'The league has grown half a foot per decade since 1997.',
+        paragraphs: [
+          'WNBA positions scale down from the centre spot just like the NBA, only shifted roughly six inches lower. Centres average around 6 ft 4 in to 6 ft 5 in (194–196 cm), forwards around 6 ft 2 in (188 cm), and guards around 5 ft 9 in (175 cm). The shortest guards — like 5 ft 7 in Crystal Dangerfield — survive on quickness, but even they would be tall by everyday standards.',
+          'The most famous WNBA guard right now, Caitlin Clark, is listed at 6 ft 0 in (183 cm) — a full three inches above the average guard. That edge shows up constantly in her game: she can see and pass over defenders, shoot with a higher release point, and she rebounds (over 5 per game as a rookie) like a much bigger player.',
+          'The league itself is growing taller. From an average of 5 ft 11 in in the 1997–2002 era, the WNBA has climbed to roughly 6 ft 1 in today — about 5 inches in three decades, driven by international talent pipelines and better youth development. The 2024 draft class pushed it further: more than a third of first-round picks stood 6 ft 5 in or taller.',
+        ],
+        callout: {
+          title: 'Growth trend',
+          text: 'The WNBA has added roughly 5 inches to its average player height since the inaugural 1997 season — from 5 ft 11 in to about 6 ft 1 in.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'tallest-and-shortest-extremes',
+        heading: 'The Extremes: 7 ft 7 in Giants and 5 ft 2 in Guards',
+        subheading: 'Two feet separate the tallest and shortest players in each league.',
+        paragraphs: [
+          'The NBA ceiling belongs jointly to Manute Bol and Gheorghe Muresan at 7 ft 7 in (231 cm) — among the tallest humans ever recorded. The tallest active NBA player is Victor Wembanyama at about 7 ft 3 in (221 cm), with fellow youngster Zach Edey right beside him. At the other end, 5 ft 3 in (160 cm) Muggsy Bogues played fourteen NBA seasons as a starting point guard, proving the league has room for outliers at both ends.',
+          'The WNBA ceiling is Margo Dydek: the Polish centre drafted first overall in 1998 stood 7 ft 2 in (218 cm), won eight straight blocks titles, and remains the only true seven-footer in league history. Today\'s tallest is Brittney Griner at 6 ft 9 in (206 cm), who made dunking a regular WNBA occurrence. The shortest WNBA players ever — Shannon Bobbitt and Tina Nicholson at 5 ft 2 in (157 cm) — show the same lesson as Bogues: elite skill and quickness can outweigh a two-foot height deficit.',
+          'Note how the extremes mirror each other: tallest NBA player (7 ft 7 in) vs tallest WNBA player (7 ft 2 in) — five inches apart; shortest NBA (5 ft 3 in) vs shortest WNBA (5 ft 2 in) — one inch apart. The male–female height difference is visible even at the outer edges of the bell curve.',
+        ],
+        image: {
+          src: '/assets/blog/wnba-vs-nba-height-comparison/height-extremes.png',
+          alt: 'Height comparison chart showing Victor Wembanyama at 221 cm, Margo Dydek at 218 cm, Brittney Griner at 206 cm, Muggsy Bogues at 160 cm and Shannon Bobbitt at 157 cm',
+          caption: 'The outer edges of both leagues: 64 cm separate the tallest and shortest players in the combined history of the NBA and WNBA.',
+        },
+      },
+      {
+        id: 'why-the-gap-exists',
+        heading: 'Why the Gap Exists — and Why It Matters Less Than You Think',
+        subheading: 'Height opens the door; skill keeps you in the room.',
+        paragraphs: [
+          'The gap is almost entirely explained by the underlying population difference: American men average about 5 ft 9 in, American women about 5 ft 4 in. Both leagues draft from the extreme right tail of their respective distributions — the average NBA player is roughly ten inches taller than the average man, and the average WNBA player nearly nine inches taller than the average woman. Selection pressure is doing the same job in both leagues.',
+          'What height buys is real but bounded. Taller players shoot over defenders, grab more rebounds, and block more shots — which is why centres are the tallest players in both leagues. But height is a starting advantage, not a guarantee: the 2024 study showing shrinking centres coincided with the three-point era, where shooting and defensive versatility matter more than an extra inch at the rim.',
+          'So the honest comparison is not "NBA taller than WNBA" — it is that both leagues are populated by athletes who would be extraordinary outliers anywhere else. A 6 ft 1 in WNBA guard and a 6 ft 7 in NBA forward are equally remarkable: each stands about as far above their population average as the other.',
+        ],
+        callout: {
+          title: 'The real takeaway',
+          text: 'Relative to their own populations, NBA and WNBA players are equally extreme. The six-inch league gap is the same gap you would find comparing any random group of tall men to any random group of tall women.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How much taller are NBA players than WNBA players?',
+        answer: 'On average, about 6 inches. The average NBA player is roughly 6 ft 7 in (201 cm) and the average WNBA player is roughly 6 ft 0 in to 6 ft 1 in (183–185 cm). The gap is consistent at every position, from point guard to centre.',
+      },
+      {
+        question: 'What is the average height of an NBA player?',
+        answer: 'Entering the 2024–25 season, the NBA roster survey put the average at 78.54 inches — just under 6 ft 7 in (about 201 cm). 39 players stood 7 ft or taller, and only 12 were 6 ft or shorter.',
+      },
+      {
+        question: 'What is the average height of a WNBA player?',
+        answer: 'Roughly 6 ft 0 in to 6 ft 1 in (183–185 cm), with ESPN putting the league median at 6 ft 1 in for the 2024 season. Guards average about 5 ft 9 in, forwards about 6 ft 2 in, and centres about 6 ft 4 in to 6 ft 5 in.',
+      },
+      {
+        question: 'Who is the tallest WNBA player ever?',
+        answer: 'Margo Dydek at 7 ft 2 in (218 cm). The Polish centre, drafted first overall in 1998, won eight blocks titles and remains the only true seven-footer in WNBA history. The tallest active WNBA player is Brittney Griner at 6 ft 9 in (206 cm).',
+      },
+      {
+        question: 'Who is the tallest player in the NBA right now?',
+        answer: 'Victor Wembanyama at about 7 ft 3 in (221 cm) is the tallest active NBA star, with rookie Zach Edey also listed above 7 ft 3 in. The tallest players in NBA history are Manute Bol and Gheorghe Muresan, both 7 ft 7 in (231 cm).',
+      },
+      {
+        question: 'Who is the shortest WNBA player ever?',
+        answer: 'Shannon Bobbitt and Tina Nicholson, both 5 ft 2 in (157 cm), share the record as the shortest players in WNBA history. The shortest NBA player ever is Muggsy Bogues at 5 ft 3 in (160 cm), who played 14 seasons.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Sports Illustrated — "What\'s the Average Height of an NBA Player in 2025?"',
+        url: 'https://www.si.com/nba/what-s-the-average-height-of-an-nba-player-in-2025-01jt27xeq9tz',
+        description: 'League roster survey data: 2024–25 average 78.54 in, 39 players 7 ft+, 12 players 6 ft or shorter; 2024 study on position heights.',
+      },
+      {
+        title: 'SportsDunia — "Average Height of NBA Players in 2025: By Position and Trends"',
+        url: 'https://www.sportsdunia.com/nba-analysis/average-height-of-nba-player',
+        description: 'NBA average height by position (PG 6 ft 1 in–6 ft 4 in through C 6 ft 11 in) and team-by-team breakdown for 2024–25.',
+      },
+      {
+        title: 'FactsFigs — "Is Average NBA Player Height Really Falling, or Did the Ruler Change?" (2026)',
+        url: 'https://factsfigs.com/projects/sports-world/is-average-nba-player-height-really-falling',
+        description: 'Historical NBA average heights 1951–2026: peak 6 ft 7.04 in (1987), low 6 ft 6.33 in (2021), and the 2019–20 barefoot measurement reform.',
+      },
+      {
+        title: 'Scores24 — "WNBA Athlete Heights: Average, Shortest & Tallest"',
+        url: 'https://scores24.live/en/articles/blog/average-wnba-player-height',
+        description: '2024 WNBA average ~6 ft 1 in; shortest players (Bobbitt, Nicholson 5 ft 2 in); notable player heights.',
+      },
+      {
+        title: 'FanArch — "What is the Average Height of a WNBA Player?" (2024)',
+        url: 'https://fanarch.com/blogs/wnba/what-is-the-average-height-of-a-wnba-player',
+        description: 'ESPN-cited figures: median 6 ft 1 in; centres 6 ft 4.4 in, forwards 6 ft 2 in, guards ~5 ft 9 in; NBA vs WNBA comparisons.',
+      },
+      {
+        title: 'BetMGM — "11 Tallest Players in WNBA History, Ranked" (2026)',
+        url: 'https://www.betmgm.ca/en/sports/blog/wnba/tallest-players-in-wnba-history-ranked-bm20/',
+        description: 'Ranked all-time list: Margo Dydek 7 ft 2 in, Han Xu 6 ft 11 in, Bernadett Hatar 6 ft 10 in, Brittney Griner 6 ft 9 in.',
+      },
+      {
+        title: 'TheBallZone — "What Is the Average Height of Players in the WNBA?"',
+        url: 'https://theballzone.com/what-is-the-average-height-in-the-wnba/',
+        description: 'WNBA position-by-position height ranges (PG 5 ft 7 in–5 ft 9 in through C 6 ft 3 in–6 ft 5 in).',
+      },
+      {
+        title: 'SportsSurge — "How Tall Are Basketball Players? NBA & WNBA Averages"',
+        url: 'https://sportssurge.alibaba.com/basketball/how-tall-are-basketball-players',
+        description: 'NBA vs WNBA averages side by side; tallest ever (Bol/Muresan 7 ft 7 in); shortest ever (Bogues 5 ft 3 in).',
+      },
+    ],
+    relatedSlugs: ['messi-vs-ronaldo-height-comparison', 'what-does-6-feet-look-like', 'dwayne-johnson-height-comparison'],
+  },
 ];
