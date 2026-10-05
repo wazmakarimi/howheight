@@ -728,6 +728,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'The rest of the group is not far behind: Huening Kai at 183 cm, Yeonjun at 181 cm, Beomgyu at 180 cm, and Taehyun — the shortest — at 177 cm. Taehyun being the "short" one at 177 cm tells you everything about this group: their shortest member would be above average in most boy groups.',
           'TXT averages 181.2 cm, making them the tallest group in this comparison and one of the tallest fourth-generation boy groups overall. Their height is part of their stage presence — long lines, sharp choreography, and silhouettes that read clearly even in stadium-wide shots.',
         ],
+        image: {
+          src: '/assets/blog/kpop-idol-height-comparison/txt-lineup.png',
+          alt: 'Height comparison chart showing all five TXT members from Soobin at 185 cm down to Taehyun at 177 cm',
+          caption: 'TXT visualized to scale — an 8 cm spread, with every member at 177 cm or taller.',
+        },
         callout: {
           title: 'Why TXT looks even taller on stage',
           text: 'All five members have notably long leg-to-torso ratios, and their choreography emphasizes extended lines — both make the group read taller than the numbers alone suggest.',
