@@ -193,7 +193,7 @@ export function getAlternateLocaleLinks(pathname: string) {
 
   const baseUrl = SITE.siteUrl;
 
-  const links = SUPPORTED_LOCALES.map((locale) => {
+  const links: { locale: Locale; hreflang: string; href: string }[] = SUPPORTED_LOCALES.map((locale) => {
     const localized = getLocalizedPath(cleanPath, locale);
     return {
       locale,

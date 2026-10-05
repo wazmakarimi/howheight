@@ -11,7 +11,7 @@ import { jaCalculator } from './ja';
 import { koCalculator } from './ko';
 import { arCalculator } from './ar';
 
-const CALCULATOR_DATA: Record<Locale, CalculatorTranslationData> = {
+const CALCULATOR_DATA: Partial<Record<Locale, CalculatorTranslationData>> = {
   en: enCalculator,
   hi: hiCalculator,
   es: esCalculator,
@@ -24,7 +24,7 @@ const CALCULATOR_DATA: Record<Locale, CalculatorTranslationData> = {
 };
 
 export function getCalculatorData(locale: Locale = 'en'): CalculatorTranslationData {
-  return CALCULATOR_DATA[locale] || CALCULATOR_DATA.en;
+  return CALCULATOR_DATA[locale] ?? enCalculator;
 }
 
 export * from './types';

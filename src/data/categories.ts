@@ -15,6 +15,7 @@ export interface CategoryDefinition {
   measurementGuide: string;
   commonHeights: Array<{ label: string; heightCm: number; imperial: string; note: string }>;
   faqs: Array<{ question: string; answer: string }>;
+  indexable?: boolean;
 }
 
 export const CATEGORIES: CategoryDefinition[] = [

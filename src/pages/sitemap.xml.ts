@@ -66,7 +66,7 @@ export const GET: APIRoute = async () => {
 
   for (const route of multilingualRoutes) {
     // Generate valid reciprocal alternates for all supported locales
-    const alternates = SUPPORTED_LOCALES.map((locale) => ({
+    const alternates: { hreflang: string; href: string }[] = SUPPORTED_LOCALES.map((locale) => ({
       hreflang: locale,
       href: `${baseUrl}${getLocalizedPath(route.path, locale)}`,
     }));

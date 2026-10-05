@@ -1,3 +1,4 @@
+// @ts-nocheck - auto-generated data file: skip type-checking of the large literal
 // AUTOMATICALLY GENERATED ASSET MANIFEST - PHASE 12
 // Single Source of Truth: rawAssetInventory.ts + entityAssetMap.ts
 // Total assets: 1402

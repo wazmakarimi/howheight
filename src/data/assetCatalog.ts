@@ -1,3 +1,4 @@
+// @ts-nocheck - auto-generated data file: skip type-checking of the large literal
 // COMPACT CLIENT ASSET CATALOG (Phase 12 Optimized)
 // Dynamically imported on-demand to keep initial JS bundle ultra-lightweight.
 import type { EntityCategory } from '../lib/constants';

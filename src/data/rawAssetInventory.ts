@@ -1,3 +1,4 @@
+// @ts-nocheck - auto-generated data file: skip type-checking of the large literal
 // RAW ASSET INVENTORY - PHASE 11
 // Pure filesystem information. No guessed identities.
 export interface RawAsset {

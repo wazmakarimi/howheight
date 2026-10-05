@@ -9,7 +9,7 @@ The **HowHeight Master SEO Blog Content System** is an intent-focused topical au
 2. **Interactive Visual Tool Preloading**: Articles seamlessly embed the precision orthographic canvas preloaded *only* with the verified entities relevant to that topic.
 3. **P0 Performance Guarantee**: Static page HTML payloads remain strictly under 140 KB (averaging ~120 KB), completely avoiding importing the full 1,400+ asset manifest into the static page bundle.
 4. **Authoritative Structured Data**: Every article generates schema.org `BlogPosting`, `BreadcrumbList`, and `FAQPage` JSON-LD.
-5. **Full Multilingual Parity**: Published across all 9 supported locales (`en`, `hi`, `es`, `fr`, `de`, `pt`, `ja`, `ko`, `ar`) with reciprocal `hreflang` tags and `x-default`.
+5. **Full Multilingual Parity**: Published across all 10 supported locales (`en`, `hi`, `es`, `fr`, `de`, `pt`, `ja`, `ko`, `ar`, `ru`) with reciprocal `hreflang` tags and `x-default`.
 6. **Zero pages.dev Leaks & Canonical Integrity**: Every canonical URL points strictly to `https://howheight.org/`, with zero static `noindex` directives.
 
 ---
@@ -89,7 +89,7 @@ Every article renders three JSON-LD objects:
 ### C. Multilingual Support & Canonical Rules
 - Root URL: `https://howheight.org/blog/[slug]/`
 - Localized URLs: `https://howheight.org/[locale]/blog/[slug]/`
-- Reciprocal `hreflang` tags generated for all 9 supported languages plus `x-default`.
+- Reciprocal `hreflang` tags generated for all 10 supported languages plus `x-default`.
 - Included dynamically in `sitemap.xml` with proper change frequencies and priorities.
 
 ---

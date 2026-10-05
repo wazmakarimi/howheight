@@ -12,7 +12,7 @@ import { arHowToGuide } from './ar';
 
 export * from './types';
 
-const HOWTO_GUIDES: Record<Locale, HowToGuideData> = {
+const HOWTO_GUIDES: Partial<Record<Locale, HowToGuideData>> = {
   en: enHowToGuide,
   hi: hiHowToGuide,
   es: esHowToGuide,
@@ -25,5 +25,5 @@ const HOWTO_GUIDES: Record<Locale, HowToGuideData> = {
 };
 
 export function getHowToGuide(locale: Locale): HowToGuideData {
-  return HOWTO_GUIDES[locale] || HOWTO_GUIDES.en;
+  return HOWTO_GUIDES[locale] ?? enHowToGuide;
 }

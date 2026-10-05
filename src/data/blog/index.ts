@@ -26,7 +26,7 @@ export function getRelatedArticles(slug: string, limit = 3): BlogArticle[] {
   // First prioritize explicitly related slugs
   const explicitRelated = (current.relatedSlugs || [])
     .map((s) => getArticleBySlug(s))
-    .filter((a): a is BlogArticle => Boolean(a) && a.slug !== slug);
+    .filter((a): a is BlogArticle => a !== undefined && a.slug !== slug);
 
   if (explicitRelated.length >= limit) {
     return explicitRelated.slice(0, limit);
