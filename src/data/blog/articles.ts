@@ -651,4 +651,188 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['how-height-comparison-works', 'human-vs-door-height-comparison', 'messi-vs-ronaldo-height-comparison'],
   },
+  {
+    slug: 'kpop-idol-height-comparison',
+    title: 'K-Pop Idol Height Comparison: BTS, TXT, SEVENTEEN & Stray Kids Heights Visualized (2026)',
+    h1: 'K-Pop Idol Height Comparison: BTS, TXT, SEVENTEEN & Stray Kids Heights Visualized',
+    description:
+      'How tall are BTS, TXT, SEVENTEEN and Stray Kids members really? Compare every member side-by-side with verified heights, group averages, and interactive visualizations.',
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-05T09:00:00Z',
+    updatedDate: '2026-10-05T09:00:00Z',
+    readingTimeMinutes: 8,
+    quickAnswer: {
+      summary:
+        'RM (181 cm) is the tallest BTS member and Jimin and SUGA (174 cm each) are the shortest — a 7 cm spread across the group. TXT is the tallest of the four groups with a 181.2 cm average led by Soobin (185 cm), while SEVENTEEN has the widest internal range in K-pop: Mingyu (~187 cm) towers 21 cm over Woozi (~166 cm).',
+      keyTakeaway:
+        'Fourth-generation groups (TXT, Stray Kids) average slightly taller than third-generation groups (BTS, SEVENTEEN), and every group sits well above the average South Korean male height.',
+      dataPoints: [
+        { label: 'Tallest BTS member', value: 'RM — 181 cm (5 ft 11 in)' },
+        { label: 'Tallest idol listed', value: 'Mingyu (SEVENTEEN) — ~187 cm (6 ft 1.6 in)' },
+        { label: 'Shortest idol listed', value: 'Woozi (SEVENTEEN) — ~166 cm (5 ft 5.4 in)' },
+        { label: 'Tallest group average', value: 'TXT — 181.2 cm' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 185, label: 'Soobin (TXT)' },
+      { category: 'human', id: 'male', customHeightCm: 181, label: 'RM (BTS)' },
+      { category: 'human', id: 'male', customHeightCm: 177, label: 'j-hope (BTS)' },
+      { category: 'human', id: 'male', customHeightCm: 174, label: 'Jimin (BTS)' },
+      { category: 'human', id: 'male', customHeightCm: 187, label: 'Mingyu (SEVENTEEN)' },
+      { category: 'human', id: 'male', customHeightCm: 166, label: 'Woozi (SEVENTEEN)' },
+    ],
+    toolActionTitle: 'Compare the idols side-by-side',
+    toolActionDescription:
+      'The visualizer above is preloaded with the key heights from this article. Drag, add your own height, and see exactly where you stand next to RM, Soobin, Mingyu and Woozi.',
+    comparisonTable: {
+      caption: 'BTS members ranked from tallest to shortest (most commonly cited profile heights)',
+      headers: ['Member', 'Height (cm)', 'Height (ft/in)', 'Position in group'],
+      rows: [
+        ['RM (Kim Namjoon)', '181', "5 ft 11 in", 'Tallest — leader & rapper'],
+        ['Jin (Kim Seokjin)', '179', "5 ft 10.5 in", '2nd tallest — vocalist'],
+        ['V (Kim Taehyung)', '179', "5 ft 10.5 in", '2nd tallest — vocalist'],
+        ['Jungkook (Jeon Jungkook)', '178', "5 ft 10 in", 'Middle — youngest member'],
+        ['j-hope (Jung Hoseok)', '177', "5 ft 9.7 in", 'Middle — rapper & dancer'],
+        ['SUGA (Min Yoongi)', '174', "5 ft 8.5 in", 'Shortest (tied) — rapper'],
+        ['Jimin (Park Jimin)', '174', "5 ft 8.5 in", 'Shortest (tied) — vocalist'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'bts-height-breakdown',
+        heading: 'BTS Heights: Full Member-by-Member Breakdown',
+        subheading: 'Seven members, only 7 cm between tallest and shortest.',
+        paragraphs: [
+          'BTS is one of the most height-balanced groups in K-pop. RM leads the group at 181 cm (5 ft 11 in) — noticeably taller than the rest, which is why he often looks like the outlier in group photos. Jin and V tie for second at 179 cm each, followed by Jungkook at 178 cm and j-hope at 177 cm.',
+          'SUGA and Jimin share the shortest spot at 174 cm each. That is still above the average height for South Korean men, which is part of why the group looks uniformly tall on stage despite the internal ranking fans love to debate.',
+          'A note on accuracy: idol heights are self-reported and rounded by agencies, so you will see Jin listed as 177–179 cm and Jimin as 173–174 cm across different sources. The figures here are the most commonly cited profile heights across Korean portals, fan databases, and media outlets as of 2026.',
+        ],
+        image: {
+          src: '/assets/blog/kpop-idol-height-comparison/bts-lineup.png',
+          alt: 'Height comparison chart showing all seven BTS members from RM at 181 cm down to Jimin and SUGA at 174 cm',
+          caption: 'All seven BTS members visualized to scale — only 7 cm separates RM from Jimin and SUGA.',
+        },
+        callout: {
+          title: 'Group average',
+          text: 'BTS averages 177.4 cm as a group — roughly 5 ft 9.8 in. Every single member is above the South Korean male average.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'txt-tallest-fourth-gen',
+        heading: 'TXT: The Tallest Fourth-Generation Group',
+        subheading: 'Soobin at 185 cm is one of the tallest active idols in the industry.',
+        paragraphs: [
+          'If BTS is balanced, TXT is simply tall. Leader Soobin stands at 185 cm (6 ft 1 in) — fans call him the "gentle giant" because his soft personality contrasts so sharply with his frame. He is frequently photographed towering over MCs, actors, and even other idols.',
+          'The rest of the group is not far behind: Huening Kai at 183 cm, Yeonjun at 181 cm, Beomgyu at 180 cm, and Taehyun — the shortest — at 177 cm. Taehyun being the "short" one at 177 cm tells you everything about this group: their shortest member would be above average in most boy groups.',
+          'TXT averages 181.2 cm, making them the tallest group in this comparison and one of the tallest fourth-generation boy groups overall. Their height is part of their stage presence — long lines, sharp choreography, and silhouettes that read clearly even in stadium-wide shots.',
+        ],
+        callout: {
+          title: 'Why TXT looks even taller on stage',
+          text: 'All five members have notably long leg-to-torso ratios, and their choreography emphasizes extended lines — both make the group read taller than the numbers alone suggest.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'seventeen-biggest-range',
+        heading: 'SEVENTEEN: The Widest Height Range in K-Pop',
+        subheading: '21 cm between the tallest and shortest member of the same group.',
+        paragraphs: [
+          'No major K-pop group has a bigger internal height gap than SEVENTEEN. Mingyu, the group\'s visual and rapper, stands at approximately 187 cm (6 ft 1.6 in) — among the tallest idols currently active. Woozi, the group\'s producer and vocal team leader, is listed around 165–166 cm (about 5 ft 5 in). That is a 21 cm difference inside one group.',
+          'The contrast is a running joke among fans (and the members themselves): Mingyu has to fold himself nearly in half to match Woozi\'s eye line in photos, and choreography formations visibly stagger around the two extremes. It is also a great reminder that stage presence has nothing to do with centimeters — Woozi produces the group\'s music and anchors its vocals.',
+          'The other eleven members fall between the extremes: Jun and Wonwoo at 182 cm, Vernon at 180 cm, DK and The8 at 179 cm, S.Coups, Jeonghan and Hoshi at 178 cm, Joshua at 177 cm, and Seungkwan and Dino at 174 cm. The group averages roughly 178 cm.',
+        ],
+        image: {
+          src: '/assets/blog/kpop-idol-height-comparison/svt-extreme.png',
+          alt: 'Height comparison chart showing Mingyu at 187 cm towering over Woozi at 166 cm, with the average Korean man at 174 cm between them',
+          caption: 'Mingyu vs Woozi vs the average Korean man — a 21 cm gap inside a single group.',
+        },
+      },
+      {
+        id: 'group-averages-compared',
+        heading: 'Group Averages Compared: Which Group Is Tallest?',
+        subheading: 'Fourth gen edges out third gen — but only just.',
+        paragraphs: [
+          'Averaged out, the ranking is clear. TXT leads at 181.2 cm, followed by SEVENTEEN at roughly 178 cm, BTS at 177.4 cm, and Stray Kids at approximately 173–174 cm. The gap between the tallest group average (TXT) and the shortest (Stray Kids) is about 7–8 cm — visible in a lineup, but smaller than most fans expect.',
+          'What stands out is the generational trend: the two fourth-generation groups in this comparison (TXT and Stray Kids) debuted into an era where average idol height keeps creeping upward, mirroring the broader rise in average height among young South Korean men over the last two decades.',
+          'Stray Kids deserves a note: at ~173–174 cm average they are the "shortest" group here, yet every member is still at or above the national average. Their powerful, high-energy choreography means height rarely registers when you watch them perform — another data point for the "stage presence beats centimeters" file.',
+        ],
+        callout: {
+          title: 'The takeaway',
+          text: 'Group averages differ by less than 8 cm across all four groups. Individual extremes (Mingyu, Soobin, Woozi) matter far more than which group is "tallest" on average.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'idols-vs-average-korean',
+        heading: 'Are K-Pop Idols Taller Than Average Korean Men?',
+        subheading: 'Yes — noticeably, and the gap is widening.',
+        paragraphs: [
+          'The average height for adult South Korean men is most commonly cited around 170–174 cm depending on the survey and age bracket (younger men skew taller). Every group average in this article — and nearly every individual member — sits above that line.',
+          'This is not a coincidence. Entertainment agencies select for stage-ready proportions, and trainees are often scouted in their teens when above-average height is already visible. Add styling, footwear with hidden lifts, and choreography designed for long lines, and idols read even taller than they measure.',
+          'For international fans, the useful benchmark is your own height: at 177.4 cm average, BTS sits almost exactly on the average for young American men (~177 cm). TXT at 181.2 cm would be noticeably above average in the US, the UK, and most of Europe — and a full head above average in much of Southeast Asia.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Who is the tallest BTS member?',
+        answer: 'RM (Kim Namjoon) is the tallest BTS member at 181 cm (5 ft 11 in), about 2 cm taller than Jin and V.',
+      },
+      {
+        question: 'Who is the shortest member of BTS?',
+        answer: 'Jimin and SUGA are tied as the shortest BTS members, both listed at 174 cm (5 ft 8.5 in).',
+      },
+      {
+        question: 'Who is the tallest K-pop idol among these groups?',
+        answer: 'Mingyu of SEVENTEEN at approximately 187 cm (6 ft 1.6 in) is the tallest, just ahead of TXT\'s Soobin at 185 cm.',
+      },
+      {
+        question: 'Which K-pop group is the tallest on average?',
+        answer: 'TXT, with an average of 181.2 cm across its five members — every member is 177 cm or taller.',
+      },
+      {
+        question: 'How tall are TXT members compared to BTS?',
+        answer: 'TXT averages 181.2 cm versus BTS\'s 177.4 cm — about 4 cm taller as a group. TXT\'s shortest member (Taehyun, 177 cm) is as tall as BTS\'s middle line.',
+      },
+      {
+        question: 'Are K-pop idol heights accurate?',
+        answer: 'Mostly, but treat them as approximate. Agencies self-report heights and often round up, so you will see 1–2 cm differences between sources. The figures in this article use the most commonly cited profile heights.',
+      },
+    ],
+    sources: [
+      {
+        title: 'TheList — "Here\'s How Tall BTS Members Really Are" (2022)',
+        url: 'https://www.thelist.com/763181/heres-how-tall-bts-members-really-are/',
+        description: 'Member-by-member BTS height breakdown with ft/in conversions.',
+      },
+      {
+        title: 'Koreaboo — "20 Male K-Pop Idols Who Are The Definition Of Tall"',
+        url: 'https://www.koreaboo.com/lists/20-male-kpop-idols-definition-tall/',
+        description: 'Ranked list confirming Soobin (185 cm) and Mingyu (187 cm) among the tallest idols.',
+      },
+      {
+        title: 'Pinkvilla — "5 TXT members: From Yeonjun and Soobin to Hueningkai"',
+        url: 'https://www.pinkvilla.com/entertainment/5-txt-members-from-yeonjun-and-soobin-to-hueningkai-meet-the-rising-stars-of-k-pop-1361062',
+        description: 'TXT member profiles including Soobin\'s 185 cm height.',
+      },
+      {
+        title: 'Sportskeeda — "Giant Bunny Soobin: TXT Soobin\'s height continues to amaze netizens"',
+        url: 'https://www.sportskeeda.com/pop-culture/news-giant-bunny-soobin-txt-soobin-s-height-continues-amaze-netizens',
+        description: 'Coverage of Soobin\'s height updates (185–186 cm) and TXT\'s 181.5 cm group average.',
+      },
+      {
+        title: 'ClubKpop — TXT Members Profile',
+        url: 'https://clubkpop.com/blogs/txt-members-profile?lang=en_us',
+        description: 'TXT member profiles: Yeonjun 181.5 cm, Soobin 185 cm, Beomgyu 180 cm.',
+      },
+      {
+        title: 'salenhanh.com — "Rate BTS members height" (cross-group table)',
+        url: 'https://salenhanh.com/en/rate-bts-members-height/',
+        description: 'Fan-compiled cross-group averages: BTS 177, TXT 182, Stray Kids 174, SEVENTEEN 176.',
+      },
+    ],
+    relatedSlugs: ['dwayne-johnson-height-comparison', 'what-does-6-feet-look-like', 'messi-vs-ronaldo-height-comparison'],
+  },
 ];

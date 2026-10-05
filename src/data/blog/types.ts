@@ -35,6 +35,11 @@ export interface ContentSection {
   heading: string;
   subheading?: string;
   paragraphs: string[];
+  image?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  };
   callout?: {
     title: string;
     text: string;
