@@ -1250,4 +1250,201 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['dwayne-johnson-height-comparison', 'messi-vs-ronaldo-height-comparison', 'what-does-6-feet-look-like', 'kpop-idol-height-comparison'],
   },
+  {
+    slug: 'average-nfl-player-height-by-position',
+    title: 'Average NFL Player Height by Position: From Kickers to Offensive Tackles (2026)',
+    h1: 'Average NFL Player Height by Position: From Kickers to Offensive Tackles',
+    description:
+      'How tall is the average NFL player? Position-by-position height data, the 7-foot tallest player ever, the 5\u20191\u2033 shortest, and visual comparisons drawn to scale.',
+    category: 'sports',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-06T09:00:00Z',
+    updatedDate: '2026-10-06T09:00:00Z',
+    readingTimeMinutes: 10,
+    quickAnswer: {
+      summary:
+        'The average NFL player stands about 6 ft 2 in (188 cm) tall \u2014 roughly five inches above the average American man. Offensive tackles are the tallest position at about 6 ft 6 in (197 cm), while running backs are the shortest at about 5 ft 11 in (180 cm). The extremes are wild: 7-foot Richard Sligh is the tallest player in NFL history, and 5 ft 1 in Jack Shapiro the shortest.',
+      keyTakeaway:
+        'NFL height is not random \u2014 it is a job description. Tackles need reach, ends need length to bat down passes, and running backs trade height for a lower centre of gravity. Once you see the positions side by side, the whole game starts to make sense.',
+      dataPoints: [
+        { label: 'Average NFL player height', value: '~6 ft 2 in (188 cm)' },
+        { label: 'Tallest position', value: 'Offensive tackle \u2014 ~6 ft 6 in (197 cm)' },
+        { label: 'Shortest position', value: 'Running back \u2014 ~5 ft 11 in (180 cm)' },
+        { label: 'Tallest player ever', value: 'Richard Sligh \u2014 7 ft 0 in (213 cm)' },
+        { label: 'Shortest player ever', value: 'Jack Shapiro \u2014 ~5 ft 1 in (153 cm)' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 213, label: 'Richard Sligh (tallest ever)' },
+      { category: 'human', id: 'male', customHeightCm: 208, label: 'Morris Stroud (6 ft 10 in)' },
+      { category: 'human', id: 'male', customHeightCm: 197, label: 'Avg offensive tackle' },
+      { category: 'human', id: 'male', customHeightCm: 194, label: 'Avg tight end' },
+      { category: 'human', id: 'male', customHeightCm: 188, label: 'Average NFL player' },
+      { category: 'human', id: 'male', customHeightCm: 180, label: 'Avg running back' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average US man' },
+      { category: 'human', id: 'male', customHeightCm: 170, label: 'Blake Grupe (shortest active)' },
+      { category: 'human', id: 'male', customHeightCm: 153, label: 'Jack Shapiro (shortest ever)' },
+    ],
+    toolActionTitle: 'See the NFL\u2019s giants and smallest players to scale',
+    toolActionDescription:
+      'The visualiser above is preloaded with the average height at each key position, the tallest and shortest players in NFL history, and the average American man for reference. Add your own height and find out which NFL position you fit.',
+    comparisonTable: {
+      caption: 'Average NFL player height by position (2023 roster data, via Horton Barbell)',
+      headers: ['Position', 'Average height', 'In cm', 'Notable name'],
+      rows: [
+        ['Offensive tackle', "6 ft 5\u00BE in", '197', 'Orlando Brown Jr. (6 ft 8 in)'],
+        ['Tight end', "6 ft 4\u00BD in", '194', 'Travis Kelce (6 ft 5 in)'],
+        ['Defensive end', "6 ft 4\u00BC in", '193', 'Myles Garrett (6 ft 4 in)'],
+        ['Guard', "6 ft 4\u00BC in", '194', 'Quenton Nelson (6 ft 5 in)'],
+        ['Center', "6 ft 3\u00BE in", '192', 'Jason Kelce (6 ft 3 in)'],
+        ['Defensive tackle', "6 ft 3\u00BC in", '191', 'Aaron Donald (6 ft 1 in)'],
+        ['Quarterback', "6 ft 2\u00BD in", '190', 'Patrick Mahomes (6 ft 2 in)'],
+        ['Linebacker', "6 ft 2\u00BC in", '189', 'Fred Warner (6 ft 3 in)'],
+        ['Punter', "6 ft 1\u00BE in", '187', '\u2014'],
+        ['Wide receiver', "6 ft 0\u00BD in", '184', 'Justin Jefferson (6 ft 1 in)'],
+        ['Safety', "6 ft 0\u00BC in", '183', 'Minkah Fitzpatrick (6 ft 1 in)'],
+        ['Cornerback', '6 ft 0 in', '183', 'Sauce Gardner (6 ft 3 in)'],
+        ['Kicker', "6 ft 0\u00BC in", '183', 'Justin Tucker (6 ft 1 in)'],
+        ['Running back', "5 ft 10\u00BE in", '180', 'Christian McCaffrey (5 ft 11 in)'],
+        ['League average', "6 ft 2\u00BC in", '188', '\u2014'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'headline-numbers',
+        heading: 'The Headline Number: 6 ft 2 in of Mean Muscle',
+        subheading: 'Every NFL player is, on average, five inches taller than the average American man.',
+        paragraphs: [
+          'Across the full league, the average NFL player measures about 74.2 inches \u2014 6 ft 2\u00BC in, or roughly 188 cm. An independent sampling study of league rosters landed in almost exactly the same place at 74.14 inches. Against the average American man of about 5 ft 9 in (175.3 cm per the CDC\u2019s NHANES survey), the typical footballer stands a full five inches taller.',
+          'But that single number hides a 7-inch spread between positions, and that spread is where the interesting story lives. Football is the rare sport where the roster reads like a bell curve of human anatomy: the men protecting the quarterback are giants, the men catching the ball are lean mid-sized athletes, and the men running with the ball are the shortest of all \u2014 yet somehow also some of the most destructive.',
+          'The chart below lines up the position averages from a 2023 roster study against the average American man. It is worth pausing on the left and right edges: the average offensive tackle towers more than eight inches over the average man on the street, while the average running back barely clears him at all.',
+        ],
+        image: {
+          src: '/assets/blog/average-nfl-player-height-by-position/nfl-position-averages.png',
+          alt: 'HowHeight comparison chart showing average heights by NFL position, from offensive tackle (197 cm) down to running back (180 cm), against the average US man (175 cm).',
+          caption: 'Average heights by NFL position, drawn to scale on HowHeight.org.',
+        },
+      },
+      {
+        id: 'why-tackles-are-tallest',
+        heading: 'Why the Trenches Are So Tall: Offensive Tackles at 6 ft 6 in',
+        subheading: 'At offensive tackle, height is literally arm\u2019s length \u2014 it keeps the quarterback alive.',
+        paragraphs: [
+          'Offensive tackles average about 6 ft 5\u00BE in (197 cm), making them the tallest group on the field, and it is no accident. A tackle\u2019s job is to keep 280-pound edge rushers away from the quarterback, and reach is everything: longer arms mean the rusher is engaged earlier and the pocket stays clean. Every extra inch of height is extra inches of wingspan.',
+          'That is why the position\u2019s height records are absurd. The tallest players in NFL history are overwhelmingly tackles: Dan Skipper at 6 ft 10 in, Caleb Jones at 6 ft 9 in, and a long list of 6 ft 8 in bookends such as Orlando Brown Jr., Jordan Mailata, Kolton Miller and Trent Brown. Tight ends come second at 6 ft 4\u00BD in (194 cm) for a related reason \u2014 they need to box out defenders and catch balls thrown over linebackers.',
+          'Defensive ends sit at nearly the same height as tight ends (about 6 ft 4\u00BC in) because they are the mirror image: length lets them bat down passes at the line and wrap up ball carriers. Notice how the whole trenches cluster \u2014 tackles, ends, guards, centres, defensive tackles \u2014 packs into a narrow band between 6 ft 3 in and 6 ft 6 in. Once you are fighting hand-to-hand in a phone booth, size is destiny.',
+        ],
+      },
+      {
+        id: 'skill-positions-running-backs',
+        heading: 'The Skill Positions: Why Running Backs Are the Shortest at 5 ft 11 in',
+        subheading: 'Short is not small \u2014 the average back is under six feet and over 210 pounds.',
+        paragraphs: [
+          'Running backs average just 5 ft 10\u00BE in (about 180 cm), the lowest of any position group. This is not a flaw; it is physics. A lower centre of gravity makes a back harder to tackle cleanly, quicker through gaps, and better at absorbing contact. Barry Sanders (5 ft 8 in), Emmitt Smith (5 ft 9 in) and modern stars like Christian McCaffrey (5 ft 11 in) all sit at or below the position average \u2014 and at around 210\u2013220 pounds, they are among the densest athletes in the sport.',
+          'Cornerbacks and safeties, at almost exactly 6 ft even (183 cm), are built for the opposite problem: they have to mirror wide receivers \u2014 who average 6 ft 0\u00BD in (184 cm) \u2014 in open space. That matchup is why the receiver and defensive-back numbers track each other so closely: defences draft height to cancel height.',
+          'And then there are the specialists. Kickers and punters sit near the bottom of the table (around 6 ft 0 in), because the job is leg mechanics, not contact. But as the next section shows, the active league\u2019s shortest player hides in exactly that group.',
+        ],
+      },
+      {
+        id: 'quarterbacks',
+        heading: 'Quarterbacks: The 6 ft 2\u00BD in Average \u2014 and the Exceptions That Break It',
+        subheading: 'Scouts prototype the position at 6 ft 3 in to 6 ft 5 in, but the league\u2019s best includes 5 ft 10 in outliers.',
+        paragraphs: [
+          'The average NFL quarterback measures about 6 ft 2\u00BD in (190 cm). That average is pulled upward by the prototype: big, durable passers who can see over 6 ft 6 in linemen from the pocket. The tallest starting quarterbacks, Justin Herbert and Trevor Lawrence, both stand 6 ft 6 in, with Josh Allen and Daniel Jones close behind at 6 ft 5 in.',
+          'But the position\u2019s most interesting data points are at the bottom. Bryce Young and Kyler Murray, at 5 ft 10 in, are the shortest starting quarterbacks in today\u2019s league \u2014 and both were taken first overall in their drafts. History backs the outlier case too: Drew Brees (6 ft 0 in) won a Super Bowl, and the shortest quarterback ever, Pard Pearce at 5 ft 5 in, played six NFL seasons and a championship team back in the 1920s.',
+          'So is quarterback height overrated? Scouts still treat 6 ft 3 in as the sweet spot \u2014 tall enough to see the field, athletic enough to escape it. But the modern league\u2019s shorter stars prove that processing speed and accuracy can compensate for three missing inches.',
+        ],
+      },
+      {
+        id: 'tallest-shortest-players',
+        heading: 'The Extremes: A 7-Footer, a 6 ft 10 in Field-Goal Blocker, and a 5 ft 1 in Record That Stands',
+        subheading: 'No one in NFL history has matched Richard Sligh\u2019s seven feet \u2014 or Jack Shapiro\u2019s five.',
+        paragraphs: [
+          'The tallest player in NFL history is Richard Sligh, a 7-foot (213 cm) defensive tackle who played eight games for the Oakland Raiders in 1967 and even appeared in Super Bowl II. Nearly sixty years later, nobody has matched him; he remains the league\u2019s only seven-footer.',
+          'Just below him sit two 6 ft 10 in (208 cm) men: Morris Stroud, a Kansas City Chiefs tight end of the early 1970s, and Dan Skipper, a modern Lions offensive tackle. Stroud is famous for more than height \u2014 he used to line up under the goalposts to swat away opponents\u2019 field-goal attempts, which forced the NFL to ban the practice. It is still called the \u201CStroud Rule\u201D.',
+          'At the other end, the shortest player in NFL history is Jack Shapiro, who stood about 5 ft 1 in (Guinness measured him at 5 ft \u00BD in) and played one game for the 1929 Staten Island Stapletons. The shortest active player is Saints kicker Blake Grupe at 5 ft 7 in \u2014 a full 29 inches shorter than Sligh. The chart below puts the record-holders, the position extremes, and the average man side by side, and the scale is honestly hard to believe.',
+        ],
+        image: {
+          src: '/assets/blog/average-nfl-player-height-by-position/nfl-height-extremes.png',
+          alt: 'HowHeight comparison chart showing NFL height extremes: Richard Sligh at 213 cm down to Jack Shapiro at 153 cm, drawn to scale.',
+          caption: 'The tallest and shortest players in NFL history, drawn to scale on HowHeight.org.',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the average height of an NFL player?',
+        answer:
+          'About 6 ft 2\u00BC in (188 cm). That is roughly five inches taller than the average American man (about 5 ft 9 in), and it has stayed remarkably stable for years.',
+      },
+      {
+        question: 'Which NFL position is the tallest?',
+        answer:
+          'Offensive tackles, at an average of about 6 ft 5\u00BE in (197 cm). Tight ends (6 ft 4\u00BD in) and defensive ends (6 ft 4\u00BC in) are next. Height equals reach, and in the trenches reach is everything.',
+      },
+      {
+        question: 'Which NFL position is the shortest?',
+        answer:
+          'Running backs, at an average of about 5 ft 10\u00BE in (180 cm). A lower centre of gravity helps backs break tackles and change direction, so shorter is an advantage at the position.',
+      },
+      {
+        question: 'How tall is the average NFL quarterback?',
+        answer:
+          'About 6 ft 2\u00BD in (190 cm). The tallest current starters, Justin Herbert and Trevor Lawrence, stand 6 ft 6 in, while the shortest starters, Bryce Young and Kyler Murray, are 5 ft 10 in.',
+      },
+      {
+        question: 'Who is the tallest NFL player ever?',
+        answer:
+          'Richard Sligh, a 7-foot (213 cm) defensive tackle who played for the 1967 Oakland Raiders. He is the only seven-footer in league history. Morris Stroud and Dan Skipper, both 6 ft 10 in, are next.',
+      },
+      {
+        question: 'Who is the shortest NFL player ever?',
+        answer:
+          'Jack Shapiro, listed at about 5 ft 1 in, who played one game for the 1929 Staten Island Stapletons. The Guinness World Records measurement put him at 5 ft \u00BD in. The shortest active player is Saints kicker Blake Grupe at 5 ft 7 in.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Horton Barbell \u2014 \u201CAverage Height & Weight of NFL Players (By Position)\u201D',
+        url: 'https://hortonbarbell.com/average-height-weight-of-nfl-players-by-position/',
+        description: '2023 roster data: average height and weight by NFL position, plus the tallest players list (Caleb Jones 6 ft 9 in).',
+      },
+      {
+        title: 'Oddspedia \u2014 \u201CThe Top 10 Tallest Players in NFL History and Today\u201D',
+        url: 'https://Oddspedia.com/insights/american-football/tallest-players-in-the-nfl',
+        description: 'Tallest-players list topped by 7-foot Richard Sligh, with Morris Stroud and Dan Skipper at 6 ft 10 in.',
+      },
+      {
+        title: 'Pro Football Network \u2014 \u201CTop 10 Tallest Players in NFL History\u201D',
+        url: 'https://www.profootballnetwork.com/10-tallest-players-in-nfl-history/',
+        description: 'Corroborates Sligh (7 ft 0 in), Skipper and Stroud (6 ft 10 in), and the Stroud Rule story.',
+      },
+      {
+        title: 'Guinness World Records \u2014 \u201CShortest ever NFL player\u201D',
+        url: 'https://www.guinnessworldrecords.com/world-records/64853-shortest-ever-nfl-player',
+        description: 'Jack Shapiro measured at 5 ft \u00BD in; played for the Staten Island Stapletons in 1929.',
+      },
+      {
+        title: 'Sports Illustrated \u2014 \u201CWho Is the Shortest Player in NFL History?\u201D',
+        url: 'https://www.si.com/nfl/who-is-shortest-player-in-nfl-history',
+        description: 'Profiles Shapiro (5 ft 1 in) and Pard Pearce, the shortest quarterback ever at 5 ft 5 in.',
+      },
+      {
+        title: 'EssentiallySports \u2014 \u201CIs Blake Grupe the Shortest NFL Player?\u201D',
+        url: 'https://www.essentiallysports.com/nfl-active-news-is-blake-grupe-the-shortest-nfl-player-height-weight-forty-yd-time-more-about-saints-place-kicker/',
+        description: 'Saints kicker Blake Grupe at 5 ft 7 in \u2014 among the shortest active NFL players.',
+      },
+      {
+        title: 'NBC \u2014 \u201CTallest & Shortest Starting Quarterbacks in NFL: 2026/2027\u201D',
+        url: 'https://www.nbc.com/nbc-insider/tallest-shortest-nfl-quarterbacks',
+        description: 'Current QB height extremes: Herbert/Lawrence at 6 ft 6 in, Young/Murray at 5 ft 10 in.',
+      },
+      {
+        title: 'Roster sampling study (Scribd) \u2014 NFL player average height & weight by position',
+        url: 'https://www.scribd.com/document/490034386/Avg-NFL-ht-wt-1',
+        description: 'Independent sampling corroboration: overall NFL average 74.14 in (~6 ft 2 in).',
+      },
+    ],
+    relatedSlugs: ['wnba-vs-nba-height-comparison', 'messi-vs-ronaldo-height-comparison', 'what-does-6-feet-look-like', 'how-height-comparison-works'],
+  },
 ];
