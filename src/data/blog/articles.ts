@@ -1041,4 +1041,213 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['messi-vs-ronaldo-height-comparison', 'what-does-6-feet-look-like', 'dwayne-johnson-height-comparison'],
   },
+
+  // 9. CELEBRITY COUPLES WITH THE BIGGEST HEIGHT DIFFERENCES
+  {
+    slug: 'celebrity-couples-biggest-height-differences',
+    title: 'Celebrity Couples With the Biggest Height Differences (2026, Visualised)',
+    h1: 'Celebrity Couples With the Biggest Height Differences, Visualised to Scale',
+    description:
+      'From an 87 cm gulf to couples where she towers over him: the biggest height differences among celebrity couples, every height double-verified and drawn to scale.',
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-06T09:00:00Z',
+    updatedDate: '2026-10-06T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'The biggest verified height gap between celebrity partners belongs to Verne Troyer (81 cm / 2 ft 8 in) and his ex-wife Genevieve Gallen (168 cm / 5 ft 6 in) — a difference of 87 cm (2 ft 10 in). Among couples still together, Hafþór Júlíus Björnsson (206 cm / 6 ft 9 in) and Kelsey Henson (157 cm / 5 ft 2 in) lead with a 49 cm gap, followed by Yao Ming and Ye Li at 39 cm. Several famous couples flip the usual pattern entirely: Zendaya (178 cm) is taller than Tom Holland (173 cm), and Erica Schmidt (168 cm) stands 33 cm taller than Peter Dinklage (135 cm).',
+      keyTakeaway:
+        'Celebrity couples exaggerate a real-world pattern. Research across 12,502 couples puts the average partner height gap at about 14 cm (5.5 in) — every couple on this list beats that, some by more than six times over.',
+      dataPoints: [
+        { label: 'Biggest gap ever verified', value: '87 cm — Verne Troyer (81 cm) & Genevieve Gallen (168 cm)' },
+        { label: 'Biggest gap, couple still together', value: '49 cm — Hafþór Björnsson (206 cm) & Kelsey Henson (157 cm)' },
+        { label: 'Most-searched pairing', value: 'Zendaya (178 cm) vs Tom Holland (173 cm) — she is taller' },
+        { label: 'Average partner gap (research)', value: '~14 cm (5.5 in) — PLOS ONE, 12,502 couples' },
+        { label: 'Couples here with the woman taller', value: '4 of the 12 listed' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 81, label: 'Verne Troyer' },
+      { category: 'human', id: 'female', customHeightCm: 168, label: 'Genevieve Gallen' },
+      { category: 'human', id: 'male', customHeightCm: 206, label: 'Hafþór Júlíus Björnsson' },
+      { category: 'human', id: 'female', customHeightCm: 157, label: 'Kelsey Henson' },
+      { category: 'human', id: 'male', customHeightCm: 229, label: 'Yao Ming' },
+      { category: 'human', id: 'female', customHeightCm: 190, label: 'Ye Li' },
+      { category: 'human', id: 'female', customHeightCm: 178, label: 'Zendaya' },
+      { category: 'human', id: 'male', customHeightCm: 173, label: 'Tom Holland' },
+    ],
+    toolActionTitle: 'Compare the couples to scale',
+    toolActionDescription:
+      'The visualiser above is preloaded with the biggest gaps from this article — Verne Troyer, Genevieve Gallen, Hafþór Björnsson, Kelsey Henson, Yao Ming, Ye Li, Zendaya and Tom Holland. Add your own height and see exactly where you stand next to them.',
+    comparisonTable: {
+      caption: '12 celebrity couples ranked by height gap — every height verified against at least two independent sources (October 2026)',
+      headers: ['Couple', 'Her height', 'His height', 'Height gap'],
+      rows: [
+        ['Verne Troyer & Genevieve Gallen', '5 ft 6 in (168 cm)', '2 ft 8 in (81 cm)', '87 cm (2 ft 10 in)'],
+        ['Hafþór Júlíus Björnsson & Kelsey Henson', '5 ft 2 in (157 cm)', '6 ft 9 in (206 cm)', '49 cm (1 ft 7 in)'],
+        ['Yao Ming & Ye Li', '6 ft 3 in (190 cm)', '7 ft 6 in (229 cm)', '39 cm (1 ft 3 in)'],
+        ['Ariana Grande & Pete Davidson', '5 ft 1 in (153 cm)', '6 ft 3 in (191 cm)', '38 cm (1 ft 3 in)'],
+        ['Jason Momoa & Lisa Bonet', '5 ft 2 in (157 cm)', '6 ft 4 in (193 cm)', '36 cm (1 ft 2 in)'],
+        ['Will Smith & Jada Pinkett Smith', '5 ft 0 in (152 cm)', '6 ft 2 in (188 cm)', '36 cm (1 ft 2 in)'],
+        ['Shaquille O\u2019Neal & Shaunie O\u2019Neal', '5 ft 11 in (180 cm)', '7 ft 1 in (216 cm)', '36 cm (1 ft 2 in)'],
+        ['Peter Dinklage & Erica Schmidt', '5 ft 6 in (168 cm)*', '4 ft 5 in (135 cm)', '33 cm (1 ft 1 in)*'],
+        ['Snoop Dogg & Shante Broadus', '5 ft 4 in (163 cm)*', '6 ft 4 in (193 cm)', '30 cm (1 ft)*'],
+        ['Kevin Hart & Eniko Parrish', '5 ft 7 in (170 cm)*', '5 ft 2 in – 5 ft 4 in (157–163 cm)*', '~7–13 cm (3–5 in)*'],
+        ['Tom Cruise & Nicole Kidman', '5 ft 11 in (180 cm)*', '5 ft 7 in (170 cm)', '10 cm (4 in)*'],
+        ['Zendaya & Tom Holland', '5 ft 10 in (178 cm)*', '5 ft 8 in (173 cm)', '5 cm (2 in)*'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'rankings',
+        heading: 'The 12 Couples, Ranked by Height Gap',
+        subheading: 'Every figure below was checked against at least two independent sources — and two famous couples did not survive the fact-check.',
+        paragraphs: [
+          'Celebrity heights are notoriously slippery: agencies round up, actors add inches, and footwear does the rest. For this ranking, every height was verified against at least two independent sources — celebrity measurement databases, news outlets, official bios and, where available, the stars\u2019 own statements. Where sources disagree, the table uses the consensus figure and marks it with an asterisk: Kevin Hart, for example, is listed anywhere from 5 ft 2 in (157 cm) to 5 ft 4 in (163 cm) while he personally claims the higher figure, and his wife Eniko Parrish is consistently 5 ft 7 in (170 cm) — taller than him either way.',
+          'The ranking produces some surprises. The largest verified gap in celebrity history — 87 cm between Verne Troyer and Genevieve Gallen — is nearly double the gap of the runner-up. The biggest gap among couples still together belongs to Hafþór Júlíus Björnsson and Kelsey Henson at 49 cm. And four of the twelve couples reverse the usual pattern, with the woman the taller partner — a fact that search data shows fascinates people more than almost anything else on this list.',
+          'For perspective on what counts as \u201Cbig\u201D: a study of 12,502 British couples published in PLOS ONE found the average height difference between partners was just 14.1 cm (5.5 in). Every couple in this table exceeds that — the smallest gap here, Zendaya and Tom Holland\u2019s 5 cm, still lands below the population average, which is exactly why their pairing draws so much comment.',
+        ],
+        image: {
+          src: '/assets/blog/celebrity-couples-biggest-height-differences/troyer-vs-gallen.png',
+          alt: 'Height comparison chart showing Verne Troyer at 81 cm, Genevieve Gallen at 168 cm, and an average US man at 175 cm drawn to scale',
+          caption: 'Verne Troyer (81 cm) and Genevieve Gallen (168 cm) — an 87 cm gap, shown against an average US man for scale.',
+        },
+      },
+      {
+        id: 'biggest-gap-ever',
+        heading: 'The Biggest Gaps Ever Recorded: 87 cm, 49 cm and 39 cm',
+        subheading: 'Two of the three largest gaps involve men whose extraordinary height comes from medical conditions.',
+        paragraphs: [
+          'The all-time record belongs to Austin Powers star Verne Troyer, who stood 81 cm (2 ft 8 in) tall as a result of cartilage–hair hypoplasia, a form of dwarfism. His wife of five weeks in early 2004, model Genevieve Gallen, is 168 cm (5 ft 6 in) — a gap of 87 cm, wider than the entire torso of an average adult. Photographs of the two together remain some of the most visually startling couple images ever taken precisely because no lens trickery is involved: the difference is pure biology.',
+          'The biggest gap among couples still together is almost half that, but more dramatic in motion. Game of Thrones star Hafþór Júlíus Björnsson, 206 cm (6 ft 9 in), married Kelsey Henson, 157 cm (5 ft 2 in), in 2018 — a 49 cm difference. Their public appearances regularly go viral, not least when Björnsson was photographed casually bench-pressing his wife while getting a tattoo. To put 49 cm in perspective: it is nearly four times the average ~13 cm height difference between adult men and women worldwide.',
+          'Third on the list is the tallest couple of all: Yao Ming (229 cm / 7 ft 6 in) and his wife Ye Li (190 cm / 6 ft 3 in), married since 2007. Their 39 cm gap is remarkable for a different reason — Ye Li is taller than roughly 99% of women on earth, and still looks small next to her husband. Both were elite basketball players, a reminder that extreme height gaps among athletes often come from two people being pulled from the very top of the height distribution.',
+        ],
+        image: {
+          src: '/assets/blog/celebrity-couples-biggest-height-differences/mountain-vs-kelsey.png',
+          alt: 'Height comparison chart showing Hafþór Björnsson at 206 cm next to Kelsey Henson at 157 cm drawn to scale',
+          caption: 'Hafþór \u201CThe Mountain\u201D Björnsson (206 cm) and Kelsey Henson (157 cm) — a 49 cm gap, the largest among couples still together.',
+        },
+      },
+      {
+        id: 'when-she-is-taller',
+        heading: 'The Couples Where She Is the Taller One',
+        subheading: 'The internet\u2019s favourite height question is \u201Cis Zendaya taller than Tom Holland?\u201D — and the answer is yes.',
+        paragraphs: [
+          'Zendaya (178 cm / 5 ft 10 in) stands about 5 cm taller than Tom Holland (173 cm / 5 ft 8 in), and their pairing — dating since 2021, with engagement reports surfacing in January 2025 — has become the defining example of the \u201Cshort king\u201D era of celebrity discourse. Articles explaining that yes, she really is taller, rank among the most-read celebrity height pages on the internet. The chart above shows why the photos confuse people: 5 cm is barely visible to the eye, especially when Holland wears anything with a heel.',
+          'The most striking woman-taller pairing on this list belongs to Peter Dinklage (135 cm / 4 ft 5 in) and his wife, theatre director Erica Schmidt (168 cm / 5 ft 6 in) — a 33 cm gap in her favour. Married since 2005, they have consistently refused to treat it as remarkable; Schmidt told Rolling Stone that Dinklage is simply \u201Cincredibly handsome, charming, funny\u201D and that \u201Cthe rest of the world has to catch up.\u201D It is the clearest celebrity rebuttal to the idea that height gaps need explaining.',
+          'Two more flipped pairs complete the picture. Tom Cruise (170 cm / 5 ft 7 in) is a full 10 cm shorter than his ex-wife Nicole Kidman (180 cm / 5 ft 11 in), to whom he was married from 1990 to 2001 — a gap that tabloids obsessed over for a decade. And Kevin Hart is shorter than his wife Eniko Parrish (170 cm / 5 ft 7 in) however you count his height: the comedian\u2019s listed figures range from 157 cm to 163 cm, and he has built an entire comedy career out of owning the difference.',
+        ],
+        image: {
+          src: '/assets/blog/celebrity-couples-biggest-height-differences/zendaya-vs-tom-holland.png',
+          alt: 'Height comparison chart showing Zendaya at 178 cm standing slightly taller than Tom Holland at 173 cm drawn to scale',
+          caption: 'Zendaya (178 cm) and Tom Holland (173 cm) — she is about 5 cm taller, the most-searched celebrity height pairing of the decade.',
+        },
+      },
+      {
+        id: 'do-gaps-matter',
+        heading: 'Do Big Height Gaps Actually Matter in Relationships?',
+        subheading: 'Science says the preference is real — and that it quietly fades with time.',
+        paragraphs: [
+          'Researchers have documented what they call the \u201Cmale-taller norm\u201D: across cultures, people overwhelmingly prefer the man to be the taller partner — but not too much taller. A PLOS ONE analysis of partner height preferences found that the largest acceptable gap for both sexes was the man being about 17% taller than the woman, and that actual couples cluster just under that ceiling. In other words, evolution nudges couples toward a gap, then caps it.',
+          'Whether the gap brings happiness is a subtler question. A study published in Personality and Individual Differences analysed more than 30,000 people across two Indonesian longitudinal surveys and found that husbands were, on average, 10.9 cm taller than their wives — and that each extra 10 cm of difference was associated with a 3.9% increase in wives reporting they were \u201Cvery happy\u201D. But the effect decayed with marriage duration: after about 18 years together, the husband\u2019s height advantage had no measurable impact on happiness at all.',
+          'That fading effect may explain the cultural arc of the \u201Cshort king\u201D conversation. Early in a relationship, height differences are visible, commented on, and — the data suggests — genuinely felt. A decade in, couples like the Dinklages or Zendaya and Holland stop being a height story and become simply a couple. The gap that launched a thousand listicles turns out to be one of the least durable facts about a relationship.',
+        ],
+        callout: {
+          title: 'The numbers behind the norm',
+          text: 'Average partner height gap in a 12,502-couple UK study: 14.1 cm. Average male–female height difference worldwide: ~13 cm. Average husband–wife gap in the Indonesian surveys: 10.9 cm. Every couple on this list beats all three.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'visualise-it-yourself',
+        heading: 'See the Gaps on a True-to-Scale Chart',
+        subheading: 'Photos lie; the silhouettes above do not.',
+        paragraphs: [
+          'Red-carpet photographs are almost useless for judging height gaps: camera angles, heels, posture, and who stands slightly closer to the lens can add or erase several inches. The charts in this article were generated on HowHeight\u2019s comparison tool, which draws every person as a proportionally scaled silhouette on a shared baseline — the same technique anthropometrists use, without the camera distortion.',
+          'The visualiser at the top of this page is preloaded with the key figures from this article. Try dragging your own height onto the chart next to Hafþór Björnsson, or place yourself between Zendaya and Tom Holland to see which side of their 5 cm gap you land on. The tool is free and works on any device.',
+          'Two editorial notes on what this list leaves out. Wladimir Klitschko (198 cm) and Hayden Panettiere (157 cm) would have ranked near the top with a 41 cm gap, but we have deliberately excluded the pairing following Panettiere\u2019s death in August 2026, aged 36. And Kourtney Kardashian and Travis Barker — often cited in height-gap listicles — do not belong here at all: Barker is consistently listed at 5 ft 9 in (175 cm), not 6 ft 3 in, which makes their gap an ordinary 23 cm. Claims need sources, even in celebrity gossip.',
+        ],
+        callout: {
+          title: 'A note on the asterisks',
+          text: 'Heights marked with * reflect ranges in the published sources: Kevin Hart is listed between 157 cm and 163 cm, Shante Broadus between 163 cm and 168 cm, and Erica Schmidt has one outlier listing at 163 cm against a consensus of 168 cm. The gaps shown use the consensus figures.',
+          type: 'info',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Which celebrity couple has the biggest height difference?',
+        answer: 'Verne Troyer (81 cm / 2 ft 8 in) and his ex-wife Genevieve Gallen (168 cm / 5 ft 6 in) hold the record with an 87 cm (2 ft 10 in) gap. Among couples still together, the biggest gap belongs to Hafþór \u201CThe Mountain\u201D Júlíus Björnsson (206 cm) and Kelsey Henson (157 cm) at 49 cm.',
+      },
+      {
+        question: 'Is Zendaya taller than Tom Holland?',
+        answer: 'Yes. Zendaya is listed at 178 cm (5 ft 10 in) and Tom Holland at 173 cm (5 ft 8 in), making her about 5 cm (2 in) taller. The small gap is why it is hard to tell in photographs, which has made them the most-searched celebrity height pairing of recent years.',
+      },
+      {
+        question: 'How much taller is \u201CThe Mountain\u201D than his wife?',
+        answer: 'Hafþór Júlíus Björnsson is 206 cm (6 ft 9 in) and his wife Kelsey Henson is 157 cm (5 ft 2 in) — a difference of 49 cm (1 ft 7 in), nearly four times the average height difference between men and women.',
+      },
+      {
+        question: 'Which celebrity couples have the woman taller than the man?',
+        answer: 'Four couples on this list: Zendaya and Tom Holland (she is ~5 cm taller), Peter Dinklage and Erica Schmidt (she is 33 cm taller), Tom Cruise and Nicole Kidman (she was 10 cm taller during their 1990–2001 marriage), and Kevin Hart and Eniko Parrish (she is 5 ft 7 in; he is listed between 5 ft 2 in and 5 ft 4 in).',
+      },
+      {
+        question: 'How tall is Kevin Hart compared to his wife?',
+        answer: 'Kevin Hart\u2019s height is genuinely disputed: most databases list him between 157 cm (5 ft 2 in) and 163 cm (5 ft 4 in), and he personally claims the higher figure. His wife Eniko Parrish is consistently listed at 170 cm (5 ft 7 in), so she is taller than him by roughly 7 to 13 cm either way.',
+      },
+      {
+        question: 'What is the average height difference between husbands and wives?',
+        answer: 'A PLOS ONE study of 12,502 couples measured an average gap of 14.1 cm (5.5 in), while surveys in Indonesia found husbands 10.9 cm taller on average. The same research shows people prefer the man to be taller but not excessively so — with the acceptable ceiling around 17% taller.',
+      },
+    ],
+    sources: [
+      {
+        title: 'BuzzFeed — \u201C25 Celebrity Couples With Visible Height Differences\u201D (2021)',
+        url: 'https://www.buzzfeed.com/ehisosifo1/celebrity-couples-height-differences-2021',
+        description: 'The dominant existing listicle on celebrity couple height gaps; dated 2021 and text-only.',
+      },
+      {
+        title: 'HealthyCeleb — \u201CTom Holland vs Zendaya Height Comparison\u201D',
+        url: 'https://healthyceleb.com/tom-holland-vs-zendaya-comparison/',
+        description: 'Detailed breakdown confirming Zendaya (5 ft 10 in) vs Tom Holland (5 ft 8 in) and their engagement reports.',
+      },
+      {
+        title: 'ET Online — \u201CHayden Panettiere and fiance Wladimir Klitschko reportedly split\u201D',
+        url: 'https://www.etonline.com/hayden-panettiere-and-fiance-wladimir-klitschko-reportedly-split-107303',
+        description: 'Reporting on the Klitschko–Panettiere engagement and their 2018 split.',
+      },
+      {
+        title: 'Wikipedia — \u201CVerne Troyer\u201D',
+        url: 'https://en.wikipedia.org/wiki/Verne_Troyer',
+        description: 'Troyer\u2019s height (2 ft 8 in / 81 cm) and his January 2004 marriage to Genevieve Gallen.',
+      },
+      {
+        title: 'Wikipedia — \u201CYao Ming\u201D',
+        url: 'https://en.wikipedia.org/wiki/Yao_Ming',
+        description: 'Yao Ming\u2019s official listed height of 7 ft 6 in (229 cm).',
+      },
+      {
+        title: 'CelebHeights — \u201CJason Momoa\u2019s Height\u201D',
+        url: 'https://www.celebheights.com/s/Jason-Momoa-4713.html',
+        description: 'Momoa\u2019s measured height consensus around 6 ft 4 in (193 cm).',
+      },
+      {
+        title: 'PLOS ONE — \u201CAre Human Mating Preferences with Respect to Height Reflected in Actual Pairings?\u201D',
+        url: 'https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0054186',
+        description: '12,502-couple study: average partner gap 14.1 cm; male-taller and male-not-too-tall norms.',
+      },
+      {
+        title: 'Knowridge — \u201CDoes a taller husband make his wife happier?\u201D',
+        url: 'https://knowridge.com/2018/02/does-a-taller-husband-make-his-wife-happier/',
+        description: 'Summary of the Personality and Individual Differences study: 10.9 cm average gap; happiness effect fades by ~18 years of marriage.',
+      },
+      {
+        title: 'Upworthy — \u201CZendaya–Tom Holland height difference and the \u201Cshort king\u201D discourse\u201D',
+        url: 'https://www.upworthy.com/zendaya-tom-holland-height-difference/',
+        description: 'Cultural context on why the Zendaya–Holland height gap became a viral talking point.',
+      },
+    ],
+    relatedSlugs: ['dwayne-johnson-height-comparison', 'messi-vs-ronaldo-height-comparison', 'what-does-6-feet-look-like', 'kpop-idol-height-comparison'],
+  },
 ];
