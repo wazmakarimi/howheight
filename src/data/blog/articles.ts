@@ -1447,4 +1447,424 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['wnba-vs-nba-height-comparison', 'messi-vs-ronaldo-height-comparison', 'what-does-6-feet-look-like', 'how-height-comparison-works'],
   },
+  {
+    slug: 'what-does-5ft10-look-like',
+    title: 'What Does 5\u201910\u201D (178 cm) Look Like? A Visual Height Guide',
+    h1: 'What Does 5\u201910\u201D (178 cm) Look Like? A Visual Height Guide',
+    description: 'What does 5\u201910\u201D (178 cm) look like? Visualise it against average men and women, your fridge, a standard door, a basketball rim, and celebrities like Daniel Craig and Kylian Mbapp\u00E9 \u2014 with measured, sourced data.',
+    category: 'scale',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-07T09:00:00Z',
+    updatedDate: '2026-10-07T09:00:00Z',
+    readingTimeMinutes: 6,
+    quickAnswer: {
+      summary: '5 ft 10 in converts to 177.8 cm (rounded to 178 cm). A 5\u201910\u201D man sits at about the 64th percentile for US men \u2014 roughly 2.4 cm above the measured US male average of 175.4 cm \u2014 and stands eye-to-eye with a full-size refrigerator, 25 cm below the top of a standard door.',
+      keyTakeaway: '5\u201910\u201D is the world\u2019s most common \u201Cabove average\u201D height: noticeably taller than most men in a crowd, yet just short of the 6-foot line where culture starts calling you tall.',
+      dataPoints: [
+        { label: 'Exact Metric Conversion', value: '177.8 cm' },
+        { label: 'US Male Percentile (CDC/NHANES)', value: '~64th Percentile' },
+        { label: 'Difference from Avg US Man (175.4 cm)', value: '+2.4 cm (+0.9 in)' },
+        { label: 'Difference from Avg Dutch Man (182.5 cm)', value: '-4.7 cm (-1.9 in)' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 178, label: '5 ft 10 in Person (178 cm)' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average US Man (175 cm)' },
+      { category: 'object', id: 'door' },
+      { category: 'object', id: 'refrigerator' },
+    ],
+    toolActionTitle: 'See 5\u201910\u201D (178 cm) on the Scale Canvas',
+    toolActionDescription: 'Drop yourself onto the HowHeight canvas next to an average US man, an average Dutch man, and a standard door \u2014 free, no sign-up.',
+    comparisonTable: {
+      caption: '5 ft 10 in (178 cm) Compared to Familiar Everyday Benchmarks',
+      headers: ['Benchmark', 'Benchmark Height', 'Difference from 5\u201910\u201D (178 cm)', 'Visual Relationship'],
+      rows: [
+        ['Average US Adult Man (CDC)', '175.4 cm (5 ft 9.1 in)', '-2.4 cm (-0.9 in)', 'A hair taller \u2014 noticeable only standing side by side'],
+        ['Average US Adult Woman (CDC)', '~162 cm (5 ft 3.8 in)', '-15.8 cm (-6.2 in)', 'Top of her head reaches your chin or lower forehead'],
+        ['Average Dutch Man (NCD-RisC)', '182.5 cm (5 ft 11.9 in)', '+4.7 cm (+1.9 in)', 'He looks you in the eye \u2014 and very slightly down'],
+        ['Standard Interior Door', '203.2 cm (6 ft 8 in)', '+25.4 cm (+10.0 in)', 'A full dinner plate of clearance above your head'],
+        ['Full-Size Refrigerator', '173 - 178 cm (68 - 70 in)', '-5 to 0 cm (-2 to 0 in)', 'Top of the fridge sits level with the crown of your head'],
+        ['Regulation Basketball Rim', '305 cm (10 ft)', '+127.2 cm (+4 ft 2 in)', 'The rim hangs well over a metre above your head'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-number',
+        heading: 'The Headline Number: 177.8 cm, Taller Than Most Men',
+        subheading: 'What the percentile math actually says about 5\u201910\u201D.',
+        paragraphs: [
+          'Five feet ten inches is 70 inches, and 70 \u00D7 2.54 gives 177.8 cm \u2014 rounded to 178 cm in everyday conversation. It is one of the most searched heights in the English-speaking world, because it sits in a psychologically fascinating spot: high enough to feel like a win, low enough to keep people wondering whether it \u201Ccounts\u201D as tall.',
+          'The measured data is unambiguous. The CDC\u2019s National Health and Nutrition Examination Survey (NHANES 2015\u20132016) puts the average US adult man at 69.1 inches (175.4 cm). Calculators built on that CDC distribution place 178 cm at roughly the 64th percentile \u2014 meaning a 5\u201910\u201D man is taller than about two out of every three American men he passes on the street. The 75th percentile sits at about 180.2 cm, so 5\u201910\u201D lands comfortably in above-average territory without touching genuinely tall.',
+          'That 2.4 cm gap above average is smaller than most people imagine. In a crowd, you will not read as \u201Ctall\u201D \u2014 you will read as normal-plus, the person who can see over about two-thirds of heads at a concert. The cultural line where strangers start describing you as tall sits roughly 5 cm higher, at the famous 6-foot mark.',
+        ],
+        callout: {
+          title: 'Measured vs claimed height',
+          text: 'Self-reported heights skew upward by 1\u20132 cm on average \u2014 most men who \u201Cclaim\u201D 5\u201910\u201D actually measure a touch under it. The figures in this article are measured, barefoot-style statistics, not profile-page numbers.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'household-benchmarks',
+        heading: 'Your House Is a Measuring Tape: Door, Fridge, Countertop',
+        subheading: 'Three objects in your home that pin 178 cm to reality.',
+        paragraphs: [
+          'Start with the single best visual proxy for 5\u201910\u201D: your refrigerator. Home Depot\u2019s measuring guide puts standard full-size fridges between 61\u00BE and 71\u00BC inches tall, and the most common French-door and top-freezer models land at 68\u201370 inches (173\u2013178 cm). Stand next to yours \u2014 the top edge of the fridge is, for most models, exactly the height of a 5\u201910\u201D man\u2019s crown. If you can rest your chin on top of the fridge, congratulations: you have personally calibrated the measurement.',
+          'Now walk to any interior doorway. The market-standard interior door is 80 inches (203.2 cm, or 6 ft 8 in) tall \u2014 that is the default slab sold by major manufacturers, while the building code minimum for an egress door is 78 inches. A 5\u201910\u201D man therefore carries 25.4 cm \u2014 a full 10 inches, roughly the length of a dinner plate \u2014 of open air above his head in every standard doorway. You will never need to duck, and you will always notice how much taller the frame is than you.',
+          'Finally, the kitchen counter. The industry-standard countertop height is 36 inches (91.4 cm) from the floor \u2014 set by cabinet and countertop standards for the comfort of average-stature users. On a 178 cm frame, that surface lands at about upper-thigh to hip height, which is precisely why food prep feels ergonomically \u201Cright\u201D at 5\u201910\u201D: the standard kitchen was, in effect, dimensioned around people like you.',
+        ],
+        image: {
+          src: '/assets/blog/what-does-5ft10-look-like/178-cm-everyday-objects.png',
+          alt: 'Height comparison chart showing a 5 ft 10 in (178 cm) person next to a refrigerator, a kitchen countertop, and a basketball rim',
+          caption: 'A 5\u201910\u201D person visualised against a full-size refrigerator (178 cm), a standard kitchen countertop (91 cm), and a regulation basketball rim (305 cm).',
+        },
+      },
+      {
+        id: 'global-context',
+        heading: 'Where 5\u201910\u201D Is Tall, Average, or Nothing Special',
+        subheading: 'Your height changes meaning the moment you change country.',
+        paragraphs: [
+          'In the United States, 5\u201910\u201D is 2.4 cm above the measured male average of 175.4 cm \u2014 a real but modest advantage, the kind that shows up in a lineup photo rather than across a room. You are taller than most, shorter than many, and utterly unremarkable in the best possible way.',
+          'Fly to the Netherlands and the frame flips. Dutch men average 182.5 cm according to the NCD Risk Factor Collaboration\u2019s century-long analysis of measured heights across 200 countries \u2014 the tallest national average on Earth. At 178 cm you stand 4.7 cm below the Dutch mean: in Amsterdam, you are the slightly shorter friend in every group photo, looking up \u2014 just barely \u2014 at eye lines that sit above yours.',
+          'Across much of South and Southeast Asia, the opposite happens. The NCD-RisC analysis found adult height plateauing in South Asian countries at roughly 5\u201310 cm below East Asian levels, and in countries where male averages cluster in the 160s, a 5\u201910\u201D man reads as unambiguously tall \u2014 the person strangers ask to reach the top shelf. Even in East Asia, where national averages sit in the low 170s, 178 cm puts you comfortably above the local mean.',
+          'The takeaway: 5\u201910\u201D is a travelling height. It is above-average in its home country, below-average in the world\u2019s tallest nations, and tall across much of Asia \u2014 which is why \u201Cis 5\u201910\u201D tall?\u201D has no single answer, only a postcode.',
+        ],
+        image: {
+          src: '/assets/blog/what-does-5ft10-look-like/178-cm-vs-world.png',
+          alt: 'Height comparison chart showing a 5 ft 10 in (178 cm) person next to an average US man, an average Dutch man, and a standard door',
+          caption: '178 cm against the US male average (175 cm), the Dutch male average (183 cm), and a standard 203 cm door.',
+        },
+      },
+      {
+        id: 'celebrity-peers',
+        heading: 'Famous Men Who Stand Exactly 5\u201910\u201D',
+        subheading: 'Three public figures listed at your height \u2014 and what their listings teach us.',
+        paragraphs: [
+          'Daniel Craig is listed at 5 ft 10 in (1.78 m) on IMDb. When he was cast as James Bond, the British press made much of the \u201Cshort Bond\u201D \u2014 then he spent fifteen years and five films proving that screen presence has nothing to do with the extra two inches. Craig at 178 cm is the definitive proof that 5\u201910\u201D photographs as leading-man stature.',
+          'Kylian Mbapp\u00E9\u2019s official Real Madrid profile lists him at 1.78 m. One of the fastest footballers on the planet \u2014 a World Cup winner and France captain \u2014 does it all at exactly 5\u201910\u201D. For young athletes worried their height caps their ceiling, Mbapp\u00E9 is the counter-example: elite pace, balance, and low centre of gravity at 178 cm.',
+          'Kal Penn \u2014 Harold & Kumar\u2019s Kumar, House\u2019s Dr. Kutner, and a former White House staffer \u2014 is listed at 5 ft 10 in on IMDb. One honest caveat applies to all three: celebrity heights on aggregator sites are frequently rounded or self-reported, so treat them as \u201Clisted at\u201D rather than measured. Mbapp\u00E9\u2019s figure, coming from his club\u2019s official profile, is the most trustworthy of the three.',
+        ],
+        image: {
+          src: '/assets/blog/what-does-5ft10-look-like/178-cm-celebrities.png',
+          alt: 'Height comparison chart showing Daniel Craig and Kylian Mbapp\u00E9, both 178 cm, next to an average US man at 175 cm',
+          caption: 'Daniel Craig and Kylian Mbapp\u00E9 \u2014 both listed at 178 cm \u2014 against the average US man (175 cm).',
+        },
+      },
+      {
+        id: 'is-it-tall',
+        heading: 'So, Is 5\u201910\u201D Actually Tall?',
+        subheading: 'The honest answer depends on whether you mean statistics or culture.',
+        paragraphs: [
+          'Statistically: yes-ish. The 64th percentile is above average by definition \u2014 you are taller than most men. Culturally: not quite. In the Anglosphere, \u201Ctall\u201D for a man begins, in practice, at the 6-foot line, and surveys of self-reported heights show enormous clustering exactly at 6\u20190\u201D \u2014 more than double the share the biology supports. At 5\u201910\u201D you sit 5.2 cm below the line where the label kicks in, which is why so many 5\u201910\u201D men round up.',
+          'The eye-level reality is gentler than the label anxiety. With eyes roughly 11.5 cm below the crown, a 5\u201910\u201D man\u2019s gaze sits at about 166.5 cm \u2014 looking very slightly down at the average man, dead level with men around the 75th percentile, and comfortably over the heads of most women. In conversation, you will rarely crane your neck in either direction.',
+          'And practically, 5\u201910\u201D is close to the ergonomic sweet spot of the built world. A standard twin or full bed is 190.5 cm long, leaving a 5\u201910\u201D sleeper nearly 13 cm of toe room. Standard doorways clear you by 25 cm. Car headroom, airplane seats, and off-the-rack clothing are all dimensioned with your frame in mind. The one humbling benchmark: a regulation basketball rim at 305 cm hangs 127 cm \u2014 over four feet \u2014 above your head. Some ceilings were not built for you.',
+        ],
+        callout: {
+          title: 'Try it yourself',
+          text: 'Open the HowHeight compare tool, add yourself at 178 cm, and drop in a door, a fridge, or Daniel Craig \u2014 seeing the silhouettes side by side beats imagining numbers.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'What is 5\u201910\u201D in cm exactly?',
+        answer: '5 ft 10 in is exactly 177.8 cm (70 inches \u00D7 2.54 cm per inch). It is conventionally rounded to 178 cm.',
+      },
+      {
+        question: 'Is 5\u201910\u201D tall for a man?',
+        answer: 'It is above average but not culturally \u201Ctall\u201D. At 178 cm a man sits around the 64th percentile for US men \u2014 taller than roughly two in three men \u2014 but the informal \u201Ctall\u201D label in Western culture generally starts at 6 feet (183 cm).',
+      },
+      {
+        question: 'How much taller is 5\u201910\u201D than the average man?',
+        answer: 'About 2.4 cm (just under an inch) taller than the measured US male average of 175.4 cm (CDC NHANES 2015\u20132016), and roughly 16 cm taller than the average US woman at about 162 cm.',
+      },
+      {
+        question: 'What percentile is 5\u201910\u201D for men?',
+        answer: 'Approximately the 64th percentile among US adult men, based on CDC/NHANES height distributions \u2014 between the 50th percentile (175.4 cm) and the 75th (about 180.2 cm).',
+      },
+      {
+        question: 'Which celebrities are 5\u201910\u201D (178 cm) tall?',
+        answer: 'Daniel Craig is listed at 5 ft 10 in on IMDb, Kylian Mbapp\u00E9 at 1.78 m on Real Madrid\u2019s official profile, and Kal Penn at 5 ft 10 in on IMDb. Treat aggregator listings as \u201Clisted at\u201D figures; club-published measurements like Mbapp\u00E9\u2019s are the most reliable.',
+      },
+      {
+        question: 'Does a 5\u201910\u201D person fit comfortably in a standard bed and doorway?',
+        answer: 'Yes to both. A standard twin/full bed is 190.5 cm long, leaving nearly 13 cm of spare length, and a standard 203.2 cm interior door leaves 25.4 cm (10 inches) of headroom.',
+      },
+    ],
+    sources: [
+      {
+        title: 'CDC \/ NCHS FastStats \u2014 Body Measurements',
+        url: 'https://www.cdc.gov/nchs/fastats/body-measurements.htm',
+        description: 'Measured average heights for US adults ages 20 and over, from NHANES anthropometric data.',
+      },
+      {
+        title: 'HeightPercentile.com \u2014 Male Height Percentile Data (CDC\/NHANES)',
+        url: 'https://heightpercentile.com/male/5-8-percentile/',
+        description: 'Nearby-heights table: 5\u201910\u201D (178 cm) sits at the 64.5th percentile for US men.',
+      },
+      {
+        title: 'Calqora \u2014 Height Percentile Calculator (CDC\/NHANES)',
+        url: 'https://www.calqora.com/height-percentile',
+        description: 'Independent percentile table: 5\u201910\u201D (177.8 cm) at the 63rd percentile; 50th = 175.3 cm, 75th = 180.3 cm.',
+      },
+      {
+        title: 'NCD Risk Factor Collaboration \u2014 A Century of Trends in Adult Height (eLife)',
+        url: 'https://www.sciencedaily.com/releases/2016/07/160726094434.htm',
+        description: 'Dutch men the tallest in the world at 182.5 cm average; South Asian height plateau analysis.',
+      },
+      {
+        title: 'ScienceBlog \u2014 The Dutch\u2013American Height Reversal',
+        url: 'https://scienceblog.com/t-dutch-american-men-height-reversal-150-years/',
+        description: 'NCD-RisC 1996 birth cohort: Dutch men averaged an estimated 182.5 cm.',
+      },
+      {
+        title: 'MI Windows and Doors \u2014 Standard Door Sizes',
+        url: 'https://MIwindows.com/blog/standard-door-sizes',
+        description: 'Standard interior door height is 80 inches (6 ft 8 in).',
+      },
+      {
+        title: 'Home Depot \u2014 How to Measure a Refrigerator',
+        url: 'https://www.homedepot.com/c/ah/how-to-measure-a-refrigerator/9ba683603be9fa5395fab908a4e75f8',
+        description: 'Standard refrigerators range from 61\u00BE to 71\u00BC inches tall; common full-size models sit at 68\u201370 in.',
+      },
+      {
+        title: 'Bob Vila \u2014 The Standard Countertop Height',
+        url: 'https://www.bobvila.com/articles/standard-countertop-height/',
+        description: 'Industry-standard countertop height is 36 inches, per ANSI and Kitchen Manufacturers of America guidance.',
+      },
+      {
+        title: 'Archysport \u2014 Basketball Hoop Height: The Official 3.05 m Standard',
+        url: 'https://www.archysport.com/2026/04/basketball-hoop-height-the-official-standard-of-3-05-meters-and-its-impact-on-fair-play-and-competition/',
+        description: 'FIBA and NBA regulations set the rim at 3.05 m (10 ft) above the playing surface.',
+      },
+      {
+        title: 'IMDb \u2014 Daniel Craig Biography',
+        url: 'https://www.imdb.com/name/nm0185819/',
+        description: 'Lists Daniel Craig\u2019s height at 5 ft 10 in (1.78 m).',
+      },
+      {
+        title: 'Real Madrid C.F. \u2014 Kylian Mbapp\u00E9 Official Profile',
+        url: 'https://realmadrid.com/en-US/football/first-team/players/kylian-mbappe',
+        description: 'Club-published profile: height 1.78 m.',
+      },
+      {
+        title: 'IMDb \u2014 Kal Penn Biography',
+        url: 'https://www.imdb.com/name/nm0671980/',
+        description: 'Lists Kal Penn\u2019s height at 5 ft 10\u00BC in (1.78 m).',
+      },
+    ],
+    relatedSlugs: ['what-does-6-feet-look-like', 'human-vs-door-height-comparison', 'how-height-comparison-works'],
+  },
+  {
+    slug: 'is-6-feet-rare-height-percentiles',
+    title: 'Is 6 Feet Rare? Height Percentiles & What Counts as Tall (2026)',
+    h1: 'Is 6 Feet Rare? Height Percentiles & What Counts as Tall',
+    description: 'Is 6 feet rare? About 14.5% of US men — roughly 1 in 7 — are 6\u20190\u201D or taller (85th percentile). See the full height percentile ladder, why 6\u20190\u201D feels more common than it is, and how rare six feet is for women and worldwide.',
+    category: 'guides',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-07T09:00:00Z',
+    updatedDate: '2026-10-07T09:00:00Z',
+    readingTimeMinutes: 7,
+    quickAnswer: {
+      summary: 'No — 6 feet is not rare among American men. Derivations of CDC/NHANES measured data put roughly 14.5% of US adult men at 6\u20190\u201D (183 cm) or taller: about 1 in 7, or the 85th percentile. It only becomes genuinely rare higher up the ladder — 6\u20192\u201D (top ~5%), 6\u20194\u201D (top ~1%) — and for women, where 6\u20190\u201D sits near the 99th percentile.',
+      keyTakeaway: 'Six feet is \u201Cabove average enough to notice\u201D rather than rare: taller than 6 in 7 US men, but you will still meet one in every small crowd. True rarity starts at 6\u20192\u201D and above.',
+      dataPoints: [
+        { label: 'US Men 6\u20190\u201D+ (CDC/NHANES-derived)', value: '~14.5% (1 in 7)' },
+        { label: 'Percentile of 6\u20190\u201D for US Men', value: '~85th percentile' },
+        { label: 'US Women 6\u20190\u201D+', value: '~1% (99th percentile)' },
+        { label: 'Genuinely rare territory', value: '6\u20192\u201D+ (top ~5%)' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 183, label: '6 ft 0 in Man (183 cm)' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average US Man (175 cm)' },
+      { category: 'celebrity', id: 'leonardo-dicaprio' },
+      { category: 'celebrity', id: 'ranbir-kapoor' },
+    ],
+    toolActionTitle: 'See 6\u20190\u201D (183 cm) on the Scale Canvas',
+    toolActionDescription: 'Drop a 6-foot figure onto the HowHeight canvas next to the average man, a 6\u20194\u201D outlier, and the Dutch average \u2014 free, no sign-up.',
+    comparisonTable: {
+      caption: 'The US Male Height Percentile Ladder (CDC/NHANES-derived)',
+      headers: ['Height', 'Metric', 'Percentile', 'Share at or above', 'Roughly 1 in\u2026'],
+      rows: [
+        ['5\u20199\u201D (average)', '175 cm', '50th', '~50%', '2'],
+        ['5\u201911\u201D', '180 cm', '75th', '~25\u201330%', '3\u20134'],
+        ['6\u20190\u201D', '183 cm', '85th', '14.5%', '7'],
+        ['6\u20191\u201D', '185 cm', '90th', '~10%', '10'],
+        ['6\u20192\u201D', '188 cm', '95th', '~3\u20135%', '20\u201330'],
+        ['6\u20194\u201D', '193 cm', '99th', '~1%', '100'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'headline-answer',
+        heading: 'The Headline Answer: About 1 in 7, Not 1 in 100',
+        subheading: 'What the measured data says about the most asked-about height on the internet.',
+        paragraphs: [
+          'Six feet is 72 inches, and 72 \u00D7 2.54 gives 182.88 cm \u2014 conventionally rounded to 183 cm. The most authoritative source for American heights is the CDC\u2019s National Health and Nutrition Examination Survey (NHANES), which physically measures a nationally representative sample instead of asking people how tall they think they are. Its latest anthropometric reference data (August 2021\u2013August 2023) puts the average US adult man at 68.9 inches \u2014 175.3 cm. Against that distribution, independent derivations of the NHANES data converge on one headline number: roughly 14.5% of American adult men stand 6\u20190\u201D or taller.',
+          'Translate that into a room: 14.5% is about one man in seven. In a lift with seven men, one of them, on average, clears the six-foot line. Statistically, 6\u20190\u201D lands at about the 85th percentile \u2014 a six-foot man is taller than roughly six out of every seven men he passes on the street. That is firmly above average, the kind of height people register in a room, but it is not what a statistician would call rare. Genuinely uncommon heights start a couple of inches higher.',
+          'So why does the question get asked so obsessively? Because six feet is the most culturally loaded round number in the height world. It is the default minimum on dating profiles, the threshold in \u201Ctall, dark and handsome,\u201D and the line at which Western culture starts handing out the \u201Ctall\u201D label. A stated 6\u20190\u201D minimum filters out about 85 of every 100 American men before personality, humour, or anything else enters the picture \u2014 which is precisely why the number deserves an honest, measured answer rather than vibes.',
+        ],
+        callout: {
+          title: 'The 1-in-7 rule of thumb',
+          text: 'About 14.5% of US adult men are 6\u20190\u201D or taller (CDC/NHANES-derived). If you remember one number from this article, remember 1 in 7.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'percentile-ladder',
+        heading: 'The Full Percentile Ladder: From Average to Elite',
+        subheading: 'Every inch above six feet halves the pool \u2014 here is the whole staircase.',
+        paragraphs: [
+          'Percentages get abstract fast, so here is the ladder that NHANES-derived calculators agree on. The average US man (175.3 cm) sits at the 50th percentile by definition. Add two inches to 5\u201911\u201D (180 cm) and you reach roughly the 75th percentile \u2014 taller than three in four men, or about one in three to four. One more inch, to 6\u20190\u201D (183 cm), takes you to the 85th percentile: 14.5%, about one in seven.',
+          'From there the curve steepens brutally. At 6\u20191\u201D (185 cm) you are near the 90th percentile \u2014 one in ten. At 6\u20192\u201D (188 cm), the 95th: only about 3\u20135% of men, roughly one in twenty to thirty. At 6\u20194\u201D (193 cm), the 99th: about 1%, one in a hundred. This is the normal distribution doing its work \u2014 near the middle of the bell curve each extra inch costs a few percentile points, but out on the shoulder each inch halves whatever pool remains.',
+          'One methodological note, because it matters: these percentages are third-party derivations computed from CDC/NHANES measured distributions, not figures printed verbatim in a CDC press release. Different calculators differ by a point or two depending on which survey wave they use \u2014 the 2015\u20132018 wave averaged 175.4 cm, the 2021\u20132023 wave 175.3 cm \u2014 but every serious derivation lands in the same neighbourhood: mid-eighties percentile, mid-teens percent. The convergence across independent calculators is the finding.',
+        ],
+        image: {
+          src: '/assets/blog/is-6-feet-rare-height-percentiles/183-cm-percentile-ladder.png',
+          alt: 'Height comparison chart showing 6 ft 0 in (183 cm) against the average US man (175 cm), 6 ft 2 in (188 cm) and 6 ft 4 in (193 cm)',
+          caption: 'The percentile ladder: 183 cm (85th percentile) against the US male average (175 cm), 6\u20192\u201D (95th) and 6\u20194\u201D (99th).',
+        },
+      },
+      {
+        id: 'why-feels-common',
+        heading: 'Why 6 Feet Feels More Common Than 1-in-7',
+        subheading: 'Your eyes are lying to you \u2014 here are the three mechanisms.',
+        paragraphs: [
+          'If only one man in seven is six feet, why does it feel like half the men on a dating app clear the bar? Start with the measuring tape\u2019s oldest enemy: self-reporting. A CDC-published analysis of NHANES 2001\u20132006 data compared what people claimed against what the stadiometer measured, and found men overstate their height by roughly a centimetre on average \u2014 1.34 cm among non-Hispanic white men, rising with age. Add shoes (another 2\u20133 cm) and the classic round-up, and a large fraction of claimed six-footers measure 5\u201911\u201D barefoot in the morning.',
+          'Then there is digit preference: self-reported heights pile up suspiciously at round numbers, and 6\u20190\u201D is the tallest round number that feels attainable \u2014 far more men claim exactly six feet than the biology supports. It is the same quirk that makes 5\u201910\u201D the most-claimed height in America: the ruler in people\u2019s heads has inches, but their vanity has rounding.',
+          'Finally, perception is rigged. Tall men are overrepresented everywhere your eyes go: professional sport, film and television (where camera angles compress differences), and leadership photography. And you simply notice a 6\u20192\u201D man in a crowd the way you notice a red car in traffic \u2014 availability bias makes the memorable feel frequent. The measured 14.5% has not changed; your sample of it has.',
+        ],
+        callout: {
+          title: 'Barefoot morning height is the honest number',
+          text: 'Claimed heights are usually in shoes, in the evening, rounded up. Measured NHANES figures are barefoot \u2014 which is why the official 14.5% can feel lower than the dating-app reality.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'women',
+        heading: 'For Women, 6 Feet Genuinely Is Rare',
+        subheading: 'Same number, different universe.',
+        paragraphs: [
+          'Everything above was about men, and the sex difference is where the word \u201Crare\u201D finally earns its keep. Roughly 1% of US women reach 6\u20190\u201D or taller \u2014 about one woman in a hundred \u2014 placing six feet near the 99th percentile for women. A 6\u20190\u201D woman is as unusual among women as a 6\u20194\u201D man is among men. Where a six-foot man is \u201Cthe tallish guy in the group photo,\u201D a six-foot woman is very often the tallest person in the room.',
+          'The female distribution is centred much lower \u2014 the average US adult woman stands about 162\u2013163 cm \u2014 so the percentiles compress differently. The 90th percentile for women sits around 5\u20197\u201D (about 170 cm), a height many would already describe as tall for a woman. Absorb that for a moment: the height the culture calls \u201Ctall for a woman\u201D is merely the 90th percentile, while the male equivalent of \u201Ctall\u201D sits five inches higher in absolute terms.',
+          'This asymmetry drives a lot of quiet confusion in height discourse. When preferences are stated in absolute inches rather than percentiles, they compare two completely different distributions. A woman seeking a man \u201Cat least a head taller\u201D at 6\u20190\u201D-plus is fishing in the top 15% of men; a man of the same absolute height hoping to meet a taller woman is looking for the top 1% of women. Same number, different universe \u2014 which is why percentile thinking beats inch thinking every time.',
+        ],
+        image: {
+          src: '/assets/blog/is-6-feet-rare-height-percentiles/183-cm-vs-woman.png',
+          alt: 'Height comparison chart showing a 6 ft 0 in (183 cm) man next to an average US man (175 cm) and an average US woman (162 cm)',
+          caption: '183 cm against the average US man (175 cm) and the average US woman (162 cm) \u2014 for her, 6\u20190\u201D is 99th-percentile territory.',
+        },
+      },
+      {
+        id: 'around-the-world',
+        heading: 'How Rare Is 6 Feet Around the World?',
+        subheading: 'In Amsterdam it is the average. In Mumbai it is the top shelf.',
+        paragraphs: [
+          'Rarity is a postcode. In the Netherlands \u2014 the tallest nation on Earth, where the NCD Risk Factor Collaboration\u2019s century-long analysis of measured heights puts adult men at an average of 182.5 cm \u2014 six feet is essentially the national average. Read the bell curve off that mean and roughly half of Dutch men stand 6\u20190\u201D or taller. In Amsterdam, a six-footer is not tall; he is the median.',
+          'Travel east and the picture inverts. India\u2019s National Family Health Survey (NFHS-5, 2019\u20132021) puts the average adult Indian man at about 165 cm \u2014 a full 18 cm below the six-foot line. Nobody publishes an official \u201Cshare of Indian men over six feet,\u201D but with the mean sitting nearly three standard deviations below 183 cm, the honest estimate is well under one in a hundred. In much of South and Southeast Asia, a 6\u20190\u201D man is not just tall \u2014 he is the person strangers ask to reach the top shelf, every single time.',
+          'Even within the United States the number moves. NHANES-measured averages differ by background: non-Hispanic white men average close to 5\u201910\u201D (about 177\u2013178 cm), while Mexican-American men in the NIH\u2019s San Antonio Heart Study averaged 170.0 cm against 177.9 cm for non-Hispanic white men. Derived shares follow the means \u2014 on the order of 18\u201320% of non-Hispanic white men at 6\u2019-plus versus high single digits for Hispanic and Asian-American men. Treat those shares as informed estimates rather than census facts: the direction is solid, the decimals are soft.',
+        ],
+        image: {
+          src: '/assets/blog/is-6-feet-rare-height-percentiles/183-cm-country-context.png',
+          alt: 'Height comparison chart showing 6 ft 0 in (183 cm) next to an average US man (175 cm), an average Dutch man (183 cm) and an average Indian man (165 cm)',
+          caption: '183 cm against national male averages: USA (175 cm), Netherlands (183 cm) and India (165 cm).',
+        },
+      },
+      {
+        id: 'famous-and-tall',
+        heading: 'Famous Men Who Stand Exactly 6\u20190\u201D \u2014 and What \u201CTall\u201D Really Means',
+        subheading: 'The most socially valuable height in the Anglosphere, and the men who prove it.',
+        paragraphs: [
+          'If 6\u20190\u201D is your height, you share it with formidable company. Leonardo DiCaprio is listed at 6 ft 0 in (183 cm) in Academy and casting records \u2014 the definitive leading-man silhouette of his generation. Ranbir Kapoor stands 183 cm; Hrithik Roshan and Olympic javelin champion Neeraj Chopra both measure 182 cm, a rounding error from the line. Four men, four continents of fame, one shared silhouette.',
+          'And that silhouette is the point. At the 85th percentile, six feet is the height of the leading man, the fast bowler, the figure photographed a head above the ensemble cast \u2014 noticeable in every room, yet common enough that nobody stares. It is, in a real sense, the most socially valuable height in the Anglosphere: all of the presence, none of the logistics problems that arrive with the genuinely rare heights \u2014 the car roofs, the airplane knees, the \u201Cdo you play basketball?\u201D from strangers.',
+          'So what counts as tall? Here is the honest taxonomy the numbers support. At 6\u20190\u201D you are taller than about six in seven American men: conspicuously above average, the default definition of \u201Ctall\u201D in dating profiles and casting calls \u2014 but not rare. Tall, properly speaking, starts around 6\u20191\u201D, the top tenth. Rare starts at 6\u20192\u201D, the top twentieth. And elite, one-in-a-hundred rarity belongs to 6\u20194\u201D and above. Six feet is the doorway to tall, not the penthouse \u2014 which is exactly why the question \u201Cis 6 feet rare?\u201D keeps getting asked, and why the measured answer is more interesting than the myth.',
+        ],
+        image: {
+          src: '/assets/blog/is-6-feet-rare-height-percentiles/183-cm-celebrities.png',
+          alt: 'Height comparison chart showing Leonardo DiCaprio and Ranbir Kapoor, both 183 cm, next to an average US man at 175 cm',
+          caption: 'Leonardo DiCaprio and Ranbir Kapoor \u2014 both listed at 183 cm \u2014 against the average US man (175 cm).',
+        },
+        callout: {
+          title: 'Try it yourself',
+          text: 'Open the HowHeight compare tool, add yourself at 183 cm, and drop in the average man, a 6\u20194\u201D outlier, and the Dutch average \u2014 seeing the silhouettes side by side beats imagining numbers.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'What percentage of men are 6 feet tall?',
+        answer: 'About 14.5% of US adult men \u2014 roughly 1 in 7 \u2014 stand 6\u20190\u201D (183 cm) or taller, according to derivations of CDC/NHANES measured height data. That puts 6\u20190\u201D at about the 85th percentile for men.',
+      },
+      {
+        question: 'Is 6 feet considered tall for a man?',
+        answer: 'It is above average but not rare. A 6\u20190\u201D man is taller than roughly 6 in 7 American men, and Western culture generally applies the \u201Ctall\u201D label from 6 feet upward \u2014 but statistically, true rarity starts around 6\u20192\u201D (top 5%).',
+      },
+      {
+        question: 'What percentile is 6\u20190\u201D for a man?',
+        answer: 'Approximately the 85th percentile among US adult men, based on CDC/NHANES measured height distributions \u2014 between the 75th percentile (about 5\u201911\u201D / 180 cm) and the 90th (about 6\u20191\u201D / 185 cm).',
+      },
+      {
+        question: 'Is 6\u20190\u201D tall for a woman?',
+        answer: 'Yes \u2014 genuinely rare. Only about 1% of US women reach 6\u20190\u201D, placing it near the 99th percentile. A 6\u20190\u201D woman is as unusual among women as a 6\u20194\u201D man is among men.',
+      },
+      {
+        question: 'How rare is 6\u20192\u201D or 6\u20194\u201D?',
+        answer: '6\u20192\u201D (188 cm) sits near the 95th percentile \u2014 about 3\u20135% of US men, roughly 1 in 20\u201330. 6\u20194\u201D (193 cm) is about the 99th percentile \u2014 roughly 1% of men, about 1 in 100.',
+      },
+      {
+        question: 'How rare is 6 feet in other countries?',
+        answer: 'In the Netherlands (men average 182.5 cm) roughly half of men are 6\u20190\u201D or taller. In India (men average ~165 cm) it is well under 1% \u2014 a rough estimate, but the 18 cm gap to the mean makes it exceptionally uncommon. Within the US, the share runs higher among non-Hispanic white men (~18\u201320%) than among Hispanic or Asian-American men (high single digits).',
+      },
+    ],
+    sources: [
+      {
+        title: 'CDC / NCHS FastStats \u2014 Body Measurements',
+        url: 'https://www.cdc.gov/nchs/fastats/body-measurements.htm',
+        description: 'Measured average heights for US adults ages 20 and over, from NHANES anthropometric data.',
+      },
+      {
+        title: 'CalcXI \u2014 What Percentage of American Men Are Over 6 Feet Tall?',
+        url: 'https://calcxi.com/what-percentage-of-american-men-are-over-6-feet-tall/',
+        description: 'CDC/NHANES-derived distribution: 14.5% of US men at 6\u20190\u201D+, with the percentile ladder and ethnicity breakdowns.',
+      },
+      {
+        title: 'DelusionCalc \u2014 What Percentage of Men Are Over 6 Feet? Real CDC Data',
+        url: 'https://delusioncalc.com/what-percentage-of-men-are-over-6-feet/',
+        description: 'Independent NHANES-derived table: 6\u20190\u201D \u2248 85th percentile; 6\u20191\u201D \u2248 90th; 6\u20192\u201D \u2248 95th; 6\u20194\u201D \u2248 99th.',
+      },
+      {
+        title: 'Snuggymom \u2014 What Percentage Men Are Over Six Feet?',
+        url: 'https://snuggymom.com/what-percentage-men-are-over-six-feet/',
+        description: 'Cites CDC \u201CAnthropometric Reference Data for Children and Adults, United States, August 2021\u2013August 2023\u201D (adult male mean 68.9 in) behind the ~1-in-7 estimate.',
+      },
+      {
+        title: 'CDC Preventing Chronic Disease \u2014 Self-Reported vs Measured Height (NHANES 2001\u20132006)',
+        url: 'https://www.cdc.gov/Pcd/Issues/2009/oct/pdf/08_0229.pdf',
+        description: 'Measured-vs-claimed comparison: men overstate height by ~1 cm on average (1.34 cm for non-Hispanic white men).',
+      },
+      {
+        title: 'ScienceDaily \u2014 NCD-RisC: A Century of Trends in Adult Height',
+        url: 'https://www.sciencedaily.com/releases/2016/07/160726094434.htm',
+        description: 'Dutch men the tallest in the world at 182.5 cm average.',
+      },
+      {
+        title: 'Supplement Choices \u2014 What\u2019s the Indian Average Height?',
+        url: 'https://supplementchoices.com/whats-the-indian-average-height/',
+        description: 'NFHS-5 (2019\u20132021) anthropometry: adult Indian men average ~165 cm, women ~152 cm.',
+      },
+      {
+        title: 'NIH / PMC \u2014 San Antonio Heart Study: Height by Ethnicity',
+        url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC2763950/',
+        description: 'Measured heights: non-Hispanic white men 177.9 cm vs Mexican-American men 170.0 cm.',
+      },
+      {
+        title: 'Vivu.tv \u2014 How Tall Is a 95th Percentile Male?',
+        url: 'https://vivu.tv/how-tall-is-a-95th-percentile-male/',
+        description: 'CDC-based percentile tables; ~1% of US women at 6\u20190\u201D+.',
+      },
+    ],
+    relatedSlugs: ['what-does-6-feet-look-like', 'what-does-5ft10-look-like', 'how-height-comparison-works', 'celebrity-couples-biggest-height-differences'],
+  },
 ];
