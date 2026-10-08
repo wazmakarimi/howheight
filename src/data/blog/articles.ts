@@ -2055,4 +2055,213 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['what-does-6-feet-look-like', 'is-6-feet-rare-height-percentiles', 'how-height-comparison-works', 'dwayne-johnson-height-comparison'],
   },
+  {
+    slug: 'video-game-character-heights',
+    title: 'Video Game Character Heights in Real Life: Steve, Mario, Kratos & Master Chief (2026)',
+    h1: 'Video Game Character Heights in Real Life: Mario, Steve, Kratos & Master Chief Visualized',
+    description:
+      'How tall are Mario, Steve, Kratos and Master Chief in real life? Verified official heights \u2014 Mario 155 cm (5 ft 1 in), Steve 187.5 cm (6 ft 2 in), Kratos 193 cm (6 ft 4 in), Master Chief 208/218 cm \u2014 compared side-by-side and against the average human.',
+    category: 'anime',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-08T09:00:00Z',
+    updatedDate: '2026-10-08T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'Master Chief in his MJOLNIR armour (218 cm / 7 ft 2 in) towers over the shortest gaming icon, Mario (155 cm / 5 ft 1 in) \u2014 a 63 cm gap. In between stand Kratos at 193 cm (6 ft 4 in) and a surprisingly tall Minecraft Steve at 187.5 cm (6 ft 2 in), each figure verified against official statements from Xbox, Santa Monica Studio, Nintendo and Halo canon.',
+      keyTakeaway:
+        'Video-game heights are design decisions, not measurements: Steve\u2019s 6 ft 2 in comes from an official Xbox post that overrode years of fan estimates, Kratos was quietly shrunk from 7 ft 6 in to 6 ft 4 in for the Norse reboot, and Mario\u2019s 5 ft 1 in comes from Nintendo\u2019s own official figure. Treat every number below as canon \u2014 not physics.',
+      dataPoints: [
+        { label: 'Tallest of the four', value: 'Master Chief (armoured) \u2014 218 cm (7 ft 2 in)' },
+        { label: 'Shortest of the four', value: 'Mario \u2014 155 cm (5 ft 1 in)' },
+        { label: 'Biggest surprise', value: 'Steve \u2014 187.5 cm (6 ft 2 in), 5 in above the average US man' },
+        { label: 'Full spread', value: '63 cm from Mario to armoured Master Chief' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 155, label: 'Mario' },
+      { category: 'human', id: 'male', customHeightCm: 187.5, label: 'Steve (Minecraft)' },
+      { category: 'human', id: 'male', customHeightCm: 193, label: 'Kratos' },
+      { category: 'human', id: 'male', customHeightCm: 218, label: 'Master Chief (armoured)' },
+    ],
+    toolActionTitle: 'See the whole lineup to scale',
+    toolActionDescription:
+      'The visualizer above is preloaded with all four verified heights \u2014 Mario at 155 cm, Steve at 187.5 cm, Kratos at 193 cm and Master Chief at 218 cm in armour. Add your own height and see exactly where you land in the lineup.',
+    comparisonTable: {
+      caption: 'The four icons ranked tallest to shortest (all figures officially confirmed)',
+      headers: ['Character', 'Franchise', 'Verified height', 'How the figure was confirmed'],
+      rows: [
+        ['Master Chief', 'Halo', '218 cm (7 ft 2 in) in armour / 208 cm (6 ft 10 in) unarmoured', 'Halo novels and official canon profiles'],
+        ['Kratos', 'God of War', '193 cm (6 ft 4 in), Norse era', 'Santa Monica Studio technical artist Axel Grossman'],
+        ['Steve', 'Minecraft', '187.5 cm (6 ft 2 in)', 'Official Xbox social post, October 2021'],
+        ['Mario', 'Super Mario', '155 cm (5 ft 1 in)', 'Official Nintendo figure measurement'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-full-lineup',
+        heading: 'The Full Lineup: 63 cm Separate Mario from Master Chief',
+        subheading: 'Four of gaming\u2019s biggest icons span more than two feet of difference \u2014 and the order will surprise you.',
+        paragraphs: [
+          'Ranked by their officially confirmed heights, the lineup runs: Master Chief in MJOLNIR armour (218 cm), Kratos (193 cm), Minecraft Steve (187.5 cm) and Mario (155 cm). The 63 cm gulf between the tallest and shortest is wider than the full height of most toddlers \u2014 and the order contains at least one shock. Ask a room of gamers to rank these four by height and almost nobody puts the blocky Minecraft avatar second.',
+          'Ground the numbers against real people. The average US man stands about 175.3 cm (CDC NHANES), so Steve is a full 12 cm taller than average, Kratos clears him by 18 cm, and armoured Master Chief looms 43 cm above. Mario, at 155 cm, is 20 cm below the average US man \u2014 and a touch under the average US woman (162.6 cm). If you want international flavour: the Dutch, the world\u2019s tallest nation, average about 183 cm for men, which still leaves them 35 cm short of Master Chief in his armour.',
+          'These are not fan wiki estimates dressed up as fact. Every figure below comes from an official or canon source: an Xbox announcement for Steve, a Nintendo-licensed figure measurement for Mario, a Santa Monica Studio technical breakdown for Kratos, and the Halo novels for Master Chief. Where the sources disagree or the canon has changed \u2014 and it has, more than once \u2014 you will find the caveats spelled out, not buried.',
+        ],
+        image: {
+          src: '/assets/blog/video-game-character-heights/full-lineup.png',
+          alt: 'Height comparison chart showing Mario at 155 cm, an average US man at 175 cm, Steve at 187.5 cm, Kratos at 193 cm and Master Chief in armour at 218 cm side by side',
+          caption: 'The full lineup to scale: Mario (155 cm), average US man (175 cm), Steve (187.5 cm), Kratos (193 cm) and armoured Master Chief (218 cm).',
+        },
+        callout: {
+          title: 'The headline number',
+          text: 'Mario at 155 cm vs Master Chief in armour at 218 cm: a 63 cm difference \u2014 Master Chief stands more than 40% taller than Mario.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'mario-5ft1',
+        heading: 'Mario at 5 ft 1: Gaming\u2019s Shortest Icon',
+        subheading: 'Four decades of adventures, and Nintendo\u2019s official figure puts Mario below the average woman.',
+        paragraphs: [
+          'Mario\u2019s official height is 155 cm (5 ft 1 in), based on Nintendo\u2019s own licensed figure measurement \u2014 a figure the manufacturer described as matching the character\u2019s actual height per the games\u2019 background story. That makes the most famous plumber in history shorter than the average US woman (162.6 cm) and 20 cm shorter than the average US man. It is a number that surprises people who grew up watching Mario tower over Toads and Koopas \u2014 but in-universe, almost everything in the Mushroom Kingdom is also small.',
+          'A word of honesty, because Mario\u2019s height is the fuzziest of the four. Scale in the Mario series has never been perfectly consistent: an official life-size figure sold elsewhere measured 150 cm (4 ft 11 in), the Mario Wiki documents his height varying across games and media, and Super Mario Sunshine jokingly lists his height as \u201Cunknown\u201D. The 155 cm figure is the most widely accepted official number, but it is best understood as Nintendo\u2019s stated canon rather than a physics measurement \u2014 fitting, for a character who grows and shrinks by eating mushrooms.',
+          'What makes Mario\u2019s shortness interesting is how deliberately Nintendo designed it. Mario\u2019s creator Shigeru Miyamoto has discussed making Mario compact next to the realistic humans of New Donk City in Super Mario Odyssey; the plumber is an underdog by stature, and the games lean into it. Stack him against our other three icons and the effect is dramatic: Kratos is 38 cm taller than him, Steve 32.5 cm taller, and Master Chief in armour an absurd 63 cm taller. Mario does not just stand below them \u2014 he barely reaches Master Chief\u2019s shoulder.',
+        ],
+        image: {
+          src: '/assets/blog/video-game-character-heights/mario-vs-master-chief.png',
+          alt: 'Height comparison chart showing Mario at 155 cm next to Master Chief in armour at 218 cm, a 63 cm difference',
+          caption: 'The extremes, side by side: Mario (155 cm) against Master Chief in armour (218 cm) \u2014 63 cm apart.',
+        },
+      },
+      {
+        id: 'steve-6ft2',
+        heading: 'Steve Is 6 ft 2: Minecraft\u2019s Quiet Giant',
+        subheading: 'The blocky everyman of Minecraft is five inches taller than the average American man.',
+        paragraphs: [
+          'Of all the numbers in this article, Steve\u2019s is the one that breaks brains. In October 2021 the official Xbox account posted Steve\u2019s measurements: 6 feet 2 inches, or 1.875 metres. That makes the default Minecraft avatar a full five inches (12.5 cm) taller than the average US man (about 5 ft 9 in / 175 cm) and taller than the average Dutch man (183 cm). The blocky everyman \u2014 the avatar millions of players see as themselves \u2014 is, canonically, a genuinely tall man.',
+          'The reveal overrode years of settled fan wisdom. Steve\u2019s in-game hitbox is 1.8 metres, and the old community consensus pegged him at 5 ft 9 in \u2014 the model is 32 pixels tall and fans had done the pixel maths to death. Microsoft\u2019s official 1.875 m figure settled it overnight, and it is worth pausing on what that implies: roughly a third of Steve\u2019s height is his enormous square head. Every mob, door and two-block jump in Minecraft is scaled to a 6 ft 2 in protagonist, which quietly explains why the world feels slightly oversized.',
+          'Stack Steve against the rest of the lineup and he holds his own better than anyone expects. He is 5.5 cm shorter than Kratos \u2014 a gap that would vanish in boots \u2014 and 32.5 cm taller than Mario. The only character that makes Steve look ordinary is Master Chief in armour, and Master Chief makes almost every human on Earth look ordinary. If you play Minecraft, you have been seeing the world through the eyes of someone noticeably taller than you probably are.',
+        ],
+        image: {
+          src: '/assets/blog/video-game-character-heights/steve-vs-average-man.png',
+          alt: 'Height comparison chart showing Steve from Minecraft at 187.5 cm next to an average US man at 175 cm',
+          caption: 'The surprise, visualized: Steve (187.5 cm) stands a full five inches above the average US man (175 cm).',
+        },
+        callout: {
+          title: 'Official beats fan maths',
+          text: 'For years fans calculated Steve at 5 ft 9 in from his 32-pixel model. The official Xbox figure \u2014 6 ft 2 in \u2014 overrode all of it in one post.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'kratos-redesign',
+        heading: 'Kratos Was Shrunk: From 7 ft 6 in to 6 ft 4 in',
+        subheading: 'The God of War\u2019s height changed between eras \u2014 and the reason was storytelling.',
+        paragraphs: [
+          'Kratos\u2019s current, Norse-era height is 193 cm (6 ft 4 in), confirmed in unusual detail by Santa Monica Studio lead character technical artist Axel Grossman in a Gnomon technical breakdown of the 2018 God of War character model. That is the Kratos of God of War (2018) and God of War Ragnar\u00f6k \u2014 the older, bearded father travelling with Atreus \u2014 and it makes him 18 cm taller than the average US man and 5.5 cm taller than Steve.',
+          'Here is the twist the internet loves: Kratos used to be much taller. In the Greek-era games (the original trilogy and spin-offs), Kratos stood around 7 ft 6 in (229 cm) \u2014 a towering comic-book demigod built for power fantasy. The Norse reboot deliberately brought him down to human scale, and the reason was casting-shaped: the developers wanted Kratos\u2019s proportions to match his new voice and motion-capture actor, Christopher Judge, who stands about 6 ft 3 in. A 7 ft 6 in father trying to have a quiet emotional scene with a 5 ft 7 in Atreus would have been a different game entirely.',
+          'The redesign also rebalanced Kratos against his world. In Ragnar\u00f6k he is no longer the biggest thing on screen \u2014 Thor stands about 7 ft 4 in and Tyr a staggering 8 ft 5 in, both towering over him, which sells the underdog stakes of the Norse saga. Kratos at 6 ft 4 in is still intimidatingly large for a human \u2014 comfortably above the 97th percentile \u2014 but he is a man among gods rather than a god among men, and that is exactly the story the games wanted to tell.',
+        ],
+        callout: {
+          title: 'Two canon heights, one character',
+          text: 'Greek-era Kratos: ~229 cm (7 ft 6 in). Norse-era Kratos: 193 cm (6 ft 4 in). Always check which era a source is describing.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'master-chief-armour',
+        heading: 'Master Chief: Two Heights in One Character',
+        subheading: '6 ft 10 in out of the suit, 7 ft 2 in in it \u2014 the armour adds four inches.',
+        paragraphs: [
+          'Master Chief \u2014 John-117 \u2014 stands 208 cm (6 ft 10 in) without his armour and 218 cm (7 ft 2 in) inside his MJOLNIR powered assault armour, per Halo canon established in the novels (The Fall of Reach, The Flood) and repeated across official character profiles. The suit adds roughly four inches of plating, servos and shield generators \u2014 which means the height most people picture when they think of Master Chief is the armoured one: a full 43 cm above the average US man.',
+          'That 208 cm unarmoured figure is itself remarkable, and it has an in-universe explanation: John-117 is a SPARTAN-II, one of the children abducted and put through the UNSC\u2019s augmentation programme, which rewrote his body with carbide-ceramic bone grafts, muscular enhancement and more. He was described as a head taller than his peers even as a child. The augmentations made him freakishly tall; the MJOLNIR armour made him a wall.',
+          'For real-world context: at 218 cm in armour, Master Chief stands taller than all but a tiny fraction of professional basketball centres, and he would clear a standard interior doorway (about 203 cm) only by ducking \u2014 which, to be fair, the games show him doing. Against our lineup he is in a class of his own: 25 cm taller than Kratos, 30.5 cm taller than Steve and 63 cm taller than Mario. If these four ever stood in one room, everyone\u2019s eyes would be on the green armour, and not just because of the colour.',
+        ],
+      },
+      {
+        id: 'why-game-heights-vary',
+        heading: 'Why Video-Game Heights Don\u2019t Always Make Sense',
+        subheading: 'Statues, dev comments and novel descriptions: how these numbers actually get decided.',
+        paragraphs: [
+          'Notice something about this article\u2019s four sources: none of them is a tape measure. Steve\u2019s height came from a social media graphic, Mario\u2019s from a merchandise figure, Kratos\u2019s from a technical artist\u2019s YouTube breakdown, and Master Chief\u2019s from tie-in novels. Video-game characters are not built to consistent real-world scale \u2014 they are built to look right on screen \u2014 so their \u201Cofficial\u201D heights are really just the numbers their creators were willing to commit to. That is why Mario\u2019s figure can wander between 150 and 165 cm across media without anyone at Nintendo losing sleep.',
+          'This also explains why characters can look wildly different from their stated heights in-game. Kratos at 6 ft 4 in feels enormous on screen because the camera frames him against shorter mortals and the gods that dwarf him; Mario at 5 ft 1 in feels heroic because the camera stays low and the world is scaled to him. Game scale is emotional, not architectural. The numbers are still fun \u2014 and still worth getting right \u2014 but they describe the character sheet, not the pixels.',
+          'So use this article\u2019s figures as the best available canon, with the caveats attached: Mario\u2019s 155 cm is Nintendo\u2019s accepted figure amid acknowledged variation, Steve\u2019s 187.5 cm is official Xbox canon that overruled the 1.8 m hitbox, Kratos\u2019s 193 cm applies to the Norse era only, and Master Chief\u2019s headline number is the 218 cm armoured figure. Line them up in the visualizer above, add your own height, and settle every pub argument about who would win a staring contest \u2014 in height terms, at least, it is Master Chief by a landslide.',
+        ],
+        callout: {
+          title: 'How to read game heights',
+          text: 'Always ask which version of the character a number describes: the era (Kratos), the armour state (Master Chief), or whether it is official canon vs in-game hitbox (Steve).',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is Minecraft Steve in real life?',
+        answer: 'Steve is officially 6 feet 2 inches (187.5 cm) tall, confirmed by the official Xbox account in October 2021. That is five inches taller than the average US man. Note that his in-game hitbox is 1.8 m and older fan estimates said 5 ft 9 in \u2014 the official figure overruled both.',
+      },
+      {
+        question: 'How tall is Mario?',
+        answer: 'Mario\u2019s accepted official height is 155 cm (5 ft 1 in), based on an official Nintendo-licensed figure measurement described as matching his actual height in the games\u2019 background story. His scale varies across media \u2014 one official life-size figure measured 150 cm (4 ft 11 in) \u2014 so treat 155 cm as Nintendo\u2019s stated canon rather than a universal constant.',
+      },
+      {
+        question: 'How tall is Kratos in God of War?',
+        answer: 'Kratos is 193 cm (6 ft 4 in) in the Norse era (God of War 2018 and Ragnar\u00f6k), confirmed by Santa Monica Studio technical artist Axel Grossman. In the older Greek-era games he was around 229 cm (7 ft 6 in); the developers deliberately shrunk him to better match voice actor Christopher Judge (about 6 ft 3 in).',
+      },
+      {
+        question: 'How tall is Master Chief?',
+        answer: 'Master Chief (John-117) is 208 cm (6 ft 10 in) without his armour and 218 cm (7 ft 2 in) in his MJOLNIR powered assault armour, per Halo canon from the novels. The armour adds roughly four inches of plating and systems.',
+      },
+      {
+        question: 'Who is the tallest video game character of the four?',
+        answer: 'Master Chief, by a wide margin: 218 cm (7 ft 2 in) in his MJOLNIR armour. That is 25 cm taller than Kratos (193 cm), 30.5 cm taller than Steve (187.5 cm) and 63 cm taller than Mario (155 cm).',
+      },
+      {
+        question: 'Why is Mario so much shorter than the others?',
+        answer: 'Different universes, different design goals. Mario was deliberately designed small \u2014 an underdog plumber in a world scaled to him \u2014 while Kratos, Steve and Master Chief were designed at or above heroic human scale. Their heights were set by separate creators for separate games, so the comparison is fun but was never meant to be consistent.',
+      },
+    ],
+    sources: [
+      {
+        title: 'GameRant \u2014 Xbox Confirms Minecraft\u2019s Steve Height',
+        url: 'https://gamerant.com/official-minecraft-steve-height-xbox-confirms/',
+        description: 'Reports the official Xbox Twitter post confirming Steve at 6 ft 2 in (1.875 m), well above the US male average.',
+      },
+      {
+        title: 'CBR \u2014 Microsoft Confirms Minecraft Steve\u2019s Height',
+        url: 'https://www.cbr.com/minecraft-steve-height-confirmed/',
+        description: 'Independent report on the official Xbox confirmation: Steve is 6 ft 2 in (1.875 m), with the 1.8 m in-game hitbox noted as distinct.',
+      },
+      {
+        title: 'Pro Game Guides \u2014 How tall is Minecraft Steve?',
+        url: 'https://progameguides.com/minecraft/how-tall-is-minecraft-steve/',
+        description: 'Context on the discrepancy: in-game hitbox 1.8 m vs official 1.875 m, and the old community consensus of 5 ft 9 in.',
+      },
+      {
+        title: 'GameSpot \u2014 Supersized Mario commands super price',
+        url: 'https://www.gamespot.com/articles/supersized-mario-commands-super-price/1100-6153807/',
+        description: 'Reports a fully Nintendo-licensed life-size Mario figure at 155 cm, described as Mario\u2019s actual height per the games\u2019 background story.',
+      },
+      {
+        title: 'Mario Wiki \u2014 Mario',
+        url: 'https://www.mariowiki.com/Mario',
+        description: 'Documents Mario\u2019s height variance across media (150\u2013165 cm figures) and the accepted 155 cm (5 ft 1 in) figure, plus his shorter stature vs realistic humans in Odyssey.',
+      },
+      {
+        title: 'Den of Geek \u2014 God of War Ragnarok: How Tall are Kratos, Thor, and Tyr Supposed to Be?',
+        url: 'https://www.denofgeek.com/games/god-of-war-ragnarok-kratos-thor-tyr-heights-how-tall/',
+        description: 'Cites Santa Monica Studio\u2019s Axel Grossman: Kratos is exactly 6 ft 4 in (1.93 m) in the Norse games; Greek-era Kratos was ~7 ft 6 in.',
+      },
+      {
+        title: 'Radio Times \u2014 How tall is Thor in God of War Ragnarok?',
+        url: 'https://www.radiotimes.com/technology/gaming/god-of-war-ragnarok-thor-height/',
+        description: 'Confirms Kratos\u2019s redesigned 6 ft 4 in Norse-era height (vs 7 ft 6 in pre-2018) and Thor at ~7 ft 4 in towering a foot above him.',
+      },
+      {
+        title: 'Character Profile Wikia \u2014 Master Chief',
+        url: 'https://characterprofile.fandom.com/wiki/Master_Chief',
+        description: 'Canon profile: 6 ft 10 in (208 cm) unarmoured, 7 ft 2 in (218 cm) in MJOLNIR armour, per the Halo novels.',
+      },
+    ],
+    relatedSlugs: ['one-piece-anime-character-heights', 'what-does-6-feet-look-like', 'is-6-feet-rare-height-percentiles', 'how-height-comparison-works'],
+  },
 ];

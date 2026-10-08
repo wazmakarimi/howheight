@@ -17,7 +17,7 @@ HowHeight website itself wherever they help. No thin SEO filler.
 - [x] #5 `what-does-5ft10-look-like` — What Does 5'10" (178 cm) Look Like? Real-World Visual Height Guide (scale) — published 2026-10-07
 - [x] #6 `is-6-feet-rare-height-percentiles` — Is 6 Feet Rare? Height Percentiles & What Counts as Tall (guides) — published 2026-10-07
 - [x] #7 `one-piece-anime-character-heights` — One Piece Character Heights Compared: Every Straw Hat Visualized vs Real Humans (anime) — published 2026-10-08
-- [ ] #8 `video-game-character-heights` — Video Game Character Heights in Real Life: Steve, Mario, Kratos & Master Chief (anime)
+- [x] #8 `video-game-character-heights` — Video Game Character Heights in Real Life: Steve, Mario, Kratos & Master Chief (anime) — published 2026-10-08
 - [ ] #9 `average-height-by-country-tallest-nations` — Average Height by Country: The 20 Tallest Nations Compared (guides)
 - [ ] #10 `us-presidents-heights-ranked` — US Presidents' Heights Ranked: From Lincoln (6'4") to Madison (5'4") (celebrities)
 
