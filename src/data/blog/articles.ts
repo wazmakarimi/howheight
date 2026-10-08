@@ -1720,11 +1720,6 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'From there the curve steepens brutally. At 6\u20191\u201D (185 cm) you are near the 90th percentile \u2014 one in ten. At 6\u20192\u201D (188 cm), the 95th: only about 3\u20135% of men, roughly one in twenty to thirty. At 6\u20194\u201D (193 cm), the 99th: about 1%, one in a hundred. This is the normal distribution doing its work \u2014 near the middle of the bell curve each extra inch costs a few percentile points, but out on the shoulder each inch halves whatever pool remains.',
           'One methodological note, because it matters: these percentages are third-party derivations computed from CDC/NHANES measured distributions, not figures printed verbatim in a CDC press release. Different calculators differ by a point or two depending on which survey wave they use \u2014 the 2015\u20132018 wave averaged 175.4 cm, the 2021\u20132023 wave 175.3 cm \u2014 but every serious derivation lands in the same neighbourhood: mid-eighties percentile, mid-teens percent. The convergence across independent calculators is the finding.',
         ],
-        image: {
-          src: '/assets/blog/is-6-feet-rare-height-percentiles/183-cm-percentile-ladder.png',
-          alt: 'Height comparison chart showing 6 ft 0 in (183 cm) against the average US man (175 cm), 6 ft 2 in (188 cm) and 6 ft 4 in (193 cm)',
-          caption: 'The percentile ladder: 183 cm (85th percentile) against the US male average (175 cm), 6\u20192\u201D (95th) and 6\u20194\u201D (99th).',
-        },
       },
       {
         id: 'why-feels-common',
@@ -1750,11 +1745,6 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'The female distribution is centred much lower \u2014 the average US adult woman stands about 162\u2013163 cm \u2014 so the percentiles compress differently. The 90th percentile for women sits around 5\u20197\u201D (about 170 cm), a height many would already describe as tall for a woman. Absorb that for a moment: the height the culture calls \u201Ctall for a woman\u201D is merely the 90th percentile, while the male equivalent of \u201Ctall\u201D sits five inches higher in absolute terms.',
           'This asymmetry drives a lot of quiet confusion in height discourse. When preferences are stated in absolute inches rather than percentiles, they compare two completely different distributions. A woman seeking a man \u201Cat least a head taller\u201D at 6\u20190\u201D-plus is fishing in the top 15% of men; a man of the same absolute height hoping to meet a taller woman is looking for the top 1% of women. Same number, different universe \u2014 which is why percentile thinking beats inch thinking every time.',
         ],
-        image: {
-          src: '/assets/blog/is-6-feet-rare-height-percentiles/183-cm-vs-woman.png',
-          alt: 'Height comparison chart showing a 6 ft 0 in (183 cm) man next to an average US man (175 cm) and an average US woman (162 cm)',
-          caption: '183 cm against the average US man (175 cm) and the average US woman (162 cm) \u2014 for her, 6\u20190\u201D is 99th-percentile territory.',
-        },
       },
       {
         id: 'around-the-world',
@@ -1765,11 +1755,6 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'Travel east and the picture inverts. India\u2019s National Family Health Survey (NFHS-5, 2019\u20132021) puts the average adult Indian man at about 165 cm \u2014 a full 18 cm below the six-foot line. Nobody publishes an official \u201Cshare of Indian men over six feet,\u201D but with the mean sitting nearly three standard deviations below 183 cm, the honest estimate is well under one in a hundred. In much of South and Southeast Asia, a 6\u20190\u201D man is not just tall \u2014 he is the person strangers ask to reach the top shelf, every single time.',
           'Even within the United States the number moves. NHANES-measured averages differ by background: non-Hispanic white men average close to 5\u201910\u201D (about 177\u2013178 cm), while Mexican-American men in the NIH\u2019s San Antonio Heart Study averaged 170.0 cm against 177.9 cm for non-Hispanic white men. Derived shares follow the means \u2014 on the order of 18\u201320% of non-Hispanic white men at 6\u2019-plus versus high single digits for Hispanic and Asian-American men. Treat those shares as informed estimates rather than census facts: the direction is solid, the decimals are soft.',
         ],
-        image: {
-          src: '/assets/blog/is-6-feet-rare-height-percentiles/183-cm-country-context.png',
-          alt: 'Height comparison chart showing 6 ft 0 in (183 cm) next to an average US man (175 cm), an average Dutch man (183 cm) and an average Indian man (165 cm)',
-          caption: '183 cm against national male averages: USA (175 cm), Netherlands (183 cm) and India (165 cm).',
-        },
       },
       {
         id: 'famous-and-tall',
@@ -1780,11 +1765,6 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'And that silhouette is the point. At the 85th percentile, six feet is the height of the leading man, the fast bowler, the figure photographed a head above the ensemble cast \u2014 noticeable in every room, yet common enough that nobody stares. It is, in a real sense, the most socially valuable height in the Anglosphere: all of the presence, none of the logistics problems that arrive with the genuinely rare heights \u2014 the car roofs, the airplane knees, the \u201Cdo you play basketball?\u201D from strangers.',
           'So what counts as tall? Here is the honest taxonomy the numbers support. At 6\u20190\u201D you are taller than about six in seven American men: conspicuously above average, the default definition of \u201Ctall\u201D in dating profiles and casting calls \u2014 but not rare. Tall, properly speaking, starts around 6\u20191\u201D, the top tenth. Rare starts at 6\u20192\u201D, the top twentieth. And elite, one-in-a-hundred rarity belongs to 6\u20194\u201D and above. Six feet is the doorway to tall, not the penthouse \u2014 which is exactly why the question \u201Cis 6 feet rare?\u201D keeps getting asked, and why the measured answer is more interesting than the myth.',
         ],
-        image: {
-          src: '/assets/blog/is-6-feet-rare-height-percentiles/183-cm-celebrities.png',
-          alt: 'Height comparison chart showing Leonardo DiCaprio and Ranbir Kapoor, both 183 cm, next to an average US man at 175 cm',
-          caption: 'Leonardo DiCaprio and Ranbir Kapoor \u2014 both listed at 183 cm \u2014 against the average US man (175 cm).',
-        },
         callout: {
           title: 'Try it yourself',
           text: 'Open the HowHeight compare tool, add yourself at 183 cm, and drop in the average man, a 6\u20194\u201D outlier, and the Dutch average \u2014 seeing the silhouettes side by side beats imagining numbers.',
