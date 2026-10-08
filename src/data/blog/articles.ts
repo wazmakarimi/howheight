@@ -1847,4 +1847,212 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['what-does-6-feet-look-like', 'what-does-5ft10-look-like', 'how-height-comparison-works', 'celebrity-couples-biggest-height-differences'],
   },
+  {
+    slug: 'one-piece-anime-character-heights',
+    title: 'One Piece Character Heights: Every Straw Hat Pirate Compared (2026)',
+    h1: 'One Piece Character Heights: Every Straw Hat Compared Side-by-Side',
+    description:
+      'How tall is Luffy? Who is the tallest Straw Hat? All 10 Straw Hat Pirates ranked with verified canon heights, pre/post-timeskip growth, and real-human scale visualizations.',
+    category: 'anime',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-08T09:00:00Z',
+    updatedDate: '2026-10-08T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'Jinbe (301 cm / 9 ft 10 in) is the tallest Straw Hat and Chopper (90 cm / 2 ft 11 in) the shortest — a 211 cm spread across the crew. Luffy stands 174 cm, Zoro 181 cm and Sanji 180 cm, so the famous Monster Trio cluster within a few centimetres of the average US man (175 cm).',
+      keyTakeaway:
+        'Seven of the ten Straw Hats grew during the two-year timeskip — Franky gained 15 cm by rebuilding himself and Brook 11 cm as a skeleton — while Chopper, Robin and Jinbe stayed exactly the same. The crew\u2019s canon heights come from Oda\u2019s own SBS answers and the Vivre Card databooks.',
+      dataPoints: [
+        { label: 'Tallest Straw Hat', value: 'Jinbe — 301 cm (9 ft 10 in)' },
+        { label: 'Shortest Straw Hat', value: 'Chopper — 90 cm (2 ft 11 in)' },
+        { label: 'Luffy\u2019s height', value: '174 cm (5 ft 8.5 in), post-timeskip' },
+        { label: 'Biggest timeskip growth', value: 'Franky — 225 \u2192 240 cm (+15 cm)' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 90, label: 'Chopper' },
+      { category: 'human', id: 'male', customHeightCm: 174, label: 'Monkey D. Luffy' },
+      { category: 'human', id: 'male', customHeightCm: 181, label: 'Roronoa Zoro' },
+      { category: 'human', id: 'female', customHeightCm: 188, label: 'Nico Robin' },
+      { category: 'human', id: 'male', customHeightCm: 240, label: 'Franky' },
+      { category: 'human', id: 'male', customHeightCm: 277, label: 'Brook' },
+      { category: 'human', id: 'male', customHeightCm: 301, label: 'Jinbe' },
+    ],
+    toolActionTitle: 'Compare the whole crew side-by-side',
+    toolActionDescription:
+      'The visualizer above is preloaded with the Straw Hats\u2019 verified heights — from Chopper at 90 cm to Jinbe at 301 cm. Add your own height and see exactly where you stand next to the crew.',
+    comparisonTable: {
+      caption: 'All 10 Straw Hat Pirates ranked tallest to shortest (current, post-timeskip canon heights)',
+      headers: ['Crew member', 'Pre-timeskip', 'Post-timeskip (current)', 'Change'],
+      rows: [
+        ['Jinbe', '301 cm (9 ft 10 in)', '301 cm (9 ft 10 in)', '\u2014 (joined after the timeskip)'],
+        ['Brook', '266 cm (8 ft 9 in)', '277 cm (9 ft 1 in)', '+11 cm'],
+        ['Franky', '225 cm (7 ft 5 in)', '240 cm (7 ft 10 in)', '+15 cm (self-modified)'],
+        ['Nico Robin', '188 cm (6 ft 2 in)', '188 cm (6 ft 2 in)', '\u2014'],
+        ['Roronoa Zoro', '178 cm (5 ft 10 in)', '181 cm (5 ft 11 in)', '+3 cm'],
+        ['Sanji', '177 cm (5 ft 10 in)', '180 cm (5 ft 11 in)', '+3 cm'],
+        ['Usopp', '174 cm (5 ft 9 in)', '176 cm (5 ft 9 in)', '+2 cm'],
+        ['Monkey D. Luffy', '172 cm (5 ft 8 in)', '174 cm (5 ft 8.5 in)', '+2 cm'],
+        ['Nami', '169 cm (5 ft 6.5 in)', '170 cm (5 ft 7 in)', '+1 cm'],
+        ['Tony Tony Chopper', '90 cm (2 ft 11 in)', '90 cm (2 ft 11 in)', '\u2014'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'crew-ranked-tallest-to-shortest',
+        heading: 'The Full Crew, Ranked: From Jinbe (301 cm) to Chopper (90 cm)',
+        subheading: '211 cm separate the tallest and shortest Straw Hats — more than the height of an average man.',
+        paragraphs: [
+          'Ranked by their current, post-timeskip canon heights, the Straw Hat crew runs: Jinbe (301 cm), Brook (277 cm), Franky (240 cm), Nico Robin (188 cm), Roronoa Zoro (181 cm), Sanji (180 cm), Usopp (176 cm), Monkey D. Luffy (174 cm), Nami (170 cm) and Tony Tony Chopper (90 cm). The gap between the extremes — 211 cm — is itself taller than most humans who have ever lived.',
+          'The crew falls naturally into three tiers. At the top, three genuine giants all stand above 240 cm: a whale-shark fish-man, a living skeleton and a self-rebuilt cyborg. In the middle, the five human core fighters plus Robin cluster in a very ordinary 170–188 cm band — heights you would pass on any street without a second glance. And alone at the bottom, at exactly 90 cm, sits the crew\u2019s doctor.',
+          'These are not fan estimates. Every figure comes from Eiichiro Oda himself: the heights were first published in the manga\u2019s SBS reader-question corners (Volumes 10, 37 and 69) and then re-confirmed in the Vivre Card databooks, most recently the 2024 Egghead set. When this article says Luffy is 174 cm, that is the number Oda\u2019s own databook prints.',
+        ],
+        image: {
+          src: '/assets/blog/one-piece-anime-character-heights/straw-hat-giants.png',
+          alt: 'Height comparison chart showing Jinbe at 301 cm, Brook at 277 cm and Franky at 240 cm towering over an average US man at 175 cm',
+          caption: 'The top of the ladder: Jinbe (301 cm), Brook (277 cm) and Franky (240 cm) against an average US man (175 cm).',
+        },
+      },
+      {
+        id: 'monster-trio',
+        heading: 'The Monster Trio: Luffy, Zoro and Sanji vs the Average Man',
+        subheading: 'The three strongest fighters are all within a few centimetres of average human height.',
+        paragraphs: [
+          'The crew\u2019s famous Monster Trio — Luffy, Zoro and Sanji — are the fighters the story leans on when everything is on the line. Their heights, though, are almost aggressively normal: Zoro at 181 cm (5 ft 11 in), Sanji at 180 cm (5 ft 11 in) and Luffy at 174 cm (5 ft 8.5 in). The average US man stands 175 cm, which means the trio\u2019s captain is a centimetre shorter than average, and his two wings sit just above it.',
+          'Settle one of the fandom\u2019s longest-running debates while you are here: Zoro is taller than Sanji — by exactly one centimetre. It is the kind of margin that vanishes in boots, posture and art style, which is why the argument has survived for years, but the databooks are unambiguous: 181 vs 180.',
+          'There is a storytelling reason the trio are human-scaled. Oda keeps his protagonists at relatable heights so that the true monsters of the New World — Kaido, Big Mom, the Admirals\u2019 towering frames — feel enormous by contrast. Luffy does not need to be tall to dominate a panel; his presence is drawn from posture, grin and Haki, not centimetres. Against his home-country average (Japanese men average about 172 cm), Luffy reads as solidly average — the everyman at the centre of an increasingly inhuman world.',
+        ],
+        image: {
+          src: '/assets/blog/one-piece-anime-character-heights/monster-trio-vs-average-man.png',
+          alt: 'Height comparison chart showing Zoro at 181 cm, Sanji at 180 cm and Luffy at 174 cm next to an average US man at 175 cm',
+          caption: 'The Monster Trio visualized to scale: Zoro edges Sanji by 1 cm, and Luffy stands a centimetre shorter than the average US man.',
+        },
+        callout: {
+          title: 'Zoro vs Sanji, settled',
+          text: 'Zoro: 181 cm. Sanji: 180 cm. One centimetre — the databooks have spoken, and the debate can finally rest.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'chopper-smallest-straw-hat',
+        heading: 'Chopper: 90 cm of Doctor, Reindeer and Comedy',
+        subheading: 'The crew\u2019s doctor is the size of a toddler — and has never grown a centimetre.',
+        paragraphs: [
+          'Tony Tony Chopper\u2019s official height is 90 cm (2 ft 11 in), and it is the same figure in both the pre-timeskip and post-timeskip databooks. For reference, that is roughly the height of an average two-year-old child. He is the only Straw Hat whose listed height did not move at all across the two-year separation.',
+          'The comedy of the crew\u2019s group shots lives in this number. Put the 301 cm Jinbe and the 90 cm Chopper in the same frame and you get a 211 cm joke that never gets old — Oda stages it deliberately, with Chopper frequently perched on shoulders, heads and railings just to stay in the panel. Against an average US man (175 cm), Chopper barely reaches mid-thigh.',
+          'One caveat for anyone measuring screenshots: 90 cm is Chopper\u2019s default Brain Point form — the small reindeer-human hybrid the databooks use as his official height. His Rumble Ball transformations (Jumping Point, Guard Point, Horn Point, Monster Point) change his apparent size dramatically, so a Monster Point screenshot will not match the databook. The 90 cm figure is the canonical baseline, not a frame-by-frame measurement.',
+        ],
+        image: {
+          src: '/assets/blog/one-piece-anime-character-heights/chopper-vs-average-man.png',
+          alt: 'Height comparison chart showing Chopper at 90 cm next to an average US man at 175 cm, barely reaching his mid-thigh',
+          caption: 'Chopper (90 cm) against an average US man (175 cm) — roughly the height of a two-year-old child.',
+        },
+      },
+      {
+        id: 'jinbe-brook-franky-giants',
+        heading: 'The Giants: Jinbe, Brook and Franky',
+        subheading: 'Three crew members stand above 240 cm — each for a completely different reason.',
+        paragraphs: [
+          'Jinbe, at 301 cm (9 ft 10 in), is the tallest Straw Hat by a wide margin — 24 cm clear of Brook. As a whale-shark fish-man he was always going to be enormous; his is a single published figure, since he formally joined the crew after the timeskip and has no pre-timeskip databook entry. To put 301 cm in perspective: it is taller than Robert Wadlow, the tallest person in recorded history at 272 cm. Jinbe exceeds the outer limit of documented human height by nearly 30 cm.',
+          'Brook\u2019s 277 cm (9 ft 1 in) comes with the best footnote in the databooks: he grew from 266 cm to 277 cm across the timeskip — an 11 cm growth spurt — despite being a skeleton. This is genuine canon, printed in the Vivre Cards, and Oda has never offered an explanation. The fandom has collectively decided the explanation is that Brook is Brook, and honestly that is enough.',
+          'Franky\u2019s growth is the only one with an in-story engineering report. He went from 225 cm to 240 cm — a 15 cm jump, the largest on the crew — because he spent the timeskip rebuilding himself, upgrading from the BF-36 body to the BF-37. It was not a growth spurt; it was a renovation. That also makes Franky the only Straw Hat whose height is, in principle, adjustable.',
+        ],
+        callout: {
+          title: 'Taller than the tallest human ever',
+          text: 'Jinbe at 301 cm stands nearly 30 cm above Robert Wadlow (272 cm), the tallest person in recorded history. Brook at 277 cm clears him too.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'timeskip-growth',
+        heading: 'Who Grew During the Timeskip?',
+        subheading: 'Seven Straw Hats came back taller; three came back exactly the same.',
+        paragraphs: [
+          'The two-year separation at Sabaody was a growth spurt for most of the crew. Franky added 15 cm (by rebuilding himself), Brook added 11 cm (by being Brook), Zoro and Sanji each added 3 cm (178 \u2192 181 and 177 \u2192 180), Luffy and Usopp each added 2 cm (172 \u2192 174 and 174 \u2192 176), and Nami added 1 cm (169 \u2192 170). Chopper, Robin and Jinbe did not move at all.',
+          'The natural growth makes sense: most of the crew were teenagers when they were scattered by Bartholomew Kuma, and two years of late-adolescent development accounts neatly for the 1–3 cm gains. The outliers needed in-story mechanisms — Franky\u2019s self-modification and Brook\u2019s unexplained skeleton physics — which is exactly what Oda gave them.',
+          'Here is the practical warning, because this is where the internet goes wrong more than anywhere else in One Piece data: a huge number of third-party databases silently list pre-timeskip figures as current. If a site tells you Luffy is 172 cm or Zoro is 178 cm, you are looking at the old numbers — the current canon is 174 and 181. Whenever you see a Straw Hat height quoted, check whether the source distinguishes pre- and post-timeskip. If it does not, treat the figure with suspicion.',
+        ],
+        callout: {
+          title: 'How to spot a stale database',
+          text: 'Luffy at 172 cm or Zoro at 178 cm means the source is showing pre-timeskip figures. Current canon: Luffy 174 cm, Zoro 181 cm, Sanji 180 cm.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'straw-hats-vs-real-humans',
+        heading: 'The Straw Hats vs Real Humans: Where Would You Stand?',
+        subheading: 'Five of the ten would be unremarkable in a crowd; five would stop traffic.',
+        paragraphs: [
+          'Line the human-scale Straw Hats up against real-world averages and the picture is surprisingly mundane. Nami (170 cm), Luffy (174 cm), Usopp (176 cm), Sanji (180 cm) and Zoro (181 cm) sit within a few centimetres of the average US man (175 cm) and the average Dutch man (183 cm, the tallest national average on earth). Against the Japanese male average (172 cm — Luffy\u2019s home-country baseline), every one of them reads as average or slightly tall.',
+          'Robin is the exception that proves the rule. At 188 cm (6 ft 2 in), she stands a full 25 cm above the average US woman (163 cm) — a height that would turn heads anywhere on the planet. She is also, quietly, the fourth-tallest Straw Hat overall, which surprises readers who picture her as merely elegant rather than statuesque.',
+          'And then there are the three who break the scale entirely. Brook at 277 cm would tower 94 cm — more than three feet — over the average Dutch man. Franky at 240 cm and Jinbe at 301 cm simply have no real-world analogue; there is no crowd on earth where they would not be the tallest person in it by an absurd margin. That contrast — five ordinary humans, one statuesque archaeologist, one toddler-sized doctor and three giants — is the whole visual joke of the Thousand Sunny\u2019s crew photo, and the numbers finally let you measure it.',
+        ],
+        image: {
+          src: '/assets/blog/one-piece-anime-character-heights/brook-vs-average-man.png',
+          alt: 'Height comparison chart showing Brook at 277 cm towering over an average US man at 175 cm',
+          caption: 'Brook (277 cm) against an average US man (175 cm) — and Brook is not even the tallest Straw Hat.',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is Luffy?',
+        answer: 'Monkey D. Luffy is 174 cm (5 ft 8.5 in) tall in current, post-timeskip canon, confirmed by the 2024 Egghead Vivre Card databooks. Before the timeskip he was 172 cm. Many older databases still list the pre-timeskip 172 cm figure as current.',
+      },
+      {
+        question: 'Who is the tallest Straw Hat pirate?',
+        answer: 'Jinbe, at 301 cm (9 ft 10 in) — 24 cm taller than the next-tallest Straw Hat, Brook (277 cm). Jinbe is taller than Robert Wadlow (272 cm), the tallest person in recorded history.',
+      },
+      {
+        question: 'How tall is Chopper in real life?',
+        answer: 'Tony Tony Chopper\u2019s official height is 90 cm (2 ft 11 in) — roughly the height of a two-year-old child — and it is unchanged across the timeskip. That is his default Brain Point form; his Rumble Ball transformations are much larger.',
+      },
+      {
+        question: 'Is Zoro taller than Sanji?',
+        answer: 'Yes — by exactly one centimetre. Zoro is 181 cm (5 ft 11 in) and Sanji is 180 cm (5 ft 11 in) post-timeskip. Before the timeskip the gap was the same: Zoro 178 cm vs Sanji 177 cm.',
+      },
+      {
+        question: 'Did Brook really grow 11 cm as a skeleton?',
+        answer: 'Yes — Brook went from 266 cm to 277 cm across the timeskip, and it is genuine canon printed in the Vivre Card databooks. Oda has never explained how a skeleton grows, which is widely considered part of the joke.',
+      },
+      {
+        question: 'How tall is Nico Robin compared to an average woman?',
+        answer: 'Robin is 188 cm (6 ft 2 in), which is 25 cm taller than the average US woman (about 163 cm). She is the fourth-tallest Straw Hat overall and strikingly tall by any real-world standard.',
+      },
+    ],
+    sources: [
+      {
+        title: 'One Piece Wiki \u2014 Nami',
+        url: 'https://onepiece.fandom.com/wiki/Nami',
+        description: 'Character page citing SBS Vol. 37 (pre-timeskip 169 cm) and SBS Vol. 69 (post-timeskip 170 cm); establishes the SBS-based canon methodology.',
+      },
+      {
+        title: 'One Piece Wiki \u2014 Brook',
+        url: 'https://onepiece.fandom.com/wiki/Brook',
+        description: 'Documents Brook\u2019s canon timeskip growth from 266 cm to 277 cm per the Vivre Card databooks.',
+      },
+      {
+        title: 'Beebom \u2014 One Piece Straw Hat Pirates: Age, Height, Birthday, and More',
+        url: 'http://beebom.com/one-piece-straw-hat-pirates-age-height-birthday-more/',
+        description: 'Complete pre/post-timeskip crew height table confirming all ten figures (cm figures cross-checked; ignore cosmetic ft/in typos).',
+      },
+      {
+        title: 'SoapCentral \u2014 How old are the Straw Hats in One Piece? Pre and Post-timeskip ages, explained',
+        url: 'https://www.soapcentral.com/anime/how-old-straw-hats-one-piece-pre-post-timeskip-ages-explained',
+        description: 'Independent editorial confirmation of every crew height, including Franky 225 \u2192 240 cm and Brook 266 \u2192 277 cm.',
+      },
+      {
+        title: 'ComingSoon \u2014 One Piece Straw Hat Pirates: Age, Birthday, Height, Bounty\u2026',
+        url: 'https://www.comingsoon.net/guides/news/1382522-one-piece-straw-hat-pirates-age-birthday-height-bounty-devil-fruit-zodiac-sign',
+        description: 'Second independent editorial source with explicit pre/post-timeskip rows, including Chopper 90/90 and Robin 188/188.',
+      },
+      {
+        title: 'AnimeExplained \u2014 Luffy And The Straw Hats Egghead Arc Vivre Cards Revealed',
+        url: 'https://www.animeexplained.com/news/one-piece-luffy-and-the-straw-hats-egghead-arc-vivre-cards-revealed/',
+        description: 'Coverage of the 2024 Oda-supervised Egghead Vivre Card databooks confirming Luffy at 174 cm (current canon).',
+      },
+    ],
+    relatedSlugs: ['what-does-6-feet-look-like', 'is-6-feet-rare-height-percentiles', 'how-height-comparison-works', 'dwayne-johnson-height-comparison'],
+  },
 ];
