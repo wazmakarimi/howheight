@@ -2264,4 +2264,220 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['one-piece-anime-character-heights', 'what-does-6-feet-look-like', 'is-6-feet-rare-height-percentiles', 'how-height-comparison-works'],
   },
+  {
+    slug: 'average-height-by-country-tallest-nations',
+    title: 'Average Height by Country: The 20 Tallest Nations Compared (2026)',
+    h1: 'Average Height by Country: The 20 Tallest Nations Visualised',
+    description:
+      'Which country has the tallest people? The Dutch top the rankings at 183.8 cm for men, but the Dinaric Alps run them close \u2014 here are the 20 tallest nations with women\u2019s figures, verified data, and why national averages shift.',
+    category: 'guides',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-09T09:00:00Z',
+    updatedDate: '2026-10-09T09:00:00Z',
+    readingTimeMinutes: 10,
+    quickAnswer: {
+      summary:
+        'The Netherlands has the world\u2019s tallest men at 183.8 cm (6 ft \u00BD in), followed by Montenegro (183.3 cm) and Estonia (182.8 cm). The 20 tallest nations are all European except Dominica, while the shortest men are in Timor-Leste (160.1 cm) \u2014 a 23.7 cm gap between the tallest and shortest national averages.',
+      keyTakeaway:
+        'National height is a measure of public health, not genetics: the Dutch grew ~20 cm in 150 years on better nutrition and healthcare, natural selection explains less than 0.5 cm of it \u2014 and the Dutch are now, unexpectedly, getting slightly shorter again.',
+      dataPoints: [
+        { label: 'Tallest men', value: 'Netherlands \u2014 183.8 cm (6 ft \u00BD in)' },
+        { label: 'Tallest women', value: 'Netherlands \u2014 170.4 cm (5 ft 7 in)' },
+        { label: 'Closest challenger', value: 'Dinaric Alps region \u2014 184.6 cm (regional average, taller than any country)' },
+        { label: 'Shortest men', value: 'Timor-Leste \u2014 160.1 cm (5 ft 3 in)' },
+        { label: 'Biggest rise in 100 years', value: 'South Korean women +20.2 cm; Dutch men +~20 cm since 1850' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 184, label: 'Average Dutch man' },
+      { category: 'human', id: 'male', customHeightCm: 183, label: 'Average Montenegrin man' },
+      { category: 'human', id: 'male', customHeightCm: 177.5, label: 'Average US man' },
+      { category: 'human', id: 'male', customHeightCm: 160, label: 'Average Timorese man' },
+    ],
+    toolActionTitle: 'Line them up yourself',
+    toolActionDescription:
+      'The visualiser above is preloaded with the average Dutch man (184 cm), Montenegrin man (183 cm), US man (177.5 cm) and Timorese man (160 cm). Add your own height and see which nation\u2019s average you land nearest.',
+    comparisonTable: {
+      caption: 'The 20 tallest nations by average male height (NCD-RisC pooled data, 19-year-olds, 2019; female figures from the same study)',
+      headers: ['Rank', 'Country', 'Men (avg)', '\u2248 Feet', 'Women (avg)'],
+      rows: [
+        ['1', 'Netherlands', '183.8 cm', '6 ft \u00BD in', '170.4 cm'],
+        ['2', 'Montenegro', '183.3 cm', '6 ft 0 in', '170.0 cm'],
+        ['3', 'Estonia', '182.8 cm', '6 ft 0 in', '168.7 cm'],
+        ['4', 'Bosnia and Herzegovina', '182.5 cm', '6 ft 0 in', '167.5 cm'],
+        ['5', 'Iceland', '182.1 cm', '5 ft 11\u00BD in', '168.9 cm'],
+        ['6', 'Denmark', '181.9 cm', '5 ft 11\u00BD in', '169.5 cm'],
+        ['7', 'Czech Republic', '181.2 cm', '5 ft 11\u00BC in', '168.0 cm'],
+        ['8', 'Latvia', '181.2 cm', '5 ft 11\u00BC in', '168.8 cm'],
+        ['9', 'Slovakia', '181.0 cm', '5 ft 11\u00BC in', '167.1 cm'],
+        ['10', 'Slovenia', '181.0 cm', '5 ft 11\u00BC in', '167.2 cm'],
+        ['11', 'Ukraine', '181.0 cm', '5 ft 11\u00BC in', '166.6 cm'],
+        ['12', 'Croatia', '180.8 cm', '5 ft 11\u00BC in', '166.8 cm'],
+        ['13', 'Serbia', '180.7 cm', '5 ft 11\u00BC in', '168.3 cm'],
+        ['14', 'Lithuania', '180.7 cm', '5 ft 11\u00BC in', '167.6 cm'],
+        ['15', 'Poland', '180.7 cm', '5 ft 11\u00BC in', '165.8 cm'],
+        ['16', 'Finland', '180.6 cm', '5 ft 11 in', '166.5 cm'],
+        ['17', 'Sweden', '180.5 cm', '5 ft 11 in', '166.7 cm'],
+        ['18', 'Norway', '180.5 cm', '5 ft 11 in', '166.4 cm'],
+        ['19', 'Germany', '180.3 cm', '5 ft 11 in', '166.2 cm'],
+        ['20', 'Dominica', '180.2 cm', '5 ft 11 in', '166.9 cm'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-top-20',
+        heading: 'The Top 20 Tallest Nations: Europe Owns the Leaderboard',
+        subheading: 'Nineteen of the twenty tallest countries are European \u2014 and the margins at the top are razor thin.',
+        paragraphs: [
+          'The Netherlands sits at the top of every serious national height ranking: Dutch men average 183.8 cm (6 ft \u00BD in) and Dutch women 170.4 cm (5 ft 7 in). But look at how crowded the summit is \u2014 Montenegro at 183.3 cm, Estonia at 182.8 cm, Bosnia and Herzegovina at 182.5 cm and Iceland at 182.1 cm are all within a single inch of each other. The difference between 2nd place and 5th is about half a centimetre per rank, which means the ordering shuffles between studies depending on the survey year and method.',
+          'These figures come from the NCD Risk Factor Collaboration\u2019s pooled analysis of more than 2,180 population studies covering 65 million people, published in The Lancet \u2014 the largest height dataset ever assembled. It measured 19-year-olds in 2019, so it captures each generation at the age growth has effectively stopped. The overall picture is unambiguous: all ten of the tallest countries for both sexes are in Europe, and the tallest teenagers live in north-western and central Europe.',
+          'Context helps the numbers land. The average US man peaked at 177.5 cm back in 1996 and the country now sits 37th for men \u2014 America once had the third-tallest men on Earth. At the other extreme, the shortest men in the world live in Timor-Leste at 160.1 cm, and the shortest women in Guatemala at 150.9 cm. The gap between the tallest and shortest national averages is 23.7 cm for men \u2014 roughly the length of an adult\u2019s forearm.',
+        ],
+        image: {
+          src: '/assets/blog/average-height-by-country-tallest-nations/top-nations-chart.png',
+          alt: 'Height comparison chart showing a Dutch man at 184 cm, a Montenegrin man at 183 cm, an Icelandic man at 182 cm, a US man at 177.5 cm and a Timorese man at 160 cm side by side',
+          caption: 'The world\u2019s tallest to scale against the US average and the shortest national average: the Timorese man (160 cm) barely reaches the Dutch man\u2019s chin.',
+        },
+        callout: {
+          title: 'The headline gap',
+          text: 'The tallest national average (Dutch men, 183.8 cm) and the shortest (Timorese men, 160.1 cm) differ by 23.7 cm \u2014 nearly 15% of the shorter average.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'netherlands-story',
+        heading: 'The Dutch Miracle: From Europe\u2019s Shortest to the World\u2019s Tallest',
+        subheading: 'In 1850 the average Dutch man was about 165 cm \u2014 among Europe\u2019s shortest. Today he is the world\u2019s tallest.',
+        paragraphs: [
+          'The Netherlands is the most instructive height story on Earth because it proves national averages are not destiny. Around the mid-19th century, young Dutch men averaged about 165 cm (5 ft 5 in) \u2014 shorter than the English, the Germans and the French of the era, and 5 to 8 cm shorter than Americans. Over roughly 150 years they gained close to 20 cm, the largest recorded national height gain on record, transforming one of Europe\u2019s shortest populations into its tallest.',
+          'What explains the growth is not genes. A 2023 simulation study estimated that natural selection contributed less than half a centimetre to the historical increase \u2014 genetics works on evolutionary timescales, not 150-year ones. The drivers were almost entirely environmental: better nutrition (notably a dairy-rich diet heavy in calcium and protein), cleaner water, fewer childhood infections, better healthcare, and rising prosperity. Lead researcher Majid Ezzati of Imperial College London puts it plainly: about a third of the global variation is genetic, but genes don\u2019t change that fast, so changes over time are largely environmental.',
+          'The Dutch are not even unique in the pattern \u2014 South Korean women shot up more than 20 cm in a century and Iranian men added 16.5 cm, the fastest gains ever recorded. But the Dutch case is the cleanest demonstration that the height ceiling is set by conditions, not DNA. When successive generations of children eat well, stay healthy and grow up without the stunting effects of disease and malnutrition, the whole population rises \u2014 by twenty centimetres.',
+        ],
+        image: {
+          src: '/assets/blog/average-height-by-country-tallest-nations/dutch-century-growth.png',
+          alt: 'Height comparison chart showing a Dutch man in 1850 at 165 cm next to a Dutch man today at 184 cm and a US man today at 177.5 cm',
+          caption: 'Twenty centimetres in 150 years: the Dutch man of 1850 (165 cm) is 12 cm shorter than the average US man today (177.5 cm).',
+        },
+        callout: {
+          title: 'Environment beats genetics',
+          text: 'Dutch men gained ~20 cm in 150 years; natural selection explains less than 0.5 cm of it. Height follows living standards.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'dinaric-surprise',
+        heading: 'The Dinaric Twist: A Mountain Region Taller Than Any Country',
+        subheading: 'The single tallest population on Earth is not a nation at all \u2014 it is the Dinaric Alps.',
+        paragraphs: [
+          'Here is the twist that national rankings hide: measured at the regional level, men of the Dinaric Alps average 184.6 cm \u2014 taller than the Dutch national average. This rugged stretch of the western Balkans, spanning parts of Bosnia and Herzegovina, Croatia and Montenegro, is home to the world\u2019s densest concentration of very tall people. Bosnia and Herzegovina ranks 4th among nations at 182.5 cm, but within the Dinaric core the figures run higher: Dalmatia (183.7 cm) and Herzegovina (183.4 cm) both exceed their national averages.',
+          'Researchers have seriously argued that young men in this region may already be taller than the Dutch. The headline Dutch figure of 183.8 cm comes from 21-year-olds; Dutch 18-year-olds measured in the same period averaged only 182.4 cm \u2014 and the Montenegrin and Dinaric surveys were done on younger cohorts. As the authors of a 2022 Biology paper on Balkan anthropometrics put it, it is possible that young Montenegrin men are actually taller than Dutch men. National averages smooth out extraordinary regions.',
+          'The Dinaric case also sharpens the nature-vs-nurture question. These populations were famously short in the 19th century \u2014 poorer and worse-fed than their Dutch contemporaries \u2014 yet reached world-leading heights on improving diets and healthcare in the 20th century. Genetics may set a higher ceiling here than almost anywhere, but it took a century of better living standards to reveal it.',
+        ],
+        callout: {
+          title: 'Region vs nation',
+          text: 'Dinaric Alps men average 184.6 cm \u2014 0.8 cm taller than the Dutch national average. Countries are big statistical averages; regions tell the sharper story.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'americas-fall',
+        heading: 'The American Fall: From 3rd Tallest to 37th',
+        subheading: 'US men gained only 6 cm in a century while the Dutch gained 20 \u2014 and American height has stalled entirely.',
+        paragraphs: [
+          'A century ago the United States had the third-tallest men and fourth-tallest women in the world. Today it ranks 37th for men and 42nd for women. Over the same century that Dutch men gained roughly 20 cm, American men gained about 6 cm \u2014 and even that modest growth stopped decades ago. US men\u2019s average height peaked at around 177.5 cm in 1996 and has barely moved since; women\u2019s peaked at about 164 cm in 1988.',
+          'The researchers didn\u2019t investigate the causes directly, but economists who study height have offered plausible explanations: patchier healthcare access than other wealthy nations, higher rates of teenage pregnancy (linked to underweight and preterm babies), and rising childhood obesity, which triggers earlier puberty and earlier growth stoppage. Whatever the mix, the result is striking: a wealthy country that started the 20th century 5 to 8 cm ahead of the Netherlands now trails it by more than 6 cm.',
+          'The wider pattern makes the point harder to miss. Heights are still rising fast in countries catching up \u2014 South Korean women and Iranian men set the century\u2019s records \u2014 but growth has slowed or stopped across most of Western Europe and North America, suggesting many wealthy populations have hit their genetic ceiling. The height race is now being run by the countries whose childhood conditions improved most recently.',
+        ],
+        callout: {
+          title: 'The reversal in one line',
+          text: 'In 1914 Americans towered over the Dutch by 5\u20138 cm. Today the Dutch tower over Americans by 6 cm.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'dutch-plateau',
+        heading: 'The Mystery Twist: The Dutch Are Getting Shorter',
+        subheading: 'Statistics Netherlands found Dutch 19-year-olds are now shorter than the 1980 generation \u2014 by a full centimetre.',
+        paragraphs: [
+          'The story gets stranger. After a century of relentless growth, the Dutch run has quietly reversed: men born in 1980 averaged 183.9 cm at age 19, but men born in 2001 averaged 182.9 cm \u2014 a full centimetre shorter in one generation. Dutch women slipped even further, from 170.7 cm for the 1980 cohort to 169.3 cm for the 2001 cohort, a drop of 1.4 cm. The figures come from roughly 719,000 heights collected through national health surveys by Statistics Netherlands.',
+          'Nobody is certain why. Theories include changing immigration patterns (the statistics track people born and raised in the Netherlands, but the genetic and dietary mix of the population has shifted), declining milk consumption among young people, rising childhood obesity, and changing lifestyles. The decline also punctures the simple story that heights only ever rise: once a population hits its ceiling, it can drift back down.',
+          'It is worth keeping perspective, though. A one-centimetre dip leaves the Dutch firmly on top of every ranking, and the broader lesson of the data is unchanged \u2014 national height is a thermometer for how well a country feeds, heals and raises its children. East Timor\u2019s 160.1 cm and Guatemala\u2019s 150.9 cm for women are not genetic verdicts; they are measurements of childhood conditions, exactly as the Netherlands\u2019 165 cm was in 1850.',
+        ],
+      },
+      {
+        id: 'reading-the-numbers',
+        heading: 'How to Read National Height Numbers Honestly',
+        subheading: 'Why different rankings disagree \u2014 and which differences actually matter.',
+        paragraphs: [
+          'You will find slightly different figures depending on the source, and that is normal. Some datasets use self-reported heights, which run about a centimetre high because people round up; the best studies physically measure participants. Ages differ too: the NCD-RisC studies measure 18- or 19-year-olds, while national surveys often average across all adults, who skew shorter because older generations grew up in worse conditions. And survey years matter \u2014 the Dutch 183.8 cm figure comes from a different cohort than the 182.5 cm the 2016 eLife study reported for 19-year-olds.',
+          'So treat small differences as noise and large ones as signal. Whether Montenegro is 182.9 or 183.3 cm across studies is noise; whether the Dutch are 20 cm taller than in 1850 is signal. Rankings below the top ten shuffle freely between surveys, but the broad pattern never changes: Northern Europe on top, the Anglophone world in the middle, South and Southeast Asia at the bottom.',
+          'One final honesty note: these are population averages, and averages are not people. Even in the Netherlands \u2014 the tallest nation on Earth \u2014 plenty of men are 170 cm and plenty of women are 160 cm; the standard deviation in adult height is roughly 7 cm, so only about 68% of Dutch men fall between 177 and 191 cm. National averages describe a population\u2019s conditions. Your height was written by your own family, your own diet and your own childhood.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'Which country has the tallest people in the world?',
+        answer: 'The Netherlands has the tallest men (183.8 cm \/ 6 ft \u00BD in) and women (170.4 cm \/ 5 ft 7 in) of any nation. The single tallest measured population is a region rather than a country: the Dinaric Alps, at 184.6 cm for men.',
+      },
+      {
+        question: 'Why are the Dutch so tall?',
+        answer: 'Mainly environment, not genes. Dutch men gained ~20 cm in 150 years as nutrition (especially dairy), healthcare, sanitation and prosperity improved; natural selection explains less than 0.5 cm of that growth. Genetics sets the ceiling, but living standards decide how close a population gets to it.',
+      },
+      {
+        question: 'Which country has the shortest people?',
+        answer: 'Timor-Leste has the shortest men (160.1 cm \/ 5 ft 3 in) and Guatemala the shortest women (150.9 cm \/ just under 5 ft), per the NCD-RisC pooled data. These figures reflect childhood nutrition and healthcare conditions, not genetic destiny \u2014 the same was true of the short 19th-century Dutch.',
+      },
+      {
+        question: 'Why did the US fall behind in average height?',
+        answer: 'A century ago the US had the 3rd-tallest men in the world; it now ranks 37th. American men gained only ~6 cm in a century (peaking around 177.5 cm in 1996) while other wealthy nations kept growing. Proposed explanations include weaker healthcare access, teenage pregnancy rates and rising childhood obesity causing earlier growth stoppage.',
+      },
+      {
+        question: 'Are the Dutch getting shorter?',
+        answer: 'Yes, slightly. Statistics Netherlands found Dutch men born in 2001 averaged 182.9 cm at 19 vs 183.9 cm for men born in 1980 \u2014 a 1 cm decline in a generation. Women fell 1.4 cm over the same span. The causes are debated (diet changes, obesity, demographic shifts), but the Netherlands remains the world\u2019s tallest nation.',
+      },
+      {
+        question: 'How reliable are national height rankings?',
+        answer: 'Broadly reliable, but method matters. Self-reported heights run ~1 cm high; age cohorts differ (19-year-olds vs all adults); survey years vary. Treat differences of a few millimetres as noise and the big patterns \u2014 Northern Europe on top, rising Asia, the US plateau \u2014 as real.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Wikipedia \u2014 Average human height by country',
+        url: 'https://en.wikipedia.org/wiki/Average_height_around_the_world',
+        description: 'Consolidated national averages (men\/women in cm) compiled from the NCD-RisC pooled studies: Netherlands 183.8 cm men, Montenegro 183.3 cm, Estonia 182.8 cm.',
+      },
+      {
+        title: 'EurekAlert \u2014 Poor nutrition in school years may have created 20 cm height gap across nations',
+        url: 'https://www.eurekalert.org/news-releases/669918',
+        description: 'Imperial College London summary of the Lancet 2020 study: tallest\/shortest 10 countries for 19-year-olds (Netherlands men 183.8 cm, Timor-Leste men 160.1 cm, Guatemala women 150.9 cm).',
+      },
+      {
+        title: 'World Economic Forum \u2014 Why some nationalities are getting shorter',
+        url: 'https://www.weforum.org/stories/food-water-air/why-some-nationalities-are-get-shorter-while-the-rest-get-taller/',
+        description: 'Summary of the NCD-RisC eLife findings: Dutch men 12th\u21921st since 1914, Latvian women tallest (1914\u20132014), South Korean women +20 cm, Iranian men +16.5 cm; Ezzati on genes vs environment.',
+      },
+      {
+        title: 'Space Daily \u2014 The Dutch spent a century becoming the tallest population on Earth',
+        url: 'https://spacedaily.com/m-the-dutch-spent-a-century-becoming-the-tallest-population-on-earth-then-the-run-quietly-ended-men-born-in-1980-reached-183-9-centimetres-those-born-in-2001-measure-182-9-women-born-in-2001-are-1-4/',
+        description: 'Statistics Netherlands data on the Dutch decline: 1980-born men 183.9 cm at 19 vs 182.9 cm for the 2001 cohort; women down 1.4 cm.',
+      },
+      {
+        title: 'ecoNoticias \u2014 Dutch men grew about 20 cm in 150 years',
+        url: 'https://www.ecoticias.com/en/dutch-men-20-cm-taller-150-years/36903/',
+        description: 'Historical trajectory: Dutch men from ~165 cm in the mid-19th century; 2023 simulation attributing under 0.5 cm of the gain to natural selection; CBS 2001 cohort figures.',
+      },
+      {
+        title: 'Biology (MDPI) \u2014 Mapping the Mountains of Giants',
+        url: 'http://www.mdpi.com/2079-7737/11/5/786',
+        description: 'Peer-reviewed anthropometric data on the Western Balkans: Dinaric Alps regional mean 184.6 cm; Montenegro, Dalmatia and Herzegovina figures; the argument that young Dinaric men may exceed the Dutch.',
+      },
+      {
+        title: 'BusinessWorld \u2014 Height study charts global health (NCD-RisC eLife 2016)',
+        url: 'https://bworldonline.com/health/2016/07/29/6267/height-study-charts-global-health/',
+        description: 'Reporting on the 2016 eLife study: Dutch men tallest (182.5 cm at 19), Latvia tallest women, US 37th\/42nd, shortest men East Timor (160 cm) and shortest women Guatemala (149 cm).',
+      },
+    ],
+    relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-6-feet-look-like', 'what-does-5ft10-look-like', 'how-height-comparison-works'],
+  },
 ];
