@@ -19,7 +19,7 @@ HowHeight website itself wherever they help. No thin SEO filler.
 - [x] #7 `one-piece-anime-character-heights` — One Piece Character Heights Compared: Every Straw Hat Visualized vs Real Humans (anime) — published 2026-10-08
 - [x] #8 `video-game-character-heights` — Video Game Character Heights in Real Life: Steve, Mario, Kratos & Master Chief (anime) — published 2026-10-08
 - [x] #9 `average-height-by-country-tallest-nations` — Average Height by Country: The 20 Tallest Nations Compared (guides) — published 2026-10-09
-- [ ] #10 `us-presidents-heights-ranked` — US Presidents' Heights Ranked: From Lincoln (6'4") to Madison (5'4") (celebrities)
+- [x] #10 `us-presidents-heights-ranked` — US Presidents' Heights Ranked: From Lincoln (6'4") to Madison (5'4") (celebrities) — published 2026-10-09
 
 ## Backlog (secondary ideas, in rough priority order)
 

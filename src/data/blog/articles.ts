@@ -2480,4 +2480,238 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-6-feet-look-like', 'what-does-5ft10-look-like', 'how-height-comparison-works'],
   },
+  {
+    slug: 'us-presidents-heights-ranked',
+    title: 'US Presidents\u2019 Heights Ranked: From Lincoln (6\u20194\u2033) to Madison (5\u20194\u2033)',
+    h1: 'US Presidents\u2019 Heights Ranked: From Lincoln to Madison, Visualised',
+    description:
+      'Every US president ranked by height \u2014 Lincoln towers at 6 ft 4 in (193 cm), Madison measured just 5 ft 4 in (163 cm). Full 45-president ranking, the taller-candidate election pattern, and how they compare to the average American man.',
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-09T09:00:00Z',
+    updatedDate: '2026-10-09T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'Abraham Lincoln is the tallest US president at 6 ft 4 in (193 cm) and James Madison the shortest at 5 ft 4 in (163 cm) \u2014 a full 12 inches (30 cm) apart. The average president stands about 5 ft 11 in (180 cm), and only two of the 45 men to hold the office were below average height.',
+      keyTakeaway:
+        'Presidential height runs noticeably above average: Madison (5 ft 4 in) and Benjamin Harrison (5 ft 6 in) are the only presidents counted as below-average in height, and the folk belief that the taller candidate always wins has famous exceptions \u2014 from Nixon in 1972 to Biden in 2020.',
+      dataPoints: [
+        { label: 'Tallest president', value: 'Abraham Lincoln \u2014 6 ft 4 in (193 cm)' },
+        { label: 'Shortest president', value: 'James Madison \u2014 5 ft 4 in (163 cm)' },
+        { label: 'Average president', value: 'About 5 ft 11 in (180 cm)' },
+        { label: 'Largest gap', value: 'Lincoln over Madison \u2014 30 cm (12 in)' },
+        { label: 'Most crowded mark', value: '6 ft 0 in \u2014 shared by seven presidents' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 193, label: 'Abraham Lincoln' },
+      { category: 'human', id: 'male', customHeightCm: 192, label: 'Lyndon B. Johnson' },
+      { category: 'human', id: 'male', customHeightCm: 191, label: 'Donald Trump' },
+      { category: 'human', id: 'male', customHeightCm: 163, label: 'James Madison' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average US man' },
+    ],
+    toolActionTitle: 'Line up the presidents yourself',
+    toolActionDescription:
+      'The visualiser above is preloaded with Abraham Lincoln (193 cm), Lyndon B. Johnson (192 cm), Donald Trump (191 cm), James Madison (163 cm) and the average US man (175 cm). Add your own height and see which president you stand nearest.',
+    comparisonTable: {
+      caption: 'All 45 US presidents ranked by height (imperial and metric; half-inch figures shown where sources record them)',
+      headers: ['Rank', 'President', 'Height (imperial)', 'Height (metric)'],
+      rows: [
+        ['1', 'Abraham Lincoln', '6 ft 4 in', '193 cm'],
+        ['2', 'Lyndon B. Johnson', '6 ft 3\u00BD in', '192 cm'],
+        ['3', 'Donald Trump', '6 ft 3 in', '191 cm'],
+        ['4', 'Thomas Jefferson', '6 ft 2\u00BD in', '189 cm'],
+        ['4', 'Bill Clinton', '6 ft 2\u00BD in', '189 cm'],
+        ['6', 'Chester A. Arthur', '6 ft 2 in', '188 cm'],
+        ['6', 'Franklin D. Roosevelt', '6 ft 2 in', '188 cm'],
+        ['6', 'George H. W. Bush', '6 ft 2 in', '188 cm'],
+        ['9', 'George Washington', '6 ft 1\u00BD in', '187 cm'],
+        ['9', 'Barack Obama', '6 ft 1\u00BD in', '187 cm'],
+        ['11', 'Andrew Jackson', '6 ft 1 in', '185 cm'],
+        ['11', 'John F. Kennedy', '6 ft 1 in', '185 cm'],
+        ['11', 'Ronald Reagan', '6 ft 1 in', '185 cm'],
+        ['14', 'James Monroe', '6 ft 0 in', '183 cm'],
+        ['14', 'John Tyler', '6 ft 0 in', '183 cm'],
+        ['14', 'James Buchanan', '6 ft 0 in', '183 cm'],
+        ['14', 'James A. Garfield', '6 ft 0 in', '183 cm'],
+        ['14', 'Warren G. Harding', '6 ft 0 in', '183 cm'],
+        ['14', 'Gerald Ford', '6 ft 0 in', '183 cm'],
+        ['14', 'Joe Biden', '6 ft 0 in', '183 cm'],
+        ['21', 'William Howard Taft', '5 ft 11\u00BD in', '182 cm'],
+        ['21', 'Herbert Hoover', '5 ft 11\u00BD in', '182 cm'],
+        ['21', 'Richard Nixon', '5 ft 11\u00BD in', '182 cm'],
+        ['21', 'George W. Bush', '5 ft 11\u00BD in', '182 cm'],
+        ['25', 'Grover Cleveland', '5 ft 11 in', '180 cm'],
+        ['25', 'Woodrow Wilson', '5 ft 11 in', '180 cm'],
+        ['27', 'Dwight D. Eisenhower', '5 ft 10\u00BD in', '179 cm'],
+        ['28', 'Franklin Pierce', '5 ft 10 in', '178 cm'],
+        ['28', 'Andrew Johnson', '5 ft 10 in', '178 cm'],
+        ['28', 'Theodore Roosevelt', '5 ft 10 in', '178 cm'],
+        ['28', 'Calvin Coolidge', '5 ft 10 in', '178 cm'],
+        ['32', 'Jimmy Carter', '5 ft 9\u00BD in', '177 cm'],
+        ['33', 'Millard Fillmore', '5 ft 9 in', '175 cm'],
+        ['33', 'Harry S. Truman', '5 ft 9 in', '175 cm'],
+        ['35', 'Rutherford B. Hayes', '5 ft 8\u00BD in', '174 cm'],
+        ['36', 'William Henry Harrison', '5 ft 8 in', '173 cm'],
+        ['36', 'James K. Polk', '5 ft 8 in', '173 cm'],
+        ['36', 'Zachary Taylor', '5 ft 8 in', '173 cm'],
+        ['36', 'Ulysses S. Grant', '5 ft 8 in', '173 cm'],
+        ['40', 'John Quincy Adams', '5 ft 7\u00BD in', '171 cm'],
+        ['41', 'John Adams', '5 ft 7 in', '170 cm'],
+        ['41', 'William McKinley', '5 ft 7 in', '170 cm'],
+        ['43', 'Martin Van Buren', '5 ft 6 in', '168 cm'],
+        ['43', 'Benjamin Harrison', '5 ft 6 in', '168 cm'],
+        ['45', 'James Madison', '5 ft 4 in', '163 cm'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'full-ranking',
+        heading: 'US Presidents by Height: The Complete Ranking',
+        subheading: 'Forty-five presidents, a 30 cm spread, and one man towering over them all.',
+        paragraphs: [
+          'Abraham Lincoln, at 6 ft 4 in (193 cm), is the undisputed tallest president in American history \u2014 a title he shares with no one. At the other end stands James Madison at just 5 ft 4 in (163 cm), the shortest president ever, a full foot (30 cm) shorter than Lincoln. Between those two bookends the remaining 43 presidents fill in almost every half-inch mark, with the average president standing about 5 ft 11 in (180 cm).',
+          'The ranking above orders all 45 presidencies (Grover Cleveland\u2019s two non-consecutive terms count once) from tallest to shortest, using the best-documented figures compiled by Wikipedia\u2019s presidential-heights researchers and cross-checked against the POTUS.com presidential facts project. Where sources record a half inch, it is shown; most modern presidents\u2019 heights come from official records and medical examinations, while the 18th- and 19th-century figures rely on military records, tailor\u2019s notes and contemporary accounts.',
+          'A few things stand out immediately. First, presidents are a tall group: only James Madison (5 ft 4 in) and Benjamin Harrison (5 ft 6 in) are reckoned to have been below average height \u2014 a claim popularised by Nancy Etcoff\u2019s 1999 book Survival of the Prettiest. Second, the list skews tall at the top but clusters hard around six feet: seven presidents measure exactly 6 ft 0 in, and another four come in at 5 ft 11\u00BD in. Third, every president since 2000 has been at least six feet tall, continuing a trend that has made modern presidents taller than their 19th-century predecessors.',
+        ],
+        callout: {
+          title: 'The headline numbers',
+          text: 'Tallest: Lincoln at 193 cm. Shortest: Madison at 163 cm. Average: ~180 cm. Gap between extremes: 30 cm \u2014 the length of a school ruler.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'tallest-presidents',
+        heading: 'The Tallest Presidents: Lincoln\u2019s League',
+        subheading: 'Five presidents stand clear of the field \u2014 and the top two are a full head above the shortest.',
+        paragraphs: [
+          'Lincoln\u2019s 6 ft 4 in (193 cm) put him at roughly the 99th percentile of men in his era, and he would still tower today. His height was part of his political theatre: in the famous Lincoln\u2013Douglas debates of 1858, the lanky 193 cm Lincoln stood beside Stephen A. Douglas \u2014 who measured just 5 ft 4 in (163 cm), exactly Madison\u2019s height \u2014 and the 30 cm contrast was impossible to miss. Lincoln\u2019s long limbs, stovepipe hat and gaunt frame made him one of the most instantly recognisable figures of the 19th century.',
+          'Second on the list is Lyndon B. Johnson at 6 ft 3\u00BD in (192 cm), just half an inch shy of Lincoln. LBJ\u2019s size was legendary in Washington \u2014 he weaponised it with \u201cthe Johnson treatment,\u201d leaning over senators, gripping their lapels and talking them into votes at a distance of inches. Third is Donald Trump, listed at 6 ft 3 in (191 cm) by the White House physician, though the figure is disputed: older documents record 6 ft 2 in (188 cm) and some estimates go as low as 5 ft 11 in (180 cm).',
+          'Fourth place is shared by two men 190 years apart: Thomas Jefferson (6 ft 2\u00BD in \/ 189 cm) and Bill Clinton (the same 6 ft 2\u00BD in \/ 189 cm). Jefferson was notably tall for the 18th century, when the average American man stood several inches shorter than today, and contemporaries frequently commented on his commanding frame. Just behind them, a trio of 6 ft 2 in (188 cm) presidents \u2014 Chester A. Arthur, Franklin D. Roosevelt and George H. W. Bush \u2014 rounds out the tallest ten.',
+        ],
+        image: {
+          src: '/assets/blog/us-presidents-heights-ranked/tallest-five.png',
+          alt: 'Height comparison chart of the tallest US presidents: Abraham Lincoln (193 cm), Lyndon B. Johnson (192 cm), Donald Trump (191 cm), Thomas Jefferson (189 cm) and James Madison (163 cm) for scale',
+          caption: 'The top of the leaderboard next to the shortest president: Madison (163 cm) barely clears the shoulders of Jefferson (189 cm), and Lincoln stands 30 cm above him.',
+        },
+        callout: {
+          title: 'Only two reach 192+',
+          text: 'Lincoln (193 cm) and LBJ (192 cm) are the only presidents to clear 6 ft 3 in. Trump\u2019s listed 191 cm is a disputed third.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'shortest-presidents',
+        heading: 'The Shortest Presidents: Small Stature, Large Legacies',
+        subheading: 'The bottom of the ranking is crowded with giants of American history.',
+        paragraphs: [
+          'James Madison\u2019s 5 ft 4 in (163 cm) made him the smallest president \u2014 and one of the smallest heads of state in modern history. Yet Madison\u2019s physical stature bore no relation to his political one: as the principal author of the Constitution and the Bill of Rights, and the fourth president, he shaped the republic more profoundly than most of his taller successors. His tiny frame became a running joke in his own time; he reportedly had to stuff his boots to keep them from sliding off.',
+          'Next up are Martin Van Buren and Benjamin Harrison, both 5 ft 6 in (168 cm). Harrison was nicknamed \u201cLittle Ben\u201d for the obvious reason, and his smallness was contrasted cruelly with his grandfather William Henry Harrison (5 ft 8 in \/ 173 cm) \u2014 though the grandfather died a month into his term, so the height difference outlasted the presidency. Van Buren, the eighth president, was the first born as a US citizen rather than a British subject, and his 168 cm frame made him noticeably shorter than nearly every contemporary statesman.',
+          'Then come John Adams and William McKinley at 5 ft 7 in (170 cm). Adams, like his son John Quincy Adams (5 ft 7\u00BD in \/ 171 cm), was stocky and broad rather than tall \u2014 Abigail Adams described him as compactly built. McKinley, the last president to have served in the Civil War, won two elections despite standing a full four inches (10 cm) shorter than his opponent William Jennings Bryan (5 ft 11 in \/ 180 cm), an early and emphatic refutation of the \u201ctaller candidate always wins\u201d idea.',
+        ],
+        callout: {
+          title: 'Height isn\u2019t legacy',
+          text: 'Madison (163 cm) wrote the Constitution; Adams (170 cm) was a founding father. Four of the five shortest presidents are rated among the most consequential.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'height-and-elections',
+        heading: 'Does Height Win Elections? The Taller-Candidate Pattern',
+        subheading: 'Folk wisdom says the taller candidate always wins \u2014 the record says otherwise.',
+        paragraphs: [
+          'One of the most repeated claims in American politics is that the taller of the two major candidates always wins the presidency. It sounds plausible: voters associate height with leadership, and for long stretches \u2014 most of the 20th century \u2014 the taller candidate did keep winning. Studies have found a genuine height advantage in popular-vote share, and the pattern held for decades at a time, which is why the myth feels true.',
+          'But a careful 2013 study cited by the presidential-heights research concluded something more subtle: taller candidates were significantly more likely to win the popular vote, yet not significantly more likely to win actual elections \u2014 the taller candidate\u2019s win rate in the Electoral College did not beat chance. And the exceptions are glaring. Joe Biden (6 ft 0 in \/ 183 cm) beat Donald Trump (listed 6 ft 3 in \/ 191 cm) in 2020. George W. Bush (5 ft 11\u00BD in \/ 182 cm) beat the 6 ft 4 in (193 cm) John Kerry in 2004 and the 6 ft 1 in (185 cm) Al Gore in 2000. Jimmy Carter (5 ft 9\u00BD in \/ 177 cm) beat the 6 ft 0 in Gerald Ford in 1976, and Richard Nixon (5 ft 11\u00BD in) beat the 6 ft 1 in George McGovern in 1972.',
+          'Go further back and the exceptions multiply: William McKinley (5 ft 7 in \/ 170 cm) beat the taller William Jennings Bryan twice, in 1896 and 1900; Rutherford B. Hayes (5 ft 8\u00BD in \/ 174 cm) beat the 5 ft 10 in Samuel Tilden in 1876; and James Garfield (6 ft 0 in \/ 183 cm) beat the 6 ft 1\u00BD in Winfield Hancock in 1880. The biggest height mismatch in electoral history came in 1860: Lincoln\u2019s 193 cm against Stephen A. Douglas\u2019s 163 cm \u2014 a 30 cm gulf that the shorter man nearly closed in the debates.',
+          'The honest summary is that height is a mild tailwind, not a rule. Since 1900 the taller candidate has won most elections, but the shorter candidate has won often enough \u2014 2020, 2004, 2000, 1976, 1972 \u2014 that no one should bet the election on a tape measure. Charisma, timing and the economy matter far more than centimetres.',
+        ],
+        callout: {
+          title: 'The myth in one line',
+          text: 'Taller candidates win the popular vote more often than chance \u2014 but they do not win elections more often than chance. Votes, not inches, decide.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'presidents-vs-average',
+        heading: 'Presidents vs Ordinary People: Leaders Run Tall',
+        subheading: 'The average president is 5 cm taller than the average American man today \u2014 and the gap used to be wider.',
+        paragraphs: [
+          'Put the average president \u2014 about 5 ft 11 in (180 cm) \u2014 next to the average American man today (roughly 5 ft 9 in \/ 175 cm) and the presidency\u2019s height bias is visible: the officeholder stands about 5 cm (2 in) above the national male average. Even Madison, the shortest president at 163 cm, would not have looked absurdly short beside the average man of his own era, when nutrition and disease kept average heights lower than today.',
+          'The visual below makes the range concrete. Lincoln\u2019s 193 cm towers over Madison\u2019s 163 cm, with the average president (180 cm) and average US man (175 cm) slotted between them. Notice how the two averages sit close together in the middle \u2014 the story of presidential height is really the story of the extremes, not the middle.',
+          'There is also a long-run trend worth noting: presidents have grown taller over time, tracking \u2014 and slightly outpacing \u2014 the general population. The 18th-century presidents were striking figures partly because height itself was rarer; George Washington at 6 ft 1\u00BD in (187 cm) and Jefferson at 189 cm would have stood out in any crowd of their contemporaries. Every president elected in this century has stood at least 6 ft 0 in, suggesting the height premium in American politics, whatever its cause, has not faded.',
+        ],
+        image: {
+          src: '/assets/blog/us-presidents-heights-ranked/extremes-vs-average.png',
+          alt: 'Height comparison chart: Abraham Lincoln (193 cm), the average US president (180 cm), the average US man (175 cm) and James Madison (163 cm) side by side',
+          caption: 'From tallest to shortest: Lincoln (193 cm) vs Madison (163 cm), with the average president (180 cm) and average US man (175 cm) between them.',
+        },
+        callout: {
+          title: 'The height premium',
+          text: 'Average president: 180 cm. Average US man: ~175 cm. Only two presidents in history fall below average height.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'white-house-records',
+        heading: 'White House Height Records',
+        subheading: 'The oddities and outliers the ranking reveals.',
+        paragraphs: [
+          'William Howard Taft, at 5 ft 11\u00BD in (182 cm), was an inch below the presidential average \u2014 but he holds the weight record: between 335 and 350 pounds at his heaviest, the most of any president. Taft\u2019s bulk famously required a specially built 7-foot-long bathtub in the White House. Height and presence are different things, and Taft had presence in spades.',
+          'The biggest electoral height mismatch came in 1860, when Lincoln (193 cm) faced Stephen A. Douglas (163 cm) \u2014 the same height as Madison, the shortest president. The most lopsided modern matchup was 2024: Trump (listed 191 cm) against Kamala Harris (reported 5 ft 4\u00BD in \/ 164 cm), a 10\u00BD-inch (27 cm) gap. And the tallest losing candidate on record? John Kerry at 6 ft 4 in (193 cm) \u2014 exactly Lincoln\u2019s height \u2014 lost to the 5 ft 11\u00BD in Bush in 2004, proving that even Lincoln\u2019s inches don\u2019t guarantee the presidency.',
+          'Finally, spare a thought for the founders of the ranking\u2019s lower reaches. John Adams (170 cm) and his son John Quincy Adams (171 cm) are the only father-and-son pair in the bottom ten; George H. W. Bush (188 cm) and George W. Bush (182 cm) are the only father-and-son pair in the top half. Height, it seems, is no more heritable in politics than popularity.',
+        ],
+        callout: {
+          title: 'Tallest loser',
+          text: 'John Kerry (193 cm) \u2014 as tall as Lincoln \u2014 is the tallest major-party candidate to lose a presidential election.',
+          type: 'stat',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Who is the tallest US president?',
+        answer:
+          'Abraham Lincoln, at 6 ft 4 in (193 cm). No other president comes within half an inch: Lyndon B. Johnson is second at 6 ft 3\u00BD in (192 cm), and Donald Trump is listed third at 6 ft 3 in (191 cm), though his listed height is disputed.',
+      },
+      {
+        question: 'Who is the shortest US president?',
+        answer:
+          'James Madison, the 4th president and principal author of the Constitution, at 5 ft 4 in (163 cm) \u2014 a full 12 inches (30 cm) shorter than Lincoln. The next shortest are Martin Van Buren and Benjamin Harrison, both 5 ft 6 in (168 cm).',
+      },
+      {
+        question: 'What is the average height of a US president?',
+        answer:
+          'About 5 ft 11 in (180 cm). That is roughly 5 cm (2 in) taller than the average American man today (~175 cm), reflecting a persistent height premium in American presidential politics.',
+      },
+      {
+        question: 'How tall is Donald Trump really?',
+        answer:
+          'The White House physician lists Trump at 6 ft 3 in (191 cm), which would make him the third-tallest president. The figure is disputed: older documents record 6 ft 2 in (188 cm), and some estimates put him as low as 5 ft 11 in (180 cm) \u2014 a reminder that even presidential heights are sometimes political.',
+      },
+      {
+        question: 'Does the taller presidential candidate always win?',
+        answer:
+          'No. The taller candidate has won most elections since 1900, but there are famous exceptions: Biden beat Trump in 2020, Bush beat Kerry (6 ft 4 in) in 2004, Carter beat Ford in 1976, and McKinley (5 ft 7 in) twice beat the taller William Jennings Bryan. A 2013 study found taller candidates win the popular vote more often than chance \u2014 but not elections.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Wikipedia \u2014 Heights of presidents and presidential candidates of the United States',
+        url: 'https://en.wikipedia.org/wiki/Heights_of_presidents_and_presidential_candidates_of_the_United_States',
+        description: 'The complete ranked table of all 45 presidents by height (imperial and metric), plus the election-by-election winner-vs-opponent height comparison and the research on height and electoral success.',
+      },
+      {
+        title: 'POTUS.com \u2014 Presidential Heights',
+        url: 'https://potus.com/presidential-facts/presidential-heights/',
+        description: 'Independent cross-check of the key figures: Lincoln tallest at 6 ft 4 in (193 cm), Madison shortest at 5 ft 4 in (163 cm), and the presidential average of about 5 ft 11 in (180 cm).',
+      },
+      {
+        title: 'Ranker \u2014 The Different (Physical) Sizes of US Presidents',
+        url: 'https://www.ranker.com/list/different-physical-sizes-of-us-presidents/justin-andress?ref=collections&l=2669736&collectionId=1144',
+        description: 'Corroborating heights for individual presidents, including Washington (~6 ft), John Adams (5 ft 6\u20137 in range) and Lincoln (6 ft 4 in).',
+      },
+    ],
+    relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-6-feet-look-like', 'what-does-5ft10-look-like', 'how-height-comparison-works'],
+  },
 ];
