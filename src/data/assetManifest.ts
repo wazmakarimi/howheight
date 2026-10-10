@@ -11378,22 +11378,22 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
   {
     "id": "animal-giraffe-01",
     "category": "animals",
-    "filename": "animal-giraffe-01.svg",
-    "sourceFile": "src/assets/entities/animals/animal-giraffe-01.svg",
-    "publicPath": "/assets/entities/animals/animal-giraffe-01.svg",
+    "filename": "animal-giraffe-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-giraffe-01.png",
+    "publicPath": "/assets/entities/animals/animal-giraffe-01.png",
     "name": "Giraffe",
     "slug": "animal-giraffe-01",
     "heightCm": 500,
     "referenceHeightCm": 500,
     "measurementType": "ground-to-top",
     "measurementAnchor": {
-      "groundY": 976.45,
-      "measurementY": 56.37
+      "groundY": 1546,
+      "measurementY": 0
     },
-    "viewBox": "251.62 56.37 531.6 920.08",
-    "aspectRatio": 0.578,
-    "fileSize": 3598,
-    "status": "needs-review",
+    "viewBox": "0 0 961 1546",
+    "aspectRatio": 0.622,
+    "fileSize": 204269,
+    "status": "verified",
     "subgroup": "[A] Giraffes",
     "tags": [
       "animals",

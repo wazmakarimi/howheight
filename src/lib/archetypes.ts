@@ -53,6 +53,19 @@ export const CLIENT_ARCHETYPES: Record<string, ArchetypeAsset> = {
     },
     "isPng": false
   },
+  "giraffe": {
+    "id": "giraffe",
+    "category": "animals",
+    "name": "Giraffe",
+    "heightCm": 480,
+    "publicPath": "/assets/entities/animals/animal-giraffe-01.png",
+    "viewBox": "0 0 961 1546",
+    "measurementAnchor": {
+      "groundY": 1546,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
   "object-016": {
     "id": "object-016",
     "category": "objects",

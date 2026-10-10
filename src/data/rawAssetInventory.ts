@@ -4831,15 +4831,15 @@ export const RAW_ASSET_INVENTORY: RawAsset[] = [
   {
     "id": "animal-giraffe-01",
     "category": "animals",
-    "filename": "animal-giraffe-01.svg",
-    "sourceFile": "src/assets/entities/animals/animal-giraffe-01.svg",
-    "publicPath": "/assets/entities/animals/animal-giraffe-01.svg",
-    "extension": "svg",
-    "viewBox": "251.62 56.37 531.6 920.08",
-    "aspectRatio": 0.578,
-    "fileSize": 3598,
+    "filename": "animal-giraffe-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-giraffe-01.png",
+    "publicPath": "/assets/entities/animals/animal-giraffe-01.png",
+    "extension": "png",
+    "viewBox": "0 0 961 1546",
+    "aspectRatio": 0.622,
+    "fileSize": 204269,
     "isUiIcon": false,
-    "isValidSvg": true
+    "isValidSvg": false
   },
   {
     "id": "animal-horse-01",
