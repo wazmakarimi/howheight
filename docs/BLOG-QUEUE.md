@@ -24,7 +24,7 @@ HowHeight website itself wherever they help. No thin SEO filler.
 ## Backlog (secondary ideas, in rough priority order)
 
 - [x] `how-rare-is-6ft5-height` — How Rare Is 6'5"? (percentile spin-off) — published 2026-10-10
-- [ ] `human-vs-giraffe-height-comparison` — Human vs Giraffe (+ dog/cat) Height Comparison (animals)
+- [x] `human-vs-giraffe-height-comparison` — Human vs Giraffe (+ dog/cat) Height Comparison (animals) — published 2026-10-10
 - [ ] `tallest-man-world-robert-wadlow` — Robert Wadlow: The Tallest Man in History Visualized (scale)
 - [ ] `basketball-hoop-height-vs-human` — Everyday Objects series: basketball hoop, fridge, car vs human (objects)
 - [ ] `average-height-teenage-boy-by-age` — Average Height of a Teenage Boy by Age (guides)

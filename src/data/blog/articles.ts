@@ -2916,4 +2916,196 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-5ft10-look-like', 'what-does-6-feet-look-like', 'average-height-by-country-tallest-nations'],
   },
+
+  // 18. HUMAN VS GIRAFFE
+  {
+    slug: 'human-vs-giraffe-height-comparison',
+    title: 'Human vs Giraffe Height Comparison: How Tall Is a Giraffe Really? Visualized',
+    h1: 'Human vs Giraffe Height Comparison: How Tall Is a Giraffe Really?',
+    description: 'How tall is a giraffe compared to a human, a dog, or a cat? A male giraffe reaches 5.5 m (18 ft) — nearly 3x an average man — while a newborn calf (1.8 m) is already taller than an average woman. See true-scale visuals and the anatomy behind the height.',
+    category: 'animals',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-10T09:00:00Z',
+    updatedDate: '2026-10-10T09:00:00Z',
+    readingTimeMinutes: 7,
+    quickAnswer: {
+      summary: 'The giraffe is the world\'s tallest land animal. Adult males stand 4.8 to 5.5 m (15 ft 9 in to 18 ft 1 in) — nearly three times the height of an average adult man (176 cm / 5 ft 9 in) — while females reach 4.3 to 4.8 m (14 ft 1 in to 15 ft 9 in). A newborn giraffe calf is already about 1.8 m (5 ft 11 in) tall, making it taller than an average adult woman (162 cm).',
+      keyTakeaway: 'A giraffe\'s individual legs (about 1.8 m / 6 ft) and its neck (about 1.8 m / 6 ft) are each, on their own, taller than a full-grown human.',
+      dataPoints: [
+        { label: 'Adult Male Giraffe', value: '4.8–5.5 m (15 ft 9 in–18 ft 1 in)' },
+        { label: 'Adult Female Giraffe', value: '4.3–4.8 m (14 ft 1 in–15 ft 9 in)' },
+        { label: 'Newborn Giraffe Calf', value: '~1.8 m (5 ft 11 in) — taller than an average woman' },
+        { label: 'vs Average Man (176 cm)', value: 'Male giraffe ≈ 2.8–3.1× taller' },
+        { label: 'vs Dog / Cat', value: 'Cat (25 cm) ≈ 1/20th of a 500 cm giraffe' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male' },
+      { category: 'animal', id: 'giraffe', customHeightCm: 500, label: 'Male Giraffe (500 cm)' },
+      { category: 'animal', id: 'dog' },
+      { category: 'animal', id: 'cat' },
+    ],
+    toolActionTitle: 'Visualize a Giraffe Against Humans and Pets',
+    toolActionDescription: 'Compare a 500 cm male giraffe with a 176 cm adult male, a medium dog (60 cm), and a domestic cat (25 cm) on the true-scale canvas — and try the calf (180 cm) against a 162 cm woman.',
+    comparisonTable: {
+      caption: 'Giraffe, Human, Dog & Cat Heights at True Scale',
+      headers: ['Animal / Person', 'Height (Metric)', 'Height (Imperial)', 'vs 176 cm Human'],
+      rows: [
+        ['Adult Male Giraffe (large)', '5.5 m', '18 ft 1 in', '3.1× taller — eye level is below the giraffe\'s belly'],
+        ['Adult Male Giraffe (typical)', '5.0 m', '16 ft 5 in', '2.8× taller'],
+        ['Adult Female Giraffe', '4.3–4.8 m', '14 ft 1 in–15 ft 9 in', '2.4–2.7× taller'],
+        ['Newborn Giraffe Calf', '~1.8 m', '5 ft 11 in', 'Slightly taller than an average adult male; taller than an average woman'],
+        ['Average Adult Male', '176 cm', '5 ft 9 in', '—'],
+        ['Average Adult Woman', '162 cm', '5 ft 4 in', '8% shorter than the man'],
+        ['Medium Dog (e.g. Labrador)', '~60 cm', '23.6 in', '34% of human height'],
+        ['Domestic Cat (shoulder)', '~25 cm', '9.8 in', '1/20th of a 500 cm giraffe'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'headline-heights',
+        heading: 'How Tall Is a Giraffe? The Headline Numbers',
+        subheading: 'The tallest land animal, measured ground to ossicones.',
+        paragraphs: [
+          'The giraffe (Giraffa camelopardalis) is the tallest land animal on Earth. Adult males typically stand between 4.8 and 5.5 metres (15 ft 9 in to 18 ft 1 in) tall, measured from the ground to the top of the ossicones — the skin-covered horn-like knobs on their heads. Females are noticeably smaller, at 4.3 to 4.8 metres (14 ft 1 in to 15 ft 9 in). Male giraffes can weigh up to 1,360 kg (3,000 lb), females up to 830 kg (1,830 lb).',
+          'For context, the tallest giraffe in the 500 cm range is nearly three times as tall as an average adult man (176 cm / 5 ft 9 in). Put differently, the top of an average man\'s head reaches only about 32% of the way up a large bull giraffe — roughly to the level of the animal\'s lower chest, below its belly.',
+          'There are four recognized species — including the Masai, reticulated, northern, and southern giraffes — and their heights vary slightly by region, with Masai and Rothschild\'s bulls among the tallest at around 18 feet.',
+        ],
+        callout: {
+          title: 'Where exactly is a giraffe measured?',
+          text: 'Just as horses are measured at the withers, giraffe height is taken from the ground to the highest fixed point of the head — the tips of the ossicones. A giraffe can stretch its head even higher to browse, but ossicone-tip height is the scientific baseline.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'anatomy-of-height',
+        heading: 'Where the Height Lives: Neck, Legs, and Seven Vertebrae',
+        subheading: 'Each of the giraffe\'s major parts is human-scale on its own.',
+        paragraphs: [
+          'A giraffe\'s height is built from two extraordinary columns. The neck alone is about 1.8 metres (6 feet) long — and the legs are also about 1.8 metres (6 feet) long, each. That means a single giraffe leg is longer than most adult humans are tall, and the neck by itself would clear an average woman\'s head by roughly 18 cm.',
+          'Remarkably, the giraffe\'s neck contains only seven cervical vertebrae — exactly the same number as in the human neck. Each vertebra is simply enormously elongated (up to ~28 cm) and articulated with highly flexible joints, with anchor muscles at the base holding the column upright.',
+          'This is also why the commonly shown giraffe silhouette can look almost human-like in its proportions: it is roughly 40% legs, 40% neck, and only 20% torso, whereas a human is mostly torso and legs with a short neck.',
+        ],
+        image: {
+          src: '/assets/blog/human-vs-giraffe-height-comparison/giraffe-vs-human.png',
+          alt: 'HowHeight comparison chart: 500 cm male giraffe next to a 176 cm adult male',
+          caption: 'A 500 cm male giraffe beside a 176 cm adult male at true scale — the man\'s head reaches only to about the giraffe\'s belly.',
+        },
+      },
+      {
+        id: 'newborn-calf',
+        heading: 'A Baby Giraffe Is Taller Than You',
+        subheading: 'Giraffe calves are born standing up — literally.',
+        paragraphs: [
+          'A newborn giraffe calf stands about 1.8 metres (5 ft 11 in) tall and weighs roughly 56–82 kg (125–180 lb). It is born while the mother is standing, so the calf drops roughly 1.5 metres to the ground — a fall that helps clear its airways and stimulates its first breaths.',
+          'Most calves stand within an hour of birth and can run within a few hours, which is critical because the young are vulnerable to lions, leopards, and hyenas. Only about 25 to 50% of calves survive to adulthood in the wild.',
+          'Here is the striking comparison: a newborn giraffe calf, minutes old, is already taller than an average adult woman (162 cm / 5 ft 3.8 in) and about the same height as an average adult man (176 cm). By age one, calves have typically grown to 2.7–3.7 m (9–12 ft).',
+        ],
+        image: {
+          src: '/assets/blog/human-vs-giraffe-height-comparison/calf-vs-woman.png',
+          alt: 'HowHeight comparison chart: 180 cm giraffe calf next to a 162 cm adult woman',
+          caption: 'A newborn giraffe calf (180 cm) next to an average adult woman (162 cm) — the baby is the taller of the two.',
+        },
+      },
+      {
+        id: 'pets-vs-giraffe',
+        heading: 'Dogs and Cats at Giraffe Scale',
+        subheading: 'Your pets, redrawn to a giraffe-sized ruler.',
+        paragraphs: [
+          'Domestic animals shrink to near-invisibility next to a giraffe. A typical domestic cat stands about 25 cm (9.8 in) at the shoulder — one twentieth the height of a 500 cm giraffe. A medium-sized dog like a Labrador at roughly 60 cm (23.6 in) is barely one eighth of the giraffe\'s height.',
+          'Dog breeds vary enormously: a Chihuahua may stand only 15 cm at the shoulder, while a Great Dane — one of the tallest dog breeds — can reach about 90 cm at the shoulder, which is roughly where a giraffe\'s ankle sits.',
+          'This range is why visual comparison matters more than a single number: the difference between a 25 cm cat and an 86 cm Great Dane feels huge at human scale, but on a 5-metre ruler both are simply small.',
+        ],
+        image: {
+          src: '/assets/blog/human-vs-giraffe-height-comparison/pets-vs-giraffe.png',
+          alt: 'HowHeight comparison chart: cat (25 cm), dog (60 cm), adult male (176 cm) and male giraffe (500 cm) at true scale',
+          caption: 'Cat, dog, human and giraffe at true scale — the pets barely clear the giraffe\'s lower legs.',
+        },
+      },
+      {
+        id: 'hidden-engineering',
+        heading: 'The Hidden Engineering of Extreme Height',
+        subheading: 'An 11 kg heart, fighter-pilot blood pressure, and a 50 cm tongue.',
+        paragraphs: [
+          'Living at 5 metres tall creates a brutal physics problem: pumping blood 2 to 3 metres straight up against gravity. The giraffe\'s heart weighs up to 11 kg (24 lb) and is about 60 cm (2 ft) long — roughly 25 times heavier than a human heart — and generates blood pressure around 280/180 mmHg, more than double a human\'s 120/80, the highest of any land mammal. It beats up to 170 times per minute.',
+          'The heart alone is not enough. A pressure-regulation network called the rete mirabile ("wonderful net") in the upper neck protects the brain when the giraffe lowers its head to drink; one-way valves in the jugular veins brake the return flow; and a tight sheath of thick skin over the lower legs acts like a biological G-suit, preventing blood from pooling at the hooves.',
+          'The head is equipped with its own reach-extending tools: a prehensile tongue up to 50 cm (19.7 in) long — blue-black in colour, which is believed to protect it from sunburn while browsing — and mobile nostrils that close against ants and sandstorms. Every giraffe\'s spot pattern is unique, like a human fingerprint.',
+        ],
+        callout: {
+          title: 'Why humans would faint at giraffe blood pressure',
+          text: '280/180 mmHg in a human is a hypertensive emergency. Giraffes survive it because their thick-walled hearts, elastic arteries, and pressure-control networks evolved together — cardiologists study them to understand human hypertension.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'why-height-matters',
+        heading: 'Why Being 5 Metres Tall Is an Evolutionary Advantage',
+        subheading: 'Food no one else can reach, and a watchtower over the savanna.',
+        paragraphs: [
+          'Height is the giraffe\'s feeding strategy. Their 6-foot necks let them browse acacia leaves 5 metres up, a food source no other land animal — not even elephants — can reach, so giraffes face almost no competition for it. They spend 16 to 20 hours a day feeding.',
+          'Height is also surveillance. Excellent eyesight from 5 metres up lets giraffes spot lions and hyenas from far away, and they serve as an early-warning system for other herbivores grazing below them.',
+          'The giraffe is classified as Vulnerable on the IUCN Red List, with wild populations declining by roughly 30% since the 1980s to about 111,000 individuals, driven by habitat loss, poaching, and human conflict — a sobering footnote for the world\'s tallest land animal.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is a giraffe in feet?',
+        answer: 'Adult male giraffes stand 16 to 18 feet (4.8 to 5.5 m) tall, measured to the tips of their ossicones. Females are 14 to 16 feet (4.3 to 4.8 m). The San Diego Zoo cites 18 feet as the typical height of an adult male.',
+      },
+      {
+        question: 'How tall is a giraffe compared to a human?',
+        answer: 'A large male giraffe at 5.5 m (18 ft) is about 3.1 times taller than an average adult man (176 cm / 5 ft 9 in). The man\'s head reaches only about 32% of the way up — roughly to the giraffe\'s lower chest. A single giraffe leg (about 1.8 m / 6 ft) is longer than most humans are tall.',
+      },
+      {
+        question: 'How tall is a baby giraffe at birth?',
+        answer: 'A newborn giraffe calf is about 1.8 metres (6 feet) tall and weighs 56–82 kg (125–180 lb). It drops about 1.5 metres to the ground at birth (the mother gives birth standing up), stands within an hour, and is already taller than an average adult woman.',
+      },
+      {
+        question: 'How long is a giraffe\'s neck, and how many neck bones does it have?',
+        answer: 'A giraffe\'s neck is about 1.8 metres (6 feet) long and weighs around 270 kg (600 lb). It contains only seven cervical vertebrae — the same number as a human neck — but each vertebra is enormously elongated (up to ~28 cm).',
+      },
+      {
+        question: 'Why is a giraffe\'s blood pressure so high?',
+        answer: 'To pump blood 2–3 metres up the neck to the brain, a giraffe\'s heart generates about 280/180 mmHg — more than double human blood pressure and the highest of any land mammal. A rete mirabile network, one-way jugular valves, and G-suit-like leg skin manage the pressure so the brain is protected when the giraffe lowers its head to drink.',
+      },
+      {
+        question: 'How tall is a giraffe\'s tongue?',
+        answer: 'A giraffe\'s prehensile tongue can reach 45–50 cm (18–20 in) long, giving it extra reach to strip acacia leaves from between thorns. Its blue-black colour is believed to protect it from sunburn during long hours of browsing.',
+      },
+    ],
+    sources: [
+      {
+        title: 'San Diego Zoo Wildlife Explorers — Giraffe',
+        url: 'https://sdzwildlifeexplorers.org/animals/giraffe',
+        description: 'Core measurements: 18-foot adult male, 6-foot neck and 6-foot legs, ossicones in both sexes, four recognised giraffe species.',
+      },
+      {
+        title: 'Smithsonian Movement of Life — Giraffe',
+        url: 'https://movementoflife.si.edu/species/giraffe/',
+        description: 'Species fact page: 5.5 m (18 ft) height, 1,360 kg weight, unique spot patterns, Vulnerable conservation status with ~111,000 wild individuals.',
+      },
+      {
+        title: 'The Animal Facts — Giraffe',
+        url: 'https://www.theanimalfacts.com/mammals/giraffe/',
+        description: 'Sexual dimorphism figures: males up to 5.5 m (18 ft) and 1,360 kg; females up to 4.3 m (14 ft) and 680 kg; ossicones and tongue details.',
+      },
+      {
+        title: 'Live Science — Big Baby: Giraffe Calf Born at Atlanta Zoo',
+        url: 'https://www.livescience.com/15247-atlanta-zoo-giraffe-baby-born.html',
+        description: 'Independent confirmation of newborn size: a 6-foot (1.8 m), 125-lb calf that could walk within two hours of birth.',
+      },
+      {
+        title: 'Phys.org — Odd Facts About the Giraffe',
+        url: 'https://phys.org/pdf401601510.pdf',
+        description: 'Tongue up to 50 cm, heart up to 11 kg beating up to 170 times per minute, and other outsized giraffe anatomy measurements.',
+      },
+      {
+        title: 'EarthDate — Giraffes Have High Blood Pressure (ED 321)',
+        url: 'https://www.earthdate.org/files/000/003/245/EarthDate_321_BW.pdf',
+        description: 'Circulatory adaptations: 2-foot, ~11 kg heart, ~280/180 mmHg blood pressure, one-way jugular valves, and rete mirabile pressure regulation.',
+      },
+    ],
+    relatedSlugs: ['human-vs-horse-height-comparison', 'how-height-comparison-works', 'what-does-6-feet-look-like', 'what-does-5ft10-look-like'],
+  },
 ];
