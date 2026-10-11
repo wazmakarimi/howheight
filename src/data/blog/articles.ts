@@ -3378,6 +3378,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'The reason for that eerie global consistency is pure historical accident. When James Naismith invented basketball in December 1891 at the Springfield YMCA, he needed somewhere to hang his peach baskets — and the gymnasium balcony rail happened to be 10 feet off the floor. He nailed the baskets to the rail, wrote it into his original 13 rules, and the number simply stuck. In more than 130 years of rule changes — shot clocks, three-point lines, goaltending rules — the rim height has never moved a single centimetre.',
           'That rigidity is deliberate. A hoop height that everybody shares means skills transfer everywhere: a jumper grooved in Manila works in Madrid, and dunkers do not need to recalibrate when they change leagues. Coaches, equipment makers and arena builders have all optimised an entire sport around that one fixed altitude, which is exactly why it is so hard for most of us to appreciate how high 10 feet actually is until something forces a comparison.',
         ],
+        image: {
+          src: '/assets/blog/basketball-hoop-height-vs-human/rim-vs-man.png',
+          alt: 'Height comparison chart showing a basketball rim at 305 cm (10 ft) next to a standard door at 210 cm and an average adult man at 176 cm',
+          caption: 'A 10-foot rim stands about 95 cm above the top of a door frame and nearly 130 cm above an average man\u2019s head \u2014 rendered here as a 305 cm height marker beside a door and an adult.',
+        },
         callout: {
           title: 'The headline number',
           text: '10 ft (3.05 m), playing surface to top of rim — identical across the NBA, FIBA, WNBA, NCAA and high school basketball. Youth hoops are the only common exception.',
@@ -3423,6 +3428,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'The refrigerator pairing is the sleeper insight of the bunch. A standard full-size fridge — 66 to 72 inches depending on style, with counter-depth models reaching the top of that range — is essentially man-sized: about as tall as the average adult who opens it every morning. So \u201Cthe rim is about one and three-quarter fridges high\u201D is a unit anyone with a kitchen can picture, no tape measure required. The sedan, meanwhile, gives you the waist-high anchor: if you can see over your car\u2019s roof, remember that the rim is more than twice that altitude.',
           'The door is the anchor that matters most indoors. Because every doorway in a standard home peaks around 203 cm, you already own a perfectly calibrated 2-metre ruler in every room of your house. Next time you walk through one, picture the rim floating roughly a metre above the frame — a full arm\u2019s length of nothing between the top of the door and the steel. That mental image is the whole point of visual comparison: abstract numbers become something your body already understands.',
         ],
+        image: {
+          src: '/assets/blog/basketball-hoop-height-vs-human/objects-lineup.png',
+          alt: 'Height comparison chart of a sedan car (145 cm), a refrigerator (175 cm), an average adult man (176 cm) and a standard door (210 cm)',
+          caption: 'The everyday ladder: sedan, refrigerator, adult and door, rendered to scale. A 10-foot rim would tower about 95 cm above the door in this lineup.',
+        },
         callout: {
           title: 'The one-sentence version',
           text: 'A 10-foot rim is about one-and-three-quarter refrigerators high, more than twice a sedan\u2019s roofline, and roughly a metre above the top of a standard doorway.',
