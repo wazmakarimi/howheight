@@ -66,6 +66,32 @@ export const CLIENT_ARCHETYPES: Record<string, ArchetypeAsset> = {
     },
     "isPng": true
   },
+  "basketball-hoop": {
+    "id": "basketball-hoop",
+    "category": "sports",
+    "name": "Basketball Hoop",
+    "heightCm": 305,
+    "publicPath": "/assets/entities/sports/sports-basketball-hoop-01.svg",
+    "viewBox": "175.06 261.26 739.4 950.41",
+    "measurementAnchor": {
+      "groundY": 1211.67,
+      "measurementY": 500
+    },
+    "isPng": false
+  },
+  "sports-basketball-hoop-01": {
+    "id": "sports-basketball-hoop-01",
+    "category": "sports",
+    "name": "Basketball Hoop",
+    "heightCm": 305,
+    "publicPath": "/assets/entities/sports/sports-basketball-hoop-01.svg",
+    "viewBox": "175.06 261.26 739.4 950.41",
+    "measurementAnchor": {
+      "groundY": 1211.67,
+      "measurementY": 500
+    },
+    "isPng": false
+  },
   "object-016": {
     "id": "object-016",
     "category": "objects",

@@ -36237,29 +36237,33 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
     "filename": "sports-basketball-hoop-01.svg",
     "sourceFile": "src/assets/entities/sports/sports-basketball-hoop-01.svg",
     "publicPath": "/assets/entities/sports/sports-basketball-hoop-01.svg",
-    "name": "American Football",
-    "slug": "sports-basketball-hoop-01",
-    "heightCm": 185,
-    "referenceHeightCm": 185,
+    "name": "Basketball Hoop",
+    "slug": "basketball-hoop",
+    "heightCm": 305,
+    "referenceHeightCm": 305,
     "measurementType": "height",
     "measurementAnchor": {
       "groundY": 1211.67,
-      "measurementY": 261.26
+      "measurementY": 500
     },
     "viewBox": "175.06 261.26 739.4 950.41",
     "aspectRatio": 0.778,
     "fileSize": 31988,
-    "status": "needs-review",
+    "status": "verified",
     "subgroup": "[S] Sports",
     "tags": [
       "sports",
-      "[s] sports"
+      "basketball hoop"
     ],
     "aliases": [
+      "basketball-hoop",
+      "basketball hoop",
+      "hoop",
+      "rim",
       "sports-basketball-hoop-01"
     ],
-    "searchable": false,
-    "indexable": false
+    "searchable": true,
+    "indexable": true
   },
   {
     "id": "sports-bicycle-01",
