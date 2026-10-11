@@ -3108,4 +3108,219 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['human-vs-horse-height-comparison', 'how-height-comparison-works', 'what-does-6-feet-look-like', 'what-does-5ft10-look-like'],
   },
+  {
+    slug: 'tallest-man-world-robert-wadlow',
+    title: 'Robert Wadlow: The Tallest Man in History, Visualised (8 ft 11.1 in / 272 cm)',
+    h1: 'Robert Wadlow: The Tallest Man in History, Visualised',
+    description:
+      'Robert Wadlow, the 8 ft 11.1 in (272 cm) \u201cAlton Giant\u201d, is the tallest human ever measured. His growth timeline, record body measurements, comparisons with the tallest NBA players ever, doorways and basketball hoops \u2014 all visualised on HowHeight.',
+    category: 'scale',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-11T09:00:00Z',
+    updatedDate: '2026-10-11T09:00:00Z',
+    readingTimeMinutes: 10,
+    quickAnswer: {
+      summary:
+        'Robert Pershing Wadlow of Alton, Illinois stood 8 ft 11.1 in (272 cm) tall \u2014 the tallest verified human in recorded history, per Guinness World Records. He was still growing when he died at 22 in 1940, and nobody has come within eight inches of his record since.',
+      keyTakeaway:
+        'Wadlow was 41 cm taller than the tallest NBA players ever, had to duck nearly 69 cm to pass through a standard doorway, and his size 37AA shoes were 47 cm long. His extreme height was caused by pituitary gland hypertrophy producing excess human growth hormone.',
+      dataPoints: [
+        { label: 'Record height', value: '8 ft 11.1 in (272 cm) \u2014 measured 27 June 1940' },
+        { label: 'Born / died', value: '22 Feb 1918, Alton IL \u2014 15 July 1940, aged 22' },
+        { label: 'Weight at death', value: '439 lb (199 kg); peak 491 lb (222.7 kg)' },
+        { label: 'Shoe size', value: '37AA \u2014 47 cm (18.5 in) long, largest ever' },
+        { label: 'Cause of height', value: 'Pituitary hypertrophy (excess growth hormone)' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 272, label: 'Robert Wadlow' },
+      { category: 'human', id: 'male', customHeightCm: 231, label: 'Gheorghe Mure\u015Fan' },
+      { category: 'human', id: 'male', customHeightCm: 231, label: 'Manute Bol' },
+      { category: 'human', id: 'male', customHeightCm: 216, label: "Shaquille O'Neal" },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average US man' },
+    ],
+    toolActionTitle: 'Stand next to the Alton Giant',
+    toolActionDescription:
+      'The visualiser above is preloaded with Robert Wadlow (272 cm), the tallest NBA players ever and the average US man. Add your own height and see how you stack up against the tallest human ever measured.',
+    contentSections: [
+      {
+        id: 'the-record',
+        heading: 'The Record: 8 ft 11.1 in, Measured and Medically Supervised',
+        subheading: 'The one height record nobody has come close to touching.',
+        paragraphs: [
+          'Robert Pershing Wadlow of Alton, Illinois is, in the words of Guinness World Records, the tallest man "of whom there is irrefutable evidence" \u2014 a record featured in almost every edition of the Guinness book since its inauguration in 1955. When last measured on 27 June 1940 in St. Louis by Dr. C. M. Charles and Dr. Cyril MacBryde, the mild-mannered American stretched a staggering 2.72 m (8 ft 11.1 in) tall. He died just 18 days later, and in the 86 years since, no verified human has come within eight inches of that mark.',
+          'Hold the number in your head for a moment: 272 cm. That is 41 cm taller than the tallest men ever to play in the NBA, 69 cm above the top of a standard interior doorway, and more than one and a half average US men stacked head to foot. It is a height that breaks the architecture of ordinary life \u2014 doors, cars, beds, chairs \u2014 and forces everything to be rebuilt around one person.',
+          'The most surprising part is how ordinary he started. Wadlow was born on 22 February 1918 at a perfectly unremarkable 3.85 kg (8.7 lb), to two regular-sized parents \u2014 his father Harold stood about 5 ft 11 in (1.8 m). There was no giant in the family tree and nothing unusual at birth. His extraordinary growth began at about age two, driven by hypertrophy of the pituitary gland, which flooded his body with abnormal levels of human growth hormone \u2014 and it simply never switched off.',
+        ],
+        callout: {
+          title: 'The headline number',
+          text: '8 ft 11.1 in (272 cm) \u2014 measured under medical supervision on 27 June 1940, eighteen days before his death. The nearest verified contender trails by more than 20 cm.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'growth-timeline',
+        heading: 'A Childhood Spent Outgrowing Everything',
+        subheading: 'Five to twenty-two: the milestones of a growth that never stopped.',
+        paragraphs: [
+          'By the age of five, Wadlow was 1.63 m (5 ft 4 in) tall and already wearing clothes intended for teenagers. At eight he passed the height of his 5 ft 11 in father \u2014 a photo from the period shows a boy who looks like a college athlete standing next to a normal-sized man. On his 13th birthday he measured 7 ft 1\u00BE in (218 cm) and became the tallest Boy Scout in history; by his high school graduation in 1936 he was 8 ft 4 in (254 cm), requiring a specially built desk in the classroom. At seventeen he stood 8 ft 0\u00BD in (245 cm), a mark that still stands as the tallest teenager ever recorded.',
+          'What makes Wadlow unique among the world\u2019s very tall people is that the growth curve never bent downward. Most giants experience a growth plateau after puberty; Wadlow\u2019s pituitary condition meant his body kept adding height through his late teens and early twenties. When he died, doctors who studied him believed he was still actively growing \u2014 and estimated that, had he lived another year, he would have reached or exceeded 9 ft (274 cm).',
+          'The chart below plots the key milestones of that growth against each other, from a five-year-old already the height of an average adult woman to the 272 cm man he became. The final two inches of that curve \u2014 the gap between the tallest teenager ever and the tallest man ever \u2014 are the difference that keeps his name in every record book.',
+        ],
+        image: {
+          src: '/assets/blog/tallest-man-world-robert-wadlow/wadlow-growth-timeline.png',
+          alt: 'Height comparison chart of Robert Wadlow at age 5 (163 cm), age 13 (218 cm), age 17 (245 cm) and age 22 (272 cm)',
+          caption: 'Wadlow\u2019s growth never plateaued: by age five he was already 5 ft 4 in, and he was still growing at twenty-two.',
+        },
+        callout: {
+          title: 'Still growing at the end',
+          text: 'Doctors believed Wadlow might have reached 9 ft (274 cm) had he lived another year. His final recorded measurement was taken just 18 days before his death.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'extreme-measurements',
+        heading: 'The Other Records: Feet, Hands, Weight and 8,000 Calories',
+        subheading: 'Wadlow holds the size records across his whole body, not just height.',
+        paragraphs: [
+          'Height was only the headline. Wadlow weighed 439 lb (199 kg) at the time of his death, and his greatest recorded weight was 491 lb (222.7 kg) on his 21st birthday \u2014 roughly the weight of three average adult men combined. To fuel that mass, his peak daily food consumption was recorded at 8,000 calories, more than three times the recommended intake for an average-sized man.',
+          'His extremities were record-breaking in their own right. His shoes were size 37AA \u2014 47 cm (18\u00BD in) long, the largest feet ever recorded \u2014 and each pair cost over $100 at the time, the equivalent of well over $2,000 today, which is why the International Shoe Company made him a goodwill ambassador and supplied them free. His hands measured 32.4 cm (12\u00BE in) from wrist to the tip of the middle finger \u2014 the largest hands ever recorded \u2014 and his arm span reached 288 cm (9 ft 5\u00BE in), longer than a standard doorway is tall.',
+          'The cost of that scale was constant physical hardship. Wadlow had limited feeling in his legs, which made him prone to severe infections he could not always detect. He needed leg braces to walk, he never used a wheelchair by choice despite the strain, and his father had to modify the family car with a removed front seat so he could travel. By age nine he could carry his 170 lb (77 kg) father up the stairs of the family home \u2014 a party trick that also tells you how much strength the frame carried.',
+        ],
+        callout: {
+          title: 'The full set of records',
+          text: 'Tallest man ever (272 cm), largest feet ever (size 37AA, 47 cm), largest hands ever (32.4 cm), and tallest teenager ever (245 cm at 17).',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'basketball-giants',
+        heading: 'Even the Tallest NBA Players Look Average Next to Him',
+        subheading: '41 cm clear of the two greatest giants in league history.',
+        paragraphs: [
+          'Basketball is the sport that collects the tallest humans on Earth, and its all-time height record is shared by Gheorghe Mure\u015Fan and Manute Bol, both officially listed at 7 ft 7 in (231 cm). Mure\u015Fan\u2019s 231 cm is genuinely enormous \u2014 it puts him in roughly the 99.99999th percentile of human height. Robert Wadlow beat it by 41 cm, the same gap as between a 5 ft 9 in man and a 7 ft 2 in giant. Set them side by side and the two tallest basketball players in history look like ordinary power forwards next to a man who had to duck under 8-foot ceilings.',
+          'The comparison only gets more striking as you go down the list. Shaquille O\u2019Neal, the most physically imposing player of the modern era at 7 ft 1 in (216 cm), would have stood 56 cm \u2014 nearly two feet \u2014 shorter than Wadlow. Sultan K\u00F6sen, the tallest living man today at 8 ft 2.8 in (251 cm), still trails Wadlow by a full 21 cm. The record is not close, and it is not getting closer: medical treatment of pituitary gigantism now stops growth that would once have run unchecked, which is one reason Guinness\u2019s own experts say Wadlow will likely remain the tallest man ever, permanently.',
+          'The chart below lines him up against the giants of the game. Notice how quickly the scale breaks: the visual difference between Bol and Shaq (15 cm) is visible, but the jump from Bol to Wadlow (41 cm) is a different category of human entirely.',
+        ],
+        image: {
+          src: '/assets/blog/tallest-man-world-robert-wadlow/wadlow-vs-nba-tallest.png',
+          alt: 'Height comparison chart of Robert Wadlow (272 cm) next to Gheorghe Mure\u015Fan (231 cm), Manute Bol (231 cm) and Shaquille O\u2019Neal (216 cm)',
+          caption: 'The two tallest NBA players ever (7 ft 7 in each) still stood 41 cm below Wadlow \u2014 and even Shaq trails him by nearly two feet.',
+        },
+        callout: {
+          title: 'Why the record will probably stand forever',
+          text: 'Modern medicine treats pituitary gigantism early, so the runaway growth that built Wadlow almost never happens today. Guinness considers his record essentially unbreakable.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'everyday-scale',
+        heading: 'Wadlow vs the Built World: Doors, Hoops and Average People',
+        subheading: 'Ordinary objects turn into measuring sticks for an extraordinary man.',
+        paragraphs: [
+          'The most intuitive way to grasp 272 cm is to place him inside the dimensions you already know. A standard interior doorway in the US is 6 ft 8 in (203 cm) tall \u2014 Wadlow would have had to duck 69 cm, nearly two feet and three inches, just to walk through one. A standard 8-foot (244 cm) residential ceiling leaves him only 28 cm of clearance overhead; standing upright under one, the top of his head would sit barely a ruler-length below the plaster. Beds, showers, cars and restaurant tables were all rebuilt around him.',
+          'Now set him beside the average US man (175 cm / 5 ft 9 in) shown in the chart below. Wadlow was 97 cm \u2014 more than three feet \u2014 taller than the average man, a 55% height advantage. That is roughly the same proportional gap as between an average adult and a tall eight-year-old child. His shoulders would clear the average man\u2019s head by a foot; his waist was higher than most people\u2019s shoulders.',
+          'And then there is the basketball hoop, hanging exactly 10 ft (305 cm) above the court \u2014 the one measurement in basketball that has not changed since James Naismith invented the game in 1891. The rim sits just 33 cm above Wadlow\u2019s head. He would not even have needed to jump to touch it \u2014 with his 288 cm arm span, a gentle reach upward would clear it comfortably. In the history of basketball, nobody has ever walked onto a court with that kind of standing reach.',
+        ],
+        image: {
+          src: '/assets/blog/tallest-man-world-robert-wadlow/wadlow-vs-average-man-door.png',
+          alt: 'Height comparison chart of Robert Wadlow (272 cm) next to a standard 6 ft 8 in door (203 cm) and the average US man (175 cm)',
+          caption: 'Wadlow would have had to duck 69 cm \u2014 over two feet \u2014 to walk through a standard doorway; the average US man comes up to his chest.',
+        },
+        callout: {
+          title: 'The hoop test',
+          text: 'A 10 ft (305 cm) basketball rim sits only 33 cm above Wadlow\u2019s head. He could have touched it flat-footed \u2014 the only human in history who could.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'death-and-legacy',
+        heading: 'The Gentle Giant\u2019s End and Legacy',
+        subheading: 'A tiny blister, a devastating infection, and a funeral for a king.',
+        paragraphs: [
+          'On 4 July 1940, while appearing at a festival in Manistee, Michigan, Wadlow was wearing a poorly fitted leg brace that rubbed a blister on his right ankle. Because he had limited sensation in his legs, the injury went unnoticed; the blister became infected, the infection spread, and despite surgery and a blood transfusion, he died in his sleep in a hotel room at 1:30 a.m. on 15 July 1940. He was 22 years old. His last words, spoken to his family, were about missing his grandparents\u2019 golden wedding anniversary celebrations.',
+          'The funeral matched the man. His custom coffin measured 10 ft 9 in (328 cm) long and weighed over 1,000 lb; it took 12 pallbearers to carry it, and more than 30,000 mourners filed past. He was buried in Oakwood Cemetery in his hometown of Alton, Illinois \u2014 where, to prevent grave-robbing, his family had his coffin encased in concrete.',
+          'Wadlow\u2019s life was more than a measurement, and he insisted on it. He toured with the Ringling Brothers Circus in 1936 but refused to wear a costume, appearing in his everyday clothes; he became a goodwill ambassador for the International Shoe Company rather than a sideshow exhibit. He was a Master Mason, planned to study law at Shurtleff College, and was known everywhere as the \u201cGentle Giant\u201d for his mild, gracious manner. A life-size bronze statue stands in Alton today, its right hand polished bright by the thousands of visitors who grip it for a photo \u2014 a small, worn reminder of how hard it is to believe the numbers until you stand beside them.',
+        ],
+        callout: {
+          title: 'The funeral figures',
+          text: 'Coffin: 10 ft 9 in (328 cm), over 1,000 lb. Pallbearers: 12. Mourners: 30,000+. The biggest funeral Alton, Illinois has ever seen.',
+          type: 'stat',
+        },
+      },
+    ],
+    comparisonTable: {
+      caption: 'Robert Wadlow\u2019s recorded measurements \u2014 heights and sizes verified by Guinness World Records',
+      headers: ['Measurement', 'Imperial', 'Metric'],
+      rows: [
+        ['Record height (final)', '8 ft 11.1 in', '272 cm'],
+        ['Tallest teenager ever (age 17)', '8 ft 0\u00BD in', '245 cm'],
+        ['Weight at death', '439 lb', '199 kg'],
+        ['Greatest recorded weight (age 21)', '491 lb', '222.7 kg'],
+        ['Arm span', '9 ft 5\u00BE in', '288 cm'],
+        ['Hand (wrist to middle finger)', '12\u00BE in', '32.4 cm'],
+        ['Shoe size', '37AA (18\u00BD in)', '47 cm long'],
+        ['Peak daily food consumption', '8,000 calories', '8,000 calories'],
+      ],
+    },
+    faq: [
+      {
+        question: 'How tall was Robert Wadlow exactly?',
+        answer: 'Robert Wadlow\u2019s final verified height was 8 ft 11.1 in (272 cm), measured under medical supervision on 27 June 1940 in St. Louis \u2014 just 18 days before his death. Guinness World Records recognises it as the tallest verified measurement of any human in recorded history.',
+      },
+      {
+        question: 'What medical condition made Robert Wadlow so tall?',
+        answer: 'Wadlow had hypertrophy (enlargement) of the pituitary gland, which produced abnormally high levels of human growth hormone. His abnormal growth began around age two and, unlike most people with growth conditions, never reached a stopping point \u2014 he was still growing at the time of his death. Modern medicine usually treats this condition early, which is one reason Guinness considers his record unbreakable.',
+      },
+      {
+        question: 'How much did Robert Wadlow weigh?',
+        answer: 'He weighed 439 lb (199 kg) at the time of his death. His greatest recorded weight was 491 lb (222.7 kg) on his 21st birthday \u2014 roughly the weight of three average adult men. His peak daily food consumption was recorded at 8,000 calories, more than three times an average man\u2019s intake.',
+      },
+      {
+        question: 'How did Robert Wadlow die?',
+        answer: 'A poorly fitted leg brace rubbed a blister on his right ankle during a public appearance in Manistee, Michigan, on 4 July 1940. Wadlow had limited feeling in his legs, so the injury went unnoticed and became severely infected. Despite surgery and a blood transfusion, he died in his sleep at 1:30 a.m. on 15 July 1940, aged 22.',
+      },
+      {
+        question: 'Is Robert Wadlow still the tallest person ever?',
+        answer: 'Yes \u2014 among verified records. The tallest living man, Sultan K\u00F6sen of Turkey, stands 8 ft 2.8 in (251 cm), a full 21 cm shorter than Wadlow. Because pituitary gigantism is now treated medically before growth runs away, Guinness World Records\u2019 own experts consider Wadlow\u2019s 8 ft 11.1 in record essentially permanent.',
+      },
+      {
+        question: 'What was Robert Wadlow\u2019s shoe size?',
+        answer: 'His shoes were size 37AA \u2014 47 cm (18\u00BD in) long, the largest feet ever recorded. Each pair cost over $100 at the time (well over $2,000 in today\u2019s money), so the International Shoe Company made him a goodwill ambassador and supplied his custom shoes free of charge.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Guinness World Records \u2014 Robert Wadlow: Tallest man ever',
+        url: 'http://www.guinnessworldrecords.com/records/hall-of-fame/robert-wadlow-tallest-man-ever',
+        description: 'The official record profile: 2.72 m (8 ft 11.1 in) measured 27 June 1940, born 22 Feb 1918 in Alton, Illinois, normal birth weight 3.85 kg, 1.63 m at age five, pituitary hyperplasia, record held since 1955.',
+      },
+      {
+        title: 'Wikipedia \u2014 Robert Wadlow',
+        url: 'https://en.wikipedia.org/wiki/Robert_Wadlow',
+        description: 'Full biography: dates, 439 lb at death, septic blister from the leg brace, Oakwood Cemetery burial, Alton Giant nicknames, Ringling Brothers and International Shoe Company roles.',
+      },
+      {
+        title: 'Discover Magazine \u2014 Who Was the Tallest Person to Ever Live?',
+        url: 'https://discovermagazine.com/the-sciences/who-was-the-tallest-person-to-ever-live',
+        description: 'Independent account of Wadlow\u2019s life and medical difficulties: foot infections, $2,000-equivalent shoes, size 37 feet, and how gigantism taxed his joints and circulation.',
+      },
+      {
+        title: 'Wikipedia \u2014 List of tallest players in NBA history',
+        url: 'https://en.wikipedia.org/wiki/List_of_tallest_players_in_NBA_history',
+        description: 'NBA all-time height leaders: Gheorghe Mure\u015Fan and Manute Bol at 7 ft 7 in (2.31 m), the benchmark figures used in the article\u2019s basketball comparison.',
+      },
+      {
+        title: 'Livemint \u2014 How tall is the tallest man to ever exist?',
+        url: 'https://www.livemint.com/news/world/how-tall-is-the-tallest-man-to-ever-exist-guinness-world-records-shares-picture-11670336321051.html',
+        description: 'Guinness-sourced summary confirming the 8 ft 11.1 in record, the 5-year-old at 5 ft 4 in milestone, and the poorly fitted brace that caused the fatal ankle infection.',
+      },
+      {
+        title: 'SportsRec \u2014 The NBA Basketball Hoop: The Official Height',
+        url: 'https://www.sportsrec.com/6625175/the-height-of-an-official-nba-basketball-hoop',
+        description: 'Confirms the 10-foot rim standard \u2014 unchanged since James Naismith invented basketball in 1891 \u2014 used for the article\u2019s hoop comparison.',
+      },
+    ],
+    relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-6-feet-look-like', 'what-does-5ft10-look-like', 'human-vs-giraffe-height-comparison'],
+  },
 ];
