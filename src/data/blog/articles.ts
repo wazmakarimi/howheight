@@ -3323,4 +3323,202 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-6-feet-look-like', 'what-does-5ft10-look-like', 'human-vs-giraffe-height-comparison'],
   },
+  {
+    slug: 'basketball-hoop-height-vs-human',
+    title: 'How High Is a Basketball Hoop? 10-Foot Rim vs Human, Fridge, Sedan & Door, Visualised',
+    h1: 'How High Is a Basketball Hoop? A 10-Foot Rim, Visualised',
+    description:
+      'A regulation basketball rim sits exactly 10 feet (3.05 m) above the court — a height unchanged since 1891. See how that compares to an average human, a refrigerator, a sedan car and a standard door, with the full dimensions of rim, net and backboard explained.',
+    category: 'objects',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-11T09:00:00Z',
+    updatedDate: '2026-10-11T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'A regulation basketball hoop is exactly 10 feet (3.05 m) high, measured from the playing surface to the top of the rim. That is roughly 1.75 times the height of an average adult man (176 cm), about 95 cm above the top of a standard door frame, and more than twice the roof height of a typical sedan car.',
+      keyTakeaway:
+        'The 10-foot height has never changed since James Naismith nailed a peach basket to a gymnasium balcony rail in 1891 — it is identical in the NBA, FIBA, WNBA, NCAA and high school basketball worldwide.',
+      dataPoints: [
+        { label: 'Rim height (regulation)', value: '10 ft (3.05 m) — court surface to top of rim' },
+        { label: 'Rim diameter', value: '18 in (45.7 cm), solid steel' },
+        { label: 'Backboard', value: '72 × 42 in (183 × 107 cm); bottom edge 9 ft (2.74 m)' },
+        { label: 'Standard refrigerator', value: '66–72 in (168–183 cm) tall' },
+        { label: 'Typical sedan roof', value: '55–59 in (140–150 cm) high' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 305, label: 'Basketball Rim' },
+      { category: 'human', id: 'male', customHeightCm: 176, label: 'Average Adult Man' },
+      { category: 'object', id: 'door', customHeightCm: 210, label: 'Standard Door' },
+      { category: 'object', id: 'refrigerator', customHeightCm: 175, label: 'Refrigerator' },
+      { category: 'object', id: 'car', customHeightCm: 145, label: 'Sedan Car' },
+    ],
+    toolActionTitle: 'Stand next to a 10-foot rim',
+    toolActionDescription:
+      'The visualiser above is preloaded with a 10-foot (305 cm) basketball rim, an average adult man, a standard door, a refrigerator and a sedan car. Add your own height and see how much of a leap you would need to touch the rim.',
+    comparisonTable: {
+      caption: 'How everyday objects stack up against a 10-foot (305 cm) basketball rim',
+      headers: ['Object', 'Typical height', 'Gap to the rim'],
+      rows: [
+        ['Basketball rim (regulation)', '305 cm (10 ft)', 'The reference — every comparison below is measured against this'],
+        ['Standard interior door frame', '203–210 cm (80–83 in)', 'The rim sits about 95–100 cm above the top of a door frame'],
+        ['Full-size refrigerator', '168–183 cm (66–72 in)', 'The rim is roughly 120–135 cm higher than the top of a fridge'],
+        ['Sedan car roof', '140–150 cm (55–59 in)', 'Two stacked sedans would just about reach the rim'],
+        ['Average adult man', '176 cm (5 ft 9.3 in)', 'Needs roughly an 80 cm vertical leap (from ~224 cm standing reach) to touch the rim'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-10-foot-standard',
+        heading: 'The One Measurement That Never Changed: 10 Feet',
+        subheading: 'A peach basket on a balcony rail set the height of every basketball hoop on Earth.',
+        paragraphs: [
+          'Ask how high a basketball hoop is and you get the most boring, most consistent answer in all of sports: exactly 10 feet (3.05 m), measured from the playing surface to the top of the rim. It is the same in the NBA, FIBA international play, the NCAA, the WNBA and high school basketball. A professional arena in Los Angeles, an Olympic court in Tokyo and a driveway hoop in Ohio are all aiming at the same horizontal line — the only thing that varies is how far away from it you shoot.',
+          'The reason for that eerie global consistency is pure historical accident. When James Naismith invented basketball in December 1891 at the Springfield YMCA, he needed somewhere to hang his peach baskets — and the gymnasium balcony rail happened to be 10 feet off the floor. He nailed the baskets to the rail, wrote it into his original 13 rules, and the number simply stuck. In more than 130 years of rule changes — shot clocks, three-point lines, goaltending rules — the rim height has never moved a single centimetre.',
+          'That rigidity is deliberate. A hoop height that everybody shares means skills transfer everywhere: a jumper grooved in Manila works in Madrid, and dunkers do not need to recalibrate when they change leagues. Coaches, equipment makers and arena builders have all optimised an entire sport around that one fixed altitude, which is exactly why it is so hard for most of us to appreciate how high 10 feet actually is until something forces a comparison.',
+        ],
+        callout: {
+          title: 'The headline number',
+          text: '10 ft (3.05 m), playing surface to top of rim — identical across the NBA, FIBA, WNBA, NCAA and high school basketball. Youth hoops are the only common exception.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'anatomy-of-a-hoop',
+        heading: 'Anatomy of a Regulation Hoop: Rim, Net and Backboard',
+        subheading: 'The rim gets the glory, but the backboard does most of the hidden measuring.',
+        paragraphs: [
+          'The rim itself is disarmingly simple: an 18-inch (45.7 cm) inside diameter ring of solid steel, mounted horizontally so its top edge sits exactly 10 feet up. It projects 6 inches (15.2 cm) out from the face of the backboard, and the net — usually white nylon cord about 15 to 18 inches long — hangs below it, there mainly to slow the ball and make a successful shot visible to everyone watching. A standard basketball is about 9.5 inches across, so the rim opening is roughly twice the ball\u2019s width: tight enough to demand precision, generous enough that a clean shot drops straight through.',
+          'Behind the rim, the backboard carries most of the system\u2019s hidden geometry. At the professional level it is a 72 × 42 inch (183 × 107 cm) rectangle of tempered glass, painted with the familiar inner \u201Cshooter\u2019s square\u201D — 24 by 18 inches — that gives bank shots their aiming reference. The bottom edge of the board sits 9 feet (2.74 m) above the court, which puts the top of the board at 13 feet (3.96 m). That 9-foot line is worth remembering: even the bottom of a regulation backboard is 98 cm above the head of an average adult man.',
+          'Every one of those secondary measurements is calibrated around the 10-foot rim. Move the rim down a foot without moving anything else and bank shots stop behaving the way players expect; the free-throw line\u2019s 15-foot distance from the backboard face and the geometry of every layup angle quietly depend on the rim staying exactly where Naismith\u2019s balcony rail put it. That is why adjustable home systems lower the whole assembly together — rim and board as one unit — rather than just dropping the ring.',
+        ],
+        callout: {
+          title: 'Quick-reference dimensions',
+          text: 'Rim 18 in diameter and 10 ft high; backboard 72 × 42 in with its bottom edge at 9 ft; shooter\u2019s square 24 × 18 in; net 15–18 in long; rim projects 6 in from the board face.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'what-10-feet-means-next-to-you',
+        heading: 'What 10 Feet Actually Means Next to a Human',
+        subheading: 'Do the leap math and the famous height becomes personal very quickly.',
+        paragraphs: [
+          'Stand a 176 cm (5 ft 9.3 in) average adult man under a regulation rim and the numbers get humbling fast. His head tops out at 176 cm; his outstretched hand reaches roughly 224 cm on tiptoes. That leaves about 80 cm — more than two and a half feet of empty air — between his fingertips and the steel. Touching the rim demands a standing vertical leap of roughly 80 cm, and dunking needs a running leap comfortably past a metre. Most untrained adults jump nowhere near that high, which is the simple physical reason a dunk remains a feat even though 10 feet sounds like a friendly number.',
+          'Put it against the architecture of ordinary life and it reads even starker. A standard interior door frame tops out around 203 cm — the rim floats about a metre above the highest point of every doorway in your home. A full-size refrigerator, the biggest object in most kitchens, stands 168–183 cm tall: the rim sits another 120-plus cm above its top hinge. You can walk under a basketball rim without ducking; you could balance a second refrigerator on top of your head and still fall short of the steel.',
+          'The most useful comparison may be the car in your driveway. A typical sedan roofline is only 140–150 cm — you can comfortably see over it, and its roof sits somewhere around an adult\u2019s waist or chest. The rim is more than twice that height. Stack two sedans on top of each other and you would just about be looking the rim in the eye. When people say 10 feet \u201Cdoesn\u2019t sound that high\u201D, they are usually failing to imagine anything except a person — and the moment you compare it to things instead of people, the scale snaps into focus.',
+        ],
+        callout: {
+          title: 'Try it yourself',
+          text: 'Add your own height in the comparison tool at the top of this article and read off your personal gap to the 10-foot line — it is the fastest way to feel this number.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'everyday-objects-scale',
+        heading: 'Fridge, Sedan, Door: The Everyday Scale Ladder',
+        subheading: 'Four familiar objects, one unbroken ladder from the ground to the rim.',
+        paragraphs: [
+          'Line up the objects and a clean ladder emerges: sedan (140–150 cm), then the refrigerator and the average man at almost exactly the same height (168–183 cm and 176 cm respectively), then the door frame at 203–210 cm, and finally the rim at 305 cm — nearly half a metre above everything else on the ladder. It is a pleasingly honest visualisation, because each rung is something you have stood next to a thousand times. The chart below renders it to scale.',
+          'The refrigerator pairing is the sleeper insight of the bunch. A standard full-size fridge — 66 to 72 inches depending on style, with counter-depth models reaching the top of that range — is essentially man-sized: about as tall as the average adult who opens it every morning. So \u201Cthe rim is about one and three-quarter fridges high\u201D is a unit anyone with a kitchen can picture, no tape measure required. The sedan, meanwhile, gives you the waist-high anchor: if you can see over your car\u2019s roof, remember that the rim is more than twice that altitude.',
+          'The door is the anchor that matters most indoors. Because every doorway in a standard home peaks around 203 cm, you already own a perfectly calibrated 2-metre ruler in every room of your house. Next time you walk through one, picture the rim floating roughly a metre above the frame — a full arm\u2019s length of nothing between the top of the door and the steel. That mental image is the whole point of visual comparison: abstract numbers become something your body already understands.',
+        ],
+        callout: {
+          title: 'The one-sentence version',
+          text: 'A 10-foot rim is about one-and-three-quarter refrigerators high, more than twice a sedan\u2019s roofline, and roughly a metre above the top of a standard doorway.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'kids-and-the-lowered-rim',
+        heading: 'The Exception: Youth Hoops and the Adjustable Rim',
+        subheading: 'The only time the 10-foot rule is allowed to bend.',
+        paragraphs: [
+          'There is exactly one mainstream context where the 10-foot standard does not apply: youth basketball. Driveway and gym systems for young children are routinely lowered to 8 or 9 feet — and sometimes as low as 5 feet for the very youngest players — so that shooting form develops against a proportionally realistic target instead of a steel ring three metres in the sky. Nearly every home system sold today is adjustable for this reason, typically cranking between about 7.5 and 10 feet as kids grow.',
+          'The adjustment is always temporary. As players move through school levels, the rim climbs toward the regulation mark and stays there for the rest of their playing lives — high school, college, professional and international play all use the same 10-foot rim Naismith\u2019s players shot at. The progression is one of the quiet proofs of the standard\u2019s value: the target never changes, only the shooter does.',
+          'That permanence is also why the height is worth visualising against everyday objects rather than just memorising. \u201CTen feet\u201D is a number everyone knows and almost nobody can feel — until it is rendered beside a fridge, a car and a doorway, at which point the oldest unchanging measurement in team sports finally looks as tall as it is.',
+        ],
+        callout: {
+          title: 'Buying for kids?',
+          text: 'Look for an adjustable system (roughly 7.5–10 ft range) and raise it as the player grows — but note the backboard itself also gets smaller on youth systems, which changes rebound behaviour even at full height.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How high is a basketball hoop?',
+        answer:
+          'Exactly 10 feet (3.05 m), measured from the playing surface to the top of the rim. This is the regulation height at every senior level: the NBA, FIBA international play, the NCAA, the WNBA and high school basketball all use the same 10-foot rim.',
+      },
+      {
+        question: 'Why is a basketball hoop exactly 10 feet high?',
+        answer:
+          'It is a historical accident that became a global standard. When James Naismith invented basketball in 1891, he nailed the original peach baskets to the gymnasium balcony rail, which happened to be 10 feet off the floor. The height was written into his original rules and has never changed in more than 130 years.',
+      },
+      {
+        question: 'Is the rim 10 feet in women\u2019s and youth basketball too?',
+        answer:
+          'The WNBA and women\u2019s college and international play use the same 10-foot rim as the men\u2019s game. Youth basketball is the exception: hoops for young children are commonly lowered to 8–9 feet (adjustable home systems go down to about 7.5 feet) so kids can develop proper shooting form against a realistic target.',
+      },
+      {
+        question: 'How high is the backboard on a basketball hoop?',
+        answer:
+          'A regulation backboard is 72 × 42 inches (183 × 107 cm). Its bottom edge sits 9 feet (2.74 m) above the court and its top edge is 13 feet (3.96 m) up. The rim attaches to the board\u2019s face at the 10-foot mark, projecting 6 inches (15.2 cm) out from it.',
+      },
+      {
+        question: 'Can the average person touch a 10-foot rim?',
+        answer:
+          'Almost certainly not. An average 176 cm adult with roughly 224 cm of standing reach would need about an 80 cm vertical leap to brush the rim — far beyond what most untrained adults can jump. Even a 6-foot (183 cm) player with an 8-foot standing reach needs around 60 cm of vertical, which is why touching the rim is a genuine athletic milestone.',
+      },
+      {
+        question: 'How big is the rim compared to the basketball?',
+        answer:
+          'The rim\u2019s inside diameter is 18 inches (45.7 cm) — roughly twice the ~9.5-inch diameter of a standard size-7 basketball (about 29.5 inches around). That ratio is the same everywhere in the world, which is why shooting touch transfers seamlessly between leagues and countries.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Basketball Hoop Dimensions Guide (NBA, FIBA & Home Courts) — OnCourt',
+        url: 'https://oncourt.online/guides/hoops/basketball-hoop-dimensions-guide/',
+        description: 'Regulation rim height of 3.05 m (10 ft) across NBA, FIBA and NCAA; 18-inch rim diameter; 72 × 42 in backboard dimensions.',
+      },
+      {
+        title: 'Basketball Backboard Dimensions: Official Size Chart — JoySportStore',
+        url: 'https://joysportstore.com/blogs/news/basketball-backboard-dimensions',
+        description: 'Official dimension table: 72 × 42 in backboard, 18 in rim, 24 × 18 in shooter\u2019s square, 10 ft rim height at all senior levels.',
+      },
+      {
+        title: 'How High Are Regulation Basketball Hoops? — BasketballArmy',
+        url: 'https://basketballarmy.com/how-high-are-regulation-basketball-hoops/',
+        description: 'NBA/NCAA/FIBA comparison table: 10 ft (3.05 m) hoop height, backboard sizes, and adjustable youth standards.',
+      },
+      {
+        title: 'How Tall Is a Basketball Rim in the NBA — BasketballArmy',
+        url: 'https://basketballarmy.com/how-tall-is-a-basketball-rim-in-nba/',
+        description: 'The 10-foot NBA rim as a global standard; backboard bottom edge at 9 feet; rim attached at the 10-foot mark.',
+      },
+      {
+        title: 'The Official Standard of 3.05 Metres — Archysport',
+        url: 'https://www.archysport.com/2026/04/basketball-hoop-height-the-official-standard-of-3-05-meters-and-its-impact-on-fair-play-and-competition/',
+        description: 'FIBA and NBA both mandate 3.05 m; height unchanged since Naismith\u2019s invention of the sport in 1891.',
+      },
+      {
+        title: 'What Is the Standard Size of a Normal Refrigerator? — Fridge.com',
+        url: 'https://fridge.com/blogs/news/what-is-the-standard-size-of-a-normal-refrigerator',
+        description: 'Standard full-size refrigerators stand about 66–70 inches tall; counter-depth and built-in models reach up to 72 inches.',
+      },
+      {
+        title: 'How Tall Is an Average Car? — CarInterior (Alibaba)',
+        url: 'https://carinterior.alibaba.com/question/how-tall-is-an-average-car',
+        description: 'Average midsize sedan height 57–59 in (145–150 cm); compact crossovers 63–67 in; full-size SUVs up to 75 in.',
+      },
+      {
+        title: 'Average Car Dimensions — Extra Space Storage',
+        url: 'https://www.extraspace.com/blog/self-storage/average-car-dimensions/',
+        description: 'Compact sedan height 55–58 in (e.g. Corolla, Civic); mid-size and full-size sedan height ranges.',
+      },
+    ],
+    relatedSlugs: ['human-vs-door-height-comparison', 'tallest-man-world-robert-wadlow', 'what-does-6-feet-look-like', 'human-vs-giraffe-height-comparison'],
+  },
 ];

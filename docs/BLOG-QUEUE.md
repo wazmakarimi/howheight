@@ -26,7 +26,7 @@ HowHeight website itself wherever they help. No thin SEO filler.
 - [x] `how-rare-is-6ft5-height` — How Rare Is 6'5"? (percentile spin-off) — published 2026-10-10
 - [x] `human-vs-giraffe-height-comparison` — Human vs Giraffe (+ dog/cat) Height Comparison (animals) — published 2026-10-10
 - [x] `tallest-man-world-robert-wadlow` — Robert Wadlow: The Tallest Man in History Visualized (scale) — published 2026-10-11
-- [ ] `basketball-hoop-height-vs-human` — Everyday Objects series: basketball hoop, fridge, car vs human (objects)
+- [x] `basketball-hoop-height-vs-human` — Everyday Objects series: basketball hoop, fridge, car vs human (objects) — published 2026-10-11 (no screenshots: browser export stalled, published text-only)
 - [ ] `average-height-teenage-boy-by-age` — Average Height of a Teenage Boy by Age (guides)
 - [ ] `what-is-considered-tall-for-a-woman` — What Is Considered Tall for a Woman? (guides)
 - [ ] `demon-slayer-character-heights` — Demon Slayer Character Heights (anime sequel)
