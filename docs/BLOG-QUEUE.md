@@ -42,3 +42,21 @@ HowHeight website itself wherever they help. No thin SEO filler.
 - `human-vs-horse-height-comparison` (animals)
 - `human-vs-door-height-comparison` (objects)
 - `what-does-6-feet-look-like` (scale)
+
+## Ranked queue (from SEO keyword research, 2026-10-12)
+
+Research notes with verified facts, sources, and decode-verified screenshot share URLs:
+`~/workspace/research_notes/<slug>-20261012.md`. Ranked by demand signal ×
+competition weakness × screenshot feasibility (site tool caps at 50 m — see the
+Eiffel Tower note for the 1:10-scale approach).
+
+- [ ] #21 `how-to-measure-your-height-accurately` — How to Measure Your Height Accurately at Home (No Stadiometer Needed) (guides)
+- [ ] #22 `jujutsu-kaisen-character-heights` — Jujutsu Kaisen Character Heights Compared: Gojo, Yuji, Sukuna & More Visualized (anime)
+- [ ] #23 `average-height-teenage-girl-by-age` — Average Height of a Teenage Girl by Age (13–18): Growth Chart Data (guides)
+- [ ] #24 `shortest-celebrities-height-comparison` — The Shortest Celebrities: Danny DeVito, Kevin Hart, Simone Biles & More Ranked (celebrities)
+- [ ] #25 `human-vs-elephant-height-comparison` — Human vs Elephant Height Comparison: How Big Is an Elephant Really? (animals)
+- [ ] #26 `average-soccer-player-height-by-position` — Average Soccer Player Height by Position: Goalkeepers to Strikers (sports)
+- [ ] #27 `formula-1-driver-heights` — How Tall Are F1 Drivers? Every 2026 Driver's Height Compared (sports)
+- [ ] #28 `human-vs-polar-bear-height-comparison` — Human vs Polar Bear Height Comparison: Standing Face to Face (animals)
+- [ ] #29 `tallest-female-celebrities-height-comparison` — The Tallest Female Celebrities: Ranked & Visualized (celebrities)
+- [ ] #30 `eiffel-tower-height-vs-human` — Eiffel Tower Height vs Human: Just How Big Is It Really? (objects)
