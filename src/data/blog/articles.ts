@@ -3808,6 +3808,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'The zone just below it \u2014 5\u20195\u2033 to 5\u20196\u2033 \u2014 is where opinions split. At 5\u20195\u2033 (~70th percentile) you are clearly above average but nobody would call you tall; at 5\u20196\u2033 (~84th percentile) you are noticeably above average and people may start describing you that way, especially if you are taller than most women in your family or social circle. Think of 5\u20196\u2033 as \u201Ctall-ish\u201D and 5\u20197\u2033 as where the consensus answer begins.',
           'One more thing worth internalising early: \u201Ctall\u201D is a relative word, not a medical diagnosis. There is no clinical height at which a doctor declares a woman \u201Ctall\u201D the way there is no line where someone becomes officially \u201Cshort\u201D. Percentiles are the honest way to answer the question because they describe where you actually stand \u2014 literally \u2014 relative to other people. The chart below renders the key benchmarks to scale so you can see what the numbers mean in space, not just on paper.',
         ],
+        image: {
+          src: '/assets/blog/what-is-considered-tall-for-a-woman/percentile-ladder.png',
+          alt: 'Height comparison chart showing an average woman at 162 cm, a woman at 170 cm (5 ft 7 in) and a woman at 178 cm (5 ft 10 in) rendered to scale',
+          caption: 'The percentile ladder, rendered to scale: the average woman (162 cm), the 90th percentile (170 cm / 5\u20197\u2033) and the 99th percentile (178 cm / 5\u201910\u2033).',
+        },
         callout: {
           title: 'The consensus answer',
           text: '5\u20197\u2033+ (170 cm+) \u2248 90th percentile = \u201Ctall\u201D. 5\u20196\u2033 \u2248 84th percentile = \u201Ctall-ish\u201D. 5\u20195\u2033 and under is above average but not tall.',
@@ -3853,6 +3858,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'This is where the social experience of being a tall woman mostly lives: not in being an outlier among women, but in crossing the invisible line into the male height range. A 5\u201910\u2033 woman is taller than the average man outright. She is not \u201Ca little tall\u201D; she is taller than roughly 60\u201365% of all adults. That is a genuinely unusual experience in everyday life \u2014 and it is why so many discussions about women\u2019s height end up being discussions about height relative to men, not relative to women.',
           'The chart below renders it directly: the average woman (162 cm), the average man (176 cm), and a tall woman at 178 cm (5\u201910\u2033) standing side by side, to scale. She stands eye to eye with the average man \u2014 and looks down on the average woman by a full head\u2019s difference.',
         ],
+        image: {
+          src: '/assets/blog/what-is-considered-tall-for-a-woman/woman-vs-man.png',
+          alt: 'Height comparison chart showing an average woman at 162 cm, an average man at 176 cm, and a tall woman at 178 cm (5 ft 10 in) rendered to scale',
+          caption: 'A tall woman at 178 cm (5\u201910\u2033) stands eye to eye with the average man \u2014 and 16 cm above the average woman.',
+        },
         callout: {
           title: 'The crossing point',
           text: 'At ~5\u20197\u2033 a woman enters the middle of the male height range; at 5\u201910\u2033 she is taller than the average man outright. That is the real social dividing line.',
