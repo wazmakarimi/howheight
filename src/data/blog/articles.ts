@@ -3751,4 +3751,209 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-5ft10-look-like', 'average-height-by-country-tallest-nations', 'how-rare-is-6ft5-height'],
   },
+  {
+    slug: 'what-is-considered-tall-for-a-woman',
+    title: 'What Is Considered Tall for a Woman? Height Percentiles, Explained',
+    h1: 'What Is Considered Tall for a Woman?',
+    description:
+      'Is 5\u20197\u2033 tall for a woman? In the US, the average adult woman is 5\u20193.5\u2033 (161.3 cm) \u2014 so 5\u20197\u2033+ (170 cm) lands at the 90th percentile and counts as tall. Full percentile table, how it varies by country, and what it looks like, visualised to scale.',
+    category: 'guides',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-12T09:00:00Z',
+    updatedDate: '2026-10-12T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'In the United States, a woman is generally considered tall from 5\u20197\u2033 (170 cm) upward \u2014 about the 90th percentile, meaning 9 in 10 adult women are shorter. The average US woman aged 20+ stands 63.5 in (161.3 cm) per CDC measured data. At 5\u20196\u2033 (168 cm) you are around the 84th percentile (\u201Ctall-ish\u201D), at 5\u20198\u2033 (173 cm) the 95th percentile (noticeably tall), and at 5\u201910\u2033 (178 cm) the 99th percentile \u2014 roughly 1 in 100 women.',
+      keyTakeaway:
+        'There is no single clinical cutoff for \u201Ctall\u201D \u2014 percentiles are the honest answer. A useful rule of thumb: roughly 3 inches above your country\u2019s female average is where \u201Ctall\u201D begins. In the US that is ~5\u20196.5\u2033\u20135\u20197\u2033; in the Netherlands, where women average ~170 cm, 5\u20197\u2033 is just average.',
+      dataPoints: [
+        { label: 'Average US woman (20+)', value: '63.5 in (161.3 cm) \u2014 CDC, measured' },
+        { label: '"Tall" threshold', value: '5\u20197\u2033+ (170 cm+) \u2014 ~90th percentile' },
+        { label: '5\u20198\u2033 (173 cm)', value: '~95th percentile \u2014 top 1 in 20 women' },
+        { label: '5\u201910\u2033 (178 cm)', value: '~99th percentile \u2014 top 1 in 100 women' },
+        { label: 'Average US man (20+)', value: '68.9 in (175 cm) \u2014 CDC' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'female', customHeightCm: 162, label: 'Average woman (162 cm)' },
+      { category: 'human', id: 'female', customHeightCm: 170, label: 'Woman, 170 cm (5 ft 7 in)' },
+      { category: 'human', id: 'female', customHeightCm: 173, label: 'Woman, 173 cm (5 ft 8 in)' },
+      { category: 'human', id: 'female', customHeightCm: 178, label: 'Woman, 178 cm (5 ft 10 in)' },
+    ],
+    toolActionTitle: 'Plot your height against these benchmarks',
+    toolActionDescription:
+      'The visualiser above is preloaded with the average woman (162 cm) plus the 90th, 95th and 99th-percentile marks. Add your own height to see exactly where you land.',
+    comparisonTable: {
+      caption: 'Approximate height percentiles for adult US women aged 20+ (NHANES-based data; sources vary slightly between survey waves)',
+      headers: ['Height', 'Approximate percentile', 'How it reads'],
+      rows: [
+        ['5\u20193\u2033 (160 cm)', '~45th', 'Slightly below average'],
+        ['5\u20194\u2033 (163 cm)', '~55th\u201360th', 'Average to slightly above'],
+        ['5\u20195\u2033 (165 cm)', '~70th', 'Above average, not tall'],
+        ['5\u20196\u2033 (168 cm)', '~84th', 'Tall-ish \u2014 noticeably above average'],
+        ['5\u20197\u2033 (170 cm)', '~90th', 'Tall \u2014 taller than 9 in 10 women'],
+        ['5\u20198\u2033 (173 cm)', '~95th', 'Noticeably tall \u2014 top 1 in 20'],
+        ['5\u20199\u2033 (175 cm)', '~97th\u201398th', 'Very tall'],
+        ['5\u201910\u2033 (178 cm)', '~99th', 'Exceptionally tall \u2014 roughly 1 in 100'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-short-answer',
+        heading: 'The Short Answer: 5\u20197\u2033 and Up Is Tall for a Woman',
+        subheading: 'Nine in ten adult women in the US are shorter than 5\u20197\u2033 \u2014 that is what \u201Ctall\u201D means in practice.',
+        paragraphs: [
+          'If you want one number, here it is: in the United States, a woman is generally considered tall from 5\u20197\u2033 (170 cm) upward. The reasoning is statistical, not aesthetic. The average US woman aged 20 and over stands 63.5 inches (161.3 cm) \u2014 a measured figure from the CDC\u2019s National Health and Nutrition Examination Survey, taken by trained examiners with shoes off, so it is about as solid as height data gets. At 5\u20197\u2033 you stand roughly 8.5 cm above that average, which places you at about the 90th percentile. Nine in ten adult women are shorter than you. That is, for all practical purposes, tall.',
+          'The zone just below it \u2014 5\u20195\u2033 to 5\u20196\u2033 \u2014 is where opinions split. At 5\u20195\u2033 (~70th percentile) you are clearly above average but nobody would call you tall; at 5\u20196\u2033 (~84th percentile) you are noticeably above average and people may start describing you that way, especially if you are taller than most women in your family or social circle. Think of 5\u20196\u2033 as \u201Ctall-ish\u201D and 5\u20197\u2033 as where the consensus answer begins.',
+          'One more thing worth internalising early: \u201Ctall\u201D is a relative word, not a medical diagnosis. There is no clinical height at which a doctor declares a woman \u201Ctall\u201D the way there is no line where someone becomes officially \u201Cshort\u201D. Percentiles are the honest way to answer the question because they describe where you actually stand \u2014 literally \u2014 relative to other people. The chart below renders the key benchmarks to scale so you can see what the numbers mean in space, not just on paper.',
+        ],
+        callout: {
+          title: 'The consensus answer',
+          text: '5\u20197\u2033+ (170 cm+) \u2248 90th percentile = \u201Ctall\u201D. 5\u20196\u2033 \u2248 84th percentile = \u201Ctall-ish\u201D. 5\u20195\u2033 and under is above average but not tall.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'height-percentiles-for-women',
+        heading: 'Height Percentiles for Women, Explained',
+        subheading: 'The full ladder from average to the top 1% \u2014 and why the middle of the curve matters less than you think.',
+        paragraphs: [
+          'A percentile tells you the share of a population you are taller than. If you are at the 90th percentile, 90% of women in the reference population are shorter than you. The reference population here is adult US women aged 20 and over, measured in the CDC\u2019s 2021\u20132023 survey round. That gives the ladder in the table above: 5\u20194\u2033 sits around the 55th\u201360th percentile (slightly above average), 5\u20197\u2033 at about the 90th, 5\u20198\u2033 at about the 95th, and 5\u201910\u2033 at about the 99th.',
+          'Notice how unevenly the ladder is spaced. Between the 50th and the 84th percentiles \u2014 the whole span from average to \u201Ctall-ish\u201D \u2014 there are only about 6\u20137 cm. Women\u2019s heights cluster tightly around the middle: the standard deviation in the CDC data is roughly 2.5 inches (~6.4 cm), so most adult women fall within about 5 inches of the average. That tightness is why a couple of centimetres feels like so much socially: 5\u20196\u2033 and 5\u20198\u2033 differ by only 5 cm, yet one is \u201Cabove average\u201D and the other is \u201Ctop five percent\u201D. Small absolute differences, enormous percentile differences.',
+          'Two caveats keep this honest. First, percentiles shift slightly between NHANES survey waves and between sources, so every figure here is approximate \u2014 treat the ladder as accurate within a centimetre or so, not as scripture. Second, the reference population matters enormously, which is what the next section is about. A percentile is only ever a statement about a specific group of people; change the group and the same height tells a different story.',
+        ],
+        callout: {
+          title: 'Why centimetres feel bigger than they are',
+          text: 'Because women\u2019s heights cluster so tightly (standard deviation ~6.4 cm), the jump from the 84th to the 95th percentile is only about 5 cm \u2014 yet socially it is the jump from \u201Cabove average\u201D to \u201Cnoticeably tall\u201D.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'why-tallness-is-relative',
+        heading: 'Why \u201CTall\u201D Depends on Where You Live',
+        subheading: 'In Amsterdam, 5\u20197\u2033 is just average \u2014 context is the whole story.',
+        paragraphs: [
+          'Height is always judged against the local average, and national averages for women span a striking range \u2014 from around 152 cm in the shortest countries to about 170 cm in the tallest. The Netherlands still holds the title of tallest nation: Dutch women average roughly 170 cm (5\u20197\u2033), essentially the same height that marks the 90th percentile in the US. A woman who towers over the room in Manila walks around Amsterdam at exactly average height.',
+          'A useful rule of thumb used across the sources for this article: \u201Ctall\u201D begins around 3 inches (7\u20138 cm) above your country\u2019s female average. For the US, with a 161.3 cm average, that gives ~5\u20196.5\u2033\u20135\u20197\u2033 \u2014 exactly the consensus threshold. For the UK, where women average close to 164 cm, the threshold lands around 5\u20198\u2033. For the Netherlands, it lands around 5\u201910\u2033. The formula is the same everywhere; only the starting point moves.',
+          'Age and ancestry shift the local picture further. Within the US, average height varies across ethnic groups, and older cohorts average slightly shorter than younger ones \u2014 partly because each generation has been a little taller, and partly because women lose height with age (more on that below). So even the \u201Cnational average\u201D is a blend. The practical takeaway: when someone asks whether a height is tall, the only fair follow-up is \u201Ctall for where, and for whom?\u201D',
+        ],
+        callout: {
+          title: 'The 3-inch rule',
+          text: 'Roughly 3 inches (7\u20138 cm) above the national female average is where \u201Ctall\u201D begins \u2014 in the US that is ~5\u20197\u2033, in the Netherlands ~5\u201910\u2033.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'what-57-actually-looks-like',
+        heading: 'What 5\u20197\u2033 Actually Looks Like Next to Everyone Else',
+        subheading: 'A 5\u20197\u2033 woman stands eye to eye with the average man \u2014 here is the proof, to scale.',
+        paragraphs: [
+          'Numbers on a percentile table are abstract; what they look like in a room is the thing people actually feel. The average US man aged 20+ stands 68.9 inches (175 cm) per the same CDC survey \u2014 so a 5\u20197\u2033 (170 cm) woman is only about 5 cm shorter than the average man, and a 5\u20198\u2033 woman is within 2 cm of him. In any mixed crowd, a tall woman will be taller than most of the women and level with \u2014 or above \u2014 a large share of the men.',
+          'This is where the social experience of being a tall woman mostly lives: not in being an outlier among women, but in crossing the invisible line into the male height range. A 5\u201910\u2033 woman is taller than the average man outright. She is not \u201Ca little tall\u201D; she is taller than roughly 60\u201365% of all adults. That is a genuinely unusual experience in everyday life \u2014 and it is why so many discussions about women\u2019s height end up being discussions about height relative to men, not relative to women.',
+          'The chart below renders it directly: the average woman (162 cm), the average man (176 cm), and a tall woman at 178 cm (5\u201910\u2033) standing side by side, to scale. She stands eye to eye with the average man \u2014 and looks down on the average woman by a full head\u2019s difference.',
+        ],
+        callout: {
+          title: 'The crossing point',
+          text: 'At ~5\u20197\u2033 a woman enters the middle of the male height range; at 5\u201910\u2033 she is taller than the average man outright. That is the real social dividing line.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'culture-and-practical-realities',
+        heading: 'Culture, Modelling, and the Practical Realities of Being Tall',
+        subheading: 'From the 5\u20199\u2033 model benchmark to trousers that are never quite long enough.',
+        paragraphs: [
+          'One number that comes up constantly is 5\u20199\u2033 \u2014 the standard minimum for female fashion models (agencies typically ask for 5\u20199\u2033 to 6\u20190\u2033). It is important to frame this for what it is: a cultural convention, not a clinical one. The modelling world selects for height because clothes drape differently on a long frame and because uniformity across a runway line matters to designers \u2014 not because 5\u20199\u2033 is where some biological threshold lies. Roughly 2\u20133% of women reach 5\u20199\u2033+, so the industry is drawing from the top sliver of the curve by design.',
+          'The lived experience of being a tall woman tends to be a mix of advantages and annoyances rather than either extreme. The advantages are real and well documented: height correlates with advantages in sports like basketball, volleyball and rowing, and socially it reads as presence \u2014 tall women are disproportionately represented in leadership and on stage, and surveys consistently find height associated with perceived authority. The annoyances are equally real: standard women\u2019s clothing is cut for the middle of the curve, so trousers run short, sleeves stop early, and heels add another few centimetres to a height you may already be self-conscious about.',
+          'Then there is the timeline. Most girls reach their final adult height by 14\u201316, as the growth plates fuse roughly two to three years after their first period \u2014 about two years earlier than boys, whose plates stay open longer. And height is not a lifetime constant even for adults: women typically lose 1\u20132 inches over the decades after 40 as spinal discs compress, and even day to day you are roughly a centimetre taller in the morning than in the evening. If you measured 5\u20197.5\u2033 at breakfast and 5\u20196.75\u2033 at night, both readings are real \u2014 which is another reason to treat any single threshold for \u201Ctall\u201D with a little humility.',
+        ],
+        callout: {
+          title: '5\u20199\u2033 is cultural, not clinical',
+          text: 'Fashion modelling draws from roughly the top 2\u20133% of women by height. It is an industry convention about how clothes look on a runway \u2014 not a medical definition of \u201Ctall\u201D.',
+          type: 'info',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Is 5\u20196\u2033 tall for a woman?',
+        answer:
+          'Yes \u2014 5\u20196\u2033 (168 cm) is around the 84th percentile for adult US women, meaning roughly 5 in 6 women are shorter. It reads as \u201Ctall-ish\u201D: noticeably above average, and most people would describe a 5\u20196\u2033 woman as tall, even though she sits a notch below the 90th-percentile consensus threshold.',
+      },
+      {
+        question: 'Is 5\u20197\u2033 tall for a woman?',
+        answer:
+          'Yes \u2014 5\u20197\u2033 (170 cm) is about the 90th percentile for adult US women, so 9 in 10 women are shorter. This is the widely accepted line where \u201Ctall\u201D begins. You are only about 5 cm shorter than the average US man (68.9 in / 175 cm), which is why 5\u20197\u2033 is often the height where a woman starts being taller than many of the men around her.',
+      },
+      {
+        question: 'Is 5\u20195\u2033 tall for a woman?',
+        answer:
+          'No \u2014 5\u20195\u2033 (165 cm) is around the 70th percentile, clearly above average but not tall. A 5\u20195\u2033 woman is taller than most women she meets but still within the middle of the normal range, and only a few centimetres above the 161.3 cm average.',
+      },
+      {
+        question: 'Is 5\u20198\u2033 or 5\u201910\u2033 tall for a woman?',
+        answer:
+          'Very. At 5\u20198\u2033 (173 cm) you are at about the 95th percentile \u2014 taller than 19 in 20 women, and within 2 cm of the average man. At 5\u201910\u2033 (178 cm) you are around the 99th percentile, roughly 1 in 100 women, and taller than the average man outright.',
+      },
+      {
+        question: 'What is considered tall for a woman in the UK or Europe?',
+        answer:
+          'It depends on the country, because the reference average moves. A practical rule: about 3 inches (7\u20138 cm) above the national female average. In the UK that means roughly 5\u20198\u2033+, while in the Netherlands \u2014 where women average about 170 cm \u2014 5\u20197\u2033 is just average and \u201Ctall\u201D starts around 5\u201910\u2033.',
+      },
+      {
+        question: 'Can a woman still grow taller after 18?',
+        answer:
+          'Almost never. Most girls reach their final adult height by 14\u201316, as the growth plates fuse roughly two to three years after the first period \u2014 about two years earlier than in boys. Noticeable height gain after 18 is unusual; if it happens, it is worth mentioning to a doctor.',
+      },
+    ],
+    sources: [
+      {
+        title: 'CDC FastStats \u2014 Body Measurements',
+        url: 'https://www.cdc.gov/nchs/fastats/body-measurements.htm',
+        description: 'Measured average height for US adults 20+: women 63.5 in (161.3 cm), men 68.9 in (175 cm) \u2014 the benchmark figures for the article\u2019s average.',
+      },
+      {
+        title: 'Anthropometric Reference Data, US 2015\u20132016 (CDC NHSR 122)',
+        url: 'https://www.cdc.gov/nchs/data/nhsr/nhsr122-508.pdf',
+        description: 'CDC National Health Statistics Reports with age-adjusted mean heights and percentile distributions used to anchor the percentile table.',
+      },
+      {
+        title: 'Height percentile calculator for US adults \u2014 Receiving Helpdesk',
+        url: 'https://receivinghelpdesk.com/ask/what-is-my-percentile-for-height',
+        description: 'Height percentile table placing the 90th percentile for US women at ~5\u20197\u2033 (5\u20196.97\u2033), cross-checked against the CDC figures.',
+      },
+      {
+        title: '95th percentile female height (ANSUR/NHANES) \u2014 Handlebar Online',
+        url: 'http://handlebar-online.com/guidelines/how-tall-will-a-girl-in-the-90th-percentile-be/',
+        description: 'Notes the 95th percentile for adult US women at 5\u20198\u2033 (173 cm), matching CDC NHANES-based estimates.',
+      },
+      {
+        title: 'What Height Percentile Is Considered Tall? \u2014 StudyCountry',
+        url: 'https://www.studycountry.com/wiki/what-percentile-is-considered-tall',
+        description: 'General consensus that \u201Ctall\u201D begins around the 90th percentile, with the 97th+ as medically tall stature; women\u2019s examples at 5\u20199\u2033.',
+      },
+      {
+        title: 'Average Female Height in the US \u2014 Pantry Petal',
+        url: 'https://pantrypetal.com/average-female-height-us/',
+        description: 'CDC-citing summary: women 5\u201910\u2033+ at the 99th percentile; average US female height ~5\u20194\u2033; Netherlands women\u2019s average ~5\u20197\u2033.',
+      },
+      {
+        title: 'Is 5\u20197 Considered Tall for a Girl? \u2014 IG Models',
+        url: 'https://igmodels.co/is-57-considered-tall-for-a-girl-6/',
+        description: 'Breakdown of the 5\u20197\u2033 boundary debate, female fashion-model height standards (5\u20199\u2033\u20136\u20190\u2033) and the agency range of 5\u20198\u2033\u20135\u201911\u2033.',
+      },
+      {
+        title: 'Average Height for Women: Charts, Ranges & CDC Data \u2014 Healthcare on Time',
+        url: 'https://www.healthcareontime.com/health-tips/average-height-for-women-charts-ranges-and-cdc-data/',
+        description: 'CDC NHANES figures with percentile ranges (5\u20197\u2033 ~90th, 5\u20198\u2033 ~95th), growth-plate timing in girls, and height loss with age.',
+      },
+      {
+        title: 'What Is the Average Height for Women? \u2014 Supplement Choices',
+        url: 'https://supplementchoices.com/what-is-the-average-height-for-women/',
+        description: 'Second source for the CDC 63.5 in average and the percentile framing (5\u20194\u2033 ~55th\u201360th; 5\u20197\u2033+ as \u201Ctall\u201D).',
+      },
+    ],
+    relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-5ft10-look-like', 'average-height-by-country-tallest-nations', 'how-rare-is-6ft5-height'],
+  },
 ];
