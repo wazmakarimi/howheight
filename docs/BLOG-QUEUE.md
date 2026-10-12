@@ -27,7 +27,7 @@ HowHeight website itself wherever they help. No thin SEO filler.
 - [x] `human-vs-giraffe-height-comparison` — Human vs Giraffe (+ dog/cat) Height Comparison (animals) — published 2026-10-10
 - [x] `tallest-man-world-robert-wadlow` — Robert Wadlow: The Tallest Man in History Visualized (scale) — published 2026-10-11
 - [x] `basketball-hoop-height-vs-human` — Everyday Objects series: basketball hoop, fridge, car vs human (objects) — published 2026-10-11 (with 2 site-rendered screenshots)
-- [ ] `average-height-teenage-boy-by-age` — Average Height of a Teenage Boy by Age (guides)
+- [x] `average-height-teenage-boy-by-age` — Average Height of a Teenage Boy by Age (guides) — published 2026-10-12 (with 2 site-rendered screenshots)
 - [ ] `what-is-considered-tall-for-a-woman` — What Is Considered Tall for a Woman? (guides)
 - [ ] `demon-slayer-character-heights` — Demon Slayer Character Heights (anime sequel)
 - [ ] `shaq-vs-average-man-height` — Shaq vs Average Man: Tallest NBA Players Ever (sports)

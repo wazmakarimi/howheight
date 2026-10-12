@@ -3531,4 +3531,224 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['human-vs-door-height-comparison', 'tallest-man-world-robert-wadlow', 'what-does-6-feet-look-like', 'human-vs-giraffe-height-comparison'],
   },
+  {
+    slug: 'average-height-teenage-boy-by-age',
+    title: 'Average Height of a Teenage Boy by Age: 13 to 18, Charted & Visualised',
+    h1: 'Average Height of a Teenage Boy by Age (13\u201318)',
+    description:
+      'How tall is the average teenage boy at 13, 14, 15, 16, 17 and 18? CDC growth-chart averages in cm and feet/inches, normal ranges, growth-spurt timing and when boys stop growing \u2014 all visualised to scale.',
+    category: 'guides',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-12T09:00:00Z',
+    updatedDate: '2026-10-12T09:00:00Z',
+    readingTimeMinutes: 10,
+    quickAnswer: {
+      summary:
+        'The average US boy stands 156.2 cm (5\u2019 1\u2033) at 13, 163.8 cm (5\u2019 4.5\u2033) at 14, 170.1 cm (5\u2019 7\u2033) at 15, 173.4 cm (5\u2019 8\u2033) at 16, 175.2 cm (5\u2019 9\u2033) at 17 and 176.1 cm (5\u2019 9.5\u2033) at 18 \u2014 50th-percentile figures from the CDC growth charts. Growth is fastest between 13 and 15 (around 9\u201312 cm a year at the peak), then slows sharply, and most boys reach near-final height between 16 and 18.',
+      keyTakeaway:
+        'At 14, the normal range spans nearly a full foot \u2014 from 4\u2019 11\u2033 to 5\u2019 10\u2033 \u2014 so being above or below the average at 13 or 14 says almost nothing about final adult height. What matters is staying on your own percentile curve over time.',
+      dataPoints: [
+        { label: 'Average height at 13', value: '156.2 cm (5\u2019 1\u2033) \u2014 CDC 50th percentile' },
+        { label: 'Average height at 15', value: '170.1 cm (5\u2019 7\u2033) \u2014 biggest gains happen 13\u201315' },
+        { label: 'Average height at 18', value: '176.1 cm (5\u2019 9.5\u2033) \u2014 near-final adult height' },
+        { label: 'Normal range at 14', value: '4\u2019 11\u2033 \u2013 5\u2019 10\u2033 (5th\u201395th percentile)' },
+        { label: 'Peak growth spurt', value: 'Around age 13.5, at roughly 9\u201312 cm per year' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 156, label: 'Boy, age 13' },
+      { category: 'human', id: 'male', customHeightCm: 164, label: 'Boy, age 14' },
+      { category: 'human', id: 'male', customHeightCm: 170, label: 'Boy, age 15' },
+      { category: 'human', id: 'male', customHeightCm: 173, label: 'Boy, age 16' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Boy, age 17' },
+      { category: 'human', id: 'male', customHeightCm: 176, label: 'Boy, age 18' },
+    ],
+    toolActionTitle: 'Plot your height against the average teen',
+    toolActionDescription:
+      'The visualiser above is preloaded with average boys aged 13 to 18, from 156 cm up to 176 cm. Add your own height and see exactly where you sit on the curve.',
+    comparisonTable: {
+      caption: 'Average (50th-percentile) height and normal range for US boys by age, per CDC growth charts',
+      headers: ['Age', 'Average height', 'Normal range (5th\u201395th percentile)'],
+      rows: [
+        ['13', '156.2 cm (5\u2019 1\u2033)', '4\u2019 8\u2033 \u2013 5\u2019 7\u2033'],
+        ['14', '163.8 cm (5\u2019 4.5\u2033)', '4\u2019 11\u2033 \u2013 5\u2019 10\u2033'],
+        ['15', '170.1 cm (5\u2019 7\u2033)', '5\u2019 2\u2033 \u2013 6\u2019 0\u2033'],
+        ['16', '173.4 cm (5\u2019 8\u2033)', '5\u2019 4\u2033 \u2013 6\u2019 1\u2033'],
+        ['17', '175.2 cm (5\u2019 9\u2033)', '5\u2019 5\u2033 \u2013 6\u2019 2\u2033'],
+        ['18', '176.1 cm (5\u2019 9.5\u2033)', '5\u2019 5\u2033 \u2013 6\u2019 2\u2033'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-headline-numbers',
+        heading: 'The Headline Numbers: Average Height, Age 13 to 18',
+        subheading: 'A decade of growth compressed into six years \u2014 and almost all of it arrives early.',
+        paragraphs: [
+          'The numbers themselves are refreshingly uncomplicated. According to the CDC growth charts \u2014 the percentile tables paediatricians use in the United States \u2014 the average (50th-percentile) boy stands 156.2 cm (5\u2019 1\u2033) at 13, 163.8 cm (5\u2019 4.5\u2033) at 14, 170.1 cm (5\u2019 7\u2033) at 15, 173.4 cm (5\u2019 8\u2033) at 16, 175.2 cm (5\u2019 9\u2033) at 17 and 176.1 cm (5\u2019 9.5\u2033) at 18. Put simply, the average boy gains about 20 cm \u2014 nearly 8 inches \u2014 between his 13th and 18th birthdays, and most of that arrives before he turns 16.',
+          'Notice how front-loaded the curve is. Between 13 and 15 the average boy grows roughly 14 cm, at the fastest clip of his entire life. Between 15 and 17 he adds only about 5 cm. Between 17 and 18, barely 1 cm. This is the great illusion of the teenage years: the dramatic growth everyone remembers happens in a short, intense window around 13\u201315, and the rest is a long, slow glide to the finish line. If you are 15 and feel like growth has stalled, you are probably not imagining it \u2014 the fastest part is most likely behind you.',
+          'One important caveat before we go further: these are US figures, built from the CDC\u2019s growth-chart reference population. Average teen heights differ around the world \u2014 South Asia, for instance, averages noticeably lower \u2014 so if you are reading from outside the United States, treat these as a reference curve rather than a personal benchmark. For the global picture, see our guide to average height by country. And when you read the chart below, remember that \u201Caverage\u201D means exactly half of boys are shorter at each age: being at or below the line is not a verdict on anything.',
+        ],
+        image: {
+          src: '/assets/blog/average-height-teenage-boy-by-age/teen-vs-door.png',
+          alt: 'Height comparison chart showing a boy aged 14 at 164 cm and a boy aged 16 at 173 cm next to an average adult man at 176 cm and a standard door at 210 cm',
+          caption: 'Average boys at 14 (164 cm) and 16 (173 cm) rendered to scale against an average adult man (176 cm) and a standard door (210 cm) \u2014 the gap to the doorframe shrinks fast.',
+        },
+        callout: {
+          title: 'The headline figures',
+          text: '13 \u2192 156.2 cm (5\u2019 1\u2033) \u00b7 14 \u2192 163.8 cm (5\u2019 4.5\u2033) \u00b7 15 \u2192 170.1 cm (5\u2019 7\u2033) \u00b7 16 \u2192 173.4 cm (5\u2019 8\u2033) \u00b7 17 \u2192 175.2 cm (5\u2019 9\u2033) \u00b7 18 \u2192 176.1 cm (5\u2019 9.5\u2033). CDC 50th-percentile values.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-growth-spurt',
+        heading: 'The Growth Spurt: Fastest Around Age 13\u201314',
+        subheading: 'Peak height velocity is a single, identifiable moment \u2014 and boys hit it hard.',
+        paragraphs: [
+          'Somewhere in the middle of puberty, every boy\u2019s growth rate hits a single fastest point that researchers call peak height velocity, or PHV. In boys it lands around 13.5 years on average \u2014 roughly two years later than in girls \u2014 and it is intense: boys commonly gain 9 to 12 cm (about 3.5 to 4.7 inches) in the year of peak growth. The typical puberty growth window runs from about 12 to 16, with the biggest changes concentrated at 13 to 15.',
+          'Growth does not arrive evenly, either. During peak velocity, the limbs \u2014 arms and legs \u2014 tend to lengthen first, with the spine and torso catching up later. That is why teenage boys so often look noticeably \u201Cleggy\u201D for a stretch, with gangly limbs and a torso that seems a season behind. Shoulder width and muscle mass typically keep building for a year or two after the height spurt itself slows, which is why a boy can look \u201Cdone growing\u201D in height but keep filling out physically well into his later teens.',
+          'Timing, though, is everything, and it varies enormously. Boys whose puberty starts early \u2014 before about 10.2 years \u2014 tend to grow fast and stop sooner; boys who start late (after about 11.8) grow later but for longer. This is why early developers often tower over their classmates at 13 and then get overtaken at 16: the \u201Clate bloomer\u201D, clinically described as constitutional delay of growth and puberty, almost always catches up to his genetic potential in the end. The height of the kid at the front of the class photo at 13 is a very poor predictor of who stands at the back at 18.',
+        ],
+        image: {
+          src: '/assets/blog/average-height-teenage-boy-by-age/growth-curve.png',
+          alt: 'Height comparison chart showing an average boy aged 13 at 156 cm, aged 15 at 170 cm and aged 17 at 175 cm next to an average adult man at 176 cm',
+          caption: 'The catch-up curve, rendered to scale: from 156 cm at 13 to 170 cm at 15 is the steepest climb of the teenage years; by 17 the average boy is nearly adult height.',
+        },
+        callout: {
+          title: 'What peak velocity feels like',
+          text: 'Around 13\u201314, boys often grow fastest when nobody is measuring: new shoes every few months, trousers that are too short within a term, and a standing height that visibly changes between school photos.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'the-normal-range',
+        heading: 'What Counts as Normal: The Wide Middle',
+        subheading: 'At 14, the \u201Cnormal\u201D range is nearly a foot wide \u2014 and that is the point.',
+        paragraphs: [
+          'The most useful column in the table above is not the average but the range. At 14, the 5th\u201395th percentile band \u2014 the heights considered medically normal \u2014 stretches from 4\u2019 11\u2033 to 5\u2019 10\u2033. Read that again: a perfectly normal 14-year-old can be anywhere from just under five feet to nearly six feet. Two healthy 14-year-old boys standing side by side can differ by almost 30 cm, and neither of them is unusual. At 13 the band is 4\u2019 8\u2033 to 5\u2019 7\u2033; by 18 it has narrowed, proportionally, as the late bloomers finish catching up.',
+          'This is why a single measurement against the average is nearly useless for teenagers. Paediatricians do not care much whether a 14-year-old is at the 50th or the 25th percentile \u2014 they care whether he stays roughly on his own curve over time. A boy who tracks the 20th percentile steadily from 10 to 16 is following a perfectly healthy path; a boy who drops from the 75th to the 25th between annual check-ups is the one who prompts a closer look. The trend is the diagnosis; the number is just a data point.',
+          'So when is it worth raising with a doctor? The consistent, low-stress triggers are: falling off your own growth curve, no signs of puberty at all by 14, or growth that seems to have stopped years before your peers\u2019 did. Not \u201CI\u2019m shorter than my best friend.\u201D Friends diverge wildly in timing \u2014 that is the normal state of affairs between 12 and 16 \u2014 and comparing yourself to the early developer in your class is a guaranteed way to feel abnormal about something completely ordinary.',
+        ],
+        callout: {
+          title: 'The rule to remember',
+          text: 'Track your percentile curve over time, not your height against the average on any single day. A steady curve anywhere inside the 5th\u201395th band is healthy growth.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'when-boys-stop-growing',
+        heading: 'When Do Boys Stop Growing?',
+        subheading: 'Most are nearly done by 16\u201318 \u2014 but the finish line has a long tail.',
+        paragraphs: [
+          'For most boys, meaningful height growth winds down between 16 and 18. The mechanism is unglamorous: the growth plates \u2014 thin bands of cartilage near the ends of the long bones where lengthening happens \u2014 gradually fuse under the influence of rising sex hormones, locking in final height. This typically completes in Tanner Stage 5, the final stage of puberty. There are telltale signs the end is near: hands and feet are usually the first body parts to stop (a shoe size that has not budged in a year is a classic marker), and facial hair development accelerating toward daily shaving often correlates with the plates closing.',
+          'But \u201Cmost\u201D leaves a long tail. Boys with constitutional delay of growth \u2014 the late bloomers \u2014 can keep adding height until 19 or 20, and occasionally into the early twenties, because their growth plates stay open longer. Their final heights typically land right on their genetic potential; they just arrive on a delayed schedule. Puberty itself starts anywhere from 9 to 14, so a boy whose spurt starts at 14 finishing his growth at 19 is simply the same process shifted a few years later \u2014 not a problem.',
+          'The practical upshot: at 16, the average boy is within a few centimetres of his adult height; at 18, he is essentially there. A useful way to think about the whole journey is that a 13-year-old boy has roughly 20 cm of height still to gain \u2014 about the length of an adult forearm \u2014 and about three-quarters of it will arrive before he turns 16. The years after that are mostly fine-tuning: millimetres, posture, and the muscle mass that makes the final height look the way adults expect it to.',
+        ],
+        callout: {
+          title: 'Quick reality check',
+          text: 'By age 16, most boys have stopped growing in any meaningful sense, though muscle and shoulder width keep developing. If growth has clearly continued past 19\u201320 for a late bloomer, that is still within the normal range.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'boys-vs-girls',
+        heading: 'Boys vs Girls at the Same Age',
+        subheading: 'At 13, the girls are often taller. It does not stay that way.',
+        paragraphs: [
+          'One of the great quiet surprises of the teenage height curve is that at 13, girls are on average slightly taller than boys \u2014 about 157 cm to the boys\u2019 156.2 cm. Girls reach their own average adult height of roughly 162 cm by 14 or 15, and they get there earlier: female peak height velocity lands around 11.5 years, roughly two years before the boys\u2019. In a typical Year 8 or Year 9 classroom, the tallest students are disproportionately girls, and that is entirely expected.',
+          'The boys then overtake \u2014 and it is no contest. Because male peak velocity comes about two years later, grows slightly faster (9\u201312 cm a year against 7\u20139 for girls), and benefits from a longer runway before the growth plates fuse at 16\u201318, the average adult man ends up several inches taller than the average adult woman. The crossover happens around 14 to 15: by 15, the average boy (170.1 cm) is well past the average girl, and the gap only widens from there.',
+          'So if you are a 13-year-old boy being teased \u2014 or teasing yourself \u2014 about the girls towering over you, know that you are standing at the precise moment in human development where that is most normal. The biology has a schedule, and at 13 the boys simply have not had their turn yet. A year or two later, the chart tells a very different story.',
+        ],
+        callout: {
+          title: 'The crossover in one line',
+          text: 'Girls average ~157 cm at 13 vs boys\u2019 156.2 cm; by 15 the average boy is 170.1 cm, already past the average girl\u2019s adult height of ~162 cm.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'how-to-track-growth',
+        heading: 'How to Measure and Track Growth Properly',
+        subheading: 'One careful measurement beats ten casual ones.',
+        paragraphs: [
+          'Most height anxiety is measurement noise. People are tallest in the morning (up to a centimetre taller than in the evening, thanks to spinal compression through the day), and self-measurements with shoes on, hair included, or a tape held at an angle can easily wander by 2 or 3 cm. Do it properly: barefoot, heels, buttocks, shoulder blades and the back of the head against a wall, looking straight ahead, with a flat object \u2014 a book works \u2014 lowered onto the crown of the head. Mark, measure the mark, and write it down with the date.',
+          'Then stop measuring daily. During puberty, measuring every six months is plenty; between measurements, growth is invisible and watching it will only feed the anxiety. Plot each result on a standard CDC percentile chart \u2014 there are free calculators and printables \u2014 and watch the curve, not the number. As long as the points stay roughly on the same percentile line, growth is proceeding normally, whatever the absolute figure says.',
+          'Finally, the unsexy truth about maximising your height: genetics sets the ceiling, and everything else just helps you reach it. Adequate sleep matters more than most teens expect \u2014 the bulk of daily growth hormone is released during deep, slow-wave sleep. So do protein, calcium and vitamin D in the diet, regular exercise, and avoiding the things that can genuinely stunt growth, like smoking or chronic undernutrition. No stretch, supplement or \u201Cheight exercise\u201D programme can add centimetres the growth plates will not give \u2014 but a well-slept, well-fed teenager will reach every centimetre his genes allow.',
+        ],
+        callout: {
+          title: 'When to see a doctor, not the internet',
+          text: 'Book a check-up if growth has fallen off its curve, puberty shows no signs by 14, or you are worried for any other reason. A bone-age X-ray can estimate remaining growth potential in minutes \u2014 forums cannot.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the average height of a 14-year-old boy?',
+        answer:
+          '163.8 cm (5\u2019 4.5\u2033), the 50th-percentile value on the CDC growth charts. The normal range at 14 is very wide \u2014 from 4\u2019 11\u2033 to 5\u2019 10\u2033 \u2014 so 5\u2019 4.5\u2033 is the midpoint, not a target.',
+      },
+      {
+        question: 'When do boys stop growing in height?',
+        answer:
+          'Most boys reach near-final height between 16 and 18, when their growth plates fuse at the end of puberty (Tanner Stage 5). Late bloomers \u2014 boys with constitutional delay of growth \u2014 can keep growing until 19 or 20 and still reach their full genetic potential.',
+      },
+      {
+        question: 'Is 5\u2019 5\u2033 short for a 15-year-old boy?',
+        answer:
+          'It is below the average of 5\u2019 7\u2033 (170.1 cm), but well inside the normal 5\u2019 2\u2033 \u2013 6\u2019 0\u2033 range for 15-year-olds. At 15, timing matters more than position: a boy who has not yet hit his growth spurt can add several more inches over the following years.',
+      },
+      {
+        question: 'Why is there such a big height difference between 13-year-olds?',
+        answer:
+          'Puberty timing. Some boys start puberty at 10 and hit their growth spurt at 13; others start at 14 and spurt at 16. At 13 the normal range runs from 4\u2019 8\u2033 to 5\u2019 7\u2033, and early developers often tower over classmates who will catch up \u2014 or overtake them \u2014 by 16 or 17.',
+      },
+      {
+        question: 'Are girls taller than boys at 13?',
+        answer:
+          'On average, slightly \u2014 about 157 cm for girls against 156.2 cm for boys at 13. Girls reach their peak growth velocity around 11.5 years, roughly two years earlier. Boys overtake around 14\u201315 and finish several inches taller on average.',
+      },
+      {
+        question: 'I am 14 and shorter than all my friends. Will I still grow?',
+        answer:
+          'Very likely yes. Being shorter than your friends at 14 often just means your growth spurt has not arrived yet \u2014 the normal range at 14 spans 4\u2019 11\u2033 to 5\u2019 10\u2033, and late bloomers routinely keep growing into their late teens. What matters is that you stay on your own growth curve; if you fall off it, or show no puberty signs at all by 14, that is worth mentioning at a check-up.',
+      },
+    ],
+    sources: [
+      {
+        title: 'CDC Growth Charts: United States (Set 1) \u2014 Clinical Growth Charts',
+        url: 'http://stacks.cdc.gov/view/cdc/28022/cdc_28022_DS1.pdf',
+        description: 'The official CDC stature-for-age growth charts for ages 2\u201320, the primary reference behind every percentile figure in this article.',
+      },
+      {
+        title: 'Average Height for Boys by Age: CDC Growth Chart & Breakdown \u2014 HeightCalculator.net',
+        url: 'https://heightcalculator.net/growth-resources/average-height-for-boys-by-age/',
+        description: 'CDC-based table of 50th-percentile heights and 5th\u201395th normal ranges for boys aged 13\u201320, including growth-timing and late-bloomer notes.',
+      },
+      {
+        title: 'Normal Growth \u2014 University Hospitals',
+        url: 'https://www.uhhospitals.org/rainbow/services/pediatric-arthritis-and-rheumatology/conditions-and-treatments/article/pediatric-diseases-and-conditions-v0/normal-growth',
+        description: 'Paediatric height and weight ranges by age from University Hospitals, based on CDC growth charts, used to cross-check the table figures.',
+      },
+      {
+        title: 'Average Height and Weight Ranges by Age \u2014 Kilkaari Child & Family Care (Medium)',
+        url: 'https://medium.com/@kilkaarichildandfamilycare/average-height-and-weight-ranges-by-age-26e3bdc7f91c',
+        description: 'CDC/WHO-based summary of height ranges by age, showing girls averaging taller than boys at 12 with boys overtaking by 14\u201316.',
+      },
+      {
+        title: 'When Do Boys Stop Growing? \u2014 Doctor Taller',
+        url: 'https://doctortaller.com/blogs/science-insight/when-do-boys-stop-growing',
+        description: 'Peak height velocity in boys typically lands at 13\u201315 at 9\u201312 cm/year; growth plates fuse at 16\u201318; the two-year lag behind girls explains most of the adult height gap.',
+      },
+      {
+        title: 'Peak Height Velocity \u2014 KFit Conditioning',
+        url: 'https://www.kfitconditioning.com/blog/peak-height-velocity',
+        description: 'PHV averages 13.5 \u00b1 1.8 years in boys; early developers grow fast and finish sooner, while late bloomers reach comparable final heights.',
+      },
+      {
+        title: 'Growth and Your 13- to 18-Year-Old \u2014 KidsHealth',
+        url: 'https://www.kidshealth.org/ChildrensAlabama/en/parents/growth-6-12.html?WT.ac=p-ra',
+        description: 'Parent guide to puberty growth: boys grow most quickly between 12 and 15, about two years later than girls, and most have stopped growing by 16.',
+      },
+    ],
+    relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-5ft10-look-like', 'average-height-by-country-tallest-nations', 'how-rare-is-6ft5-height'],
+  },
 ];
