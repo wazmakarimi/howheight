@@ -3966,4 +3966,201 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['is-6-feet-rare-height-percentiles', 'what-does-5ft10-look-like', 'average-height-by-country-tallest-nations', 'how-rare-is-6ft5-height'],
   },
+  {
+    slug: 'how-to-measure-your-height-accurately',
+    title: 'How to Measure Your Height Accurately at Home (No Stadiometer Needed)',
+    h1: 'How to Measure Your Height Accurately at Home',
+    description:
+      'Get your true height with a wall, a book and a tape measure: the exact clinic-style protocol, why morning measurements read taller, the head-position detail everyone gets wrong, how to measure alone, and what a stadiometer does differently. A careful home setup lands within a centimetre of a clinical reading.',
+    category: 'guides',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-13T09:00:00Z',
+    updatedDate: '2026-10-13T09:00:00Z',
+    readingTimeMinutes: 10,
+    quickAnswer: {
+      summary:
+        'To measure your height accurately at home, stand barefoot on a hard, flat floor with your heels, buttocks, shoulders and head against a flat wall. Stand straight with feet flat, look straight ahead with your line of sight level, and lower a flat, rigid object \u2014 a book or ruler \u2014 at a right angle to the wall until it rests firmly on the crown of your head. Mark the wall where it meets your head, then measure from the floor to the mark with a rigid metal tape, recording to the nearest 0.1 cm (1/8 in). Measure in the morning, repeat twice, and use the same spot and method every time.',
+      keyTakeaway:
+        'Technique matters more than tools: a careful wall-and-book measurement lands within about a centimetre of a clinical reading. And always compare like with like \u2014 you are roughly 0.5\u20131 cm taller in the morning than in the evening, so measure at the same time of day.',
+      dataPoints: [
+        { label: 'Morning vs evening', value: 'About 0.5\u20131 cm taller in the morning (peer-reviewed studies: 0.6\u20130.8 cm)' },
+        { label: 'Clinical gold standard', value: 'Wall-mounted stadiometer with sliding headpiece' },
+        { label: 'Home accuracy, done carefully', value: 'Within ~1 cm of a clinical reading' },
+        { label: 'Record to', value: 'Nearest 0.1 cm (1 mm) or 1/8 in' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 176, label: 'You, morning (176 cm)' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'You, evening (175 cm)' },
+      { category: 'object', id: 'door', customHeightCm: 210, label: 'Standard door (210 cm)' },
+    ],
+    toolActionTitle: 'See what a centimetre really looks like',
+    toolActionDescription:
+      'The visualiser above is preloaded with a morning height (176 cm), an evening height (175 cm) and a standard door. Enter your own measured height to see exactly where you stand \u2014 literally.',
+    comparisonTable: {
+      caption: 'What each measuring mistake typically costs \u2014 and why the protocol exists',
+      headers: ['Mistake', 'Why it skews the reading', 'Typical size of the error'],
+      rows: [
+        ['Measuring at different times of day', 'Spinal discs compress as the day goes on and rehydrate overnight', '~0.5\u20131 cm between morning and evening (peer-reviewed studies: 0.6\u20130.8 cm)'],
+        ['Slouching or tilting the head', 'Any bend or tilt shortens the line from crown to floor', 'Up to ~2.5 cm (about an inch) off'],
+        ['Shoes, hats or hair ornaments', 'The headpiece lands above your true crown', 'Several centimetres too tall, depending on the item'],
+        ['Soft carpet underfoot', 'Heels sink and the base of the measurement moves', 'Readings drift between attempts'],
+        ['Flexible sewing tape', 'It stretches, sags and skews instead of staying true', '~0.5\u20131 cm \u2014 use a rigid metal tape'],
+        ['Rushing a solo measurement', 'The headpiece tilts and the wall mark lands high', 'Home attempts can vary by up to ~1 cm \u2014 measure twice'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-clinic-protocol-at-home',
+        heading: 'The Exact Protocol, Step by Step',
+        subheading: 'Clinics follow this sequence for a reason \u2014 every step removes one way to be wrong.',
+        paragraphs: [
+          'Find a flat stretch of floor \u2014 no carpet if you can avoid it \u2014 and a flat wall with nothing in the way at the bottom. Take off your shoes (and thick socks, if you want to be thorough), remove anything from your head that could interfere \u2014 hats, headbands, clips, tight plaits \u2014 and take off bulky clothing so you can see and feel your posture. You need three tools: something flat and rigid to rest on your head (a hardback book or a ruler), a pencil, and a rigid tape measure. Metal is best, because flexible sewing tapes stretch and sag, and a stretched tape is a lying tape.',
+          'Stand with your back to the wall, feet flat on the floor and heels touching the spot where the floor meets the wall. Stand up straight: legs straight, shoulders level, and as much of you as your body shape allows touching the wall \u2014 head, shoulders, buttocks and heels. Clinicians call these the four contact points, and they are the single biggest thing separating a real measurement from a guess, because they stop you leaning or shifting your weight without noticing. Look straight ahead, chin level, with your line of sight parallel to the floor \u2014 this puts your head in the clinical position (more on that below).',
+          'Now lower your flat headpiece until it rests firmly on the crown of your head, keeping it at a right angle to the wall \u2014 it must touch your head and the wall at the same time. If someone is helping you, their eyes should be level with the headpiece when they mark the wall, so there is no parallax; the mark goes where the underside of the headpiece meets the top of your head. Then measure from the floor straight up to the mark with your metal tape, and write the number down to the nearest 0.1 cm (a millimetre) or 1/8 of an inch. That is the precision clinical growth protocols use, and it is easily achievable at home.',
+          'Done this way, a home measurement lands within about a centimetre of what a clinic stadiometer would say \u2014 and repeat attempts in the same setup typically agree within about a centimetre too. The remaining error is almost always posture or a tilted headpiece, which is why the next two sections exist. Do it twice; if the two readings disagree, take a third and trust the pair that agree.',
+        ],
+        callout: {
+          title: 'The two-measurement rule',
+          text: 'Measure twice, in the same spot, with the same method. If the readings differ, split the difference \u2014 or take a third and keep the two that agree.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'morning-vs-evening-height',
+        heading: 'Measure in the Morning: You Really Are Taller at Breakfast',
+        subheading: 'Your spine is a stack of fluid-filled cushions \u2014 and they spend all night reinflating.',
+        paragraphs: [
+          'The discs between your vertebrae are filled with a gel-like substance that slowly loses fluid under the day\u2019s load of gravity, sitting and standing. By evening each disc is a fraction thinner, and those fractions add up along the whole spine. Overnight, lying flat removes the pressure, the discs reabsorb fluid, and you regain the height \u2014 which is why your morning self is measurably taller than your evening self. It is not an illusion, and it is not posture; it is physiology.',
+          'How much taller? Two peer-reviewed stadiometer studies put a number on it: a University of Manchester study of 12 participants found an average overnight gain of 0.6 cm, and a study in the Annals of Human Biology found a similar average of 0.8 cm. Orthopaedic surgeons who measure patients daily cite a typical range of 0.5\u20131 cm, with younger and taller people \u2014 whose spines have more disc to compress \u2014 sometimes seeing up to about 1.5 cm. Treat the popular \u201C1\u20132 cm\u201D figure with scepticism; the measured data centres well under a centimetre for most adults.',
+          'Most of the day\u2019s compression happens quickly \u2014 a large share of it within the first hour or two after you get up \u2014 so the exact minute you measure matters less than the consistency of it. The practical rule, echoed by every serious guide: always measure at the same time of day, and make it the morning if you can. That way you are comparing like with like, and the number you track over months or years is a real trend, not a timetable.',
+        ],
+        image: {
+          src: '/assets/blog/how-to-measure-your-height-accurately/morning-vs-evening.png',
+          alt: 'Height comparison chart showing the same person at 176 cm in the morning and 175 cm in the evening, rendered to scale',
+          caption: 'Your morning and evening selves, rendered to scale: about a centimetre apart. Measure at the same time of day so you always compare like with like.',
+        },
+        callout: {
+          title: 'The measured number',
+          text: 'Peer-reviewed stadiometer studies measure an average overnight height gain of 0.6\u20130.8 cm. Morning minus evening \u2248 1 cm is the honest headline figure.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-head-position-detail',
+        heading: 'The Detail Everyone Gets Wrong: Head Position',
+        subheading: 'Tilt your chin a little and you can \u201Clie\u201D by an inch without moving your feet.',
+        paragraphs: [
+          'Clinicians position the head using something called the Frankfort plane: an imaginary horizontal line running from the lower edge of the eye socket to the notch just above the opening of the ear canal. You do not need to memorise the anatomy \u2014 in practice it means exactly what the home protocols say: look straight ahead, chin level, line of sight parallel to the floor. When your gaze is level, your head is in the clinical position, and the crown of your head sits at its true highest point relative to the wall.',
+          'Get this wrong and the error is surprisingly large. Lifting your chin tips the crown of your head back and down; dropping it pushes the measurement point forward off the wall. Combined with slouching, a tilted head is why self-measurements so often come out an inch or more off \u2014 and it is almost always the culprit when someone \u201Cgrows\u201D two centimetres between attempts. Keep the headpiece honest: it must sit at a true right angle to the wall, resting flat on the crown, touching head and wall at the same time.',
+          'Two more details from the clinical protocol that cost nothing to copy. First, whoever reads the mark should have their eyes level with the headpiece \u2014 reading from above or below introduces parallax and shifts the mark. Second, hair: press it flat, undo buns and high ponytails, and remove hats entirely. The headpiece should compress the hair down to the skull, not sit on top of a hairstyle. A centimetre of hair is a centimetre of phantom height.',
+        ],
+        callout: {
+          title: 'The one-line head check',
+          text: 'Line of sight level with the floor = head in the clinical position. If you can see the ceiling or your own toes, reset and start again.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'measuring-alone',
+        heading: 'Measuring Alone: The Cereal-Box Method',
+        subheading: 'No helper? No problem \u2014 with two small adjustments you can do this solo.',
+        paragraphs: [
+          'A helper is the more accurate option, especially with children, who shift, lean or tilt their heads without realising it. If someone is available, have them hold the headpiece and make the mark while you simply stand correctly \u2014 your only job is posture. But most of us measure alone, and the solo method works fine with two adjustments.',
+          'First, swap the book for a cereal box or a similar light, rigid box. Its wide flat base is much easier to hold level on top of your head with one hand than a book, which wants to seesaw. Second, face a mirror if you have one: it lets you check that the box is parallel to the floor while you hold it. Mark the wall where the underside of the box meets the top of your head \u2014 or, if you can keep the box steady, step out from underneath it and make the mark with your free hand while the other keeps the box in place.',
+          'Then measure floor-to-mark with your tape exactly as before. Because solo attempts are the ones that drift, do it twice and compare: if the two marks agree, you are golden; if they do not, take a third. Solo error of half an inch to a full inch is common when technique is sloppy \u2014 which is precisely why the mirror and the repeat matter more than any gadget.',
+        ],
+        callout: {
+          title: 'Solo setup',
+          text: 'Cereal box instead of a book, mirror in front of you, mark twice. If the two marks disagree, a third attempt \u2014 and the two closest readings \u2014 settle it.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'what-clinics-use',
+        heading: 'What Clinics Use Instead: The Stadiometer',
+        subheading: 'The gold standard is beautifully simple \u2014 a ruler on the wall with a sliding headpiece.',
+        paragraphs: [
+          'When your height is taken at a doctor\u2019s office, you stand against a device called a stadiometer: a long vertical ruler fixed to the wall, with a horizontal headpiece that slides down to rest on the top of your head. That is the entire instrument, and it is the gold standard for a reason \u2014 the vertical is guaranteed true, the headpiece is guaranteed level, and the four-contact-point stance is enforced by a trained measurer. It removes, by design, every error the home protocol fights manually.',
+          'The clinical procedure adds a few refinements worth knowing: the patient takes a deep breath and stretches up as tall as possible without lifting the heels (which straightens the spine), the headpiece is lowered until it firmly touches the crown, compressing the hair, and the measurer reads the scale with eyes level with the headpiece. The result goes straight into the medical record \u2014 and, for children, onto a growth chart, which is why clinics care so much about millimetres.',
+          'How far behind is a careful home setup? With a flat wall, a level headpiece and a metal tape, you can land within about a centimetre of a clinical reading \u2014 and repeat attempts in the same setup agree within about a centimetre too. Wall-mounted stadiometers for home use exist and cost well under a hundred dollars if you measure often. But the cheapest accuracy upgrade of all is free: measure the same way, in the same spot, at the same morning hour \u2014 then sanity-check the result against a known reference. A standard interior door frame is about 203\u2013210 cm tall; plot your number next to one in our comparison tool and see whether the picture matches reality.',
+        ],
+        image: {
+          src: '/assets/blog/how-to-measure-your-height-accurately/measure-against-door.png',
+          alt: 'Height comparison chart showing a person measured at 175 cm standing next to a standard door at 210 cm, rendered to scale',
+          caption: 'Sanity check: plot your measured height next to a standard 210 cm door. If the picture looks wrong, re-measure before you trust the tape.',
+        },
+        callout: {
+          title: 'Sanity-check your number',
+          text: 'Plot your measured height against a standard 210 cm door in the HowHeight comparison tool. If the visual looks wrong, re-measure before you trust the tape.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the best time of day to measure your height?',
+        answer:
+          'In the morning, shortly after waking. Your spinal discs rehydrate overnight, so you are at your tallest first thing \u2014 typically about 0.5\u20131 cm taller than in the evening (peer-reviewed studies measure 0.6\u20130.8 cm). More important than morning itself is consistency: always measure at the same time of day, so daily disc compression does not masquerade as growth or shrinkage.',
+      },
+      {
+        question: 'Can I measure my height accurately by myself?',
+        answer:
+          'Yes. Use a light, rigid box \u2014 a cereal box works better than a book because it is easier to hold level \u2014 face a mirror so you can see the box is parallel to the floor, and mark the wall where its underside meets the top of your head. A helper is still more accurate, especially for children, so measure twice when solo and compare the marks.',
+      },
+      {
+        question: 'Why am I taller in the morning than at night?',
+        answer:
+          'Gravity compresses the gel-filled discs between your vertebrae during the day, squeezing fluid out of them; overnight, lying flat lets them reabsorb fluid and expand again. A University of Manchester stadiometer study measured an average overnight gain of 0.6 cm, and an Annals of Human Biology study found 0.8 cm. Most of the day\u2019s compression happens within the first hour or two after you get up.',
+      },
+      {
+        question: 'How accurate is measuring height at home compared to a clinic?',
+        answer:
+          'A clinic uses a stadiometer \u2014 a fixed vertical ruler with a sliding, level headpiece \u2014 which is the gold standard. A careful home setup (flat wall, level rigid headpiece, metal tape, correct stance and head position) lands within about a centimetre of a clinical reading, and repeat home attempts typically agree within about a centimetre. The gap is almost entirely technique, not equipment.',
+      },
+      {
+        question: 'Should I measure my height with shoes on or off?',
+        answer:
+          'Off \u2014 always. Shoes add the full thickness of their soles to your reading, which can be several centimetres on trainers or boots. Clinical protocols also ask you to remove hats, hair ornaments and bulky clothing, and to stand on a hard, flat floor rather than carpet.',
+      },
+      {
+        question: 'How precise should my height measurement be?',
+        answer:
+          'Record to the nearest 0.1 cm (one millimetre) or 1/8 of an inch \u2014 the precision clinical growth protocols use. A rigid metal tape makes this easy; a flexible sewing tape does not. And resist the urge to round up to a rounder number: the whole point of measuring carefully is knowing the true figure.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Taking an accurate measurement at home \u2014 QMUL Growth Monitor',
+        url: 'https://www.qmul.ac.uk/growth-monitor/taking-a-measurement/',
+        description: 'Step-by-step home measurement protocol: hard flat floor, shoes off, heels to the wall, rigid headpiece at right angles, metal tape, record to 0.1 cm.',
+      },
+      {
+        title: 'How to Measure Your Height Accurately at Home \u2014 Healthline',
+        url: 'https://www.healthline.com/health/how-to-measure-height',
+        description: 'Solo measurement method \u2014 cereal-box headpiece, mirror to keep it level, marking the wall alone \u2014 and the stadiometer described as the clinical standard.',
+      },
+      {
+        title: 'How To Measure Your Height Properly And Accurately \u2014 DoctorTaller',
+        url: 'https://doctortaller.com/blogs/growth-tips/how-to-measure-your-height-properly-and-accurately',
+        description: 'Home-vs-clinical accuracy (~1 cm variance between attempts), morning-vs-evening differences (0.5\u20131.5 cm), and the solo-vs-helper comparison.',
+      },
+      {
+        title: 'Why You Feel Taller in the Morning \u2014 OnlyMyHealth',
+        url: 'https://www.onlymyhealth.com/reason-behind-you-feel-taller-during-morning-1683884359',
+        description: 'Orthopaedic surgeon on disc rehydration overnight; cites the University of Manchester stadiometer study (0.6 cm) and the Annals of Human Biology study (0.8 cm).',
+      },
+      {
+        title: 'Understanding the Frankfort Plane \u2014 stadiometer.com',
+        url: 'https://stadiometer.com/height-measuring/understanding-the-frankfurt-plane/',
+        description: 'Explainer on the clinical head position: the horizontal plane from the lower edge of the eye socket to the notch above the ear canal.',
+      },
+      {
+        title: 'Clinical height measurement protocol \u2014 Park Nicollet / SHIP',
+        url: 'http://www2.minneapolismn.gov/media/content-assets/www2-documents/departments/convert_265579.pdf',
+        description: 'Clinical stadiometer protocol: four contact points, level head position, headpiece on the crown compressing the hair, eyes level for the reading.',
+      },
+    ],
+    relatedSlugs: ['is-6-feet-rare-height-percentiles', 'average-height-teenage-boy-by-age', 'what-does-5ft10-look-like', 'what-is-considered-tall-for-a-woman'],
+  },
 ];
