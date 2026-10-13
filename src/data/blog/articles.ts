@@ -4163,4 +4163,199 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['is-6-feet-rare-height-percentiles', 'average-height-teenage-boy-by-age', 'what-does-5ft10-look-like', 'what-is-considered-tall-for-a-woman'],
   },
+  {
+    slug: 'jujutsu-kaisen-character-heights',
+    title: 'Jujutsu Kaisen Character Heights: Gojo, Yuji, Sukuna & More Compared (2026)',
+    h1: 'Jujutsu Kaisen Character Heights: Every Main Character Compared Side-by-Side',
+    description:
+      'How tall is Gojo? Is Sukuna taller than Yuji? Every main Jujutsu Kaisen character ranked with verified official heights, genuinely disputed figures flagged, and to-scale visualizations against real humans.',
+    category: 'anime',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-13T09:00:00Z',
+    updatedDate: '2026-10-13T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'Satoru Gojo stands 190 cm (6 ft 3 in) — officially "over 190 cm" — and Aoi Todo edges past him at 191 cm (6 ft 3.5 in). Only Panda (200+ cm / 6 ft 7 in+) is taller overall. Yuji Itadori is 173 cm, Megumi Fushiguro 175 cm and Nobara Kugisaki 160 cm; Sukuna shares Yuji\u2019s 173 cm because he lives in Yuji\u2019s body.',
+      keyTakeaway:
+        'JJK heights come from Gege Akutami\u2019s official character profiles and the manga\u2019s Volume 1 extras, and they are deliberately approximate — "over 190 cm", "just under 160 cm", "approximately 184 cm". The round numbers ARE the official data; any source printing decimal precision is inventing certainty. Two figures are genuinely disputed (Todo 190 vs 191 cm, Geto 190 vs 185 cm) and this article flags both instead of picking one silently.',
+      dataPoints: [
+        { label: 'Tallest character overall', value: 'Panda — 200+ cm (6 ft 7 in+)' },
+        { label: 'Tallest human sorcerer', value: 'Aoi Todo — 191 cm vs Gojo at 190 cm' },
+        { label: 'Gojo\u2019s height', value: '190 cm (6 ft 3 in), officially "over 190 cm"' },
+        { label: 'Yuji = Sukuna', value: 'Both 173 cm (5 ft 8 in) — Sukuna shares Yuji\u2019s body' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 200, label: 'Panda' },
+      { category: 'human', id: 'male', customHeightCm: 191, label: 'Aoi Todo' },
+      { category: 'human', id: 'male', customHeightCm: 190, label: 'Satoru Gojo' },
+      { category: 'human', id: 'male', customHeightCm: 184, label: 'Kento Nanami' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Megumi Fushiguro' },
+      { category: 'human', id: 'male', customHeightCm: 173, label: 'Yuji Itadori' },
+      { category: 'human', id: 'female', customHeightCm: 160, label: 'Nobara Kugisaki' },
+    ],
+    toolActionTitle: 'See the whole cast next to you',
+    toolActionDescription:
+      'The visualizer above is preloaded with the cast\u2019s verified heights — from Momo at 150 cm to Panda at 200+ cm. Add your own height and see exactly where you stand next to the sorcerers.',
+    comparisonTable: {
+      caption: 'Main Jujutsu Kaisen characters ranked tallest to shortest (official figures; disputed entries flagged)',
+      headers: ['Character', 'Height', 'Height (imperial)', 'Notes'],
+      rows: [
+        ['Panda', '200+ cm', '6 ft 7 in+', 'Cursed corpse — artificial body, not human'],
+        ['Aoi Todo', '191 cm*', '6 ft 3.5 in', '* Some guides list 190 cm'],
+        ['Satoru Gojo', '190 cm', '6 ft 3 in', 'Official wording: "over 190 cm"'],
+        ['Suguru Geto', '190 cm*', '6 ft 3 in', '* One database lists 185 cm; majority say 190 cm'],
+        ['Kento Nanami', '184 cm', '6 ft 0.5 in', 'Official wording: "approximately 184 cm"'],
+        ['Yuta Okkotsu', '175 cm', '5 ft 9 in', 'Same height as Megumi'],
+        ['Megumi Fushiguro', '175 cm', '5 ft 9 in', 'Matches the average US man exactly'],
+        ['Yuji Itadori', '173 cm', '5 ft 8 in', 'Sukuna shares this height in Yuji\u2019s body'],
+        ['Maki Zenin', '170 cm', '5 ft 7 in', 'Official wording: "approximately 170 cm"'],
+        ['Toge Inumaki', '164 cm', '5 ft 5 in', ''],
+        ['Nobara Kugisaki', '160 cm', '5 ft 3 in', 'Official wording: "just under 160 cm"'],
+        ['Momo Nishimiya', '150 cm', '4 ft 11 in', 'Shortest human in the main cast'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'full-cast-ranked',
+        heading: 'Every Main Character, Ranked: From Panda (200+ cm) to Momo (150 cm)',
+        subheading: 'More than 50 cm separate the tallest and shortest — which is why cast group shots look so uneven.',
+        paragraphs: [
+          'Ranked tallest to shortest on the official figures, the main cast runs: Panda (200+ cm), Aoi Todo (191 cm), Satoru Gojo (190 cm), Suguru Geto (190 cm), Kento Nanami (184 cm), Yuta Okkotsu (175 cm), Megumi Fushiguro (175 cm), Yuji Itadori (173 cm), Maki Zenin (170 cm), Toge Inumaki (164 cm), Nobara Kugisaki (160 cm) and Momo Nishimiya (150 cm). The spread from top to bottom is over half a metre — which is exactly why the cast\u2019s group illustrations have that unmistakable staircase silhouette.',
+          'The cast falls into clear tiers. Above 190 cm sit the heavyweights — Panda, Todo, Gojo and Geto — all built to loom over a room. The 175–184 cm band holds the working adult sorcerers and the older students: Nanami, plus Yuta and Megumi at a dead-even 175 cm, heights that would pass unremarked on any street. Then come the younger teens — Yuji at 173, Maki at 170, Inumaki at 164, Nobara at 160 — a completely ordinary spread for 15- to 17-year-olds. And alone at the bottom, at 150 cm, Momo Nishimiya: the shortest human in the main cast, a third-year who stands a head shorter than her own classmates.',
+          'One thing to understand before trusting any of these numbers: they are the official data, and they are deliberately approximate. Gege Akutami never published millimetre-exact measurements. The official character profiles say Gojo is "over 190 cm", Nobara is "just under 160 cm" and Nanami is "approximately 184 cm". Those round numbers are not lazy rounding by fan sites — they are what the creator actually gave us. Any source presenting JJK heights to decimal precision is inventing a certainty that does not exist.',
+        ],
+      },
+      {
+        id: 'first-year-trio',
+        heading: 'The First-Year Trio vs the Average Man',
+        subheading: 'Megumi matches the average man exactly. Yuji falls 2 cm short. Nobara is a full 15 cm under.',
+        paragraphs: [
+          'Yuji (173 cm), Megumi (175 cm) and Nobara (160 cm) are the trio the story opens with, and their heights say something about how Akutami designs protagonists: he keeps them human-scaled. Put them next to the average US man (175 cm) and the picture is almost boring — Megumi matches him to the centimetre, Yuji stands 2 cm shorter, and only Nobara, at 15 cm below the line, reads as genuinely short.',
+          'The detail worth noticing is the gap between the two boys. Megumi\u2019s 2 cm advantage over Yuji is invisible in the manga\u2019s art — posture, camera angle and footwear erase it completely, which is why fans still argue about which of the two is taller. The chart settles it: in the official data Megumi is the taller of the pair, and Yuji is the one who falls just below the average-man line.',
+          'Against their home-country baseline the trio reads differently. Japanese men average about 172 cm, which makes both Yuji and Megumi slightly tall for their age and nationality — and they are 15 and 16, with growing still to do. Nobara at 160 cm sits right around the average for young Japanese women. The trio were never designed to be remarkable in stature; their presence comes from everything except centimetres.',
+        ],
+        image: {
+          src: '/assets/blog/jujutsu-kaisen-character-heights/jjk-trio.png',
+          alt: 'Height comparison chart showing Nobara Kugisaki at 160 cm, Yuji Itadori at 173 cm and Megumi Fushiguro at 175 cm next to an average man at 175 cm',
+          caption: 'The first-year trio to scale: Megumi matches the average man exactly, Yuji stands 2 cm shorter, and Nobara a full 15 cm shorter.',
+        },
+      },
+      {
+        id: 'tallest-sorcerers',
+        heading: 'The 190 Club: Gojo, Todo, Geto — and Panda Above Them All',
+        subheading: 'The strongest sorcerer alive is officially "over 190 cm". Only one human edges past him.',
+        paragraphs: [
+          'Satoru Gojo\u2019s official height is 190 cm (6 ft 3 in), and the official wording matters: the character profiles describe him as "over 190 cm", which is why a few sources round up to 191. He is the tallest confirmed human in the main cast and the figure every other tall character is measured against, in-universe and out. At 190 cm he stands 15 cm above the average US man — the entire reason his silhouette dominates every group panel he walks into.',
+          'The one human who edges past him is Aoi Todo, and this is where the data gets honest about its own limits. GameRant lists Todo at 191 cm (6 ft 3.5 in); FantasyTopics gives 190.5 cm; most other guides round to a flat 190 cm. The majority figure is 191, so that is what this article uses — but the honest answer is that Todo is "about the same height as Gojo, give or take a centimetre". One centimetre is invisible in practice; the dispute is a data-quality footnote, not a real difference.',
+          'Behind them: Suguru Geto at 190 cm — the majority figure, though one database lists 185 cm, an outlier this article rejects in favour of the consensus — Kento Nanami at 184 cm ("approximately 184 cm" in the ORICON profiles), and Panda at 200+ cm. Panda gets both the asterisk and the crown: he is a cursed corpse with an artificial body, not a human, so he tops the chart without breaking the human scale of the cast. Among actual humans, the ceiling is Gojo and Todo.',
+        ],
+        image: {
+          src: '/assets/blog/jujutsu-kaisen-character-heights/jjk-tallest.png',
+          alt: 'Height comparison chart showing Kento Nanami at 184 cm, Satoru Gojo at 190 cm, Aoi Todo at 191 cm and Panda at 200 cm side by side',
+          caption: 'The tallest of the cast: Nanami (184 cm), Gojo (190 cm), Todo (191 cm) and Panda (200+ cm) — the only one above two metres.',
+        },
+      },
+      {
+        id: 'sukuna-height',
+        heading: 'Sukuna\u2019s Height: The Body He Is Wearing Decides',
+        subheading: 'The King of Curses takes his vessel\u2019s dimensions — 173 cm in Yuji\u2019s body, 175 cm in Megumi\u2019s.',
+        paragraphs: [
+          'Ryomen Sukuna\u2019s height is 173 cm (5 ft 8 in) — exactly Yuji Itadori\u2019s height, because for most of the story Sukuna is living inside Yuji\u2019s body. GameRant, FantasyTopics and the manga-pro height guide all print the same figure, and it follows a simple rule: in Jujutsu Kaisen, a possessing spirit takes the vessel\u2019s dimensions. Sukuna does not bring his own centimetres with him.',
+          'The rule holds everywhere you check. When Kenjaku pilots Suguru Geto\u2019s body, the height on the chart is Geto\u2019s 190 cm. When Sukuna later takes over Megumi, he stands at Megumi\u2019s 175 cm. The vessel is the measurement; the spirit is the passenger. It is a clean, consistent piece of world-building that most height lists get right almost by accident.',
+          'What no list should be printing is Sukuna\u2019s "true" Heian-era height. His original four-armed form has no official measurement — Akutami never gave one. Fan estimates put it around 2.15–2.20 m, and you will see those numbers quoted as fact on social media, but they are unconfirmed speculation. This article lists only the verified figure: 173 cm, in the body the story actually measures.',
+        ],
+        callout: {
+          title: 'The vessel rule',
+          text: 'Sukuna in Yuji\u2019s body: 173 cm. Sukuna in Megumi\u2019s body: 175 cm. Kenjaku in Geto\u2019s body: 190 cm. The spirit takes the vessel\u2019s height, every time.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'spotting-bad-data',
+        heading: 'Why So Many JJK Height Lists Are Wrong (and How to Spot Them)',
+        subheading: 'One competitor prints Gojo at 6\u20192\u201d, Nobara at 5\u20195\u201d and Megumi at 5\u201910\u201d. All three contradict the official profiles.',
+        paragraphs: [
+          'Jujutsu Kaisen height lists are a case study in why you should never trust a single anime database. One competitor site prints Gojo at 6 ft 2 in, Nobara at 5 ft 5 in and Megumi at 5 ft 10 in — every one of those contradicts the official profiles, and every one is off by enough to matter in a visualization. These errors survive because sites copy each other instead of checking the fanbook.',
+          'The subtler problem is false precision. Because Akutami\u2019s official figures are approximate by design — "over 190 cm", "just under 160 cm", "approximately 184 cm" — any site presenting JJK heights to a tenth of a centimetre is manufacturing certainty. A chart that says Nobara is exactly 160.0 cm is no more accurate than one that says 160 cm; it is just more confident about a number the creator never specified.',
+          'So here is the practical checklist. First, a trustworthy list cites the official profiles or the fanbook, not another fan site. Second, it flags the two genuinely disputed figures — Todo (190 vs 191 cm) and Geto (190 vs 185 cm) — instead of silently picking one. Third, it gives Sukuna\u2019s height as 173 cm with the vessel caveat, never a Heian-era figure presented as canon. If a list fails any of those three tests, treat its numbers as decoration.',
+        ],
+        callout: {
+          title: 'Red flags in a height list',
+          text: 'Decimal-point precision on JJK heights, a Heian-era Sukuna height stated as fact, or no mention of the Todo/Geto disputes — any of these means the list was copied, not researched.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'vs-real-humans',
+        heading: 'JJK Characters vs Real Humans: Where Would You Stand?',
+        subheading: 'Gojo clears even the tallest national average on earth. The teenagers land in completely ordinary territory.',
+        paragraphs: [
+          'Line the cast up against real-world averages and the design intent becomes obvious. Gojo at 190 cm stands 7 cm above the average Dutch man (183 cm — the tallest national average on earth) and a full 15 cm above the average US man (175 cm). Todo clears both too. These are heights that would draw stares in any crowd on the planet, which is exactly the point: the strongest sorcerer alive is drawn to be physically unmistakable.',
+          'The teenagers land in completely ordinary territory. Yuji (173 cm) and Megumi (175 cm) bracket the average US man; against the Japanese male average (about 172 cm) both read as slightly tall for 15- and 16-year-olds. Maki at 170 cm stands 7 cm above the average US woman (163 cm) — tall, athletic, and exactly what her character design promises.',
+          'At the extremes, the real-world comparisons break down. Momo at 150 cm is 13 cm shorter than the average US woman — genuinely petite, and the reason she reads as the cast\u2019s kid sister despite being a third-year. And Panda at 200+ cm has no real-world analogue in the cast\u2019s terms: there is no human crowd in which a two-metre cursed corpse would not be the most conspicuous figure in it. That is the whole visual joke of Jujutsu High\u2019s class photos — and the numbers finally let you measure it.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is Gojo?',
+        answer: 'Satoru Gojo is 190 cm (6 ft 3 in) tall. The official character profiles describe him as "over 190 cm", which is why a few sources round up to 191 cm — but 190 cm is the figure the creator\u2019s own materials print, making him the tallest confirmed human in the main cast.',
+      },
+      {
+        question: 'How tall is Yuji Itadori?',
+        answer: 'Yuji Itadori is 173 cm (5 ft 8 in) tall — 2 cm shorter than Megumi Fushiguro (175 cm) and 2 cm shorter than the average US man. He is 15 at the start of the story, so this is a still-growing teenager\u2019s height.',
+      },
+      {
+        question: 'Who is the tallest Jujutsu Kaisen character?',
+        answer: 'Panda, at 200+ cm (6 ft 7 in+) — though he is a cursed corpse with an artificial body, not a human. Among human characters, Aoi Todo edges it at 191 cm, just ahead of Satoru Gojo and Suguru Geto at 190 cm.',
+      },
+      {
+        question: 'How tall is Sukuna?',
+        answer: '173 cm (5 ft 8 in) — the same as Yuji Itadori, because Sukuna spends most of the story inside Yuji\u2019s body and takes the vessel\u2019s dimensions. His original Heian-era form has no official height; fan estimates of 2.15–2.20 m are unconfirmed.',
+      },
+      {
+        question: 'Is Todo taller than Gojo?',
+        answer: 'By the most commonly cited figures, yes — by one centimetre. Aoi Todo is listed at 191 cm and Satoru Gojo at 190 cm. But the data is genuinely disputed: several guides list Todo at 190 cm, which would make them exactly the same height.',
+      },
+      {
+        question: 'How tall is Nobara?',
+        answer: 'Nobara Kugisaki is 160 cm (5 ft 3 in) tall — the official profiles say "just under 160 cm". She is 15 cm shorter than the average US man and the shortest of the three first-years.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Every Main JJK Character\u2019s Age, Height, And Birthday \u2014 GameRant',
+        url: 'http://gamerant.com/jujutsu-kaisen-main-characters-age-height-birthday/',
+        description: 'Main-cast height table citing official profiles: Gojo 190 cm, Yuji 173 cm, Megumi 175 cm, Nobara 160 cm, Nanami 184 cm, Todo 191 cm, Panda 200 cm, Momo 150 cm.',
+      },
+      {
+        title: 'How Tall Are Jujutsu Kaisen Characters? Full Height Guide',
+        url: 'https://jujutsukaisenmanga.pro/how-tall-are-jujutsu-kaisen-characters/',
+        description: 'Full height chart including Todo at 191 cm, Momo at 150 cm and Sukuna at 173 cm in Yuji\u2019s body, with notes on disputed figures.',
+      },
+      {
+        title: 'Jujutsu Kaisen Characters Heights Chart & Analysis \u2014 FantasyTopics',
+        url: 'https://fantasytopics.com/how-tall-jujutsu-kaisen-characters-height/',
+        description: 'Height chart with analysis; lists Todo at 190.5 cm and Geto at 190.5 cm, illustrating the 190/191 dispute.',
+      },
+      {
+        title: 'Jujutsu Kaisen: Every Central Character\u2019s Height \u2014 ComingSoon.net',
+        url: 'https://www.comingsoon.net/guides/news/1765835-jujutsu-kaisen-every-central-characters-height',
+        description: 'Central character heights: Gojo ~191 cm, Geto 190 cm, Todo over 190 cm, Inumaki 164 cm.',
+      },
+      {
+        title: 'Jujutsu Kaisen: Every Character\u2019s Age, Height, Cursed Technique, Ranking & Zodiac Sign \u2014 ComingSoon.net',
+        url: 'https://www.comingsoon.net/guides/news/1382708-jujutsu-kaisen-every-characters-age-height-cursed-technique-ranking-zodiac-sign&',
+        description: 'Character guide with Nanami at 184 cm, Todo at 190 cm, Momo Nishimiya at 150 cm and Mai Zenin at 170 cm.',
+      },
+      {
+        title: 'Jujutsu Kaisen Characters List | Japan Anime News powered by ORICON NEWS',
+        url: 'https://oricon-group.com/news/3214/',
+        description: 'Character profiles citing official data, including Nanami at "approximately 184 cm".',
+      },
+    ],
+    relatedSlugs: ['one-piece-anime-character-heights', 'video-game-character-heights'],
+  },
 ];
