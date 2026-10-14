@@ -4592,4 +4592,260 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['average-height-teenage-boy-by-age', 'what-is-considered-tall-for-a-woman', 'how-to-measure-your-height-accurately', 'is-6-feet-rare-height-percentiles'],
   },
+  {
+    slug: 'shortest-celebrities-height-comparison',
+    title: 'The Shortest Celebrities: Simone Biles, Danny DeVito, Kevin Hart & More, Ranked & Visualised',
+    h1: 'The Shortest Celebrities, Ranked by Height',
+    description:
+      'From Simone Biles at 4\u20198\u2033 to Tom Cruise at 5\u20197\u2033: the shortest celebrities ranked with verified heights in cm and feet, visualised to scale \u2014 including the great Kevin Hart height debate.',
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-14T09:00:00Z',
+    updatedDate: '2026-10-14T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'The shortest major celebrities are Simone Biles at 4\u20198\u2033 (142 cm) and Danny DeVito at 4\u201910\u2033 (147 cm), followed by Ariana Grande at 5\u20190\u2033 (152 cm), Kevin Hart at roughly 5\u20193\u2033 barefoot (160 cm), Bruno Mars at 5\u20195\u2033 (165 cm) and Tom Cruise at 5\u20197\u2033 (170 cm). All six stand below the average for their gender \u2014 yet between them they hold Olympic golds, Grammys and billions in box office. Height, it turns out, is negotiable.',
+      keyTakeaway:
+        'Two numbers on this list are genuinely disputed: Kevin Hart admitted 5\u20192\u2033 on a lie detector test but told 60 Minutes he is \u201C5\u20195 with a shoe on,\u201D and Ariana Grande is listed at 5\u20190\u2033 but claims 5\u20192\u2033. We chart Hart at 160 cm and Grande at 152 cm \u2014 the honest barefoot/listed figures \u2014 and flag both disputes in full below. Every other figure is a solid consensus across sources.',
+      dataPoints: [
+        { label: 'Shortest star', value: 'Simone Biles \u2014 4\u20198\u2033 (142 cm)' },
+        { label: 'Shortest leading man', value: 'Danny DeVito \u2014 4\u201910\u2033 (147 cm)' },
+        { label: 'Most disputed', value: 'Kevin Hart \u2014 5\u20192\u2033 to 5\u20195\u2033 depending on who (and what shoes) you ask' },
+        { label: 'The gap', value: 'DeVito stands 28 cm (11 in) below the average man \u2014 a full head and shoulders' },
+        { label: 'The takeaway', value: 'All six are below average height; all six are among the most successful people alive' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'female', customHeightCm: 142, label: 'Simone Biles' },
+      { category: 'human', id: 'male', customHeightCm: 147, label: 'Danny DeVito' },
+      { category: 'human', id: 'female', customHeightCm: 152, label: 'Ariana Grande' },
+      { category: 'human', id: 'male', customHeightCm: 160, label: 'Kevin Hart' },
+      { category: 'human', id: 'male', customHeightCm: 165, label: 'Bruno Mars' },
+      { category: 'human', id: 'male', customHeightCm: 170, label: 'Tom Cruise' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average man (175 cm)' },
+    ],
+    toolActionTitle: 'Stand next to the shortest stars',
+    toolActionDescription:
+      'The visualiser above is preloaded with the full lineup \u2014 Simone Biles (142 cm) through Tom Cruise (170 cm), plus the average man at 175 cm. Add your own height and see exactly where you fit among them.',
+    comparisonTable: {
+      caption: 'The shortest celebrities, ranked shortest to tallest \u2014 honest figures with the two disputed entries flagged',
+      headers: ['Rank', 'Celebrity', 'Height', 'Best known for'],
+      rows: [
+        ['1', 'Simone Biles', '4\u20198\u2033 (142 cm)', 'Most decorated gymnast in history'],
+        ['2', 'Danny DeVito', '4\u201910\u2033 (147 cm)', 'Taxi, Twins, It\u2019s Always Sunny in Philadelphia'],
+        ['3', 'Ariana Grande', '5\u20190\u2033 (152 cm) \u2014 listed; she claims 5\u20192\u2033', 'Pop superstar, Wicked'],
+        ['4', 'Kevin Hart', '~5\u20193\u2033 (160 cm) barefoot \u2014 disputed, see below', 'Stand-up, Jumanji, Ride Along'],
+        ['5', 'Bruno Mars', '5\u20195\u2033 (165 cm)', 'Grammy-winning singer-songwriter'],
+        ['6', 'Tom Cruise', '5\u20197\u2033 (170 cm)', 'Mission: Impossible, Top Gun'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-ranked-lineup',
+        heading: 'The Ranked Lineup: Six Stars Under 5\u20198\u2033',
+        subheading: 'From a 4\u20198\u2033 gymnast to a 5\u20197\u2033 action hero \u2014 every figure drawn to true scale.',
+        paragraphs: [
+          'Here they are, side by side, at their real heights: Simone Biles at 4\u20198\u2033 (142 cm), Danny DeVito at 4\u201910\u2033 (147 cm), Ariana Grande at 5\u20190\u2033 (152 cm), Kevin Hart at roughly 5\u20193\u2033 barefoot (160 cm), Bruno Mars at 5\u20195\u2033 (165 cm) and Tom Cruise at 5\u20197\u2033 (170 cm) \u2014 with the average man (5\u20199\u2033, 175 cm) standing in for scale. On screen, in concert lighting, and on magazine covers, these six look like giants. Lined up honestly, the shortest of them barely reaches the average man\u2019s shoulder.',
+          'A word on method before the numbers, because most celebrity-height lists are sloppy in exactly the ways we are about to avoid. Every figure here is cross-checked against at least two independent sources \u2014 the gymnast\u2019s own statements, NPR\u2019s Hollywood height reporting, on-camera admissions, and the 60 Minutes interview that finally forced one comedian to commit. Where a figure is disputed (Hart, Grande), we say so loudly and chart the most defensible number, not the flattering one. Hollywood\u2019s standard practice is to round up, add shoes, and never speak of it; this chart does the opposite.',
+          'The context that makes the chart startling: the average American adult man stands 5\u20199\u2033 (175 cm) and the average woman 5\u20194\u2033 (161 cm), per measured CDC data. Every man on this list is below his gender\u2019s average \u2014 DeVito by a remarkable 28 cm \u2014 and Biles and Grande are below theirs too. And yet the six of them have, between them, Olympic gold medals, Grammys, Emmys and some of the highest-grossing films ever made. The chart below is the visual proof that height and stature are different things.',
+        ],
+        image: {
+          src: '/assets/blog/shortest-celebrities-height-comparison/shortest-celebs-lineup.png',
+          alt: 'Height comparison chart showing Simone Biles (142 cm), Danny DeVito (147 cm), Ariana Grande (152 cm), Kevin Hart (160 cm), Bruno Mars (165 cm), Tom Cruise (170 cm) and an average man (175 cm) side by side',
+          caption: 'The full ranked lineup, rendered to scale: even Tom Cruise, the tallest of the six, stands 5 cm below the average man.',
+        },
+        callout: {
+          title: 'The lineup, shortest to tallest',
+          text: 'Biles 142 cm \u00b7 DeVito 147 cm \u00b7 Grande 152 cm (claims 158) \u00b7 Hart ~160 cm (disputed) \u00b7 Mars 165 cm \u00b7 Cruise 170 cm \u00b7 Average man 175 cm.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'biles-and-devito',
+        heading: 'The Two Shortest: Simone Biles and Danny DeVito',
+        subheading: 'A gymnast and a comedy legend, separated by 5 cm \u2014 and both shorter than almost everyone they meet.',
+        paragraphs: [
+          'Simone Biles, at 4\u20198\u2033 (142 cm), is the shortest person on this list \u2014 a figure she has confirmed herself on numerous occasions, including on her own social media. She is also the most decorated gymnast in history, which is not a coincidence: elite gymnastics strongly selects for compact builds. Shorter levers rotate faster, a lower centre of gravity steadies landings, and a lighter frame is easier to launch off a vault. Nobody sets out to be 4\u20198\u2033 for the sport; rather, the sport\u2019s physics rewards the athletes who are, so the podiums fill with gymnasts built like Biles.',
+          'The scale of it hits hardest in photographs. Biles\u2019 husband, NFL safety Jonathan Owens, stands 5\u201911\u2033 \u2014 a full 33 cm taller, more than a foot of difference. A famous 2017 photo of Biles next to Shaquille O\u2019Neal (7\u20191\u2033) shows a gap of over two feet that looks almost doctored and is entirely real. She has joked about her height for years, but the numbers underneath the jokes are remarkable: at 142 cm she sits below the 1st percentile for adult women, and she turned that frame into the most dominant gymnastics career ever recorded.',
+          'Danny DeVito, at 4\u201910\u2033 (147 cm), is five centimetres taller than Biles and the shortest leading man of his generation. His height has a medical explanation he has discussed openly: a genetic bone condition called multiple epiphyseal dysplasia (sometimes referred to as Fairbank\u2019s disease) that affected his growth. Rather than hide it, DeVito built one of the most distinctive screen careers in Hollywood on the back of exactly the qualities people told him would hold him back \u2014 from Louie De Palma in Taxi to the Penguin in Batman Returns, from directing and starring in Matilda to two decades as Frank Reynolds in It\u2019s Always Sunny in Philadelphia. The famous sight gag of 1988\u2019s Twins \u2014 DeVito standing next to 6\u20192\u2033 Arnold Schwarzenegger \u2014 turned a 41 cm height gap into box-office gold.',
+        ],
+        image: {
+          src: '/assets/blog/shortest-celebrities-height-comparison/shortest-celebs-extremes.png',
+          alt: 'Height comparison chart showing Simone Biles at 142 cm and Danny DeVito at 147 cm next to an average man at 175 cm',
+          caption: 'The headline extremes, rendered to scale: the average man stands 33 cm taller than Biles and 28 cm taller than DeVito \u2014 roughly head and shoulders.',
+        },
+        callout: {
+          title: 'Why gymnasts run short',
+          text: 'Elite gymnastics selects for compact builds: shorter levers rotate faster and lighter frames are easier to launch. Biles at 4\u20198\u2033 is the sport\u2019s physics made flesh \u2014 and its most decorated champion.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'the-hart-debate',
+        heading: 'The Great Kevin Hart Height Debate',
+        subheading: '5\u20192\u2033 on a lie detector, 5\u20195\u2033 on 60 Minutes \u2014 the most entertaining measurement dispute in Hollywood.',
+        paragraphs: [
+          'No celebrity height has generated more contradictory testimony than Kevin Hart\u2019s, and the comedian himself is the least reliable witness. In a 2019 lie-detector segment, Hart first claimed 5\u20195\u2033, then 5\u20193\u2033, and finally settled on 5\u20192\u2033 \u2014 which the machine judged truthful. He also admitted, truthfully, that his height makes him self-conscious. That should have settled it: 5\u20192\u2033, about 157 cm, on the record and polygraph-verified.',
+          'Then came the walk-back. In April 2024, Anderson Cooper confronted Hart on 60 Minutes with the conflicting reports \u2014 GQ said 5\u20195\u2033, the LA Times said 5\u20194\u2033, and \u201Csome other place\u201D said 5\u20192\u2033. Hart laughed the last one off (\u201Cthat place is bullshit\u201D) and declared: \u201CGQ finally got it right. Five-foot-five, like with a shoe on, like a sneaker. Now, if I put a boot on, I can get to 5\u20195 and a half.\u201D It was a masterclass in technically-true comedy: 5\u20195\u2033 in footwear is entirely compatible with 5\u20192\u2033 barefoot, because a sneaker sole plus the usual listed-height rounding buys you the missing inches.',
+          'So how tall is Kevin Hart, really? The honest answer is a range, not a number: around 5\u20192\u2033 to 5\u20193\u2033 barefoot, stretching to about 5\u20194\u2033 in shoes \u2014 which is why we chart him at 160 cm (~5\u20193\u2033), the midpoint of the credible barefoot estimates, with this caveat attached. Hart himself has said he jokes about his height on stage so the audience laughs with him rather than at him, and it worked: he became one of the few comedians ever to outsell Jerry Seinfeld. The dispute is the point. In an industry that quietly adds two inches to everyone, Hart\u2019s height is the rare celebrity statistic with a public paper trail \u2014 and the paper trail is funnier than the number.',
+        ],
+        callout: {
+          title: 'The verdict',
+          text: 'Lie detector (barefoot): 5\u20192\u2033. 60 Minutes (in sneakers): 5\u20195\u2033. Both can be true at once \u2014 shoes add 2\u20133 cm and Hollywood adds the rest. We chart 160 cm as the honest barefoot midpoint.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'grande-mars-cruise',
+        heading: 'Grande, Mars and Cruise: Short Stars Who Owned It',
+        subheading: 'A pop queen, a funk prince and the last action hero \u2014 none of them tall, all of them enormous.',
+        paragraphs: [
+          'Ariana Grande is the list\u2019s other disputed entry, and the dispute runs in the opposite direction: most listings put her at 5\u20190\u2033 (152 cm), while Grande herself has claimed 5\u20192\u2033. We chart the listed 152 cm and note the claim, because the gap is instructive \u2014 it is almost exactly the standard Hollywood inflation of heels plus generous rounding. Barefoot, photographed next to genuinely tall people, the 5\u20190\u2033 figure holds up better. Either way, she is one of the shortest women headlining stadiums in the world, and her stagecraft \u2014 the ponytail, the proportions, the sheer vocal size \u2014 makes the question feel faintly absurd.',
+          'Bruno Mars, at 5\u20195\u2033 (165 cm), is the consensus pick of this trio \u2014 the figure is consistent across listings, and Mars himself has confirmed it with good humour in interviews. He sits around the 7th percentile for adult men: genuinely short, unambiguously documented, and completely irrelevant to a career built on some of the most athletic live performances in pop. If anything, Mars is the patron saint of this list\u2019s thesis: nobody has ever left a Bruno Mars concert thinking about his height.',
+          'Tom Cruise, at 5\u20197\u2033 (170 cm), is the tallest person on this list and the one Hollywood has worked hardest to make look tall. The techniques are an open secret by now: careful camera angles, boots with lifts, blocking that keeps him on the higher step, and co-stars chosen or positioned to flatter \u2014 red-carpet photos next to 5\u20199\u2033 Cameron Diaz or 5\u201911\u2033 Nicole Kidman tend to shatter the illusion. Cruise lands around the 20th\u201325th percentile for men: short, but not remarkably so \u2014 which is precisely why the industry\u2019s effort to hide it is the interesting story. Four decades as the definitive movie star, three Oscar nominations, and films grossing over $10 billion worldwide, all at 170 cm. The camera adds ten pounds and, with enough effort, three inches.',
+        ],
+        callout: {
+          title: 'Hollywood\u2019s height playbook',
+          text: 'Lifts in the boots, the higher step in two-shots, low camera angles, and co-stars blocked a half-step back. Cruise didn\u2019t invent any of it \u2014 at 5\u20197\u2033 he just needed it more visibly than most leading men.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'how-short-is-short',
+        heading: 'How Short Is \u201CShort\u201D? The Numbers in Context',
+        subheading: 'Percentiles, not inches, are what your eyes are actually comparing.',
+        paragraphs: [
+          'Raw inches mislead; percentiles tell the truth. DeVito at 147 cm stands roughly 28 cm below the average man \u2014 around four standard deviations down, which puts him below the 1st percentile of adult men. Fewer than one man in a hundred is that short. Biles at 142 cm is below the 1st percentile for adult women by a similar margin. Mars at 165 cm sits around the 7th percentile for men, Hart\u2019s ~160 cm around the 3rd, and Cruise at 170 cm around the 20th\u201325th \u2014 short, but the kind of short you meet every day without noticing.',
+          'It helps to think in gaps rather than absolutes. DeVito gives up 28 cm \u2014 eleven inches \u2014 to the average man: that is roughly the length of a human head plus a neck, which is why he reads as \u201Chead and shoulders\u201D shorter in any group photo. Biles gives up 33 cm to her own husband. These are the differences your visual system is actually registering when a celebrity looks \u201Csurprisingly short\u201D in person: not the number, but the gap to the people around them.',
+          'One final honesty note, because it applies to every figure on this list: listed heights are almost always measured in shoes and rounded up, while barefoot morning height is the true figure \u2014 a gap of 2 to 3 cm for most people. That is the entire Ariana Grande dispute (152 vs 158 cm) and most of the Kevin Hart one. Genuine barefoot figures, like Biles\u2019s self-reported 4\u20198\u2033 or the lie-detector 5\u20192\u2033, are the gold standard; everything else is footwear plus optimism. If this article has you curious about your own number, our guide to measuring your height accurately at home walks through the proper barefoot-against-the-wall technique \u2014 and then you can add yourself to the chart above and take your place in the lineup.',
+        ],
+        callout: {
+          title: 'The percentile picture',
+          text: 'DeVito (147 cm): below the 1st percentile of men \u00b7 Biles (142 cm): below the 1st percentile of women \u00b7 Mars (165 cm): ~7th percentile \u00b7 Hart (~160 cm): ~3rd percentile \u00b7 Cruise (170 cm): ~20th\u201325th percentile.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'see-where-you-stand',
+        heading: 'See Where You Stand Next to Them',
+        subheading: 'The chart is preloaded \u2014 add your height and take your place in the lineup.',
+        paragraphs: [
+          'The comparison tool at the top of this article is preloaded with all six celebrities plus the average man, drawn to true scale. Add your own height and the chart redraws instantly: stand yourself next to DeVito and see the 28 cm the average man gives up; next to Biles and see whether you clear her 142 cm by a head; next to Cruise and check whether Hollywood\u2019s camera magic has been fooling you too.',
+          'A few suggested experiments. First, the couples test: pair yourself with a partner and see how your gap compares to Biles and Owens\u2019 33 cm \u2014 our guide to celebrity couples with the biggest height differences has more extreme pairings to try. Second, the percentile check: drop in the average man (175 cm) and woman (161 cm) alongside yourself to see which side of average you land on. Third, the honesty test: measure yourself properly barefoot, in the morning, and compare that figure to what your driving licence claims \u2014 most people are carrying 2 to 3 cm of footwear optimism.',
+          'And if this list made you curious about the other end of the scale, we have that covered too: our ranking of US presidents\u2019 heights runs from 5\u20194\u2033 James Madison to 6\u20194\u2033 Abraham Lincoln, and the K-pop idol height comparison lines up an industry where the men average a head taller than everyone on this page. Short, tall, or somewhere in between \u2014 the chart doesn\u2019t judge. It just draws the truth to scale.',
+        ],
+        callout: {
+          title: 'Try it now',
+          text: 'Scroll to the visualiser, tap \u201Cadd person,\u201D enter your barefoot morning height, and see exactly where you stand among the shortest stars in the world.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Who is the shortest celebrity in the world?',
+        answer:
+          'Among the biggest global stars, Simone Biles at 4\u20198\u2033 (142 cm) edges out Danny DeVito at 4\u201910\u2033 (147 cm). Both sit below the 1st percentile for their gender. (There are shorter public figures in niche fields \u2014 but among A-list household names, Biles and DeVito are the floor.)',
+      },
+      {
+        question: 'How tall is Kevin Hart really?',
+        answer:
+          'It depends on who \u2014 and what footwear \u2014 you ask. On a 2019 lie-detector test Hart settled on 5\u20192\u2033 barefoot; on 60 Minutes in April 2024 he told Anderson Cooper he is \u201C5\u20195 with a shoe on,\u201D noting boots get him to 5\u20195\u00bd\u2033. Both can be true: sneakers add 2\u20133 cm and listings round up. The honest barefoot figure is around 5\u20192\u2033\u20135\u20193\u2033 (157\u2013160 cm).',
+      },
+      {
+        question: 'How tall is Simone Biles?',
+        answer:
+          '4\u20198\u2033 (142 cm) \u2014 a figure Biles has confirmed herself many times, including on social media. She is the shortest person on this list and the most decorated gymnast in history; her husband, NFL safety Jonathan Owens, stands 5\u201911\u2033, a full 33 cm taller.',
+      },
+      {
+        question: 'How tall is Danny DeVito?',
+        answer:
+          '4\u201910\u2033 (147 cm). DeVito has spoken openly about having multiple epiphyseal dysplasia (Fairbank\u2019s disease), a genetic bone condition that affected his growth. He is 28 cm shorter than the average man \u2014 below the 1st percentile \u2014 and turned it into one of Hollywood\u2019s most distinctive careers.',
+      },
+      {
+        question: 'How tall is Tom Cruise?',
+        answer:
+          '5\u20197\u2033 (170 cm) \u2014 the consensus figure across sources (NPR\u2019s Hollywood height reporting lists 5\u20197.75\u2033). He is around the 20th\u201325th percentile for men: short, but not remarkably so, which is why Hollywood\u2019s efforts to make him look taller \u2014 lifts, low angles, careful blocking \u2014 are the more interesting story.',
+      },
+      {
+        question: 'Is 5\u20195\u2033 short for a man?',
+        answer:
+          'Yes \u2014 it is about 10 cm below the average man\u2019s 5\u20199\u2033 (175 cm) and sits around the 7th percentile, meaning roughly 93% of adult men are taller. Bruno Mars (5\u20195\u2033) is the proof that it doesn\u2019t matter much: some of the most commanding stage presences in pop history belong to men under 5\u20196\u2033.',
+      },
+    ],
+    sources: [
+      {
+        title: 'How Tall Is Simone Biles? \u2014 Britannica',
+        url: 'https://www.Britannica.com/question/How-tall-is-Simone-Biles',
+        description: 'Britannica confirms Biles stands 4 feet 8 inches (1.4 metres).',
+      },
+      {
+        title: 'Simone Biles Height, Age, Skills \u2014 NBC Sports Bay Area',
+        url: 'https://www.nbcsportsbayarea.com/paris-2024-summer-olympics/simone-biles-height-age-skills/1754724/',
+        description: 'NBC notes Biles is one of the shortest gymnasts on the US national team, at 4\u20198\u2033.',
+      },
+      {
+        title: 'Simone Biles Height \u2014 CelebHeights',
+        url: 'https://www.Celebheights.com/s/Simone-Biles-49578.html',
+        description: 'Barefoot-height estimate of 4 ft 8 (142.2 cm), citing Biles\u2019 own repeated statements on Twitter.',
+      },
+      {
+        title: 'Hollywood Heights: The Ups, Downs and In-Betweens \u2014 NPR/WCBE',
+        url: 'https://www.wcbe.org/2012-12-07/hollywood-heights-the-ups-downs-and-in-betweens',
+        description: 'NPR\u2019s reporting on Hollywood statures: DeVito at 4\u201910\u2033 and Cruise at 5\u20197.75\u2033.',
+      },
+      {
+        title: 'Danny DeVito\u2019s Struggle With His Height \u2014 FandomWire',
+        url: 'https://fandomwire.com/4-ft-10-in-tall-danny-devitos-struggle-with-his-height-i-couldnt-slow-dance-with-the-girls-i-wanted-to/',
+        description: 'DeVito\u2019s 4\u201910\u2033 height and his openness about the bone condition (multiple epiphyseal dysplasia) behind it.',
+      },
+      {
+        title: 'How Tall Is Kevin Hart? \u2014 Sporting News',
+        url: 'https://www.sportingnews.com/au/nba/news/how-tall-kevin-hart-height-shortest-tallest-nba-all-stars/367282cf59a441331f6e6151',
+        description: 'Hart on 60 Minutes: LA Times said 5\u20194\u2033, GQ said 5\u20195\u2033 \u2014 Hart backed GQ: \u201C5\u20195, like with a shoe on.\u201D',
+      },
+      {
+        title: 'How Tall Is Kevin Hart? He Revealed His Real Height \u2014 Just Jared',
+        url: 'https://www.justjared.com/2025/06/09/how-tall-is-kevin-hart-he-revealed-his-real-height-amid-varying-rumors-last-year/',
+        description: 'Recap of the 60 Minutes exchange and Hart\u2019s sneaker-vs-boot height arithmetic.',
+      },
+      {
+        title: 'Anderson Cooper Asks How Tall Kevin Hart Really Is \u2014 CinemaBlend',
+        url: 'https://www.cinemablend.com/television/anderson-cooper-out-here-asking-hard-hitting-questions-finally-know-how-tall-kevin-hart-is',
+        description: 'The full Cooper/Hart exchange: 5\u20195\u2033 (GQ), 5\u20194\u2033 (LA Times), 5\u20192\u2033 (\u201Csome other place\u201D).',
+      },
+      {
+        title: 'How Tall Is Ariana Grande? \u2014 GigWise',
+        url: 'https://www.gigwise.com/how-tall-is-ariana-grande-learn-the-truth-behind-her-height/',
+        description: 'Grande\u2019s listed 5\u20190\u2033 (152 cm) versus her own 5\u20192\u2033 claim \u2014 the mild dispute flagged in this article.',
+      },
+      {
+        title: 'Bruno Mars Height: Is He Really That Short? \u2014 GigWise',
+        url: 'https://www.gigwise.com/bruno-mars-height-is-he-really-that-short/',
+        description: 'The 5\u20195\u2033 (165 cm) consensus figure for Mars, corroborated across listings.',
+      },
+      {
+        title: 'Bruno Mars on His Height \u2014 NME',
+        url: 'https://www.nme.com/news/music/bruno-mars-7-1216763',
+        description: 'Mars himself addressing the 5\u20195\u2033 figure with his characteristic good humour.',
+      },
+      {
+        title: 'The Shortest Men in Hollywood \u2014 Alot Living',
+        url: 'https://living.alot.com/entertainment/the-shortest-men-in-hollywood--20743/16?multipage=2',
+        description: 'Tom Cruise at 5\u20197\u2033 and the camera tricks used to make him look taller opposite stars like Diaz and Kidman.',
+      },
+      {
+        title: 'Simone Biles Height Comparison: Photos \u2014 ComingSoon',
+        url: 'https://www.comingsoon.net/guides/features/1792702-simone-biles-height-comparison-photos-showing-how-tall-she-is',
+        description: 'Photo-by-photo height context: Biles at 4\u20198\u2033 next to Shaq (7\u20191\u2033), Owens (5\u201911\u2033) and teammates.',
+      },
+      {
+        title: 'How Tall Is Kevin Hart? The Funny Truth \u2014 Bored Panda',
+        url: 'https://www.boredpanda.com/how-tall-is-kevin-hart/?_t=1&_f=featured',
+        description: 'The 2019 lie-detector admission (5\u20192\u2033), the CDC 5\u20199\u2033 male average, and DeVito\u2019s 4\u201910\u2033 for context.',
+      },
+    ],
+    relatedSlugs: ['celebrity-couples-biggest-height-differences', 'us-presidents-heights-ranked', 'dwayne-johnson-height-comparison', 'how-to-measure-your-height-accurately', 'what-is-considered-tall-for-a-woman', 'kpop-idol-height-comparison'],
+  },
 ];
