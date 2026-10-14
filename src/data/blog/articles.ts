@@ -4357,5 +4357,239 @@ export const BLOG_ARTICLES: BlogArticle[] = [
       },
     ],
     relatedSlugs: ['one-piece-anime-character-heights', 'video-game-character-heights'],
+  },  {
+    slug: 'average-height-teenage-girl-by-age',
+    title: 'Average Height of a Teenage Girl by Age: 13 to 18, Charted & Visualised',
+    h1: 'Average Height of a Teenage Girl by Age (13\u201318)',
+    description:
+      'How tall is the average teenage girl at 13, 14, 15, 16, 17 and 18? CDC growth-chart averages in cm and feet/inches, normal percentile ranges, growth-spurt timing and when girls stop growing \u2014 all visualised to scale.',
+    category: 'guides',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-14T09:00:00Z',
+    updatedDate: '2026-10-14T09:00:00Z',
+    readingTimeMinutes: 10,
+    quickAnswer: {
+      summary:
+        'The average US girl stands 157.0 cm (5\u2019 2\u2033) at 13, 160.5 cm (5\u2019 3\u2033) at 14, 162.0 cm (5\u2019 4\u2033) at 15, 162.5 cm at 16, and about 163.0 cm (5\u2019 4\u2033) at 17 and 18 \u2014 50th-percentile figures from the CDC growth charts. Unlike boys, whose biggest spurt lands at 13\u201315, girls do most of their growing before the teen years: peak height velocity comes around age 11.8, and most girls reach near-final adult height by 14 or 15.',
+      keyTakeaway:
+        'At 13, the normal range spans more than half a foot \u2014 from about 4\u2019 11\u2033 (150 cm) to 5\u2019 5\u00be\u2033 (167 cm), the 10th\u201390th percentile band \u2014 so one measurement against the average says almost nothing. What matters is staying on your own percentile curve over time: a 5\u2019 0\u2033 13-year-old sits at the 25th percentile and is growing perfectly normally.',
+      dataPoints: [
+        { label: 'Average height at 13', value: '157.0 cm (5\u2019 2\u2033) \u2014 CDC 50th percentile' },
+        { label: 'Average height at 15', value: '162.0 cm (5\u2019 4\u2033) \u2014 near-final adult height' },
+        { label: 'Average height at 18', value: '~163.0 cm (5\u2019 4\u2033) \u2014 growth essentially complete' },
+        { label: 'Normal range at 13', value: '4\u2019 11\u2033 \u2013 5\u2019 5\u00be\u2033 (10th\u201390th percentile)' },
+        { label: 'Peak growth spurt', value: 'Around age 11.8 \u2014 before the teen years' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'female', customHeightCm: 151, label: 'Girl, age 12' },
+      { category: 'human', id: 'female', customHeightCm: 157, label: 'Girl, age 13' },
+      { category: 'human', id: 'female', customHeightCm: 160, label: 'Girl, age 14' },
+      { category: 'human', id: 'female', customHeightCm: 162, label: 'Girl, age 15' },
+      { category: 'human', id: 'female', customHeightCm: 163, label: 'Girl, age 16' },
+      { category: 'human', id: 'female', customHeightCm: 161, label: 'Average woman (161 cm)' },
+    ],
+    toolActionTitle: 'Plot your height against the average teen',
+    toolActionDescription:
+      'The visualiser above is preloaded with average girls aged 12 to 16, from 151 cm up to 163 cm, plus the average adult woman at 161 cm. Add your own height and see exactly where you sit on the curve.',
+    comparisonTable: {
+      caption: 'Average (50th-percentile) height for US girls by age, per CDC growth charts \u2014 watch the year-over-year gains shrink to zero',
+      headers: ['Age', 'Average height', 'Gain vs previous year'],
+      rows: [
+        ['13', '157.0 cm (5\u2019 2\u2033)', '\u2014'],
+        ['14', '160.5 cm (5\u2019 3\u2033)', '+3.5 cm'],
+        ['15', '162.0 cm (5\u2019 4\u2033)', '+1.5 cm'],
+        ['16', '162.5 cm (5\u2019 4\u2033)', '+0.5 cm'],
+        ['17', '163.0 cm (5\u2019 4\u2033)', '+0.5 cm'],
+        ['18', '163.0 cm (5\u2019 4\u2033)', '\u00b10'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-headline-numbers',
+        heading: 'The Headline Numbers: Average Height, Age 13 to 18',
+        subheading: 'Girls do their growing early \u2014 the average 14-year-old is nearly done.',
+        paragraphs: [
+          'The numbers themselves are refreshingly uncomplicated. According to the CDC growth charts \u2014 the percentile tables paediatricians use in the United States \u2014 the average (50th-percentile) girl stands 157.0 cm (5\u2019 2\u2033) at 13, 160.5 cm (5\u2019 3\u2033) at 14, 162.0 cm (5\u2019 4\u2033) at 15, 162.5 cm at 16, and about 163.0 cm (5\u2019 4\u2033) at 17 and 18. Between her 13th and 18th birthdays, the average girl gains roughly 6 cm \u2014 about two and a half inches. That is it. Compare the mirror-image boy figures: the average boy gains about 20 cm over the same stretch, most of it arriving after 13.',
+          'The year-over-year column in the table above tells the whole story. Between 13 and 14 the average girl adds 3.5 cm \u2014 the last real year of noticeable growth. Between 14 and 15, only 1.5 cm. After that, the curve is essentially flat: half a centimetre a year, then nothing. This is the great inversion of the teenage years: boys do their dramatic growing during the teens, while girls do theirs before the teens even begin. If you are 14 and feel like your growth has stopped, you are almost certainly not imagining it \u2014 the fastest part is years behind you.',
+          'Newer measured data tells the same story. The CDC\u2019s National Health and Nutrition Examination Survey, measured by trained examiners in 2021\u20132023, found average heights of 61.6 in (156.5 cm) for the 12\u201313 band, 62.8 in (159.5 cm) for 14\u201315, and 63.6 in (161.5 cm) for both 16\u201317 and 18\u201319 \u2014 the flat plateau after 15 shows up whether you read the chart medians or the freshest measured means. One caveat, as ever: these are US figures. Average teen heights differ around the world, so if you are reading from outside the United States, treat this as a reference curve rather than a personal benchmark \u2014 see our guide to average height by country for the global picture.',
+        ],
+        image: {
+          src: '/assets/blog/average-height-teenage-girl-by-age/teen-girl-growth.png',
+          alt: 'Height comparison chart showing a girl aged 12 at 151 cm, aged 13 at 157 cm, aged 14 at 160 cm and aged 16 at 163 cm next to an average adult woman at 161 cm',
+          caption: 'The plateau, rendered to scale: from 151 cm at 12 to 157 cm at 13 is the last real year of gains; by 16 the average girl has reached her adult height, matching the average woman.',
+        },
+        callout: {
+          title: 'The headline figures',
+          text: '13 \u2192 157.0 cm (5\u2019 2\u2033) \u00b7 14 \u2192 160.5 cm (5\u2019 3\u2033) \u00b7 15 \u2192 162.0 cm (5\u2019 4\u2033) \u00b7 16 \u2192 162.5 cm \u00b7 17\u201318 \u2192 163.0 cm (5\u2019 4\u2033). CDC 50th-percentile values.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-growth-spurt',
+        heading: 'The Growth Spurt: Peaking Around Age 11\u201312',
+        subheading: 'The fastest year of a girl\u2019s life happens before she turns 12 \u2014 and most of it is done by 13.',
+        paragraphs: [
+          'Every child\u2019s growth rate hits a single fastest point that researchers call peak height velocity, or PHV. In girls it lands around 11.8 years on average \u2014 roughly two years earlier than in boys \u2014 and the window of rapid growth is roughly ages 10 to 13. The peak itself is less intense than in boys but it is still dramatic: girls typically gain around 7 to 9 cm in their fastest year, which is why ages 10 to 12 are the years of the constantly-outgrown shoes and the school photos where the heights seem to reshuffle every term.',
+          'Growth does not arrive evenly, either. As in boys, the limbs \u2014 arms and legs \u2014 tend to lengthen first, with the spine and torso catching up later, which is why preteen girls so often look noticeably \u201Cleggy\u201D for a stretch. Hips and shoulder development follow the height spurt, not lead it. And there is one milestone that often gets misread: menarche does not end growth, it just slows it. Research published in Pediatric Research finds girls typically gain a further 2.5 to 5 cm (roughly 1 to 3 inches) after their first period, and clinical sources describe the same range \u2014 the fastest growth is behind them, but the plates are not yet closed.',
+          'Timing, as always, varies enormously. Girls who start puberty early \u2014 before about age 8 \u2014 tend to grow fast and stop sooner; girls who start late grow later but for longer. This is why early developers often tower over their classmates at 11 and then get overtaken by the late bloomers in their mid-teens. In a typical Year 7 or Year 8 classroom, the tallest students are disproportionately girls, and that is exactly what the biology predicts: at 12, girls average about 151 cm while boys are still waiting for their spurt to begin.',
+        ],
+        callout: {
+          title: 'Menarche is not the finish line',
+          text: 'The average girl gains a further 2.5\u20135 cm (1\u20133 inches) after her first period. If the fastest growth seemed to happen before puberty\u2019s visible milestones, that is normal \u2014 peak velocity at ~11.8 usually arrives first.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'the-normal-range',
+        heading: 'What Counts as Normal: The Wide Middle',
+        subheading: 'At 13, the \u201Cnormal\u201D band is more than half a foot wide \u2014 and that is the point.',
+        paragraphs: [
+          'The most useful numbers in this guide are not the averages but the percentile bands. At 13, the 10th percentile sits at about 4\u2019 11\u2033 (150 cm) and the 90th percentile at about 5\u2019 5\u00be\u2033 (167 cm) \u2014 a band more than 17 cm wide in which every girl is growing perfectly normally. A 13-year-old at 5\u2019 0\u2033 lands around the 25th percentile: clearly below the average, completely ordinary. Read that slowly if you need to: a healthy 13-year-old can be anywhere from just under five feet to nearly five foot six, and the difference is timing and genetics, not health.',
+          'One piece of search-result debris to avoid: you will find pages claiming the CDC says the average 13-year-old girl is 4\u2019 11\u2033. That is wrong. Four-eleven is the 10th percentile \u2014 well below average \u2014 not the 50th. The confusion likely comes from mixing up the CDC and WHO references (the WHO median for 13 is about 155.4 cm versus the CDC\u2019s 157 cm) or from sloppy reading of the percentile tables. Wherever you read growth numbers, check whether they say 50th percentile: if they do not, the number is not an average.',
+          'This is why a single measurement against the average is nearly useless for teenagers. Paediatricians do not care much whether a 13-year-old is at the 50th or the 25th percentile \u2014 they care whether she stays roughly on her own curve over time. A girl who tracks the 20th percentile steadily from 9 to 15 is following a perfectly healthy path; a girl who drops from the 75th to the 25th between annual check-ups is the one who prompts a closer look. The trend is the diagnosis; the number is just a data point.',
+        ],
+        callout: {
+          title: 'The rule to remember',
+          text: 'Track your percentile curve over time, not your height against the average on any single day. A steady curve anywhere inside the 5th\u201395th band is healthy growth \u2014 and 4\u2019 11\u2033 is the 10th percentile, not the average.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'when-girls-stop-growing',
+        heading: 'When Do Girls Stop Growing?',
+        subheading: 'Most reach final adult height at 14\u201315 \u2014 a full two years before the boys.',
+        paragraphs: [
+          'For most girls, meaningful height growth ends at 14 or 15. The mechanism is the same as in boys, just on an earlier schedule: the growth plates \u2014 thin bands of cartilage near the ends of the long bones where lengthening happens \u2014 gradually fuse under the influence of rising sex hormones, locking in final height. This typically completes around 14 to 16, and the chart data backs it up: girls aged 14 to 19 add only about half an inch in total after 14. By 15, the average girl is within a centimetre or two of where she will stay.',
+          'There are telltale signs the end is near, and they mirror the boys\u2019 list on an earlier clock. Hands and feet are usually the first body parts to stop \u2014 a shoe size that has not budged in a year is a classic marker of the plates closing. Periods becoming regular, and the 1-to-3 inches of growth in the year or two after menarche, usually bracket the final stretch. Healthline\u2019s clinical summary puts most girls at adult height around 15 or 16, and paediatric sources converge on the same window: the meaningful growth is done by about 15.',
+          'As with boys, \u201Cmost\u201D leaves a tail. Late bloomers \u2014 girls whose puberty arrives at the late end of the normal range \u2014 can keep adding small amounts into their late teens, and their final heights typically land right on their genetic potential on a delayed schedule. The practical upshot: at 14 the average girl has about 2 to 3 cm of height still to gain; at 16 she is essentially there. Anything a 16-year-old measures is, for all practical purposes, her adult height.',
+        ],
+        callout: {
+          title: 'Quick reality check',
+          text: 'Most girls reach final adult height between 14 and 15, with growth plates fusing around 14\u201316. Girls 14\u201319 add only ~0.5 in (1.3 cm) more after 14 \u2014 a 14-year-old\u2019s height is nearly her adult height.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'boys-vs-girls',
+        heading: 'Girls vs Boys at the Same Age',
+        subheading: 'At 12\u201313, the girls are taller. By 15, the boys have blown past \u2014 and it never flips back.',
+        paragraphs: [
+          'One of the great quiet surprises of the teenage height curve is that at 13, girls are on average slightly taller than boys \u2014 about 157 cm to the boys\u2019 156.2 cm. The explanation is pure scheduling: female peak height velocity lands around 11.8 years, roughly two years before the boys\u2019, so in early Year 9 the girls have already spurted and the boys have not yet started. In a typical classroom at that age, the tallest students are disproportionately girls, and it is entirely expected.',
+          'The crossover comes fast, around 14 to 15. By 14 the average boy (163.8 cm) is past the average girl (160.5 cm); by 15 he is at 170.1 cm against her 162.0 cm; by 18 he is 176.1 cm against her ~163 cm \u2014 a gap of roughly 13 cm, about five inches. Because male peak velocity comes about two years later and benefits from a longer runway before the growth plates fuse at 16\u201318, the average adult man ends up several inches taller than the average adult woman. That two-year lag is, in essence, most of the adult height gap.',
+          'The adult endpoints confirm it. Measured CDC data for adults aged 20 and over (NHANES 2021\u20132023) gives the average woman 63.5 in (161.3 cm) and the average man 68.9 in (175 cm). Notice where the teenage curves land: the average 16-year-old girl (162.5 cm) is already a shade taller than the average adult woman, while the average 16-year-old boy (173.4 cm) still has a couple of centimetres to find. Girls finish first; boys finish taller. For the full boys\u2019 curve, see our companion guide to average height of a teenage boy by age.',
+        ],
+        image: {
+          src: '/assets/blog/average-height-teenage-girl-by-age/teen-girl-vs-adults.png',
+          alt: 'Height comparison chart showing a girl aged 13 at 157 cm next to an average woman at 161 cm and an average man at 175 cm',
+          caption: 'The crossover age, rendered to scale: at 13 a girl (157 cm) is close to the average woman\u2019s height (161 cm), while the average man (175 cm) stands a full head taller.',
+        },
+        callout: {
+          title: 'The crossover in one line',
+          text: 'Girls average ~157 cm at 13 vs boys\u2019 156.2 cm; by 15 the average boy is 170.1 cm \u2014 past the average girl\u2019s adult height of ~162 cm \u2014 and the gap only widens.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'how-to-measure-and-track',
+        heading: 'How to Measure and Track Growth Properly',
+        subheading: 'One careful measurement beats ten casual ones.',
+        paragraphs: [
+          'Most height anxiety is measurement noise. People are tallest in the morning (up to a centimetre taller than in the evening, thanks to spinal compression through the day), and self-measurements with shoes on, hair included, or a tape held at an angle can easily wander by 2 or 3 cm \u2014 enough to swallow a whole year of a girl\u2019s teenage growth. Do it properly: barefoot, heels, buttocks, shoulder blades and the back of the head against a wall, looking straight ahead, with a flat object \u2014 a book works \u2014 lowered onto the crown of the head. Mark, measure the mark, and write it down with the date. (Our full walkthrough of measuring your height accurately at home covers the technique step by step.)',
+          'Then stop measuring daily. During the teens, measuring every six months is plenty; between measurements, the changes are invisible and watching them will only feed the anxiety. Plot each result on a standard CDC percentile chart \u2014 there are free calculators and printables \u2014 and watch the curve, not the number. As long as the points stay roughly on the same percentile line, growth is proceeding normally, whatever the absolute figure says. Crossing two or more major percentile bands up or down between check-ups is the pattern paediatricians actually watch for.',
+          'Finally, the unsexy truth about maximising height: genetics sets the ceiling, and everything else just helps you reach it. Adequate sleep matters more than most teens expect \u2014 the bulk of daily growth hormone is released during deep, slow-wave sleep. So do protein, calcium and vitamin D in the diet, regular exercise, and avoiding the things that can genuinely stunt growth, like smoking or chronic undernutrition. No stretch, supplement or \u201Cheight exercise\u201D programme can add centimetres the growth plates will not give \u2014 but a well-slept, well-fed teenager will reach every centimetre her genes allow.',
+        ],
+        callout: {
+          title: 'When to see a doctor, not the internet',
+          text: 'Book a check-up if growth has fallen off its curve, puberty shows no signs at all by 13, or you are worried for any other reason. A bone-age X-ray can estimate remaining growth potential in minutes \u2014 forums cannot.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the average height of a 13-year-old girl?',
+        answer:
+          '157.0 cm (5\u2019 2\u2033), the 50th-percentile value on the CDC growth charts. Newer measured NHANES data (2021\u20132023) gives a 12\u201313 band mean of 61.6 in (156.5 cm), consistent with the chart median. The normal range at 13 is wide \u2014 from about 4\u2019 11\u2033 to 5\u2019 5\u00be\u2033 \u2014 so the average is a midpoint, not a target.',
+      },
+      {
+        question: 'Is 5\u2019 0\u2033 short for a 13-year-old girl?',
+        answer:
+          'It is below average but entirely normal: 5\u2019 0\u2033 (152 cm) sits around the 25th percentile for 13-year-old girls, meaning one in four girls her age is that height or shorter. One junk claim floating around search results says the CDC average is 4\u2019 11\u2033 \u2014 wrong; 4\u2019 11\u2033 is the 10th percentile.',
+      },
+      {
+        question: 'When do girls stop growing in height?',
+        answer:
+          'Most girls reach near-final adult height between 14 and 15, with growth plates fusing around 14\u201316. Girls aged 14\u201319 add only about half an inch more after 14 in total. Late bloomers can keep adding small amounts into their late teens and still reach their full genetic potential.',
+      },
+      {
+        question: 'How much taller will a girl grow after her period starts?',
+        answer:
+          'Typically a further 2.5 to 5 cm (about 1 to 3 inches) in the year or two after menarche, according to research published in Pediatric Research and clinical summaries. Menarche slows growth but does not end it \u2014 the fastest growth usually happened before the first period arrived.',
+      },
+      {
+        question: 'Are girls taller than boys at 13?',
+        answer:
+          'On average, slightly \u2014 about 157 cm for girls against 156.2 cm for boys at 13. Girls reach peak height velocity around 11.8 years, roughly two years earlier than boys. Boys overtake around 14\u201315 and finish several inches taller on average: 176.1 cm vs ~163 cm at 18.',
+      },
+      {
+        question: 'I am 14 and 5\u2019 1\u2033. Will I still grow taller?',
+        answer:
+          'Probably a little: most girls add another 1.5\u20132.5 cm between 14 and 15 before growth flattens almost completely. If you are tracking on your own percentile curve \u2014 whatever percentile that is \u2014 you are growing normally. If growth has fallen off your curve or puberty has shown no signs at all by 13, that is worth mentioning at a check-up.',
+      },
+    ],
+    sources: [
+      {
+        title: 'CDC Growth Charts: United States (Set 1) \u2014 Clinical Growth Charts',
+        url: 'http://stacks.cdc.gov/view/cdc/28022/cdc_28022_DS1.pdf',
+        description: 'The official CDC stature-for-age growth charts for ages 2\u201320, the primary reference behind every percentile figure in this article.',
+      },
+      {
+        title: 'What Is the Average Height of a 12-Year-Old Female? \u2014 ids-water.com',
+        url: 'https://ids-water.com/2020/03/09/what-is-the-average-height-of-a-12-year-old-female/',
+        description: 'CDC-chart-based percentile figures for girls by age (12: 59.4 in/151 cm 50th percentile), used to cross-check the 50th, 10th and 90th values.',
+      },
+      {
+        title: 'How Tall Is a Regular 13-Year-Old? \u2014 ids-water.com',
+        url: 'https://ids-water.com/2020/10/04/how-tall-is-a-regular-13-year-old/',
+        description: 'CDC-chart medians for 13-year-olds (girls: 61.8 in/157 cm), including the note that growth essentially stops after ~15 for girls.',
+      },
+      {
+        title: 'Average Height for Women: Charts, Ranges, and CDC Data \u2014 Healthcare on Time',
+        url: 'https://www.healthcareontime.com/health-tips/average-height-for-women-charts-ranges-and-cdc-data/',
+        description: 'NHANES 2021\u20132023 age-band means for girls (12\u201313: 61.6 in; 14\u201315: 62.8 in; 16\u201319: 63.6 in) and 1\u20133 inches of growth after menarche.',
+      },
+      {
+        title: 'FastStats: Body Measurements \u2014 CDC',
+        url: 'https://www.cdc.gov/nchs/fastats/body-measurements.htm',
+        description: 'Measured average heights for US adults 20+: women 63.5 in (161.3 cm), men 68.9 in (175 cm), from NHANES August 2021\u2013August 2023.',
+      },
+      {
+        title: 'When Do Girls Stop Growing? \u2014 Healthline',
+        url: 'https://www.healthline.com/health/when-do-girls-stop-growing',
+        description: 'Most girls reach adult height around 15 or 16, growing a few inches in the year or two after menstruation begins; puberty timelines for girls vs boys.',
+      },
+      {
+        title: 'When Do Girls Stop Growing? \u2014 CoursePivot',
+        url: 'https://coursepivot.com/blog/when-do-girls-stop-growing/',
+        description: 'Most girls stop growing in height between 14 and 16, with growth plates fusing in that window.',
+      },
+      {
+        title: 'Growth and Your 13- to 18-Year-Old \u2014 KidsHealth',
+        url: 'https://www.kidshealth.org/ChildrensAlabama/en/parents/growth-6-12.html',
+        description: 'Parent guide to puberty growth: girls reach final adult height by about age 14 or 15, ahead of boys.',
+      },
+      {
+        title: 'Timing of Pubertal Maturation and Growth \u2014 Pediatric Research',
+        url: 'https://www.nature.com/articles/pr1993645',
+        description: 'Peak height velocity timing (~11.8 years in girls) and the 2.5\u20135 cm of height typically gained after menarche.',
+      },
+      {
+        title: 'Is 5\u2019 0\u2033 Short for a 13-Year-Old Girl? \u2014 Vintage Is the New Old',
+        url: 'https://www.vintageisthenewold.com/faq/is-5-0-short-for-a-13-year-old-girl',
+        description: 'Percentile placement at 13 (5\u2019 0\u2033 \u2248 25th percentile) and the 10th\u201390th normal band of ~4\u2019 11\u2033 to 5\u2019 5\u00be\u2033.',
+      },
+    ],
+    relatedSlugs: ['average-height-teenage-boy-by-age', 'what-is-considered-tall-for-a-woman', 'how-to-measure-your-height-accurately', 'is-6-feet-rare-height-percentiles'],
   },
 ];

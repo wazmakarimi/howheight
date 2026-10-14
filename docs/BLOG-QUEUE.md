@@ -52,7 +52,7 @@ Eiffel Tower note for the 1:10-scale approach).
 
 - [x] #21 `how-to-measure-your-height-accurately` — How to Measure Your Height Accurately at Home (No Stadiometer Needed) (guides) — published 2026-10-13 (with 2 site-rendered screenshots)
 - [x] #22 `jujutsu-kaisen-character-heights` — Jujutsu Kaisen Character Heights Compared: Gojo, Yuji, Sukuna & More Visualized (anime) — published 2026-10-13 (with 2 site-rendered screenshots)
-- [ ] #23 `average-height-teenage-girl-by-age` — Average Height of a Teenage Girl by Age (13–18): Growth Chart Data (guides)
+- [x] #23 `average-height-teenage-girl-by-age` — Average Height of a Teenage Girl by Age (13–18): Growth Chart Data (guides) — published 2026-10-14 (with 2 site-rendered screenshots)
 - [ ] #24 `shortest-celebrities-height-comparison` — The Shortest Celebrities: Danny DeVito, Kevin Hart, Simone Biles & More Ranked (celebrities)
 - [ ] #25 `human-vs-elephant-height-comparison` — Human vs Elephant Height Comparison: How Big Is an Elephant Really? (animals)
 - [ ] #26 `average-soccer-player-height-by-position` — Average Soccer Player Height by Position: Goalkeepers to Strikers (sports)
