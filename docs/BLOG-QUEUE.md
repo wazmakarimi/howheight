@@ -60,3 +60,17 @@ Eiffel Tower note for the 1:10-scale approach).
 - [ ] #28 `human-vs-polar-bear-height-comparison` — Human vs Polar Bear Height Comparison: Standing Face to Face (animals)
 - [ ] #29 `tallest-female-celebrities-height-comparison` — The Tallest Female Celebrities: Ranked & Visualized (celebrities)
 - [ ] #30 `eiffel-tower-height-vs-human` — Eiffel Tower Height vs Human: Just How Big Is It Really? (objects)
+
+## Ranked queue (from Bing Search Console data, 2026-10-15)
+
+Source: `~/workspace/user/files/howheight.org_KeywordReport_10_15_2026.csv`
+(404 keywords, 5,604 impressions, 104 clicks). Indian celebrity height queries
+drive 607 impressions at positions 3.9–5.4 with ~zero clicks — dedicated
+comparison articles targeting these queries. Tall-woman-vs-short-man is a
+recurring engaged niche in the data.
+
+- [ ] #31 `amitabh-bachchan-height-comparison` — Amitabh Bachchan's Height (6'2") Compared: vs Jaya, Abhishek & Co-Stars, Visualized (celebrities)
+- [ ] #32 `bollywood-actors-height-comparison` — Bollywood Actors' Heights Ranked: Salman, Aamir, Ranbir, Hrithik, Akshay & Ranveer (celebrities)
+- [ ] #33 `indian-cricketers-height-comparison` — Indian Cricketers' Heights Compared: Sachin, Virat, Rohit & More (sports)
+- [ ] #34 `bollywood-actresses-height-comparison` — Bollywood Actresses' Heights: Deepika, Priyanka & More, Visualized (celebrities)
+- [ ] #35 `tall-woman-short-man-height-comparison` — Tall Woman vs Short Man Height Difference, Visualized (guides)
