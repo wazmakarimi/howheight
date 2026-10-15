@@ -74,3 +74,5 @@ recurring engaged niche in the data.
 - [ ] #33 `indian-cricketers-height-comparison` — Indian Cricketers' Heights Compared: Sachin, Virat, Rohit & More (sports)
 - [ ] #34 `bollywood-actresses-height-comparison` — Bollywood Actresses' Heights: Deepika, Priyanka & More, Visualized (celebrities)
 - [ ] #35 `tall-woman-short-man-height-comparison` — Tall Woman vs Short Man Height Difference, Visualized (guides)
+- [ ] #36 `tom-cruise-height-comparison` — Tom Cruise's Real Height (5'7"): Hollywood's Famous Short Leading Men, Visualized (celebrities)
+- [ ] #37 `superhero-heights-compared` — Superhero Heights Compared: Spider-Man, Cyclops, Batman & More Visualized (anime)
