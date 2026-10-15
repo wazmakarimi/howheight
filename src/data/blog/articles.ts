@@ -4848,4 +4848,182 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['celebrity-couples-biggest-height-differences', 'us-presidents-heights-ranked', 'dwayne-johnson-height-comparison', 'how-to-measure-your-height-accurately', 'what-is-considered-tall-for-a-woman', 'kpop-idol-height-comparison'],
   },
+  {
+    slug: 'human-vs-elephant-height-comparison',
+    title: 'Human vs Elephant Height Comparison: How Big Is an Elephant Really? Visualised',
+    h1: 'Human vs Elephant Height Comparison: How Big Is an Elephant Really?',
+    description: 'How tall is an elephant compared to a human? An African bush elephant bull stands 3.2 m (10.5 ft) at the shoulder — nearly twice the height of an average man — while a newborn calf is already a metre tall. See true-scale visuals and the measurements behind the legend.',
+    category: 'animals',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-15T09:00:00Z',
+    updatedDate: '2026-10-15T09:00:00Z',
+    readingTimeMinutes: 8,
+    quickAnswer: {
+      summary: 'The African bush elephant — the largest living land animal — stands about 3.2 m (10.5 ft) at the shoulder in adult males and 2.6 m (8 ft 6 in) in females, measured from the ground to the top of the shoulder. That is nearly twice as tall as an average adult man (176 cm / 5 ft 9 in). The smaller Asian elephant averages 2.75 m (9 ft) in males and 2.4 m (7 ft 10 in) in females, while the African forest elephant is the smallest at about 2.16 m (7 ft 1 in).',
+      keyTakeaway: 'A fully grown African bush elephant bull is about 1.8× as tall as an average man — the man\'s head barely reaches the elephant\'s belly.',
+      dataPoints: [
+        { label: 'African Bush Elephant Bull (avg)', value: '3.2 m (10.5 ft) at the shoulder' },
+        { label: 'African Bush Elephant Cow (avg)', value: '2.6 m (8 ft 6 in) at the shoulder' },
+        { label: 'Largest Reliably Measured Bull', value: '3.96 m (13.0 ft), Angola, 1974 — an outlier' },
+        { label: 'Newborn Elephant Calf', value: '~90 cm–1 m (3 ft) — about knee-height on an adult' },
+        { label: 'vs Average Man (176 cm)', value: 'Bull ≈ 1.8× taller; man\'s head ≈ elephant\'s belly level' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male' },
+      { category: 'human', id: 'female' },
+      { category: 'animal', id: 'elephant', customHeightCm: 320, label: 'African Bush Elephant Bull (320 cm)' },
+      { category: 'animal', id: 'elephant', customHeightCm: 260, label: 'African Bush Elephant Cow (260 cm)' },
+      { category: 'object', id: 'door', customHeightCm: 210, label: 'Standard Door (210 cm)' },
+    ],
+    toolActionTitle: 'Visualise an Elephant Against Humans and Everyday Objects',
+    toolActionDescription: 'Compare a 320 cm African bush elephant bull with a 175 cm adult man, a 260 cm cow with a 161 cm woman, and add a 210 cm door to the same canvas — all at true scale on the HowHeight comparison tool.',
+    comparisonTable: {
+      caption: 'Elephant Heights vs Average Humans and Everyday Objects at True Scale',
+      headers: ['Animal / Person', 'Height (Metric)', 'Height (Imperial)', 'vs 176 cm Man'],
+      rows: [
+        ['African Bush Elephant Bull (largest measured)', '3.96 m', '13 ft 0 in', '2.25× — an outlier from Angola, 1974'],
+        ['African Bush Elephant Bull (average)', '3.2 m', '10 ft 6 in', '1.8× taller — man\'s head reaches its belly'],
+        ['Asian Elephant Bull (average)', '2.75 m', '9 ft 0 in', '1.56× taller'],
+        ['African Bush Elephant Cow (average)', '2.6 m', '8 ft 6 in', '1.48× taller'],
+        ['Asian Elephant Cow (average)', '2.4 m', '7 ft 10 in', '1.36× taller'],
+        ['African Forest Elephant (average)', '2.16 m', '7 ft 1 in', '1.23× taller — the smallest elephant species'],
+        ['Standard Interior Door', '210 cm', '6 ft 11 in', 'A door comes up to the bull\'s belly'],
+        ['Average Adult Man', '176 cm', '5 ft 9 in', '—'],
+        ['Average Adult Woman', '161 cm', '5 ft 3 in', '92% of the man\'s height'],
+        ['Newborn Elephant Calf', '~90–100 cm', '3 ft 0 in', 'About half the man\'s height'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'how-tall-is-an-elephant',
+        heading: 'How Tall Is an Elephant? The Headline Numbers',
+        subheading: 'Three living species, one giant. Measured ground to shoulder.',
+        paragraphs: [
+          'The African bush elephant (Loxodonta africana) is the largest and heaviest living land animal. Under optimal conditions, fully grown mature males average about 3.20 metres (10.5 feet) at the shoulder and weigh around 6.0 tonnes; about 90% of full-grown males fall between 3.04 and 3.36 m. Mature females are markedly smaller, averaging about 2.60 metres (8 ft 6 in) at the shoulder and roughly 3.0 tonnes. They reach their full stature late: males finish growing at around age 40, females at about 25.',
+          'The other two species run smaller. Asian elephants (Elephas maximus) average about 2.75 m (9 ft) at the shoulder in males and 2.4 m (7 ft 10 in) in females. The African forest elephant (Loxodonta cyclotis) is the smallest of the three, averaging about 2.16 m (7 ft 1 in) — though large forest bulls can reach around 2.5 m.',
+          'An often-repeated figure puts the tallest elephant ever at nearly 4 metres. That number comes from a single, reliably measured bull shot in Angola in 1974, which stood 3.96 m (13.0 ft) at the shoulder and was estimated at 10.4 tonnes. It is a genuine record, but it is an outlier — not a typical size — and the research literature is careful to present it that way.',
+        ],
+        callout: {
+          title: 'Where exactly is an elephant measured?',
+          text: 'Elephant height is measured at the shoulder (the withers) — from the ground straight up to the top of the shoulder — usually with a measuring stick or laser rangefinder. On Asian elephants the highest point of the body is actually the top of the head, not the shoulder, so all standard figures are shoulder heights for comparability.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'elephant-vs-human',
+        heading: 'Elephant vs Human at True Scale: Nearly Twice as Tall',
+        subheading: 'A man\'s head reaches only to the bull\'s belly.',
+        paragraphs: [
+          'Put an average man (175 cm / 5 ft 9 in) next to an African bush elephant bull (320 cm), and the numbers turn into something you can feel: the bull\'s shoulder is about 1.8 times the man\'s height. The top of the man\'s head comes up to roughly the elephant\'s belly; the animal\'s back is almost a full metre above him.',
+          'The scale gets stranger in the other direction. A newborn elephant calf stands roughly 90 cm to 1 metre tall — already about knee-height on an adult man and heavier than a full-grown adult (90–120 kg / 200–264 lb). By the time it is a juvenile, it can be taller than the adults trying to feed it.',
+          'Even the smaller species tower over us. An Asian elephant bull at 2.75 m is more than a metre taller than an average man, and the smallest species of all — the forest elephant at about 2.16 m — is still nearly half a metre above a tall human.',
+        ],
+      },
+      {
+        id: 'male-vs-female-elephants',
+        heading: 'Bulls vs Cows: Elephants Have Dramatic Size Dimorphism',
+        subheading: 'Males are over 20% taller than females — and nearly twice as heavy.',
+        paragraphs: [
+          'Male and female elephants are not simply big and bigger. Adult bush elephant bulls average 3.2 m at the shoulder against 2.6 m for cows — more than 20% taller — and at roughly 6 tonnes to the cow\'s 3 tonnes, males are about twice as heavy. The same pattern holds for Asian elephants (2.75 m males vs 2.4 m females) and is part of why herds are structured around older, larger matriarchs rather than the biggest males.',
+          'Place an average woman (161 cm / 5 ft 3 in) beside a 260 cm cow and the cow still stands about 1.6 times her height — the woman\'s head reaches roughly the elephant\'s lower ribcage. This is the most common real-world encounter a safari-goer has: cows and their calves make up the visible family groups, while the huge bulls are often solitary.',
+          'The difference also matters for conservation counts: aerial surveys that estimate an elephant\'s age class from shoulder height have to be calibrated separately for bulls and cows, or the population model skews young.',
+        ],
+      },
+      {
+        id: 'elephant-vs-door',
+        heading: 'An Elephant vs the Objects in Your House',
+        subheading: 'A standard door comes up to the bull\'s belly.',
+        paragraphs: [
+          'Everyday objects make elephant height intuitive. A standard interior door (210 cm / 6 ft 11 in) — the tallest thing most of us routinely stand under — reaches only about two-thirds of the way up an African bush elephant bull. In other words, if an elephant walked into your house, the doorframe would come up to its belly.',
+          'The comparison works in the other direction too: an elephant\'s ear can be up to 2 metres long and 1.5 metres wide — roughly the size of that same doorframe — and its tusks can curve a metre or more out from the head.',
+          'For the US-imperial minded: 3.2 metres is 10 feet 6 inches. That is taller than a standard basketball hoop (10 feet / 3.05 m) — the elephant could walk under the hoop and the rim would clear its head by only a few centimetres.',
+        ],
+      },
+      {
+        id: 'newborn-calf',
+        heading: 'A Baby Elephant Is Already a Metre Tall',
+        subheading: 'The longest pregnancy on land produces a walking toddler.',
+        paragraphs: [
+          'Elephant gestation lasts around 22 months — the longest of any land mammal — and the foetus is well developed by the time it arrives. Newborn calves stand about 90 cm to 1 metre tall (about 3 feet) and weigh 90–120 kg (200–264 lb). They are born while the mother is standing and can stand and walk within hours, which is essential because the herd keeps moving.',
+          'A calf is born without visible tusks and with poor eyesight, finding its mother by touch, scent, and sound. It nurses with its mouth — not its trunk, as many suppose — and suckles for two to three years, drinking several litres of milk a day.',
+          'Calves grow slowly and stay dependent for years; they cannot fend for themselves until roughly four to five years old. They are at their most vulnerable in the first months, which is why the herd forms a protective circle around the calf when predators are near — a behaviour that makes the family groups you see on safari so cohesive.',
+        ],
+      },
+      {
+        id: 'built-to-be-huge',
+        heading: 'What It Takes to Be 3.2 Metres Tall',
+        subheading: 'A trunk with tens of thousands of muscles, and ears like radiators.',
+        paragraphs: [
+          'Being the largest land animal is an engineering project. The trunk alone — a fusion of nose and upper lip — is one of the most complex organs in nature, operated by tens of thousands of individual muscles, giving it both the delicacy to pick up a leaf and the strength to uproot a tree. Elephants eat 150–170 kg of food and drink up to 190 litres of water a day to sustain their bulk.',
+          'The famous ears are heat radiators. They can measure up to 2 × 1.5 metres and are laced with large blood vessels; flapping them creates air currents and cools blood before it recirculates — elephants have few sweat glands and rely on the ears, mud, and water to thermoregulate.',
+          'Size does not make them safe. Since the 2021 reassessment that split African elephants into two species, the African bush elephant has been listed as Endangered and the forest elephant as Critically Endangered on the IUCN Red List, driven by ivory poaching and habitat loss. Seeing a 3.2-metre bull on a true-scale chart is a reminder of how much stands to be lost.',
+        ],
+        callout: {
+          title: 'Why elephant numbers keep changing',
+          text: 'In 2021, the IUCN recognised the African forest elephant as a separate species from the bush elephant for the first time. Before that split, they were assessed together as Vulnerable. Modern conservation figures always specify which species they refer to.',
+          type: 'info',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is an elephant in feet?',
+        answer: 'Adult male African bush elephants average 10.5 feet (3.2 m) at the shoulder, and females average 8.5 feet (2.6 m). Asian elephant males average about 9 feet (2.75 m). The largest reliably measured elephant — a bull from Angola in 1974 — stood 13.0 feet (3.96 m), but that is an outlier.',
+      },
+      {
+        question: 'How tall is an elephant compared to a human?',
+        answer: 'An African bush elephant bull at 3.2 m is about 1.8 times as tall as an average adult man (176 cm / 5 ft 9 in). The man\'s head comes up to roughly the elephant\'s belly. Even the smallest species, the forest elephant at 2.16 m, is noticeably taller than a 6-foot man.',
+      },
+      {
+        question: 'How is an elephant\'s height measured?',
+        answer: 'Elephants are measured at the shoulder (the withers) — from the ground vertically up to the top of the shoulder — using a measuring stick or laser rangefinder. On Asian elephants the top of the head is actually the highest point, but shoulder height is the standard for all species.',
+      },
+      {
+        question: 'How tall is a baby elephant at birth?',
+        answer: 'A newborn elephant calf stands about 90 cm to 1 metre (3 feet) tall and weighs 90–120 kg (200–264 lb). After the longest pregnancy of any land mammal — about 22 months — it can stand and walk within hours of birth.',
+      },
+      {
+        question: 'Which type of elephant is the biggest?',
+        answer: 'The African bush elephant (Loxodonta africana) is the largest: males average 3.2 m (10.5 ft) at the shoulder. Asian elephants are mid-sized (males ~2.75 m), and the African forest elephant is the smallest, averaging about 2.16 m (7 ft 1 in).',
+      },
+      {
+        question: 'How much does an elephant weigh?',
+        answer: 'African bush elephant males average about 6 tonnes (6.6 short tons), females about 3 tonnes. Weights vary widely with age, season, and habitat — the largest reliably measured bull was estimated at 10.4 tonnes.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Wikipedia — African bush elephant',
+        url: 'https://en.wikipedia.org/wiki/African_bush_elephant',
+        description: 'Core size data: 3.20 m average shoulder height for males, 2.60 m for females, 90% ranges, 6.0 t / 3.0 t weights, and the 3.96 m Angola 1974 record bull.',
+      },
+      {
+        title: 'Britannica — African Bush Elephant',
+        url: 'https://www.britannica.com/animal/African-bush-elephant?oasmId=10382',
+        description: 'Independent confirmation: males 3.2–4 m at the shoulder, 20%+ taller than females, 4,500–6,100 kg, 149–169 kg of food and up to 190 litres of water per day.',
+      },
+      {
+        title: 'Wikipedia — African forest elephant',
+        url: 'https://en.wikipedia.org/wiki/African_forest_elephant',
+        description: 'Forest elephant size data: the smallest of the three species, averaging about 2.16 m at the shoulder with large bulls up to ~2.5 m.',
+      },
+      {
+        title: 'Wikipedia — Indian elephant',
+        url: 'https://en.wikipedia.org/wiki/Indian_elephant',
+        description: 'Asian elephant measurements: males averaging ~2.75 m and females ~2.4 m at the shoulder.',
+      },
+      {
+        title: 'PLOS ONE — Asian elephant morphometrics',
+        url: 'https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0150533',
+        description: 'Peer-reviewed study on elephant measurement conventions: shoulder-height methodology using measuring sticks and laser rangefinders.',
+      },
+      {
+        title: 'Africa Safaris — Baby Elephants: Facts, Description, Behavior & More',
+        url: 'https://www.africa-safaris.com/baby-elephant',
+        description: 'Calf data: 90–120 kg birth weight, ~1 m tall at birth, tusks appearing at 2–3 years, and trunk development timeline.',
+      },
+    ],
+    relatedSlugs: ['human-vs-giraffe-height-comparison', 'human-vs-horse-height-comparison', 'human-vs-door-height-comparison', 'how-to-measure-your-height-accurately', 'average-height-by-country-tallest-nations', 'how-rare-is-6ft5-height'],
+  },
 ];
