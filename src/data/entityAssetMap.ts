@@ -5390,7 +5390,7 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "bear",
       "grizzly"
     ],
-    "status": "needs-review",
+    "status": "verified",
     "indexable": false
   },
   "animal-blue-whale-01": {
@@ -5526,7 +5526,7 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
     "aliases": [
       "lion"
     ],
-    "status": "needs-review",
+    "status": "verified",
     "indexable": false
   },
   "animal-tiger-01": {
@@ -5546,7 +5546,7 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "tiger",
       "bengal-tiger"
     ],
-    "status": "needs-review",
+    "status": "verified",
     "indexable": false
   },
   "animal-wolf-01": {
@@ -5564,7 +5564,7 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
     "aliases": [
       "wolf"
     ],
-    "status": "needs-review",
+    "status": "verified",
     "indexable": false
   },
   "animal-001": {

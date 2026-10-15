@@ -79,6 +79,58 @@ export const CLIENT_ARCHETYPES: Record<string, ArchetypeAsset> = {
     },
     "isPng": true
   },
+  "lion": {
+    "id": "lion",
+    "category": "animals",
+    "name": "Lion",
+    "heightCm": 120,
+    "publicPath": "/assets/entities/animals/animal-lion-01.png",
+    "viewBox": "0 0 1600 1600",
+    "measurementAnchor": {
+      "groundY": 1600,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
+  "tiger": {
+    "id": "tiger",
+    "category": "animals",
+    "name": "Tiger",
+    "heightCm": 110,
+    "publicPath": "/assets/entities/animals/animal-tiger-01.png",
+    "viewBox": "0 0 1826 1105",
+    "measurementAnchor": {
+      "groundY": 1105,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
+  "bear": {
+    "id": "bear",
+    "category": "animals",
+    "name": "Bear",
+    "heightCm": 130,
+    "publicPath": "/assets/entities/animals/animal-bear-01.png",
+    "viewBox": "0 0 1585 986",
+    "measurementAnchor": {
+      "groundY": 986,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
+  "wolf": {
+    "id": "wolf",
+    "category": "animals",
+    "name": "Wolf",
+    "heightCm": 80,
+    "publicPath": "/assets/entities/animals/animal-wolf-01.png",
+    "viewBox": "0 0 1423 1144",
+    "measurementAnchor": {
+      "groundY": 1144,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
   "basketball-hoop": {
     "id": "basketball-hoop",
     "category": "sports",

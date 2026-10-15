@@ -106,7 +106,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 140,
     helpText: 'Measured from the ground to the top of the shoulder.',
     modelType: 'lion',
-    assetId: 'animal-035',
+    assetId: 'lion',
   },
   {
     id: 'tiger',
@@ -119,7 +119,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 130,
     helpText: 'Measured from the ground to the top of the shoulder.',
     modelType: 'tiger',
-    assetId: 'animal-035',
+    assetId: 'tiger',
   },
   {
     id: 'bear',
@@ -132,7 +132,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 170,
     helpText: 'Measured at the shoulder while walking on all fours (stands up to 2.5 m on hind legs).',
     modelType: 'bear',
-    assetId: 'animal-bear-01',
+    assetId: 'bear',
   },
   {
     id: 'wolf',
@@ -145,7 +145,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 95,
     helpText: 'Measured from the ground to the shoulder/withers.',
     modelType: 'wolf',
-    assetId: 'animal-wolf-01',
+    assetId: 'wolf',
   },
   {
     id: 'deer',
