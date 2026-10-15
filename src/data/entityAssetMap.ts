@@ -5429,7 +5429,25 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
       "cat",
       "feline"
     ],
-    "status": "needs-review",
+    "status": "verified",
+    "indexable": false
+  },
+  "animal-rabbit-01": {
+    "rawAssetId": "animal-rabbit-01",
+    "name": "Rabbit",
+    "category": "animals",
+    "heightCm": 25,
+    "measurementType": "ground-to-top",
+    "subgroup": "[A] Small Mammals",
+    "tags": [
+      "animals",
+      "rabbit"
+    ],
+    "aliases": [
+      "rabbit",
+      "bunny"
+    ],
+    "status": "verified",
     "indexable": false
   },
   "animal-dog-01": {

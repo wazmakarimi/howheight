@@ -79,6 +79,32 @@ export const CLIENT_ARCHETYPES: Record<string, ArchetypeAsset> = {
     },
     "isPng": true
   },
+  "cat": {
+    "id": "cat",
+    "category": "animals",
+    "name": "Cat",
+    "heightCm": 25,
+    "publicPath": "/assets/entities/animals/animal-cat-01.png",
+    "viewBox": "0 0 1448 1521",
+    "measurementAnchor": {
+      "groundY": 1521,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
+  "rabbit": {
+    "id": "rabbit",
+    "category": "animals",
+    "name": "Rabbit",
+    "heightCm": 25,
+    "publicPath": "/assets/entities/animals/animal-rabbit-01.png",
+    "viewBox": "0 0 1129 1481",
+    "measurementAnchor": {
+      "groundY": 1481,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
   "lion": {
     "id": "lion",
     "category": "animals",

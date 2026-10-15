@@ -41,7 +41,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 45,
     helpText: 'Measured from ground to shoulder (domestic cats typically range from 23 to 28 cm).',
     modelType: 'cat',
-    assetId: 'animal-028',
+    assetId: 'cat',
   },
   {
     id: 'horse',
@@ -210,7 +210,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 50,
     helpText: 'Sitting height from ground to head/ears.',
     modelType: 'rabbit',
-    assetId: 'animal-028',
+    assetId: 'rabbit',
   },
   {
     id: 'kangaroo',

@@ -4792,15 +4792,28 @@ export const RAW_ASSET_INVENTORY: RawAsset[] = [
   {
     "id": "animal-cat-01",
     "category": "animals",
-    "filename": "animal-cat-01.svg",
-    "sourceFile": "src/assets/entities/animals/animal-cat-01.svg",
-    "publicPath": "/assets/entities/animals/animal-cat-01.svg",
-    "extension": "svg",
-    "viewBox": "245.33 237.05 1124.29 497.17",
-    "aspectRatio": 2.261,
-    "fileSize": 8397,
+    "filename": "animal-cat-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-cat-01.png",
+    "publicPath": "/assets/entities/animals/animal-cat-01.png",
+    "extension": "png",
+    "viewBox": "0 0 1448 1521",
+    "aspectRatio": 0.9520,
+    "fileSize": 131485,
     "isUiIcon": false,
-    "isValidSvg": true
+    "isValidSvg": false
+  },,
+  {
+    "id": "animal-rabbit-01",
+    "category": "animals",
+    "filename": "animal-rabbit-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-rabbit-01.png",
+    "publicPath": "/assets/entities/animals/animal-rabbit-01.png",
+    "extension": "png",
+    "viewBox": "0 0 1129 1481",
+    "aspectRatio": 0.7623,
+    "fileSize": 88883,
+    "isUiIcon": false,
+    "isValidSvg": false
   },
   {
     "id": "animal-dog-01",
