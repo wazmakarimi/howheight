@@ -4919,6 +4919,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'The scale gets stranger in the other direction. A newborn elephant calf stands roughly 90 cm to 1 metre tall — already about knee-height on an adult man and heavier than a full-grown adult (90–120 kg / 200–264 lb). By the time it is a juvenile, it can be taller than the adults trying to feed it.',
           'Even the smaller species tower over us. An Asian elephant bull at 2.75 m is more than a metre taller than an average man, and the smallest species of all — the forest elephant at about 2.16 m — is still nearly half a metre above a tall human.',
         ],
+        image: {
+          src: '/assets/blog/human-vs-elephant-height-comparison/elephant-vs-man.png',
+          alt: 'HowHeight comparison chart: 320 cm African bush elephant bull next to a 175 cm adult man',
+          caption: 'A 320 cm African bush elephant bull beside a 175 cm adult man at true scale — the man\'s head barely clears the elephant\'s belly.',
+        },
       },
       {
         id: 'male-vs-female-elephants',
@@ -4929,6 +4934,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'Place an average woman (161 cm / 5 ft 3 in) beside a 260 cm cow and the cow still stands about 1.6 times her height — the woman\'s head reaches roughly the elephant\'s lower ribcage. This is the most common real-world encounter a safari-goer has: cows and their calves make up the visible family groups, while the huge bulls are often solitary.',
           'The difference also matters for conservation counts: aerial surveys that estimate an elephant\'s age class from shoulder height have to be calibrated separately for bulls and cows, or the population model skews young.',
         ],
+        image: {
+          src: '/assets/blog/human-vs-elephant-height-comparison/elephant-vs-woman.png',
+          alt: 'HowHeight comparison chart: 260 cm African bush elephant cow next to a 161 cm adult woman',
+          caption: 'A 260 cm African bush elephant cow next to an average adult woman (161 cm) — the cow is about 1.6× taller.',
+        },
       },
       {
         id: 'elephant-vs-door',
@@ -4939,6 +4949,11 @@ export const BLOG_ARTICLES: BlogArticle[] = [
           'The comparison works in the other direction too: an elephant\'s ear can be up to 2 metres long and 1.5 metres wide — roughly the size of that same doorframe — and its tusks can curve a metre or more out from the head.',
           'For the US-imperial minded: 3.2 metres is 10 feet 6 inches. That is taller than a standard basketball hoop (10 feet / 3.05 m) — the elephant could walk under the hoop and the rim would clear its head by only a few centimetres.',
         ],
+        image: {
+          src: '/assets/blog/human-vs-elephant-height-comparison/elephant-vs-door.png',
+          alt: 'HowHeight comparison chart: 175 cm man, 210 cm standard door and 320 cm African bush elephant bull at true scale',
+          caption: 'Man, door and elephant at true scale — a 210 cm door comes up to the bull\'s belly.',
+        },
       },
       {
         id: 'newborn-calf',
