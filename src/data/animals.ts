@@ -80,7 +80,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 420,
     helpText: 'Measured from ground to the top of the shoulder (African bush elephants average 3.2 m).',
     modelType: 'elephant',
-    assetId: 'animal-118',
+    assetId: 'elephant',
   },
   {
     id: 'giraffe',
@@ -93,7 +93,7 @@ export const ANIMALS: AnimalDefinition[] = [
     maxHeightCm: 600,
     helpText: 'Total standing height measured from ground to the top of the horns (ossicones).',
     modelType: 'giraffe',
-    assetId: 'animal-giraffe-01',
+    assetId: 'giraffe',
   },
   {
     id: 'lion',

@@ -5467,7 +5467,7 @@ export const ENTITY_ASSET_MAP: Record<string, EntityMapping> = {
     "aliases": [
       "elephant"
     ],
-    "status": "needs-review",
+    "status": "verified",
     "indexable": false
   },
   "animal-giraffe-01": {

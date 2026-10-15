@@ -66,6 +66,19 @@ export const CLIENT_ARCHETYPES: Record<string, ArchetypeAsset> = {
     },
     "isPng": true
   },
+  "elephant": {
+    "id": "elephant",
+    "category": "animals",
+    "name": "African Elephant",
+    "heightCm": 320,
+    "publicPath": "/assets/entities/animals/animal-elephant-01.png",
+    "viewBox": "0 0 1483 1198",
+    "measurementAnchor": {
+      "groundY": 1198,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
   "basketball-hoop": {
     "id": "basketball-hoop",
     "category": "sports",
