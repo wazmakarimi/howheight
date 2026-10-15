@@ -1,6 +1,6 @@
 # Blog Topic Queue — HowHeight.org
 
-Standing instruction from the site owner (Oct 2026): **publish 2 articles per day**,
+Standing instruction from the site owner (Oct 2026, changed 2026-10-15): **publish 1 article every 3 days**,
 picked in order from this queue. When you publish an article, check it off here
 and commit this file together with the article.
 
