@@ -5041,4 +5041,206 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['human-vs-giraffe-height-comparison', 'human-vs-horse-height-comparison', 'human-vs-door-height-comparison', 'how-to-measure-your-height-accurately', 'average-height-by-country-tallest-nations', 'how-rare-is-6ft5-height'],
   },
+  {
+    slug: 'average-soccer-player-height-by-position',
+    title: 'Average Soccer Player Height by Position: Goalkeepers to Strikers (2026)',
+    h1: 'Average Soccer Player Height by Position: Goalkeepers to Strikers',
+    description:
+      'How tall is the average soccer player? Compare goalkeeper, defender, midfielder and striker heights — plus the tallest and shortest pros ever — visualised to scale.',
+    category: 'sports',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-18T09:00:00Z',
+    updatedDate: '2026-10-18T09:00:00Z',
+    readingTimeMinutes: 8,
+    quickAnswer: {
+      summary:
+        'The average professional soccer player is about 5 ft 11 in (181 cm) tall, and height sorts neatly by position: goalkeepers average 6 ft 2 in (188 cm), defenders 6 ft 0 in (183 cm), midfielders 5 ft 11 in (180 cm) and strikers 5 ft 11 in (181 cm). The men\'s game spans a full 54 cm — from 1.54 m Élton to 2.08 m Kristof van Hout.',
+      keyTakeaway:
+        'Position height averages reflect the job: keepers need reach, defenders need aerial presence, and midfielders and forwards trade stature for agility. Yet the extremes prove skill decides careers — Lionel Messi won everything at 5 ft 7 in (170 cm), shorter than the average amateur.',
+      dataPoints: [
+        { label: 'Average goalkeeper height', value: '~6 ft 2 in (188 cm)' },
+        { label: 'Average defender height', value: '~6 ft 0 in (183 cm)' },
+        { label: 'Average midfielder height', value: '~5 ft 11 in (180 cm)' },
+        { label: 'Average striker height', value: '~5 ft 11 in (181 cm)' },
+        { label: 'Tallest pro ever', value: 'Kristof van Hout — 6 ft 10 in (208 cm)' },
+        { label: 'Shortest pro ever', value: 'Élton — 5 ft 1 in (1.54 m)' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 188, label: 'Avg Goalkeeper' },
+      { category: 'human', id: 'male', customHeightCm: 183, label: 'Avg Defender' },
+      { category: 'human', id: 'male', customHeightCm: 181, label: 'Avg Striker' },
+      { category: 'human', id: 'male', customHeightCm: 180, label: 'Avg Midfielder' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average Man' },
+      { category: 'human', id: 'male', customHeightCm: 208, label: 'Kristof van Hout' },
+      { category: 'human', id: 'male', customHeightCm: 170, label: 'Lionel Messi' },
+      { category: 'human', id: 'male', customHeightCm: 154, label: 'Élton' },
+    ],
+    toolActionTitle: 'Stand next to the pros',
+    toolActionDescription:
+      'The visualiser above is preloaded with the average heights for every position, the average man, and the record holders at both ends. Add your own height and see exactly where you stand next to the average goalkeeper, Kristof van Hout and Lionel Messi.',
+    comparisonTable: {
+      caption: 'Average professional soccer player height by position (men\'s game; World Cup and league data)',
+      headers: ['Position', 'Average height', 'Why'],
+      rows: [
+        ['Goalkeeper', '6 ft 2 in (188 cm)', 'Reach across the goal; dominant in the air on crosses'],
+        ['Defender', '6 ft 0 in (183 cm)', 'Aerial duels, heading clearances, defensive walls'],
+        ['Midfielder', '5 ft 11 in (180 cm)', 'Balance of stamina, agility and duel strength'],
+        ['Striker', '5 ft 11 in (181 cm)', 'Mix of aerial presence and mobility in the box'],
+        ['Overall average (pro men)', '5 ft 11 in (181 cm)', 'Slightly above the average adult man (175 cm)'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'position-height-ladder',
+        heading: 'The Position Ladder: 180 cm to 188 cm',
+        subheading: 'Height rises as you move backwards down the pitch — goalkeepers sit a full eight centimetres above midfielders.',
+        paragraphs: [
+          'Analysis of World Cup 2018 squads puts the average professional soccer player at 5 ft 11 in (181 cm) — and the number barely moves across sources. SoccerPrime\'s tournament data and European league studies cluster between 180 cm and 182 cm, making soccer\'s average player a few centimetres taller than the average adult man (about 175 cm) but far shorter than the giants of basketball or volleyball.',
+          'The position averages tell the real story. Goalkeepers stand tallest at roughly 6 ft 2 in (188 cm) — World Cup research published in 2026 measured them at 189 cm, and a peer-reviewed 2026 study in the Indonesian Journal of Kinanthropology recorded 189.8 cm across its sample. Defenders average about 6 ft 0 in (183 cm), with centre-backs a shade taller than full-backs. Midfielders sit around 5 ft 11 in (180 cm) — the 2026 study measured 178 cm for midfielders, the shortest outfield group — and strikers average 5 ft 11 in (181 cm), though attacker figures vary most by competition.',
+          'That ladder is no accident. It maps directly onto what each position is asked to do, 90 minutes a week, for a decade. The next section breaks down the biomechanics behind each rung.',
+        ],
+        image: {
+          src: '/assets/blog/average-soccer-player-height-by-position/soccer-positions.png',
+          alt: 'Height comparison chart showing the average goalkeeper at 188 cm, average defender at 183 cm, average striker at 181 cm and average midfielder at 180 cm',
+          caption: 'The position ladder visualised to scale: goalkeepers tower a full 8 cm above midfielders.',
+        },
+        callout: {
+          title: 'Ranges, not rulers',
+          text: 'Position averages are derived statistics from tournament and league squads, not official FIFA measurements. Attackers vary most: 175–180 cm in World Cup research, 181 cm in WC 2018 data, 182 cm in a 2026 study, and up to 183 cm for Premier League strikers alone.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'why-positions-sort-by-height',
+        heading: 'Why Height Sorts by Position',
+        subheading: 'Reach, aerial ability and a low centre of gravity — each position buys a different physical advantage.',
+        paragraphs: [
+          'Goalkeepers are the tallest because their job is literally about covering space: a regulation goal is 7.32 m wide and 2.44 m high, and every extra centimetre of reach and leap shrinks the angles a shooter can exploit. Height also dominates in the six-yard box, where a keeper must rise above a crowd to claim crosses. World Cup research notes the effect plainly: goalkeepers average 189 cm "because they need exceptional reach to block shots" — the largest single-position premium in the sport.',
+          'Defenders are next because their core currency is winning the ball in the air. Centre-backs contest headers on goal kicks, clearances and set pieces dozens of times a match, and taller players also make better defensive walls at free kicks. The 2026 IJOK study confirmed the split statistically: goalkeepers and centre-backs differed significantly in height from midfielders and forwards, while full-backs sat closer to the midfield group.',
+          'Midfielders and forwards are the shortest groups because their game is played on the ground. Attacking players need "mobility with high acceleration", as the World Cup research puts it — and a lower centre of gravity is a genuine biomechanical edge for dribbling, sharp turns and bursting through gaps. Shorter players change direction faster, stay closer to the ball, and are harder to mark in tight spaces. That is why the two greatest attackers ever, Maradona (165 cm) and Messi (170 cm), were both shorter than the average midfielder.',
+        ],
+        callout: {
+          title: 'The arms race',
+          text: 'Researchers describe height selection in football as an "anthropometric arms race": once some teams field tall players for headers and walls, rivals must match them to compete — which is why height premiums persist even in a skill-dominated sport.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'extremes-tallest-shortest',
+        heading: 'The Extremes: 1.54 m to 2.08 m',
+        subheading: '54 cm — nearly two feet — separates the tallest and shortest professionals in history.',
+        paragraphs: [
+          'At the top stands Kristof van Hout, the 6 ft 10 in (2.08 m) Belgian goalkeeper who played for Standard Liège, Genk and Delhi Dynamos. He is widely documented as the tallest professional footballer in the game\'s history, a distinction he shares only with Scottish striker Paul Millar, also 2.08 m. Van Hout\'s frame gave him such reach that he barely needed to jump for corners — though his career also shows that extreme height carries coordination and mobility costs most clubs are wary of.',
+          'The other end belongs to Élton José Xavier Gomes, the 5 ft 1 in (1.54 m) Brazilian attacking midfielder nicknamed "Élton Arábia" during his Middle East career. He debuted for Corinthians in 2004, scored on his debut for Steaua București in 2007, and was voted into the fans\' team of the decade after a single season in Romania. The record is technically shared: Poland\'s Marcin Garuch and Qatar\'s Jafal Rashed Al-Kuwari are also listed at 1.54 m.',
+          'Put the two together and the spread is startling: van Hout is 54 cm — 35% — taller than Élton. The average man (175 cm) sits almost exactly halfway between them. Yet both had long professional careers at the position where their body was supposedly wrong: a keeper who could hardly be beaten in the air, and a playmaker nobody could catch.',
+        ],
+        image: {
+          src: '/assets/blog/average-soccer-player-height-by-position/soccer-extremes.png',
+          alt: 'Height comparison chart showing Kristof van Hout at 208 cm, Peter Crouch at 201 cm, the average man at 175 cm, Lionel Messi at 170 cm and Élton at 154 cm',
+          caption: 'The full 54 cm spread of the men\'s professional game: van Hout at 208 cm to Élton at 154 cm.',
+        },
+      },
+      {
+        id: 'star-heights-messi-crouch',
+        heading: 'Famous Players: Where the Stars Sit',
+        subheading: 'Messi thrived 11 cm below the striker average; Crouch and Courtois towered above it.',
+        paragraphs: [
+          'Lionel Messi, at 5 ft 7 in (170 cm), is the most decorated proof that height is optional in football. He sits 11 cm below the average striker and a full 5 cm below the average midfielder — yet his low centre of gravity became his signature weapon: defenders could not get a shoulder into him, and he could turn in spaces taller players could not even enter. Diego Maradona was shorter still at 165 cm.',
+          'At the opposite extreme of stardom, Peter Crouch (2.01 m, 6 ft 7 in) built a Premier League career on exactly what his height bought: an unmatched aerial threat — 53 headed goals, a league record — while Thibaut Courtois (2.00 m, 6 ft 7 in) used his wingspan to become one of the world\'s elite goalkeepers, a modern heir to the reach advantage that pushes the goalkeeper average so high.',
+          'The giants tier makes the scale visceral: Courtois and Crouch stand a full 25 cm above the average man, and van Hout clears them by another 7 cm. But the career lesson runs the other way: the all-time greats cluster at both ends, and the middle — the 181 cm average — is simply where most careers live.',
+        ],
+        image: {
+          src: '/assets/blog/average-soccer-player-height-by-position/soccer-giants.png',
+          alt: 'Height comparison chart showing Kristof van Hout at 208 cm, Peter Crouch at 201 cm, Thibaut Courtois at 200 cm and the average man at 175 cm',
+          caption: 'The giants tier: Courtois (200 cm), Crouch (201 cm) and van Hout (208 cm) against the average man (175 cm).',
+        },
+      },
+      {
+        id: 'how-tall-needs-to-be',
+        heading: 'How Tall Do You Actually Need to Be?',
+        subheading: 'Below about 175 cm you need elite technique; above 190 cm you need to move like a smaller player.',
+        paragraphs: [
+          'If you are shorter than average, the data is encouraging. The shortest outfield group — midfielders at roughly 178–180 cm — still sits above the general population, but the game\'s history is full of players who broke the mould: Messi (170 cm), Maradona (165 cm), Élton (154 cm), and Lorenzo Insigne (163 cm), the shortest player at a major European club. What they shared was not height but elite close control, acceleration and game intelligence — the exact traits a low centre of gravity amplifies.',
+          'If you are tall, the premium is real but conditional. Goalkeepers and centre-backs convert height directly into saves and clearances, which is why those averages sit at 188 cm and 185 cm respectively. But tall attackers must pair stature with mobility — Crouch\'s longevity came from touch and timing as much as his head, and the modern game increasingly asks tall forwards to press and run channels like smaller players.',
+          'The honest answer from the numbers: around 175–185 cm you fit the game\'s physical template with the least friction. Outside that band, you need a compensating superpower — and football history suggests that superpower is usually skill, not size. Try it yourself: add your height to the visualiser above and see which position average you land closest to.',
+        ],
+        callout: {
+          title: 'The takeaway',
+          text: 'Height opens doors by position — 188 cm for keepers, 183 cm for defenders — but the widest door in football history was opened by a 170 cm forward. Skill decides; size only suggests.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'What is the average height of a professional soccer player?',
+        answer: 'About 5 ft 11 in (181 cm) for men\'s professional football, based on World Cup 2018 squad data and European league analyses. Sources cluster between 180 cm and 182 cm — a few centimetres above the average adult man.',
+      },
+      {
+        question: 'Which position has the tallest soccer players?',
+        answer: 'Goalkeepers, at about 6 ft 2 in (188 cm) on average — World Cup research measured 189 cm. They need exceptional reach to cover the 7.32 m-wide goal and dominate crosses. Defenders are next at about 6 ft 0 in (183 cm).',
+      },
+      {
+        question: 'Are midfielders the shortest soccer players?',
+        answer: 'Yes, on average: midfielders sit around 5 ft 10 in to 5 ft 11 in (178–180 cm), the shortest outfield group. Their role rewards agility, stamina and quick turns, where a lower centre of gravity is a genuine advantage.',
+      },
+      {
+        question: 'Who is the tallest professional footballer ever?',
+        answer: 'Kristof van Hout, the 6 ft 10 in (2.08 m) Belgian goalkeeper, is widely documented as the tallest professional footballer in history — a distinction he shares with Scottish striker Paul Millar, also 2.08 m.',
+      },
+      {
+        question: 'Who is the shortest professional footballer ever?',
+        answer: 'Élton José Xavier Gomes, the 5 ft 1 in (1.54 m) Brazilian attacking midfielder, holds the most-cited record — shared with Poland\'s Marcin Garuch and Qatar\'s Jafal Rashed Al-Kuwari, both also listed at 1.54 m.',
+      },
+      {
+        question: 'Does height matter in soccer?',
+        answer: 'It matters by position: height buys reach for goalkeepers and aerial dominance for defenders, while shorter players gain agility and a lower centre of gravity. But the sport\'s greatest players — Messi at 170 cm, Maradona at 165 cm — prove elite skill outweighs any height number.',
+      },
+    ],
+    sources: [
+      {
+        title: 'MedicalXpress — "World Cup: What\'s just the right height for a soccer player?" (2026)',
+        url: 'https://medicalxpress.com/news/2026-06-world-cup-height-soccer-player.html',
+        description: 'World Cup research: goalkeepers 189 cm, defenders 183 cm, midfielders and forwards 175–180 cm; Maradona 165 cm, Messi 170 cm.',
+      },
+      {
+        title: 'SoccerPrime — "Average Height In Soccer: Does Height Matter?"',
+        url: 'https://soccerprime.com/average-height-soccer/',
+        description: 'FIFA World Cup 2018 squad data: goalkeepers 188 cm, defenders 183 cm, midfielders 180 cm, strikers 181 cm; overall average 181 cm.',
+      },
+      {
+        title: 'Indonesian Journal of Kinanthropology (2026) — height differences across playing positions',
+        url: 'https://journal.unesa.ac.id/index.php/IJOK/article/download/52196/16657',
+        description: 'Peer-reviewed ANOVA study: goalkeepers 189.8 cm, defenders 183.9 cm, attackers 182.4 cm, midfielders 178.0 cm; differences statistically significant (p < 0.001).',
+      },
+      {
+        title: 'SoccerNovo — "Does Height Matter in Soccer? What the Data Says"',
+        url: 'https://soccernovo.com/what-is-the-average-height-of-soccer-players/',
+        description: 'Position ranges: goalkeepers 6\'2"–6\'4", defenders 6\'0"–6\'2", midfielders 5\'8"–5\'11", forwards 6\'0"–6\'2"; biomechanics of the short-player edge.',
+      },
+      {
+        title: 'Wikipedia — Kristof Van Hout',
+        url: 'https://en.wikipedia.org/wiki/Kristof_Van_Hout',
+        description: 'Belgian goalkeeper (born 1987), 2.08 m (6 ft 10 in) — one of the tallest footballers in history; career across Belgium and the Indian Super League.',
+      },
+      {
+        title: 'The Sporting Blog — Élton José Xavier Gomes: the smallest professional footballer of all time',
+        url: 'https://thesporting.blog/elton-jose-xavier-gomes-smallest-professional-footballer/',
+        description: 'Brazilian attacking midfielder at 1.54 m (5 ft 1 in), widely regarded as the shortest footballer on record; Corinthians debut 2004, Steaua București 2007.',
+      },
+      {
+        title: 'GiveMeSport — "Who is the world\'s shortest footballer? Meet Elton"',
+        url: 'https://www.givemesport.com/88039040-who-is-the-worlds-shortest-footballer-meet-elton-arabia/',
+        description: 'Élton at 1.54 m — five inches shorter than Messi; career from Corinthians through Steaua București to the Middle East.',
+      },
+      {
+        title: 'Indian Super League — "Van Hout ready to scale greater heights with Delhi Dynamos"',
+        url: 'https://www.indiansuperleague.com/features/van-hout-ready-to-scale-greater-heights-with-delhi-dynamos',
+        description: '6\'10" (2.08 m) Kristof van Hout, "arguably the tallest professional football player in the world", on how his reach and arm span help him.',
+      },
+    ],
+    relatedSlugs: ['average-nfl-player-height-by-position', 'wnba-vs-nba-height-comparison', 'messi-vs-ronaldo-height-comparison', 'what-does-6-feet-look-like', 'how-height-comparison-works'],
+  },
+
 ];
