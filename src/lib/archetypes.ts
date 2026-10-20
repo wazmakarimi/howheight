@@ -325,6 +325,123 @@ export const CLIENT_ARCHETYPES: Record<string, ArchetypeAsset> = {
       "measurementY": 62.22
     },
     "isPng": false
+  },
+  "washing-machine": {
+    "id": "washing-machine",
+    "category": "objects",
+    "name": "Washing Machine",
+    "heightCm": 85,
+    "publicPath": "/assets/entities/objects/object_svg_61.svg",
+    "viewBox": "201.04 304.24 624.12 862.47",
+    "measurementAnchor": {
+      "groundY": 1166.71,
+      "measurementY": 304.24
+    },
+    "isPng": false
+  },
+  "object-114": {
+    "id": "object-114",
+    "category": "objects",
+    "name": "Car",
+    "heightCm": 145,
+    "publicPath": "/assets/entities/objects/object_svg_114.svg",
+    "viewBox": "149.7 207.32 734.31 250.92",
+    "measurementAnchor": {
+      "groundY": 458.24,
+      "measurementY": 207.32
+    },
+    "isPng": false
+  },
+  "celebrity-027": {
+    "id": "celebrity-027",
+    "category": "celebrities",
+    "name": "Leonardo DiCaprio",
+    "heightCm": 183,
+    "publicPath": "/assets/entities/celebrities/celebrity_img_27.png",
+    "viewBox": "0 0 313 966",
+    "measurementAnchor": {
+      "groundY": 966,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
+  "celebrity-036": {
+    "id": "celebrity-036",
+    "category": "celebrities",
+    "name": "Scarlett Johansson",
+    "heightCm": 160,
+    "publicPath": "/assets/entities/celebrities/celebrity_img_36.png",
+    "viewBox": "0 0 334 1134",
+    "measurementAnchor": {
+      "groundY": 1134,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
+  "celebrity-041": {
+    "id": "celebrity-041",
+    "category": "celebrities",
+    "name": "Zendaya",
+    "heightCm": 178,
+    "publicPath": "/assets/entities/celebrities/celebrity_img_41.png",
+    "viewBox": "0 0 258 832",
+    "measurementAnchor": {
+      "groundY": 832,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
+  "car": {
+    "id": "car",
+    "category": "objects",
+    "name": "Car",
+    "heightCm": 145,
+    "publicPath": "/assets/entities/objects/object_svg_114.svg",
+    "viewBox": "149.7 207.32 734.31 250.92",
+    "measurementAnchor": {
+      "groundY": 458.24,
+      "measurementY": 207.32
+    },
+    "isPng": false
+  },
+  "leonardo-dicaprio": {
+    "id": "leonardo-dicaprio",
+    "category": "celebrities",
+    "name": "Leonardo DiCaprio",
+    "heightCm": 183,
+    "publicPath": "/assets/entities/celebrities/celebrity_img_27.png",
+    "viewBox": "0 0 313 966",
+    "measurementAnchor": {
+      "groundY": 966,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
+  "scarlett-johansson": {
+    "id": "scarlett-johansson",
+    "category": "celebrities",
+    "name": "Scarlett Johansson",
+    "heightCm": 160,
+    "publicPath": "/assets/entities/celebrities/celebrity_img_36.png",
+    "viewBox": "0 0 334 1134",
+    "measurementAnchor": {
+      "groundY": 1134,
+      "measurementY": 0
+    },
+    "isPng": true
+  },
+  "zendaya": {
+    "id": "zendaya",
+    "category": "celebrities",
+    "name": "Zendaya",
+    "heightCm": 178,
+    "publicPath": "/assets/entities/celebrities/celebrity_img_41.png",
+    "viewBox": "0 0 258 832",
+    "measurementAnchor": {
+      "groundY": 832,
+      "measurementY": 0
+    },
+    "isPng": true
   }
 };
 

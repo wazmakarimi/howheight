@@ -140,7 +140,7 @@ export const OBJECTS: ObjectDefinition[] = [
     maxHeightCm: 105,
     helpText: 'Standard front-load or top-load height from floor.',
     modelType: 'washing-machine',
-    assetId: 'object-004',
+    assetId: 'washing-machine',
   },
   {
     id: 'wardrobe',
