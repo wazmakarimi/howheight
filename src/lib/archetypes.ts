@@ -312,6 +312,19 @@ export const CLIENT_ARCHETYPES: Record<string, ArchetypeAsset> = {
       "measurementY": 0
     },
     "isPng": true
+  },
+  "eiffel-tower": {
+    "id": "eiffel-tower",
+    "category": "objects",
+    "name": "Eiffel Tower",
+    "heightCm": 33000,
+    "publicPath": "/assets/entities/objects/object_svg_78.svg",
+    "viewBox": "37.25 62.22 947.57 1264.55",
+    "measurementAnchor": {
+      "groundY": 1326.77,
+      "measurementY": 62.22
+    },
+    "isPng": false
   }
 };
 
