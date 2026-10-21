@@ -56,7 +56,7 @@ Eiffel Tower note for the 1:10-scale approach).
 - [x] #24 `shortest-celebrities-height-comparison` — The Shortest Celebrities: Danny DeVito, Kevin Hart, Simone Biles & More Ranked (celebrities) — published 2026-10-14 (with 2 site-rendered screenshots)
 - [x] #25 `human-vs-elephant-height-comparison` — Human vs Elephant Height Comparison: How Big Is an Elephant Really? (animals) — published 2026-10-15
 - [x] #26 `average-soccer-player-height-by-position` — Average Soccer Player Height by Position: Goalkeepers to Strikers (sports) — published 2026-10-18 (with 3 site-rendered screenshots)
-- [ ] #27 `formula-1-driver-heights` — How Tall Are F1 Drivers? Every 2026 Driver's Height Compared (sports)
+- [x] #27 `formula-1-driver-heights` — How Tall Are F1 Drivers? Every 2026 Driver's Height Compared (sports) — published 2026-10-21 (with 3 site-rendered screenshots)
 - [ ] #28 `human-vs-polar-bear-height-comparison` — Human vs Polar Bear Height Comparison: Standing Face to Face (animals)
 - [ ] #29 `tallest-female-celebrities-height-comparison` — The Tallest Female Celebrities: Ranked & Visualized (celebrities)
 - [ ] #30 `eiffel-tower-height-vs-human` — Eiffel Tower Height vs Human: Just How Big Is It Really? (objects)
