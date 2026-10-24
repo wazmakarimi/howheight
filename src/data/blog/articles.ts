@@ -5474,4 +5474,195 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     relatedSlugs: ['average-nfl-player-height-by-position', 'wnba-vs-nba-height-comparison', 'average-soccer-player-height-by-position', 'messi-vs-ronaldo-height-comparison', 'how-height-comparison-works'],
   },
 
+  {
+    slug: 'human-vs-polar-bear-height-comparison',
+    title: 'Human vs Polar Bear Height Comparison: How Tall Is a Polar Bear Standing Up? Visualised',
+    h1: 'Human vs Polar Bear Height Comparison: Standing Face to Face',
+    description:
+      'How tall is a polar bear standing up? A male reaches about 3 m (10 ft) on its hind legs — 1.7× an average man — yet stands only 122–160 cm at the shoulder on all fours. See true-scale visuals of the Arctic giant.',
+    category: 'animals',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-24T09:00:00Z',
+    updatedDate: '2026-10-24T09:00:00Z',
+    readingTimeMinutes: 8,
+    quickAnswer: {
+      summary:
+        'An adult male polar bear stands about 3 m (10 ft) tall when it rears up on its hind legs — roughly 1.7 times the height of an average man (175 cm). Females are much smaller, reaching about 2.4 m (8 ft) standing. Scientists measure bears at the shoulder while on all fours, where an adult polar bear stands 122–160 cm (4 ft 0 in–5 ft 3 in) — below a grown man\'s eye line. Males weigh 350–700 kg (770–1,540 lb); females weigh roughly half that.',
+      keyTakeaway:
+        'A standing male polar bear towers about 1.7× over an average man — yet on all fours its shoulder sits below the man\'s chin, which is why standing height and shoulder height tell two very different stories.',
+      dataPoints: [
+        { label: 'Adult male polar bear (standing)', value: '~3 m (10 ft)' },
+        { label: 'Adult female polar bear (standing)', value: '~2.4 m (7 ft 10 in)' },
+        { label: 'Adult shoulder height (all fours)', value: '122–160 cm (4 ft 0 in–5 ft 3 in)' },
+        { label: 'Male weight', value: '350–700 kg (770–1,540 lb)' },
+        { label: 'Largest on record', value: '3.39 m (11 ft 1 in) mounted, Kotzebue Sound, 1960 — an outlier' },
+        { label: 'vs Average Man (175 cm)', value: 'Standing male ≈ 1.7× taller; shoulder ≈ 70–91% of the man\'s height' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average Man (175 cm)' },
+      { category: 'human', id: 'female', customHeightCm: 161, label: 'Average Woman (161 cm)' },
+      { category: 'animal', id: 'bear', customHeightCm: 300, label: 'Polar Bear — Standing Male (300 cm)' },
+      { category: 'animal', id: 'bear', customHeightCm: 210, label: 'Polar Bear — Standing Female (210 cm)' },
+      { category: 'animal', id: 'bear', customHeightCm: 145, label: 'Polar Bear — Shoulder, All Fours (145 cm)' },
+    ],
+    toolActionTitle: 'Visualise a Polar Bear Against Real Human Heights',
+    toolActionDescription:
+      'Place a 300 cm standing male polar bear next to a 175 cm man, a 210 cm standing female beside a 161 cm woman, and a 145 cm shoulder-on-all-fours bear against the man — all at true scale on the HowHeight comparison tool.',
+    comparisonTable: {
+      caption: 'Polar Bear Heights vs Average Humans at True Scale',
+      headers: ['Bear / Person', 'Height (Metric)', 'Height (Imperial)', 'vs 175 cm Man'],
+      rows: [
+        ['Polar bear male, standing (record, mounted 1960)', '3.39 m', '11 ft 1 in', '1.94× — mounted specimen; an outlier'],
+        ['Polar bear male, standing (typical large adult)', '3.0 m', '9 ft 10 in', '1.71× — the headline face-to-face number'],
+        ['Polar bear female, standing (up to)', '2.4 m', '7 ft 10 in', '1.37× — still dwarfs most men'],
+        ['Polar bear male, shoulder (all fours)', '122–160 cm', '4 ft 0 in–5 ft 3 in', 'Shoulder at or below the man\'s chin'],
+        ['Average man', '175 cm', '5 ft 9 in', '—'],
+        ['Average woman', '161 cm', '5 ft 3 in', '92% of the man\'s height'],
+        ['Grizzly male, standing (very large)', '~2.7 m', '8 ft 10 in', '1.54× — polar bears out-stand grizzlies'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'how-tall-is-a-polar-bear-standing-up',
+        heading: 'How Tall Is a Polar Bear Standing Up? The Headline Numbers',
+        subheading: 'Three metres on two legs — barely a man\'s eye line on four.',
+        paragraphs: [
+          'When an adult male polar bear rears up on its hind legs, it reaches about 3 m (10 ft) tall, according to Polar Bears International. Exceptionally large males can push past 3.3 m (11 ft), per the National Wildlife Federation. This is the posture that produces the famous photographs: a wall of white fur and muscle rising well above a human observer. An average man is 175 cm (5 ft 9 in); the bear beats him by more than a metre and a quarter.',
+          'Bears do not spend their lives standing, though. On all fours — their natural stance — an adult polar bear stands 122–160 cm (4 ft 0 in–5 ft 3 in) at the shoulder, depending on sex and size. Polar Bears International puts the typical range at 1–1.5 m, and the San Diego Zoo\'s fact sheet lists up to 1.7 m. In other words, an average man standing beside a polar bear on all fours is taller than the bear\'s shoulder. The animal\'s enormous body length (2.4–3 m nose to tail in males, 1.8–2.4 m in females) is laid out horizontally, not vertically.',
+          'Weight follows the same extreme scale. Adult males typically weigh 350–700 kg (770–1,540 lb), while females weigh roughly 150–250 kg (330–550 lb) — about half. A pregnant female can reach 500 kg. So the bear that stands below your chin on all fours may still outweigh you five to one.',
+        ],
+        callout: {
+          title: '\'Standing height\' is a behavioural estimate, not a tape-measure figure',
+          text: 'Bears rear up only briefly — to sniff, look around, or play — so the ~3 m standing figure is an estimate of a short-lived posture, not a standard measurement. Scientists measure bears at the shoulder on all fours, which is why serious sources always give both numbers.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'face-to-face-with-a-polar-bear',
+        heading: 'Face to Face With a 3-Metre Polar Bear',
+        subheading: 'A standing male is about 1.7× an average man.',
+        paragraphs: [
+          'Put a 175 cm man next to a 300 cm standing male polar bear and the comparison becomes visceral: the bear\'s head is roughly 125 cm — a full head and chest — above the man\'s. The animal weighs 350–700 kg against the man\'s ~70–80 kg, a mass ratio of roughly five to ten. Its front paws, each about 30 cm (12 inches) across in an adult, are wider than a man\'s head.',
+          'Most people misjudge this comparison because they picture the bear on all fours, where its shoulder is lower than a human\'s chin. The standing figure is what matters for the encounter people imagine — and it is worth remembering that a polar bear rearing up is usually just trying to see or smell better, not threatening. Bears stand to gather information, not to pick a fight.',
+          'The chart below renders the face-to-face comparison at true scale. Note that the site\'s bear silhouette is a generic bear model standing in for a polar bear — the height bars are the data that matter.',
+        ],
+        image: {
+          src: '/assets/blog/human-vs-polar-bear-height-comparison/polar-bear-vs-man.png',
+          alt: 'HowHeight comparison chart: 300 cm standing male polar bear next to a 175 cm adult man at true scale',
+          caption: 'A 300 cm standing male polar bear beside a 175 cm adult man at true scale — the bear is about 1.7× the man\'s height.',
+        },
+      },
+      {
+        id: 'males-dwarf-the-females',
+        heading: 'Bears vs Sows: Polar Bears Are Extremely Dimorphic',
+        subheading: 'Adult males are about twice the weight of females.',
+        paragraphs: [
+          'Few mammals show as stark a male–female size gap as the polar bear. Males measure 2.4–3 m in body length and weigh 350–700 kg; females measure 1.8–2.4 m and weigh 150–250 kg — roughly half the male\'s mass. Standing, the male reaches about 3 m while the female tops out around 2.4 m (7 ft 10 in). The polar bear is among the most sexually dimorphic of all mammals, surpassed only by the pinnipeds such as elephant seals.',
+          'Even the female, the \'small\' sex, dwarfs a human. A 210–240 cm standing sow is 1.2–1.4 times the height of a 175 cm man and outweighs him several times over. The chart below places both sexes against average humans: the woman at 161 cm reaches only about half the male\'s height, and even the female bear stands a head and a half above her.',
+          'The dimorphism is ecological, not decorative. Larger males dominate mating competition and can fast for months while guarding females; females invest instead in raising cubs through long denning periods, emerging with cubs they must then defend and feed. Pregnancy can push a female\'s weight to around 500 kg — her fattest and most capable hunting form.',
+        ],
+        image: {
+          src: '/assets/blog/human-vs-polar-bear-height-comparison/polar-bear-dimorphism.png',
+          alt: 'HowHeight comparison chart: 300 cm standing male polar bear, 210 cm standing female, 175 cm man and 161 cm woman at true scale',
+          caption: 'Sexual dimorphism at true scale — the 300 cm standing male towers over the 210 cm standing female, who still dwarfs both humans.',
+        },
+      },
+      {
+        id: 'why-scientists-measure-on-all-fours',
+        heading: 'Why Scientists Measure Polar Bears on All Fours',
+        subheading: 'Shoulder height is the reliable number.',
+        paragraphs: [
+          'Field researchers do not wait for a polar bear to stand up before reaching for the measuring tape. Shoulder height on all fours — typically 1.2–1.6 m, up to 1.7 m in the largest — is the standard because it is the posture the animal holds all day. It is consistent, repeatable, and directly comparable across individuals and species. Standing height, by contrast, varies with how far the bear decides to stretch.',
+          'Bears stand for a handful of reasons: to see over obstacles, to catch a scent on the wind, to play — including ritualised mock fighting — and occasionally to intimidate. They walk on all fours because that posture spreads their immense weight evenly, and their powerful hind legs let them drag large prey like seals across the ice. A standing bear is a bear gathering information.',
+          'The chart below shows why the distinction matters visually: at 145 cm on all fours the bear\'s shoulder sits below the 175 cm man\'s chin, while the same bear standing at 300 cm looms nearly twice as tall as him.',
+        ],
+        image: {
+          src: '/assets/blog/human-vs-polar-bear-height-comparison/polar-bear-all-fours.png',
+          alt: 'HowHeight comparison chart: 175 cm man, 145 cm polar bear on all fours (shoulder) and 300 cm standing polar bear at true scale',
+          caption: 'Same bear, two postures: 145 cm at the shoulder on all fours vs 300 cm standing — with a 175 cm man for scale.',
+        },
+      },
+      {
+        id: 'biggest-polar-bear-ever-recorded',
+        heading: 'The Biggest Polar Bear Ever Recorded: 3.39 Metres',
+        subheading: 'The 1960 Kotzebue Sound giant — a record with a caveat.',
+        paragraphs: [
+          'The largest polar bear on reliable record was a male shot at Kotzebue Sound in northwestern Alaska in 1960. It reportedly weighed 1,002 kg (2,209 lb), and the mounted specimen stood 3.39 m (11 ft 1 in) tall on its hind legs. The figure is cited across wildlife records, from natural-history books to the World Record Academy, and the bear was photographed for a 1960 issue of Sports Illustrated — though one widely circulated photo used forced perspective that exaggerates its size further.',
+          'The caveat matters: 3.39 m is the height of a taxidermy mount, and mounted specimens can be stretched beyond the animal\'s living dimensions. It is an attributed record of an extraordinary individual, not a typical size. The typical large adult male standing at ~3 m is already far beyond anything a human frame approaches.',
+          'For perspective on just how exceptional that mount is: the tallest person in recorded history, Robert Wadlow, stood 272 cm (8 ft 11 in) — the 1960 bear was 67 cm taller than him, mounted or not.',
+        ],
+      },
+      {
+        id: 'polar-bear-vs-grizzly-and-kodiak',
+        heading: 'Polar Bear vs Grizzly and Kodiak: Which Bear Is Biggest?',
+        subheading: 'Polar bears share the crown — and out-stand the grizzly.',
+        paragraphs: [
+          'The polar bear is the largest terrestrial carnivore on the planet — a title it shares with the Kodiak bear, the giant brown-bear subspecies of Alaska. It is more than twice the size of the next contender, the Siberian tiger. Adult male polar bears at 350–700 kg outclass most grizzlies, which typically run 180–360 kg in males.',
+          'Standing on hind legs, a very large grizzly can reach almost 2.7 m (9 ft) — but most adult male grizzlies stand 6.5–8 ft (2–2.4 m) upright, and their shoulder height on all fours is only 0.9–1.5 m. Kodiak bears stand comparably to polar bears at up to about 3 m. So in a standing face-off, the polar bear out-towers the grizzly by a head or more.',
+          'That said, standing height is not the whole animal: on all fours a big male grizzly\'s shoulder can reach a 12-year-old\'s eye line, and all three species are lethally strong at any height. The size contest is for scientists and record books — at a safe distance.',
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is a polar bear standing up?',
+        answer: 'An adult male polar bear stands about 3 m (10 ft) tall when rearing up on its hind legs, with exceptionally large males exceeding 3.3 m (11 ft). Adult females are much smaller, reaching about 2.4 m (7 ft 10 in) standing. Note that standing is a brief behavioural posture — bears spend their lives on all fours.',
+      },
+      {
+        question: 'How tall is a polar bear on all fours?',
+        answer: 'On all fours, an adult polar bear stands about 122–160 cm (4 ft 0 in–5 ft 3 in) at the shoulder. That means an average adult man (175 cm) is taller than a polar bear\'s shoulder — the animal\'s enormous length runs horizontally, not vertically.',
+      },
+      {
+        question: 'How much does a polar bear weigh?',
+        answer: 'Adult male polar bears typically weigh 350–700 kg (770–1,540 lb), and adult females 150–250 kg (330–550 lb) — roughly half. A pregnant female can reach 500 kg. The largest on record, shot at Kotzebue Sound, Alaska in 1960, reportedly weighed 1,002 kg (2,209 lb).',
+      },
+      {
+        question: 'How tall is a polar bear compared to a human?',
+        answer: 'A standing male polar bear at ~3 m is about 1.7 times as tall as an average man (175 cm / 5 ft 9 in) — the bear\'s head sits roughly 125 cm above the man\'s. On all fours, though, the bear\'s shoulder (122–160 cm) sits below the man\'s chin.',
+      },
+      {
+        question: 'What is the largest polar bear ever recorded?',
+        answer: 'A male shot at Kotzebue Sound in northwestern Alaska in 1960, reportedly weighing 1,002 kg (2,209 lb). The mounted specimen stood 3.39 m (11 ft 1 in) tall on its hind legs. As a taxidermy mount it may be stretched beyond living dimensions — treat it as an attributed record, not a typical size.',
+      },
+      {
+        question: 'Is the polar bear the biggest bear in the world?',
+        answer: 'The polar bear is the largest terrestrial carnivore on Earth, a title it shares with the Kodiak bear. It out-stands the grizzly: a very large grizzly can reach almost 2.7 m (9 ft) upright, while a large male polar bear reaches about 3 m (10 ft).',
+      },
+    ],
+    sources: [
+      {
+        title: 'Polar Bears International — Polar Bear Adaptations & Characteristics',
+        url: 'https://polarbearsinternational.org/polar-bears-changing-arctic/polar-bear-facts/adaptions-characteristics/',
+        description: 'Adult males may reach over 3 m (10 ft) when standing on their hind legs; shoulders typically 1–1.5 m; males normally weigh 350–600 kg.',
+      },
+      {
+        title: 'San Diego Zoo Wildlife Alliance — Polar Bear Fact Sheet: Physical Characteristics',
+        url: 'https://ielc.libguides.com/sdzg/factsheets/polarbear/characteristics',
+        description: 'Males typically 350–650 kg, females 150–350 kg; shoulder height up to 1.7 m; body length 240–260 cm in males, 190–210 cm in females.',
+      },
+      {
+        title: 'National Wildlife Federation — Polar Bear',
+        url: 'https://www.nwf.org/polarbear',
+        description: 'Large males standing more than 11 ft (3.3 m) tall on their hind legs and reaching weights over 1,700 lb (770 kg); classified as marine mammals.',
+      },
+      {
+        title: 'World Record Academy — World\'s Largest Polar Bear, Kotzebue Sound, Alaska',
+        url: 'https://www.worldrecordacademy.org/2023/11/worlds-largest-polar-bear-world-record-at-kotzebue-sound-alaska-423561',
+        description: 'The 1960 Kotzebue Sound record: a male weighing 1,002 kg (2,209 lb), standing 11 ft 1 in (3.39 m) when mounted.',
+      },
+      {
+        title: 'American Oceans — Biggest Polar Bear Ever Recorded',
+        url: 'https://www.americanoceans.org/facts/biggest-polar-bear/',
+        description: 'Record bear account (2,209 lb, 11 ft 1 in); adult males 350–700 kg; shoulder height 122–160 cm; largest hypercarnivorous land mammal.',
+      },
+      {
+        title: 'Polar Guidebook — How Tall Is a Polar Bear?',
+        url: 'https://polarguidebook.com/how-tall-is-a-polar-bear/',
+        description: 'Males ~3 m (10 ft) standing, females ~2.4 m (8 ft); 1.3–1.6 m on all fours; standing posture explained (smell, see, play).',
+      },
+    ],
+    relatedSlugs: ['human-vs-elephant-height-comparison', 'human-vs-giraffe-height-comparison', 'human-vs-horse-height-comparison', 'how-height-comparison-works', 'how-rare-is-6ft5-height', 'what-does-6-feet-look-like'],
+  },
 ];
+
