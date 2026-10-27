@@ -58,7 +58,7 @@ Eiffel Tower note for the 1:10-scale approach).
 - [x] #26 `average-soccer-player-height-by-position` — Average Soccer Player Height by Position: Goalkeepers to Strikers (sports) — published 2026-10-18 (with 3 site-rendered screenshots)
 - [x] #27 `formula-1-driver-heights` — How Tall Are F1 Drivers? Every 2026 Driver's Height Compared (sports) — published 2026-10-21 (with 3 site-rendered screenshots)
 - [x] #28 `human-vs-polar-bear-height-comparison` — Human vs Polar Bear Height Comparison: Standing Face to Face (animals) — published 2026-10-24 (with 3 site-rendered screenshots)
-- [ ] #29 `tallest-female-celebrities-height-comparison` — The Tallest Female Celebrities: Ranked & Visualized (celebrities)
+- [x] #29 `tallest-female-celebrities-height-comparison` — The Tallest Female Celebrities: Ranked & Visualized (celebrities) — published 2026-10-27 (with 2 site-rendered screenshots)
 - [ ] #30 `eiffel-tower-height-vs-human` — Eiffel Tower Height vs Human: Just How Big Is It Really? (objects)
 
 ## Ranked queue (from Bing Search Console data, 2026-10-15)

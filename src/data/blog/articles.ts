@@ -5664,5 +5664,273 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['human-vs-elephant-height-comparison', 'human-vs-giraffe-height-comparison', 'human-vs-horse-height-comparison', 'how-height-comparison-works', 'how-rare-is-6ft5-height', 'what-does-6-feet-look-like'],
   },
+  // 29. TALLEST FEMALE CELEBRITIES
+  {
+    slug: 'tallest-female-celebrities-height-comparison',
+    title: 'The Tallest Female Celebrities: Gwendoline Christie, Elizabeth Debicki, Karlie Kloss & More, Ranked & Visualised',
+    h1: 'The Tallest Female Celebrities, Ranked by Height',
+    description:
+      'From Gwendoline Christie at 6\u20193\u2033 (191 cm) to Zendaya at 5\u201910\u2033 (178 cm): the tallest female celebrities ranked with verified heights in cm and feet, visualised to scale \u2014 including the great Taylor Swift height debate.',
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-27T09:00:00Z',
+    updatedDate: '2026-10-27T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'The tallest female celebrities are Gwendoline Christie and Elizabeth Debicki, both 6\u20193\u2033 (191 cm), followed by Karlie Kloss at 6\u20192\u2033 (188 cm), Caitlin Clark and Brooke Shields at 6\u20190\u2033 (183 cm), Uma Thurman at 5\u201911\u00bd\u2033 (182 cm), Nicole Kidman at 5\u201911\u2033 (180 cm), and Taylor Swift and Zendaya at 5\u201910\u2033 (178 cm). Every woman on the list stands at least 17 cm above the average woman \u2014 and the top two are taller than the average man.',
+      keyTakeaway:
+        'Two numbers on this list are genuinely disputed: Taylor Swift is listed at 5\u201910\u2033 but has called herself 5\u201911\u2033, and Uma Thurman is listed anywhere from 5\u201911\u00bd\u2033 to 6\u20190\u2033. We chart Swift at 178 cm and Thurman at 182 cm \u2014 the best-supported figures \u2014 and flag both disputes in full below. Every other figure is a solid consensus across sources.',
+      dataPoints: [
+        { label: 'Tallest stars', value: 'Gwendoline Christie & Elizabeth Debicki \u2014 6\u20193\u2033 (191 cm)' },
+        { label: 'Tallest athlete', value: 'Caitlin Clark \u2014 6\u20190\u2033 (183 cm)' },
+        { label: 'Most disputed', value: 'Taylor Swift \u2014 5\u201910\u2033 listed, claims 5\u201911\u2033' },
+        { label: 'The gap', value: 'Christie stands 30 cm (12 in) above the average woman' },
+        { label: 'The extreme', value: 'Christie is 49 cm taller than Simone Biles (4\u20198\u2033)' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'female', customHeightCm: 191, label: 'Gwendoline Christie' },
+      { category: 'human', id: 'female', customHeightCm: 191, label: 'Elizabeth Debicki' },
+      { category: 'human', id: 'female', customHeightCm: 188, label: 'Karlie Kloss' },
+      { category: 'human', id: 'female', customHeightCm: 183, label: 'Caitlin Clark' },
+      { category: 'human', id: 'female', customHeightCm: 183, label: 'Brooke Shields' },
+      { category: 'human', id: 'female', customHeightCm: 182, label: 'Uma Thurman' },
+      { category: 'human', id: 'female', customHeightCm: 180, label: 'Nicole Kidman' },
+      { category: 'human', id: 'female', customHeightCm: 178, label: 'Taylor Swift' },
+      { category: 'human', id: 'female', customHeightCm: 178, label: 'Zendaya' },
+      { category: 'human', id: 'female', customHeightCm: 161, label: 'Average woman (161 cm)' },
+    ],
+    toolActionTitle: 'Stand next to the tallest stars',
+    toolActionDescription:
+      'The visualiser above is preloaded with the full lineup \u2014 Christie and Debicki (191 cm) through Swift and Zendaya (178 cm), plus the average woman at 161 cm. Add your own height and see exactly where you fit among them.',
+    comparisonTable: {
+      caption: 'The tallest female celebrities, ranked tallest to shortest \u2014 honest figures with the two disputed entries flagged',
+      headers: ['Rank', 'Celebrity', 'Height', 'Best known for'],
+      rows: [
+        ['1', 'Gwendoline Christie', '6\u20193\u2033 (191 cm)', 'Game of Thrones, Star Wars, Wednesday'],
+        ['2', 'Elizabeth Debicki', '6\u20193\u2033 (191 cm)', 'The Crown (Princess Diana), Tenet'],
+        ['3', 'Karlie Kloss', '6\u20192\u2033 (188 cm)', 'Supermodel, Victoria\u2019s Secret Angel'],
+        ['4', 'Caitlin Clark', '6\u20190\u2033 (183 cm)', 'Indiana Fever, WNBA Rookie of the Year'],
+        ['5', 'Brooke Shields', '6\u20190\u2033 (183 cm)', 'The Blue Lagoon, Endless Love'],
+        ['6', 'Uma Thurman', '5\u201911\u00bd\u2033 (182 cm) \u2014 listed 5\u201911\u00bd\u2033\u20136\u20190\u2033', 'Pulp Fiction, Kill Bill'],
+        ['7', 'Nicole Kidman', '5\u201911\u2033 (180 cm)', 'The Hours (Oscar), Big Little Lies'],
+        ['8', 'Taylor Swift', '5\u201910\u2033 (178 cm) \u2014 listed; she claims 5\u201911\u2033', 'Pop superstar, Eras Tour'],
+        ['9', 'Zendaya', '5\u201910\u2033 (178 cm)', 'Euphoria, Spider-Man, Dune'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-ranked-lineup',
+        heading: 'The Ranked Lineup: Nine Women Over 5\u201910\u2033',
+        subheading: 'From a 6\u20193\u2033 warrior-queen to a 5\u201910\u2033 pop superstar \u2014 every figure drawn to true scale.',
+        paragraphs: [
+          'Here they are, side by side, at their real heights: Gwendoline Christie and Elizabeth Debicki at 6\u20193\u2033 (191 cm), Karlie Kloss at 6\u20192\u2033 (188 cm), Caitlin Clark and Brooke Shields at 6\u20190\u2033 (183 cm), Uma Thurman at 5\u201911\u00bd\u2033 (182 cm), Nicole Kidman at 5\u201911\u2033 (180 cm), and Taylor Swift and Zendaya at 5\u201910\u2033 (178 cm) \u2014 with the average woman (5\u20194\u2033, 161 cm) standing in for scale. On screen, in concert lighting, and on magazine covers, these nine look merely statuesque. Lined up honestly, the tallest of them towers a full head above the average woman.',
+          'A word on method before the numbers, because most celebrity-height lists are sloppy in exactly the ways we are about to avoid. Every figure here is cross-checked against at least two independent sources \u2014 FIBA\u2019s official player data, the actresses\u2019 own on-the-record statements, NPR\u2019s Hollywood height reporting, and long-standing consensus listings. Where a figure is disputed (Swift, Thurman), we say so loudly and chart the most defensible number, not the flattering one. Hollywood\u2019s standard practice is to round up, add heels, and never speak of it; this chart does the opposite.',
+          'The context that makes the chart startling: the average American adult woman stands 5\u20194\u2033 (161 cm), per measured CDC data. The shortest woman on this list clears that average by 17 cm \u2014 nearly seven inches \u2014 and the tallest clears it by 30 cm, a full foot. Even the average man, at 5\u20199\u2033 (175 cm), is shorter than seven of the nine women here. These are not women who are tall \u201Cfor Hollywood\u201D. They are tall by any standard on Earth.',
+        ],
+        image: {
+          src: '/assets/blog/tallest-female-celebrities-height-comparison/tallest-women-lineup.png',
+          alt: 'Height comparison chart showing an average woman (161 cm), an average man (175 cm), Taylor Swift (178 cm), Nicole Kidman (180 cm), Caitlin Clark (183 cm) and Gwendoline Christie (191 cm) side by side',
+          caption: 'The ranked lineup, rendered to scale: Christie stands 30 cm above the average woman \u2014 and 16 cm above the average man.',
+        },
+        callout: {
+          title: 'The lineup, tallest to shortest',
+          text: 'Christie 191 cm \u00b7 Debicki 191 cm \u00b7 Kloss 188 cm \u00b7 Clark 183 cm \u00b7 Shields 183 cm \u00b7 Thurman 182 cm (listed up to 183) \u00b7 Kidman 180 cm \u00b7 Swift 178 cm (claims 180) \u00b7 Zendaya 178 cm \u00b7 Average woman 161 cm.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-six-three-club',
+        heading: 'The 6\u20193\u2033 Club: Christie and Debicki',
+        subheading: 'Two actresses, both 191 cm, both told their height would end their careers before it began.',
+        paragraphs: [
+          'Gwendoline Christie, at 6\u20193\u2033 (191 cm), is the tallest well-known actress working in Hollywood today \u2014 a figure so consistent across agency listings, red-carpet reporting and her own interviews that it is sometimes given even more precisely as 6\u20193\u00bc\u2033. She trained as a gymnast as a child until a spinal injury at eleven ended that dream, and when she told her agent she wanted to act, the response was reportedly: \u201Cwell, good luck with that.\u201D The height that was supposed to disqualify her became her calling card instead: Brienne of Tarth in Game of Thrones (2012\u20132019, earning her an Emmy nomination), Captain Phasma in Star Wars, and Larissa Weems in Wednesday. She has described her stature as a \u201Csuperpower\u201D \u2014 and in heels, which she wears often on the red carpet, her presented height can reach roughly 6\u20197\u2033.',
+          'Elizabeth Debicki shares the top step at exactly the same height: 6\u20193\u2033 (191 cm). The Australian actress used that towering, elegant frame to play Jordan Baker in The Great Gatsby, Jed Marshall in The Night Manager, the inverted-world operative in Tenet \u2014 and, most famously, Princess Diana in the final seasons of The Crown, where her height became part of the uncanny physical resemblance. Like Christie, Debicki has said she embraces her height as a unique asset, though it regularly forces directors into creative camera angles when she is paired with shorter leading men. Two women, both 191 cm, both turning the same supposed liability into the most distinctive silhouette in the room.',
+          'The scale of 191 cm is worth pausing on. A woman of that height sits roughly four and a half standard deviations above the female average \u2014 fewer than one woman in a thousand stands that tall. She is taller than about 97 in 100 men. In a crowd of a thousand women, Christie and Debicki would be the two you could spot from the back of the room \u2014 and that is before either of them puts on heels.',
+        ],
+        callout: {
+          title: 'Taller than the average man',
+          text: 'At 191 cm, Christie and Debicki stand 16 cm above the average man (175 cm) \u2014 and 30 cm above the average woman. Only about 3 in 100 men are that tall.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'kloss-and-the-runway',
+        heading: 'Karlie Kloss and the Runway Standard',
+        subheading: 'At 6\u20192\u2033, Kloss is tall even among supermodels \u2014 and she turned it into an empire.',
+        paragraphs: [
+          'Karlie Kloss stands 6\u20192\u2033 (188 cm) \u2014 a figure that is universal across listings, from her agency profile to every major biography. Born in Chicago in 1992, she was discovered at thirteen, trained as a ballet dancer, and became a Victoria\u2019s Secret Angel from 2013 to 2015 before building a second career as a tech entrepreneur: she founded Kode With Klossy, the nonprofit teaching girls to code, and went on to run i-D Magazine. Her height was the foundation of the modelling career; her coding nonprofit is what she built on top of it.',
+          'The modelling context matters, because 188 cm is tall even where tall is the job description. The standard runway range for women runs roughly 5\u20199\u2033 to 6\u20190\u2033 (175\u2013183 cm): designers cut sample sizes for that frame, and agencies rarely sign above it. Kloss clears the top of that range by 5 cm. For comparison, Gigi Hadid and Kendall Jenner both stand around 5\u201910\u2033 (178 cm) and Naomi Campbell around 5\u20199\u00bd\u2033 \u2014 all tall women, all a full head shorter than Kloss on the same catwalk. Even among professional models, Kloss is an outlier.',
+          'One honest caveat, because the sources demand it: model heights are agency-reported figures, and agencies round up \u2014 a 6\u20191\u00bd\u2033 model becomes 6\u20192\u2033 on the comp card, usually with heels already assumed. Kloss\u2019s 188 cm is consistent everywhere it appears, which is the best evidence available, but it is the weakest-sourced figure on this list: the citations are biographical profiles rather than the sports data or on-the-record interviews that anchor the others. We include it because the consensus is overwhelming, and we flag it because that is what honest height reporting does.',
+        ],
+        callout: {
+          title: 'Taller than the runway standard',
+          text: 'The runway range tops out around 6\u20190\u2033 (183 cm). Kloss at 188 cm clears it by 5 cm \u2014 and stands 10 cm taller than fellow supermodels Gigi Hadid and Kendall Jenner.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'the-six-foot-club',
+        heading: 'The 6-Foot Club: Clark, Shields and Thurman',
+        subheading: 'A basketball superstar, a child-model legend, and the Bride \u2014 three different routes to exactly six feet.',
+        paragraphs: [
+          'Caitlin Clark, at 6\u20190\u2033 (183 cm), is the only athlete on this list \u2014 and the only figure here backed by official sports measurement. FIBA lists her at 183 cm / 6\u20190\u2033, and the WNBA\u2019s own listings agree. Clark was the No. 1 overall pick in the 2024 WNBA Draft, joining the Indiana Fever and winning Rookie of the Year, and her game is built on the deep shooting range and playmaking that made her a phenomenon at Iowa. Here is the twist the chart makes visible: 183 cm is enormous anywhere except a basketball court. The WNBA average sits around 6\u20190.8\u2033 (185 cm), which means Clark \u2014 the fourth-tallest celebrity on this page \u2014 is almost exactly average for her own league. Context is everything.',
+          'Brooke Shields reached 6\u20190\u2033 (183 cm) by the age of fourteen \u2014 already looking down at most adult men in the industry while she was still a child model. The Blue Lagoon and Endless Love made her the defining \u201Ctall girl\u201D of early-1980s Hollywood, and cinematographers resorted to apple boxes and careful camera angles just to keep her male co-stars in the same frame. NPR\u2019s Hollywood height reporting names Shields, Sigourney Weaver and Jane Lynch as the charter members of the actresses\u2019 6-foot club \u2014 women who, in an era that expected leading ladies to look up at their leading men, had to be shot short instead.',
+          'Uma Thurman rounds out the club at 5\u201911\u00bd\u2033 (182 cm) \u2014 though some listings round her up to a full 6\u20190\u2033, which is the second disputed figure on this page. Thurman\u2019s height and athletic build made her a natural fit for the physically demanding role of the Bride in Quentin Tarantino\u2019s Kill Bill films, after Pulp Fiction made her an A-lister in 1994. We chart her at 182 cm, the figure the most careful recent listings converge on, and note the 6\u20190\u2033 listings alongside it. Either way, she clears the average woman by 21 cm \u2014 and she did it while headlining the two most physically iconic female action roles of her generation.',
+        ],
+        callout: {
+          title: 'Average in her own league',
+          text: 'Clark at 183 cm is a giant anywhere but a basketball court: the WNBA average is about 185 cm, so the fourth-tallest woman on this list is almost exactly average among her peers.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'kidman-swift-zendaya',
+        heading: 'Kidman, Swift and Zendaya: 5\u201910\u2033 to 5\u201911\u2033 and the Art of the Dispute',
+        subheading: 'An Oscar winner who lied about being shorter, a pop star who may have added an inch, and an actress who worried her height would cost her Spider-Man.',
+        paragraphs: [
+          'Nicole Kidman, at 5\u201911\u2033 (180 cm), is the only woman on this list whose height comes with her own sworn testimony \u2014 because she spent years lying about it in the other direction. Told as a teenager that she was \u201Ctoo tall\u201D to have a career, Kidman used to claim 5\u201910\u00bd\u2033 at auditions; on the Radio Times Podcast in 2024 she finally corrected the record: \u201CI say I\u2019m 5ft 10 1/2in but I\u2019m really 5ft 11in.\u201D She was already 5\u20199\u2033 at thirteen, was measured out of an Annie audition that required girls under 5\u20192\u2033, and was teased as \u201CStalky\u201D at school. The height she once hid is now part of the silhouette that won her an Oscar for The Hours \u2014 and, at 10 cm taller than her ex-husband Tom Cruise, it made their red-carpet photos a running study in Hollywood\u2019s height illusions.',
+          'Taylor Swift is the list\u2019s genuinely disputed entry, and the dispute runs in the opposite direction from Kidman\u2019s: most listings put Swift at 5\u201910\u2033 (178 cm), while Swift herself has claimed 5\u201911\u2033 \u2014 telling Vanity Fair she was \u201Cfive-foot-ten\u201D in one interview and Entertainment Weekly \u201CI\u2019m 5\u201911\u201D\u201D in another. We chart the listed 178 cm and note the claim, because the gap is instructive: it is almost exactly the standard Hollywood inflation of heels plus generous rounding. Barefoot, photographed next to genuinely tall people, the 5\u201910\u2033 figure holds up better. Either way, she is one of the tallest women headlining stadiums in the world, and her stagecraft \u2014 the boots, the proportions, the sheer scale of the Eras Tour staging \u2014 makes the question feel faintly absurd.',
+          'Zendaya, also 5\u201910\u2033 (178 cm), is the cleanest figure of the three \u2014 consistent across listings, with no competing claim of her own. Her height nearly cost her the role of MJ in Spider-Man: Homecoming: auditioning opposite Tom Holland, who stands 5\u20198\u2033 (173 cm), she worried the five-centimetre gap would look wrong on screen. \u201CI was worried because he\u2019s so much shorter than me,\u201D she told Variety. \u201CI was like, \u2018Damn it! It\u2019s going to be weird because I\u2019m super tall.\u2019 But then we ended up doing the audition sitting.\u201D She got the part, won two Emmys for Euphoria, and the height difference with Holland became one of the most photographed \u2014 and most discussed \u2014 celebrity pairings in the world. Our guide to celebrity couples with the biggest height differences has the full story.',
+        ],
+        callout: {
+          title: 'The verdict on Swift',
+          text: 'Listed: 5\u201910\u2033 (178 cm). Her own claim: 5\u201911\u2033 (180 cm). The 2 cm gap is exactly the standard Hollywood inflation \u2014 heels plus rounding. We chart 178 cm as the honest barefoot figure.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'how-tall-is-tall',
+        heading: 'How Tall Is \u201CTall\u201D? The Numbers in Context',
+        subheading: 'Percentiles, not inches, are what your eyes are actually comparing \u2014 and the extremes are further apart than they look.',
+        paragraphs: [
+          'Raw inches mislead; percentiles tell the truth. Swift and Zendaya at 178 cm sit around the 99th percentile for adult women \u2014 taller than roughly 99 women in 100. Kidman at 180 cm is a touch beyond that. Clark and Shields at 183 cm are around the 99.9th percentile, roughly one woman in a thousand. And Christie and Debicki at 191 cm sit about four and a half standard deviations above the average \u2014 fewer than one woman in a thousand, and taller than about 97 men in 100. The bottom of this list is already a statistical rarity; the top of it is a rounding error in the population.',
+          'It helps to think in gaps rather than absolutes. Christie gives up nothing to anyone on this page \u2014 but set her next to Simone Biles, the shortest major celebrity in the world at 4\u20198\u2033 (142 cm), and the gap is 49 cm: more than a foot and a half, roughly the height of a two-year-old child, standing between two of the most famous women alive. Set her next to the average woman and the gap is 30 cm \u2014 a full ruler. These are the differences your visual system is actually registering when a celebrity looks \u201Csurprisingly tall\u201D in person: not the number, but the gap to the people around them.',
+          'One final honesty note, because it applies to every figure on this list: listed heights are almost always measured in shoes and rounded up, while barefoot morning height is the true figure \u2014 a gap of 2 to 3 cm for most people. That is the entire Taylor Swift dispute (178 vs 180 cm) and most of the Uma Thurman one. Genuine barefoot figures, like Kidman\u2019s own \u201Creally 5ft 11in\u201D or FIBA\u2019s measured 183 cm for Clark, are the gold standard; everything else is footwear plus optimism. If this article has you curious about your own number, our guide to measuring your height accurately at home walks through the proper barefoot-against-the-wall technique \u2014 and then you can add yourself to the chart above and take your place in the lineup.',
+        ],
+        image: {
+          src: '/assets/blog/tallest-female-celebrities-height-comparison/tallest-women-extremes.png',
+          alt: 'Height comparison chart showing Simone Biles at 142 cm, an average woman at 161 cm, an average man at 175 cm and Gwendoline Christie at 191 cm side by side',
+          caption: 'The headline extremes, rendered to scale: Christie stands 49 cm taller than Biles \u2014 and 30 cm taller than the average woman.',
+        },
+        callout: {
+          title: 'The percentile picture',
+          text: 'Swift & Zendaya (178 cm): ~99th percentile of women \u00b7 Kidman (180 cm): beyond the 99th \u00b7 Clark & Shields (183 cm): ~99.9th percentile \u00b7 Christie & Debicki (191 cm): fewer than 1 woman in 1,000.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'see-where-you-stand',
+        heading: 'See Where You Stand Next to Them',
+        subheading: 'The chart is preloaded \u2014 add your height and take your place in the lineup.',
+        paragraphs: [
+          'The comparison tool at the top of this article is preloaded with all nine celebrities plus the average woman, drawn to true scale. Add your own height and the chart redraws instantly: stand yourself next to Christie and see the 30 cm the average woman gives up; next to Kloss and see whether you clear her 188 cm by a head; next to Swift and check whether the Eras Tour camera angles have been fooling you too.',
+          'A few suggested experiments. First, the couples test: pair yourself with a partner and see how your gap compares to Zendaya and Tom Holland\u2019s 5 cm \u2014 our guide to celebrity couples with the biggest height differences has more extreme pairings to try. Second, the extremes test: drop in Simone Biles (142 cm) alongside Christie (191 cm) and watch a 49 cm gap open up between two of the most famous women on the planet. Third, the honesty test: measure yourself properly barefoot, in the morning, and compare that figure to what your driving licence claims \u2014 most people are carrying 2 to 3 cm of footwear optimism.',
+          'And if this list made you curious about the other end of the scale, we have that covered too: our ranking of the shortest celebrities runs from Simone Biles at 4\u20198\u2033 to Tom Cruise at 5\u20197\u2033, and the K-pop idol height comparison lines up an industry where the men average a head taller than everyone on this page. Short, tall, or somewhere in between \u2014 the chart doesn\u2019t judge. It just draws the truth to scale.',
+        ],
+        callout: {
+          title: 'Try it now',
+          text: 'Scroll to the visualiser, tap \u201Cadd person,\u201D enter your barefoot morning height, and see exactly where you stand among the tallest women in the world.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Who is the tallest female celebrity in the world?',
+        answer:
+          'It is a tie: Gwendoline Christie and Elizabeth Debicki are both 6\u20193\u2033 (191 cm). Christie is best known as Brienne of Tarth in Game of Thrones and Captain Phasma in Star Wars; Debicki played Princess Diana in The Crown. Both stand 30 cm above the average woman and 16 cm above the average man.',
+      },
+      {
+        question: 'How tall is Gwendoline Christie?',
+        answer:
+          '6\u20193\u2033 (191 cm) \u2014 sometimes given more precisely as 6\u20193\u00bc\u2033. The figure is consistent across her agency listings, red-carpet reporting and her own interviews, making it one of the most solid celebrity heights on record. In heels she can present at roughly 6\u20197\u2033.',
+      },
+      {
+        question: 'How tall is Taylor Swift really?',
+        answer:
+          'She is listed at 5\u201910\u2033 (178 cm), but Swift herself has claimed 5\u201911\u2033 \u2014 telling Vanity Fair she was \u201Cfive-foot-ten\u201D and Entertainment Weekly \u201CI\u2019m 5\u201911\u201D\u201D. The 2 cm gap is exactly the standard Hollywood inflation of heels plus rounding; we chart the listed 178 cm as the honest barefoot figure.',
+      },
+      {
+        question: 'How tall is Caitlin Clark?',
+        answer:
+          '6\u20190\u2033 (183 cm), per FIBA\u2019s official player profile and the WNBA\u2019s own listings. Clark was the No. 1 overall pick in the 2024 WNBA Draft, joining the Indiana Fever and winning Rookie of the Year. Notably, 183 cm is almost exactly average for the WNBA, whose league average sits around 185 cm.',
+      },
+      {
+        question: 'How tall is Nicole Kidman?',
+        answer:
+          '5\u201911\u2033 (180 cm) \u2014 in her own words, on the Radio Times Podcast in 2024: \u201CI say I\u2019m 5ft 10 1/2in but I\u2019m really 5ft 11in.\u201D Kidman was told as a teenager she was \u201Ctoo tall\u201D to have a career and used to understate her height at auditions; she was already 5\u20199\u2033 at thirteen.',
+      },
+      {
+        question: 'Is 5\u201910\u2033 tall for a woman?',
+        answer:
+          'Yes \u2014 it is about 17 cm above the average woman\u2019s 5\u20194\u2033 (161 cm) and sits around the 99th percentile, meaning roughly 99 women in 100 are shorter. Taylor Swift and Zendaya, both 5\u201910\u2033, are the shortest women on this list \u2014 and both are taller than the average man.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Gwendoline Christie Is Having Her Best Year Ever \u2014 BuzzFeed',
+        url: 'https://www.buzzfeed.com/jarettwieselman/gwendoline-christie-is-having-her-best-year-ever',
+        description: 'BuzzFeed profile confirming Christie as \u201Cthe 6-foot-3-inch actor\u201D.',
+      },
+      {
+        title: 'Gwendoline Christie, Game of Thrones Season 8 Premiere \u2014 TV Guide',
+        url: 'https://www.tvguide.com/news/gwendoline-christie-game-of-thrones-season-8-premiere/',
+        description: 'TV Guide: Christie is \u201C6\u20193\u2033 and proud of every bit of it\u201D.',
+      },
+      {
+        title: 'Caitlin Clark \u2014 FIBA Player Profile',
+        url: 'https://www.fiba.basketball/en/players/235603-caitlin-clark',
+        description: 'FIBA lists Clark at 183 cm / 6\u20190\u2033, with date of birth 22 January 2002.',
+      },
+      {
+        title: 'Nicole Kidman Was Told She Was \u201CToo Tall\u201D for Hollywood \u2014 Radio Times',
+        url: 'https://www.radiotimes.com/tv/drama/nicole-kidman-hollywood-too-tall-newsupdate/',
+        description: 'Kidman on the Radio Times Podcast: \u201CI say I\u2019m 5ft 10 1/2in, but I\u2019m really 5ft 11in.\u201D',
+      },
+      {
+        title: 'Nicole Kidman Reveals Lie She Told to Land Auditions \u2014 NME',
+        url: 'https://www.nme.com/news/nicole-kidman-reveals-lie-she-told-to-land-auditions-3572503',
+        description: 'NME reports Kidman is five foot 11 inches but used to pretend she was five foot ten and a half.',
+      },
+      {
+        title: 'Tom Holland & Zendaya Height Difference \u2014 Capital FM',
+        url: 'https://www.capitalfm.com/news/celebrity/tom-holland-zendaya-height-difference-how-tall/',
+        description: 'Capital FM confirms Zendaya is 5 feet 10 and Holland 5 feet 8.',
+      },
+      {
+        title: 'Tall Celebrities: Top 10 Tallest Celebs in the World \u2014 New Idea',
+        url: 'https://www.newidea.com.au/celebrity/tall-celebrities/',
+        description: 'Lists Taylor Swift and Zendaya both at 178 cm (5 ft 10 in), with Swift\u2019s own quotes on being tall.',
+      },
+      {
+        title: 'Top 20 Tallest Actresses in Hollywood (2026) \u2014 HealthyCeleb',
+        url: 'https://healthyceleb.com/top-20-tallest-actresses-in-hollywood-complete-height-guide-2026/',
+        description: 'Ranked guide: Christie 191 cm, Thurman 182 cm, Kidman 180 cm, Shields 182 cm, Sharapova 188 cm.',
+      },
+      {
+        title: 'Actresses Who Are Taller Than Their Leading Men \u2014 Fiction Horizon',
+        url: 'https://fictionhorizon.com/actresses-who-are-taller-than-their-leading-men-2/',
+        description: 'Elizabeth Debicki at six feet three inches; Allison Janney and Brooke Shields at six feet.',
+      },
+      {
+        title: 'Karlie Kloss Height \u2014 BioScops',
+        url: 'https://bioscops.com/karlie-kloss-height/',
+        description: 'Kloss at 6 feet 2 inches (188 cm), Victoria\u2019s Secret Angel 2013\u20132015.',
+      },
+      {
+        title: 'Hollywood Heights: The Ups, Downs and In-Betweens \u2014 NPR',
+        url: 'https://www.kacu.org/2012-12-07/hollywood-heights-the-ups-downs-and-in-betweens',
+        description: 'NPR names Shields, Weaver and Jane Lynch as members of the actresses\u2019 6-foot club.',
+      },
+      {
+        title: 'Taylor Swift Height \u2014 TheCelebHeights',
+        url: 'https://thecelebheights.com/taylor-swift/',
+        description: 'Documents Swift\u2019s Vanity Fair \u201Cfive-foot-ten\u201D and EW \u201CI\u2019m 5\u201911\u201D\u201D quotes.',
+      },
+    ],
+    relatedSlugs: ['shortest-celebrities-height-comparison', 'what-is-considered-tall-for-a-woman', 'celebrity-couples-biggest-height-differences', 'kpop-idol-height-comparison', 'us-presidents-heights-ranked', 'how-rare-is-6ft5-height'],
+  },
 ];
 
