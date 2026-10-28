@@ -11212,22 +11212,22 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
   {
     "id": "animal-bear-01",
     "category": "animals",
-    "filename": "animal-bear-01.svg",
-    "sourceFile": "src/assets/entities/animals/animal-bear-01.svg",
-    "publicPath": "/assets/entities/animals/animal-bear-01.svg",
+    "filename": "animal-bear-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-bear-01.png",
+    "publicPath": "/assets/entities/animals/animal-bear-01.png",
     "name": "Grizzly Bear",
     "slug": "animal-bear-01",
     "heightCm": 135,
     "referenceHeightCm": 135,
     "measurementType": "shoulder-height",
     "measurementAnchor": {
-      "groundY": 786.02,
-      "measurementY": 203.72
+      "groundY": 986,
+      "measurementY": 0
     },
-    "viewBox": "48.14 203.72 926.76 582.3",
-    "aspectRatio": 1.592,
-    "fileSize": 5812,
-    "status": "needs-review",
+    "viewBox": "0 0 1585 986",
+    "aspectRatio": 1.6075,
+    "fileSize": 84335,
+    "status": "verified",
     "subgroup": "[A] Cattle, Horses & Bears",
     "tags": [
       "animals",
@@ -11239,7 +11239,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "grizzly",
       "animal-bear-01"
     ],
-    "searchable": false,
+    "searchable": true,
     "indexable": false
   },
   {
@@ -11278,22 +11278,22 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
   {
     "id": "animal-cat-01",
     "category": "animals",
-    "filename": "animal-cat-01.svg",
-    "sourceFile": "src/assets/entities/animals/animal-cat-01.svg",
-    "publicPath": "/assets/entities/animals/animal-cat-01.svg",
+    "filename": "animal-cat-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-cat-01.png",
+    "publicPath": "/assets/entities/animals/animal-cat-01.png",
     "name": "Domestic Cat",
     "slug": "animal-cat-01",
     "heightCm": 25,
     "referenceHeightCm": 25,
     "measurementType": "shoulder-height",
     "measurementAnchor": {
-      "groundY": 734.22,
-      "measurementY": 237.05
+      "groundY": 1521,
+      "measurementY": 0
     },
-    "viewBox": "245.33 237.05 1124.29 497.17",
-    "aspectRatio": 2.261,
-    "fileSize": 8397,
-    "status": "needs-review",
+    "viewBox": "0 0 1448 1521",
+    "aspectRatio": 0.952,
+    "fileSize": 131485,
+    "status": "verified",
     "subgroup": "[A] Felines",
     "tags": [
       "animals",
@@ -11306,7 +11306,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "feline",
       "animal-cat-01"
     ],
-    "searchable": false,
+    "searchable": true,
     "indexable": false
   },
   {
@@ -11346,22 +11346,22 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
   {
     "id": "animal-elephant-01",
     "category": "animals",
-    "filename": "animal-elephant-01.svg",
-    "sourceFile": "src/assets/entities/animals/animal-elephant-01.svg",
-    "publicPath": "/assets/entities/animals/animal-elephant-01.svg",
+    "filename": "animal-elephant-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-elephant-01.png",
+    "publicPath": "/assets/entities/animals/animal-elephant-01.png",
     "name": "African Elephant",
     "slug": "animal-elephant-01",
     "heightCm": 320,
     "referenceHeightCm": 320,
     "measurementType": "shoulder-height",
     "measurementAnchor": {
-      "groundY": 887.33,
-      "measurementY": 133.87
+      "groundY": 1198,
+      "measurementY": 0
     },
-    "viewBox": "57.5 133.87 870.96 753.46",
-    "aspectRatio": 1.156,
-    "fileSize": 9290,
-    "status": "needs-review",
+    "viewBox": "0 0 1483 1198",
+    "aspectRatio": 1.2379,
+    "fileSize": 133475,
+    "status": "verified",
     "subgroup": "[A] Elephants",
     "tags": [
       "animals",
@@ -11372,7 +11372,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "elephant",
       "animal-elephant-01"
     ],
-    "searchable": false,
+    "searchable": true,
     "indexable": false
   },
   {
@@ -11446,22 +11446,22 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
   {
     "id": "animal-lion-01",
     "category": "animals",
-    "filename": "animal-lion-01.svg",
-    "sourceFile": "src/assets/entities/animals/animal-lion-01.svg",
-    "publicPath": "/assets/entities/animals/animal-lion-01.svg",
+    "filename": "animal-lion-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-lion-01.png",
+    "publicPath": "/assets/entities/animals/animal-lion-01.png",
     "name": "Lion",
     "slug": "animal-lion-01",
     "heightCm": 120,
     "referenceHeightCm": 120,
     "measurementType": "shoulder-height",
     "measurementAnchor": {
-      "groundY": 1147.44,
-      "measurementY": 103.87
+      "groundY": 1600,
+      "measurementY": 0
     },
-    "viewBox": "308.36 103.87 672.74 1043.57",
-    "aspectRatio": 0.645,
-    "fileSize": 5313,
-    "status": "needs-review",
+    "viewBox": "0 0 1600 1600",
+    "aspectRatio": 1,
+    "fileSize": 131091,
+    "status": "verified",
     "subgroup": "[A] Big Cats",
     "tags": [
       "animals",
@@ -11473,28 +11473,28 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "lion",
       "animal-lion-01"
     ],
-    "searchable": false,
+    "searchable": true,
     "indexable": false
   },
   {
     "id": "animal-tiger-01",
     "category": "animals",
-    "filename": "animal-tiger-01.svg",
-    "sourceFile": "src/assets/entities/animals/animal-tiger-01.svg",
-    "publicPath": "/assets/entities/animals/animal-tiger-01.svg",
+    "filename": "animal-tiger-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-tiger-01.png",
+    "publicPath": "/assets/entities/animals/animal-tiger-01.png",
     "name": "Bengal Tiger",
     "slug": "animal-tiger-01",
     "heightCm": 100,
     "referenceHeightCm": 100,
     "measurementType": "shoulder-height",
     "measurementAnchor": {
-      "groundY": 847.61,
-      "measurementY": 181.77
+      "groundY": 1105,
+      "measurementY": 0
     },
-    "viewBox": "163.73 181.77 742.64 665.84",
-    "aspectRatio": 1.115,
-    "fileSize": 4083,
-    "status": "needs-review",
+    "viewBox": "0 0 1826 1105",
+    "aspectRatio": 1.6525,
+    "fileSize": 120247,
+    "status": "verified",
     "subgroup": "[A] Big Cats",
     "tags": [
       "animals",
@@ -11507,28 +11507,28 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "bengal-tiger",
       "animal-tiger-01"
     ],
-    "searchable": false,
+    "searchable": true,
     "indexable": false
   },
   {
     "id": "animal-wolf-01",
     "category": "animals",
-    "filename": "animal-wolf-01.svg",
-    "sourceFile": "src/assets/entities/animals/animal-wolf-01.svg",
-    "publicPath": "/assets/entities/animals/animal-wolf-01.svg",
+    "filename": "animal-wolf-01.png",
+    "sourceFile": "src/assets/entities/animals/animal-wolf-01.png",
+    "publicPath": "/assets/entities/animals/animal-wolf-01.png",
     "name": "Gray Wolf",
     "slug": "animal-wolf-01",
     "heightCm": 80,
     "referenceHeightCm": 80,
     "measurementType": "shoulder-height",
     "measurementAnchor": {
-      "groundY": 974.62,
-      "measurementY": 50.11
+      "groundY": 1144,
+      "measurementY": 0
     },
-    "viewBox": "137.05 50.11 682.27 924.51",
-    "aspectRatio": 0.738,
-    "fileSize": 5765,
-    "status": "needs-review",
+    "viewBox": "0 0 1423 1144",
+    "aspectRatio": 1.2439,
+    "fileSize": 116628,
+    "status": "verified",
     "subgroup": "[A] Canines",
     "tags": [
       "animals",
@@ -11539,7 +11539,7 @@ export const ASSET_MANIFEST: DiscoveredAsset[] = [
       "wolf",
       "animal-wolf-01"
     ],
-    "searchable": false,
+    "searchable": true,
     "indexable": false
   },
   {
