@@ -18,6 +18,49 @@ import { resolveMigratedAssetId } from '../lib/migrationMap';
 import { getArchetypeAsset } from '../lib/archetypes';
 import type { CatalogAsset as AssetMetadata } from '../data/assetCatalog';
 
+// Oct 15 2026 the mislabeled animal SVGs below were replaced by verified
+// silhouette PNGs and the files deleted — but saved comparisons (localStorage
+// and server pre-resolved items) can still carry the old .svg publicPath.
+// migrateItem() remaps those exact dead paths to the verified PNGs (with
+// matching viewBox/anchor) so old saved boards heal on load instead of
+// rendering the browser's broken-image placeholder. Keep in sync with
+// src/data/assetManifest.ts (regenerated from rawAssetInventory.ts).
+const MIGRATED_ASSET_PATHS: Record<
+  string,
+  { publicPath: string; viewBox: string; measurementAnchor: { groundY: number; measurementY: number } }
+> = {
+  '/assets/entities/animals/animal-bear-01.svg': {
+    publicPath: '/assets/entities/animals/animal-bear-01.png',
+    viewBox: '0 0 1585 986',
+    measurementAnchor: { groundY: 986, measurementY: 0 },
+  },
+  '/assets/entities/animals/animal-lion-01.svg': {
+    publicPath: '/assets/entities/animals/animal-lion-01.png',
+    viewBox: '0 0 1600 1600',
+    measurementAnchor: { groundY: 1600, measurementY: 0 },
+  },
+  '/assets/entities/animals/animal-tiger-01.svg': {
+    publicPath: '/assets/entities/animals/animal-tiger-01.png',
+    viewBox: '0 0 1826 1105',
+    measurementAnchor: { groundY: 1105, measurementY: 0 },
+  },
+  '/assets/entities/animals/animal-wolf-01.svg': {
+    publicPath: '/assets/entities/animals/animal-wolf-01.png',
+    viewBox: '0 0 1423 1144',
+    measurementAnchor: { groundY: 1144, measurementY: 0 },
+  },
+  '/assets/entities/animals/animal-cat-01.svg': {
+    publicPath: '/assets/entities/animals/animal-cat-01.png',
+    viewBox: '0 0 1448 1521',
+    measurementAnchor: { groundY: 1521, measurementY: 0 },
+  },
+  '/assets/entities/animals/animal-elephant-01.svg': {
+    publicPath: '/assets/entities/animals/animal-elephant-01.png',
+    viewBox: '0 0 1483 1198',
+    measurementAnchor: { groundY: 1198, measurementY: 0 },
+  },
+};
+
 class HeightComparisonApp {
   private allAssets: AssetMetadata[] = [];
   private catalogPromise: Promise<AssetMetadata[]> | null = null;
@@ -371,6 +414,11 @@ class HeightComparisonApp {
     const assetId = item.assetId || archetype.id;
     const category: EntityCategory = (item.category || archetype.category || 'male') as EntityCategory;
 
+    // Heal saved items that still point at a deleted Oct-15 .svg (see
+    // MIGRATED_ASSET_PATHS): use the verified PNG + its geometry instead of
+    // the stale path/viewBox/anchor the item carries.
+    const migrated = typeof item.publicPath === 'string' ? MIGRATED_ASSET_PATHS[item.publicPath] : undefined;
+
     return {
       id: item.id || `item-${Date.now()}-${Math.random().toString(36).substring(2, 6)}`,
       assetId,
@@ -382,10 +430,10 @@ class HeightComparisonApp {
       color: item.color || PRESET_COLORS[0].value,
       opacity: typeof item.opacity === 'number' ? item.opacity : 1.0,
       positionX: typeof item.positionX === 'number' ? item.positionX : undefined,
-      publicPath: item.publicPath || archetype.publicPath,
-      viewBox: item.viewBox || archetype.viewBox,
-      measurementAnchor: item.measurementAnchor || archetype.measurementAnchor,
-      isPng: item.isPng ?? archetype.isPng,
+      publicPath: migrated?.publicPath || item.publicPath || archetype.publicPath,
+      viewBox: migrated?.viewBox || item.viewBox || archetype.viewBox,
+      measurementAnchor: migrated?.measurementAnchor || item.measurementAnchor || archetype.measurementAnchor,
+      isPng: migrated ? true : (item.isPng ?? archetype.isPng),
     };
   }
 
