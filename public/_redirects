@@ -4,8 +4,11 @@
 # ==============================================================================
 
 # Canonical Domain Enforcement (Single-hop redirect from www, HTTP, and preview domain)
-https://howheight.pages.dev/*  https://howheight.org/:splat  301
-http://howheight.pages.dev/*   https://howheight.org/:splat  301
+# NOTE: pages.dev rules MUST use 301! (force) — without it Cloudflare Pages
+# serves the existing static file instead of redirecting, so the preview
+# domain stays live as a full duplicate of the site.
+https://howheight.pages.dev/*  https://howheight.org/:splat  301!
+http://howheight.pages.dev/*   https://howheight.org/:splat  301!
 https://www.howheight.org/*   https://howheight.org/:splat  301!
 http://www.howheight.org/*    https://howheight.org/:splat  301!
 http://howheight.org/*        https://howheight.org/:splat  301!
