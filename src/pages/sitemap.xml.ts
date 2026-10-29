@@ -42,13 +42,6 @@ export const GET: APIRoute = async () => {
     { path: '/how-to-use/', priority: '0.85', changefreq: 'weekly' },
     { path: '/about/', priority: '0.7', changefreq: 'monthly' },
 
-    // Master SEO Blog Articles
-    ...BLOG_ARTICLES.map((art) => ({
-      path: `/blog/${art.slug}/`,
-      priority: '0.88',
-      changefreq: 'weekly',
-    })),
-
     // Canonical Category Hub Routes (Filter out unverified/non-indexable categories)
     ...CATEGORIES.filter((cat) => cat.indexable !== false).map((cat) => ({
       path: cat.route,
@@ -150,6 +143,14 @@ export const GET: APIRoute = async () => {
       path: `/fictional-character-height/${f.slug}/`,
       priority: '0.8',
       changefreq: 'monthly',
+    })),
+
+    // Blog Articles (English-only content — NOT translated, so no locale
+    // variants or hreflang alternates; locale URLs canonicalize to English)
+    ...BLOG_ARTICLES.map((art) => ({
+      path: `/blog/${art.slug}/`,
+      priority: '0.88',
+      changefreq: 'weekly',
     })),
 
     // Authoritative Legal & Trust Pages (English Canonical)

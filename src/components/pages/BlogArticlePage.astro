@@ -17,7 +17,13 @@ interface Props {
 }
 
 const { article, locale = 'en' } = Astro.props;
-const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath(`/blog/${article.slug}/`, locale)}`;
+// Blog articles are English-only content (not translated). Non-English locale
+// URLs must canonicalize to the English version so Google does not treat the
+// 10 locale copies as duplicate content.
+const canonicalUrl =
+  locale === 'en'
+    ? `${SITE.siteUrl}${getLocalizedPath(`/blog/${article.slug}/`, locale)}`
+    : `${SITE.siteUrl}/blog/${article.slug}/`;
 const preloadedItems = resolveComparisonItems(article.featuredEntities);
 const relatedArticles = getRelatedArticles(article.slug, 3);
 const catMeta = BLOG_CATEGORIES[article.category];

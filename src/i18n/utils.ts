@@ -168,12 +168,10 @@ export function isRouteLocalized(path: string): boolean {
     }
   }
 
-  if (clean.startsWith('blog/')) {
-    const articleSlug = clean.replace(/^blog\//, '');
-    if (blogSlugsSet.has(articleSlug)) {
-      return true;
-    }
-  }
+  // NOTE: blog article pages are intentionally NOT localized for hreflang.
+  // Articles are English-only content served on locale URLs; emitting hreflang
+  // for them falsely claims translations exist and creates duplicate-content
+  // signals. Canonical (BlogArticlePage) points locale copies to English.
 
   return false;
 }
