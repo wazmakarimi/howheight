@@ -150,8 +150,24 @@ const categoryRoutesSet = new Set(CATEGORIES.map((c) => c.route.replace(/^\/|\/$
  * Individual entity profile pages currently exist only on the root locale (en),
  * whereas categories, comparisons, tools, and info pages exist in all locales.
  */
+// Routes whose locale copies serve English-only content (titles and body are
+// hardcoded English, not translated). These must NOT emit hreflang and must
+// canonicalize to English, or Google treats the locale copies as duplicates.
+const ENGLISH_ONLY_ROUTES = new Set([
+  'height-comparison-visualizer',
+  'size-comparison',
+  'height-comparison-chart',
+  'height-comparison-couple',
+  'height-comparison',
+  'blog',
+]);
+
 export function isRouteLocalized(path: string): boolean {
   const clean = stripLocaleFromPath(path).replace(/^\/|\/$/g, '');
+
+  if (ENGLISH_ONLY_ROUTES.has(clean)) {
+    return false;
+  }
 
   if (STATIC_LOCALIZED_ROUTES.has(clean)) {
     return true;

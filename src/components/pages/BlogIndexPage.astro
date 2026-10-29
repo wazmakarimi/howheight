@@ -21,7 +21,11 @@ const filteredArticles = categoryFilter
 const featuredArticle = filteredArticles[0] || allArticles[0];
 const gridArticles = filteredArticles.filter((art) => art.slug !== featuredArticle.slug);
 
-const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/blog/', locale)}`;
+// English-only content: locale copies canonicalize to English (see BlogArticlePage).
+const canonicalUrl =
+  locale === 'en'
+    ? `${SITE.siteUrl}${getLocalizedPath('/blog/', locale)}`
+    : `${SITE.siteUrl}/blog/`;
 
 const pageTitle = categoryFilter && BLOG_CATEGORIES[categoryFilter]
   ? `${BLOG_CATEGORIES[categoryFilter].name} – Height Analysis Blog | ${SITE.name}`

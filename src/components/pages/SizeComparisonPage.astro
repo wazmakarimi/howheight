@@ -15,7 +15,11 @@ interface Props {
 }
 
 const { locale = 'en' } = Astro.props;
-const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/size-comparison/', locale)}`;
+// English-only content: locale copies canonicalize to English (see BlogArticlePage).
+const canonicalUrl =
+  locale === 'en'
+    ? `${SITE.siteUrl}${getLocalizedPath('/size-comparison/', locale)}`
+    : `${SITE.siteUrl}/size-comparison/`;
 
 const featuredComparisons = COMPARISONS.filter((c) => 
   c.slug.includes('human') || c.slug.includes('male-vs-female') || c.slug.includes('elephant')

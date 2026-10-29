@@ -16,7 +16,11 @@ interface Props {
 }
 
 const { locale = 'en' } = Astro.props;
-const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/height-comparison-couple/', locale)}`;
+// English-only content: locale copies canonicalize to English (see BlogArticlePage).
+const canonicalUrl =
+  locale === 'en'
+    ? `${SITE.siteUrl}${getLocalizedPath('/height-comparison-couple/', locale)}`
+    : `${SITE.siteUrl}/height-comparison-couple/`;
 
 // Gender-neutral couple default items
 const coupleDefaultItems: ComparisonItem[] = [
