@@ -5932,5 +5932,205 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['shortest-celebrities-height-comparison', 'what-is-considered-tall-for-a-woman', 'celebrity-couples-biggest-height-differences', 'kpop-idol-height-comparison', 'us-presidents-heights-ranked', 'how-rare-is-6ft5-height'],
   },
+  // 32. EIFFEL TOWER HEIGHT VS HUMAN
+  {
+    slug: 'eiffel-tower-height-vs-human',
+    title: 'How Tall Is the Eiffel Tower? 330 m vs a Human, Visualised',
+    h1: 'Eiffel Tower Height vs Human: Just How Big Is It Really?',
+    description:
+      'The Eiffel Tower is 330 m (1,083 ft) tall to the tip of its antenna — about 189 average men stacked head to toe. Learn why you also see 300 m, 324 m and 330 m, how its three floors compare to a human, and how it stacks up against the Statue of Liberty, the Empire State Building and the Burj Khalifa.',
+    category: 'objects',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-10-30T09:00:00Z',
+    updatedDate: '2026-10-30T09:00:00Z',
+    readingTimeMinutes: 10,
+    quickAnswer: {
+      summary:
+        'The Eiffel Tower stands 330 metres (1,083 feet) tall measured to the tip of its broadcasting antenna. Its iron structure alone is 300 m (984 ft), and the summit observation deck sits at 276 m (906 ft) — so a visitor standing on the top floor is still 54 m below the tip. Next to a 175 cm adult man, the tower is roughly 189 times taller.',
+      keyTakeaway:
+        'If you see a different number — 300 m, 312 m or 324 m — it is not wrong, just measured differently. The tower has grown taller over time as antennas were added: 300 m of iron in 1889, 312 m with its opening-day flagpole, 324 m after the 2000 digital television antenna, and 330 m since a new 6 m radio antenna was helicoptered into place on 15 March 2022.',
+      dataPoints: [
+        { label: 'Total height (to antenna tip)', value: '330 m (1,083 ft)' },
+        { label: 'Iron structure (architectural height)', value: '300 m (984 ft)' },
+        { label: 'Summit observation deck', value: '276 m (906 ft)' },
+        { label: 'Second floor / first floor', value: '115 m (377 ft) / 57 m (187 ft)' },
+        { label: 'Height in people stacked', value: '≈ 189 adults of 175 cm, head to toe' },
+        { label: 'Height in storeys', value: 'About an 81-storey building' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 33000, label: 'Eiffel Tower' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average Adult Man' },
+      { category: 'human', id: 'female', customHeightCm: 163, label: 'Average Adult Woman' },
+      { category: 'human', id: 'female', customHeightCm: 9300, label: 'Statue of Liberty' },
+      { category: 'human', id: 'male', customHeightCm: 44300, label: 'Empire State Building' },
+    ],
+    toolActionTitle: 'Stand next to the Eiffel Tower',
+    toolActionDescription:
+      'The visualiser above is preloaded with the Eiffel Tower at its full 330 m, an average man and woman, the Statue of Liberty and the Empire State Building, all drawn to true scale. Add your own height and watch yourself shrink to a speck beside the Iron Lady.',
+    comparisonTable: {
+      caption: 'The Eiffel Tower against other famous landmarks, all measured to their tips',
+      headers: ['Landmark', 'Height', 'Compared with the Eiffel Tower'],
+      rows: [
+        ['Burj Khalifa, Dubai', '828 m (2,717 ft)', 'About 2.5 Eiffel Towers stacked — the tower reaches only 40% of its height'],
+        ['Empire State Building, New York', '443 m (1,454 ft) to antenna tip', '113 m taller than the Eiffel Tower — roughly a 30-storey building taller'],
+        ['Eiffel Tower, Paris', '330 m (1,083 ft) to antenna tip', 'The reference — about an 81-storey building'],
+        ['Washington Monument, Washington DC', '169 m (554 ft)', 'Just over half the Eiffel Tower'],
+        ['Great Pyramid of Giza (today)', '138.5 m (454 ft)', 'Less than half the Eiffel Tower; it was 146.6 m when built'],
+        ['Statue of Liberty, New York', '93 m (305 ft) ground to torch', 'The Eiffel Tower is about 3.5 Statues of Liberty tall'],
+        ['Average adult man', '1.75 m (5 ft 9 in)', 'It would take about 189 men stacked head to toe to reach the tip'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-short-answer',
+        heading: 'The Short Answer: 330 Metres, or 1,083 Feet',
+        paragraphs: [
+          'The Eiffel Tower is 330 metres (1,083 feet) tall, measured from the ground on the Champ de Mars to the very tip of the broadcasting antenna on its summit. That makes it the tallest structure in Paris, about as tall as an 81-storey building, and — to put it in the most human terms possible — roughly 189 average adults stacked head to toe.',
+          'It is worth pausing on that number, because the Eiffel Tower is one of the most misquoted heights on the internet. Search for it and you will find 300 m, 312 m, 324 m and 330 m, all presented as “the” height. They are all real measurements; they just measure different things, or the tower at different dates. The rest of this article untangles them, then puts the tower next to a human, its own floors, and the world’s other famous landmarks so you can actually feel the scale rather than just read a number.',
+          'One more framing device before we start: the tower’s base is a square 125 m (410 ft) on each side. You could lay about 71 average men head to toe along one side of that square. The tower is not just tall — its footprint is a city block in its own right, and its four legs splay outward so widely that the arch between them comfortably frames the streets passing underneath.',
+        ],
+        callout: {
+          title: 'The number to quote',
+          text: '330 m (1,083 ft) to the antenna tip is the current, correct headline figure — confirmed by the tower’s own operator and by Wikipedia. Use 300 m only when you mean the iron structure without any antenna.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'why-four-different-heights',
+        heading: 'Why You See 300 m, 312 m, 324 m and 330 m',
+        subheading: 'The tower has literally grown taller since 1889 — one antenna at a time.',
+        paragraphs: [
+          'When Gustave Eiffel’s company finished the tower for the 1889 Exposition Universelle, the ironwork itself stood exactly 300 m (984 ft) tall. Before it took Eiffel’s name, it was known simply as the 300-metre tower. On inauguration day, 31 March 1889, a large flagpole flying the French flag took the total to a little over 312 m (1,024 ft) — the first of many additions to the summit.',
+          'Broadcasting then took over as the tower’s second career, and each new generation of aerial added height. A television antenna in 1949 and further equipment in 1957 took it past 320 m; the arrival of digital terrestrial television in 2000, with a new UHF antenna, took it to 324 m (1,063 ft). That 324 m figure is the one most older guidebooks and websites still print, which is why it refuses to die — it was correct for 22 years.',
+          'The current figure dates to 15 March 2022, when a helicopter airlifted a new 6 m antenna for digital radio (DAB+) onto the pinnacle, lifting the tower from 324 m to 330 m (1,083 ft) in a single morning. So the rule of thumb is simple: 300 m is the iron, 324 m is the pre-2022 tip, and 330 m is the tower as it stands today. Any source still quoting 324 m is simply out of date.',
+          'There is a second, subtler reason for confusion: architectural height versus tip height. Skyscraper rankings often quote the Empire State Building as 381 m to its roof and 443 m to its antenna tip, and the same distinction applies in Paris. The Eiffel Tower’s “architectural” height is 300 m; its tip height, the figure everyone actually means when they ask how tall it is, is 330 m.',
+        ],
+        callout: {
+          title: 'Timeline of the growing tower',
+          text: '1889: 300 m of iron (312 m with flagpole) · 1957: past 320 m with TV aerials · 2000: 324 m with digital TV antenna · 2022: 330 m with new digital radio antenna.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'versus-a-human',
+        heading: 'The Eiffel Tower vs a Human: 189 People Stacked',
+        subheading: 'At true scale, a person standing at the base barely reaches the first rivets.',
+        paragraphs: [
+          'Stack average adults of 175 cm head to toe and you need about 189 of them to reach the 330 m tip — about 202 women of 163 cm. That is not a crowd; it is a human column taller than a 60-storey building, and it still only matches one Parisian landmark. Turn it around and the tower is about 189 times the height of the person standing beneath it, which is why photographs taken from the Champ de Mars are so deceptive: the camera compresses a height difference so extreme that the human eye struggles to hold both scales at once.',
+          'The chart below draws it honestly. The two human figures at the base are the average man (175 cm) and average woman (163 cm) used throughout this site. On a chart scaled to fit the whole tower, they are barely visible — a sliver at the foot of the ironwork. That invisibility is the point: most height comparisons flatter the human by cropping the landmark, but at true scale we are, quite literally, ankle-high.',
+          'It helps to climb the tower in human-sized steps. The first floor, at 57 m, is already about 33 average men stacked. The second floor, at 115 m, is roughly 66 people high — and its observation deck looks out over rooftops that themselves took centuries to build. The summit, at 276 m, is around 158 people up, and even there you are still 54 m — about 31 more people — short of the antenna tip sparkling above you.',
+        ],
+        image: {
+          src: '/assets/blog/eiffel-tower-height-vs-human/eiffel-vs-human.png',
+          alt: 'Height comparison chart showing the 330 m Eiffel Tower towering over an average man and woman',
+          caption: 'The Eiffel Tower (330 m) next to an average man (175 cm) and woman (163 cm), drawn to true scale in the HowHeight tool.',
+        },
+      },
+      {
+        id: 'inside-the-tower',
+        heading: 'Inside the Tower: Floors, Steps and 18,038 Pieces of Iron',
+        paragraphs: [
+          'The tower was built in just over two years, from 1887 to 1889, from 18,038 wrought-iron pieces held together by about 2.5 million rivets. The puddled iron alone weighs 7,300 tonnes, and with lifts, shops and antennas the total weight comes to roughly 10,100 tonnes — about the weight of 1,400 adult elephants, if you want a second absurd comparison for free.',
+          'Visitors climb through three levels. The first floor at 57 m (187 ft) has a glass floor section that lets you look straight down at the ant-sized crowds below. The second floor at 115 m (377 ft) is the classic viewing level, with restaurants and the best framing of the Paris skyline. The summit at 276 m (906 ft) is reached by lift, not by foot — although the full stair climb from the ground to the top is 1,665 steps, a climb attempted every year by athletes in the tower’s vertical race.',
+          'The tower also breathes with the seasons. In summer heat, the iron expands and the tower grows by up to about 15 cm, then shrinks back in the cold — a reminder that even a “fixed” height is a living measurement. It was also, briefly, the tallest structure on Earth: from its completion in 1889 until New York’s Chrysler Building overtook it in 1930, a 41-year reign that no other structure of its era came close to matching. It was originally intended to stand for only 20 years before being dismantled; it survived because it turned out to be a superb radio antenna, a job it still does today.',
+        ],
+        callout: {
+          title: 'Built to be temporary',
+          text: 'The tower was meant to be dismantled after 20 years. It survived because its height made it the perfect radio mast — the same antennas that saved it are the reason it now measures 330 m instead of 300 m.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'versus-other-landmarks',
+        heading: 'Eiffel Tower vs Other Landmarks: Who Actually Wins?',
+        paragraphs: [
+          'Against the Statue of Liberty, the contest is not close. The statue measures 93 m (305 ft) from the ground to the tip of its torch — the copper figure itself is only 46 m, with the pedestal making up the rest. The Eiffel Tower is about three and a half Statues of Liberty tall, a fitting margin given that Gustave Eiffel himself designed the statue’s internal iron framework. The two French gifts to the world, in other words, share an engineer as well as a continent-spanning friendship.',
+          'The Empire State Building is the nearest real rival among classic landmarks: 381 m to its roof and 443 m (1,454 ft) to its antenna tip, making it 113 m taller than the Eiffel Tower. That gap is itself roughly a 30-storey building — so while the two icons photograph as peers, the New Yorker wins by a clear margin. And both are dwarfed by the Burj Khalifa in Dubai, at 828 m (2,717 ft), which is about two and a half Eiffel Towers stacked end to end; the Paris tower reaches only 40% of the Burj’s height.',
+          'Look backwards rather than upwards and the tower’s achievement sharpens. The Great Pyramid of Giza, the tallest human structure for more than 3,800 years, stands 138.5 m today (146.6 m when built) — less than half the Eiffel Tower. The tower more than doubled, in a single structure, what the ancient world’s greatest builders had achieved, and it did so in iron lattice rather than solid stone. The Washington Monument, at 169 m, reaches just over half the tower’s height. The chart below puts the closest rivals side by side at true scale.',
+        ],
+        image: {
+          src: '/assets/blog/eiffel-tower-height-vs-human/eiffel-vs-landmarks.png',
+          alt: 'Height comparison chart showing the Eiffel Tower next to the Statue of Liberty and the Empire State Building',
+          caption: 'The Eiffel Tower (330 m) between the Statue of Liberty (93 m) and the Empire State Building (443 m), drawn to true scale.',
+        },
+      },
+      {
+        id: 'see-where-you-stand',
+        heading: 'See Where You Stand Next to the Tower',
+        subheading: 'The chart is preloaded — add your height and take your place at the base.',
+        paragraphs: [
+          'The comparison tool at the top of this article is preloaded with the Eiffel Tower, an average man and woman, the Statue of Liberty and the Empire State Building, all drawn to true scale. Add your own height and the chart redraws instantly: stand yourself at the foot of the tower and see how many copies of you it would take to reach the second floor (about 66 for a 175 cm adult), the summit (about 158), or the antenna tip (about 189).',
+          'A few experiments worth trying. First, the landmark ladder: line up the Statue of Liberty, the Eiffel Tower and the Empire State Building, then add the Burj Khalifa at 828 m and watch the Paris tower shrink to a middle child. Second, the floor test: place yourself at 57 m, 115 m and 276 m in turn and feel how quickly “just one more floor” stops being a small step. Third, the honesty test: measure yourself barefoot in the morning — most people carry 2 to 3 cm of footwear optimism — and use that figure for the stack calculation.',
+          'And if this article gave you a taste for impossible scales, the rest of the blog goes further in both directions: our human-versus-elephant and human-versus-polar-bear comparisons bring the scale back down to living creatures, while the tallest-female-celebrities ranking shows what the very top of the human range looks like next to the rest of us. The tower, though, remains the benchmark — 330 m of iron that started as a temporary fairground attraction and ended up redefining what “tall” means.',
+        ],
+        callout: {
+          title: 'Try it now',
+          text: 'Scroll to the visualiser, tap “add person,” enter your barefoot morning height, and see exactly how many of you it takes to climb the Iron Lady.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is the Eiffel Tower in feet?',
+        answer:
+          '1,083 feet (330 metres) to the tip of its antenna. The iron structure alone is 984 feet (300 metres), and the summit observation deck is 906 feet (276 metres) above the ground.',
+      },
+      {
+        question: 'Why do some sources say the Eiffel Tower is 324 m and others 330 m?',
+        answer:
+          'Both figures were correct at different times. The tower measured 324 m (1,063 ft) from the 2000 digital television antenna until 15 March 2022, when a new 6 m digital radio antenna lifted it to 330 m (1,083 ft). Sources quoting 324 m are simply out of date.',
+      },
+      {
+        question: 'How tall is the Eiffel Tower compared to a human?',
+        answer:
+          'About 189 times the height of a 175 cm adult man — it would take roughly 189 average men stacked head to toe to reach the 330 m tip, or about 202 women of 163 cm. Its first floor alone, at 57 m, is about 33 people high.',
+      },
+      {
+        question: 'How many floors and steps does the Eiffel Tower have?',
+        answer:
+          'Three publicly accessible levels: the first floor at 57 m, the second floor at 115 m, and the summit at 276 m. The full stair climb from the ground to the top is 1,665 steps, though visitors normally take the lift for the final section to the summit.',
+      },
+      {
+        question: 'Is the Eiffel Tower taller than the Empire State Building?',
+        answer:
+          'No. The Empire State Building is 443 m (1,454 ft) to its antenna tip, 113 m taller than the Eiffel Tower’s 330 m. To its roof only, the Empire State Building is 381 m — still taller than the Eiffel Tower’s 300 m of ironwork.',
+      },
+      {
+        question: 'How tall is the Eiffel Tower in storeys?',
+        answer:
+          'About 81 storeys, using a standard storey height of roughly 4 m. That is a useful mental image, but remember the tower is open latticework, not a building: most of its height is empty air between the legs and the summit.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Eiffel Tower — Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Eiffel_Tower',
+        description: 'Tip height 330 m (1,083 ft), architectural height 300 m, top floor 276 m, base square 125 m, weight 10,100 tonnes, tallest structure 1889–1930.',
+      },
+      {
+        title: 'From 300 to 330 meters: the story of the Tower’s height — Tour Eiffel (official)',
+        url: 'https://www.toureiffel.paris/en/news/history-and-culture/300-330-meters-story-towers-height',
+        description: 'The tower’s own operator on the flagpole, the 2000 antenna (324 m) and the 2022 antenna that took it to 330 m on 15 March 2022.',
+      },
+      {
+        title: 'Eiffel Tower — Britannica',
+        url: 'https://www.britannica.com/topic/Eiffel-Tower-Paris-France',
+        description: 'Original 1889 height, construction dates 1887–1889, and the tower’s history as the world’s tallest structure.',
+      },
+      {
+        title: 'Landmark Heights — HeightComparison3D',
+        url: 'https://heightcomparison3d.com/landmarks',
+        description: 'Burj Khalifa 828 m, Statue of Liberty 93 m, Empire State Building 381 m to roof, drawn to scale against a person.',
+      },
+      {
+        title: 'Eiffel Tower Height Comparison — CompareHeight.net',
+        url: 'https://compareheight.net/eiffel-tower-height-comparison/',
+        description: 'Human-scale framing: roughly 189 people of 175 cm stacked to reach the 330 m tip.',
+      },
+    ],
+    relatedSlugs: ['basketball-hoop-height-vs-human', 'human-vs-elephant-height-comparison', 'human-vs-polar-bear-height-comparison', 'tallest-female-celebrities-height-comparison', 'human-vs-giraffe-height-comparison', 'shortest-celebrities-height-comparison'],
+  },
 ];
 
