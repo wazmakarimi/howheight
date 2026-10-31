@@ -160,6 +160,18 @@ const ENGLISH_ONLY_ROUTES = new Set([
   'height-comparison-couple',
   'height-comparison',
   'blog',
+  // Category hub pages: body content is English-only (only name/title/
+  // description are translated), so they must not claim hreflang translations.
+  'people-height-comparison',
+  'celebrity-height-comparison',
+  'anime-height-comparison',
+  'film-height-comparison',
+  'animal-height-comparison',
+  'object-height-comparison',
+  'plant-height-comparison',
+  'sports-height-comparison',
+  'apparel-height-comparison',
+  'fictional-character-height-comparison',
 ]);
 
 export function isRouteLocalized(path: string): boolean {

@@ -54,7 +54,13 @@ const relatedComparisons = getRelatedComparisons({
   locale,
 });
 
-const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath(category.route, locale)}`;
+// Category body content (measurement, tables, FAQs, editorial) is English-only;
+// only name/title/description are translated. Locale copies therefore
+// canonicalize to English, like blog articles and tool pages.
+const canonicalUrl =
+  locale === 'en'
+    ? `${SITE.siteUrl}${getLocalizedPath(category.route, locale)}`
+    : `${SITE.siteUrl}${category.route}`;
 ---
 
 <Layout

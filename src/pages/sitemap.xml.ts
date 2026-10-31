@@ -36,13 +36,6 @@ export const GET: APIRoute = async () => {
     { path: '/how-to-use/', priority: '0.85', changefreq: 'weekly' },
     { path: '/about/', priority: '0.7', changefreq: 'monthly' },
 
-    // Canonical Category Hub Routes (Filter out unverified/non-indexable categories)
-    ...CATEGORIES.filter((cat) => cat.indexable !== false).map((cat) => ({
-      path: cat.route,
-      priority: '0.9',
-      changefreq: 'weekly',
-    })),
-
     // Curated Comparison Hubs
     ...COMPARISONS.filter((comp) => comp.indexable !== false).map((comp) => ({
       path: `/compare/${comp.slug}/`,
@@ -137,6 +130,14 @@ export const GET: APIRoute = async () => {
       path: `/fictional-character-height/${f.slug}/`,
       priority: '0.8',
       changefreq: 'monthly',
+    })),
+
+    // Category Hub Routes (English-only body content — locale copies
+    // canonicalize to English, so no locale variants or hreflang alternates)
+    ...CATEGORIES.filter((cat) => cat.indexable !== false).map((cat) => ({
+      path: cat.route,
+      priority: '0.9',
+      changefreq: 'weekly',
     })),
 
     // Tool pages with English-only content (titles/body hardcoded English,
