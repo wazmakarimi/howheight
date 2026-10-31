@@ -12,7 +12,12 @@ interface Props {
 }
 
 const { locale = 'en' } = Astro.props;
-const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath('/about/', locale)}`;
+// About body sections are hardcoded English; only hero strings are translated.
+// Locale copies therefore canonicalize to English, like category pages.
+const canonicalUrl =
+  locale === 'en'
+    ? `${SITE.siteUrl}${getLocalizedPath('/about/', locale)}`
+    : `${SITE.siteUrl}/about/`;
 
 const aboutSchema = {
   '@context': 'https://schema.org',

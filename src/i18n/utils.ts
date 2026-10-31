@@ -172,6 +172,8 @@ const ENGLISH_ONLY_ROUTES = new Set([
   'sports-height-comparison',
   'apparel-height-comparison',
   'fictional-character-height-comparison',
+  // About page: body sections are hardcoded English.
+  'about',
 ]);
 
 export function isRouteLocalized(path: string): boolean {

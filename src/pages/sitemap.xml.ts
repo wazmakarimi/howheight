@@ -34,7 +34,6 @@ export const GET: APIRoute = async () => {
     { path: '/compare/', priority: '0.95', changefreq: 'daily' },
     { path: '/height-comparison-calculator/', priority: '0.95', changefreq: 'weekly' },
     { path: '/how-to-use/', priority: '0.85', changefreq: 'weekly' },
-    { path: '/about/', priority: '0.7', changefreq: 'monthly' },
 
     // Curated Comparison Hubs
     ...COMPARISONS.filter((comp) => comp.indexable !== false).map((comp) => ({
@@ -131,6 +130,10 @@ export const GET: APIRoute = async () => {
       priority: '0.8',
       changefreq: 'monthly',
     })),
+
+    // About page (English-only body content — locale copies canonicalize
+    // to English, so no locale variants or hreflang alternates)
+    { path: '/about/', priority: '0.7', changefreq: 'monthly' },
 
     // Category Hub Routes (English-only body content — locale copies
     // canonicalize to English, so no locale variants or hreflang alternates)
