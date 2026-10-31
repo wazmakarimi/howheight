@@ -22,6 +22,7 @@ export default {
   'section.categoriesTitle': 'Explore Categories',
   'section.categoriesDesc': 'Browse verified measurements, physical standards, and tailored comparison workspaces for every category.',
   'section.browseCategory': 'Browse',
+  'section.relatedCategories': 'Explore Related Categories',
 
   // Popular Comparisons Section
   'section.comparisonsBadge': 'Side-By-Side Matchups',

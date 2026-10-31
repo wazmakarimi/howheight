@@ -88,7 +88,7 @@ const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath(category.route, locale)}
 
     <!-- Interactive Comparison Workspace -->
     <section class="mb-16">
-      <ComparisonTool locale={locale} />
+      <ComparisonTool locale={locale} measurementNote={category.measurementNote} />
     </section>
 
     <!-- Measurement Standards & Reference Table -->
@@ -132,6 +132,32 @@ const canonicalUrl = `${SITE.siteUrl}${getLocalizedPath(category.route, locale)}
         </table>
       </div>
     </section>
+
+    <!-- In-Depth Editorial: category-specific guide -->
+    {category.editorialSections && category.editorialSections.length > 0 && (
+      <section class="max-w-5xl mx-auto mb-16 p-6 sm:p-8 rounded-3xl bg-white border border-slate-200 shadow-soft">
+        <div class="max-w-3xl mb-6">
+          <span class="text-xs font-bold uppercase tracking-widest text-brand-600 bg-brand-50 px-3 py-1 rounded-full">
+            In Depth
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mt-2">
+            Understanding {category.name} Heights
+          </h2>
+        </div>
+        <div class="max-w-3xl space-y-8">
+          {category.editorialSections.map((section) => (
+            <div>
+              <h3 class="text-lg sm:text-xl font-bold text-slate-900 mb-2">{section.heading}</h3>
+              <div class="space-y-3 text-sm sm:text-base text-slate-600 leading-relaxed">
+                {section.paragraphs.map((para) => (
+                  <p>{para}</p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
 
     <!-- Verified Entities Grid (Clean Entity Cards) -->
     {isCelebrityCat && (

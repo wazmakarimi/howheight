@@ -15,9 +15,10 @@ interface Props {
   initialComparisonSlug?: string;
   showQuickCompare?: boolean;
   locale?: Locale;
+  measurementNote?: string;
 }
 
-const { initialItems, initialComparisonSlug, showQuickCompare = true, locale = 'en' } = Astro.props;
+const { initialItems, initialComparisonSlug, showQuickCompare = true, locale = 'en', measurementNote } = Astro.props;
 
 // Server-side pre-resolve initial models so client does not need to bundle 1,400+ assets for initial render
 const sourceItems = initialItems && initialItems.length > 0 ? initialItems : INITIAL_PEOPLE;
@@ -59,7 +60,7 @@ const initialItemsJson = JSON.stringify(resolvedItems);
 
     <!-- Right Hero: Maximized Comparison Canvas & Insights (Takes all remaining width) -->
     <main class="flex-1 min-w-0 w-full space-y-4">
-      <HeightChart locale={locale} />
+      <HeightChart locale={locale} measurementNote={measurementNote} />
       <ComparisonSummary locale={locale} />
     </main>
   </div>

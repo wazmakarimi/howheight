@@ -5,9 +5,18 @@ import type { Locale } from '../i18n/locales';
 
 interface Props {
   locale?: Locale;
+  // Contextual measurement note shown under the canvas. Undefined keeps the
+  // legacy withers note (homepage, compare pages). Empty string hides the
+  // note. A string shows that category-specific note instead.
+  measurementNote?: string;
 }
 
-const { locale = 'en' } = Astro.props;
+const { locale = 'en', measurementNote } = Astro.props;
+const showMeasurementNote = measurementNote !== '';
+const measurementNoteText =
+  measurementNote === undefined
+    ? 'Four-legged animals are measured to the shoulder or withers. Heads and ears naturally extend above the shoulder line.'
+    : measurementNote;
 ---
 
 <div class="bg-white rounded-2xl border border-slate-200/80 shadow-soft p-3.5 sm:p-5 flex flex-col">
@@ -424,16 +433,18 @@ const { locale = 'en' } = Astro.props;
   </div>
 
   <!-- Measurement Reference Informational Note -->
-  <div class="mt-3 py-1.5 px-3 rounded-lg bg-slate-50 border border-slate-200/60 flex items-center gap-2 text-[11px] text-slate-500">
-    <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-brand-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <circle cx="12" cy="12" r="10"></circle>
-      <line x1="12" y1="16" x2="12" y2="12"></line>
-      <line x1="12" y1="8" x2="12.01" y2="8"></line>
-    </svg>
-    <span>
-      <strong>Measurement Reference:</strong> Four-legged animals are measured to the shoulder or withers. Heads and ears naturally extend above the shoulder line.
-    </span>
-  </div>
+  {showMeasurementNote && (
+    <div class="mt-3 py-1.5 px-3 rounded-lg bg-slate-50 border border-slate-200/60 flex items-center gap-2 text-[11px] text-slate-500">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-brand-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"></circle>
+        <line x1="12" y1="16" x2="12" y2="12"></line>
+        <line x1="12" y1="8" x2="12.01" y2="8"></line>
+      </svg>
+      <span>
+        <strong>Measurement Reference:</strong> {measurementNoteText}
+      </span>
+    </div>
+  )}
 
   <!-- Height Difference Card (when exactly 2 entities are active) -->
   <div id="height-difference-card" class="hidden mt-4 p-4 rounded-xl bg-gradient-to-r from-brand-50 via-indigo-50/40 to-slate-50 border border-brand-100 transition-all">
