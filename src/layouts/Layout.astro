@@ -115,6 +115,10 @@ const webAppSchema = shouldEmitWebApp ? {
       gtag('config', 'G-BNEEVVXP3R');
     </script>
 
+    <!-- Google AdSense: verification / review script (publisher ID matches ads.txt).
+         Serves no ads until the account is approved; required for AdSense review. -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1127145351303039" crossorigin="anonymous"></script>
+
     <!-- Alternate Hreflang Tags (Official Internationalization SEO) -->
     {alternateLinks.map((alt) => (
       <link rel="alternate" hreflang={alt.hreflang} href={alt.href} />
