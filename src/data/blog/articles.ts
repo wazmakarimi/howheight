@@ -6132,5 +6132,237 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['basketball-hoop-height-vs-human', 'human-vs-elephant-height-comparison', 'human-vs-polar-bear-height-comparison', 'tallest-female-celebrities-height-comparison', 'human-vs-giraffe-height-comparison', 'shortest-celebrities-height-comparison'],
   },
+  {
+    slug: 'amitabh-bachchan-height-comparison',
+    title: 'Amitabh Bachchan Height Comparison: 6′2″ (188 cm) vs Jaya, Abhishek & the Khans, Visualised',
+    h1: 'How Tall Is Amitabh Bachchan? 6′2″ Compared to His Family and Co-Stars',
+    description:
+      'Amitabh Bachchan is commonly reported at 6′2″ (188 cm) — 31 cm taller than wife Jaya, level with son Abhishek, and a head above the Khans. Verified figures, the without-shoes caveat, and the age question, all drawn to scale.',
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-11-02T09:00:00Z',
+    updatedDate: '2026-11-02T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'Amitabh Bachchan is commonly reported at 6′2″ (188 cm, 74 inches) — one of the tallest leading men Bollywood has ever had. That puts him 31 cm above his wife Jaya Bachchan (5′2″, 157 cm), level with his son Abhishek Bachchan (reported 6′2″, 188 cm, though some sources put him up to 5 cm shorter), 18 cm above his daughter-in-law Aishwarya Rai Bachchan (5′7″, 170 cm), and well clear of the three Khans: 19 cm above Shah Rukh Khan (169 cm), 22 cm above Salman Khan (166 cm) and 25 cm above Aamir Khan (163 cm).',
+      keyTakeaway:
+        'Treat every figure here as a reported estimate, not a measured fact: Bollywood heights are not officially verified, and sources disagree by several centimetres on almost everyone except Amitabh himself. The honest headline is that Amitabh at his peak was genuinely 6′2″, he is almost certainly a little shorter today at 84, and no credible source makes Abhishek taller than his father — the 6′3″ claims for Abhishek are outliers, not consensus.',
+      dataPoints: [
+        { label: 'Amitabh Bachchan', value: '6′2″ (188 cm) — reported peak height' },
+        { label: 'Biggest family gap', value: '31 cm above Jaya Bachchan (5′2″, 157 cm)' },
+        { label: 'Son vs father', value: 'Abhishek reported equal (188 cm) or up to ~5 cm shorter' },
+        { label: 'Gap to the Khans', value: '19 cm (SRK), 22 cm (Salman), 25 cm (Aamir)' },
+        { label: 'Today, at 84', value: 'Estimated ~185 cm now — age shrinkage, not a measurement' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 188, label: 'Amitabh Bachchan' },
+      { category: 'human', id: 'male', customHeightCm: 188, label: 'Abhishek Bachchan' },
+      { category: 'human', id: 'female', customHeightCm: 170, label: 'Aishwarya Rai Bachchan' },
+      { category: 'human', id: 'female', customHeightCm: 157, label: 'Jaya Bachchan' },
+      { category: 'human', id: 'male', customHeightCm: 177, label: 'Dharmendra' },
+      { category: 'human', id: 'male', customHeightCm: 169, label: 'Shah Rukh Khan' },
+      { category: 'human', id: 'male', customHeightCm: 166, label: 'Salman Khan' },
+      { category: 'human', id: 'male', customHeightCm: 163, label: 'Aamir Khan' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average man (175 cm)' },
+    ],
+    toolActionTitle: 'Stand next to Big B',
+    toolActionDescription:
+      'The visualiser above is preloaded with the Bachchan family and the Khans at their reported heights. Add your own height and see exactly where you stand next to Amitabh — and how many centimetres of the 31 cm couple gap you would close.',
+    comparisonTable: {
+      caption: 'Amitabh Bachchan against his family and his most famous co-stars — reported heights with the disputed entries flagged',
+      headers: ['Person', 'Reported height', 'Gap to Amitabh (188 cm)', 'Relationship / note'],
+      rows: [
+        ['Amitabh Bachchan', '6′2″ (188 cm)', '—', 'The benchmark; peak figure'],
+        ['Abhishek Bachchan', '6′2″ (188 cm) — listed 6′0″–6′2″', '0 to ~5 cm shorter', 'Son; NOT taller than his father'],
+        ['Aishwarya Rai Bachchan', '5′7″ (170 cm)', '18 cm shorter', 'Daughter-in-law; married Abhishek in 2007'],
+        ['Jaya Bachchan', '5′2″ (157 cm)', '31 cm shorter', 'Wife since 1973; the biggest family gap'],
+        ['Dharmendra', '5′10″ (177 cm)', '11 cm shorter', 'Sholay (1975) co-star'],
+        ['Shah Rukh Khan', '5′6½″ (169 cm)', '19 cm shorter', 'Other charts list him 170–173 cm'],
+        ['Salman Khan', '5′5½″ (166 cm)', '22 cm shorter', 'Other charts list him up to 173 cm'],
+        ['Aamir Khan', '5′4″ (163 cm)', '25 cm shorter', 'Other charts list him up to 168 cm'],
+        ['Hrithik Roshan', '6′0″ (183 cm)', '5 cm shorter', 'Closest of the younger stars'],
+        ['Akshay Kumar', '5′11″ (180 cm)', '8 cm shorter', 'Nearly eye to eye in a crowd'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-answer',
+        heading: 'The Answer: 6′2″ (188 cm) — and Why That Number Needs a Caveat',
+        subheading: 'The most reported figure in Bollywood is also one of the most honest — but it is still a reported figure, not a measurement.',
+        paragraphs: [
+          'Amitabh Bachchan is commonly reported at 6 feet 2 inches (188 cm, 74 inches, 1.88 m). The figure is unusually consistent: the Wikipedia compilation of reported Bollywood heights lists him at 6′2″ (188 cm), BollywoodLife’s tallest-actors roundup gives the same number, and biographical profiles from Super Stars Bio to entertainment databases repeat it. When a celebrity height survives across that many independent listings without drifting, it is usually because it started close to the truth — and in Amitabh’s case there is a biographical reason to believe it. When he tried to break into acting in the late 1960s after a job as a shipping-company executive, producers reportedly dismissed him as too thin and too tall. A man does not get rejected for being too tall at 5′10″.',
+          'Here is the caveat that this whole article is built on, and that most height lists skip: celebrity heights are reported figures, not officially verified measurements. Wikipedia’s own Bollywood heights page warns in plain language that its figures are approximate, compiled from entertainment-media reports, and should not be treated as officially verified. Nobody has published a stadiometer reading for Amitabh Bachchan. What we have is a strong consensus of listings, photographs, and five decades of co-stars standing next to him — and that consensus says 6′2″ at his peak. Everything below follows the same rule: where sources disagree, we say so and chart the most defensible number, rather than quietly picking the flattering one.',
+          'The scale of 188 cm is worth feeling before the comparisons begin. At that height, Amitabh stands 13 cm above the average man on our chart (175 cm) and roughly a full head above the average woman. In a crowd, a 188 cm man is visible from the back of the room; on a film set in the 1970s, when the average Indian leading man was several inches shorter, he was a different species of screen presence. That physical fact shaped his career: the long-legged, short-waisted frame that made him look gangly in stills made him look monumental in motion, and directors from the Angry Young Man era onward built shots around it. His height was not a footnote to his stardom. It was part of the silhouette.',
+        ],
+        callout: {
+          title: 'The number to remember',
+          text: '6′2″ (188 cm) at his peak — 74 inches, 1.88 metres. Reported by Wikipedia’s Bollywood heights compilation, BollywoodLife, and biographical profiles alike. Not an official measurement, but the strongest consensus in the industry.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-family-gap',
+        heading: 'The Family Gap: 31 cm Between Amitabh and Jaya',
+        subheading: 'The single most visual comparison in this article is also the most personal one.',
+        paragraphs: [
+          'Jaya Bachchan — born Jaya Bhaduri on 9 April 1948, married to Amitabh since 1973 — is reported at 5 feet 2 inches (157 cm) by bodysize.org and by biographical profiles that agree on the figure. Set that next to Amitabh’s 188 cm and the gap is 31 cm: just over a foot, roughly the length of a school ruler, standing between a husband and wife of more than fifty years. It is the largest gap in the Bachchan family, and it is the comparison readers ask for most, because it is the one you can see in every family photograph: at public events, Amitabh’s shoulder sits roughly level with the top of Jaya’s head.',
+          'The rest of the family fills in the staircase between them. Aishwarya Rai Bachchan, Miss World 1994, who married Abhishek in 2007, is reported at 5′7″ (170 cm) across multiple biographical sources — 18 cm below Amitabh and 13 cm above Jaya. So the full family lineup, tallest to shortest, runs: Amitabh 188 cm, Abhishek 188 cm (with the dispute covered below), Aishwarya 170 cm, Jaya 157 cm. Drawn to scale, as in the chart below, the family does not slope gently — it drops in two steps, with a wide 18 cm stair between father and daughter-in-law and another 13 cm step down to Jaya.',
+          'That 31 cm gap also answers a question people ask without quite asking it: what does a foot of height difference actually look like between two people who live together? It looks like this chart. It is large enough that Jaya’s eye line falls around Amitabh’s chin, large enough that photographers framing the couple together have to choose whose head to centre, and small enough — unlike the extreme celebrity-couple gaps elsewhere on this site — to look entirely ordinary in person. Most couples differ by 10–15 cm. The Bachchans differ by twice that, which is exactly why the photograph is so striking.',
+        ],
+        image: {
+          src: '/assets/blog/amitabh-bachchan-height-comparison/amitabh-vs-jaya.png',
+          alt: 'Height comparison chart showing Amitabh Bachchan at 188 cm next to Jaya Bachchan at 157 cm, a gap of 31 cm',
+          caption: 'The 31 cm couple gap, rendered to scale: Jaya’s eye line falls around Amitabh’s chin.',
+        },
+        callout: {
+          title: 'The family staircase',
+          text: 'Amitabh 188 cm · Abhishek 188 cm (disputed, see below) · Aishwarya 170 cm · Jaya 157 cm. Two steps of 18 cm and 13 cm, and a 31 cm drop from husband to wife.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'abhishek-taller',
+        heading: 'Is Abhishek Bachchan Taller Than Amitabh? No — and the 6′3″ Claim Is an Outlier',
+        subheading: 'The question behind half the searches for this article has a clear answer, once you separate consensus from clickbait.',
+        paragraphs: [
+          'Short answer: no. Abhishek Bachchan is reported as equal to his father, or slightly shorter — never credibly taller. Wikipedia’s Bollywood heights compilation lists Abhishek at exactly the same figure as Amitabh: 6′2″ (188 cm). Other careful sources put him a touch lower: celebheights, which estimates from photographs rather than press releases, lists Abhishek at 6′1½″ (186.7 cm), and some charts go as low as 6′0″ (183 cm). The honest summary is a range, not a point: Abhishek is reported at 183–188 cm, which makes him level with his father at best and up to about 5 cm shorter at worst. In the family chart above we draw him at 188 cm, the Wikipedia figure, and flag the range here.',
+          'So where does the claim that Abhishek is 6′3″ (191 cm) come from? Low-quality listicles that repeat one another, plus a famous piece of self-mythology: Abhishek once joked that he is 6′3″ in real life and twenty feet on screen. It was a joke about screen presence, and it escaped into the wild as a fact. Photographic evidence does not support it — next to his father, Abhishek does not look taller, and next to genuinely 6′2″ co-stars such as Sonu Sood he looks a fraction shorter. The 6′3″ figure appears in no careful compilation, and this article treats it as what it is: an outlier to debunk, not a contender to average in.',
+          'There is a second, quieter reason the father-son comparison confuses people: Amitabh himself is no longer 188 cm. He turned 84 on 11 October 2026, and age-related height loss — the slow compression of spinal discs that typically costs adults 1–3 cm from their peak by their eighties — applies to him like anyone else. Celebheights estimates his current height at around 6′1″ (185.4 cm), down from a 6′2″ peak. That is an estimate, not a measurement, and we label it as one. But it reframes the comparison honestly: if Amitabh today stands near 185 cm and Abhishek near 187 cm, the son may now edge the father by a centimetre or two in real life — while the peak-to-peak comparison, the one the listings record, remains a tie. Both statements can be true, and conflating them is how bad height articles are born.',
+        ],
+        image: {
+          src: '/assets/blog/amitabh-bachchan-height-comparison/bachchan-family-lineup.png',
+          alt: 'Height comparison chart showing the Bachchan family lineup: Amitabh Bachchan 188 cm, Abhishek Bachchan 188 cm, Aishwarya Rai Bachchan 170 cm and Jaya Bachchan 157 cm',
+          caption: 'The Bachchan family at their reported heights: father and son level at the top, then an 18 cm step down to Aishwarya and a 13 cm step to Jaya.',
+        },
+        callout: {
+          title: 'The verdict on Abhishek',
+          text: 'Reported 183–188 cm. Level with Amitabh on the Wikipedia figure; up to ~5 cm shorter on photographic estimates. The 6′3″ (191 cm) claims are outliers — ignore them.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'vs-the-khans',
+        heading: 'Amitabh vs the Khans: 19, 22 and 25 cm of Daylight',
+        subheading: 'The three biggest stars of the next generation all look up to him — literally.',
+        paragraphs: [
+          'If the family gap is the personal comparison, the Khans are the generational one. Shah Rukh Khan is listed at 5′6½″ (169 cm) in Wikipedia’s compilation, Salman Khan at 5′5½″ (166 cm), and Aamir Khan at 5′4″ (163 cm). Against Amitabh’s 188 cm, the gaps are 19 cm, 22 cm and 25 cm respectively — in each case roughly a head, or close to it. Aamir, the shortest of the three, gives up a full 25 cm: a quarter of a metre, about ten inches, the height of a small child standing between two of the most famous men in India. Drawn to scale, as in the chart below, the visual is unmistakable: one tall figure and three men a clear step below him.',
+          'Now the honest footnote, because the Khans are the most disputed heights in Bollywood and this article promised not to hide disputes. Other charts list Shah Rukh at 170–173 cm (5′7″–5′8″), Salman as high as 173 cm (5′8″), and Aamir as high as 168 cm (5′6″) — and celebheights’ photographic estimates land near 171 cm for Shah Rukh, 170 cm for Salman and 165 cm for Aamir. On those friendlier numbers the gaps shrink to roughly 15–18 cm for Shah Rukh, 15–18 cm for Salman and 20–23 cm for Aamir. The point stands either way, and that is the point worth making: no plausible reading of the sources puts any Khan within 15 cm of Amitabh. The ordering never changes, only the margin. Amitabh towers over all three on every source that exists.',
+          'The same logic covers the rest of his famous co-stars. Dharmendra, his Sholay (1975) co-star, is listed at 5′10″ (177 cm) — 11 cm below Amitabh, the smallest gap among his generation’s leading men, which is why the two looked like a matched pair on screen rather than a tall man and a short one. Among younger stars, Hrithik Roshan at 6′0″ (183 cm) comes closest at just 5 cm below, and Akshay Kumar at 5′11″ (180 cm) sits 8 cm below. And for completeness: Amitabh is not the tallest man in Bollywood history. Some lists put Arunoday Singh and Niketan Dheer at 6′4″ (194 cm) — taller than Amitabh by 6 cm — but those figures carry the same reported-figure caveat as everything else here, and neither man’s stardom approaches his. Tallest is a trivia answer. Amitabh’s 188 cm is a career.',
+        ],
+        image: {
+          src: '/assets/blog/amitabh-bachchan-height-comparison/amitabh-vs-khans.png',
+          alt: 'Height comparison chart showing Amitabh Bachchan at 188 cm next to Shah Rukh Khan at 169 cm, Salman Khan at 166 cm and Aamir Khan at 163 cm',
+          caption: 'Amitabh against the three Khans, rendered to scale: 19, 22 and 25 cm of daylight, on the Wikipedia-compilation figures.',
+        },
+        callout: {
+          title: 'The gaps, on any source',
+          text: 'Wikipedia figures: SRK 19 cm, Salman 22 cm, Aamir 25 cm below Amitabh. Friendlier charts: roughly 15–18 cm, 15–18 cm and 20–23 cm. No source closes the gap — Amitabh is taller than all three, always.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'without-shoes',
+        heading: 'Height Without Shoes: Why the Barefoot Number Is the Only Honest One',
+        subheading: 'This is the query the site already ranks for — and the angle competitors mostly ignore.',
+        paragraphs: [
+          'A surprising number of people search specifically for Amitabh Bachchan’s height in feet without shoes. The reason is Bollywood itself: on screen, height is a costume. Actors wear heeled boots, lifts inside their shoes, and stand on apple boxes; cinematographers shoot shorter actors from low angles and taller ones from above; and a leading man’s listed height has, for decades, been part of his publicity rather than his biography. Salman Khan himself once claimed 5′9½″ on a radio show, a figure no photographic estimate supports. When the industry’s own numbers include footwear, the only question that means anything is the barefoot one — and the answer is that every figure in this article is a barefoot-reported estimate, the number the listings intend before shoes are added.',
+          'That distinction explains most of the confusion in the sources. A 2–3 cm shoe sole plus generous rounding is the entire difference between the competing listings for the Khans: Shah Rukh at 169 cm barefoot becomes 5′7″ or 5′8″ in shoes and on a press release; Salman at 166 cm becomes 5′8″; Aamir at 163 cm becomes 5′6″. It also explains why photographs mislead in both directions — a man in heeled boots next to a woman in flats can look four inches taller than he is, and the same man barefoot on a beach can look ordinary. The rule for reading any Bollywood height: subtract the shoes, then decide. On that rule, Amitabh’s 188 cm survives as the most solid figure in the article, because it is consistent barefoot-reported across sources that disagree about almost everyone else.',
+          'Two practical consequences follow. First, if you are comparing yourself to Amitabh, measure yourself properly: barefoot, in the morning (spinal discs decompress overnight, so morning height runs a centimetre or so above evening height), back flat against a wall. Our guide to measuring your height accurately walks through the technique. Second, do not trust the screen. The camera has spent fifty years making Amitabh look taller than 6′2″ and the Khans look taller than they are — low angles, long lenses, and leading ladies in flats. The chart above, drawn to true scale with no camera in the way, is the correction. Amitabh at 188 cm needs no help from a lens. That was true in Sholay, and it is true now.',
+        ],
+        callout: {
+          title: 'The footwear rule',
+          text: 'Every figure here is a barefoot-reported estimate. Shoes add 2–3 cm and publicity adds more — that is the whole gap between the competing Khan listings. Subtract the shoes before you compare.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'see-where-you-stand',
+        heading: 'See Where You Stand Next to Big B',
+        subheading: 'The chart is preloaded — add your height and take your place in the lineup.',
+        paragraphs: [
+          'The comparison tool at the top of this article is preloaded with the full lineup: Amitabh (188 cm), Abhishek (188 cm), Aishwarya (170 cm), Jaya (157 cm), Dharmendra (177 cm), Shah Rukh (169 cm), Salman (166 cm), Aamir (163 cm), and the average man (175 cm) for scale. Add your own height and the chart redraws instantly: stand yourself next to Amitabh and see how much of his 188 cm you match; next to Jaya and check whether you close any of the 31 cm couple gap; next to the Khans and see which of the three you actually look eye to eye with.',
+          'A few suggested experiments. First, the couple test: pair yourself with a partner and compare your gap to Amitabh and Jaya’s 31 cm — our guide to celebrity couples with the biggest height differences has more extreme pairings to try. Second, the generation test: drop in Hrithik Roshan (183 cm) and Akshay Kumar (180 cm) and watch the gap to Amitabh shrink to 5 and 8 cm — the closest any younger star gets. Third, the honesty test: measure yourself properly barefoot, in the morning, and compare that figure to what you usually claim. Most people are carrying 2–3 cm of footwear optimism, which is exactly the margin that separates the competing listings for every actor on this page.',
+          'And if this article settled one argument for you, it probably started another: the full Bollywood ranking is coming next in this series, with Salman, Aamir, Ranbir, Hrithik, Akshay and Ranveer lined up the same way. Until then, the short version is this: Amitabh Bachchan at 6′2″ is not a publicity number. It is the rare Bollywood height that survives contact with the evidence — a foot above his wife, level with his son, and a head above the biggest stars of the generation that followed him.',
+        ],
+        callout: {
+          title: 'Try it now',
+          text: 'Scroll to the visualiser, tap “add person,” enter your barefoot morning height, and see exactly where you stand next to the Bachchans and the Khans.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is Amitabh Bachchan in feet?',
+        answer:
+          'Amitabh Bachchan is commonly reported at 6 feet 2 inches (188 cm, 74 inches, 1.88 m). The figure is consistent across Wikipedia’s Bollywood heights compilation, BollywoodLife’s tallest-actors roundup and biographical profiles. It is his peak reported height; like all celebrity heights, it is a reported figure rather than an officially verified measurement.',
+      },
+      {
+        question: 'What is Amitabh Bachchan’s height without shoes?',
+        answer:
+          'The 6′2″ (188 cm) figure is a barefoot-reported estimate — the number the listings intend before footwear. On screen he often looks taller because of heeled boots, lifts and low camera angles, and Bollywood listings routinely include footwear. For a fair comparison, measure yourself barefoot in the morning and compare that number to 188 cm.',
+      },
+      {
+        question: 'Is Abhishek Bachchan taller than Amitabh Bachchan?',
+        answer:
+          'No. Abhishek is reported at 6′2″ (188 cm) on Wikipedia’s compilation — exactly level with his father — and at 6′0″–6′1½″ (183–187 cm) on other sources, which makes him level or up to about 5 cm shorter. Claims of 6′3″ (191 cm) for Abhishek come from low-quality listicles and a joke he once made about being 6′3″ in real life and twenty feet on screen; no careful compilation supports them.',
+      },
+      {
+        question: 'How tall is Jaya Bachchan, and what is the height difference with Amitabh?',
+        answer:
+          'Jaya Bachchan is reported at 5 feet 2 inches (157 cm). The gap to Amitabh’s 188 cm is 31 cm — just over a foot. It is the largest gap in the Bachchan family: Aishwarya Rai Bachchan (5′7″, 170 cm) sits 18 cm below Amitabh and 13 cm above Jaya.',
+      },
+      {
+        question: 'How tall is Amitabh Bachchan compared to Shah Rukh, Salman and Aamir Khan?',
+        answer:
+          'Amitabh is taller than all three on every source: 19 cm above Shah Rukh Khan (5′6½″, 169 cm), 22 cm above Salman Khan (5′5½″, 166 cm) and 25 cm above Aamir Khan (5′4″, 163 cm), on Wikipedia’s compilation figures. Friendlier charts narrow the gaps to roughly 15–23 cm but never close them.',
+      },
+      {
+        question: 'Is Amitabh Bachchan still 6′2″ at 84?',
+        answer:
+          'Probably not quite. He turned 84 on 11 October 2026, and age-related spinal compression typically costs adults a few centimetres from their peak. Celebheights estimates his current height at around 6′1″ (185.4 cm), down from a 6′2″ peak. That is an estimate, not a measurement — but the peak-to-peak figure of 6′2″ remains the right headline number.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Heights of Bollywood Actors — Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Heights_of_Bollywood_actors',
+        description: 'Reported-height compilation: Amitabh and Abhishek Bachchan both 6′2″ (188 cm), Shah Rukh Khan 169 cm, Salman Khan 166 cm, Aamir Khan 163 cm, Dharmendra 177 cm — with the explicit warning that figures are approximate and not officially verified.',
+      },
+      {
+        title: 'Amitabh Bachchan’s Height — Celebheights',
+        url: 'https://www.celebheights.com/s/Amitabh-Bachchan-489.html',
+        description: 'Photographic estimate for Amitabh: peak 6′2″ (188 cm), current estimate around 6′1″ (185.4 cm) — the source for the age-shrinkage discussion.',
+      },
+      {
+        title: 'Abhishek Bachchan’s Height — Celebheights',
+        url: 'https://www.celebheights.com/s/Abhishek-Bachchan-48541.html',
+        description: 'Photographic estimate for Abhishek at 6′1½″ (186.7 cm), below the Wikipedia 188 cm figure — the basis for the “equal or up to ~5 cm shorter” framing, plus his 6′3″ joke quote.',
+      },
+      {
+        title: 'Jaya Bachchan — Bodysize.org',
+        url: 'https://bodysize.org/en/jaya-bachchan/',
+        description: 'Jaya Bachchan height 5′2″ (157 cm), born 9 April 1948 — the source for the 31 cm couple gap.',
+      },
+      {
+        title: 'Bollywood’s Top Male Stars: The Height Chart — Kidelight',
+        url: 'https://www.kidelight.com/2025/04/bollywoods-top-male-stars-height-chart.html',
+        description: 'Alternative chart listing Salman at 5′8″ (173 cm), Shah Rukh at 5′7″ (170 cm), Aamir at 5′6″ (168 cm) and Abhishek as low as 6′0″ (183 cm) — the competing figures this article reconciles.',
+      },
+      {
+        title: 'Aishwarya Rai: Bio and Career Highlights — Bored Panda',
+        url: 'https://www.boredpanda.com/aishwarya-rai-bio-and-career-highlights/',
+        description: 'Aishwarya Rai height 5′7″ (170 cm), Miss World 1994, married Abhishek Bachchan in 2007.',
+      },
+      {
+        title: 'Top 10 Tallest Actors of Bollywood — BollywoodLife',
+        url: 'https://www.bollywoodlife.com/webstories/news-gossip/top-10-tallest-actors-of-bollywood-know-their-height-2691585/',
+        description: 'Amitabh Bachchan at 6 feet 2 inches, in a career spanning more than 200 films over five decades.',
+      },
+    ],
+    relatedSlugs: ['tallest-female-celebrities-height-comparison', 'shortest-celebrities-height-comparison', 'celebrity-couples-biggest-height-differences', 'kpop-idol-height-comparison', 'messi-vs-ronaldo-height-comparison'],
+  },
 ];
 

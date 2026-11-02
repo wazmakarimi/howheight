@@ -69,7 +69,7 @@ drive 607 impressions at positions 3.9–5.4 with ~zero clicks — dedicated
 comparison articles targeting these queries. Tall-woman-vs-short-man is a
 recurring engaged niche in the data.
 
-- [ ] #31 `amitabh-bachchan-height-comparison` — Amitabh Bachchan's Height (6'2") Compared: vs Jaya, Abhishek & Co-Stars, Visualized (celebrities)
+- [x] #31 `amitabh-bachchan-height-comparison` — Amitabh Bachchan's Height (6'2") Compared: vs Jaya, Abhishek & Co-Stars, Visualized (celebrities) — published 2026-11-02 (with 3 site-rendered screenshots)
 - [ ] #32 `bollywood-actors-height-comparison` — Bollywood Actors' Heights Ranked: Salman, Aamir, Ranbir, Hrithik, Akshay & Ranveer (celebrities)
 - [ ] #33 `indian-cricketers-height-comparison` — Indian Cricketers' Heights Compared: Sachin, Virat, Rohit & More (sports)
 - [ ] #34 `bollywood-actresses-height-comparison` — Bollywood Actresses' Heights: Deepika, Priyanka & More, Visualized (celebrities)
