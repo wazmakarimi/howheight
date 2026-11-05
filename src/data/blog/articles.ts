@@ -6364,5 +6364,228 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['tallest-female-celebrities-height-comparison', 'shortest-celebrities-height-comparison', 'celebrity-couples-biggest-height-differences', 'kpop-idol-height-comparison', 'messi-vs-ronaldo-height-comparison'],
   },
+  {
+    slug: 'bollywood-actors-height-comparison',
+    title: 'Bollywood Actors Height Comparison: Hrithik (183 cm) to Aamir (163 cm), Ranked & Visualised',
+    h1: 'How Tall Are Bollywood Actors? The Six Biggest Stars Ranked, Tallest to Shortest',
+    description:
+      'Bollywood actors’ heights ranked on one consistent baseline: Hrithik Roshan 6′0″ (183 cm) down to Aamir Khan 5′4″ (163 cm), with Salman Khan’s disputed 166–174 cm range explained honestly, the 20 cm spread drawn to scale, and the barefoot caveat behind every number.',
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-11-05T09:00:00Z',
+    updatedDate: '2026-11-05T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'On one consistent baseline — Wikipedia’s compilation of reported Bollywood heights — the six biggest male stars of modern Bollywood rank: Hrithik Roshan 6′0″ (183 cm), Ranbir Kapoor 6′0″ (182 cm), Akshay Kumar 5′11″ (180 cm), Ranveer Singh 5′9″ (175 cm), Salman Khan 5′5½″ (166 cm) and Aamir Khan 5′4″ (163 cm). The spread from tallest to shortest is 20 cm, and Amitabh Bachchan (6′2″, 188 cm) stands 5 cm above the tallest of the six.',
+      keyTakeaway:
+        'Every figure here is a reported estimate, not an officially verified measurement — and the honest article says so up front. The ranking itself is stable on every source: Hrithik and Ranbir at the top, Akshay and Ranveer in the middle, Salman and Aamir at the bottom. What changes between sources is the margin, above all for Salman Khan, whose listings run from 166 cm to 174 cm. Read the ranges, not the single numbers.',
+      dataPoints: [
+        { label: 'Tallest of the six', value: 'Hrithik Roshan — 6′0″ (183 cm)' },
+        { label: 'Shortest of the six', value: 'Aamir Khan — 5′4″ (163 cm)' },
+        { label: 'Tallest-to-shortest spread', value: '20 cm — about eight inches' },
+        { label: 'Most disputed figure', value: 'Salman Khan — listed anywhere from 166 cm to 174 cm' },
+        { label: 'Above them all', value: 'Amitabh Bachchan — 6′2″ (188 cm), 5 cm over Hrithik' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 188, label: 'Amitabh Bachchan' },
+      { category: 'human', id: 'male', customHeightCm: 183, label: 'Hrithik Roshan' },
+      { category: 'human', id: 'male', customHeightCm: 182, label: 'Ranbir Kapoor' },
+      { category: 'human', id: 'male', customHeightCm: 180, label: 'Akshay Kumar' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Ranveer Singh' },
+      { category: 'human', id: 'male', customHeightCm: 166, label: 'Salman Khan' },
+      { category: 'human', id: 'male', customHeightCm: 163, label: 'Aamir Khan' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average man (175 cm)' },
+    ],
+    toolActionTitle: 'Stand next to the six stars',
+    toolActionDescription:
+      'The visualiser above is preloaded with Hrithik, Ranbir, Akshay, Ranveer, Salman and Aamir at their reported heights, plus Amitabh Bachchan for scale. Add your own height and see which of the six you actually look eye to eye with.',
+    comparisonTable: {
+      caption: 'The six stars ranked tallest to shortest on the Wikipedia-compilation baseline, with the competing listings shown so the disputes stay visible',
+      headers: ['Rank', 'Actor', 'Reported height (baseline)', 'Other listings say', 'Gap to Hrithik (183 cm)'],
+      rows: [
+        ['1', 'Hrithik Roshan', '6′0″ (183 cm)', '5′11″ (180 cm) on Heightstar', '—'],
+        ['2', 'Ranbir Kapoor', '6′0″ (182 cm)', '5′10″ (178 cm) on Kidelight & Heightstar', '1 cm shorter'],
+        ['3', 'Akshay Kumar', '5′11″ (180 cm)', '5′10″ (178 cm) on Kidelight; 6′0″ (183 cm) elsewhere', '3 cm shorter'],
+        ['4', 'Ranveer Singh', '5′9″ (175 cm)', '5′10″ (178 cm) on Kidelight; 6′0″ (183 cm) on Heightstar', '8 cm shorter'],
+        ['5', 'Salman Khan', '5′5½″ (166 cm)', '5′8″ (173–174 cm) on most profile databases', '17 cm shorter'],
+        ['6', 'Aamir Khan', '5′4″ (163 cm)', '5′5″–5′6″ (165–168 cm) on other listings', '20 cm shorter'],
+        ['—', 'Amitabh Bachchan (for scale)', '6′2″ (188 cm)', 'Consistent across listings', '5 cm TALLER than Hrithik'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-answer',
+        heading: 'The Ranking: 183 cm Down to 163 cm, and a 20 cm Spread',
+        subheading: 'One baseline, six stars, and the caveat that makes the whole ranking honest.',
+        paragraphs: [
+          'Tallest to shortest, the six biggest male stars of modern Bollywood line up like this: Hrithik Roshan at 6 feet 0 inches (183 cm), Ranbir Kapoor at 6′0″ (182 cm), Akshay Kumar at 5′11″ (180 cm), Ranveer Singh at 5′9″ (175 cm), Salman Khan at 5′5½″ (166 cm) and Aamir Khan at 5′4″ (163 cm). The spread from Hrithik to Aamir is 20 cm — about eight inches, roughly the length of a school ruler and a bit. Drawn to scale, as in the chart below, it is not a gentle slope: the top three cluster within 3 cm of each other, Ranveer sits a clear step below them, and then there is a 9 cm drop to Salman and a final 3 cm step down to Aamir.',
+          'Those numbers use one consistent baseline: Wikipedia’s compilation of reported Bollywood heights, the same baseline our Amitabh Bachchan article used, because a ranking only means something when every figure comes from the same ruler. The table above also shows what the other listings say, because they do not all agree — and hiding that disagreement would be worse than showing it. Kidelight’s top-100 chart, for instance, puts Ranbir, Akshay and Ranveer all at 5′10″ (178 cm), while Heightstar’s 2026 top-50 list has Hrithik at 5′11″ (180 cm) and Ranveer, bizarrely, at 6′0″ (183 cm). The ordering barely moves between sources: Hrithik and Ranbir are always the top two, Aamir is always the shortest, and Salman is always second-shortest. Only the margins change.',
+          'Here is the caveat this whole article is built on, and the one most height lists skip: celebrity heights are reported figures, not officially verified measurements. Wikipedia’s own Bollywood heights page says so in plain language — its figures are approximate, compiled from entertainment-media reports, and should not be treated as officially verified. Nobody has published a stadiometer reading for any of these six men. What we have is a consensus of listings, photographs, and decades of co-stars standing next to each other, and where that consensus breaks down — above all for Salman Khan — this article says so and gives the range instead of quietly picking the flattering number.',
+        ],
+        image: {
+          src: '/assets/blog/bollywood-actors-height-comparison/bollywood-six-lineup.png',
+          alt: 'Height comparison chart showing six Bollywood actors ranked tallest to shortest: Hrithik Roshan 183 cm, Ranbir Kapoor 182 cm, Akshay Kumar 180 cm, Ranveer Singh 175 cm, Salman Khan 166 cm and Aamir Khan 163 cm',
+          caption: 'The six stars on one baseline, drawn to scale: a 3 cm cluster at the top, a step down to Ranveer, then a 9 cm drop to Salman.',
+        },
+        callout: {
+          title: 'The ranking to remember',
+          text: 'Hrithik 183 cm · Ranbir 182 cm · Akshay 180 cm · Ranveer 175 cm · Salman 166 cm · Aamir 163 cm. A 20 cm spread, and Amitabh Bachchan (188 cm) above them all.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'salman-khan',
+        heading: 'Salman Khan: the Most Disputed Height in Bollywood',
+        subheading: 'The query with the most searches is also the one with the least agreement — and that is not a coincidence.',
+        paragraphs: [
+          'If one number in this article deserves a section of its own, it is Salman Khan’s. Our search data shows “salman khan height” drawing about 124 impressions — more than the other five actors’ height queries combined — and the reason is visible in the sources: they cannot agree with each other. Wikipedia’s compilation lists him at 5′5½″ (166 cm). Most profile databases — Filmibeat, Celebsline, Biography Wallah, WikiBio and a dozen more — list him at 5′8″ (173–174 cm). Astrology site Astrotheme splits the difference at 5′6½″ (169 cm), and some listings give 5′7″ (170 cm). The honest range is 166–174 cm: eight centimetres of disagreement about one of the most photographed men in India.',
+          'Why would the sources disagree by that much? Partly footwear and publicity, covered in the final section — but partly Salman himself. He once claimed 5′9½″ on a radio show, a figure no photographic estimate supports, and the industry has been rounding him up ever since. The 5′8″ figure is now the most widely repeated listing, which is why most profile pages show it; the 166 cm figure comes from the more conservative compilation that also lists Aamir at 163 cm and Shah Rukh Khan at 169 cm. Neither end of the range is a settled fact, and this article will not pretend otherwise. What the range does settle is the ranking: on the 166 cm figure Salman is 17 cm below Hrithik and 3 cm above Aamir; on the 174 cm figure he is 9 cm below Hrithik and 11 cm above Aamir. Second-shortest either way.',
+          'The chart below makes the point visually, and it is deliberately drawn on the conservative baseline: Salman at 166 cm next to Aamir at 163 cm, a gap of just 3 cm — barely more than an inch, the smallest gap in the whole ranking. If you believe the friendlier listings instead, that gap stretches to 8–11 cm and Salman pulls clear of Aamir entirely. Either way the visual story is the same: the two Khans who dominated the 1990s and 2000s are the two shortest men in this lineup, and the gap between them is the least certain number in Bollywood. That uncertainty is exactly why people keep searching — and why a page that gives one confident number and moves on is doing its readers a disservice.',
+        ],
+        image: {
+          src: '/assets/blog/bollywood-actors-height-comparison/salman-vs-aamir.png',
+          alt: 'Height comparison chart showing Salman Khan at 166 cm next to Aamir Khan at 163 cm, a gap of just 3 cm on the baseline figures',
+          caption: 'Salman vs Aamir on the baseline: 3 cm apart. On friendlier listings the gap stretches to 8–11 cm.',
+        },
+        callout: {
+          title: 'The Salman range',
+          text: 'Reported anywhere from 5′5½″ (166 cm) to 5′8″ (174 cm). The 5′8″ figure is the most widely repeated; 166 cm is the conservative compilation figure. He is second-shortest on either reading.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'the-top-two',
+        heading: 'The Top Two: Hrithik and Ranbir, Separated by a Single Centimetre',
+        subheading: 'Both men are listed at six feet — and the gap between them is smaller than a shoe sole.',
+        paragraphs: [
+          'Hrithik Roshan is the tallest of the six on the baseline, at 6′0″ (183 cm), and the figure is unusually stable: Wikipedia’s compilation and Kidelight’s chart agree on 183 cm, and the “Greek God” framing that has followed him since his debut in Kaho Naa... Pyaar Hai (2000) has always traded on a physique that genuinely is a head above most of his co-stars. Heightstar’s 2026 list is the dissenting voice, putting him at 5′11″ (180 cm) — 3 cm lower — but even on that reading he stays at or near the top of this group. At 183 cm he stands 8 cm above the average man on our chart (175 cm), which is why, in ensemble shots, he reads as the tall one without any help from the camera.',
+          'Ranbir Kapoor sits a single centimetre behind him at 182 cm, also listed at 6′0″ — and that 1 cm is the smallest gap in the ranking, smaller than the thickness of a shoe sole and far smaller than the error bars on either man’s figure. Other listings are less generous to Ranbir: Kidelight and Heightstar both put him at 5′10″ (178 cm), four centimetres below the baseline, while some charts give him the full 6′0″ (183 cm). The honest range is 178–183 cm, which means the honest statement about the top two is not “Hrithik is taller than Ranbir” but “they are effectively the same height, with Hrithik a fraction ahead on the most consistent compilation.” In photographs the two look level; the numbers agree.',
+          'One more comparison puts the top two in perspective: neither of them is the tallest Bollywood star. Amitabh Bachchan, at 6′2″ (188 cm), stands 5 cm above Hrithik and 6 cm above Ranbir — a gap you can see clearly in the chart below, where the full six line up under the man who defined the previous generation. Our Amitabh Bachchan height comparison covers that gap in detail, including the 31 cm difference between Amitabh and his wife Jaya. The point here is simpler: Hrithik and Ranbir are the tallest of their generation’s leading men, and they are still looking up at Big B.',
+        ],
+        image: {
+          src: '/assets/blog/bollywood-actors-height-comparison/six-vs-amitabh.png',
+          alt: 'Height comparison chart showing Amitabh Bachchan at 188 cm next to the six Bollywood actors: Hrithik Roshan 183 cm, Ranbir Kapoor 182 cm, Akshay Kumar 180 cm, Ranveer Singh 175 cm, Salman Khan 166 cm and Aamir Khan 163 cm',
+          caption: 'All six under Amitabh: 5 cm clear of Hrithik, 25 cm clear of Aamir — the previous generation still sets the ceiling.',
+        },
+        callout: {
+          title: 'Effectively tied at the top',
+          text: 'Hrithik 183 cm, Ranbir 182 cm — a 1 cm gap on the baseline, and 178–183 cm ranges that overlap completely. Call it a tie with Hrithik a fraction ahead.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-middle',
+        heading: 'The Middle: Akshay Kumar and Ranveer Singh',
+        subheading: 'Two of the industry’s most durable stars, 5 cm apart — and both with their own range of competing numbers.',
+        paragraphs: [
+          'Akshay Kumar is the most agreed-upon figure in the middle of the ranking: 5′11″ (180 cm) on Wikipedia’s compilation, repeated by most profile databases, and consistent with the “Khiladi” action-hero frame he has carried since the 1990s. The dissent is small but real — Kidelight lists him at 5′10″ (178 cm), some charts give him 6′0″ (183 cm), and a 6′2″ claim circulates in fan debate that no careful compilation supports. The honest range is 178–183 cm, centred on 180 cm, which puts him 3 cm below Hrithik and 5 cm above Ranveer. Of the six, Akshay’s number is the one you can quote with the most confidence: sources that disagree wildly about Salman and Ranbir mostly converge on 5′11″ for him.',
+          'Ranveer Singh is the harder case. The baseline says 5′9″ (175 cm); Kidelight and several other charts say 5′10″ (178 cm); Heightstar’s 2026 list goes all the way to 6′0″ (183 cm), a figure that would tie him with Hrithik and that no other careful source supports — treat it as an outlier, the same way this series treats the 6′3″ claims for Abhishek Bachchan. The honest range is 175–178 cm, which makes Ranveer 8 cm below Hrithik and 12 cm above Aamir on the baseline, and 5 cm below Akshay. That 5 cm gap to Akshay is the interesting one: in photographs from their many shared frames, Ranveer does look a half-head shorter than Akshay, which is exactly what 175 cm next to 180 cm looks like. His screen energy — the thing that made him a star from Band Baaja Baaraat (2010) onward — has always done more work than his height, and the numbers back that up: he is the shortest of the four men above the Khans, and it has never mattered.',
+          'The middle of this ranking is also where the averages sit. The average man on our chart is 175 cm — exactly Ranveer’s baseline figure — which means Ranveer is, quite literally, the average man of this group, Akshay is a hand above average, and the top two are most of a head above it. That framing is worth keeping in mind when the numbers start to feel abstract: 180 cm is tall in a crowd, 183 cm is visibly tall, and 175 cm is the height most readers will recognise as their own.',
+        ],
+        callout: {
+          title: 'The safest number in the article',
+          text: 'Akshay Kumar at 5′11″ (180 cm): the figure most sources agree on, with a narrow 178–183 cm range. Ranveer Singh is the less certain one at 175–178 cm.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'aamir-khan',
+        heading: 'Aamir Khan: the Shortest of the Six — and the Proof That It Never Mattered',
+        subheading: '20 cm below Hrithik, shortest on every listing, and still “Mr Perfectionist”.',
+        paragraphs: [
+          'Aamir Khan is reported at 5′4″ (163 cm) on the Wikipedia compilation — the shortest of the six by 3 cm on the baseline, and the shortest on every other listing too. Other charts give him 5′5″ (165 cm) or 5′6″ (168 cm), so the honest range is 163–168 cm, but no source, friendly or otherwise, lifts him out of last place. The gap to Hrithik is 20 cm on the baseline and 15 cm even on the friendliest numbers; the gap to Salman is 3 cm on the baseline and up to 11 cm on friendlier ones. Drawn to scale, as in the chart below, the 20 cm between the tallest and the shortest of these six men is about the height of a small child standing between them — and it is the single most striking visual in this article.',
+          'And yet Aamir’s career is the best argument in Bollywood that height is a footnote. Since his debut as a leading man in Qayamat Se Qayamat Tak (1988), he has built the industry’s most deliberate filmography — the actor other actors call “Mr Perfectionist” — and his stature has never been part of the conversation about him in the way it has been for Salman or Hrithik. Directors do not shoot around him; they shoot through him. That is partly technique — careful framing, co-stars in flats, the usual toolkit — and partly the fact that audiences stopped noticing decades ago. When a performer’s screen presence is that complete, 163 cm reads as presence, not as shortness.',
+          'There is a broader pattern here worth naming. The three Khans who defined Hindi cinema from the late 1980s onward — Aamir at 163 cm, Salman at 166–174 cm, Shah Rukh Khan at 169 cm — are all below the 175 cm average man on our chart, and all three became bigger stars than the taller men around them. Hrithik at 183 cm and Ranbir at 182 cm are the exceptions that prove the rule, not the rule itself: in Bollywood, height has never been the thing that makes a leading man. Talent, timing and screen presence have, and Aamir Khan at 5′4″ is the clearest proof of it in this lineup.',
+        ],
+        image: {
+          src: '/assets/blog/bollywood-actors-height-comparison/hrithik-vs-aamir.png',
+          alt: 'Height comparison chart showing Hrithik Roshan at 183 cm next to Aamir Khan at 163 cm, a gap of 20 cm — the full spread of the ranking',
+          caption: 'The full 20 cm spread in one frame: Hrithik at 183 cm, Aamir at 163 cm — about the height of a small child between them.',
+        },
+        callout: {
+          title: 'The shortest, on every source',
+          text: 'Aamir Khan 5′4″ (163 cm), range 163–168 cm. Last on the baseline, last on the friendliest charts — and the most decorated actor of the six.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'without-shoes',
+        heading: 'Height Without Shoes: Why the Barefoot Number Is the Only Honest One',
+        subheading: 'This is the query the site already ranks for — and the angle competitors mostly gloss over.',
+        paragraphs: [
+          'A surprising number of people search specifically for Bollywood actors’ heights in feet without shoes, and the reason is Bollywood itself: on screen, height is a costume. Actors wear heeled boots and lifts inside their shoes, stand on apple boxes, and are shot from low angles that add inches; a leading man’s listed height has, for decades, been part of his publicity rather than his biography. When the industry’s own numbers include footwear, the only question that means anything is the barefoot one — and every figure in this article is a barefoot-reported estimate, the number the listings intend before shoes are added.',
+          'That distinction explains most of the confusion in the sources. A 2–3 cm shoe sole plus generous rounding is the entire difference between the competing listings for most of these men: Salman at 166 cm barefoot becomes 5′8″ in shoes and on a press release; Aamir at 163 cm becomes 5′6″; Ranveer at 175 cm becomes 5′10″. It also explains why photographs mislead in both directions — a man in heeled boots next to a woman in flats can look four inches taller than he is, and the same man barefoot on a beach can look ordinary. The rule for reading any Bollywood height: subtract the shoes, then decide. On that rule, the ranking in this article holds on every source, because the shoe effect is roughly the same size for everyone — it moves all six men up together, and the gaps between them barely change.',
+          'Two practical consequences follow. First, if you are comparing yourself to any of these six, measure yourself properly: barefoot, in the morning (spinal discs decompress overnight, so morning height runs a centimetre or so above evening height), back flat against a wall. Second, use the tool at the top of this article rather than the screen: it is preloaded with all six stars at their reported heights, plus Amitabh Bachchan and the average man for scale. Add your height and the chart redraws instantly — stand yourself next to Hrithik and see how much of his 183 cm you match, next to Aamir and check whether you close any of the 20 cm spread, or next to Salman and settle, for yourself, which end of his 166–174 cm range looks right. The chart has no camera angles and no footwear. That is the point.',
+        ],
+        callout: {
+          title: 'The footwear rule',
+          text: 'Every figure here is a barefoot-reported estimate. Shoes add 2–3 cm and publicity adds more — that is the whole gap between the competing listings. Subtract the shoes before you compare.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Who is the tallest Bollywood actor among Hrithik, Ranbir, Akshay, Ranveer, Salman and Aamir?',
+        answer:
+          'Hrithik Roshan, at 6 feet 0 inches (183 cm) on the Wikipedia-compilation baseline. Ranbir Kapoor is a single centimetre behind at 182 cm, so the two are effectively tied — but Hrithik is the tallest of the six on every careful listing. Amitabh Bachchan (6′2″, 188 cm) stands 5 cm above them both.',
+      },
+      {
+        question: 'How tall is Salman Khan in feet?',
+        answer:
+          'It depends on the source, and that is the honest answer: Wikipedia’s compilation lists Salman Khan at 5 feet 5½ inches (166 cm), while most profile databases list him at 5 feet 8 inches (173–174 cm). The range is 166–174 cm. He is the second-shortest of the six on either figure — 17 cm below Hrithik on the low figure, 9 cm below on the high one.',
+      },
+      {
+        question: 'How tall is Aamir Khan?',
+        answer:
+          'Aamir Khan is reported at 5 feet 4 inches (163 cm) on the Wikipedia-compilation baseline, with other listings giving 5′5″–5′6″ (165–168 cm). He is the shortest of the six on every source, 20 cm below Hrithik Roshan on the baseline. His career — the most deliberate filmography in Bollywood — is the proof that height has never decided stardom.',
+      },
+      {
+        question: 'Who is taller, Hrithik Roshan or Ranbir Kapoor?',
+        answer:
+          'Hrithik Roshan, by a single centimetre on the baseline: 183 cm to Ranbir Kapoor’s 182 cm, both listed at 6 feet 0 inches. Other listings put Ranbir lower, at 5′10″ (178 cm), so the honest summary is that the two are effectively the same height, with Hrithik a fraction ahead.',
+      },
+      {
+        question: 'How tall are Bollywood actors without shoes?',
+        answer:
+          'Every figure in this article is a barefoot-reported estimate — the number the listings intend before footwear. Shoes add 2–3 cm and publicity adds more, which is the entire gap between the competing listings for most of these men: Salman at 166 cm barefoot becomes 5′8″ in shoes, Aamir at 163 cm becomes 5′6″. For a fair comparison, measure yourself barefoot in the morning.',
+      },
+      {
+        question: 'Is Amitabh Bachchan taller than Hrithik Roshan?',
+        answer:
+          'Yes. Amitabh Bachchan is reported at 6 feet 2 inches (188 cm), which is 5 cm taller than Hrithik Roshan (183 cm) and 25 cm taller than Aamir Khan (163 cm). He is taller than all six stars in this ranking — see our Amitabh Bachchan height comparison for the full family and co-star breakdown.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Heights of Bollywood Actors — Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Heights_of_Bollywood_actors',
+        description: 'Reported-height compilation: Hrithik Roshan 183 cm, Ranbir Kapoor 182 cm, Akshay Kumar 180 cm, Ranveer Singh 175 cm, Salman Khan 166 cm, Aamir Khan 163 cm — with the explicit warning that figures are approximate and not officially verified.',
+      },
+      {
+        title: 'Bollywood’s Top Male Stars: The Height Chart — Kidelight',
+        url: 'https://www.kidelight.com/2025/04/bollywoods-top-male-stars-height-chart.html',
+        description: 'Alternative chart listing Hrithik at 6′0″ (183 cm), Ranveer, Ranbir and Akshay at 5′10″ (178 cm), and Salman at 5′8″ (173 cm) — the competing figures this article reconciles.',
+      },
+      {
+        title: 'Top 50 Tallest Bollywood Actors 2026 — Heightstar',
+        url: 'https://heightstar.com/top-50-tallest-bollywood-actors/',
+        description: '2026 ranking with Hrithik at 5′11″ (180 cm), Ranbir and Akshay at 5′10″ (178 cm), and Ranveer at 6′0″ (183 cm) — the outlier figure for Ranveer flagged in this article.',
+      },
+      {
+        title: 'Top Bollywood Celeb Height in Feet Without Shoes — The Opinionated Indian',
+        url: 'https://theopinionatedindian.com/entertainment/top-bollywood-celeb-height-in-feet-without-shoes/',
+        description: 'Without-shoes list giving Ranbir and Akshay at 6′0″ (183 cm) and Ranveer at 5′10″ (178 cm) — the source for the barefoot angle in this article.',
+      },
+      {
+        title: 'Salman Khan Age 2026: Height, Family & Net Worth — GuideNetworth',
+        url: 'https://guidenetworth.com/salman-khan-age/',
+        description: 'Salman Khan commonly listed at 5 feet 8 inches (174 cm) by Filmibeat and most profile databases, with the caveat that sources vary from 5′6″ to 5′9″ — the high end of the range this article quotes.',
+      },
+    ],
+    relatedSlugs: ['amitabh-bachchan-height-comparison', 'tallest-female-celebrities-height-comparison', 'shortest-celebrities-height-comparison', 'celebrity-couples-biggest-height-differences', 'messi-vs-ronaldo-height-comparison'],
+  },
 ];
 
