@@ -6587,5 +6587,252 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['amitabh-bachchan-height-comparison', 'tallest-female-celebrities-height-comparison', 'shortest-celebrities-height-comparison', 'celebrity-couples-biggest-height-differences', 'messi-vs-ronaldo-height-comparison'],
   },
+  {
+    slug: 'indian-cricketers-height-comparison',
+    title: 'Indian Cricketers Height Comparison: Ishant Sharma (193 cm) to Sachin Tendulkar (165 cm), Ranked & Visualised',
+    h1: 'How Tall Are Indian Cricketers? Nine Stars Ranked, Tallest to Shortest',
+    description:
+      'Indian cricketers’ heights ranked on one consistent baseline: Ishant Sharma 6′4″ (193 cm) down to Sachin Tendulkar 5′5″ (165 cm), with MS Dhoni’s disputed 175–180 cm range explained honestly, the 28 cm spread drawn to scale, and the proof that the shortest man on the list is the greatest batsman ever.',
+    category: 'sports',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-11-08T09:00:00Z',
+    updatedDate: '2026-11-08T09:00:00Z',
+    readingTimeMinutes: 10,
+    quickAnswer: {
+      summary:
+        'On one consistent baseline — the site’s own compare data where a figure already exists there, plus ESPNcricinfo-cited profiles for the rest — nine of India’s biggest cricketers rank: Ishant Sharma 6′4″ (193 cm), Hardik Pandya 6′0″ (183 cm), Jasprit Bumrah, Shubman Gill and MS Dhoni all 5′10″ (178 cm), Virat Kohli 5′9″ (175 cm), Rohit Sharma and Ravindra Jadeja both 5′8″ (173 cm), and Sachin Tendulkar 5′5″ (165 cm). The spread from tallest to shortest is 28 cm, and the shortest man on the list is the greatest batsman the game has produced.',
+      keyTakeaway:
+        'Every figure here is a reported estimate, not an officially verified measurement — and the honest article says so up front. The ranking itself is stable on every source: Ishant at the top, Sachin at the bottom, and a three-way tie at 178 cm in the middle. What changes between sources is the margin, above all for MS Dhoni, whose listings run from 175 cm to 180 cm. Read the ranges, not the single numbers — and read the last section before deciding height matters in cricket at all.',
+      dataPoints: [
+        { label: 'Tallest of the nine', value: 'Ishant Sharma — 6′4″ (193 cm)' },
+        { label: 'Shortest of the nine', value: 'Sachin Tendulkar — 5′5″ (165 cm)' },
+        { label: 'Tallest-to-shortest spread', value: '28 cm — just over eleven inches' },
+        { label: 'Most disputed figure', value: 'MS Dhoni — listed anywhere from 175 cm to 180 cm' },
+        { label: 'The average Indian man', value: 'About 165 cm — exactly Sachin Tendulkar’s height' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 193, label: 'Ishant Sharma' },
+      { category: 'human', id: 'male', customHeightCm: 183, label: 'Hardik Pandya' },
+      { category: 'human', id: 'male', customHeightCm: 178, label: 'Jasprit Bumrah' },
+      { category: 'human', id: 'male', customHeightCm: 178, label: 'Shubman Gill' },
+      { category: 'human', id: 'male', customHeightCm: 178, label: 'MS Dhoni' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Virat Kohli' },
+      { category: 'human', id: 'male', customHeightCm: 173, label: 'Rohit Sharma' },
+      { category: 'human', id: 'male', customHeightCm: 173, label: 'Ravindra Jadeja' },
+      { category: 'human', id: 'male', customHeightCm: 165, label: 'Sachin Tendulkar' },
+      { category: 'human', id: 'male', customHeightCm: 165, label: 'Average Indian man (165 cm)' },
+    ],
+    toolActionTitle: 'Stand next to the nine cricketers',
+    toolActionDescription:
+      'The visualiser above is preloaded with all nine cricketers at their reported heights, from Ishant Sharma at 193 cm down to Sachin Tendulkar at 165 cm. Add your own height and see which of them you actually look eye to eye with — and how far you are from the Little Master.',
+    comparisonTable: {
+      caption: 'The nine cricketers ranked tallest to shortest on the baseline, with the competing listings shown so the disputes stay visible',
+      headers: ['Rank', 'Player', 'Reported height (baseline)', 'Other listings say', 'Gap to Ishant (193 cm)'],
+      rows: [
+        ['1', 'Ishant Sharma', '6′4″ (193 cm)', '6′5″ (196 cm) on some listicles', '—'],
+        ['2', 'Hardik Pandya', '6′0″ (183 cm)', '173 cm on Sportradar — a 10 cm outlier, contradicted by every other source', '10 cm shorter'],
+        ['=3', 'Jasprit Bumrah', '5′10″ (178 cm)', '175 cm (HealthyCeleb); 180–183 cm on some net-worth listicles', '15 cm shorter'],
+        ['=3', 'Shubman Gill', '5′10″ (178 cm)', '185 cm on Sportradar — a 7 cm outlier', '15 cm shorter'],
+        ['=3', 'MS Dhoni', '5′10″ (178 cm)', '175 cm (Sportradar, SportsDigest); 180 cm (5′11″) on older pages', '15 cm shorter'],
+        ['6', 'Virat Kohli', '5′9″ (175 cm)', 'Consistent across listings', '18 cm shorter'],
+        ['=7', 'Rohit Sharma', '5′8″ (173 cm)', '174 cm on Sportradar — a 1 cm difference, negligible', '20 cm shorter'],
+        ['=7', 'Ravindra Jadeja', '5′8″ (173 cm)', 'Consistent across the careful listings', '20 cm shorter'],
+        ['9', 'Sachin Tendulkar', '5′5″ (165 cm)', 'Consistent everywhere — no dispute', '28 cm shorter'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-answer',
+        heading: 'The Ranking: 193 cm Down to 165 cm, and a 28 cm Spread',
+        subheading: 'One baseline, nine cricketers, three ties — and the caveat that makes the whole ranking honest.',
+        paragraphs: [
+          'Tallest to shortest, nine of India’s biggest cricketers line up like this: Ishant Sharma at 6 feet 4 inches (193 cm), Hardik Pandya at 6′0″ (183 cm), then a three-way tie at 5′10″ (178 cm) between Jasprit Bumrah, Shubman Gill and MS Dhoni, then Virat Kohli at 5′9″ (175 cm), a two-way tie at 5′8″ (173 cm) between Rohit Sharma and Ravindra Jadeja, and finally Sachin Tendulkar at 5′5″ (165 cm). The spread from Ishant to Sachin is 28 cm — just over eleven inches, roughly the length of a cricket bat’s handle and a bit. Drawn to scale, as in the chart below, it is not a gentle slope: Ishant stands a clear head above the pack, Hardik sits 10 cm below him on his own step, five men cluster within 5 cm of each other in the middle, and then there is an 8 cm drop to Sachin, alone at the bottom.',
+          'Those numbers use one consistent baseline: the site’s own compare data wherever a figure already exists there — Kohli 175 cm, Rohit 173 cm, Dhoni 178 cm, Sachin 165 cm and Bumrah 178 cm — plus ESPNcricinfo-cited profiles for the four names that were not yet site entities (Ishant, Hardik, Gill and Jadeja, all now added to the site’s data with this article). A ranking only means something when every figure comes from the same ruler, and the table above also shows what the other listings say, because they do not all agree — and hiding that disagreement would be worse than showing it. Sportradar, for instance, lists Hardik at 173 cm and Gill at 185 cm, both flatly contradicted by every other source; the table flags both as outliers rather than quietly averaging them in.',
+          'Here is the caveat this whole article is built on, and the one most height lists skip: cricketer heights are reported figures, not officially verified measurements. The BCCI does not publish stadiometer readings for its players, and the numbers in circulation come from player profiles, broadcast graphics and profile databases that copy each other. Nobody has published a verified measurement for any of these nine men. What we have is a consensus of listings, photographs, and decades of team photos, and where that consensus breaks down — above all for MS Dhoni — this article says so and gives the range instead of quietly picking the flattering number.',
+        ],
+        image: {
+          src: '/assets/blog/indian-cricketers-height-comparison/indian-nine-lineup.png',
+          alt: 'Height comparison chart showing nine Indian cricketers ranked tallest to shortest: Ishant Sharma 193 cm, Hardik Pandya 183 cm, Jasprit Bumrah, Shubman Gill and MS Dhoni all 178 cm, Virat Kohli 175 cm, Rohit Sharma and Ravindra Jadeja both 173 cm, and Sachin Tendulkar 165 cm',
+          caption: 'All nine on one baseline, drawn to scale: Ishant a clear head above the pack, a five-man cluster in the middle, and Sachin 8 cm below the next man.',
+        },
+        callout: {
+          title: 'The ranking to remember',
+          text: 'Ishant 193 cm · Hardik 183 cm · Bumrah, Gill & Dhoni 178 cm · Kohli 175 cm · Rohit & Jadeja 173 cm · Sachin 165 cm. A 28 cm spread, with ties at 178 cm and 173 cm — this article does not force a false order inside them.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'ishant-sharma',
+        heading: 'Ishant Sharma: the Tallest of the Nine — “Lambu” at 6′4″',
+        subheading: 'The nickname says it all, and the number is the most stable one at the top of the list.',
+        paragraphs: [
+          'Ishant Sharma is the tallest cricketer in this lineup by a full 10 cm, at 6 feet 4 inches (193 cm) — a figure that is unusually stable across sources. Wikipedia, citing ESPNcricinfo, lists him at 1.93 m; CricketWinner’s verified ranking of India’s tallest players puts him at 6′4″ (193 cm); Sportradar’s athlete database agrees at 193 cm; and the cricket press has described him the same way for nearly two decades, since his debut in 2007. The only dissent is a 6′5″ (196 cm) figure on some listicles, which no careful compilation supports — treat it as an outlier, the same way this series treats the 6′3″ claims for Abhishek Bachchan. On the baseline, Ishant is 5 cm taller than Amitabh Bachchan (188 cm, from our earlier article) and 10 cm taller than Hrithik Roshan (183 cm) — the tallest cricketer of the modern era is taller than the tallest Bollywood star of any era.',
+          'The nickname is the giveaway: since his Under-19 days, Ishant has been called “Lambu” — the tall guy — a reference to the lean, towering frame that became his trademark. At 193 cm he was, for most of his career, the tallest man in the Indian dressing room by a distance, and it shaped the way he bowled: a high release point, steep bounce off a length, and an angle across right-handers that shorter bowlers simply cannot manufacture. He took that frame to 100-plus Tests and 400-plus Test wickets, making him one of only three Indian pacers to cross 400 Test wickets, alongside Kapil Dev. The height was not a gimmick — it was the delivery mechanism.',
+          'One footnote keeps the article honest about the word “tallest”. Ishant is the tallest of the nine in this cast, and the tallest Indian cricketer of the modern era — but he is not the tallest man ever to play for India. That distinction belongs to Abey Kuruvilla, listed at 6′6″ (198 cm), jointly with Pankaj Singh at the same height, in CricketWinner’s verified ranking of India’s tallest players ever. Kuruvilla played only a handful of Tests in the late 1990s, which is why the “tallest Indian cricketer” title in everyday use belongs to Ishant: he is the tallest to have had a long international career, the one people actually watched. The article’s claim is precise — tallest of this nine, tallest of the modern era — and the historical footnote is right here, not buried.',
+        ],
+        callout: {
+          title: 'Tallest of the nine — but not of all time',
+          text: 'Ishant Sharma 6′4″ (193 cm) tops this cast and the modern era. The tallest ever to play for India is Abey Kuruvilla at 6′6″ (198 cm) — a handful of Tests in the 1990s, which is why the title in everyday use is Ishant’s.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'sachin-tendulkar',
+        heading: 'Sachin Tendulkar: the Shortest of the Nine — and the Greatest Batsman Ever',
+        subheading: '5′5″ (165 cm), the least disputed number in the article — and the one that proves height is a footnote.',
+        paragraphs: [
+          'Sachin Tendulkar is reported at 5 feet 5 inches (165 cm) on every source checked — the site’s own data, Wikipedia’s biographical records, and every profile database agree, with no dissent anywhere. That makes his the least disputed number in this article, and also the most ironic: the shortest man in the lineup is the highest run-scorer in international cricket history, with 100 international centuries, and the batsman most people alive would name first if asked for the greatest ever. The gap to Ishant is 28 cm — the full spread of the ranking, drawn in the chart below — and the gap to Kohli, the man most often called his heir, is 10 cm. In team photographs across two decades, Tendulkar is the small figure at the edge of the group. The runs never noticed.',
+          'There is a real cricketing reason his height never held him back, and it is worth stating plainly rather than as inspiration-poster fluff: a low centre of gravity. At 165 cm, Tendulkar’s stance was compact and balanced, his head still over the ball, and his bat came down straight because there was less body to keep still. The same physics that makes short batsmen hard to dislodge — think of the compact masters before him — worked in his favour for 24 years. It also meant the short ball, the weapon tall batsmen use to bully, was rarely a problem: a bouncer aimed at a 193 cm batsman’s throat arrives at a 165 cm batsman’s chest. None of this makes shortness an advantage in general. It makes the point that in batting, balance and timing outrank reach, and Tendulkar had both in quantities nobody has matched.',
+          'Here is the number that puts Sachin’s 165 cm in perspective for the reader at home: the average Indian man is about 165 cm tall, according to National Family Health Survey data — which means Sachin Tendulkar is, quite literally, the average Indian man’s height. Ishant Sharma towers 28 cm above that average; Hardik Pandya stands 18 cm above it; Kohli is 10 cm above it; and the man who carried Indian cricket for a generation is exactly average, standing in the middle of the crowd he came from. That is the detail to carry away from this article, not the ranking: the greatest batsman ever was not built like a cricketer is supposed to be built. He was built like everybody else.',
+        ],
+        image: {
+          src: '/assets/blog/indian-cricketers-height-comparison/ishant-vs-sachin.png',
+          alt: 'Height comparison chart showing Ishant Sharma at 193 cm next to Sachin Tendulkar at 165 cm, a gap of 28 cm — the full spread of the ranking',
+          caption: 'The full 28 cm spread in one frame: Ishant at 193 cm, Sachin at 165 cm — the tallest vs the greatest, and the average Indian man is exactly Sachin’s height.',
+        },
+        callout: {
+          title: 'Exactly average — and the greatest ever',
+          text: 'Sachin Tendulkar 5′5″ (165 cm) is the average height of an Indian man, per National Family Health Survey data. The shortest man on this list is the highest run-scorer in cricket history.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-captains',
+        heading: 'The Three Captains: Dhoni, Kohli and Rohit, 5 cm Apart',
+        subheading: 'Three men who captained India across three eras — and the most disputed figure in the whole article.',
+        paragraphs: [
+          'MS Dhoni, Virat Kohli and Rohit Sharma are the three men who have captained India in the modern era, and on the baseline they fit inside 5 cm of each other: Dhoni at 5′10″ (178 cm), Kohli at 5′9″ (175 cm) and Rohit at 5′8″ (173 cm). The chart below shows them together, and the visual story is how little separates them — 3 cm between Dhoni and Kohli, 2 cm between Kohli and Rohit, a gap smaller than a shoe sole. In the dressing room they would have looked level; in photographs they do look level. The 5 cm that separates the three captains is the smallest meaningful spread in this article, and it is also where the numbers get least certain.',
+          'Dhoni’s figure is the one to be careful with, because it is the most disputed in the cast. The site’s own data says 178 cm, and the site’s Kohli-vs-Dhoni compare page says Dhoni is 3 cm taller than Kohli — so this article keeps the 178 cm baseline, for consistency with the site’s own pages. But Sportradar and SportsDigest both list Dhoni at 175 cm, which would make him exactly Kohli’s height, and older Wikipedia-derived pages list him at 180 cm (5′11″). The honest range is 175–180 cm, and this article will not pretend otherwise: if you believe the 175 cm figure, Dhoni and Kohli are the same height and Rohit is 2 cm shorter; if you believe 180 cm, Dhoni is 5 cm clear of Kohli. The ranking of the three captains is stable either way — Dhoni is never shorter than Kohli, Rohit is never taller — but the margin is not, and the margin is the whole story at this end of the table.',
+          'Kohli’s figure, by contrast, is the most stable in the cast: 5′9″ (175 cm) on the site’s data, on Sportradar, and on every careful profile — no material dispute anywhere. Rohit’s is nearly as stable: 5′8″ (173 cm) on the site’s data and on the site’s Kohli-vs-Rohit compare page, which records Kohli as 2 cm taller, with Sportradar at 174 cm, a 1 cm difference that is not worth arguing about. So the three captains resolve into a clean summary: Dhoni 175–180 cm (baseline 178 cm), Kohli 175 cm, Rohit 173 cm. The search data says people ask about all three by name — “virat kohli height”, “rohit sharma height”, and the paired query “rohit sharma and virat kohli height” — and the answer to the paired query is the one this section gives: Kohli is 2 cm taller than Rohit, a gap you would need a ruler to see.',
+        ],
+        image: {
+          src: '/assets/blog/indian-cricketers-height-comparison/three-captains.png',
+          alt: 'Height comparison chart showing MS Dhoni at 178 cm, Virat Kohli at 175 cm and Rohit Sharma at 173 cm — the three captains of modern India, 5 cm apart',
+          caption: 'The three captains in 5 cm: Dhoni 178 cm, Kohli 175 cm, Rohit 173 cm. Dhoni’s range is 175–180 cm — on the low figure he is level with Kohli.',
+        },
+        callout: {
+          title: 'The Dhoni range',
+          text: 'MS Dhoni is listed anywhere from 5′9″ (175 cm) to 5′11″ (180 cm). This article keeps the site baseline of 5′10″ (178 cm) so it agrees with the site’s own Kohli-vs-Dhoni compare page, and shows the range rather than hiding it.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'the-middle',
+        heading: 'The Middle: Hardik at 6 Feet, and a Three-Way Tie at 178 cm',
+        subheading: 'The all-rounder stands alone on his own step, and three men share the same rung below him.',
+        paragraphs: [
+          'Hardik Pandya is the second-tallest of the nine, at 6 feet 0 inches (183 cm) — the only man in the cast besides Ishant to clear six feet, and the only one whose figure is confirmed by an ESPNcricinfo-cited Wikipedia profile dated January 2026. He stands 10 cm below Ishant and 5 cm above the 178 cm tie, alone on his own step of the ranking, and the figure fits the player: a 6-foot all-rounder built for pace and power-hitting, whose height gives him leverage over the ball with bat and ball alike. The dissent is a single outlier — Sportradar lists him at 173 cm, a full 10 cm below every other source — and this article does not use it, because a figure contradicted by Wikipedia, SportsDunia, CricTrends, StarsUnfolded and a dozen more listings is not a competing reading, it is a bad row in a database. Hardik is 183 cm.',
+          'Below him, the tie at 178 cm is the most crowded rung in the ranking: Jasprit Bumrah, Shubman Gill and MS Dhoni all sit at 5′10″, and this article refuses to force a false order between them. Bumrah’s 178 cm matches the site’s own data and the majority of sources, with outliers on both sides — 175 cm on HealthyCeleb, 180–183 cm on some net-worth listicles — so the honest range is 175–180 cm, centred on 178 cm. Gill’s 178 cm is the consensus of the careful listings, with a single Sportradar outlier at 185 cm that no other source supports. Dhoni’s 178 cm is the site baseline inside his wider 175–180 cm range, covered in the previous section. Three men, three different routes to the same number, and no honest way to rank between them — so the table lists them tied, and the chart draws them level.',
+          'The last tie in the ranking sits one step below the captains: Rohit Sharma and Ravindra Jadeja, both 5′8″ (173 cm). Jadeja’s figure comes from SportsDunia and the other careful listings at 5′8″ (173 cm), and it is the one that surprises people most, because Jadeja plays bigger than 173 cm — the fastest arm in the Indian outfield, a leaping catcher, a man whose highlights reel looks like it belongs to a taller athlete. It does not belong to a taller athlete; it belongs to a 173 cm athlete with extraordinary timing and anticipation, which is the same lesson as Sachin’s section, one rung up. Rohit and Jadeja are the joint-second-shortest men in this cast, 20 cm below Ishant and 8 cm above Sachin — and between them they hold most of India’s modern white-ball records.',
+        ],
+        callout: {
+          title: 'Ties, stated honestly',
+          text: 'Three men at 178 cm (Bumrah, Gill, Dhoni) and two at 173 cm (Rohit, Jadeja). The table lists them tied rather than inventing an order the sources do not support.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'height-vs-performance',
+        heading: 'Does Height Actually Matter in Cricket?',
+        subheading: 'The shortest man on this list is the greatest batsman ever — so what is height worth, and where does it help?',
+        paragraphs: [
+          'The honest answer is that height helps in some parts of cricket and is irrelevant in others, and this nine-man ranking is the evidence. For fast bowlers, height is a genuine asset: Ishant’s 193 cm gave him a release point and a bounce that shorter bowlers cannot manufacture, and Bumrah’s 178 cm is part of why his yorker is so hard to pick — the ball arrives from a higher angle than a batsman expects from a man of his build. For batsmen, the picture is murkier: the greatest batsman ever is the shortest man here, and the two most destructive modern openers in the cast — Rohit at 173 cm and Gill at 178 cm — sit at or below the middle of the ranking. What matters for a batsman is balance, timing and hand speed, none of which scales with height, and the compact stance that comes with a lower centre of gravity has helped more great batsmen than it has hurt.',
+          'The most instructive case is Bumrah, because he breaks the simple story in both directions. His bounce does not come from his height — 178 cm is unremarkable for a fast bowler, and plenty of taller bowlers bounce it less. It comes from his action: the hyperextended elbow, the sling-arm release, the wrist position at the point of delivery. Bowlers and coaches will tell you the same thing about Ishant’s steep bounce, which owed as much to his wrist and seam position as to his 193 cm frame. Height gives a bowler a higher starting point; it does not give him the skill to use it. That is why the tallest bowler in this cast and the most feared bowler in this cast are different men, and why a ranking of heights is not a ranking of cricketers.',
+          'So use this article for what it is: a reliable, honestly-sourced ranking of nine famous heights, with the disputes shown rather than hidden — and use the tool at the top of the page to put yourself in the lineup. Add your height and the chart redraws instantly: stand next to Ishant and see how much of his 193 cm you match, next to Sachin and check whether you are taller than the Little Master (if you are an Indian man of average height, you are exactly level), or next to Kohli and Rohit and settle the 2 cm captaincy gap for yourself. The chart has no camera angles, no footwear and no publicity. That is the point — and it is the reason this article gives you ranges where the sources disagree, instead of one confident number and a shrug.',
+        ],
+        image: {
+          src: '/assets/blog/indian-cricketers-height-comparison/sachin-vs-kohli.png',
+          alt: 'Height comparison chart showing Sachin Tendulkar at 165 cm next to Virat Kohli at 175 cm, a gap of 10 cm — the master and his heir',
+          caption: 'The master and the heir: Sachin 165 cm, Kohli 175 cm — a 10 cm generational gap, and the shortest man on the list is still the standard every batsman is measured against.',
+        },
+        callout: {
+          title: 'The takeaway',
+          text: 'Height helps fast bowlers and is close to irrelevant for batsmen. The shortest man here scored more international runs than anyone in history; the tallest took 400-plus Test wickets. Both used what they had — that is the whole lesson.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Who is the tallest Indian cricketer?',
+        answer:
+          'Ishant Sharma, at 6 feet 4 inches (193 cm). He is the tallest Indian cricketer of the modern era and the tallest of the nine in this ranking, 10 cm clear of Hardik Pandya (183 cm). The tallest ever to play for India is Abey Kuruvilla at 6′6″ (198 cm), but he played only a handful of Tests in the 1990s.',
+      },
+      {
+        question: 'How tall is Sachin Tendulkar?',
+        answer:
+          'Sachin Tendulkar is 5 feet 5 inches (165 cm) tall. The figure is consistent across every source — there is no dispute about it. It is also the average height of an Indian man, per National Family Health Survey data, and 28 cm shorter than Ishant Sharma, the tallest of the nine. He is the highest run-scorer in international cricket history with 100 international centuries.',
+      },
+      {
+        question: 'How tall is Virat Kohli?',
+        answer:
+          'Virat Kohli is 5 feet 9 inches (175 cm) tall. His is the most stable figure in this cast: the site’s own data, Sportradar and every careful profile agree on 175 cm, with no material dispute. He is 2 cm taller than Rohit Sharma (173 cm) and 3 cm shorter than MS Dhoni on the 178 cm baseline.',
+      },
+      {
+        question: 'How tall is MS Dhoni?',
+        answer:
+          'MS Dhoni is listed at 5 feet 10 inches (178 cm) on this article’s baseline — the figure in the site’s own data and on its Kohli-vs-Dhoni compare page. But the honest answer is a range: Sportradar and SportsDigest list him at 175 cm, and older pages list him at 180 cm (5′11″). The range is 175–180 cm, centred on 178 cm.',
+      },
+      {
+        question: 'Who is taller, Rohit Sharma or Virat Kohli?',
+        answer:
+          'Virat Kohli, by 2 cm: Kohli is 5 feet 9 inches (175 cm) and Rohit Sharma is 5 feet 8 inches (173 cm). The gap is smaller than a shoe sole and the two look level in photographs — but on every careful listing, Kohli is the taller of the two captains.',
+      },
+      {
+        question: 'How tall is Hardik Pandya?',
+        answer:
+          'Hardik Pandya is 6 feet 0 inches (183 cm) tall, per his Wikipedia profile citing ESPNcricinfo, confirmed by SportsDunia, CricTrends and StarsUnfolded. He is the second-tallest of the nine in this ranking, 10 cm below Ishant Sharma and 5 cm above the three-way tie at 178 cm. One database lists him at 173 cm; every other source contradicts it, so this article treats that as an outlier.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Ishant Sharma — Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Ishant_Sharma',
+        description: '1.93 m (6 ft 4 in), citing ESPNcricinfo; nicknamed “Lambu” for his tall, lean frame; Abey Kuruvilla at 6′6″ recognised as the tallest Indian cricketer.',
+      },
+      {
+        title: 'Hardik Pandya — Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Hardik_Pandya',
+        description: '1.83 m (6 ft 0 in), citing ESPNcricinfo, 24 January 2026.',
+      },
+      {
+        title: 'Top 5 tallest Indian cricketers ever (Verified heights) — CricketWinner',
+        url: 'https://www.cricketwinner.com/cricket-stats/tallest-players-india-cricket-team-ranked/',
+        description: 'Verified ranking: Ishant Sharma 6′4″ (193 cm), Pankaj Singh and Abey Kuruvilla 6′6″ (198 cm) — the historical footnote for the “tallest ever” claim.',
+      },
+      {
+        title: 'Hardik Pandya Biography — SportsDunia',
+        url: 'https://www.sportsdunia.com/cricket-players/hardik-pandya-biography',
+        description: 'Hardik Pandya 6 feet 0 inches (183 cm), confirmed by a second independent profile.',
+      },
+      {
+        title: 'Ravindra Jadeja — SportsDunia',
+        url: 'https://www.sportsdunia.com/cricket-players/ravindra-jadeja',
+        description: 'Ravindra Jadeja 5 ft 8 in (173 cm).',
+      },
+      {
+        title: 'Jasprit Bumrah Biography — CricTrends',
+        url: 'https://crictrends.in/jasprit-bumrah-biography/',
+        description: 'Jasprit Bumrah 5 ft 10 in (178 cm).',
+      },
+      {
+        title: 'Shubman Gill Height in cm — Palify',
+        url: 'https://palify.io/articles/view-article/shubman-gill-height-in-cm',
+        description: 'Shubman Gill 178 cm (5′10″).',
+      },
+      {
+        title: 'MS Dhoni Biography — SportsDigest',
+        url: 'https://sportsdigest.in/ms-dhoni-biography/41856/',
+        description: 'MS Dhoni listed at ~175 cm — the low end of the 175–180 cm range this article quotes.',
+      },
+      {
+        title: 'Persistent Geographic Disparities in Adult Height Across India — National Family Health Survey analysis',
+        url: 'https://geneticsmr.com/index.php/gmr/article/download/6728/4276/15326',
+        description: 'NFHS-based analysis reporting the average height of Indian adult men as approximately 165 cm — the basis for the “Sachin is exactly average height” comparison.',
+      },
+    ],
+    relatedSlugs: ['amitabh-bachchan-height-comparison', 'bollywood-actors-height-comparison', 'messi-vs-ronaldo-height-comparison', 'shortest-celebrities-height-comparison', 'average-nfl-player-height-by-position'],
+  },
 ];
 
