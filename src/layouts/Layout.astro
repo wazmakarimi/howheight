@@ -165,6 +165,21 @@ const webAppSchema = shouldEmitWebApp ? {
   </head>
   <body class="bg-slate-50 dark:bg-slate-900 font-sans text-slate-900 dark:text-slate-100 antialiased selection:bg-brand-600 selection:text-white flex flex-col min-h-screen transition-colors duration-200">
     <Header locale={locale} />
+    <!-- Third-party banner ad (320x50) — shows on every page, below the header.
+         Ad loader reads the global atOptions above; kept verbatim (no async)
+         so it renders in place. -->
+    <div class="flex justify-center bg-white dark:bg-slate-900 py-2">
+      <script is:inline>
+        atOptions = {
+          'key' : '11e934ec8fa188dda615ee2020f224bd',
+          'format' : 'iframe',
+          'height' : 50,
+          'width' : 320,
+          'params' : {}
+        };
+      </script>
+      <script is:inline src="https://bauval.org/22/11e934ec8fa188dda615ee2020f224bd"></script>
+    </div>
     <main class="flex-grow">
       <slot />
     </main>
