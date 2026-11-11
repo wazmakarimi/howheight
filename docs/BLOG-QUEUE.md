@@ -72,7 +72,7 @@ recurring engaged niche in the data.
 - [x] #31 `amitabh-bachchan-height-comparison` — Amitabh Bachchan's Height (6'2") Compared: vs Jaya, Abhishek & Co-Stars, Visualized (celebrities) — published 2026-11-02 (with 3 site-rendered screenshots)
 - [x] #32 `bollywood-actors-height-comparison` — Bollywood Actors' Heights Ranked: Salman, Aamir, Ranbir, Hrithik, Akshay & Ranveer (celebrities) — published 2026-11-05 (with 4 site-rendered screenshots)
 - [x] #33 `indian-cricketers-height-comparison` — Indian Cricketers' Heights Compared: Sachin, Virat, Rohit & More (sports) — published 2026-11-08 (with 4 site-rendered screenshots)
-- [ ] #34 `bollywood-actresses-height-comparison` — Bollywood Actresses' Heights: Deepika, Priyanka & More, Visualized (celebrities)
+- [x] #34 `bollywood-actresses-height-comparison` — Bollywood Actresses' Heights: Deepika, Priyanka & More, Visualized (celebrities) — published 2026-11-11 (with 5 site-rendered screenshots)
 - [ ] #35 `tall-woman-short-man-height-comparison` — Tall Woman vs Short Man Height Difference, Visualized (guides)
 - [ ] #36 `tom-cruise-height-comparison` — Tom Cruise's Real Height (5'7"): Hollywood's Famous Short Leading Men, Visualized (celebrities)
 - [ ] #37 `superhero-heights-compared` — Superhero Heights Compared: Spider-Man, Cyclops, Batman & More Visualized (anime)

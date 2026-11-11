@@ -6834,5 +6834,263 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['amitabh-bachchan-height-comparison', 'bollywood-actors-height-comparison', 'messi-vs-ronaldo-height-comparison', 'shortest-celebrities-height-comparison', 'average-nfl-player-height-by-position'],
   },
+  {
+    slug: 'bollywood-actresses-height-comparison',
+    title: 'Bollywood Actresses Height Comparison: Anushka Sharma (175 cm) to Alia Bhatt (160 cm), Ranked & Visualised',
+    h1: 'How Tall Are Bollywood Actresses? Seven Leading Ladies Ranked, Tallest to Shortest',
+    description:
+      'Bollywood actresses’ heights ranked on one consistent baseline: Anushka Sharma 5′9″ (175 cm) down to Alia Bhatt 5′3″ (160 cm), a spread of just 15 cm — the tightest in the series — with Deepika Padukone’s disputed 173–175 cm range explained honestly, the two ties stated rather than hidden, and the four real couples (including the level Anushka–Virat pair and the 22 cm Alia–Ranbir gap) drawn to scale.',
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-11-11T09:00:00Z',
+    updatedDate: '2026-11-11T09:00:00Z',
+    readingTimeMinutes: 10,
+    quickAnswer: {
+      summary:
+        'On one consistent baseline — the site’s own compare data where a figure already exists there, plus multi-source consensus for the rest — seven of Bollywood’s biggest actresses rank: Anushka Sharma 5′9″ (175 cm), Deepika Padukone and Katrina Kaif both 5′8.5″ (174 cm), Aishwarya Rai Bachchan 5′7″ (170 cm), Priyanka Chopra and Kareena Kapoor Khan both 5′5″ (165 cm), and Alia Bhatt 5′3″ (160 cm). The spread from tallest to shortest is just 15 cm — about six inches — the tightest of any ranking in this series, with two ties the article states rather than forcing a false order inside them.',
+      keyTakeaway:
+        'Every figure here is a reported estimate, not an officially verified measurement — and the honest article says so up front. The ranking itself is stable on every source: Anushka at the top, Alia at the bottom, and the same seven in the same order. What changes between sources is the margin, above all for Deepika Padukone, whose listings run from 173 cm to 175 cm, and for Priyanka Chopra, whose listings run from 165 cm to 171 cm. Read the ranges, not the single numbers — and read the couples section, because four real marriages in this cast tell the height story better than any ranking.',
+      dataPoints: [
+        { label: 'Tallest of the seven', value: 'Anushka Sharma — 5′9″ (175 cm)' },
+        { label: 'Shortest of the seven', value: 'Alia Bhatt — 5′3″ (160 cm)' },
+        { label: 'Tallest-to-shortest spread', value: '15 cm — about six inches, the tightest in the series' },
+        { label: 'Most disputed figure', value: 'Deepika Padukone — listed anywhere from 173 cm to 175 cm' },
+        { label: 'The average Indian woman', value: 'About 152 cm — Alia Bhatt stands 8 cm above it' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'female', customHeightCm: 175, label: 'Anushka Sharma' },
+      { category: 'human', id: 'female', customHeightCm: 174, label: 'Deepika Padukone' },
+      { category: 'human', id: 'female', customHeightCm: 174, label: 'Katrina Kaif' },
+      { category: 'human', id: 'female', customHeightCm: 170, label: 'Aishwarya Rai Bachchan' },
+      { category: 'human', id: 'female', customHeightCm: 165, label: 'Priyanka Chopra' },
+      { category: 'human', id: 'female', customHeightCm: 165, label: 'Kareena Kapoor Khan' },
+      { category: 'human', id: 'female', customHeightCm: 160, label: 'Alia Bhatt' },
+      { category: 'human', id: 'female', customHeightCm: 152, label: 'Average Indian woman (152 cm)' },
+    ],
+    toolActionTitle: 'Stand next to the seven actresses',
+    toolActionDescription:
+      'The visualiser above is preloaded with all seven actresses at their reported heights, from Anushka Sharma at 175 cm down to Alia Bhatt at 160 cm. Add your own height and see which of them you actually look eye to eye with — and whether you are taller than the shortest leading lady in Bollywood.',
+    comparisonTable: {
+      caption: 'The seven actresses ranked tallest to shortest on the baseline, with the competing listings shown so the disputes stay visible',
+      headers: ['Rank', 'Actress', 'Reported height (baseline)', 'Other listings say', 'Gap to Anushka (175 cm)'],
+      rows: [
+        ['1', 'Anushka Sharma', '5′9″ (175 cm)', 'Consistent across listings — no dispute', '—'],
+        ['=2', 'Deepika Padukone', '5′8.5″ (174 cm)', '5′8″ (173 cm) on some lists; 5′9″ (175 cm) on others — the widest dispute in the cast', '1 cm shorter'],
+        ['=2', 'Katrina Kaif', '5′8.5″ (174 cm)', '5′9″ (175 cm) on newer listicles (Pinkvilla, IForHer)', '1 cm shorter'],
+        ['4', 'Aishwarya Rai Bachchan', '5′7″ (170 cm)', 'Consistent everywhere — no dispute', '5 cm shorter'],
+        ['=5', 'Priyanka Chopra', '5′5″ (165 cm)', '5′7″–5′7.5″ (169–171 cm) on several listicles; the site baseline is the Miss World pageant measurement', '10 cm shorter'],
+        ['=5', 'Kareena Kapoor Khan', '5′5″ (165 cm)', '5′4″ (163 cm) on HoodMWR and Filmik', '10 cm shorter'],
+        ['7', 'Alia Bhatt', '5′3″ (160 cm)', 'Consistent everywhere — no dispute', '15 cm shorter'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-answer',
+        heading: 'The Ranking: 175 cm Down to 160 cm, and a 15 cm Spread',
+        subheading: 'One baseline, seven actresses, two ties — and the caveat that makes the whole ranking honest.',
+        paragraphs: [
+          'Tallest to shortest, seven of Bollywood’s biggest actresses line up like this: Anushka Sharma at 5 feet 9 inches (175 cm), then a tie at 5′8.5″ (174 cm) between Deepika Padukone and Katrina Kaif, then Aishwarya Rai Bachchan at 5′7″ (170 cm), then a second tie at 5′5″ (165 cm) between Priyanka Chopra and Kareena Kapoor Khan, and finally Alia Bhatt at 5′3″ (160 cm). The spread from Anushka to Alia is 15 cm — about six inches, roughly the length of a paperback book. Drawn to scale, as in the chart below, it is barely a slope at all: the tallest woman in the cast is only a hand’s breadth above the shortest, and the five women in the middle fit inside 9 cm of each other. This is the tightest spread of any ranking in this series — the Bollywood actors spanned 20 cm, the Indian cricketers 28 cm, and Amitabh Bachchan alone stood 31 cm above his wife Jaya.',
+          'Those numbers use one consistent baseline: the site’s own compare data wherever a figure already exists there — Deepika 174 cm, Priyanka 165 cm and Alia 160 cm — plus multi-source consensus for the four names that were not yet site entities (Anushka, Katrina, Aishwarya and Kareena, all now added to the site’s data with this article). A ranking only means something when every figure comes from the same ruler, and the table above also shows what the other listings say, because they do not all agree — and hiding that disagreement would be worse than showing it. Deepika’s listings, for instance, run from 173 cm to 175 cm, a 2 cm span that decides whether she is tied with Katrina or tied with Anushka; the table flags it rather than quietly picking the flattering number.',
+          'Here is the caveat this whole article is built on, and the one most height lists skip: actress heights are reported figures, not officially verified measurements. No film body publishes stadiometer readings for its stars, and the numbers in circulation come from agency profiles, magazine interviews and profile databases that copy each other. Nobody has published a verified measurement for any of these seven women. What we have is a consensus of listings, photographs, and decades of red-carpet appearances, and where that consensus breaks down — above all for Deepika — this article says so and gives the range instead of quietly picking the number that makes the best headline.',
+        ],
+        image: {
+          src: '/assets/blog/bollywood-actresses-height-comparison/seven-lineup.png',
+          alt: 'Height comparison chart showing seven Bollywood actresses ranked tallest to shortest: Anushka Sharma 175 cm, Deepika Padukone and Katrina Kaif both 174 cm, Aishwarya Rai Bachchan 170 cm, Priyanka Chopra and Kareena Kapoor Khan both 165 cm, and Alia Bhatt 160 cm',
+          caption: 'All seven on one baseline, drawn to scale: a 15 cm spread from Anushka to Alia, with ties at 174 cm and 165 cm — the tightest ranking in the series.',
+        },
+        callout: {
+          title: 'The ranking to remember',
+          text: 'Anushka 175 cm · Deepika & Katrina 174 cm · Aishwarya 170 cm · Priyanka & Kareena 165 cm · Alia 160 cm. A 15 cm spread, with ties at 174 cm and 165 cm — this article does not force a false order inside them.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-top-three',
+        heading: 'The Top Three: One Centimetre Separates Anushka, Deepika and Katrina',
+        subheading: 'The closest finish in the series — and the most disputed figure in the cast.',
+        paragraphs: [
+          'The top of this ranking is the closest finish in the whole series. Anushka Sharma leads at 5′9″ (175 cm), and Deepika Padukone and Katrina Kaif sit a single centimetre behind her, tied at 5′8.5″ (174 cm) — a gap smaller than a fingernail, invisible in any photograph, and the reason the chart below looks almost flat across the top. Anushka’s figure is the most stable in the cast: every source checked agrees on 5′9″ (175 cm) — Kidelight, HoodMWR, Filmik, Postoast, IForHer and Pinkvilla, with no dissent anywhere. She is the tallest of the seven on every listing, not just on this article’s baseline, which is a stronger claim than any other actress in the cast can make.',
+          'Deepika’s figure is the one to be careful with, because it is the most disputed in the cast. The site’s own data says 174 cm, and this article keeps that baseline for consistency with the site’s own pages. But the sources split three ways: 5′8″ (173 cm) on Fact-File, Illuminatis and CelebWikipedia; 5′8.5″ (174 cm) on Celebsline and HeightsBySide; and 5′9″ (175 cm) on PopcornReview, GlobalIndian, Astrotheme and a run of newer profile sites. The honest range is 173–175 cm, and it matters: on the low figure Deepika drops a centimetre below Katrina; on the high figure she ties Anushka at the top. She is also the article’s biggest search draw — “deepika padukone height” alone accounts for nearly all of this topic’s search demand — so the range note earns trust rather than costing it. Anyone who tells you Deepika’s height is a single certain number has not read the sources.',
+          'Katrina’s figure is nearly as close: a majority consensus of 5′8.5″ (174 cm) across HoodMWR, Filmik, Postoast, Kidelight and StylesAtLife, with the two newest listicles — Pinkvilla in August 2025 and IForHer in April 2026 — rounding her up to 5′9″ (175 cm). The honest range is 174–175 cm, so on the high figure she too ties Anushka at the top. The practical upshot is that the top three are, for all real-world purposes, the same height: 174–175 cm, within a centimetre of each other, and the “tallest Bollywood actress” title belongs to Anushka on the baseline and to a three-way argument on the ranges. That is a better answer than a false precision — and it is why the table lists Deepika and Katrina tied rather than inventing an order the sources do not support.',
+        ],
+        image: {
+          src: '/assets/blog/bollywood-actresses-height-comparison/top-three.png',
+          alt: 'Height comparison chart showing the top three Bollywood actresses: Anushka Sharma at 175 cm, Deepika Padukone at 174 cm and Katrina Kaif at 174 cm — a single centimetre apart',
+          caption: 'The top-three logjam: Anushka 175 cm, Deepika and Katrina both 174 cm. On the high end of their ranges, all three tie at 175 cm.',
+        },
+        callout: {
+          title: 'The Deepika range',
+          text: 'Deepika Padukone is listed anywhere from 5′8″ (173 cm) to 5′9″ (175 cm). This article keeps the site baseline of 5′8.5″ (174 cm) so it agrees with the site’s own compare pages, and shows the range rather than hiding it.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'the-couples',
+        heading: 'The Couples: Four Real Marriages, Four Different Height Stories',
+        subheading: 'The angle no listicle competitor covers — and the real hook of this article.',
+        paragraphs: [
+          'Four of the seven actresses are married to men whose heights this series has already verified in earlier articles, which makes this ranking the only one that can show the couples honestly — and the four stories could hardly be more different. Alia Bhatt (160 cm) and Ranbir Kapoor (182 cm on the #32 baseline, range 178–183 cm) have the widest gap in the whole Bollywood set: 22 cm, or nearly nine inches — about the length of a forearm — with a range of 18–23 cm once Ranbir’s own disputed listings are counted. It is the biggest real-couple gap in the series, wider than Amitabh and Jaya’s 31 cm only in the sense that it is not: Amitabh–Jaya is wider, but Alia–Ranbir is the widest gap between two people of the same generation, married now, photographed together constantly. The chart below shows it plainly — Ranbir’s head clears Alia’s by almost a full head’s height.',
+          'At the other end of the same chart, Deepika Padukone (174 cm) and Ranveer Singh (175 cm on the #32 baseline, range 175–178 cm) have the narrowest gap in the set: 1 cm on the baselines, 1–4 cm with Ranveer’s range. A single centimetre — the width of a fingernail — between a husband and wife who are both, by any standard, tall. In photographs they look exactly level, because for practical purposes they are: a 1 cm difference disappears into footwear, posture and camera angle, and the honest description is that Deepika and Ranveer are the same height. The note matters because the site’s own celebrity data lists Ranveer at 178 cm, which would show a 4 cm gap; this article and its chart use the #32 baseline of 175 cm, so the couple gap is the corrected 1 cm, not the range top.',
+          'The other two couples complete the set. Aishwarya Rai Bachchan (170 cm) and Abhishek Bachchan (188 cm, from the #31 article) stand 18 cm apart — the same gap, in the other direction, as the one between Aishwarya and her mother-in-law Jaya (157 cm), who is 13 cm shorter than her. And Anushka Sharma (175 cm) and Virat Kohli (175 cm, from the #33 article) are exactly level — the only same-height couple in the series, and the subject of the next section. Four couples, four stories: 22 cm, 18 cm, 1 cm and 0 cm. No listicle ranking actresses by height alone can show any of this, because it requires the men’s verified figures too — and those figures are what the three earlier articles in this set exist to provide.',
+        ],
+        image: {
+          src: '/assets/blog/bollywood-actresses-height-comparison/couples.png',
+          alt: 'Height comparison chart showing two Bollywood couples: Alia Bhatt at 160 cm next to Ranbir Kapoor at 182 cm, a gap of 22 cm, and Deepika Padukone at 174 cm next to Ranveer Singh at 175 cm, a gap of 1 cm',
+          caption: 'The widest and the narrowest gaps side by side: Alia–Ranbir 22 cm apart, Deepika–Ranveer 1 cm apart. Ranbir and Ranveer are shown at the #32 article baselines (182 cm and 175 cm).',
+        },
+        callout: {
+          title: 'Four couples, four gaps',
+          text: 'Alia–Ranbir 22 cm (range 18–23 cm) · Aishwarya–Abhishek 18 cm · Deepika–Ranveer 1 cm (range 1–4 cm) · Anushka–Virat 0 cm — exactly level.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-middle',
+        heading: 'The Middle: Aishwarya, Priyanka and Kareena — 5 cm Apart',
+        subheading: 'The unanimous figure, the global name, and the minor dispute.',
+        paragraphs: [
+          'The middle of the ranking holds three very different stories in 5 cm. Aishwarya Rai Bachchan sits alone on her own step at 5′7″ (170 cm), and her figure is the least disputed in the cast alongside Anushka’s and Alia’s: unanimous across every source checked — Kidelight, HoodMWR, Filmik, Postoast, IForHer and Pinkvilla all agree on 5′7″ (170 cm), with no dissent anywhere. It is also the figure this series has already used once: the #31 Amitabh Bachchan article showed Aishwarya at 170 cm as a custom height, so this article keeps the same number and the two articles agree. She is 18 cm below her husband Abhishek (188 cm) and her father-in-law Amitabh (188 cm), and 13 cm above her mother-in-law Jaya (157 cm) — the cross-article anchor that ties the Bollywood set together.',
+          'Priyanka Chopra, at 5′5″ (165 cm) on the baseline, is the cast’s global name — the Miss World winner who became the most internationally famous actress on this list — and her figure deserves a longer note than the research for this article first gave it. The site’s own data says 165 cm, citing the Miss World official pageant measurement, and this article keeps that baseline. But several careful listicles disagree by more than a rounding error: Kidelight and Filmik list her at 5′7″ (169–170 cm), HoodMWR and Postoast at 5′7.5″ (171 cm), and WittyFuel at 5′6.5″ (168.9 cm). The honest range is therefore 165–171 cm, a 6 cm span — wider than Deepika’s — and it is stated here rather than hidden, because a reader who has seen Priyanka listed at 5′7″ deserves to know why this article says 5′5″. The baseline is the pageant measurement, the oldest and most official figure in circulation; the higher figures come from later profile sites, and none of them cites a measurement.',
+          'Kareena Kapoor Khan ties Priyanka at 5′5″ (165 cm) on the baseline, with a smaller dispute: the majority of sources — Kidelight, Postoast, StylesAtLife and BollywoodDadi — say 165 cm, while HoodMWR and Filmik say 5′4″ (163 cm). The honest range is 163–165 cm. She is 5 cm below Aishwarya and 5 cm above Alia, and her position is the one most likely to surprise readers who think of her as one of the taller stars of her generation: in this cast she is joint second-shortest, level with Priyanka, and the chart in the first section shows it without flattery. The three women in this section are also the three with the longest careers on the list — Aishwarya debuted in 1997, Kareena in 2000, Priyanka in 2003 — which is a reminder that height has never been the thing that decided who lasted in Bollywood.',
+        ],
+        callout: {
+          title: 'The Priyanka range, corrected',
+          text: 'Priyanka Chopra is listed anywhere from 5′5″ (165 cm) to 5′7.5″ (171 cm). This article keeps the site baseline of 5′5″ (165 cm) — the Miss World official pageant measurement — and shows the range rather than hiding it.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'alia-bhatt',
+        heading: 'Alia Bhatt: the Shortest of the Seven — and 8 cm Above the Average Indian Woman',
+        subheading: '5′3″ (160 cm), the least disputed number at the bottom of the list — and the one that puts the whole ranking in perspective.',
+        paragraphs: [
+          'Alia Bhatt is reported at 5 feet 3 inches (160 cm) on every source checked — the site’s own data and every profile database agree, with no dissent anywhere. That makes her the least disputed number at the bottom of this article, and also the most useful one for the reader at home: she is the shortest of the seven by 5 cm, the only actress in the cast at 160 cm, and the gap to Anushka at the top — 15 cm, the full spread of the ranking — is drawn in the chart below. In photographs with Ranbir, the 22 cm gap is the first thing anyone notices; in photographs with the other six actresses, she is the small figure at the edge of the group. The runs, in her case, are the films: the youngest star on this list, and the one with the most awards per year of career.',
+          'Here is the number that puts Alia’s 160 cm in perspective for the reader at home: the average Indian woman is about 152 cm tall, according to National Family Health Survey data — which means Alia Bhatt, the shortest actress in this ranking, stands 8 cm above the average Indian woman. The whole cast sits above that average: Kareena and Priyanka by 13 cm, Aishwarya by 18 cm, Deepika and Katrina by 22 cm, and Anushka by 23 cm. That is the detail to carry away from this article, not the ranking: Bollywood’s leading ladies are a tall group by Indian standards, and even the shortest of them is taller than most of the women watching her films. The comparison runs the other way for the men in the earlier articles — Sachin Tendulkar, at 165 cm, is exactly the average Indian man — which says something about the different heights the two industries select for.',
+          'None of this has held Alia back, and the reason is worth stating plainly rather than as inspiration-poster fluff: in acting, height is close to irrelevant. The camera does not measure; it frames. Directors shoot around height differences every day — a shorter actor is blocked closer to the lens, a taller one further back, and the audience never knows — which is why the shortest actress on this list has played opposite the tallest actor in the earlier article’s cast without anyone in the audience doing the arithmetic. What matters for an actor is presence, timing and screen chemistry, none of which scales with height. The 22 cm gap to Ranbir is a fact about two people standing next to each other; it is not a fact about either of their careers.',
+        ],
+        image: {
+          src: '/assets/blog/bollywood-actresses-height-comparison/anushka-vs-alia.png',
+          alt: 'Height comparison chart showing Anushka Sharma at 175 cm next to Alia Bhatt at 160 cm, a gap of 15 cm — the full spread of the ranking',
+          caption: 'The full 15 cm spread in one frame: Anushka at 175 cm, Alia at 160 cm — the tallest vs the shortest, and the shortest is still 8 cm above the average Indian woman.',
+        },
+        callout: {
+          title: 'Shortest — and still above average',
+          text: 'Alia Bhatt 5′3″ (160 cm) is 8 cm above the average Indian woman (about 152 cm, per National Family Health Survey data). The shortest actress on this list is taller than most of her audience.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'the-level-couple',
+        heading: 'Anushka & Virat: the Level Couple — Exactly 175 cm Each',
+        subheading: 'The only same-height couple in the series, and the one that makes the best photograph.',
+        paragraphs: [
+          'Anushka Sharma and Virat Kohli are both 5 feet 9 inches (175 cm) tall — exactly level, to the centimetre, on the baselines of this article and the #33 cricketers article. The chart below shows it without ambiguity: two figures of precisely the same height, standing on the same floor, eye to eye. It is the only same-height couple in the whole Bollywood set, and one of the rarest things in celebrity-height writing generally: a pair where the honest answer is not a gap but the absence of one. In photographs the two do look level, and that is because they are — no camera angle, no footwear and no publicity is needed to explain it.',
+          'The level couple is also the one that best shows why this series keeps its baselines consistent across articles. Anushka’s 175 cm was fixed by multi-source consensus for this article, and Virat’s 175 cm was fixed by the #33 article from the site’s own data, Sportradar and every careful profile — two independent routes to the same number, neither of which knew about the other. If either figure were wrong by even a centimetre, the level couple would not exist. That it does exist, on two separately verified numbers, is a small cross-check on both articles at once. The same logic runs through the whole set: Aishwarya’s 170 cm is the same in #31 and here, Ranbir’s 182 cm and Ranveer’s 175 cm are the same in #32 and here, and Abhishek’s 188 cm is the same in #31 and here.',
+          'So use this article for what it is: a reliable, honestly-sourced ranking of seven famous heights, with the disputes shown rather than hidden — and use the tool at the top of the page to put yourself in the lineup. Add your height and the chart redraws instantly: stand next to Anushka and see how much of her 175 cm you match, next to Alia and check whether you are taller than the shortest leading lady in Bollywood (if you are an Indian woman of average height, you are 8 cm shorter), or next to Deepika and Katrina and settle the 1 cm top-three gap for yourself. The chart has no camera angles, no footwear and no publicity. That is the point — and it is the reason this article gives you ranges where the sources disagree, instead of one confident number and a shrug.',
+        ],
+        image: {
+          src: '/assets/blog/bollywood-actresses-height-comparison/anushka-vs-virat.png',
+          alt: 'Height comparison chart showing Anushka Sharma at 175 cm next to Virat Kohli at 175 cm — exactly the same height, the level couple',
+          caption: 'The level couple: Anushka Sharma and Virat Kohli, both exactly 175 cm. The only same-height couple in the series.',
+        },
+        callout: {
+          title: 'The takeaway',
+          text: 'Seven actresses, 15 cm from top to bottom, two ties, and four couples with gaps of 22 cm, 18 cm, 1 cm and 0 cm. The ranking is the tightest in the series — and the couples are the story the ranking alone cannot tell.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Who is the tallest Bollywood actress?',
+        answer:
+          'Anushka Sharma, at 5 feet 9 inches (175 cm). Her figure is the most stable in the cast — every source checked agrees on 175 cm, with no dissent. Deepika Padukone and Katrina Kaif sit 1 cm behind her at 174 cm, though on the high end of their ranges (173–175 cm and 174–175 cm) all three tie at 175 cm.',
+      },
+      {
+        question: 'How tall is Deepika Padukone?',
+        answer:
+          'Deepika Padukone is listed at 5 feet 8.5 inches (174 cm) on this article’s baseline — the figure in the site’s own data. But the honest answer is a range: some sources list her at 5′8″ (173 cm) and others at 5′9″ (175 cm). The range is 173–175 cm, centred on 174 cm, and she is the most-searched actress in this ranking.',
+      },
+      {
+        question: 'How tall is Priyanka Chopra?',
+        answer:
+          'Priyanka Chopra is 5 feet 5 inches (165 cm) on this article’s baseline — the Miss World official pageant measurement in the site’s own data. Several listicles put her higher, at 5′7″–5′7.5″ (169–171 cm), so the honest range is 165–171 cm. She is tied with Kareena Kapoor Khan at 165 cm on the baseline.',
+      },
+      {
+        question: 'Who is the shortest Bollywood actress in this ranking?',
+        answer:
+          'Alia Bhatt, at 5 feet 3 inches (160 cm). The figure is consistent across every source — there is no dispute about it. She is 15 cm shorter than Anushka Sharma, the tallest of the seven, and 22 cm shorter than her husband Ranbir Kapoor (182 cm on the #32 baseline). She still stands 8 cm above the average Indian woman (about 152 cm).',
+      },
+      {
+        question: 'What is the height difference between Alia Bhatt and Ranbir Kapoor?',
+        answer:
+          '22 cm on the baselines: Alia Bhatt is 5′3″ (160 cm) and Ranbir Kapoor is 6′0″ (182 cm) on the #32 article’s baseline. With Ranbir’s disputed listings (178–183 cm), the range is 18–23 cm. It is the widest real-couple gap in the Bollywood set.',
+      },
+      {
+        question: 'Are Anushka Sharma and Virat Kohli the same height?',
+        answer:
+          'Yes — exactly. Both are 5 feet 9 inches (175 cm) tall on the baselines of this article and the #33 Indian cricketers article, which verified the two figures independently. They are the only same-height couple in the series, while Deepika Padukone and Ranveer Singh differ by just 1 cm.',
+      },
+    ],
+    sources: [
+      {
+        title: '10 Tallest Bollywood Actresses — Pinkvilla',
+        url: 'https://www.pinkvilla.com/entertainment/updates/tallest-bollywood-actresses-1269689',
+        description: 'Katrina Kaif 5′9″, Anushka Sharma 5′9″, Aishwarya Rai Bachchan 5′7″; August 2025 — the newest listicle, rounding Katrina up to 175 cm.',
+      },
+      {
+        title: 'Bollywood’s Top Female Stars: The Height Chart — Kidelight',
+        url: 'https://www.kidelight.com/2025/04/bollywoods-top-female-stars-height-chart.html',
+        description: 'Anushka Sharma 5′9″, Deepika Padukone 5′9″ (175 cm), Katrina Kaif 5′8″ (174 cm), Aishwarya Rai Bachchan 5′7″, Kareena Kapoor 5′5″, Priyanka Chopra 5′7″ (170 cm).',
+      },
+      {
+        title: 'Bollywood Celebrities Heights — HoodMWR',
+        url: 'https://www.hoodmwr.com/bollywood-celebrities-heights/',
+        description: 'Anushka Sharma 5′9″, Katrina Kaif 5′8.5″, Aishwarya Rai Bachchan 5′7″, Kareena Kapoor 5′4″, Deepika Padukone 5′9″, Priyanka Chopra 5′7.5″ (171 cm).',
+      },
+      {
+        title: 'All Famous Bollywood Actress Height List — Filmik',
+        url: 'https://filmik.blog/bollywood-actress-height-list/',
+        description: 'Deepika Padukone 5′8″ (173 cm), Katrina Kaif 5′8″ (174 cm), Priyanka Chopra 5′7″ (169 cm), Kareena Kapoor 5′4″ — the low-end consensus table.',
+      },
+      {
+        title: 'Top 10 Tallest Bollywood Actresses — IForHer',
+        url: 'https://www.iforher.com/news/celebrity/tallest-bollywood-actresses-katrina-kaif-deepika-padukone-to-anushka-sharma/',
+        description: 'Katrina Kaif 5′9″ (175 cm), Anushka Sharma 5′9″, Aishwarya Rai Bachchan 5′7″; April 2026.',
+      },
+      {
+        title: 'Deepika Padukone height — HeightsBySide',
+        url: 'https://www.heightsbyside.com/how-tall-is/deepika-padukone/',
+        description: 'Deepika Padukone 174 cm, medium confidence, reviewed 2026-09-30 — the 5′8.5″ reading this article’s baseline follows.',
+      },
+      {
+        title: 'Deepika Padukone — Celebsline',
+        url: 'https://www.celebsline.com/deepika-padukone/',
+        description: 'Deepika Padukone 5′8.5″ (174 cm) — a second independent source for the baseline.',
+      },
+      {
+        title: 'Deepika Padukone profile — GlobalIndian',
+        url: 'https://www.globalindian.com/profiles/deepika-padukone/',
+        description: 'Deepika Padukone 5′9″ (175 cm) — the high end of her 173–175 cm range.',
+      },
+      {
+        title: '11 Bollywood Actress And Their Height — Postoast',
+        url: 'https://www.postoast.com/bollywood-actress-height/',
+        description: 'Deepika Padukone 5′9″, Anushka Sharma 5′9″, Katrina Kaif 5′8.5″, Priyanka Chopra 5′7.5″ — the high-end listicle table.',
+      },
+      {
+        title: '15 Tallest Actresses in Bollywood — WittyFuel',
+        url: 'https://www.wittyfuel.com/tallest-bollywood-actresses/',
+        description: 'Deepika Padukone 5′9″ (175 cm), Priyanka Chopra 5′6.5″ (168.9 cm) — fresh listing confirming the spread of Priyanka figures.',
+      },
+      {
+        title: 'Persistent Geographic Disparities in Adult Height Across India — National Family Health Survey analysis',
+        url: 'https://geneticsmr.com/index.php/gmr/article/download/6728/4276/15326',
+        description: 'NFHS-based analysis reporting the average height of Indian adult women as approximately 152 cm and men as 165 cm — the basis for the “Alia is 8 cm above average” comparison.',
+      },
+    ],
+    relatedSlugs: ['amitabh-bachchan-height-comparison', 'bollywood-actors-height-comparison', 'indian-cricketers-height-comparison', 'shortest-celebrities-height-comparison', 'tallest-female-celebrities-height-comparison'],
+  },
 ];
 
