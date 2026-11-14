@@ -7092,5 +7092,229 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['amitabh-bachchan-height-comparison', 'bollywood-actors-height-comparison', 'indian-cricketers-height-comparison', 'shortest-celebrities-height-comparison', 'tallest-female-celebrities-height-comparison'],
   },
+  {
+    slug: 'tall-woman-short-man-height-comparison',
+    title: 'Tall Woman vs Short Man Height Difference, Visualised: How Big Is the Gap, How Common Is It & What It Looks Like',
+    h1: 'Tall Woman, Short Man: The Height Difference, Drawn to Scale',
+    description:
+      'A tall woman standing next to a shorter man is one of the most searched — and most photographed — height pairings there is. This guide draws the gap to scale at 2, 5, 10 and 15 cm, counts how often it actually happens (about 1 couple in 25, per peer-reviewed studies), runs the percentile maths for both partners, shows how a 3-inch heel flips the gap, and checks the two famous examples — Zendaya vs Tom Holland and Sophie Turner vs Joe Jonas — with the disputed figures shown honestly.',
+    category: 'guides',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-11-14T09:00:00Z',
+    updatedDate: '2026-11-14T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        'When a woman is taller than her partner, the gap is usually small: in the large UK Millennium Cohort Study the man was taller in 92.5% of couples, the woman taller in 4.1%, and the pair the same height in 3.4% — and when the woman was taller it was usually by only a few centimetres. A 5 cm gap (two inches, the Zendaya–Tom Holland gap) is clearly visible side by side; a 2 cm gap is barely noticeable barefoot; a 15 cm gap is striking. And the framing matters: a 5′10″ (178 cm) woman sits around the 99th percentile for US women, while a 5′8″ (173 cm) man sits around the 36th percentile for US men — so this pairing usually mixes a very tall woman with a perfectly ordinary-height man, not with a short one.',
+      keyTakeaway:
+        'Do not read the gap as “tall woman, short man” — read it as two percentiles. The woman in these pairings is almost always the exceptional one: 178 cm is around the 99th percentile for women, while 173 cm is near the middle of the distribution for men. The statistics agree: the pairing is uncommon (about 1 couple in 25) but entirely normal, the gap is usually small, and footwear — a 3-inch heel adds about 7.6 cm — explains most of the photos that make it look dramatic.',
+      dataPoints: [
+        { label: 'Couples where the woman is taller', value: 'About 4 in 100 — 4.1% in the UK study, 3.8% in the US study' },
+        { label: 'The most famous 5 cm', value: 'Zendaya 178 cm vs Tom Holland 173 cm — a 2-inch gap' },
+        { label: 'A 5′10″ woman, in percentiles', value: 'Around the 99th percentile of US women' },
+        { label: 'A 5′8″ man, in percentiles', value: 'Around the 36th percentile of US men — near average' },
+        { label: 'What one 3-inch heel adds', value: 'About 7.6 cm — enough to flip a 3 cm deficit into a 4.6 cm lead' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'female', customHeightCm: 178, label: 'Zendaya' },
+      { category: 'human', id: 'male', customHeightCm: 173, label: 'Tom Holland' },
+      { category: 'human', id: 'female', customHeightCm: 175, label: 'Sophie Turner' },
+      { category: 'human', id: 'male', customHeightCm: 170, label: 'Joe Jonas' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average man (175 cm)' },
+      { category: 'human', id: 'female', customHeightCm: 161, label: 'Average woman (161 cm)' },
+    ],
+    toolActionTitle: 'Stand next to the famous 5 cm gap',
+    toolActionDescription:
+      'The visualiser above is preloaded with Zendaya (178 cm) and Tom Holland (173 cm) — the era’s most photographed 5 cm gap — plus Sophie Turner (175 cm) and Joe Jonas (170 cm). Add your own height and see which side of the gap you fall on, and how your own pairing would look drawn to scale.',
+    comparisonTable: {
+      caption: 'The same 175 cm woman next to four men — and the famous 5 cm pairing — showing how fast “taller” becomes “towering”',
+      headers: ['Woman', 'Man', 'Gap', 'What it looks like'],
+      rows: [
+        ['175 cm (5′9″)', '173 cm (5′8″)', '2 cm — under an inch', 'Barely noticeable barefoot; the tops of their heads look level in most photos'],
+        ['175 cm (5′9″)', '170 cm (5′7″)', '5 cm — 2 inches', 'Clearly visible side by side; his head top sits around her brow — the Zendaya–Holland band'],
+        ['175 cm (5′9″)', '165 cm (5′5″)', '10 cm — 4 inches', 'Obvious at a glance; his head top is around her nose'],
+        ['175 cm (5′9″)', '160 cm (5′3″)', '15 cm — 6 inches', 'Striking; his head top is around her chin — nearly a full head shorter'],
+        ['178 cm (5′10″) — Zendaya', '173 cm (5′8″) — Tom Holland', '5 cm — 2 inches', 'The era’s most photographed 5 cm gap, drawn to scale in the final section'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-gap',
+        heading: 'The Gap, Drawn to Scale: 2, 5, 10 and 15 cm',
+        subheading: 'Five centimetres is the gap everyone recognises. Fifteen is the one that stops a room.',
+        paragraphs: [
+          'Start with the chart, because words understate centimetres. The same woman — 175 cm, or 5 feet 9 inches — stands next to three men: 170 cm, 165 cm and 160 cm. The gaps are 5, 10 and 15 cm, or roughly 2, 4 and 6 inches. At 5 cm the difference is clearly visible when the two stand side by side, and it is the gap this whole article keeps coming back to: it is the Zendaya–Tom Holland gap, the Sophie Turner–Joe Jonas gap, and the most common size of woman-taller gap in the research. At 10 cm the difference is obvious at a glance from across a room. At 15 cm it is striking — the shorter partner’s head top sits around the taller partner’s chin, nearly a full head shorter — and it is also rare, which the next section explains.',
+          'Below 5 cm, the picture changes. A 2 cm gap — under an inch — is barely noticeable barefoot: the tops of the two heads look level in most photographs, and the difference disappears entirely into posture, hair and camera angle. That matters because the majority of real woman-taller couples live in this band. The peer-reviewed study in the next section found that when the woman is taller, the gap is usually small — and the chart shows why that band never makes headlines: a 2 cm gap does not photograph. The couples that go viral are the 10 and 15 cm ones, which are the exception, not the rule.',
+          'The other reason to trust a drawn-to-scale chart over a photograph is that photographs lie about height in three systematic ways: camera angle (a lens tilted up flatters the nearer figure), footwear (see the heels section below), and posture (one person slouching, the other standing tall). The chart has none of those. Both figures stand on the same floor, at the same scale, with no lens and no shoes — which is why a 5 cm gap here looks like 5 cm, while the same 5 cm in a red-carpet photo can look like nothing or like a foot, depending on who is wearing what.',
+        ],
+        image: {
+          src: '/assets/blog/tall-woman-short-man-height-comparison/gap-ladder.png',
+          alt: 'Height comparison chart showing a 175 cm woman next to three men at 170, 165 and 160 cm — gaps of 5, 10 and 15 cm drawn to scale',
+          caption: 'The gap ladder: one 175 cm woman next to men at 170, 165 and 160 cm. At 5 cm the difference is clear; at 15 cm it is striking — and rare.',
+        },
+        callout: {
+          title: 'The gap to remember',
+          text: '2 cm — barely noticeable · 5 cm — clearly visible, the famous band · 10 cm — obvious at a glance · 15 cm — striking, and rare. Most real woman-taller couples sit at 5 cm or less.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'how-common',
+        heading: 'How Common Is a Taller Wife? About 1 Couple in 25',
+        subheading: 'Uncommon, not unusual — and the research says the gap is usually small when it happens.',
+        paragraphs: [
+          'The best numbers come from a peer-reviewed study that is hard to argue with. Stulp, Buunk, Pollet, Nettle and Verhulst (2013), published in PLOS ONE, analysed the parents of the UK Millennium Cohort Study — almost 19,000 children born in 2000–01, and more than 10,000 couples. In those couples the man was taller in 92.5% of cases, the woman was taller in 4.1%, and the two were the same height in 3.4%. The average height difference was about 14 cm. A US analysis of the Panel Study of Income Dynamics by sociologist Philip Cohen found almost the same thing in 2009: among 4,600 married couples, only 3.8% had a taller wife, with the average husband at 5′11″ and the average wife at 5′5″. A later look at the 2017 wave of the same US data put the figure at about 3% taller wife, 4% same height and 93% husband taller — roughly 1 couple in 25 where the wife is the taller one.',
+          'Two details in the UK study are worth more than the headline number. First, the preference for a taller man barely moves the needle: if couples paired up at random, the man would be taller 89.8% of the time — the real figure is 92.5%, a shift of less than three percentage points. The authors’ own conclusion is that mating preferences for height translate into actual pairings only modestly; most of the pattern is just arithmetic, because men are taller than women on average. Second, couples where the man was much taller than the woman — more than 25 cm — were also rarer than chance would predict, which the authors read as a “male-not-too-tall” norm: women prefer a taller partner, but not too much taller.',
+          'And when the woman is taller, the gap is usually small. In the UK data, couples where the woman was taller by more than 10 cm made up just 0.6% of all couples — less than half the 1.3% that random pairing would produce. So the 15 cm chart in the first section is not just striking, it is genuinely scarce: fewer than 1 couple in 100 has the woman taller by that much. One old figure deserves a warning label rather than a citation: a 1980 study of British and American couples reported only 1 woman in 720 taller than her partner — a number that says more about 1980s sampling and rounding than about real couples, and which the modern studies have superseded.',
+        ],
+        callout: {
+          title: 'The numbers, in one line',
+          text: 'UK (Stulp et al., 2013): man taller 92.5%, woman taller 4.1%, same height 3.4%. US (Cohen, PSID 2009): taller wife 3.8%. Woman taller by more than 10 cm: 0.6% of couples.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'percentiles',
+        heading: 'The Percentile Reality Check: She Is Usually Exceptional, He Is Usually Ordinary',
+        subheading: 'The phrase “tall woman, short man” smuggles in a judgement the numbers do not support.',
+        paragraphs: [
+          'Take the pairing everyone pictures: a woman of 5′10″ (178 cm) with a man of 5′8″ (173 cm). The first number is extraordinary and the second is not. US adult averages from CDC NHANES data put men at 175.3 cm (5′9″) and women at 161.5 cm (5′3.6″), with standard deviations of roughly 7.4 cm for men and 7.1 cm for women. Run the normal approximation on those figures and a 178 cm woman sits around the 99th percentile for US women — taller than about 99 women in 100. A 173 cm man sits around the 36th percentile for US men — shorter than average, but well inside the ordinary middle of the distribution, closer to the median than to the bottom. These are approximations, not false precision, but the shape of the answer is robust: she is exceptional, he is ordinary.',
+          'That asymmetry is the honest frame for the whole topic, and it is why this article keeps saying “taller woman” rather than “short man”. A genuinely short man — say 5′4″ (163 cm) — sits around the 4th percentile for US men, and a pairing of a 178 cm woman with a 163 cm man would be a 15 cm gap, the rare end of the chart in the first section. But the pairing people actually see, search for and photograph is usually a very tall woman with a man of average height. The man is not short; the woman is tall. The chart below makes the same point visually: the 178 cm woman clears the average man (175 cm) by just 3 cm, while she towers 17 cm over the average woman (161 cm).',
+          'It also explains why the search interest exists at all. A 5′10″ woman is rare enough that her height is a talking point wherever she goes, and a partner 5 cm shorter than her is common enough that the pairing keeps happening — the two distributions overlap heavily in the 170–180 cm band, where a tall woman and an average man meet. If you are the woman in such a pairing, the useful comparison is not “am I too tall?” but “how tall am I, exactly?” — the site’s own guide to what counts as tall for a woman puts 5′9″ and above firmly in tall territory, and 5′10″ around the 99th percentile. If you are the man, the useful comparison is the same chart: 173 cm is 2 cm under the average man, not a height that needs explaining.',
+        ],
+        image: {
+          src: '/assets/blog/tall-woman-short-man-height-comparison/percentile-anchors.png',
+          alt: 'Height comparison chart showing a tall woman at 178 cm next to the average man at 175 cm and the average woman at 161 cm',
+          caption: 'The percentile reframe: a 178 cm woman clears the average man by just 3 cm — but stands 17 cm above the average woman. She is the exceptional one.',
+        },
+        callout: {
+          title: 'Two percentiles, one pairing',
+          text: 'A 5′10″ (178 cm) woman is around the 99th percentile for US women. A 5′8″ (173 cm) man is around the 36th percentile for US men. “Tall woman, average man” is the accurate label.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'heels',
+        heading: 'The Heels Factor: How Footwear Flips the Gap',
+        subheading: 'Most viral photos of woman-taller couples are heel photos. Barefoot, the same couple often looks level.',
+        paragraphs: [
+          'Here is the single biggest reason the gap looks larger in photographs than it is: heels. A 2-inch heel adds about 5.1 cm of effective height; a 3-inch heel adds about 7.6 cm; a 4-inch stiletto adds about 10.2 cm. The arithmetic is just inches times 2.54, but the visual consequence is large. The chart below shows one woman, 170 cm barefoot, next to a 173 cm man. Barefoot she is 3 cm shorter than him — the pair looks level, and in most photos nobody would comment. In 3-inch heels she stands at 177.6 cm effective height, 4.6 cm taller than him — and suddenly the same two people are a “tall woman, short man” photograph. One pair of shoes swings the comparison by 7.6 cm, from shorter to taller.',
+          'That swing explains most of the famous images. Red carpets, premieres and award shows are heel events: the women are routinely in 3- to 4-inch heels while the men are in flat dress shoes, so the photographed gap is the barefoot gap plus 7–10 cm. Zendaya and Tom Holland are the textbook case — the next section gives their barefoot numbers — and Sophie Turner’s red-carpet photos next to Joe Jonas routinely showed a bigger gap than the barefoot 5 cm, because she was frequently photographed in heels. None of that makes the photos fake; it makes them a comparison of footwear as much as of people. The honest question to ask of any such photo is: what were they wearing on their feet?',
+          'The practical rule is simple. A woman needs heels taller than the barefoot gap to overtake her partner: if she is 3 cm shorter barefoot, a 2-inch heel (5.1 cm) already puts her ahead by about 2 cm, and a 3-inch heel puts her ahead by nearly 5 cm. If she is already taller barefoot, even a modest heel makes the gap conspicuous — a 5 cm barefoot lead becomes a 10 cm lead in 2-inch heels. And the reverse is true too: in trainers or flats, most woman-taller couples in the 2–5 cm band look level. When this article’s charts say “barefoot”, they mean it — every figure is a barefoot height, and the heels chart labels the effective height separately so the two are never confused. (One labelling note: the tool rounds the 177.6 cm effective height to 178 cm in its pill label; the figure name on the chart gives the exact 177.6 cm.)',
+        ],
+        image: {
+          src: '/assets/blog/tall-woman-short-man-height-comparison/heels.png',
+          alt: 'Height comparison chart showing a 170 cm woman barefoot, the same woman at 177.6 cm in 3-inch heels, and a 173 cm man — the heels flip the gap',
+          caption: 'The heels flip: barefoot she is 3 cm shorter than him; in 3-inch heels (177.6 cm effective) she is 4.6 cm taller. Same two people, same evening.',
+        },
+        callout: {
+          title: 'The heel maths',
+          text: '2-inch heel ≈ 5.1 cm · 3-inch heel ≈ 7.6 cm · 4-inch heel ≈ 10.2 cm. A woman needs heels taller than the barefoot gap to overtake her partner.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'famous-examples',
+        heading: 'Famous Examples: Zendaya & Tom Holland, Sophie Turner & Joe Jonas',
+        subheading: 'Both famous gaps are exactly 5 cm — the visible-but-modest band from the first chart.',
+        paragraphs: [
+          'The defining example of the era is Zendaya and Tom Holland. Zendaya’s reported height is 5′10″ (178 cm) — a figure she has stated herself, answering “5′10” in WIRED’s Autocomplete Interview — and Tom Holland is reported at 5′8″ (173 cm) in GQ’s November 2021 profile. The barefoot gap is about 5 cm, or two inches, and both of them addressed it publicly on SiriusXM in December 2021 while promoting Spider-Man: No Way Home, calling the expectation that the man must be taller a “stupid assumption”. Zendaya’s answer is the one worth quoting: “This is normal too. My mom is taller than my dad.” Holland added that every actress screen-tested for the MJ role was taller than him. One honest caveat: Zendaya’s exact height is disputed — CelebHeights estimates her at around 5′8.5″ (174 cm), which would shrink the gap to about 1 cm — so this article uses her reported 178 cm with the range shown, and the dedicated Zendaya vs Tom Holland article coming later in this series will give the dispute its full treatment.',
+          'The second example is Sophie Turner and Joe Jonas, the former couple whose height difference was a running red-carpet talking point for years. Turner is reported at 5′9″ (175 cm) — she has claimed 5′9¾″ in interviews, and CelebHeights lists her at 5ft 9 — while Joe Jonas is reported at 5′7″ (170 cm). The barefoot gap is again about 5 cm, two inches, but the photographed gap often looked much larger, because Turner was frequently photographed in heels next to him. The two examples together make the article’s point neatly: both famous gaps are exactly 5 cm, both sit in the most common band of real woman-taller couples, and both looked bigger in photographs than they are barefoot.',
+          'Why do these two pairings get searched so much, when 4% of all couples look the same way? Partly because both couples talked about it openly instead of letting the photographs do the talking, and partly because both women are famous enough that their heights are public facts. But there is a quieter reason too: both gaps are the same size, and that size — 5 cm — is the largest gap that still reads as ordinary. A 2 cm gap is invisible and a 15 cm gap is rare; 5 cm is the gap you can see, photograph and argue about, which is exactly why it dominates the search results. Use the tool at the top of this page to put yourself in the picture: add your height next to Zendaya and Tom Holland, and see whether you would clear her 178 cm, match his 173 cm, or fall somewhere in between.',
+        ],
+        image: {
+          src: '/assets/blog/tall-woman-short-man-height-comparison/classic-pairing.png',
+          alt: 'Height comparison chart showing Zendaya at 178 cm next to Tom Holland at 173 cm — a gap of 5 cm, the era’s most photographed height difference',
+          caption: 'The classic pairing, drawn to scale: Zendaya 178 cm, Tom Holland 173 cm — a 5 cm gap. Her reported height is disputed (CelebHeights estimates ~174 cm), which would shrink the gap to about 1 cm.',
+        },
+        callout: {
+          title: 'Two couples, one number',
+          text: 'Zendaya–Holland: 178 vs 173 cm. Turner–Jonas: 175 vs 170 cm. Both gaps are 5 cm — visible, ordinary, and the most common size of real woman-taller gap.',
+          type: 'stat',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Is it normal for a woman to be taller than her boyfriend?',
+        answer:
+          'Yes. In the large UK Millennium Cohort Study, the woman was taller in 4.1% of couples, and in the US Panel Study of Income Dynamics the figure was 3.8% — roughly 1 couple in 25. It is uncommon, not unusual, and when it happens the gap is usually small, most often 5 cm or less.',
+      },
+      {
+        question: 'How common are couples where the wife is taller than the husband?',
+        answer:
+          'About 4 in 100 couples. The UK study (Stulp et al., 2013) found the man taller in 92.5% of couples, the woman taller in 4.1%, and the pair the same height in 3.4%. The US study (Cohen, PSID 2009) found 3.8% of married couples had a taller wife. Couples where the woman is taller by more than 10 cm are much rarer — just 0.6% of couples.',
+      },
+      {
+        question: 'What height is considered tall for a woman?',
+        answer:
+          'A woman of 5′9″ (175 cm) and above is tall by any standard, and 5′10″ (178 cm) sits around the 99th percentile for US women — taller than about 99 women in 100. The average US woman is 161.5 cm (5′3.6″), so a 178 cm woman stands about 17 cm above average. See the site’s guide to what counts as tall for a woman for the full percentile breakdown.',
+      },
+      {
+        question: 'What height is considered short for a man?',
+        answer:
+          'A man of 5′8″ (173 cm) is not short: he sits around the 36th percentile for US men, near the middle of the distribution, just 2 cm under the average of 175.3 cm. A man below about 5′5″ (165 cm) falls roughly into the bottom tenth of US men. The “short man” in most tall-woman pairings is usually an average-height man next to a very tall woman.',
+      },
+      {
+        question: 'How much taller do heels make a woman?',
+        answer:
+          'A 2-inch heel adds about 5.1 cm, a 3-inch heel about 7.6 cm, and a 4-inch heel about 10.2 cm. That is enough to flip most gaps: a woman 3 cm shorter than her partner barefoot becomes 4.6 cm taller in 3-inch heels. Most viral photos of woman-taller couples are heel photos, so check the footwear before judging the barefoot gap.',
+      },
+      {
+        question: 'How tall are Zendaya and Tom Holland?',
+        answer:
+          'Zendaya’s reported height is 5′10″ (178 cm), a figure she has stated herself, and Tom Holland is reported at 5′8″ (173 cm) — a barefoot gap of about 5 cm, or two inches. The figure is disputed: CelebHeights estimates Zendaya at around 5′8.5″ (174 cm), which would shrink the gap to about 1 cm. Both addressed the height difference publicly on SiriusXM in December 2021.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Are human mating preferences with respect to height reflected in actual pairings? — Stulp et al., PLOS ONE (2013)',
+        url: 'https://pubmed.ncbi.nlm.nih.gov/23342102/',
+        description: 'Millennium Cohort Study analysis: man taller in 92.5% of couples, woman taller in 4.1%, same height in 3.4%; average gap ~14 cm; woman-taller gaps usually small.',
+      },
+      {
+        title: 'Dad tends to be taller than mum, study finds — UCL Centre for Longitudinal Studies',
+        url: 'https://cls.ucl.ac.uk/dad-tends-to-be-taller-than-mum-study-finds/',
+        description: 'Plain-language summary of Stulp et al. (2013): 19,000 children in the Millennium Cohort Study, 92.5% man taller, gaps over 25 cm rarer than chance.',
+      },
+      {
+        title: 'Why it’s so rare for a wife to be taller than her husband — Philip Cohen, Maryland Population Research Center',
+        url: 'https://www.popcenter.umd.edu/news/news_1359750380145',
+        description: 'PSID 2009 analysis of 4,600 married couples: average husband 5′11″, average wife 5′5″, only 3.8% of couples had a taller wife.',
+      },
+      {
+        title: 'Boris and Natasha in America: How often is the wife taller than the husband? — Andrew Gelman, Statistical Modeling',
+        url: 'https://statmodeling.stat.columbia.edu/2024/04/29/boris-and-natasha-in-america-how-often-is-the-wife-taller-than-the-husband/',
+        description: 'PSID 2017 update: about 3% wife taller, 4% same height, 93% husband taller; continuous estimate roughly 1 in 25; the dated 1980 “1 in 720” figure explained.',
+      },
+      {
+        title: 'Tom Holland and Zendaya share how “ridiculous” height stereotypes are for straight couples — Upworthy',
+        url: 'https://www.upworthy.com/zendaya-tom-holland-height-difference/',
+        description: 'Holland 5′8″, Zendaya 5′10″; both addressed the stereotype on SiriusXM, December 2021; Zendaya: “My mom is taller than my dad.”',
+      },
+      {
+        title: 'Zendaya Height in Feet and cm — Height and Tall',
+        url: 'https://www.heightandtall.com/zendaya-height.html',
+        description: 'Zendaya 5′10″ (178 cm) from her own WIRED Autocomplete Interview statement; Tom Holland 5′8″ (173 cm) from the GQ November 2021 profile; CelebHeights dispute (~174 cm) noted.',
+      },
+      {
+        title: 'Sophie Turner’s Height — CelebHeights',
+        url: 'https://www.celebheights.com/s/Sophie-Turner-47822.html',
+        description: 'Sophie Turner listed at 5ft 9 (175.3 cm); claimed 5′9¾″ in her WIRED interview.',
+      },
+      {
+        title: 'Is Sophie Turner Taller Than Her Husband Joe Jonas? — TheThings',
+        url: 'https://www.thethings.com/is-sophie-turner-taller-than-husband-joe-jonas-height/',
+        description: 'Sophie Turner 5′9″, Joe Jonas 5′7″ — a 2-inch gap, visible even without heels.',
+      },
+      {
+        title: 'Height Percentile Calculator (CDC NHANES reference data) — OnlyCalculators',
+        url: 'https://www.onlycalculators.com/health/percentile/height-percentile-calculator/',
+        description: 'US adult averages used for the percentile maths: men 175.3 cm, women 161.5 cm, with standard deviations of ~7.4 cm (men) and ~7.1 cm (women).',
+      },
+    ],
+    relatedSlugs: ['celebrity-couples-biggest-height-differences', 'what-is-considered-tall-for-a-woman', 'what-does-5ft10-look-like', 'is-6-feet-rare-height-percentiles', 'shortest-celebrities-height-comparison', 'tallest-female-celebrities-height-comparison'],
+  },
 ];
 
