@@ -7316,5 +7316,254 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['celebrity-couples-biggest-height-differences', 'what-is-considered-tall-for-a-woman', 'what-does-5ft10-look-like', 'is-6-feet-rare-height-percentiles', 'shortest-celebrities-height-comparison', 'tallest-female-celebrities-height-comparison'],
   },
+  {
+    slug: 'tom-cruise-height-comparison',
+    title: "Tom Cruise's Real Height (5'7\"): Hollywood's Famous Short Leading Men, Visualised",
+    h1: "How Tall Is Tom Cruise, Really? The 5'7\" Answer, Drawn to Scale",
+    description:
+      "Tom Cruise is reported at 5'7\" (170 cm) — but the number has been argued over for forty years, from 1980s press kits that said 5'9\" to a specialist tracker that puts him at 5'7¾\". This article settles the figure honestly as a 170–172 cm range, shows the lifts, camera angles and casting that make him look tall on screen, draws the gaps to his famous co-stars and three taller wives to scale, and explains the 26 cm Jack Reacher casting gap that fans never forgave.",
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-11-17T09:00:00Z',
+    updatedDate: '2026-11-17T09:00:00Z',
+    readingTimeMinutes: 8,
+    quickAnswer: {
+      summary:
+        "Tom Cruise is reported at 5 feet 7 inches (170 cm), and that is the honest baseline to use — but it is a reported figure, not a measured one. Cruise has never published a verified barefoot measurement, and the specialist tracker CelebHeights puts him a touch higher, at 5'7¾\" (172.1 cm), so the fair statement is a range of about 170–172 cm. He is about 5 cm shorter than the average US man, 10 cm shorter than his ex-wife Nicole Kidman and his F1 co-star Brad Pitt, and 26 cm shorter than the Jack Reacher of Lee Child's novels — the 6'5\" character he played in two films. On screen he looks tall because Hollywood works hard at it: lifts and Cuban heels worth 2–3 inches, camera angles, blocking on the higher step, and co-stars positioned to flatter.",
+      keyTakeaway:
+        "Do not quote a single number as fact — there is no documented barefoot measurement of Tom Cruise. The consensus listing is 5'7\" (170 cm) with a credible range of 170–172 cm, and everything else in this article follows from that baseline. At 170 cm he sits around the 20th–25th percentile for US men: short, but not remarkably so — which is precisely why the industry's effort to hide it is the interesting story, not the height itself.",
+      dataPoints: [
+        { label: 'Tom Cruise, reported height', value: "5'7\" (170 cm), range 170–172 cm" },
+        { label: 'The gap to Nicole Kidman', value: '10 cm — she is 180 cm (5\'11")' },
+        { label: 'The gap to Brad Pitt', value: '10 cm — Pitt is 180 cm (5\'11")' },
+        { label: 'The gap to Jack Reacher', value: '26 cm — the book character is 196 cm (6\'5")' },
+        { label: 'What lifts add', value: 'About 2–3 inches (5–7.6 cm) on red carpets' },
+        { label: 'Cruise in percentiles', value: 'Around the 20th–25th percentile for US men' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 170, label: 'Tom Cruise' },
+      { category: 'human', id: 'female', customHeightCm: 180, label: 'Nicole Kidman' },
+      { category: 'human', id: 'male', customHeightCm: 180, label: 'Brad Pitt' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average US man (175 cm)' },
+      { category: 'human', id: 'male', customHeightCm: 190, label: 'Chris Hemsworth' },
+      { category: 'human', id: 'male', customHeightCm: 196, label: 'Dwayne Johnson' },
+    ],
+    toolActionTitle: 'Stand next to Tom Cruise',
+    toolActionDescription:
+      'The visualiser above is preloaded with Tom Cruise (170 cm), Nicole Kidman (180 cm), Brad Pitt (180 cm), the average US man (175 cm), Chris Hemsworth (190 cm) and Dwayne Johnson (196 cm). Add your own height and see where you land on the Hollywood ladder — and how much of the gap a pair of lifts would erase.',
+    comparisonTable: {
+      caption: 'Tom Cruise (170 cm) against the men and women who define his height story — gaps on the reported figures',
+      headers: ['Person', 'Height', 'Gap vs Cruise', 'Why it matters'],
+      rows: [
+        ['Tom Cruise', "5'7\" (170 cm)", '—', 'Baseline: consensus listing, range 170–172 cm'],
+        ['Average US man', "5'9\" (175 cm)", '5 cm taller', 'Cruise is 5 cm under the average man'],
+        ['Katie Holmes (ex-wife)', "5'9\" (175 cm)", '5 cm taller', 'Second wife; all three wives were taller than him'],
+        ['Brad Pitt', "5'11\" (180 cm)", '10 cm taller', 'F1 premiere co-star, June 2025; the famous 4-inch gap'],
+        ['Nicole Kidman (ex-wife)', "5'11\" (180 cm)", '10 cm taller', 'The marriage gap — “I can wear heels now”'],
+        ['Henry Cavill', "6'1\" (185 cm)", '15 cm taller', 'Reported figure; specialist trackers debate 6\'0"–6\'0.5"'],
+        ['Chris Hemsworth', "6'3\" (190 cm)", '20 cm taller', 'Thor towers a full head-and-shoulders over Maverick'],
+        ['Dwayne Johnson', "6'5\" (196 cm)", '26 cm taller', 'The biggest gap on the Hollywood ladder'],
+        ['Jack Reacher (book character)', "6'5\" (196 cm)", '26 cm taller', 'The role Cruise played — fans never stopped noticing'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-number',
+        heading: "The Number: 5'7\" (170 cm) — Reported, Not Measured",
+        subheading: 'The honest answer starts with a caveat, not a figure.',
+        paragraphs: [
+          'Tom Cruise — born Thomas Cruise Mapother IV on 3 July 1962 — is reported at 5 feet 7 inches (170 cm). That is the consensus across IMDb, Wikipedia, Height & Tall, HeightProfiles and the celebrity profile databases, and it is the baseline this article uses throughout. But it is important to say what that figure is: a reported listing, not a measurement. Cruise has never publicly confirmed a height, and no documented barefoot medical measurement of him exists on the record. Any article that prints 170 cm as though it were taken with a stadiometer is overstating its evidence.',
+          'The one specialist source that estimates rather than lists puts him a fraction higher. CelebHeights, which estimates heights by comparing photographs against people and objects of known height, lists Cruise at 5\'7¾" (172.1 cm) barefoot, and YourNextShoes agrees at 5\'7¾". That is unusual: for most stars whose height is debated, the specialist estimate comes in below the listing. For Cruise it comes in slightly above. So the fair statement — and the one this article keeps — is a range: about 170–172 cm, with 170 cm as the baseline because that is what the overwhelming majority of published listings say. The gaps in the rest of this article are computed from that 170 cm baseline, and where a co-star\'s height is itself disputed, the range is shown rather than hidden.',
+          'That discipline matters because the Cruise height debate is four decades old and almost entirely argued in quarter-inches. Fan and analyst estimates put his barefoot height anywhere from about 5\'6" to his listed 5\'7" — but nobody credible puts him at 5\'8" or above, and nobody credible puts him below 5\'7". The range is narrow, the consensus is stable, and the interesting question was never really the number. It is why the number needed forty years of work to arrive at.',
+        ],
+        callout: {
+          title: 'The figure to quote',
+          text: "Tom Cruise: 5'7\" (170 cm) reported, with a credible range of 170–172 cm. No verified barefoot measurement exists. Anything more precise than that is pretending.",
+          type: 'stat',
+        },
+      },
+      {
+        id: 'why-the-doubt',
+        heading: 'Why Was the Number Ever in Doubt? The 5\'9" Years',
+        subheading: 'In the 1980s, the official figure was two inches taller. It drifted down in public — and never drifted back.',
+        paragraphs: [
+          'If the consensus is so settled now, why does anyone still ask? Because the number used to be different. In the 1980s, when Top Gun made Cruise a global icon, studio press kits and casting records listed him at 5\'9". An early audition form that surfaced publicly reportedly listed him at 5\'7" — but the figure the industry put in front of the public was 5\'9", and in a 1988 interview Cruise himself said he was 5\'9" and 147 lbs. For a leading man in an era when leading men were expected to be tall, two inches of PR was cheap insurance.',
+          'The listings drifted down over the following decades — 5\'8", then 5\'7" — as photographs, red-carpet comparisons and height-tracking communities made the taller figure impossible to sustain. Modern consensus has settled at 5\'7", and the drift itself is the story: it shows a number that was managed before it was measured. The 5\'9" claim still circulates in gossip pages and old profiles, which is why search results for Cruise\'s height still mix the two figures, and why a first-time searcher can reasonably come away confused.',
+          'There is a second reason the debate never dies: every new Mission: Impossible or Top Gun release puts Cruise back on red carpets next to taller co-stars, and every new photograph restarts the argument. The F1 premiere in June 2025 did exactly that — Cruise photographed next to Brad Pitt, ten centimetres his senior, with the two men standing near eye-to-eye thanks to footwear and framing. A photograph like that does not settle the debate; it is the debate, in a single frame. The sections that follow explain how the frame is built.',
+        ],
+      },
+      {
+        id: 'hollywood-machine',
+        heading: 'How Hollywood Makes Him Look Tall: Lifts, Angles and Blocking',
+        subheading: 'The techniques are an open secret. The chart shows what they are worth.',
+        paragraphs: [
+          'The first tool is the shoe. Cruise is fond of Cuban heels and discreet height-boosting insoles — lifts inserted under the heel that add an estimated 2–3 inches, taking him from 170 cm barefoot to roughly 175–178 cm on a red carpet. That is why he can stand near eye-to-eye with a 5\'11" Brad Pitt in photographs: the gap is not closed, it is dressed. The chart below makes the arithmetic visible — barefoot Cruise at 170 cm, the average US man at 175 cm, and Cruise in lifts at about 176 cm, effectively erasing the gap to the average man entirely. Robert Downey Jr., the other famously short action star, uses the same trick in Marvel films, and the same logic applies: two to three inches of shoe is the difference between “noticeably shorter” and “about the same”.',
+          'The second tool is the camera. Careful angles — shooting slightly from below, keeping Cruise in the foreground — flatter the nearer figure, and directors have spent forty years framing him that way. The third is blocking: keeping Cruise on the higher step, on a raised platform, or simply positioned closer to the lens than his co-stars. And the fourth is casting and positioning — co-stars chosen or placed to flatter, and red-carpet photos staged so the height comparison is never the clean side-by-side shot that would settle it. None of this is an accusation; it is craft, and Cruise is famously good at the craft. The point is that the screen image is a constructed one, and the construction has a measurable size: about 5–8 cm of shoe and framing.',
+          'It is worth saying plainly that there is nothing to mock here. Cruise has spent four decades as the definitive movie star — three Oscar nominations, films grossing over $10 billion worldwide — while being shorter than the average man, and the industry\'s effort to hide a perfectly ordinary height is the interesting story, not the height itself. The illusion works because audiences want it to work: a 5\'7" action hero who does his own stunts is more impressive, not less, for the gap between the man and the myth.',
+        ],
+        image: {
+          src: '/assets/blog/tom-cruise-height-comparison/lifts.png',
+          alt: 'Height comparison chart showing Tom Cruise barefoot at 170 cm, the average US man at 175 cm, and Tom Cruise in lifts at about 176 cm',
+          caption: 'The lifts effect: barefoot Cruise (170 cm) is 5 cm under the average man; in lifts (about 176 cm) he edges past him. Two to three inches of shoe erases the gap.',
+        },
+        callout: {
+          title: 'What the tricks are worth',
+          text: 'Lifts and Cuban heels: about 2–3 inches (5–7.6 cm). Camera angle and blocking: the rest. Barefoot, the gaps in the next section are what they are.',
+          type: 'tip',
+        },
+      },
+      {
+        id: 'co-star-gaps',
+        heading: 'The Co-Star Gaps: The Hollywood Ladder, Drawn to Scale',
+        subheading: 'From 4 cm to 26 cm — every famous comparison on one chart.',
+        paragraphs: [
+          'Here is the whole story in one chart: Tom Cruise at 170 cm, the average US man at 175 cm, Brad Pitt at 180 cm, Henry Cavill at a reported 185 cm, Chris Hemsworth at 190 cm and Dwayne Johnson at 196 cm. The gaps run from 5 cm to 26 cm, and each one has its own history. The smallest famous gap is the one nobody talks about: Robert Downey Jr., the site\'s other short action star, at a site baseline of 174 cm — just 4 cm taller than Cruise, though the specialist trackers put RDJ closer to 172 cm, which would make the two men effectively the same height. Either way, the two shortest leading men in modern blockbusters are within a couple of centimetres of each other, and both rely on the same footwear.',
+          'The 10 cm gap to Brad Pitt is the one people actually argue about, because the two men are photographed together so often — most recently at the F1 premiere in June 2025, where lifts and framing had them near eye-to-eye. On the reported figures the gap is 4 inches, and it survives every plausible correction to either man\'s height: Pitt is the taller man, and not by a margin that footwear or camera angles can explain away. Pitt\'s own figure is disputed at the margins — CelebHeights has argued for a barefoot 5\'10"–5\'10.5" rather than the listed 5\'11" — but even at the low end of both ranges the gap is roughly 9–10 cm. Ten centimetres is the distance from the top of Cruise\'s head to around Pitt\'s brow, and on a shared baseline it is unmistakable.',
+          'Then the ladder climbs. Henry Cavill at a reported 6\'1" (185 cm) is 15 cm taller — though here too the trackers quibble, with CelebHeights debating 6\'0" to 6\'0.5" — and Chris Hemsworth at 6\'3" (190 cm) is 20 cm taller, a full head and shoulders. Dwayne Johnson at 6\'5" (196 cm) is 26 cm taller, the biggest gap on the chart and the same 26 cm as the Jack Reacher gap in the next section, which is no coincidence: Johnson\'s billed height is exactly the book Reacher\'s height, and he was reportedly in the running for the role. Stand Cruise next to Johnson and the chart stops looking like a comparison of leading men and starts looking like a comparison of weight classes.',
+        ],
+        image: {
+          src: '/assets/blog/tom-cruise-height-comparison/leading-men-ladder.png',
+          alt: 'Height comparison chart showing Tom Cruise at 170 cm next to the average US man at 175 cm, Brad Pitt at 180 cm, Henry Cavill at 185 cm, Chris Hemsworth at 190 cm and Dwayne Johnson at 196 cm',
+          caption: 'The Hollywood ladder: Cruise 170 cm, average man 175 cm, Pitt 180 cm, Cavill 185 cm, Hemsworth 190 cm, Johnson 196 cm. The gaps run from 5 cm to 26 cm.',
+        },
+        callout: {
+          title: 'The gap that survives everything',
+          text: 'Cruise vs Pitt: 10 cm on the reported figures, roughly 9–10 cm on every plausible correction. No amount of lifts or camera work closes a 4-inch gap — it only hides it in photographs.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'reacher',
+        heading: 'Jack Reacher: The 26 cm Casting Gap Fans Never Forgave',
+        subheading: 'The book character is 6\'5" and 250 pounds. Cruise is 5\'7". Lee Child eventually agreed with the fans.',
+        paragraphs: [
+          'No single role explains the Cruise height debate better than Jack Reacher. In Lee Child\'s novels, Reacher is a blond, 6 ft 5 in (196 cm) tall, 250-pound ex-military drifter — a behemoth whose size is central to how he dominates and intimidates everyone in the room. Cruise played him in two films, Jack Reacher (2012) and Jack Reacher: Never Go Back (2016), standing 26 cm — more than ten inches — shorter than the character, and with brown hair where the books insist on blond. Fans noticed immediately, and they never really stopped noticing.',
+          'Child defended the casting at the time, arguing that Reacher\'s size in the books was “a metaphor for an unstoppable force” which Cruise portrayed in his own way, and that no actor existed who combined Cruise\'s talent with the character\'s exact physical frame. He later changed his mind in public. By 2018 he was telling the BBC that Cruise “didn\'t have that physicality”, and in a 2026 interview he put it bluntly: Cruise was “completely and utterly wrong for the character” externally, even though he captured the internals well. Child exercised a contract clause giving him a veto over any Reacher film after the second one, and the role went to television — where Alan Ritchson, at 6\'2", plays a far more book-accurate Reacher, and the height objection largely evaporated.',
+          'The chart below is the casting gap drawn honestly: Cruise at 170 cm next to a 196 cm figure labelled for the book character. It is the same 26 cm as the gap to Dwayne Johnson, which is the detail that makes the story sting — Johnson, at exactly the book character\'s height, was reportedly in the running for the role. The Reacher episode is the purest form of the Cruise height story: not a man who is short, but an industry that decided the man mattered more than the measurement, and a readership that disagreed.',
+        ],
+        image: {
+          src: '/assets/blog/tom-cruise-height-comparison/reacher.png',
+          alt: 'Height comparison chart showing Tom Cruise at 170 cm next to a 196 cm figure labelled Jack Reacher, the book character — a gap of 26 cm',
+          caption: 'The casting gap: Tom Cruise (170 cm) next to Jack Reacher as written (196 cm). Twenty-six centimetres — more than ten inches — between the actor and the character.',
+        },
+        callout: {
+          title: 'Child, in his own words',
+          text: '“Reacher’s size in the books is a metaphor for an unstoppable force.” — Lee Child, defending the casting in 2012. By 2026 he called Cruise “completely and utterly wrong for the character” externally.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'wives-and-percentiles',
+        heading: 'The Three Taller Wives — and the Percentile Reality Check',
+        subheading: 'All three of Cruise\'s wives were taller than him. The most famous gap is 10 cm — and the most famous quote about it is a joke.',
+        paragraphs: [
+          'The tabloid fixture of the 1990s and 2000s was simple: every one of Tom Cruise\'s three wives was taller than him. Mimi Rogers, his first wife, is reported at 5\'8"–5\'9" (173–175 cm). Nicole Kidman, his second wife, is 5\'11" (180 cm) — a 10 cm gap that defined a decade of red-carpet photographs. Katie Holmes, his third wife, is 5\'9" (175 cm), a 5 cm gap. The Kidman gap is the one that entered the language: after the divorce in 2001, Kidman went on the Late Show with David Letterman and, asked what the split meant for her, answered: “Well, I can wear heels now.” The chart below draws that marriage to scale — Cruise at 170 cm, Kidman at 180 cm, the 10 cm gap that a decade of photographs tried to hide.',
+          'Kidman\'s own height has its own honest complication, and it runs in the opposite direction to Cruise\'s. Told as a teenager that she was “too tall” to have a career, she used to claim 5\'10½" at auditions; on the Radio Times Podcast in 2024 she corrected the record: “I say I\'m 5ft 10 1/2in but I\'m really 5ft 11in.” The specialist trackers list her slightly lower, at 5\'10½" (179 cm), so the gap to Cruise is 9–10 cm on any reading — this article uses the site\'s published 180 cm baseline, consistent with the site\'s couples and tallest-female-celebrities articles. The symmetry is the point: he spent his career being listed taller than he is, and she spent hers being listed shorter.',
+          'So how short is 170 cm, really? Run the percentile maths on CDC NHANES data — US men average 175.3 cm with a standard deviation of about 7.4 cm — and 170 cm lands around the 20th–25th percentile for US men: shorter than roughly three men in four, but well inside the ordinary range, and 5 cm under the average man rather than dramatically below it. The site\'s shortest-celebrities article says the same thing, and it is worth repeating here because it reframes the whole topic: Cruise is short, but not remarkably so. What is remarkable is the forty-year industry effort to make a 5 cm deficit invisible — the lifts, the angles, the blocking, the casting — and the fact that audiences keep asking about it anyway. Four decades as the definitive movie star, three Oscar nominations, and films grossing over $10 billion worldwide, all at 170 cm. The camera adds ten pounds and, with enough effort, three inches.',
+        ],
+        image: {
+          src: '/assets/blog/tom-cruise-height-comparison/kidman-gap.png',
+          alt: 'Height comparison chart showing Tom Cruise at 170 cm next to Nicole Kidman at 180 cm — a gap of 10 cm',
+          caption: 'The marriage gap: Tom Cruise 170 cm, Nicole Kidman 180 cm. Ten centimetres — and the reason Kidman joked after the divorce that she could “wear heels now”.',
+        },
+        callout: {
+          title: 'The percentile, honestly',
+          text: '170 cm is around the 20th–25th percentile for US men — shorter than about three men in four, but an ordinary height. The story is the effort to hide 5 cm, not the 5 cm.',
+          type: 'stat',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is Tom Cruise really?',
+        answer:
+          "Tom Cruise is reported at 5'7\" (170 cm), and the honest figure is a range of about 170–172 cm: the consensus of published listings (IMDb, Wikipedia, Height & Tall, HeightProfiles) is 170 cm, while the specialist tracker CelebHeights estimates him slightly higher at 5'7¾\" (172.1 cm). He has never published a verified barefoot measurement, so 170 cm should be quoted as reported, not measured.",
+      },
+      {
+        question: 'Does Tom Cruise wear lifts?',
+        answer:
+          'Yes — Cruise is known for wearing Cuban heels and discreet shoe lifts, which add an estimated 2–3 inches (about 5–7.6 cm) and take him from 170 cm barefoot to roughly 175–178 cm on red carpets. That is why he can appear near eye-to-eye with taller co-stars such as Brad Pitt in photographs. Robert Downey Jr. uses the same trick in Marvel films.',
+      },
+      {
+        question: 'How tall is Tom Cruise compared to Nicole Kidman?',
+        answer:
+          'Nicole Kidman is 5\'11" (180 cm) and Tom Cruise is 5\'7" (170 cm), so she is 10 cm taller — a gap that defined their 1990–2001 marriage in the tabloids. After the divorce Kidman joked on the Late Show with David Letterman: “Well, I can wear heels now.” Kidman herself has said she is really 5\'11", not the 5\'10½" she used to claim.',
+      },
+      {
+        question: 'Was Tom Cruise really 6\'5" in Jack Reacher?',
+        answer:
+          'No — the Jack Reacher of Lee Child\'s novels is 6\'5" (196 cm) and 250 pounds, while Cruise is 5\'7" (170 cm), a gap of 26 cm. Child initially defended the casting, saying Reacher\'s size was “a metaphor for an unstoppable force”, but later admitted Cruise was “completely and utterly wrong for the character” externally. The television Reacher, Alan Ritchson, is 6\'2" — much closer to the book.',
+      },
+      {
+        question: "Is 5'7\" short for a man?",
+        answer:
+          'It is below average but not remarkably short. At 170 cm, a man sits around the 20th–25th percentile for US men (average 175.3 cm) — shorter than about three men in four, but well inside the ordinary range. Cruise is 5 cm under the average US man, which is why lifts of 2–3 inches can erase the gap entirely on a red carpet.',
+      },
+      {
+        question: 'How tall is Tom Cruise compared to Brad Pitt?',
+        answer:
+          'Brad Pitt is listed at 5\'11" (180 cm) and Tom Cruise at 5\'7" (170 cm), a gap of 10 cm (4 inches). The gap survives every plausible correction to either figure — even at the low end of the specialist estimates for both men it is roughly 9–10 cm. Their joint appearance at the F1 premiere in June 2025, where lifts and framing had them near eye-to-eye, restarted the debate.',
+      },
+    ],
+    sources: [
+      {
+        title: 'Tom Cruise Height 2026: How Tall Is the Top Gun Star? — GuideNetWorth',
+        url: 'https://guidenetworth.com/tom-cruise-height/',
+        description: 'Consensus 5\'7" (170 cm) across IMDb, Wikipedia, Height & Tall, HeightProfiles and Celebswiki; CelebHeights 5\'7¾"; the 1980s 5\'9" press-kit figure and Cruise\'s 1988 statement.',
+      },
+      {
+        title: 'How Tall Is Tom Cruise? — TallerThan (CelebHeights data)',
+        url: 'https://tallerthan.com/celebrity/tom-cruise',
+        description: 'Cruise at 5\'7¾" (172.1 cm) barefoot per CelebHeights; official listings of 5\'9" vs the evidence pointing to 5\'7"–5\'8".',
+      },
+      {
+        title: 'Tom Cruise Height vs Brad Pitt Height — ComparingHeights',
+        url: 'https://comparingheights.org/articles/tom-cruise-height-vs-brad-pitt-height/',
+        description: 'Cruise 170 cm vs Pitt 180 cm, a 10 cm gap that survives every plausible correction; Pitt\'s barefoot estimate 178–179 cm.',
+      },
+      {
+        title: 'Tom Cruise Uses a Similar Trick to Disguise His Height — FandomWire',
+        url: 'https://fandomwire.com/king-of-practical-effects-tom-cruise-uses-a-similar-trick-to-disguise-his-height-that-has-been-used-by-robert-downey-jr-in-marvel-movies/',
+        description: 'Cruise\'s Cuban heels and shoe lifts; RDJ at 5\'7¾" (172 cm) per CelebHeights; all three ex-wives taller than Cruise.',
+      },
+      {
+        title: 'Tom Cruise Short Height — YourNextShoes',
+        url: 'https://www.yournextshoes.com/tom-cruise-short-height/',
+        description: 'Cruise at 5\'7¾" (172.1 cm); the 5\'9" claim in early listings; lifts adding 2–3 inches on red carpets.',
+      },
+      {
+        title: 'Nicole Kidman Cut Ex Tom Cruise Down With Height Comment After Divorce — Nicki Swift',
+        url: 'https://www.nickiswift.com/1987689/nicole-kidman-cut-ex-tom-cruise-down-height-comment-after-divorce/',
+        description: 'Kidman\'s 2024 Radio Times Podcast correction (“I\'m really 5ft 11in”) and the Letterman “I can wear heels now” line from August 2001.',
+      },
+      {
+        title: "Tom Cruise's Height Is Causing a Stir All Over Again — Nicki Swift",
+        url: 'https://www.nickiswift.com/869665/tom-cruises-height-is-causing-a-stir-all-over-again/',
+        description: 'All three wives taller than Cruise: Mimi Rogers 5\'8"–5\'9", Nicole Kidman 5\'11", Katie Holmes 5\'9".',
+      },
+      {
+        title: 'Jack Reacher — Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Jack_Reacher',
+        description: 'Reacher in the novels is 6 ft 5 in (196 cm) and 250 lb; Cruise is 5 ft 7 in (170 cm); Child\'s “metaphor for an unstoppable force” defence and later recasting.',
+      },
+      {
+        title: 'Why Lee Child Admits Tom Cruise\'s Reacher Casting Missed the Mark — Radio Times',
+        url: 'https://www.radiotimes.com/tv/drama/jack-reacher-lee-child-tom-cruise-height-casting-newsupdate/',
+        description: 'Child on Cruise as Reacher: “completely and utterly wrong for the character” externally; Alan Ritchson (6\'2") as the book-accurate recast.',
+      },
+      {
+        title: '5 Facts About Tom Cruise: Height, Net Worth, Love Life and More — HELLO! Magazine',
+        url: 'https://www.hellomagazine.com/film/20210416111233/tom-cruise-facts-net-worth-height-family-more/',
+        description: 'Cruise at 1.7 m (5\'7"); the 2011 “very sensitive” remark; ten inches shorter than Lee Child\'s Reacher.',
+      },
+      {
+        title: 'Height Percentile Calculator (CDC NHANES reference data) — OnlyCalculators',
+        url: 'https://www.onlycalculators.com/health/percentile/height-percentile-calculator/',
+        description: 'US adult averages used for the percentile maths: men 175.3 cm, women 161.5 cm, with standard deviations of ~7.4 cm (men) and ~7.1 cm (women).',
+      },
+    ],
+    relatedSlugs: ['shortest-celebrities-height-comparison', 'celebrity-couples-biggest-height-differences', 'tallest-female-celebrities-height-comparison', 'dwayne-johnson-height-comparison', 'is-6-feet-rare-height-percentiles', 'what-is-considered-tall-for-a-woman'],
+  },
 ];
 

@@ -74,7 +74,7 @@ recurring engaged niche in the data.
 - [x] #33 `indian-cricketers-height-comparison` — Indian Cricketers' Heights Compared: Sachin, Virat, Rohit & More (sports) — published 2026-11-08 (with 4 site-rendered screenshots)
 - [x] #34 `bollywood-actresses-height-comparison` — Bollywood Actresses' Heights: Deepika, Priyanka & More, Visualized (celebrities) — published 2026-11-11 (with 5 site-rendered screenshots)
 - [x] #35 `tall-woman-short-man-height-comparison` — Tall Woman vs Short Man Height Difference, Visualized (guides) — published 2026-11-14 (with 4 site-rendered screenshots)
-- [ ] #36 `tom-cruise-height-comparison` — Tom Cruise's Real Height (5'7"): Hollywood's Famous Short Leading Men, Visualized (celebrities)
+- [x] #36 `tom-cruise-height-comparison` — Tom Cruise's Real Height (5'7"): Hollywood's Famous Short Leading Men, Visualized (celebrities) — published 2026-11-17 (with 4 site-rendered screenshots)
 - [ ] #37 `superhero-heights-compared` — Superhero Heights Compared: Spider-Man, Cyclops, Batman & More Visualized (anime)
 - [ ] #38 `zendaya-height-vs-tom-holland` — Zendaya's Height (5'10") vs Tom Holland (5'8"): The Famous Height Difference, Visualized (celebrities) — from Bing data: "how tall is zendaya" (202 imp, pos 8.0) + "zendaya height" (182 imp, pos 7.7), 0 clicks
 - [ ] #39 `brad-pitt-leonardo-dicaprio-height-comparison` — Brad Pitt (5'11") & Leonardo DiCaprio (6'0") Heights Compared: Co-Stars, Visualized (celebrities) — from Bing data: "how tall is brad pitt" (85 imp) + "brad pitt height" (25 imp) + dicaprio queries (~31 imp), 0 clicks
