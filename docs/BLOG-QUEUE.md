@@ -78,3 +78,11 @@ recurring engaged niche in the data.
 - [ ] #37 `superhero-heights-compared` — Superhero Heights Compared: Spider-Man, Cyclops, Batman & More Visualized (anime)
 - [ ] #38 `zendaya-height-vs-tom-holland` — Zendaya's Height (5'10") vs Tom Holland (5'8"): The Famous Height Difference, Visualized (celebrities) — from Bing data: "how tall is zendaya" (202 imp, pos 8.0) + "zendaya height" (182 imp, pos 7.7), 0 clicks
 - [ ] #39 `brad-pitt-leonardo-dicaprio-height-comparison` — Brad Pitt (5'11") & Leonardo DiCaprio (6'0") Heights Compared: Co-Stars, Visualized (celebrities) — from Bing data: "how tall is brad pitt" (85 imp) + "brad pitt height" (25 imp) + dicaprio queries (~31 imp), 0 clicks
+
+## Ranked queue (from Google Trends related queries, 2026-11-18)
+
+Source: `~/workspace/user/files/relatedQueries__2.csv` — Related queries for
+"how height", Worldwide, past 24h (2026-11-17 22:23 – 2026-11-18 22:23 IST).
+Evergreen gap: no HowHeight article yet answers "how to increase height".
+
+- [ ] #40 `how-to-increase-height` — How to Increase Height: What Actually Works (and What Doesn't) (guides) — from Trends data: "how to increase height" (relative interest 37) + "how to grow height" (19); note: article must be honest about growth plates / age limits, posture, sleep and nutrition — no miracle-cure claims
