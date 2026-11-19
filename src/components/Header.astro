@@ -16,9 +16,10 @@ const mainNav = [
   { label: 'Blog', href: getLocalizedPath('/blog/', locale) },
   { label: t(locale, 'nav.celebrities'), href: getLocalizedPath('/celebrity-height-comparison/', locale) },
   { label: t(locale, 'nav.anime'), href: getLocalizedPath('/anime-height-comparison/', locale) },
-  { label: t(locale, 'nav.films'), href: getLocalizedPath('/film-height-comparison/', locale) },
   { label: t(locale, 'nav.animals'), href: getLocalizedPath('/animal-height-comparison/', locale) },
   { label: t(locale, 'nav.objects'), href: getLocalizedPath('/object-height-comparison/', locale) },
+  { label: t(locale, 'footer.about'), href: getLocalizedPath('/about/', locale) },
+  { label: t(locale, 'footer.contact'), href: '/contact/' },
 ];
 
 const moreNav = [
@@ -27,14 +28,13 @@ const moreNav = [
   { label: t(locale, 'nav.calculator'), href: getLocalizedPath('/height-comparison-calculator/', locale) },
   { label: t(locale, 'nav.chart'), href: getLocalizedPath('/height-comparison-chart/', locale) },
   { label: 'Couple Comparison', href: getLocalizedPath('/height-comparison-couple/', locale) },
+  { label: t(locale, 'nav.films'), href: getLocalizedPath('/film-height-comparison/', locale) },
   { label: 'Human Size Comparison', href: getLocalizedPath('/size-comparison/', locale) },
   { label: t(locale, 'nav.plants'), href: getLocalizedPath('/plant-height-comparison/', locale) },
   { label: t(locale, 'nav.sports'), href: getLocalizedPath('/sports-height-comparison/', locale) },
   { label: t(locale, 'nav.fictional'), href: getLocalizedPath('/fictional-character-height-comparison/', locale) },
   { label: t(locale, 'nav.people'), href: getLocalizedPath('/people-height-comparison/', locale) },
   { label: t(locale, 'nav.howToUse'), href: getLocalizedPath('/how-to-use/', locale) },
-  { label: t(locale, 'footer.about'), href: getLocalizedPath('/about/', locale) },
-  { label: t(locale, 'footer.contact'), href: '/contact/' },
 ];
 ---
 
@@ -44,7 +44,7 @@ const moreNav = [
     <BrandLogo size="md" showTagline={false} />
 
     <!-- Desktop Navigation -->
-    <nav class="hidden lg:flex items-center gap-5 text-[13px] font-semibold text-slate-600 dark:text-slate-300">
+    <nav class="hidden lg:flex items-center gap-4 text-[13px] font-semibold text-slate-600 dark:text-slate-300">
       {mainNav.map((item) => (
         <a
           href={item.href}
@@ -72,7 +72,7 @@ const moreNav = [
         <div class="absolute right-0 top-full pt-2 hidden group-hover:block group-focus-within:block w-52">
           <div class="rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-soft-lg py-2 text-xs">
             <div class="px-3 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">{t(locale, 'nav.categoriesHeader')}</div>
-            {moreNav.slice(0, 5).map((m) => (
+            {moreNav.slice(0, 6).map((m) => (
               <a
                 href={m.href}
                 class="block px-3 py-1.5 font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-brand-600 dark:hover:text-blue-400 transition-colors"
@@ -82,7 +82,7 @@ const moreNav = [
             ))}
             <div class="my-1 border-t border-slate-100 dark:border-slate-700"></div>
             <div class="px-3 py-1 text-[10px] font-bold text-slate-400 uppercase tracking-wider">{t(locale, 'nav.utilitiesHeader')}</div>
-            {moreNav.slice(5).map((m) => (
+            {moreNav.slice(6).map((m) => (
               <a
                 href={m.href}
                 class="block px-3 py-1.5 font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 hover:text-brand-600 dark:hover:text-blue-400 transition-colors"
