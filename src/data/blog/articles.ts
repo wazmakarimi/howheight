@@ -7565,5 +7565,269 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['shortest-celebrities-height-comparison', 'celebrity-couples-biggest-height-differences', 'tallest-female-celebrities-height-comparison', 'dwayne-johnson-height-comparison', 'is-6-feet-rare-height-percentiles', 'what-is-considered-tall-for-a-woman'],
   },
+  {
+    slug: 'superhero-heights-compared',
+    title: "Superhero Heights Compared: Spider-Man, Wolverine, Batman & More, Visualised",
+    h1: "How Tall Are Superheroes, Really? The Marvel & DC Ladder, Drawn to Scale",
+    description:
+      "Wolverine is 5'3\" (160 cm) in the comics and Thor is 6'6\" (198 cm) — a 38 cm spread across the human-shaped heroes. Spider-Man, the genre's most human hero, is an ordinary 5'10\" (178 cm), just 3 cm above the average US man. This article draws the full Marvel and DC canon ladder to scale, shows the 28 cm gap between comic Wolverine and Hugh Jackman, compares every hero with the actor who plays them, and explains why handbook heights are editorial guidelines, not measurements.",
+    category: 'anime',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-11-20T09:00:00Z',
+    updatedDate: '2026-11-20T09:00:00Z',
+    readingTimeMinutes: 9,
+    quickAnswer: {
+      summary:
+        "In comic canon, Wolverine is the shortest major superhero at 5'3\" (160 cm) and Thor is the tallest human-shaped hero at 6'6\" (198 cm) — a 38 cm spread. Spider-Man is 5'10\" (178 cm), only 3 cm above the average US man (175 cm). Superman is 6'3\" (191 cm), Batman 6'2\" (188 cm) and Wonder Woman 6'0\" (183 cm), so the whole DC trinity fits inside 8 cm. The Hulk is listed at 8'0\" (244 cm) but his height varies with his rage, so he sits outside the main ladder. On screen, almost every actor is shorter than the character — except Hugh Jackman, who at 6'2\" (188 cm) is 28 cm taller than the Wolverine he played for 24 years.",
+      keyTakeaway:
+        "The genre's most human hero is average height and its most feared is the shortest. Spider-Man at 178 cm is deliberately ordinary — that is the point of the character — while Wolverine at 160 cm is the shortest major Avenger or X-Man, and the 28 cm gap to Hugh Jackman is the largest actor-versus-comic mismatch in superhero casting. Treat every number here as a handbook figure, not a measurement: Marvel and DC publish these heights as editorial reference, and artists routinely ignore them.",
+      dataPoints: [
+        { label: 'Shortest major hero', value: 'Wolverine — 5\'3" (160 cm)' },
+        { label: 'Tallest human-shaped hero', value: 'Thor — 6\'6" (198 cm)' },
+        { label: 'The human-shaped spread', value: '38 cm, Wolverine 160 cm to Thor 198 cm' },
+        { label: 'Spider-Man vs the average man', value: '178 cm vs 175 cm — just 3 cm above average' },
+        { label: 'The Wolverine casting gap', value: '28 cm — Hugh Jackman is 188 cm (6\'2")' },
+        { label: 'The exact match', value: 'Black Adam 196 cm = Dwayne Johnson 196 cm' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'human', id: 'male', customHeightCm: 160, label: 'Wolverine (comic)' },
+      { category: 'human', id: 'male', customHeightCm: 178, label: 'Spider-Man' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average US man' },
+      { category: 'human', id: 'male', customHeightCm: 188, label: 'Batman' },
+      { category: 'human', id: 'male', customHeightCm: 198, label: 'Thor' },
+      { category: 'celebrity', id: 'dwayne-johnson' },
+    ],
+    toolActionTitle: 'Stand on the superhero ladder',
+    toolActionDescription:
+      'The visualiser above is preloaded with comic Wolverine (160 cm), Spider-Man (178 cm), the average US man (175 cm), Batman (188 cm), Thor (198 cm) and Dwayne Johnson (196 cm). Add your own height and see where you land — level with Spider-Man, or looking up at Thor.',
+    comparisonTable: {
+      caption: 'The Marvel and DC canon ladder, tallest to shortest — handbook figures (Earth-616 / DC main continuity). The Hulk is listed separately because his height varies.',
+      headers: ['Character', 'Universe', 'Height', 'Notes'],
+      rows: [
+        ['Hulk', 'Marvel', "8'0\" (244 cm)", 'Baseline only — varies 213–243 cm with rage and era'],
+        ['Thanos', 'Marvel', "6'7\" (201 cm)", 'Villain, included for scale; 3 cm above Thor'],
+        ['Thor', 'Marvel', "6'6\" (198 cm)", 'Tallest human-shaped hero on the ladder'],
+        ['Black Adam', 'DC', "6'5\" (196 cm)", 'Exactly matches Dwayne Johnson, his actor'],
+        ['Aquaman', 'DC', "6'4\" (193 cm)", 'Taller than Superman by 2 cm'],
+        ['Superman', 'DC', "6'3\" (191 cm)", 'Confirmed in JLA: Secret Files #1 (1997); 6\'3" is 190.5 cm, so 191 cm'],
+        ['Cyclops', 'Marvel', "6'3\" (191 cm)", 'Level with Superman; recent art has drawn him taller'],
+        ['Batman', 'DC', "6'2\" (188 cm)", 'Only 3 cm below Superman'],
+        ['Captain America', 'Marvel', "6'2\" (188 cm)", 'Level with Batman; 10 cm above Spider-Man'],
+        ['Iron Man (Tony Stark)', 'Marvel', "6'1\" (185 cm)", 'Out of armour; 6\'6" (198 cm) in the suit'],
+        ['Wonder Woman', 'DC', "6'0\" (183 cm)", '8 cm below Superman; tallest major heroine'],
+        ['Spider-Man', 'Marvel', "5'10\" (178 cm)", '3 cm above the average US man — deliberately ordinary'],
+        ['Black Widow', 'Marvel', "5'7\" (170 cm)", '10 cm below Spider-Man'],
+        ['Wolverine', 'Marvel', "5'3\" (160 cm)", 'Shortest major hero; 28 cm below Captain America'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-ladder',
+        heading: "The Ladder: Wolverine at 5'3\" to Thor at 6'6\"",
+        subheading: 'Thirty-eight centimetres separate the shortest and tallest human-shaped heroes — and the Hulk does not count.',
+        paragraphs: [
+          'Here is the whole genre in one chart: Wolverine at 160 cm, the average US man at 175 cm, Spider-Man at 178 cm, Batman and Captain America level at 188 cm, Cyclops at 191 cm and Thor at 198 cm. The human-shaped ladder runs 38 cm from bottom to top, and almost every major hero in Marvel and DC sits inside it. That is the first surprise of this topic. For characters who fly, lift tanks and punch through walls, the height range is strikingly ordinary: the tallest is a head taller than the shortest, and the middle of the ladder — Spider-Man at 178 cm — is a height you would not look twice at on a train.',
+          'The Hulk is the deliberate exception, which is why he is not in the chart. His handbook baseline is 244 cm (8\'0"), but sources list anything from 213 cm to 243 cm depending on the era and how angry he is, and some versions run taller still. A single bar for the Hulk would be a fiction, so he is flagged in the table and left out of the visual. Include his 244 cm baseline and the spread becomes 84 cm; exclude him, and the honest number is 38 cm. Thanos, at 201 cm, is the only other figure above Thor, and he is a villain — the heroes themselves top out at 198 cm.',
+          'Look at the clustering and a pattern emerges. Nine of the fourteen names in the table sit between 183 cm and 198 cm — the 6\'0" to 6\'6" band. That is not an accident of anatomy; it is an editorial choice. Comic-book heroes are drawn tall because tall reads as heroic, and the handbooks then wrote the drawings down as numbers. The two heroes who break the pattern are the two most interesting characters in the genre: Spider-Man, who is ordinary on purpose, and Wolverine, who is short on purpose. Both are the subject of the next two sections.',
+        ],
+        image: {
+          src: '/assets/blog/superhero-heights-compared/full-ladder.webp',
+          alt: 'Height comparison chart showing Wolverine at 160 cm, Spider-Man at 178 cm, the average US man at 175 cm, Batman and Captain America at 188 cm, Cyclops at 191 cm and Thor at 198 cm',
+          caption: 'The human-shaped ladder: Wolverine 160 cm, average man 175 cm, Spider-Man 178 cm, Batman and Captain America 188 cm, Cyclops 191 cm, Thor 198 cm. Thirty-eight centimetres, bottom to top.',
+        },
+        callout: {
+          title: 'The spread, honestly',
+          text: 'Wolverine 160 cm to Thor 198 cm is 38 cm — the human-shaped spread. Add the Hulk at his 244 cm baseline and it becomes 84 cm, but his height varies with his rage, so the 38 cm figure is the one to quote.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'wolverine',
+        heading: "Wolverine Is 5'3\": The Shortest Major Hero — and the Biggest Casting Gap",
+        subheading: 'Comic Logan is 160 cm. Hugh Jackman is 188 cm. Nobody else in the genre comes close to that mismatch.',
+        paragraphs: [
+          'Wolverine is 5 feet 3 inches (160 cm) in the comics — the shortest major Avenger or X-Man, 15 cm below Spider-Man and 28 cm below Captain America. The figure has been consistent since his debut in The Incredible Hulk #181 in 1974, and the 2004 Official Handbook to the Marvel Universe: X-Men states it plainly. It is not a joke the writers play once and forget; it is the character. Logan is short, stocky and feral, built like the animal he is named after, and his height is part of why he fights the way he does: he goes for the legs, he gets underestimated, and he does not care.',
+          'Then Hollywood cast Hugh Jackman. Jackman is 6 feet 2 inches (188 cm) — 28 cm taller than the character, almost a full foot — and he played Wolverine for 24 years across ten films, from X-Men in 2000 to Deadpool & Wolverine in 2024. It is the largest actor-versus-comic gap in the genre, and fans noticed on day one. Stan Lee himself said he had wanted Bob Hoskins — 5\'4" (163 cm), the star of Who Framed Roger Rabbit — for the role. The filmmakers worked around it for two decades: shooting Jackman at unusual angles, framing him from the waist up, and putting his co-stars in platform soles, as Wikipedia notes. A minority of listings put Jackman at 6\'3" (191 cm), which would make the gap 31 cm; the consensus, including Wikipedia, is 6\'2" (188 cm) and a 28 cm gap, and that is the figure this article uses.',
+          'The joke finally landed in 2024. Deadpool & Wolverine includes a comics-accurate short Logan — a variant Deadpool finds in a bar, visibly much shorter than the Wolverine audiences know — played by professional bodybuilder Luke Bennett, who is 4\'11" (150 cm), with Jackman\'s face and voice added digitally. It took 24 years and a multiverse gag for the short Wolverine to appear on screen at all. That is how thoroughly the casting had rewritten the character\'s silhouette: a generation of filmgoers grew up believing Wolverine was tall, and the comics had to wait for a joke to correct the record.',
+        ],
+        image: {
+          src: '/assets/blog/superhero-heights-compared/wolverine-gap.webp',
+          alt: 'Height comparison chart showing comic Wolverine at 160 cm next to Hugh Jackman at 188 cm — a gap of 28 cm',
+          caption: 'The casting gap: comic Wolverine (160 cm) next to Hugh Jackman (188 cm). Twenty-eight centimetres — almost a foot — between the character and the actor who played him for 24 years.',
+        },
+        callout: {
+          title: 'The figure to quote',
+          text: 'Comic Wolverine: 5\'3" (160 cm). Hugh Jackman: 6\'2" (188 cm). Gap: 28 cm. Some listings say 191 cm for Jackman (a gap of up to 31 cm), but 188 cm is the consensus.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'spider-man',
+        heading: 'Spider-Man Is the Ordinary One — and That Is the Point',
+        subheading: 'At 178 cm he is 3 cm above the average US man. Every other Avenger-scale hero is at least 7 cm taller.',
+        paragraphs: [
+          'Peter Parker is 5 feet 10 inches (178 cm) in Earth-616 continuity, the main Marvel universe — a figure consistent since his debut in Amazing Fantasy #15 in 1962, and confirmed in Marvel Legacy: The 1960s Handbook. He is 3 cm above the average US man (175 cm), 10 cm below Captain America and 20 cm below Thor. Put him on the chart next to the average man and the two figures are almost level; the 3 cm difference is the width of a thumb. He is the only Avenger-scale hero at an average height, and that is deliberate. Spider-Man was designed in 1962 as the hero a reader could be: a teenager from Queens with homework, money worries and a height nobody would notice.',
+          'The chart makes the point better than any paragraph. Spider-Man at 178 cm, the average man at 175 cm, Iron Man out of armour at 185 cm and Captain America at 188 cm: the gap from Peter Parker to the average man is 3 cm, and the gap from Peter Parker to Captain America is 10 cm. He is closer to you than to his own teammates. That ordinariness is also why the height question follows him everywhere — "how tall is Spider-Man" is one of the most searched superhero height queries, because people keep checking whether the most relatable hero is secretly tall. He is not, and the answer is the appeal.',
+          'One variant deserves a single line, not a second baseline. In the Ultimate universe — the separate continuity that ran from 2000 — Peter Parker is 5\'5" (165 cm), shorter than the average man. It is a different character in a different universe, and it should not be averaged into the 178 cm figure or quoted as though it were the same Spider-Man. The 178 cm Earth-616 figure is the one the handbooks, the rankings and this article use.',
+        ],
+        image: {
+          src: '/assets/blog/superhero-heights-compared/ordinary-hero.webp',
+          alt: 'Height comparison chart showing Spider-Man at 178 cm next to the average US man at 175 cm, Iron Man at 185 cm and Captain America at 188 cm',
+          caption: 'The ordinary hero: Spider-Man 178 cm, average man 175 cm, Iron Man 185 cm, Captain America 188 cm. Peter Parker is 3 cm above average — and 10 cm below Captain America.',
+        },
+        callout: {
+          title: 'The deliberate 3 cm',
+          text: 'Spider-Man is 178 cm; the average US man is 175 cm. A 3 cm gap is the whole design of the character — the hero who is your height, not a god\'s.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'actors',
+        heading: 'Comic Canon vs the Actors: Almost Everyone Is Shorter on Screen',
+        subheading: 'The pattern runs one way — until you reach Dwayne Johnson, who matches Black Adam exactly.',
+        paragraphs: [
+          'Put the characters next to the actors and a clear pattern appears: almost every actor is shorter than the comic character they play. Thor is 198 cm in the comics; Chris Hemsworth, who plays him, is 190 cm — 8 cm shorter. Iron Man is 185 cm out of armour; Robert Downey Jr. is 174 cm on the site\'s baseline — 11 cm shorter, and 24 cm shorter than the armoured suit at 198 cm. Superman is 191 cm; Henry Cavill is a reported 185 cm — 6 cm shorter. Captain America is 188 cm; Chris Evans is a reported 183 cm — 5 cm shorter. Spider-Man is 178 cm; Tom Holland is a reported 173 cm — 5 cm shorter. Black Widow is 170 cm; Scarlett Johansson is 160 cm on the site\'s baseline — 10 cm shorter. The gaps run 5 to 11 cm, and they all run the same way: the actor is the smaller figure.',
+          'There are two exceptions, and they are both instructive. The first is Batman: the comic character is 188 cm and Ben Affleck, who played him, is a reported 192 cm — 4 cm taller, the only DC hero whose actor overshoots. The second is the Wolverine case from the previous section, which is not a 5 cm rounding difference but a 28 cm rewrite. And then there is the exact match, which is why the chart below is worth a look: Black Adam is 196 cm in the comics, and Dwayne Johnson is 196 cm. Zero gap. Johnson is the only actor on the list who is precisely the height of his character — the visual punchline of the whole comparison, two figures of identical height standing side by side.',
+          'Why does the pattern run one way? Partly because comic-book heroes are drawn taller than any plausible cast — the handbooks codified heroic proportions, not human ones — and partly because casting optimises for presence, voice and box office, not for a tape measure. A 5 to 11 cm shortfall is invisible on screen: camera angles, footwear and framing absorb it, and audiences do not carry a ruler into the cinema. The shortfalls only become visible when you draw them to scale, which is what the chart does. The lesson is the same one the Tom Cruise article reached from the other direction: the screen image is constructed, and the construction has a measurable size.',
+        ],
+        image: {
+          src: '/assets/blog/superhero-heights-compared/actor-vs-comic.webp',
+          alt: 'Height comparison chart showing Thor at 198 cm vs Chris Hemsworth at 190 cm, Iron Man at 185 cm vs Robert Downey Jr. at 174 cm, and Black Adam at 196 cm vs Dwayne Johnson at 196 cm',
+          caption: 'Canon vs the actors: Thor 198 cm vs Hemsworth 190 cm, Iron Man 185 cm vs Downey Jr. 174 cm, Black Adam 196 cm vs Johnson 196 cm — the exact match.',
+        },
+        callout: {
+          title: 'The exact match',
+          text: 'Black Adam: 196 cm. Dwayne Johnson: 196 cm. Gap: zero. He is the only actor in this article who is precisely the height of his character.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'dc-trinity',
+        heading: 'Superman, Batman, Wonder Woman: Only 8 cm Apart',
+        subheading: 'The flagship hero is not the giant the posters suggest. His two partners are nearly his height.',
+        paragraphs: [
+          'Superman is 6 feet 3 inches (191 cm) — confirmed in JLA: Secret Files #1 in 1997 and Superman: Secret Files in 1998. That is tall by any human standard, but it is not the towering figure the posters imply, and inside his own universe he is barely the tallest of the three. Batman is 6\'2" (188 cm), just 3 cm below him, and Wonder Woman is 6\'0" (183 cm), 8 cm below him. Draw the DC trinity to scale and the three figures are nearly level; the gap from Superman\'s head to Wonder Woman\'s is the width of a hand. Some sources, including Dexerto, list Superman at 192 cm — but 6\'3" is 190.5 cm, so 191 cm is the correct rounding, and this article uses it.',
+          'The surprise deepens when you cross universes. Superman at 191 cm is shorter than Thor at 198 cm by 7 cm, and shorter than Thanos at 201 cm by 10 cm. Aquaman, at 193 cm, is 2 cm taller than Superman. Even Starfire, at 6\'4", has an inch on him, and Cyborg is 3 inches taller. The Man of Steel is, by the genre\'s own numbers, a mid-table hero for height — an alien with super-strength, flight and heat vision who is only 4 cm taller than Batman, a man with no powers at all and a great deal of money. The poster image of Superman towering over everyone is a framing choice, not a measurement.',
+          'That is worth saying because it corrects a common assumption: that the flagship character must be the biggest. DC has never needed Superman to be the tallest, because his scale comes from what he can do, not how tall he stands. Batman at 188 cm and Wonder Woman at 183 cm are drawn to look like his equals, and the numbers agree with the drawings for once. The trinity works as a visual unit precisely because the three heights are so close — and the chart shows it in a way a table of numbers never quite does.',
+        ],
+        image: {
+          src: '/assets/blog/superhero-heights-compared/dc-trinity.webp',
+          alt: 'Height comparison chart showing Superman at 191 cm next to Batman at 188 cm and Wonder Woman at 183 cm',
+          caption: 'The DC trinity: Superman 191 cm, Batman 188 cm, Wonder Woman 183 cm. Eight centimetres separate the flagship hero from his shortest partner.',
+        },
+        callout: {
+          title: 'Superman vs Batman: 3 cm',
+          text: 'Superman is 191 cm and Batman is 188 cm — a 3 cm gap. Their perceived size difference is almost entirely build, costume and how artists frame them.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'why-slippery',
+        heading: 'Why the Numbers Are Slippery: Handbooks, Artists and Reboots',
+        subheading: 'These heights are editorial guidelines. Say so once, early, and the rest of the article earns its credibility.',
+        paragraphs: [
+          'Every number in this article comes from the same kind of source: Marvel\'s Official Handbook of the Marvel Universe and the equivalent DC character bibles, cross-checked across two independent rankings — Calqora and ComparingHeights — that agree on almost every figure. That is the best evidence available, and it is not the same as a measurement. The handbooks are editorially approved reference numbers, and Marvel itself notes that they have been known to change from comic to comic. Artists draw to look right, not to measure right, and reboots shift figures without announcement. Cyclops is the live example: his handbook figure is 191 cm, but the 2025 X-Manhunt connecting covers drew him at roughly 6\'5". The handbook did not change; the drawing did.',
+          'That slipperiness is why this article shows ranges and disagreements instead of hiding them. Hugh Jackman is 188 cm by consensus, with a minority of listings at 191 cm — so the gap to Wolverine is 28 cm, with a note that some sources would make it 31 cm. Superman is 191 cm, not the 192 cm some outlets print, because 6\'3" converts to 190.5 cm. The Hulk is a range, not a number. Tom Holland is 173 cm as a reported figure, traced to a GQ profile from November 2021, with lower photo-based estimates in circulation — and the article labels it reported rather than pretending it was measured. A listicle that prints comic heights as though they were taken with a stadiometer is overstating its evidence; this one does not.',
+          'None of that makes the numbers useless. The ladder is stable where it matters: Wolverine is the shortest major hero in every ranking, Thor is the tallest human-shaped hero in every ranking, Spider-Man is average in every ranking, and the actor gaps all run the same way in every ranking. The figures are good enough to compare, to visualise and to argue about — which is what people come here to do. Use them as the handbooks intend: a reference, drawn to scale, with the caveats attached.',
+        ],
+        callout: {
+          title: 'How to quote these numbers',
+          text: 'Quote them as handbook figures: "Wolverine is listed at 5\'3\" (160 cm) in the comics." Never as measurements — nobody has ever put a tape measure to a fictional character.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is Spider-Man?',
+        answer:
+          "Spider-Man (Peter Parker) is 5'10\" (178 cm) in Earth-616, the main Marvel continuity — a figure consistent since his debut in Amazing Fantasy #15 (1962). He is 3 cm above the average US man (175 cm), 10 cm below Captain America (188 cm) and 20 cm below Thor (198 cm). In the separate Ultimate universe he is 5'5\" (165 cm), but that is a different continuity, not a second baseline for the same character.",
+      },
+      {
+        question: 'How tall is Wolverine in the comics?',
+        answer:
+          "Wolverine is 5'3\" (160 cm) in the comics, per the Official Handbook to the Marvel Universe: X-Men (2004) — the shortest major Avenger or X-Man, 15 cm below Spider-Man and 28 cm below Captain America. Hugh Jackman, who played him in ten films from 2000 to 2024, is 6'2\" (188 cm), a gap of 28 cm. Deadpool & Wolverine (2024) finally put a comics-accurate short Logan on screen, played by 4'11\" bodybuilder Luke Bennett.",
+      },
+      {
+        question: 'How tall is Batman?',
+        answer:
+          "Batman is 6'2\" (188 cm) in DC canon — 3 cm below Superman (191 cm) and 5 cm above Wonder Woman (183 cm). His actor Ben Affleck is a reported 6'3\" (192 cm), 4 cm taller than the character, making Batman one of only two heroes in this article whose actor overshoots the comic height.",
+      },
+      {
+        question: 'Is Superman taller than Thor?',
+        answer:
+          "No — Thor is taller. Superman is 6'3\" (191 cm) and Thor is 6'6\" (198 cm), so Thor is 7 cm taller. Superman is also shorter than Thanos (201 cm) and Aquaman (193 cm), and only 3 cm taller than Batman (188 cm). Some outlets list Superman at 192 cm, but 6'3\" is 190.5 cm, so 191 cm is the correct rounding.",
+      },
+      {
+        question: 'Why is Hugh Jackman so much taller than Wolverine?',
+        answer:
+          "Jackman is 6'2\" (188 cm) and comic Wolverine is 5'3\" (160 cm) — a 28 cm gap, the largest actor-versus-comic mismatch in the genre. Stan Lee said he had wanted 5'4\" actor Bob Hoskins for the role, but Jackman was cast for X-Men (2000) and kept the role for 24 years; filmmakers shot him at unusual angles, framed him from the waist up and put co-stars in platform soles. The height was a known point of contention from the first film, and it took until Deadpool & Wolverine (2024) for a comics-accurate short Logan to appear on screen.",
+      },
+      {
+        question: 'Who is the tallest superhero?',
+        answer:
+          "The Hulk, at a baseline of 8'0\" (244 cm) — but his height varies with his rage and the era, with sources listing 213–243 cm, so he is a range rather than a number. Among heroes with a stable height, Thor is the tallest at 6'6\" (198 cm), followed by Black Adam (196 cm) and Aquaman (193 cm). The average superhero across 214 characters is 5'10\" (178 cm) — exactly Spider-Man's height.",
+      },
+    ],
+    sources: [
+      {
+        title: 'Superhero Heights: Marvel and DC Comic Canon vs the Actors Who Play Them — Calqora',
+        url: 'https://www.calqora.com/blog/entertainment--superhero-heights-marvel-and-dc-comics-vs-the-actors-who-play-them',
+        description: 'The most complete ranked canon table (Hulk 244 cm to Wolverine 160 cm) with the actor-gap table: Jackman 188 cm (+28 cm), Hemsworth 190 cm (−8 cm), Cavill 185 cm (−6 cm), Holland 173 cm (−5 cm), Affleck 192 cm (+4 cm).',
+      },
+      {
+        title: 'Shortest vs Tallest Marvel Characters — ComparingHeights',
+        url: 'https://comparingheights.org/articles/shortest-vs-tallest-marvel-characters/',
+        description: 'Marvel-only ranking cross-checked against Calqora; methodology note that handbook heights change from comic to comic and artists draw to look right.',
+      },
+      {
+        title: 'How Tall Is Wolverine in the MCU and Marvel Comics? — Dexerto',
+        url: 'https://www.dexerto.com/comics/how-tall-is-wolverine-in-the-mcu-and-marvel-comics-2245115/',
+        description: 'Wolverine 5\'3" (160 cm) per the 2004 Official Handbook to the Marvel Universe: X-Men; Jackman 6\'2"–6\'3" (188–191 cm) in the films; debut in The Incredible Hulk #181.',
+      },
+      {
+        title: 'Superman Is Surprisingly Shorter Than Marvel’s Biggest Superheroes — Dexerto',
+        url: 'https://www.dexerto.com/comics/superman-height-dc-comics-2449225/',
+        description: 'Superman 6\'3" confirmed in JLA: Secret Files #1 (1997); Batman and Wonder Woman at 6\'2" and 6\'0" in recent comics; the Hulk listed at 213–243 cm; Superman actors from Reeve (195 cm) to Cavill (185 cm).',
+      },
+      {
+        title: 'Hugh Jackman — Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/Hugh_Jackman',
+        description: '"At 6 ft 2 in (1.88 m), Jackman stands 11 in (28 cm) taller than Wolverine, who is said in the original comic book to be 5 ft 3 in (1.60 m)" — and the filmmakers\' workarounds: unusual angles, waist-up framing, platform soles for co-stars.',
+      },
+      {
+        title: 'How Tall Is Hugh Jackman: A Deadpool & Wolverine Joke, Explained — Looper',
+        url: 'https://www.looper.com/1639134/how-tall-is-hugh-jackman-deadpool-wolverine-joke-explained/',
+        description: 'The 2024 film\'s comics-accurate short Logan variant and the roughly one-foot gap between Jackman and the comic character.',
+      },
+      {
+        title: 'Deadpool & Wolverine BTS Photos Reveal Short Logan Wasn\'t Played By Hugh Jackman — SlashFilm',
+        url: 'https://www.slashfilm.com/1648211/hugh-jackman-deadpool-and-wolverine-short-logan-actor-luke-bennett/?utm_campaign=feed&utm_medium=Social-Distribution&utm_source=FB-BP-SlashFilm&ai',
+        description: 'Short Logan in Deadpool & Wolverine was played by 4\'11" professional bodybuilder Luke Bennett, with Jackman\'s face and voice added digitally.',
+      },
+      {
+        title: 'Marvel Finally Admits It Made A Big Mistake In Hugh Jackman\'s Wolverine Casting — ScreenRant',
+        url: 'http://screenrant.com/marvel-hugh-jackman-wolverine-casting-mistake-height/',
+        description: 'Comic Wolverine at 5\'3" versus Jackman at 6\'2"; Stan Lee wanted 5\'4" Bob Hoskins for the role.',
+      },
+      {
+        title: 'How Tall Is Spider-Man? — ComicFanClub',
+        url: 'https://comicfanclub.com/marvel/how-tall-is-spider-man/',
+        description: 'Spider-Man 5\'10" (178 cm) in Earth-616, consistent since Amazing Fantasy #15 (1962) per Marvel Legacy: The 1960s Handbook; Ultimate Peter Parker at 5\'5" (165 cm).',
+      },
+      {
+        title: 'Average Superhero and Villain Height — ComicCrusaders',
+        url: 'https://comiccrusaders.com/editorial/average-superhero-and-villain-height-humans-metahumans-robots-aliens-and-gods-comics-statistics/',
+        description: 'Across 214 characters the average superhero is 5\'10" (178 cm) and the average male superhero is 6\'1" (185 cm).',
+      },
+      {
+        title: 'Character Heights — Anime, Comics, Games & Movies — HeightComparison3D',
+        url: 'https://heightcomparison3d.com/characters',
+        description: 'Independent cross-check: Batman 188 cm, Superman 190.5 cm, Captain America 188 cm, Iron Man 185.4 cm, Wonder Woman 182.9 cm, Spider-Man 177.8 cm, Thanos 200.7 cm, Thor 198.1 cm.',
+      },
+    ],
+    relatedSlugs: ['tom-cruise-height-comparison', 'tall-woman-short-man-height-comparison', 'is-6-feet-rare-height-percentiles', 'what-does-6-feet-look-like', 'what-does-5ft10-look-like', 'dwayne-johnson-height-comparison', 'shortest-celebrities-height-comparison'],
+  },
 ];
 
