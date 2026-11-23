@@ -7829,5 +7829,235 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['tom-cruise-height-comparison', 'tall-woman-short-man-height-comparison', 'is-6-feet-rare-height-percentiles', 'what-does-6-feet-look-like', 'what-does-5ft10-look-like', 'dwayne-johnson-height-comparison', 'shortest-celebrities-height-comparison'],
   },
+  {
+    slug: 'zendaya-height-vs-tom-holland',
+    title: "Zendaya's Height (5'10\") vs Tom Holland (5'8\"): The Famous Height Difference, Visualised",
+    h1: 'Zendaya vs Tom Holland: The 5 cm Gap Everyone Keeps Photographing',
+    description:
+      "Zendaya is reported at 5'10\" (178 cm) and Tom Holland at 5'8\" (173 cm) — a 5 cm gap with the woman taller than the man. She stated the figure herself in WIRED's 2019 Autocomplete Interview; his comes from GQ's November 2021 profile. This article draws the pair to scale, explains why she looks far taller than 5 cm taller in photographs, puts 5'10\" against the average US woman, and retells the Spider-Man audition story that made the gap famous.",
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-11-23T09:00:00Z',
+    updatedDate: '2026-11-23T09:00:00Z',
+    readingTimeMinutes: 8,
+    quickAnswer: {
+      summary:
+        "Zendaya is reported at 5'10\" (178 cm) and Tom Holland at 5'8\" (173 cm), a gap of 5 cm — two inches — with Zendaya the taller of the two. The figures are reported, not measured: Zendaya stated 5'10\" herself in WIRED's Autocomplete Interview in June 2019, and Holland's 5'8\" comes from his GQ profile of November 2021. Photo-based estimates put both slightly lower (Zendaya around 174–178 cm, Holland around 171.5–173 cm), which would shrink the gap to about 2.5 cm. In heels, the photographed gap is far bigger: Zendaya's red-carpet heels regularly add 10–15 cm, so at 178 cm in 15 cm heels she photographs at roughly 193 cm against Holland's 173 cm — a gap of about 20 cm, four times the barefoot difference.",
+      keyTakeaway:
+        "The famous gap is real but small: 5 cm on the reported figures, possibly as little as 2.5 cm on photo-based estimates. Everything that makes it look dramatic in photographs — the heels, the camera angles, the expectation that the man should be taller — is presentation, not height. Both actors have said so themselves, and the Spider-Man films never cheated the kiss scene to hide it.",
+      dataPoints: [
+        { label: 'Zendaya (reported)', value: "5'10\" (178 cm) — her own words, WIRED 2019" },
+        { label: 'Tom Holland (reported)', value: "5'8\" (173 cm) — GQ profile, November 2021" },
+        { label: 'The barefoot gap', value: '5 cm (2 in) on reported figures; ~2.5 cm on photo estimates' },
+        { label: "Zendaya's honest range", value: '174–178 cm (photo estimates to her stated figure)' },
+        { label: 'Zendaya vs the average US woman', value: '178 cm vs ~162 cm — about 16 cm taller' },
+        { label: 'Zendaya in 15 cm heels', value: '~193 cm vs Holland 173 cm — a ~20 cm photographed gap' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'celebrity', id: 'zendaya' },
+      { category: 'human', id: 'male', customHeightCm: 173, label: 'Tom Holland (reported)' },
+      { category: 'human', id: 'female', customHeightCm: 162, label: 'Average US woman' },
+      { category: 'human', id: 'male', customHeightCm: 178, label: 'Spider-Man (canon)' },
+    ],
+    toolActionTitle: 'See the 5 cm gap on the chart',
+    toolActionDescription:
+      'The visualiser above is preloaded with Zendaya (178 cm, reported), Tom Holland (173 cm, reported), the average US woman (162 cm) and Spider-Man in canon (178 cm). Add your own height and see where you stand next to the most photographed couple in Hollywood.',
+    comparisonTable: {
+      caption: 'The pair on the reported figures, with the photo-based estimates and the averages for context. Neither celebrity figure is a verified barefoot measurement.',
+      headers: ['Person', 'Reported height', 'Photo-based estimate', 'Notes'],
+      rows: [
+        ['Zendaya', "5'10\" (178 cm)", '174–178 cm', 'Her own answer in WIRED, June 2019; stylist Law Roach also said five foot ten'],
+        ['Tom Holland', "5'8\" (173 cm)", '171.5–173 cm', "GQ profile, November 2021; Holland has discussed lifts and photo positioning"],
+        ['The gap', '5 cm (2 in)', '~2.5 cm (~1 in)', 'Holland himself, December 2021: "an inch or two at best"'],
+        ['Average US woman', "5'4\" (~162 cm)", '—', 'CDC/NHANES measured data; latest cycle 161.3 cm'],
+        ['Average US man', "5'9\" (175 cm)", '—', 'CDC/NHANES measured data'],
+        ['Spider-Man (canon)', "5'10\" (178 cm)", '—', 'Earth-616; exactly Zendaya\'s reported height, 5 cm above Holland'],
+        ['Zendaya in 15 cm heels', "~6'4\" (~193 cm)", '—', 'Heels-adjusted, not barefoot — the red-carpet figure, not the real one'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-numbers',
+        heading: "The Numbers: 178 cm vs 173 cm, and Why Both Carry an Asterisk",
+        subheading: 'Five centimetres on the reported figures — and the honest range is a little narrower than the headlines.',
+        paragraphs: [
+          'Here is the pair on the chart: Zendaya at 178 cm, Tom Holland at 173 cm, standing on a shared baseline at true scale. The gap is 5 cm — two inches — and it is the smallest gap in this series that still generates this much attention. Five centimetres is the width of two fingers. Stand the two figures next to each other and the difference is visible but modest: Zendaya\'s head sits a fraction higher, and that is the whole story at barefoot height. Everything else in this article is about why that modest difference became one of the most discussed height gaps in Hollywood.',
+          'Both numbers are reported, not measured, and the article says so plainly because the distinction matters. Zendaya\'s 178 cm has an unusually good source behind it: she answered the question herself, saying "5\'10" in WIRED\'s Autocomplete Interview in June 2019, and her stylist Law Roach had already described her as five foot ten in a 2017 Fashionista interview. The major profile databases repeat 178 cm. Holland\'s 173 cm comes from GQ\'s profile of November 2021, where the writer gives his height as 5 feet 8 inches — the same profile in which Holland talked candidly about standing closer to photographers on red carpets and wearing lifts in his shoes. Neither figure is a published barefoot measurement, and no celebrity height on this site is presented as one.',
+          'The honest range is therefore a little wider than the two headline numbers. Photo-based analysis by CelebHeights, which estimates heights by comparing photographs against people and objects of known height, puts Zendaya at about 5 feet 8.5 inches (174 cm) — a full 1.5 inches below her stated figure — and Holland at about 5 feet 7.5 inches (171.5 cm), half an inch below his reported figure. On those estimates the gap shrinks to roughly 2.5 cm, about an inch. Holland himself put it that way in December 2021, calling the difference "an inch or two at best". So quote the gap as 5 cm on the reported figures, with the caveat that the photo-based evidence would make it about half that. The outliers to ignore are the single weak listings — 5\'11" for Zendaya on one site, 5\'6" or 5\'7" for Holland on a few aggregators — which no second source supports.',
+        ],
+        image: {
+          src: '/assets/blog/zendaya-height-vs-tom-holland/couple.webp',
+          alt: 'Height comparison chart showing Zendaya at 178 cm next to Tom Holland at 173 cm — a gap of 5 cm',
+          caption: 'The headline visual: Zendaya 178 cm (reported) next to Tom Holland 173 cm (reported). Five centimetres — two inches — with the woman taller.',
+        },
+        callout: {
+          title: 'The figure to quote',
+          text: 'Zendaya: 5\'10" (178 cm), reported — her own words, WIRED June 2019. Tom Holland: 5\'8" (173 cm), reported — GQ, November 2021. Gap: 5 cm on reported figures, about 2.5 cm on photo-based estimates.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'why-she-looks-taller',
+        heading: 'Why She Looks Far Taller in Photographs: Heels, Angles and Expectation',
+        subheading: 'The red-carpet gap is often 20 cm, not 5 cm — and almost all of the extra 15 cm is footwear.',
+        paragraphs: [
+          'If the barefoot gap is only 5 cm, why does every red-carpet photograph seem to show Zendaya towering over Holland? The answer is mostly footwear. Zendaya\'s red-carpet heels regularly add 10–15 cm (4–6 inches), and she wears them without apology — she has been giving tall fans the same advice since her Disney years, telling them to wear heels and embrace their height. At 178 cm in 15 cm heels she photographs at roughly 193 cm against Holland\'s 173 cm: a gap of about 20 cm, four times the barefoot difference. The chart below shows exactly that — the heels-adjusted figure, labelled as such, because an unlabelled 193 cm Zendaya would be a misleading image.',
+          'Camera angles do the rest. Holland has been open about the tricks since the GQ profile: standing closer to the photographers than the people behind him on red carpets, and wearing lifts in his shoes — "I cannot do anything about my height," he said, and then did something about how it photographed. None of this is unusual in Hollywood; what is unusual is how candid both of them have been about it. Most celebrity couples manage the gap quietly. These two have talked about it on SiriusXM, on talk shows and in print, which is part of why the gap became a story rather than a footnote.',
+          'The third ingredient is expectation. The assumption that the man in a couple should be taller is so ingrained that a 5 cm reversal reads as a much bigger one — and a 20 cm photographed gap reads as a statement. That is why the pair keeps being photographed and written about: not because 5 cm is remarkable, but because the direction of it breaks a visual habit audiences barely notice until it is broken. The next section looks at the other comparison that puts Zendaya\'s height in its proper context — not against her partner, but against the average woman.',
+        ],
+        image: {
+          src: '/assets/blog/zendaya-height-vs-tom-holland/heels.webp',
+          alt: 'Height comparison chart showing Zendaya in 15 cm heels at about 193 cm next to Tom Holland at 173 cm — a photographed gap of about 20 cm',
+          caption: 'The red-carpet illusion, labelled: Zendaya in 15 cm heels (~193 cm) next to Tom Holland (173 cm). The ~20 cm photographed gap is four times the 5 cm barefoot gap — and almost all of the extra is footwear.',
+        },
+        callout: {
+          title: 'Heels, quantified',
+          text: 'Zendaya at 178 cm in 15 cm heels photographs at roughly 193 cm — about 20 cm above Holland at 173 cm. Subtract the heels and the gap is 5 cm.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'how-tall-is-5ft10-for-a-woman',
+        heading: "How Tall Is 5'10\" for a Woman? About 16 cm Above Average",
+        subheading: 'The gap that matters most is not Zendaya vs Holland — it is Zendaya vs the average woman.',
+        paragraphs: [
+          'Put Zendaya next to the average American woman and the picture changes completely. The average US woman, measured by the CDC\'s National Health and Nutrition Examination Survey, stands about 5 feet 4 inches — roughly 162 cm, with the latest 2021–23 cycle putting it at 161.3 cm. Zendaya at 178 cm is about 16 cm taller than that average: more than half a head. On the chart, the average woman\'s head reaches roughly Zendaya\'s chin. That is a far bigger visual difference than the 5 cm between Zendaya and Holland, and it is the comparison that explains why 5\'10" reads as strikingly tall on a woman in a way 5\'10" never would on a man.',
+          'It also explains why the modelling world noticed her height before Hollywood did. Zendaya began as a model and dancer, industries where 178 cm for a woman is an asset rather than a casting problem, and her height was part of her professional profile from the start. For a woman, 5\'10" sits well above the 90th percentile of US female height; for a man, the same 178 cm is only a few centimetres above average. The same number means something different depending on who carries it, which is why "how tall is Zendaya" keeps being asked: people are not really asking for a number, they are asking how unusual 5\'10" is for a woman. The answer is: unusual enough to notice, common enough to be unremarkable in fashion.',
+          'The couple context completes the picture. A woman 16 cm above the female average paired with a man 2 cm below the male average (Holland at 173 cm against the US male average of 175 cm) produces a 5 cm reversal that feels larger than it is, because both partners sit on the unexpected side of their own averages. That pattern — the tall woman, the shorter man — is the subject of its own article on this site, and Zendaya and Holland are its defining example. The pattern is uncommon but far from rare, and the data behind it is worth a look if the 5 cm gap still surprises you.',
+        ],
+        image: {
+          src: '/assets/blog/zendaya-height-vs-tom-holland/vs-average-woman.webp',
+          alt: 'Height comparison chart showing Zendaya at 178 cm next to the average US woman at 162 cm — a gap of 16 cm',
+          caption: 'The comparison that puts 5\'10" in context: Zendaya 178 cm next to the average US woman, about 162 cm. Sixteen centimetres — more than half a head.',
+        },
+        callout: {
+          title: 'The bigger gap',
+          text: 'Zendaya is about 16 cm above the average US woman (162 cm). That gap is more than three times the 5 cm between her and Holland.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'the-audition-and-the-kiss',
+        heading: 'The Audition, the Kiss Scene and the "Stupid Assumption"',
+        subheading: 'Zendaya worried she was too tall for the role. Then both of them said the expectation out loud.',
+        paragraphs: [
+          'The height difference became a public story because Zendaya and Holland made it one — starting at the audition. Zendaya has said she worried she was too tall to play MJ in Spider-Man: Homecoming, telling interviewers she thought her height might cost her the role opposite Holland. It is a revealing worry: an actress at 178 cm, already established, wondering whether being taller than her leading man would read as wrong on screen. The filmmakers evidently disagreed, and the casting broke the very stereotype she was worried about — a taller leading lady opposite a shorter leading man, in the biggest franchise in the world.',
+          'The story peaked in December 2021, while the pair were promoting Spider-Man: No Way Home on SiriusXM\'s Town Hall. Holland called the expectation that the man must be taller "a stupid assumption", and Zendaya answered with the line that has outlived the whole press tour: "My mom is taller than my dad, my mom\'s taller than everyone… this is normal too." Holland added that every girl who screen-tested for the roles had been taller than him, and that the kiss scene in Spider-Man: Far From Home was not cheated to make him look taller — no platform, no camera trick, no reframing. The scene plays as shot, with the 5 cm gap visible to anyone looking for it.',
+          'That candour is why this article can be as direct as it is. Most height gaps between co-stars are managed by publicists and never discussed; this one was discussed by the two people in it, on the record, more than once. The SiriusXM exchange also settled the question of whether the gap bothered either of them: it did not, and the only people it seemed to bother were commenters. Holland\'s line about the "stupid assumption" is now the standard answer to the whole topic, and it is a better one than any chart — though the chart helps.',
+        ],
+        callout: {
+          title: '"This is normal too"',
+          text: 'Zendaya, SiriusXM Town Hall, December 2021: "My mom is taller than my dad, my mom\'s taller than everyone… this is normal too." Holland called the taller-man expectation "a stupid assumption".',
+          type: 'info',
+        },
+      },
+      {
+        id: 'spider-man-coincidence',
+        heading: 'The Spider-Man Coincidence: Her Height Is Exactly His',
+        subheading: 'Spider-Man is 178 cm in canon — precisely Zendaya\'s reported height, and 5 cm above the actor who plays him.',
+        paragraphs: [
+          'There is one more coincidence in this story, and it is the neatest of the lot. Spider-Man — the character Tom Holland plays — is 5 feet 10 inches (178 cm) in Earth-616, the main Marvel continuity, a figure consistent since his debut in Amazing Fantasy #15 in 1962. That is exactly Zendaya\'s reported height, and 5 cm above Holland\'s reported 173 cm. The couple gap and the actor-versus-character gap are the same 5 cm, measured two different ways: Zendaya is 5 cm taller than Holland, and Spider-Man is 5 cm taller than the actor who plays him.',
+          'The coincidence is worth a line because it ties the two halves of this site together. The superhero article in this series showed that almost every actor is shorter than the character they play — Thor is 198 cm in the comics and Chris Hemsworth is 190 cm; Iron Man is 185 cm out of armour and Robert Downey Jr. is 174 cm — and Holland\'s 5 cm shortfall against Spider-Man is the smallest of those gaps. Spider-Man was designed in 1962 as the hero a reader could be, at an ordinary height, and the casting of a 173 cm actor against a 178 cm character preserves that ordinariness almost exactly. Zendaya, standing at the character\'s height, is the accidental proof of it.',
+          'None of this changes the numbers. But it is the reason the Zendaya–Holland gap keeps resurfacing in superhero height articles as well as celebrity ones: the same 5 cm, in two different stories, both true at once. If you want the full canon ladder, from Wolverine at 160 cm to Thor at 198 cm, it is in the companion article — and the gap between Spider-Man and his actor is the smallest step on it.',
+        ],
+        callout: {
+          title: 'The same 5 cm, twice',
+          text: 'Zendaya (178 cm) is 5 cm taller than Holland (173 cm). Spider-Man (178 cm, canon) is also 5 cm taller than Holland. One gap, two stories.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'how-to-quote',
+        heading: 'How to Quote These Numbers Honestly',
+        subheading: 'Reported, not measured — and the range is part of the answer, not a footnote to hide.',
+        paragraphs: [
+          'Every celebrity height on this site carries the same caveat, and this pair is the clearest example of why it matters. Zendaya\'s 178 cm is her own stated figure, repeated by the profile databases; Holland\'s 173 cm is a magazine profile\'s description, repeated the same way. Neither was published with a measurement procedure, and the photo-based estimates for both run a little lower. A page that prints "Zendaya: 5\'10"" with no qualification is overstating its evidence by exactly the amount this article has spent five sections correcting. The honest form is: "Zendaya is reported at 5\'10\" (178 cm), a figure she stated herself in 2019, with photo-based estimates as low as 5\'8.5\" (174 cm)." That sentence is longer, and it is the true one.',
+          'The same honesty applies to the gap. Five centimetres is the gap on the reported figures; about 2.5 cm is the gap on the photo-based estimates; Holland himself said "an inch or two at best". Any of those is defensible as long as the basis is stated. What is not defensible is the 20 cm photographed gap presented as a barefoot difference, which is why the heels chart in this article is labelled as heels-adjusted and why the red-carpet photographs that started this whole conversation should be read with the footwear in mind.',
+          'If you take one number from this article, take the reported pair with its range: Zendaya 174–178 cm, Holland 171.5–173 cm, gap 5 cm on the figures both of them have put on the record. And if you want to see the gap rather than read about it, the chart at the top of the page draws both figures to scale — with the average US woman alongside, so that 5\'10" can be judged against the population it actually stands out from.',
+        ],
+        callout: {
+          title: 'The honest summary',
+          text: 'Zendaya: reported 5\'10" (178 cm), range 174–178 cm. Holland: reported 5\'8" (173 cm), range 171.5–173 cm. Gap: 5 cm reported, ~2.5 cm on photo estimates. Heels add 10–15 cm to any photographed gap.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'How tall is Zendaya?',
+        answer:
+          "Zendaya is reported at 5 feet 10 inches (178 cm) — a figure she stated herself, answering \"5'10\" in WIRED's Autocomplete Interview in June 2019, and which her stylist Law Roach also gave in 2017. Photo-based estimates put her slightly lower, at about 5 feet 8.5 inches (174 cm), so the honest range is 174–178 cm with 178 cm the reported figure. It is not a verified barefoot measurement.",
+      },
+      {
+        question: 'How tall is Tom Holland?',
+        answer:
+          "Tom Holland is reported at 5 feet 8 inches (173 cm), from GQ's profile of November 2021. Photo-based estimates put him at about 5 feet 7.5 inches (171.5 cm). He has spoken openly about his height, including wearing lifts and standing closer to photographers on red carpets, and has said the gap to Zendaya is \"an inch or two at best\".",
+      },
+      {
+        question: 'Is Zendaya taller than Tom Holland?',
+        answer:
+          "Yes — by 5 cm (2 inches) on the reported figures: Zendaya at 178 cm against Holland at 173 cm. On photo-based estimates the gap is smaller, about 2.5 cm (roughly an inch), but Zendaya is taller on every version of the numbers. Both have addressed it publicly, with Holland calling the expectation that the man must be taller \"a stupid assumption\" in December 2021.",
+      },
+      {
+        question: 'How tall is Zendaya in heels?',
+        answer:
+          "Zendaya's red-carpet heels regularly add 10–15 cm (4–6 inches). At 178 cm in 15 cm heels she photographs at roughly 193 cm (about 6'4\") next to Holland's 173 cm — a photographed gap of about 20 cm, four times the 5 cm barefoot gap. That is why photographs routinely make the difference look far bigger than it is.",
+      },
+      {
+        question: 'How tall is Zendaya without heels?',
+        answer:
+          "Without heels, Zendaya is reported at 5 feet 10 inches (178 cm), the figure she gave herself in 2019. Photo-based estimates suggest she may be closer to 5 feet 8.5 inches (174 cm) barefoot, so the honest barefoot range is 174–178 cm. Either way she is about 16 cm taller than the average US woman (about 162 cm).",
+      },
+      {
+        question: 'Did Zendaya worry about being too tall for Spider-Man?',
+        answer:
+          "Yes. Zendaya has said she worried she was too tall to play MJ opposite Tom Holland at the Spider-Man: Homecoming audition, fearing her height might cost her the role. She was cast anyway, and the pairing — a taller leading lady opposite a shorter leading man — broke the usual Hollywood pattern. The kiss scene in Spider-Man: Far From Home was not cheated to hide the gap.",
+      },
+    ],
+    sources: [
+      {
+        title: 'Zendaya Height in Feet and cm — Height and Tall',
+        url: 'https://www.heightandtall.com/zendaya-height.html',
+        description: 'Zendaya reported at 5\'10" (178 cm) in her own words — WIRED Autocomplete Interview, June 25, 2019 — with stylist Law Roach also calling her five foot ten (Fashionista, 2017); the 5\'10" figure and the 2-inch gap to Holland.',
+      },
+      {
+        title: 'Zendaya Height vs Tom Holland Height — ComparingHeights',
+        url: 'https://comparingheights.org/articles/zendaya-height-vs-tom-holland-height/',
+        description: 'Direct comparison on the exact pair: Zendaya reported 5\'10" (178 cm), Holland reported 5\'8" (173 cm), 5 cm gap; photo-based estimates (Zendaya ~174 cm, Holland ~171.5 cm), the heels section, and the "reported, not measured" caveat.',
+      },
+      {
+        title: 'Tom Holland Height — Height and Tall',
+        url: 'https://www.heightandtall.com/tom-holland-height.html',
+        description: 'Holland reported at about 5\'8" (173 cm) from GQ\'s November 2021 profile, with the lifts and photo-positioning discussion from the same profile.',
+      },
+      {
+        title: 'Tom Holland Facts — Britannica',
+        url: 'https://www.britannica.com/facts/tom-holland',
+        description: 'Independent confirmation: "Tom Holland stands 5 feet 8 inches (1.73 metres) tall."',
+      },
+      {
+        title: 'FastStats — Body Measurements — CDC',
+        url: 'https://www.cdc.gov/nchs/fastats/body-measurements.htm',
+        description: 'CDC/NCHS measured averages for US adults 20 and older, August 2021–August 2023: women 63.5 in (161.3 cm), men 68.9 in — the basis for the ~162 cm average US woman and 175 cm average US man used here.',
+      },
+      {
+        title: 'Zendaya Recalls Her Concerns About Her And Tom Holland\'s Height Difference During Spider-Man: Homecoming Auditions — CinemaBlend',
+        url: 'https://www.cinemablend.com/superheroes/spider-man/zendaya-recalls-her-concerns-about-her-and-tom-hollands-height-difference-during-spider-man-homecoming-auditions',
+        description: 'Zendaya worried she was too tall for the MJ role at the Homecoming audition — the audition story, via Entertainment Weekly, December 2021.',
+      },
+      {
+        title: 'Zendaya and Tom Holland Discuss Audiences\' Reactions to Height Difference — Upworthy',
+        url: 'https://www.upworthy.com/zendaya-tom-holland-height-difference/',
+        description: 'SiriusXM Town Hall, December 10, 2021: Holland\'s "stupid assumption" line, Zendaya\'s "this is normal too", and the un-cheated Far From Home kiss scene.',
+      },
+      {
+        title: 'How Tall Is Zendaya Compared To Tom Holland? — Heightline',
+        url: 'https://heightline.com/zendayas-height-body-measurements/',
+        description: 'Second source for the 5\'10" vs 5\'8" pair and the two-inch gap, with the Spider-Man film context (Homecoming 2017, Far From Home 2019, No Way Home 2021).',
+      },
+    ],
+    relatedSlugs: ['tom-cruise-height-comparison', 'tall-woman-short-man-height-comparison', 'superhero-heights-compared', 'what-does-5ft10-look-like', 'is-6-feet-rare-height-percentiles', 'shortest-celebrities-height-comparison', 'dwayne-johnson-height-comparison'],
+  },
 ];
 
