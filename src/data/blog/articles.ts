@@ -8059,5 +8059,222 @@ export const BLOG_ARTICLES: BlogArticle[] = [
     ],
     relatedSlugs: ['tom-cruise-height-comparison', 'tall-woman-short-man-height-comparison', 'superhero-heights-compared', 'what-does-5ft10-look-like', 'is-6-feet-rare-height-percentiles', 'shortest-celebrities-height-comparison', 'dwayne-johnson-height-comparison'],
   },
+  {
+    slug: 'brad-pitt-leonardo-dicaprio-height-comparison',
+    title: "Brad Pitt (5'11\") & Leonardo DiCaprio (6'0\") Heights Compared: Co-Stars, Visualised",
+    h1: 'Brad Pitt vs Leonardo DiCaprio: The 3 cm Gap That Barely Shows',
+    description:
+      "Brad Pitt is listed at 5'11\" (180 cm) and Leonardo DiCaprio at 6'0\" (183 cm) — a gap of just 3 cm, about an inch, between the two Once Upon a Time in Hollywood co-stars. Both figures are listed, not measured: photo-based estimates put Pitt at 179–180 cm and DiCaprio at 181–183 cm, which would shrink the gap to about 2 cm. This article draws the pair to scale, explains why they look the same height in photographs, puts both against the average US man, and places them on the Hollywood leading-men ladder.",
+    category: 'celebrities',
+    author: SITE_AUTHOR,
+    publishedDate: '2026-11-26T09:00:00Z',
+    updatedDate: '2026-11-26T09:00:00Z',
+    readingTimeMinutes: 8,
+    quickAnswer: {
+      summary:
+        "Brad Pitt is listed at 5 feet 11 inches (180 cm) and Leonardo DiCaprio at 6 feet 0 inches (183 cm), a gap of 3 cm — just over an inch — with DiCaprio the taller of the two. Neither figure is a verified barefoot measurement: the profile databases and agency listings give 180 cm and 183 cm, while photo-based analysis by CelebHeights puts Pitt at about 5'10.5\" (179 cm) and DiCaprio at about 5'11.25\" (181 cm), which would make the real gap closer to 2 cm. In photographs the two men look almost identical in height — footwear, posture and camera angles close a gap that is already tiny. Both sit in the normal leading-man band: Pitt is 5 cm above the average US man (175 cm) and DiCaprio 8 cm above it.",
+      keyTakeaway:
+        "The honest answer is a 3 cm gap on the listed figures and about 2 cm on the photo-based estimates — the smallest meaningful gap between two A-list leading men. Anyone telling you the difference is obvious in photographs is describing the shoes, not the men. Quote it as Pitt 179–180 cm and DiCaprio 181–183 cm, with 180 cm and 183 cm the listed figures.",
+      dataPoints: [
+        { label: 'Brad Pitt (listed)', value: "5'11\" (180 cm) — IMDb and agency listings" },
+        { label: 'Leonardo DiCaprio (listed)', value: "6'0\" (183 cm) — IMDb and press-kit listings" },
+        { label: 'The listed gap', value: '3 cm (~1.2 in) — DiCaprio taller' },
+        { label: 'Photo-based estimates', value: 'Pitt ~179 cm, DiCaprio ~181 cm — a ~2 cm gap' },
+        { label: 'Pitt vs the average US man', value: '180 cm vs 175 cm — 5 cm above average' },
+        { label: 'DiCaprio vs the average US man', value: '183 cm vs 175 cm — 8 cm above average' },
+      ],
+    },
+    featuredEntities: [
+      { category: 'celebrity', id: 'brad-pitt' },
+      { category: 'celebrity', id: 'leonardo-dicaprio' },
+      { category: 'human', id: 'male', customHeightCm: 175, label: 'Average US man' },
+      { category: 'celebrity', id: 'tom-cruise' },
+      { category: 'celebrity', id: 'dwayne-johnson' },
+    ],
+    toolActionTitle: 'See the 3 cm gap on the chart',
+    toolActionDescription:
+      'The visualiser above is preloaded with Brad Pitt (180 cm, listed), Leonardo DiCaprio (183 cm, listed), the average US man (175 cm), Tom Cruise (170 cm) and Dwayne Johnson (196 cm). Add your own height and see where you stand next to the two Once Upon a Time in Hollywood co-stars.',
+    comparisonTable: {
+      caption: 'The pair on the listed figures, with the photo-based estimates and the leading-man ladder for context. Neither celebrity figure is a verified barefoot measurement.',
+      headers: ['Person', 'Listed height', 'Photo-based estimate', 'Notes'],
+      rows: [
+        ['Brad Pitt', "5'11\" (180 cm)", '179–180 cm', 'IMDb and agency listings; CelebHeights consensus ~5\'10.5" (179 cm) at peak'],
+        ['Leonardo DiCaprio', "6'0\" (183 cm)", '181–183 cm', 'IMDb and press kits; CelebHeights pegs him at ~5\'11.25" (181 cm); noted sloucher'],
+        ['The gap', '3 cm (~1.2 in)', '~2 cm (~0.8 in)', 'On listed figures DiCaprio is 3 cm taller; on photo estimates the gap shrinks to about 2 cm'],
+        ['Average US man', "5'9\" (175 cm)", '—', 'CDC/NHANES measured data; Pitt is 5 cm above it, DiCaprio 8 cm above it'],
+        ['Tom Cruise', "5'7\" (170 cm)", '168–170 cm', 'Pitt is 10 cm taller, DiCaprio 13 cm taller; co-starred with Pitt in Interview with the Vampire (1994)'],
+        ['George Clooney', "5'11\" (180 cm)", '—', 'Listed at the same height as Pitt, 3 cm below DiCaprio'],
+        ['Matt Damon', "5'10\" (178 cm)", '—', 'Listed 2 cm below Pitt and 5 cm below DiCaprio'],
+        ['Dwayne Johnson', "6'5\" (196 cm)", '—', '16 cm above Pitt and 13 cm above DiCaprio — the top of the leading-man ladder'],
+      ],
+    },
+    contentSections: [
+      {
+        id: 'the-numbers',
+        heading: "The Numbers: 180 cm vs 183 cm, and Why Both Carry an Asterisk",
+        subheading: 'Three centimetres on the listed figures — and the photo-based evidence would make it two.',
+        paragraphs: [
+          'Here is the pair on the chart: Brad Pitt at 180 cm, Leonardo DiCaprio at 183 cm, standing on a shared baseline at true scale. The gap is 3 cm — just over an inch — and it is almost invisible. DiCaprio\'s head sits a fraction higher, and that is the whole story at barefoot height. Of all the celebrity pairs in this series, this is the one where the chart itself is the argument: put the two figures side by side and the difference is so small that the natural reaction is to check whether the chart loaded correctly. It did. Three centimetres is the width of a thumb, and it is the entire height difference between two of the biggest movie stars alive.',
+          'Both numbers are listed, not measured, and the article says so plainly because the distinction is the whole point. Pitt\'s 180 cm comes from the standard agency bios and the big databases — IMDb lists him at 5 feet 11 inches — and DiCaprio\'s 183 cm comes from the same kind of source, with IMDb listing him at a flat 6 feet (1.83 m). Neither man has published a barefoot measurement, and no celebrity height on this site is presented as one. The honest range is therefore a little wider than the two headline numbers. CelebHeights, which estimates heights by comparing photographs against people and objects of known height, puts Pitt at about 5 feet 10.5 inches (179 cm) at his peak and DiCaprio at about 5 feet 11.25 inches (181 cm). On those estimates the gap shrinks to roughly 2 cm — under an inch.',
+          'The ranges matter because they change what the gap means. On the listed figures DiCaprio clears 6 feet exactly and Pitt falls an inch short of it, which is why the pair is so often framed as "the 6-footer and the almost-6-footer". On the photo-based estimates neither man quite reaches his listed figure, and the framing collapses: two men around 179–181 cm, separated by less than an inch, both in the same band. The chart below uses the listed figures — 180 cm and 183 cm — because those are the numbers people search for, but the caption and the table carry the ranges, and the rest of this article is built on them. The outliers to ignore are the single weak listings: a few aggregators have put DiCaprio at 5\'9" or 5\'10" over the years, and one comparison site lists both men at 6\'0" — neither claim survives a second source.',
+        ],
+        image: {
+          src: '/assets/blog/brad-pitt-leonardo-dicaprio-height-comparison/pair.webp',
+          alt: 'Height comparison chart showing Brad Pitt at 180 cm next to Leonardo DiCaprio at 183 cm — a gap of 3 cm',
+          caption: 'The headline visual: Brad Pitt 180 cm (listed) next to Leonardo DiCaprio 183 cm (listed). Three centimetres — just over an inch — and the gap is barely visible. That is the point.',
+        },
+        callout: {
+          title: 'The figures to quote',
+          text: 'Brad Pitt: 5\'11" (180 cm), listed — range 179–180 cm. Leonardo DiCaprio: 6\'0" (183 cm), listed — range 181–183 cm. Gap: 3 cm on listed figures, about 2 cm on photo-based estimates.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'why-they-look-the-same-height',
+        heading: 'Why They Look the Same Height in Photographs',
+        subheading: 'Footwear, posture and camera angles close a gap that is already tiny — and Once Upon a Time in Hollywood is the proof.',
+        paragraphs: [
+          'If the gap is only 3 cm, why does every photograph of the two men together seem to show no gap at all? The first answer is footwear. Pitt loves a chunky boot — on red carpets and in street photographs he is rarely seen in thin-soled loafers — and a standard pair of leather boots easily adds 2.5–4 cm (an inch to an inch and a half). In boots, Pitt photographs at about 183 cm: exactly DiCaprio\'s listed height. DiCaprio, by contrast, does not seem to be a serial offender on lifts and usually wears standard dress shoes or sneakers, so his photographed height stays close to his barefoot one. Put Pitt in boots next to DiCaprio in dress shoes and the 3 cm gap disappears entirely — not because either man is misrepresenting his height, but because ordinary footwear is worth more than the gap itself.',
+          'The second answer is posture. DiCaprio is a noted sloucher, and a slouch costs a centimetre or two in candid photographs — enough, on its own, to erase most of the gap to Pitt. Several sources that track celebrity heights note that Leo "consistently looks about an inch taller" than Pitt in Once Upon a Time in Hollywood promotional material, and others call the two "nearly identical" or "almost identical in height" — but those are the staged photographs, where both men are standing straight in good shoes. In candid shots, with Leo slouching and Pitt in boots, the order can flip. A 3 cm gap is smaller than the noise in any single photograph, which is why the pair generates so much argument online: different photographs genuinely show different answers.',
+          'The third answer is the film itself. Once Upon a Time in Hollywood (2019) was the first film the two men made together — DiCaprio as the fading television star Rick Dalton, Pitt as his stunt double and driver Cliff Booth — and it is the natural visual anchor for the comparison, because it is the reason the two are photographed side by side so often. Pitt won the Academy Award for Best Supporting Actor for the role, and the film\'s publicity tour put the pair on red carpets together for months. The camera angles in the film were, as one analysis puts it, "specifically designed to make Cliff Booth look like a physical force of nature" — Pitt\'s character is meant to read as the tougher, more physical of the two, and the framing helps. None of that changes the numbers. But it explains why the most-seen images of the pair together are the least reliable evidence about who is taller: they were composed to tell a story about the characters, not to measure the actors.',
+        ],
+        callout: {
+          title: 'The gap vs the noise',
+          text: 'Pitt\'s boots add 2.5–4 cm; DiCaprio\'s slouch costs 1–2 cm. Either effect alone is bigger than the 3 cm gap — which is why photographs of the pair genuinely disagree with each other.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'vs-average-man',
+        heading: "Both vs the Average Man: 5 cm and 8 cm Above 175 cm",
+        subheading: 'Neither man is a giant by Hollywood standards — both sit in the normal leading-man band.',
+        paragraphs: [
+          'Put the pair next to the average American man and the picture sharpens. The average US man, measured by the CDC\'s National Health and Nutrition Examination Survey, stands about 5 feet 9 inches — roughly 175 cm. Pitt at 180 cm is 5 cm above that average; DiCaprio at 183 cm is 8 cm above it. On the chart, the average man\'s head reaches roughly Pitt\'s nose and DiCaprio\'s chin. Both men are taller than most of the men they will ever stand next to — DiCaprio at 6 feet sits around the 85th percentile of US male height — but neither is in the territory where height becomes a talking point on its own. For comparison, Dwayne Johnson at 196 cm is 21 cm above the average man, a gap more than twice DiCaprio\'s.',
+          'That ordinariness is worth stating because the pair\'s screen presence suggests something else. Both men have played larger-than-life figures — Pitt as the mythic Achilles in Troy and the outlaw Tyler Durden in Fight Club, DiCaprio as Howard Hughes in The Aviator (Hughes was a genuine 6\'4", a full 10 cm taller than DiCaprio) and the frontiersman Hugh Glass in The Revenant — and both have the kind of camera presence that reads as tall. The chart corrects that impression without diminishing it: 180 cm and 183 cm are solidly above-average heights, the kind that cast well opposite almost any leading lady and never need a box to stand on, but they are not the heights that make a casting director reach for the phone. The leading-man band, roughly 178–185 cm, is where both men sit, and it is the most crowded band in Hollywood.',
+          'The comparison also answers the question people actually type into search: "is Brad Pitt taller than the average man?" Yes — by 5 cm, about two inches. And "is Leonardo DiCaprio tall?" Yes, by the only standard that matters: at 6 feet he is taller than roughly five out of six American men, and taller than the large majority of the actors he shares a screen with. What neither man is, is tall in the way that defines him. Pitt\'s and DiCaprio\'s careers were built on screen presence, not stature, and the numbers confirm it: above average, below remarkable, and almost exactly the same as each other.',
+        ],
+        image: {
+          src: '/assets/blog/brad-pitt-leonardo-dicaprio-height-comparison/vs-average-man.webp',
+          alt: 'Height comparison chart showing Brad Pitt at 180 cm and Leonardo DiCaprio at 183 cm next to the average US man at 175 cm',
+          caption: 'Against the population: Pitt 180 cm and DiCaprio 183 cm next to the average US man, 175 cm. Pitt is 5 cm above average, DiCaprio 8 cm — solidly above average, neither of them remarkable.',
+        },
+        callout: {
+          title: 'The 6-foot line',
+          text: 'DiCaprio sits exactly on the 6\'0" line that this site\'s percentile article treats as the threshold of "tall". Pitt, at 5\'11", sits one inch below it — close enough that his boots put him over it.',
+          type: 'info',
+        },
+      },
+      {
+        id: 'leading-men-ladder',
+        heading: 'The Leading-Men Ladder: Where the Pair Sits in Hollywood',
+        subheading: 'Cruise 10–13 cm below them, Clooney level with Pitt, Johnson 13–16 cm above — and the pair in the middle.',
+        paragraphs: [
+          'The pair\'s height makes most sense on a ladder of the leading men they actually share screens with. At the bottom of this ladder is Tom Cruise at 170 cm — 10 cm below Pitt and 13 cm below DiCaprio — who co-starred with Pitt in Interview with the Vampire in 1994 and was photographed with him again at the F1 premiere in June 2025, a pairing that shows the 10 cm gap clearly. George Clooney, listed at 180 cm, is level with Pitt and 3 cm below DiCaprio; Matt Damon, listed at 178 cm, sits 2 cm below Pitt and 5 cm below DiCaprio. At the top is Dwayne Johnson at 196 cm — 16 cm above Pitt and 13 cm above DiCaprio — the one man on the ladder whose height genuinely changes the shape of a scene. Pitt and DiCaprio sit in the middle of it, in the crowded 178–183 cm band where most Hollywood leading men cluster.',
+          'That middle position is the useful fact. A 10 cm gap to Cruise is visible in any photograph; a 13–16 cm gap to Johnson is unmissable. A 3 cm gap between the two men in the middle is not. The ladder also explains why the Pitt–DiCaprio comparison keeps being searched while the Pitt–Cruise comparison does not: Cruise is obviously shorter, Johnson is obviously taller, and the pair in the middle are the ones you have to measure. The chart below draws the ladder at true scale — Cruise, Pitt, DiCaprio and Johnson on one baseline — and the eye goes straight to the two ends, because the middle two are, deliberately, almost the same height.',
+          'There is a final point the ladder makes, about casting. The 178–185 cm band is the range in which a leading man can play opposite almost any leading lady without the height difference becoming a plot point, and in which two male co-stars can share a frame without one of them needing an apple box. Pitt and DiCaprio have both spent thirty years in that band, and Once Upon a Time in Hollywood is the film that finally put two of its occupants in the same frame for two and a half hours. The film works, in part, because the two men look like a matched pair — same era, same stature, same band. The chart shows the literal truth of that: on a shared baseline, at true scale, they are a matched pair, 3 cm apart.',
+        ],
+        image: {
+          src: '/assets/blog/brad-pitt-leonardo-dicaprio-height-comparison/ladder.webp',
+          alt: 'Height comparison chart showing Tom Cruise at 170 cm, Brad Pitt at 180 cm, Leonardo DiCaprio at 183 cm and Dwayne Johnson at 196 cm on a shared baseline',
+          caption: 'The leading-men ladder: Tom Cruise 170 cm, Brad Pitt 180 cm, Leonardo DiCaprio 183 cm, Dwayne Johnson 196 cm. The pair sits in the middle — the crowded 178–183 cm band where most Hollywood leading men cluster.',
+        },
+        callout: {
+          title: 'The ladder, in one line',
+          text: 'Cruise 170 cm, Damon 178 cm, Pitt and Clooney 180 cm, DiCaprio 183 cm, Johnson 196 cm. The Pitt–DiCaprio gap is the smallest step on it.',
+          type: 'stat',
+        },
+      },
+      {
+        id: 'how-to-quote',
+        heading: 'How to Quote These Numbers Honestly',
+        subheading: 'Listed, not measured — and three listings that should never be used as baselines.',
+        paragraphs: [
+          'Every celebrity height on this site carries the same caveat, and this pair is the clearest example of why it matters. Pitt\'s 180 cm and DiCaprio\'s 183 cm are the figures the profile databases print, repeated from agency bios and press kits. Neither was published with a measurement procedure, and the photo-based estimates for both run a little lower. A page that prints "DiCaprio: 6\'0"" with no qualification is overstating its evidence by exactly the amount this article has spent four sections correcting. The honest form is: "DiCaprio is listed at 6\'0\" (183 cm), with photo-based estimates as low as 5\'11.25\" (181 cm)." That sentence is longer, and it is the true one. The same applies to Pitt: listed 5\'11" (180 cm), photo-based estimates 179–180 cm.',
+          'Three listings deserve a specific warning, because they show up in search results and each of them is wrong in a different way. One comparison site lists both men at 6\'0" — wrong for Pitt, whose listed figure is 5\'11" and whose photo-based estimates run lower still. Another lists DiCaprio at 5\'10" (178 cm) against the 183 cm consensus — a figure no second source supports, and one that would make him shorter than Pitt. A third lists both men at 6\'1" (185 cm) — two inches above Pitt\'s listed figure and an inch above DiCaprio\'s. None of these is a defensible baseline, and none is cited in this article. The rule is the same as in every article in this series: a figure needs two independent sources, and a figure that contradicts the consensus needs a reason to believe it.',
+          'If you take one number from this article, take the listed pair with its range: Pitt 179–180 cm, DiCaprio 181–183 cm, gap 3 cm on the figures both men have on the record, about 2 cm on the photo-based estimates. And if you want to see the gap rather than read about it, the chart at the top of the page draws both figures to scale — with the average US man alongside, so that 180 cm and 183 cm can be judged against the population they actually stand out from, and with the leading-men ladder below, so that the smallest step in Hollywood can be seen for what it is: three centimetres, barely visible, and the whole story.',
+        ],
+        callout: {
+          title: 'The honest summary',
+          text: 'Brad Pitt: listed 5\'11" (180 cm), range 179–180 cm. Leonardo DiCaprio: listed 6\'0" (183 cm), range 181–183 cm. Gap: 3 cm listed, ~2 cm on photo estimates. Boots add 2.5–4 cm to any photographed gap; a slouch costs 1–2 cm.',
+          type: 'tip',
+        },
+      },
+    ],
+    faq: [
+      {
+        question: 'Who is taller, Brad Pitt or Leonardo DiCaprio?',
+        answer:
+          "Leonardo DiCaprio is taller, by 3 cm (just over an inch) on the listed figures: DiCaprio at 6'0\" (183 cm) against Pitt at 5'11\" (180 cm). On photo-based estimates the gap is smaller, about 2 cm (Pitt ~179 cm, DiCaprio ~181 cm), but DiCaprio is taller on every version of the numbers. In photographs they often look the same height, because Pitt's boots add 2.5–4 cm and DiCaprio is a noted sloucher.",
+      },
+      {
+        question: 'How tall is Brad Pitt?',
+        answer:
+          "Brad Pitt is listed at 5 feet 11 inches (180 cm) — the figure given by IMDb and the standard agency bios. Photo-based analysis by CelebHeights puts him slightly lower, at about 5 feet 10.5 inches (179 cm) at his peak, so the honest range is 179–180 cm. In shoes he photographs at about 6'0\" (183 cm), which is why some photographs make him look taller than his listed height.",
+      },
+      {
+        question: 'How tall is Leonardo DiCaprio?',
+        answer:
+          "Leonardo DiCaprio is listed at 6 feet 0 inches (183 cm) — the figure given by IMDb and his press kits. Photo-based analysis by CelebHeights puts him slightly lower, at about 5 feet 11.25 inches (181 cm), so the honest range is 181–183 cm. He is a noted sloucher, which makes him look shorter in candid photographs than his listed height suggests. Neither figure is a verified barefoot measurement.",
+      },
+      {
+        question: 'Is Brad Pitt 6 feet tall?',
+        answer:
+          "No — Brad Pitt is listed at 5 feet 11 inches (180 cm), one inch short of 6 feet. He photographs at about 6 feet in boots, because a standard pair of leather boots adds 2.5–4 cm, but his listed barefoot figure is 5'11\". One comparison site lists both Pitt and DiCaprio at 6'0\"; that is wrong for Pitt.",
+      },
+      {
+        question: 'Is Leonardo DiCaprio really 6 feet tall?',
+        answer:
+          "On the listed figures, yes: DiCaprio is listed at a flat 6 feet (183 cm) by IMDb and the profile databases, and he sits exactly on the 6'0\" line. Photo-based estimates put him a little lower, at about 5'11.25\" (181 cm), so he may be a fraction under 6 feet barefoot. Either way he is around the 85th percentile of US male height and 8 cm above the average US man (175 cm).",
+      },
+      {
+        question: 'How tall are Brad Pitt and Leonardo DiCaprio compared to the average man?',
+        answer:
+          "The average US man is about 5 feet 9 inches (175 cm), measured by the CDC. Brad Pitt at 180 cm is 5 cm above average; Leonardo DiCaprio at 183 cm is 8 cm above average. Both sit in the normal leading-man band of roughly 178–185 cm — taller than most men, but not in the territory where height becomes a talking point on its own.",
+      },
+    ],
+    sources: [
+      {
+        title: 'Leonardo DiCaprio — Biography — IMDb',
+        url: 'https://www.imdb.com/name/nm0000138/bio/',
+        description: 'DiCaprio listed at 6 feet (1.83 m) — the primary source for the 183 cm baseline, checked 2026-11-26.',
+      },
+      {
+        title: 'Brad Pitt Real Height: What Most People Get Wrong — Diffsense',
+        url: 'https://diffsense.com/brad-pitt-real-height-what-most-people-get-wrong-a89',
+        description: 'Pitt listed at 5\'11" (180 cm) by agency bios and databases; CelebHeights consensus ~5\'10.5" (179 cm); the chunky-boot effect (boots add an inch to an inch and a half) and the Once Upon a Time in Hollywood camera-angle discussion.',
+      },
+      {
+        title: 'How Tall Leo DiCaprio Actually Is: Why Fans Get It So Wrong — Diffsense',
+        url: 'https://diffsense.com/how-tall-leo-dicaprio-actually-is-why-fans-get-it-so-wrong-22bb',
+        description: 'DiCaprio listed at 6\'0" (183 cm); CelebHeights pegs him at 5\'11.25" (181 cm); the slouching note, the 85th-percentile figure, and the "almost identical in height" comparison with Pitt.',
+      },
+      {
+        title: "Brad Pitt's Height, Weight, Age, Net Worth & Bio — CompareHeight",
+        url: 'https://compareheight.net/brad-pitts-height-weight-age-networth-bio/',
+        description: 'Direct Pitt-vs-DiCaprio table (180 cm vs 183 cm, 3 cm gap) and the shoes figure — Pitt photographs at ~6\'0" (183 cm) in shoes.',
+      },
+      {
+        title: 'Leonardo DiCaprio Height — Centimeters.to',
+        url: 'https://centimeters.to/leonardo-dicaprio-height/',
+        description: 'Second source for DiCaprio at 183 cm, and for the 180 cm vs 183 cm comparison with Pitt.',
+      },
+      {
+        title: 'How Tall Is Brad Pitt Really? — Washington Independent',
+        url: 'https://washingtonindependent.org/how-tall-is-brad-pitt/',
+        description: 'Second source for Pitt officially listed at 5 feet 11 inches (180 cm), slightly above the average height for men.',
+      },
+      {
+        title: 'Tom Cruise Height vs Brad Pitt Height — ComparingHeights',
+        url: 'https://comparingheights.org/articles/tom-cruise-height-vs-brad-pitt-height/',
+        description: 'Pitt reported at 5\'11" (180 cm) against Cruise at 5\'7" (170 cm), a 10 cm gap; the 178–180 cm plausible range for Pitt and the "reported, not measured" caveat.',
+      },
+      {
+        title: 'How Tall Is Leonardo DiCaprio? — TopicRealm',
+        url: 'https://www.topicrealm.in/post/leonardo-dicaprio-height',
+        description: 'Second source for DiCaprio at 6 feet (183 cm), with the 6\'0" figure repeated across the profile.',
+      },
+    ],
+    relatedSlugs: ['tom-cruise-height-comparison', 'zendaya-height-vs-tom-holland', 'superhero-heights-compared', 'is-6-feet-rare-height-percentiles', 'what-does-5ft10-look-like', 'shortest-celebrities-height-comparison', 'dwayne-johnson-height-comparison'],
+  },
 ];
 
