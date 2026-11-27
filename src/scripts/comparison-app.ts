@@ -2297,10 +2297,24 @@ class HeightComparisonApp {
       .join('');
 
     const isManual = this.state.positionMode === 'manual';
+
+    // Pre-render every entity so the auto layout can size each slot to the
+    // figure's true rendered width. Wide figures (e.g. a horse) render far
+    // wider than a fixed flex slot and used to spill over their neighbours;
+    // the PNG export layout already sizes by true width — mirror it here.
+    const renderedItems = items.map((item) => ({
+      item,
+      ...renderEntitySvg(item, scale),
+    }));
+    const slotWidthFor = (w: number) => Math.max(110, Math.ceil(w));
+
     let stageWidthPx = Math.max(380, count * 160);
     if (isManual) {
       const maxItemX = Math.max(...items.map((it) => it.positionX ?? 50), 300);
       stageWidthPx = Math.max(stageWidthPx, maxItemX + 220);
+    } else {
+      const slotsTotal = renderedItems.reduce((acc, r) => acc + slotWidthFor(r.totalSvgWidthPx), 0);
+      stageWidthPx = Math.max(380, slotsTotal + 40 * count);
     }
     this.modelsContainer.style.minWidth = `${stageWidthPx}px`;
     this.modelsContainer.className = `relative z-10 w-full h-full pb-0 mb-[36px] ${
@@ -2331,9 +2345,8 @@ class HeightComparisonApp {
       });
     }
 
-    this.modelsContainer.innerHTML = items
-      .map((item, itemIndex) => {
-        const { svgMarkup, totalSvgHeightPx, totalSvgWidthPx, measurementHeightPx } = renderEntitySvg(item, scale);
+    this.modelsContainer.innerHTML = renderedItems
+      .map(({ item, svgMarkup, totalSvgHeightPx, totalSvgWidthPx, measurementHeightPx }, itemIndex) => {
         const formattedDisplay = formatHeight(item.heightCm, this.state.rulerUnit);
         const fullDetails = formatHeightFull(item.heightCm);
         const isSelected = this.state.selectedId === item.id;
@@ -2351,7 +2364,7 @@ class HeightComparisonApp {
 
         const positionStyle = isManual
           ? `position: absolute; left: ${item.positionX ?? 50}px; bottom: 0; width: 140px;`
-          : 'position: relative;';
+          : `position: relative; flex: 0 0 auto; width: ${slotWidthFor(totalSvgWidthPx)}px;`;
 
         // Label collision mitigation: if adjacent items are positioned closely, alternate vertical offset
         let labelOffset = 8;
@@ -2373,7 +2386,7 @@ class HeightComparisonApp {
         return `
           <div 
             class="human-wrapper group relative flex flex-col items-center justify-end ${
-              isManual ? '' : 'flex-1 max-w-[220px]'
+              isManual ? '' : 'shrink-0'
             } cursor-grab active:cursor-grabbing select-none touch-none transition-[outline,box-shadow] duration-150 ${
               isSelected ? 'ring-2 ring-brand-500 ring-offset-2 ring-offset-white rounded-xl shadow-soft-sm' : ''
             }"
