@@ -15,7 +15,7 @@ interface Props {
 }
 
 const { locale = 'en' } = Astro.props;
-// English-only content: locale copies canonicalize to English (see BlogArticlePage).
+// Page content is fully localized; locale copies still canonicalize to English (consolidation strategy).
 const canonicalUrl =
   locale === 'en'
     ? `${SITE.siteUrl}${getLocalizedPath('/height-comparison-visualizer/', locale)}`
@@ -36,37 +36,15 @@ const featuredComparisons = COMPARISONS.slice(2, 8).map((c) => ({
   })),
 }));
 
-const visualizerFaqs = [
-  {
-    question: 'How does the Height Comparison Visualizer work?',
-    answer: 'The visualizer renders mathematical 2D silhouettes of people, animals, celebrities, and objects side-by-side along a shared zero baseline (the floor). Each entity is dynamically scaled using a uniform pixel-per-centimeter ratio, ensuring all comparative dimensions and proportions are 100% accurate.',
-  },
-  {
-    question: 'Which entity types can I compare in the visualizer?',
-    answer: 'You can compare any combination: Human vs Human, Human vs Animal, Human vs Object, Animal vs Animal, Animal vs Object, Object vs Object, Celebrity vs Celebrity, and Anime/Fictional Character vs Human.',
-  },
-  {
-    question: 'Can I customize entity colors or add sketch notes on the visualizer?',
-    answer: 'Yes. You can assign custom colors and opacities to individual silhouettes to distinguish overlapping figures, and toggle the Sketch mode to draw measurement annotations, eye-level lines, or height callouts directly on the canvas.',
-  },
-  {
-    question: 'Why do silhouettes use flat 2D vector graphics instead of 3D models?',
-    answer: 'Flat 2D vector silhouettes provide an orthographic projection completely free of camera perspective distortion, focal length warping, and vanishing point skew. This makes them far more accurate for direct visual height comparison than perspective photos or 3D angles.',
-  },
-  {
-    question: 'How does the visualizer handle footwear and posture differences?',
-    answer: 'All human figures in the visualizer represent anatomical erect posture measured barefoot from soles to vertex. Shoes (adding 2–8 cm) or head tilts change appearance in photos, but our visualizer provides an objective scientific baseline.',
-  },
-  {
-    question: 'Can I export the visual comparison chart to share with others?',
-    answer: 'Yes. Click "Save Image" to export a crisp, high-resolution PNG chart with labeled heights, measurement ticks, and aligned baseline, perfect for social sharing, presentations, or styling reference.',
-  },
-];
+const visualizerFaqs = [1, 2, 3, 4, 5, 6].map((n) => ({
+  question: t(locale, `pg.viz.faq${n}q`),
+  answer: t(locale, `pg.viz.faq${n}a`),
+}));
 ---
 
 <Layout
-  title={`Height Comparison Visualizer | Interactive 2D Scale Canvas | ${SITE.name}`}
-  description="Visualize and compare heights side-by-side on an interactive scale. Compare humans, celebrities, animals, objects, and anime figures with accurate proportions."
+  title={`${t(locale, 'pg.viz.title')} | ${t(locale, 'pg.viz.titleSuffix')} | ${SITE.name}`}
+  description={t(locale, 'pg.viz.metaDesc')}
   canonicalUrl={canonicalUrl}
   locale={locale}
 >
@@ -75,9 +53,9 @@ const visualizerFaqs = [
       <Breadcrumbs
         locale={locale}
         items={[
-          { name: 'Home', url: '/' },
-          { name: 'Height Comparison', url: '/height-comparison/' },
-          { name: 'Height Comparison Visualizer', url: '/height-comparison-visualizer/' },
+          { name: t(locale, 'nav.home'), url: '/' },
+          { name: t(locale, 'nav.compare'), url: '/height-comparison/' },
+          { name: t(locale, 'pg.viz.title'), url: '/height-comparison-visualizer/' },
         ]}
       />
     </div>
@@ -86,13 +64,13 @@ const visualizerFaqs = [
     <header class="text-center max-w-4xl mx-auto mb-6 sm:mb-8 px-2">
       <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-semibold bg-purple-50 dark:bg-purple-950/60 text-purple-700 dark:text-purple-300 border border-purple-200/80 dark:border-purple-800 mb-3 shadow-soft-sm">
         <span class="w-2 h-2 rounded-full bg-purple-600 dark:bg-purple-400 animate-pulse"></span>
-        <span>Interactive 2D Scale Visualizer</span>
+        <span>{t(locale, 'pg.viz.badge')}</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
-        Height Comparison Visualizer
+        {t(locale, 'pg.viz.title')}
       </h1>
       <p class="text-sm sm:text-base md:text-lg text-slate-600 dark:text-slate-300 mt-3 leading-relaxed max-w-3xl mx-auto">
-        Visualize proportional statures side-by-side on a true floor baseline. Add humans, celebrities, animals, vehicles, and objects to create an instant visual height comparison.
+        {t(locale, 'pg.viz.intro')}
       </p>
     </header>
 
@@ -104,52 +82,52 @@ const visualizerFaqs = [
     <!-- Modality Grid Guide -->
     <section class="max-w-4xl mx-auto mb-16 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-        Supported Visual Comparison Types
+        {t(locale, 'pg.viz.typesTitle')}
       </h2>
       <p class="text-sm text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
-        The HowHeight comparison engine supports cross-category comparisons across any combination of entities. Explore how different subjects interact visually on the canvas:
+        {t(locale, 'pg.viz.typesIntro')}
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Human vs Human</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">{t(locale, 'pg.viz.type1t')}</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400">
-            Compare family members, couples, friends, or athletes. Evaluate head-level, shoulder-level, and eye-level alignment with cm and ft/in tick marks.
+            {t(locale, 'pg.viz.type1d')}
           </p>
         </div>
 
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Human vs Animal</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">{t(locale, 'pg.viz.type2t')}</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400">
-            Compare standing humans against riding horses, dogs, lions, or megafauna like elephants. Understand equine withers vs human vertex height.
+            {t(locale, 'pg.viz.type2d')}
           </p>
         </div>
 
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Human vs Object</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">{t(locale, 'pg.viz.type3t')}</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400">
-            See how humans relate to everyday architectural benchmarks—such as standard 210 cm door frames, 150 cm passenger sedans, and 75 cm desks.
+            {t(locale, 'pg.viz.type3d')}
           </p>
         </div>
 
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Animal vs Animal &amp; Animal vs Object</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">{t(locale, 'pg.viz.type4t')}</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400">
-            Compare a domestic horse against a passenger SUV, or an African bush elephant against a residential building. Perfect for zoology and design studies.
+            {t(locale, 'pg.viz.type4d')}
           </p>
         </div>
 
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Celebrity vs Celebrity</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">{t(locale, 'pg.viz.type5t')}</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400">
-            Compare verified heights of Hollywood stars, Bollywood legends, and cricket icons side-by-side without red carpet footwear distortions.
+            {t(locale, 'pg.viz.type5d')}
           </p>
         </div>
 
         <div class="p-4 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
-          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">Anime &amp; Fictional vs Human</h3>
+          <h3 class="font-bold text-slate-900 dark:text-white text-sm mb-1">{t(locale, 'pg.viz.type6t')}</h3>
           <p class="text-xs text-slate-600 dark:text-slate-400">
-            Bring beloved manga and anime characters into real-world scale alongside standard human silhouettes to understand their canonical stature.
+            {t(locale, 'pg.viz.type6d')}
           </p>
         </div>
       </div>
@@ -158,15 +136,15 @@ const visualizerFaqs = [
     <!-- Posture & Poses Explanation -->
     <section class="max-w-4xl mx-auto mb-16 bg-white dark:bg-slate-800 rounded-3xl border border-slate-200/80 dark:border-slate-700 p-6 sm:p-10 shadow-soft">
       <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight mb-4">
-        Perspective, Posture &amp; Silhouette Poses
+        {t(locale, 'pg.viz.postureTitle')}
       </h2>
       <p class="text-sm text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-        Casual photographs and film scenes frequently mislead viewers about actors' real heights because of camera placement, angled lenses, and specialized framing. In the HowHeight visualizer:
+        {t(locale, 'pg.viz.postureIntro')}
       </p>
       <ul class="space-y-3 text-xs sm:text-sm text-slate-600 dark:text-slate-300 mb-6 list-disc list-inside">
-        <li><strong>Zero Perspective Distortion:</strong> Silhouettes are rendered orthographically. A figure placed on the left side has the exact same visual height as an identical figure placed on the right side.</li>
-        <li><strong>True Floor Alignment:</strong> Figures rest firmly on the 0 cm baseline, eliminating footwear lift, elevated heels, and step-stool illusions.</li>
-        <li><strong>Fixed Anatomical Datum:</strong> Silhouettes correspond to upright erect posture. While you can reorder figures horizontally, their vertical dimensions always reflect verified physical stature.</li>
+        <li><strong>{t(locale, 'pg.viz.posture1Lead')}</strong> {t(locale, 'pg.viz.posture1Text')}</li>
+        <li><strong>{t(locale, 'pg.viz.posture2Lead')}</strong> {t(locale, 'pg.viz.posture2Text')}</li>
+        <li><strong>{t(locale, 'pg.viz.posture3Lead')}</strong> {t(locale, 'pg.viz.posture3Text')}</li>
       </ul>
     </section>
 
@@ -174,10 +152,10 @@ const visualizerFaqs = [
     <section class="max-w-4xl mx-auto mb-16 pt-8 border-t border-slate-200 dark:border-slate-700">
       <div class="mb-4">
         <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
-          Related Height Comparison Tools
+          {t(locale, 'pg.shared.relTitle')}
         </h2>
         <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-          Explore additional specialized comparison tools in the HowHeight ecosystem.
+          {t(locale, 'pg.shared.relSubViz')}
         </p>
       </div>
 
@@ -187,10 +165,10 @@ const visualizerFaqs = [
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Height Comparison Hub
+            {t(locale, 'pg.shared.hubT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Complete measurement guide &amp; multi-category visual library.
+            {t(locale, 'pg.shared.hubD')}
           </span>
         </a>
         <a
@@ -198,10 +176,10 @@ const visualizerFaqs = [
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Height Comparison Calculator
+            {t(locale, 'pg.shared.calcT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Calculate exact mathematical height differences and percentage ratios.
+            {t(locale, 'pg.shared.calcD')}
           </span>
         </a>
         <a
@@ -209,10 +187,10 @@ const visualizerFaqs = [
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Height Comparison Chart
+            {t(locale, 'pg.shared.chartT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Authoritative conversion table in centimeters, meters &amp; feet/inches.
+            {t(locale, 'pg.shared.chartD')}
           </span>
         </a>
         <a
@@ -220,10 +198,10 @@ const visualizerFaqs = [
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Human Size Comparison
+            {t(locale, 'pg.shared.sizeT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Compare human proportions against objects, animals, and surroundings.
+            {t(locale, 'pg.shared.sizeD')}
           </span>
         </a>
       </div>
@@ -233,8 +211,8 @@ const visualizerFaqs = [
     <div class="max-w-4xl mx-auto my-12">
       <RelatedComparisons
         comparisons={featuredComparisons}
-        title="Popular Visualizer Matchups"
-        subtitle="Check out these high-contrast side-by-side comparisons on true scale."
+        title={t(locale, 'pg.viz.matchupsTitle')}
+        subtitle={t(locale, 'pg.viz.matchupsSub')}
         locale={locale}
       />
     </div>
@@ -242,7 +220,7 @@ const visualizerFaqs = [
     <!-- FAQ Section -->
     <div class="max-w-4xl mx-auto mb-16">
       <FAQSection
-        title="Frequently Asked Questions About the Visualizer"
+        title={t(locale, 'pg.viz.faqTitle')}
         faqs={visualizerFaqs}
       />
     </div>

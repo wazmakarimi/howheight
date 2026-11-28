@@ -9,6 +9,7 @@ import type { Locale } from '../i18n/locales';
 
 import { INITIAL_PEOPLE } from '../lib/constants';
 import { resolveAsset } from '../data/assetRegistry';
+import { getToolStrings } from '../i18n';
 
 interface Props {
   initialItems?: ComparisonItem[];
@@ -42,11 +43,14 @@ const resolvedItems = sourceItems.map((item) => {
   }
 });
 const initialItemsJson = JSON.stringify(resolvedItems);
+const toolStringsJson = JSON.stringify(getToolStrings(locale));
 ---
 
-<section 
-  id="comparison-tool" 
+<section
+  id="comparison-tool"
   class="scroll-mt-20 w-full"
+  data-locale={locale}
+  data-tool-i18n={toolStringsJson}
   data-initial-items={initialItemsJson}
   data-initial-slug={initialComparisonSlug}
 >

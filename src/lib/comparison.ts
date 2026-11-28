@@ -1,5 +1,6 @@
 import type { ComparisonItem, RulerUnit, SortMode } from './constants';
 import { getVisualTotalHeightCm } from './visualModel';
+import { cs } from './i18n-client';
 
 export interface RulerTick {
   cm: number;
@@ -117,18 +118,18 @@ export function calculateDifference(items: ComparisonItem[]): HeightDifferenceRe
       diffCm: 0,
       diffInchesRounded: 0,
       diffInchesExact: 0,
-      statement: `${p1.name} and ${p2.name} are the exact same height.`,
+      statement: cs('app.diff.same', { a: p1.name, b: p2.name }),
       isEqual: true,
     };
   }
 
   const p1Taller = p1.heightCm > p2.heightCm;
-  const inchWord = diffInchesRounded === 1 ? 'inch' : 'inches';
+  const inchWord = cs(diffInchesRounded === 1 ? 'app.diff.inch' : 'app.diff.inches');
   const displayDiff = diffInchesRounded === 0 
     ? `${diffInchesExact.toFixed(1)} ${inchWord}`
     : `${diffInchesRounded} ${inchWord}`;
 
-  const statement = `${p1.name} is ${displayDiff} ${p1Taller ? 'taller' : 'shorter'} than ${p2.name}.`;
+  const statement = cs(p1Taller ? 'app.diff.taller' : 'app.diff.shorter', { a: p1.name, b: p2.name, diff: displayDiff });
 
   return {
     p1,

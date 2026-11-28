@@ -1,4 +1,12 @@
 ---
+import { t } from '../i18n';
+import type { Locale } from '../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
 ---
 
 <div id="comparison-summary-section" class="bg-white rounded-2xl border border-slate-200/80 shadow-soft p-5 sm:p-7 mt-8">
@@ -12,8 +20,8 @@
         </svg>
       </div>
       <div>
-        <h3 class="font-bold text-slate-900 text-base leading-tight">Comparison Summary</h3>
-        <p class="text-xs text-slate-500">Overview of all active comparison items</p>
+        <h3 class="font-bold text-slate-900 text-base leading-tight">{t(locale, 'app.summary.title')}</h3>
+        <p class="text-xs text-slate-500">{t(locale, 'app.summary.subtitle')}</p>
       </div>
     </div>
     <!-- Stats Badge -->
@@ -29,12 +37,12 @@
     <table class="w-full text-left border-collapse">
       <thead>
         <tr class="border-b border-slate-200 text-xs font-semibold uppercase tracking-wider text-slate-500 bg-slate-50/50">
-          <th class="py-3 px-4 rounded-l-lg">Name</th>
-          <th class="py-3 px-4">Category</th>
-          <th class="py-3 px-4">Type / Details</th>
-          <th class="py-3 px-4">Height (Imperial)</th>
-          <th class="py-3 px-4">Height (Metric)</th>
-          <th class="py-3 px-4 rounded-r-lg">Relative Diff</th>
+          <th class="py-3 px-4 rounded-l-lg">{t(locale, 'app.summary.colName')}</th>
+          <th class="py-3 px-4">{t(locale, 'app.summary.colCategory')}</th>
+          <th class="py-3 px-4">{t(locale, 'app.summary.colType')}</th>
+          <th class="py-3 px-4">{t(locale, 'app.summary.colHeightImp')}</th>
+          <th class="py-3 px-4">{t(locale, 'app.summary.colHeightMet')}</th>
+          <th class="py-3 px-4 rounded-r-lg">{t(locale, 'app.summary.colRelDiff')}</th>
         </tr>
       </thead>
       <tbody id="summary-table-body" class="divide-y divide-slate-100 text-sm text-slate-700">
@@ -50,6 +58,6 @@
 
   <!-- Empty Summary Note -->
   <div id="summary-empty-state" class="hidden py-8 text-center text-sm text-slate-400">
-    Add humans, animals, objects, or celebrities to the comparison chart to view their summary data here.
+    {t(locale, 'app.summary.empty')}
   </div>
 </div>

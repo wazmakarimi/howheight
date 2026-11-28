@@ -6,6 +6,14 @@ import {
   QUICK_COMPARE_OBJECT_PRESETS,
   BENCHMARK_SCALE_PRESET,
 } from '../lib/constants';
+import { t } from '../i18n';
+import type { Locale } from '../i18n/locales';
+
+interface Props {
+  locale?: Locale;
+}
+
+const { locale = 'en' } = Astro.props;
 ---
 
 <div class="bg-white rounded-2xl border border-slate-200/80 shadow-soft p-3.5 sm:p-4 space-y-3">
@@ -16,8 +24,8 @@ import {
       </svg>
     </div>
     <div>
-      <h3 class="font-bold text-slate-900 text-sm leading-tight">Quick Presets</h3>
-      <p class="text-[11px] text-slate-500">Popular comparisons with verified reference scales</p>
+      <h3 class="font-bold text-slate-900 text-sm leading-tight">{t(locale, 'app.preset.title')}</h3>
+      <p class="text-[11px] text-slate-500">{t(locale, 'app.preset.subtitle')}</p>
     </div>
   </div>
 
@@ -31,14 +39,14 @@ import {
       >
         <div class="flex items-center justify-between">
           <span class="text-xs font-bold text-slate-800 group-hover:text-brand-600 transition-colors">
-            {preset.label}
+            {t(locale, `preset.${preset.id}.label`)}
           </span>
           <span class="text-[10px] text-brand-600 bg-brand-50 font-bold px-1.5 py-0.5 rounded">
-            LOAD
+            {t(locale, 'app.preset.load')}
           </span>
         </div>
         <p class="text-[11px] text-slate-500 mt-0.5 leading-snug">
-          {preset.description}
+          {t(locale, `preset.${preset.id}.desc`)}
         </p>
       </button>
     ))}
@@ -53,15 +61,15 @@ import {
           <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
           <line x1="12" y1="22.08" x2="12" y2="12"></line>
         </svg>
-        Full Benchmark Scale
+        {t(locale, 'app.preset.benchmark')}
       </span>
-      <span class="text-[10px] text-slate-500 font-medium">8 Categories</span>
+      <span class="text-[10px] text-slate-500 font-medium">{t(locale, 'app.preset.categoriesCount')}</span>
     </div>
     <button
       type="button"
       class="quick-preset-benchmark-btn w-full text-xs font-bold py-2 px-3 rounded-lg bg-white border border-blue-300 text-blue-800 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all text-center shadow-soft-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
     >
-      Load All 8 Categories on Stage
+      {t(locale, 'app.preset.loadBenchmark')}
     </button>
   </div>
 </div>

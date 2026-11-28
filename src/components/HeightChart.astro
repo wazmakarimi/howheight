@@ -15,7 +15,7 @@ const { locale = 'en', measurementNote } = Astro.props;
 const showMeasurementNote = measurementNote !== '';
 const measurementNoteText =
   measurementNote === undefined
-    ? 'Four-legged animals are measured to the shoulder or withers. Heads and ears naturally extend above the shoulder line.'
+    ? t(locale, 'app.diff.withersNote')
     : measurementNote;
 ---
 
@@ -26,11 +26,11 @@ const measurementNoteText =
       <div class="flex items-center gap-2">
         <h2 class="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">{t(locale, 'canvas.title')}</h2>
         <span id="chart-total-count" class="hidden sm:inline-flex px-2 py-0.5 rounded-full text-xs font-semibold bg-brand-50 text-brand-700">
-          3 Items
+          3 {t(locale, 'app.chart.items')}
         </span>
       </div>
       <p class="text-xs sm:text-sm text-slate-500 mt-0.5">
-        Accurate, proportional visual comparison for humans and animals on an aligned baseline.
+        {t(locale, 'app.chart.subtitle')}
       </p>
     </div>
 
@@ -38,11 +38,11 @@ const measurementNoteText =
     <div class="flex items-center flex-wrap gap-2">
       <!-- Sort Select -->
       <div class="flex items-center gap-1.5 text-xs text-slate-600 bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-1.5">
-        <span class="font-medium text-slate-500">Sort:</span>
+        <span class="font-medium text-slate-500">{t(locale, 'app.chart.sort')}</span>
         <select id="sort-selector" class="bg-transparent font-semibold text-slate-800 focus:outline-none cursor-pointer">
-          <option value="added">Added Order</option>
-          <option value="height-asc">Height: Low → High</option>
-          <option value="height-desc">Height: High → Low</option>
+          <option value="added">{t(locale, 'app.chart.sortAdded')}</option>
+          <option value="height-asc">{t(locale, 'app.chart.sortAsc')}</option>
+          <option value="height-desc">{t(locale, 'app.chart.sortDesc')}</option>
         </select>
       </div>
 
@@ -53,7 +53,7 @@ const measurementNoteText =
           id="ruler-toggle-cm" 
           class="px-2 py-1 rounded-md transition-all font-bold text-brand-600 bg-white shadow-soft-sm"
           data-ruler-unit="cm"
-          title="Show ruler in centimeters"
+          title={t(locale, 'app.chart.rulerCmTitle')}
         >
           cm
         </button>
@@ -62,7 +62,7 @@ const measurementNoteText =
           id="ruler-toggle-ft" 
           class="px-2 py-1 rounded-md transition-all text-slate-600 hover:text-slate-900"
           data-ruler-unit="ft"
-          title="Show ruler in feet and inches"
+          title={t(locale, 'app.chart.rulerFtTitle')}
         >
           ft / in
         </button>
@@ -75,8 +75,8 @@ const measurementNoteText =
           id="undo-btn"
           disabled
           class="p-1.5 rounded-md text-slate-400 hover:text-slate-700 disabled:opacity-40 disabled:pointer-events-none transition-colors"
-          title="Undo last change (Ctrl+Z)"
-          aria-label="Undo"
+          title={t(locale, 'app.chart.undoTitle')}
+          aria-label={t(locale, 'app.chart.undo')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <path d="M3 7v6h6"></path>
@@ -88,8 +88,8 @@ const measurementNoteText =
           id="redo-btn"
           disabled
           class="p-1.5 rounded-md text-slate-400 hover:text-slate-700 disabled:opacity-40 disabled:pointer-events-none transition-colors"
-          title="Redo last change (Ctrl+Y)"
-          aria-label="Redo"
+          title={t(locale, 'app.chart.redoTitle')}
+          aria-label={t(locale, 'app.chart.redo')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
             <path d="M21 7v6h-6"></path>
@@ -104,7 +104,7 @@ const measurementNoteText =
           type="button"
           id="zoom-out-btn"
           class="px-2 py-1 rounded-md text-slate-600 hover:text-slate-900 transition-colors"
-          title="Zoom out visual stage"
+          title={t(locale, 'app.chart.zoomOutTitle')}
         >
           −
         </button>
@@ -113,7 +113,7 @@ const measurementNoteText =
           type="button"
           id="zoom-in-btn"
           class="px-2 py-1 rounded-md text-slate-600 hover:text-slate-900 transition-colors"
-          title="Zoom in visual stage"
+          title={t(locale, 'app.chart.zoomInTitle')}
         >
           +
         </button>
@@ -121,9 +121,9 @@ const measurementNoteText =
           type="button"
           id="zoom-reset-btn"
           class="px-1.5 py-1 text-[10px] text-slate-400 hover:text-slate-700 rounded transition-colors"
-          title="Reset zoom to 100%"
+          title={t(locale, 'app.chart.zoomResetTitle')}
         >
-          Reset
+          {t(locale, 'app.chart.resetShort')}
         </button>
       </div>
 
@@ -133,7 +133,7 @@ const measurementNoteText =
           type="button"
           id="fit-all-btn"
           class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-soft-sm transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
-          title="Evenly distribute all comparison models across the canvas"
+          title={t(locale, 'app.chart.fitTitle')}
         >
           <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-slate-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <polyline points="4 14 10 14 10 20"></polyline>
@@ -147,9 +147,9 @@ const measurementNoteText =
           type="button"
           id="reset-positions-btn"
           class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-soft-sm transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
-          title="Reset all models to automatic horizontal layout"
+          title={t(locale, 'app.chart.autoLayoutTitle')}
         >
-          <span>Auto Layout</span>
+          <span>{t(locale, 'app.chart.autoLayout')}</span>
         </button>
       </div>
 
@@ -158,7 +158,7 @@ const measurementNoteText =
         type="button"
         id="toggle-draw-mode-btn"
         class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-slate-200 bg-white hover:bg-slate-50 text-slate-700 text-xs font-semibold shadow-soft-sm transition-all focus:outline-none focus:ring-2 focus:ring-brand-500"
-        title="Draw or annotate directly on the comparison canvas"
+        title={t(locale, 'app.chart.drawTitle')}
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-brand-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 20h9"></path>
@@ -220,15 +220,15 @@ const measurementNoteText =
     <div class="flex items-center gap-2">
       <span class="w-2 h-2 rounded-full bg-purple-500 animate-pulse flex-shrink-0"></span>
       <span>
-        <strong>Interactive Controls:</strong> Drag models horizontally to reposition • Drag top handle vertically to resize physical height • Use arrow keys for ±1 cm.
+        <strong>{t(locale, 'app.chart.hintTitle')}</strong> {t(locale, 'app.chart.hintText')}
       </span>
     </div>
     <button
       type="button"
       id="dismiss-hint-btn"
       class="text-purple-600 hover:text-purple-950 font-bold p-1 rounded hover:bg-purple-100 transition-colors ml-2"
-      aria-label="Dismiss hint"
-      title="Dismiss hint"
+      aria-label={t(locale, 'app.chart.dismissHint')}
+      title={t(locale, 'app.chart.dismissHint')}
     >
       ✕
     </button>
@@ -241,7 +241,7 @@ const measurementNoteText =
       <div class="truncate flex items-center gap-2">
         <span id="selected-item-name" class="font-bold text-sm text-white truncate">John</span>
         <span id="selected-item-badge" class="text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-white/20 text-slate-200">HUMAN</span>
-        <span id="selected-custom-badge" class="hidden text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-amber-400 text-slate-950">CUSTOM HEIGHT</span>
+        <span id="selected-custom-badge" class="hidden text-[10px] uppercase font-bold px-1.5 py-0.5 rounded bg-amber-400 text-slate-950">{t(locale, 'app.chart.customHeightBadge')}</span>
       </div>
     </div>
 
@@ -253,7 +253,7 @@ const measurementNoteText =
           type="button"
           id="nudge-down-btn"
           class="px-2 py-1 text-xs font-bold text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors"
-          title="Decrease height by 1 cm (Down Arrow)"
+          title={t(locale, 'app.chart.nudgeDownTitle')}
         >
           − 1 cm
         </button>
@@ -264,7 +264,7 @@ const measurementNoteText =
           type="button"
           id="nudge-up-btn"
           class="px-2 py-1 text-xs font-bold text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors"
-          title="Increase height by 1 cm (Up Arrow)"
+          title={t(locale, 'app.chart.nudgeUpTitle')}
         >
           + 1 cm
         </button>
@@ -276,7 +276,7 @@ const measurementNoteText =
           type="button"
           id="nudge-left-btn"
           class="px-2 py-1 text-xs font-bold text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors"
-          title="Move model left (Left Arrow)"
+          title={t(locale, 'app.chart.moveLeftTitle')}
         >
           ←
         </button>
@@ -284,7 +284,7 @@ const measurementNoteText =
           type="button"
           id="nudge-right-btn"
           class="px-2 py-1 text-xs font-bold text-slate-300 hover:text-white hover:bg-slate-700 rounded transition-colors"
-          title="Move model right (Right Arrow)"
+          title={t(locale, 'app.chart.moveRightTitle')}
         >
           →
         </button>
@@ -295,9 +295,9 @@ const measurementNoteText =
         type="button"
         id="reset-selected-height-btn"
         class="hidden px-2.5 py-1 text-xs font-semibold text-amber-300 hover:text-amber-200 bg-amber-950/60 hover:bg-amber-900/80 border border-amber-500/40 rounded-lg transition-colors"
-        title="Restore original reference height"
+        title={t(locale, 'app.chart.resetHeightTitle')}
       >
-        ↺ Reset Height
+        {t(locale, 'app.chart.resetHeight')}
       </button>
 
       <!-- Deselect Button -->
@@ -305,8 +305,8 @@ const measurementNoteText =
         type="button"
         id="deselect-btn"
         class="p-1 text-slate-400 hover:text-white hover:bg-slate-800 rounded transition-colors"
-        title="Deselect (Escape)"
-        aria-label="Deselect"
+        title={t(locale, 'app.chart.deselectTitle')}
+        aria-label={t(locale, 'app.chart.deselect')}
       >
         ✕
       </button>
@@ -326,10 +326,10 @@ const measurementNoteText =
           id="draw-tool-pen"
           class="draw-tool-btn px-2.5 py-1 text-xs font-bold rounded-md transition-all bg-brand-600 text-white shadow-sm flex items-center gap-1.5"
           data-tool="pen"
-          title="Pencil / Pen (P)"
+          title={t(locale, 'app.draw.penTitle')}
         >
           <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
-          <span>Pen</span>
+          <span>{t(locale, 'app.draw.pen')}</span>
         </button>
         <!-- Highlighter -->
         <button
@@ -337,10 +337,10 @@ const measurementNoteText =
           id="draw-tool-highlighter"
           class="draw-tool-btn px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slate-300 hover:text-white hover:bg-slate-700 flex items-center gap-1.5"
           data-tool="highlighter"
-          title="Semi-transparent Highlighter (H)"
+          title={t(locale, 'app.draw.highlightTitle')}
         >
           <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m9 11-6 6v3h3l6-6"></path><path d="m22 2-7 7 4 4 7-7z"></path></svg>
-          <span>Highlight</span>
+          <span>{t(locale, 'app.draw.highlight')}</span>
         </button>
         <!-- Move / Drag Drawing -->
         <button
@@ -348,7 +348,7 @@ const measurementNoteText =
           id="draw-tool-move"
           class="draw-tool-btn px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slate-300 hover:text-white hover:bg-slate-700 flex items-center gap-1.5"
           data-tool="move"
-          title="Drag / Move Drawings (M or Hold Space)"
+          title={t(locale, 'app.draw.moveTitle')}
         >
           <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="5 9 2 12 5 15"></polyline>
@@ -358,7 +358,7 @@ const measurementNoteText =
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <line x1="12" y1="2" x2="12" y2="22"></line>
           </svg>
-          <span>Move / Drag</span>
+          <span>{t(locale, 'app.draw.move')}</span>
         </button>
         <!-- Eraser -->
         <button
@@ -366,36 +366,36 @@ const measurementNoteText =
           id="draw-tool-eraser"
           class="draw-tool-btn px-2.5 py-1 text-xs font-semibold rounded-md transition-all text-slate-300 hover:text-white hover:bg-slate-700 flex items-center gap-1.5"
           data-tool="eraser"
-          title="Eraser (E)"
+          title={t(locale, 'app.draw.eraserTitle')}
         >
           <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"></path><path d="M22 21H7"></path><path d="m5 11 9 9"></path></svg>
-          <span>Eraser</span>
+          <span>{t(locale, 'app.draw.eraser')}</span>
         </button>
       </div>
 
       <!-- Color Palette -->
       <div class="flex items-center gap-1.5 bg-slate-800 px-2 py-1 rounded-lg border border-slate-700" id="draw-color-palette">
-        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border-2 border-brand-400 scale-110 shadow-sm transition-transform" style="background-color: #2563eb;" data-color="#2563eb" title="Blue"></button>
-        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #ef4444;" data-color="#ef4444" title="Red"></button>
-        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #10b981;" data-color="#10b981" title="Green"></button>
-        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #f59e0b;" data-color="#f59e0b" title="Amber"></button>
-        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #8b5cf6;" data-color="#8b5cf6" title="Purple"></button>
-        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #0f172a;" data-color="#0f172a" title="Dark"></button>
-        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #ffffff;" data-color="#ffffff" title="White"></button>
+        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border-2 border-brand-400 scale-110 shadow-sm transition-transform" style="background-color: #2563eb;" data-color="#2563eb" title={t(locale, 'app.draw.blue')}></button>
+        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #ef4444;" data-color="#ef4444" title={t(locale, 'app.draw.red')}></button>
+        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #10b981;" data-color="#10b981" title={t(locale, 'app.draw.green')}></button>
+        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #f59e0b;" data-color="#f59e0b" title={t(locale, 'app.draw.amber')}></button>
+        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #8b5cf6;" data-color="#8b5cf6" title={t(locale, 'app.draw.purple')}></button>
+        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #0f172a;" data-color="#0f172a" title={t(locale, 'app.draw.dark')}></button>
+        <button type="button" class="draw-color-btn w-5 h-5 rounded-full border border-slate-600 hover:scale-110 shadow-sm transition-transform" style="background-color: #ffffff;" data-color="#ffffff" title={t(locale, 'app.draw.white')}></button>
       </div>
 
       <!-- Brush Size -->
       <div class="flex items-center gap-1 bg-slate-800 p-0.5 rounded-lg border border-slate-700 text-xs text-slate-300">
-        <span class="text-[10px] uppercase font-bold text-slate-400 px-1">Size:</span>
-        <button type="button" class="draw-size-btn px-2.5 py-0.5 rounded text-xs font-bold text-white bg-slate-700" data-size="3" title="Fine">S</button>
-        <button type="button" class="draw-size-btn px-2.5 py-0.5 rounded text-xs font-semibold text-slate-400 hover:text-white" data-size="6" title="Medium">M</button>
-        <button type="button" class="draw-size-btn px-2.5 py-0.5 rounded text-xs font-semibold text-slate-400 hover:text-white" data-size="12" title="Thick">L</button>
+        <span class="text-[10px] uppercase font-bold text-slate-400 px-1">{t(locale, 'app.draw.size')}</span>
+        <button type="button" class="draw-size-btn px-2.5 py-0.5 rounded text-xs font-bold text-white bg-slate-700" data-size="3" title={t(locale, 'app.draw.sizeFine')}>S</button>
+        <button type="button" class="draw-size-btn px-2.5 py-0.5 rounded text-xs font-semibold text-slate-400 hover:text-white" data-size="6" title={t(locale, 'app.draw.sizeMedium')}>M</button>
+        <button type="button" class="draw-size-btn px-2.5 py-0.5 rounded text-xs font-semibold text-slate-400 hover:text-white" data-size="12" title={t(locale, 'app.draw.sizeThick')}>L</button>
       </div>
 
       <!-- Helper Tip -->
       <div id="draw-helper-hint" class="hidden lg:flex items-center gap-1.5 text-xs text-amber-300 bg-amber-950/60 border border-amber-500/30 px-2.5 py-1 rounded-lg">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-amber-400 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
-        <span>Tip: Click <strong>Move / Drag</strong> to grab & reposition drawings</span>
+        <span>{t(locale, 'app.draw.tipPrefix')} <strong>{t(locale, 'app.draw.move')}</strong> {t(locale, 'app.draw.tipSuffix')}</span>
       </div>
     </div>
 
@@ -405,29 +405,29 @@ const measurementNoteText =
         type="button"
         id="draw-undo-btn"
         class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white text-xs font-semibold border border-slate-700 flex items-center gap-1 transition-colors"
-        title="Undo last stroke"
+        title={t(locale, 'app.draw.undoStroke')}
       >
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M3 7v6h6"></path><path d="M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"></path></svg>
-        <span>Undo</span>
+        <span>{t(locale, 'app.chart.undo')}</span>
       </button>
 
       <button
         type="button"
         id="draw-clear-btn"
         class="px-2.5 py-1 rounded-lg bg-slate-800 hover:bg-rose-900/60 text-slate-300 hover:text-rose-200 text-xs font-semibold border border-slate-700 hover:border-rose-700/60 flex items-center gap-1 transition-colors"
-        title="Clear all drawings"
+        title={t(locale, 'app.draw.clearTitle')}
       >
         <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
-        <span>Clear</span>
+        <span>{t(locale, 'app.draw.clear')}</span>
       </button>
 
       <button
         type="button"
         id="draw-done-btn"
         class="px-3 py-1 rounded-lg bg-brand-600 hover:bg-brand-500 text-white text-xs font-bold shadow-soft-sm transition-colors"
-        title="Finish drawing and return to figure controls"
+        title={t(locale, 'app.draw.doneTitle')}
       >
-        Done
+        {t(locale, 'app.done')}
       </button>
     </div>
   </div>
@@ -441,7 +441,7 @@ const measurementNoteText =
         <line x1="12" y1="8" x2="12.01" y2="8"></line>
       </svg>
       <span>
-        <strong>Measurement Reference:</strong> {measurementNoteText}
+        <strong>{t(locale, 'app.diff.measurementRef')}</strong> {measurementNoteText}
       </span>
     </div>
   )}
@@ -457,7 +457,7 @@ const measurementNoteText =
           </svg>
         </div>
         <div>
-          <span class="text-[11px] font-bold uppercase tracking-wider text-brand-700">Height Difference Analysis</span>
+          <span class="text-[11px] font-bold uppercase tracking-wider text-brand-700">{t(locale, 'app.diff.analysis')}</span>
           <p id="diff-statement" class="text-sm sm:text-base font-extrabold text-slate-900 leading-snug">
             <!-- Dynamic statement -->
           </p>
@@ -504,10 +504,10 @@ const measurementNoteText =
         <div class="absolute left-0 right-0 bottom-[36px] z-10 pointer-events-none flex items-center">
           <div class="w-full h-1.5 bg-slate-800 rounded-full shadow-sm"></div>
           <div class="absolute left-2 -bottom-5 text-[10px] font-bold uppercase tracking-wider text-slate-500">
-            0 cm / Floor Baseline
+            {t(locale, 'app.diff.floorCm')}
           </div>
           <div class="absolute right-2 -bottom-5 text-[10px] font-bold uppercase tracking-wider text-slate-500">
-            0 ft / Floor Baseline
+            {t(locale, 'app.diff.floorFt')}
           </div>
         </div>
       </div>
@@ -528,9 +528,9 @@ const measurementNoteText =
             <line x1="22" y1="11" x2="16" y2="11"></line>
           </svg>
         </div>
-        <h3 class="text-lg font-bold text-slate-900 mb-1">Compare Heights Visually</h3>
+        <h3 class="text-lg font-bold text-slate-900 mb-1">{t(locale, 'app.diff.emptyTitle')}</h3>
         <p class="text-sm text-slate-500 max-w-sm mb-5">
-          Add humans or animals to see how their physical heights compare with accurate proportional scale.
+          {t(locale, 'app.diff.emptyText')}
         </p>
         <button
           type="button"
@@ -541,7 +541,7 @@ const measurementNoteText =
             <line x1="12" y1="5" x2="12" y2="19"></line>
             <line x1="5" y1="12" x2="19" y2="12"></line>
           </svg>
-          Add First Item
+          {t(locale, 'app.diff.addFirst')}
         </button>
       </div>
     </div>

@@ -9,6 +9,7 @@ import { ptHowToGuide } from './pt';
 import { jaHowToGuide } from './ja';
 import { koHowToGuide } from './ko';
 import { arHowToGuide } from './ar';
+import { ruHowToGuide } from './ru';
 
 export * from './types';
 
@@ -22,6 +23,7 @@ const HOWTO_GUIDES: Partial<Record<Locale, HowToGuideData>> = {
   ja: jaHowToGuide,
   ko: koHowToGuide,
   ar: arHowToGuide,
+  ru: ruHowToGuide,
 };
 
 export function getHowToGuide(locale: Locale): HowToGuideData {

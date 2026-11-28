@@ -1,6 +1,7 @@
 import { DEFAULT_LOCALE, LOCALES, SUPPORTED_LOCALES, type Locale } from './locales';
 import { SITE } from '../config/site';
 import { CATEGORIES, type CategoryDefinition } from '../data/categories';
+import { getCategoryContent } from '../data/category-content';
 import { COMPARISONS } from '../data/comparisons';
 
 // Import English dictionaries
@@ -9,6 +10,7 @@ import enHome from './en/home';
 import enComparison from './en/comparison';
 import enCategories from './en/categories';
 import enSeo from './en/seo';
+import enPages from './en/pages';
 
 // Import Hindi dictionaries
 import hiCommon from './hi/common';
@@ -16,6 +18,7 @@ import hiHome from './hi/home';
 import hiComparison from './hi/comparison';
 import hiCategories from './hi/categories';
 import hiSeo from './hi/seo';
+import hiPages from './hi/pages';
 
 // Import other locales
 import esCommon from './es/common';
@@ -23,62 +26,70 @@ import esHome from './es/home';
 import esComparison from './es/comparison';
 import esCategories from './es/categories';
 import esSeo from './es/seo';
+import esPages from './es/pages';
 
 import frCommon from './fr/common';
 import frHome from './fr/home';
 import frComparison from './fr/comparison';
 import frCategories from './fr/categories';
 import frSeo from './fr/seo';
+import frPages from './fr/pages';
 
 import deCommon from './de/common';
 import deHome from './de/home';
 import deComparison from './de/comparison';
 import deCategories from './de/categories';
 import deSeo from './de/seo';
+import dePages from './de/pages';
 
 import ptCommon from './pt/common';
 import ptHome from './pt/home';
 import ptComparison from './pt/comparison';
 import ptCategories from './pt/categories';
 import ptSeo from './pt/seo';
+import ptPages from './pt/pages';
 
 import jaCommon from './ja/common';
 import jaHome from './ja/home';
 import jaComparison from './ja/comparison';
 import jaCategories from './ja/categories';
 import jaSeo from './ja/seo';
+import jaPages from './ja/pages';
 
 import koCommon from './ko/common';
 import koHome from './ko/home';
 import koComparison from './ko/comparison';
 import koCategories from './ko/categories';
 import koSeo from './ko/seo';
+import koPages from './ko/pages';
 
 import arCommon from './ar/common';
 import arHome from './ar/home';
 import arComparison from './ar/comparison';
 import arCategories from './ar/categories';
 import arSeo from './ar/seo';
+import arPages from './ar/pages';
 
 import ruCommon from './ru/common';
 import ruHome from './ru/home';
 import ruComparison from './ru/comparison';
 import ruCategories from './ru/categories';
 import ruSeo from './ru/seo';
+import ruPages from './ru/pages';
 
 type Dictionary = Record<string, string>;
 
 const DICTIONARIES: Record<Locale, Dictionary> = {
-  en: { ...enCommon, ...enHome, ...enComparison, ...enCategories, ...enSeo },
-  hi: { ...hiCommon, ...hiHome, ...hiComparison, ...hiCategories, ...hiSeo },
-  es: { ...esCommon, ...esHome, ...esComparison, ...esCategories, ...esSeo },
-  fr: { ...frCommon, ...frHome, ...frComparison, ...frCategories, ...frSeo },
-  de: { ...deCommon, ...deHome, ...deComparison, ...deCategories, ...deSeo },
-  pt: { ...ptCommon, ...ptHome, ...ptComparison, ...ptCategories, ...ptSeo },
-  ja: { ...jaCommon, ...jaHome, ...jaComparison, ...jaCategories, ...jaSeo },
-  ko: { ...koCommon, ...koHome, ...koComparison, ...koCategories, ...koSeo },
-  ar: { ...arCommon, ...arHome, ...arComparison, ...arCategories, ...arSeo },
-  ru: { ...ruCommon, ...ruHome, ...ruComparison, ...ruCategories, ...ruSeo },
+  en: { ...enCommon, ...enHome, ...enComparison, ...enCategories, ...enSeo, ...enPages },
+  hi: { ...hiCommon, ...hiHome, ...hiComparison, ...hiCategories, ...hiSeo, ...hiPages },
+  es: { ...esCommon, ...esHome, ...esComparison, ...esCategories, ...esSeo, ...esPages },
+  fr: { ...frCommon, ...frHome, ...frComparison, ...frCategories, ...frSeo, ...frPages },
+  de: { ...deCommon, ...deHome, ...deComparison, ...deCategories, ...deSeo, ...dePages },
+  pt: { ...ptCommon, ...ptHome, ...ptComparison, ...ptCategories, ...ptSeo, ...ptPages },
+  ja: { ...jaCommon, ...jaHome, ...jaComparison, ...jaCategories, ...jaSeo, ...jaPages },
+  ko: { ...koCommon, ...koHome, ...koComparison, ...koCategories, ...koSeo, ...koPages },
+  ar: { ...arCommon, ...arHome, ...arComparison, ...arCategories, ...arSeo, ...arPages },
+  ru: { ...ruCommon, ...ruHome, ...ruComparison, ...ruCategories, ...ruSeo, ...ruPages },
 };
 
 /**
@@ -265,6 +276,24 @@ export function t(locale: Locale, key: string, params?: Record<string, string | 
   return text;
 }
 
+const TOOL_KEY_PREFIXES = ['app.', 'appcat.', 'preset.', 'canvas.', 'sidebar.', 'card.'];
+
+/**
+ * Returns the comparison-tool string table for a locale (raw templates with
+ * {placeholders} intact, English fallback applied per key). Serialized into
+ * the page by ComparisonTool.astro so the client app can render in-language.
+ */
+export function getToolStrings(locale: Locale): Record<string, string> {
+  const en = DICTIONARIES[DEFAULT_LOCALE];
+  const out: Record<string, string> = {};
+  for (const key of Object.keys(en)) {
+    if (TOOL_KEY_PREFIXES.some((p) => key.startsWith(p))) {
+      out[key] = t(locale, key);
+    }
+  }
+  return out;
+}
+
 /**
  * Checks if the locale requires RTL (Right-to-Left) reading direction.
  */
@@ -283,13 +312,32 @@ export function getLocalizedCategory(category: CategoryDefinition, locale: Local
   const localizedDesc = t(locale, `cat.${category.id}.description`);
   const localizedBadge = t(locale, `cat.${category.id}.badge`);
 
-  return {
+  const base: CategoryDefinition = {
     ...category,
     name: localizedName !== `cat.${category.id}.name` ? localizedName : category.name,
     title: localizedTitle !== `cat.${category.id}.title` ? localizedTitle : category.title,
     description: localizedDesc !== `cat.${category.id}.description` ? localizedDesc : category.description,
     badge: localizedBadge !== `cat.${category.id}.badge` ? localizedBadge : category.badge,
     h1: localizedName !== `cat.${category.id}.name` ? `${localizedName} ${t(locale, 'nav.compare')}` : category.h1,
+  };
+
+  // Overlay localized body content (measurement, tables, FAQs, editorial)
+  // when a translation exists for this category; heights/imperial values
+  // stay from the base data, only labels and notes are localized.
+  const content = getCategoryContent(locale, category.id);
+  if (!content) return base;
+  return {
+    ...base,
+    measurementAnchor: content.measurementAnchor,
+    measurementGuide: content.measurementGuide,
+    measurementNote: content.measurementNote ?? base.measurementNote,
+    commonHeights: base.commonHeights.map((row, i) => {
+      const loc = content.commonHeights[i];
+      return loc ? { ...row, label: loc.label, note: loc.note } : row;
+    }),
+    faqs: content.faqs.length > 0 ? content.faqs : base.faqs,
+    editorialSections:
+      content.editorialSections.length > 0 ? content.editorialSections : base.editorialSections,
   };
 }
 

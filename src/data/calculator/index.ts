@@ -10,6 +10,7 @@ import { ptCalculator } from './pt';
 import { jaCalculator } from './ja';
 import { koCalculator } from './ko';
 import { arCalculator } from './ar';
+import { ruCalculator } from './ru';
 
 const CALCULATOR_DATA: Partial<Record<Locale, CalculatorTranslationData>> = {
   en: enCalculator,
@@ -21,6 +22,7 @@ const CALCULATOR_DATA: Partial<Record<Locale, CalculatorTranslationData>> = {
   ja: jaCalculator,
   ko: koCalculator,
   ar: arCalculator,
+  ru: ruCalculator,
 };
 
 export function getCalculatorData(locale: Locale = 'en'): CalculatorTranslationData {

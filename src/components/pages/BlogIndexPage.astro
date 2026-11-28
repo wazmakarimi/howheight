@@ -21,17 +21,18 @@ const filteredArticles = categoryFilter
 const featuredArticle = filteredArticles[0] || allArticles[0];
 const gridArticles = filteredArticles.filter((art) => art.slug !== featuredArticle.slug);
 
-// English-only content: locale copies canonicalize to English (see BlogArticlePage).
+// Index chrome is localized; article content itself is English, so locale copies canonicalize to English.
 const canonicalUrl =
   locale === 'en'
     ? `${SITE.siteUrl}${getLocalizedPath('/blog/', locale)}`
     : `${SITE.siteUrl}/blog/`;
 
 const pageTitle = categoryFilter && BLOG_CATEGORIES[categoryFilter]
-  ? `${BLOG_CATEGORIES[categoryFilter].name} – Height Analysis Blog | ${SITE.name}`
-  : `Height Comparison & Scale Blog – Visual Analysis & Real-World Guides | ${SITE.name}`;
+  ? `${t(locale, 'pg.blog.metaTitleCat', { name: BLOG_CATEGORIES[categoryFilter].name })} | ${SITE.name}`
+  : `${t(locale, 'pg.blog.metaTitle')} | ${SITE.name}`;
 
-const pageDescription = 'Explore research-backed height comparisons, celebrity stature breakdowns, sports biomechanics, animal scales, and architectural clearances on HowHeight.';
+const pageDescription = t(locale, 'pg.blog.metaDesc');
+const dateLocale = locale === 'en' ? 'en-US' : locale;
 ---
 
 <Layout
@@ -44,8 +45,8 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
     <Breadcrumbs
       locale={locale}
       items={[
-        { name: 'Home', url: '/' },
-        { name: 'Blog', url: '/blog/' },
+        { name: t(locale, 'nav.home'), url: '/' },
+        { name: t(locale, 'pg.blog.crumb'), url: '/blog/' },
       ]}
     />
 
@@ -56,13 +57,13 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
           <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
           <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
         </svg>
-        <span>Research &amp; Visual Comparisons</span>
+        <span>{t(locale, 'pg.blog.badge')}</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
-        Height &amp; Scale Analysis Blog
+        {t(locale, 'pg.blog.h1')}
       </h1>
       <p class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mt-3 leading-relaxed">
-        Accurate, factual deep dives into human stature, athletic physics, celebrity frames, animal dimensions, and real-world spatial scale.
+        {t(locale, 'pg.blog.intro')}
       </p>
     </header>
 
@@ -76,7 +77,7 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
             : 'bg-white dark:bg-slate-800 text-slate-600 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-brand-300'
         }`}
       >
-        All Articles ({allArticles.length})
+        {t(locale, 'pg.blog.allArticles', { count: allArticles.length })}
       </a>
       {Object.values(BLOG_CATEGORIES).map((cat) => {
         const count = allArticles.filter((a) => a.category === cat.id).length;
@@ -104,13 +105,13 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
           <div class="relative z-10 max-w-3xl">
             <div class="flex items-center gap-3 mb-4 flex-wrap">
               <span class="px-3 py-1 rounded-full text-xs font-extrabold uppercase tracking-wide bg-brand-500/20 text-brand-300 border border-brand-500/30">
-                Featured Analysis
+                {t(locale, 'pg.blog.featured')}
               </span>
               <span class="text-xs text-slate-400 font-medium">
-                {new Date(featuredArticle.publishedDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                {new Date(featuredArticle.publishedDate).toLocaleDateString(dateLocale, { month: 'short', day: 'numeric', year: 'numeric' })}
               </span>
               <span class="text-xs text-slate-400 font-medium">
-                • {featuredArticle.readingTimeMinutes} min read
+                • {t(locale, 'pg.blog.minRead', { n: featuredArticle.readingTimeMinutes })}
               </span>
             </div>
 
@@ -147,7 +148,7 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
                 href={getSafeInternalUrl(`/blog/${featuredArticle.slug}/`, locale)}
                 class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-brand-500 hover:bg-brand-400 text-white font-bold text-sm transition-all shadow-md shadow-brand-500/20"
               >
-                <span>Read Analysis &amp; Visual Tool</span>
+                <span>{t(locale, 'pg.blog.readCta')}</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
@@ -163,10 +164,10 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
     <section class="mb-16">
       <div class="flex items-center justify-between mb-6">
         <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
-          {categoryFilter ? `${BLOG_CATEGORIES[categoryFilter]?.name || 'Articles'}` : 'Latest Research & Comparisons'}
+          {categoryFilter ? `${BLOG_CATEGORIES[categoryFilter]?.name || 'Articles'}` : t(locale, 'pg.blog.latestTitle')}
         </h2>
         <span class="text-xs text-slate-500 dark:text-slate-400">
-          Showing {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
+          {filteredArticles.length === 1 ? t(locale, 'pg.blog.showingOne') : t(locale, 'pg.blog.showingMany', { count: filteredArticles.length })}
         </span>
       </div>
 
@@ -181,7 +182,7 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
                     {catMeta?.name || article.category}
                   </span>
                   <span class="text-xs text-slate-400 dark:text-slate-500 font-medium">
-                    {article.readingTimeMinutes} min read
+                    {t(locale, 'pg.blog.minRead', { n: article.readingTimeMinutes })}
                   </span>
                 </div>
 
@@ -204,14 +205,14 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
                   >
                     {article.author.name}
                   </a>
-                  <span class="text-[11px] text-slate-400">{new Date(article.publishedDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}</span>
+                  <span class="text-[11px] text-slate-400">{new Date(article.publishedDate).toLocaleDateString(dateLocale, { month: 'short', day: 'numeric', year: 'numeric' })}</span>
                 </div>
 
                 <a
                   href={getSafeInternalUrl(`/blog/${article.slug}/`, locale)}
                   class="inline-flex items-center gap-1.5 text-xs font-bold text-brand-600 dark:text-blue-400 group-hover:translate-x-0.5 transition-transform"
                 >
-                  <span>Explore</span>
+                  <span>{t(locale, 'pg.blog.explore')}</span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                     <path d="M5 12h14"></path>
                     <path d="m12 5 7 7-7 7"></path>
@@ -228,10 +229,10 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
     <section class="rounded-3xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700 p-6 sm:p-8">
       <div class="max-w-3xl mb-6">
         <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white">
-          Explore HowHeight Interactive Comparison Tools
+          {t(locale, 'pg.blog.promoTitle')}
         </h2>
         <p class="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-          Put numbers into perspective. Use our full suite of visual calculators, conversion charts, and side-by-side scale simulators.
+          {t(locale, 'pg.blog.promoSub')}
         </p>
       </div>
 
@@ -241,10 +242,10 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
-            Height Comparison Hub
+            {t(locale, 'pg.shared.hubT')}
           </span>
           <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">
-            Multi-figure side-by-side scale engine with verified silhouettes.
+            {t(locale, 'pg.blog.promoHubD')}
           </span>
         </a>
 
@@ -253,10 +254,10 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
-            Height Calculator
+            {t(locale, 'pg.blog.promoCalcT')}
           </span>
           <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">
-            Metric to imperial differences, exact gaps, and ratio calculations.
+            {t(locale, 'pg.blog.promoCalcD')}
           </span>
         </a>
 
@@ -265,10 +266,10 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
-            Visualizer Tool
+            {t(locale, 'pg.blog.promoVizT')}
           </span>
           <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">
-            Compare humans, animals, anime, and vehicles on a 2D scale plane.
+            {t(locale, 'pg.blog.promoVizD')}
           </span>
         </a>
 
@@ -277,10 +278,10 @@ const pageDescription = 'Explore research-backed height comparisons, celebrity s
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-sm font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block">
-            Height Chart Tables
+            {t(locale, 'pg.blog.promoChartT')}
           </span>
           <span class="text-xs text-slate-500 dark:text-slate-400 mt-1 block">
-            Complete centimeter-to-inches conversion matrix and percentiles.
+            {t(locale, 'pg.blog.promoChartD')}
           </span>
         </a>
       </div>

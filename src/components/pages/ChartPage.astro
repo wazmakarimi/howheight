@@ -5,7 +5,7 @@ import FAQSection from '../../components/seo/FAQSection.astro';
 import CategoryIcon from '../../components/brand/CategoryIcon.astro';
 import { SITE } from '../../config/site';
 import { CATEGORIES } from '../../data/categories';
-import { getLocalizedPath, t } from '../../i18n';
+import { getLocalizedCategory, getLocalizedPath, t } from '../../i18n';
 import { getSafeInternalUrl } from '../../lib/internal-linking';
 import type { Locale } from '../../i18n/locales';
 
@@ -14,7 +14,7 @@ interface Props {
 }
 
 const { locale = 'en' } = Astro.props;
-// English-only content: locale copies canonicalize to English (see BlogArticlePage).
+// Page content is fully localized; locale copies still canonicalize to English (consolidation strategy).
 const canonicalUrl =
   locale === 'en'
     ? `${SITE.siteUrl}${getLocalizedPath('/height-comparison-chart/', locale)}`
@@ -30,48 +30,34 @@ for (let cm = 140; cm <= 215; cm += 2) {
   const exactMeters = (cm / 100).toFixed(2);
   
   let note = '';
-  if (cm === 140) note = 'Average 10-Year-Old Child / Small Furniture';
-  else if (cm === 150) note = 'Passenger Sedan Car Roofline (150 cm)';
-  else if (cm === 160) note = 'Scarlett Johansson (160 cm) / Riding Horse Withers (160 cm)';
-  else if (cm === 162) note = 'Global Adult Female Median Stature';
-  else if (cm === 166) note = 'Aamir Khan Benchmark (165 cm)';
-  else if (cm === 170) note = 'Tom Cruise (170 cm) / Salman Khan (170 cm)';
-  else if (cm === 174) note = 'Shah Rukh Khan (173 cm) / Rohit Sharma (173 cm)';
-  else if (cm === 176) note = 'Virat Kohli (175 cm) / Standard Adult Human Reference (176 cm)';
-  else if (cm === 178) note = 'MS Dhoni (178 cm) / Zendaya (178 cm) / US Male Median';
-  else if (cm === 180) note = 'Brad Pitt (180 cm)';
-  else if (cm === 182) note = 'Leonardo DiCaprio (183 cm) / 6\'0" Benchmark';
-  else if (cm === 188) note = 'Amitabh Bachchan (188 cm) / Athletic Stature (6\'2")';
-  else if (cm === 196) note = 'Dwayne "The Rock" Johnson (196 cm)';
-  else if (cm === 198) note = 'Michael Jordan / NBA Shooting Guard';
-  else if (cm === 210) note = 'Architectural Standard Interior Door (210 cm)';
+  if (cm === 140) note = t(locale, 'pg.chart.note.140');
+  else if (cm === 150) note = t(locale, 'pg.chart.note.150');
+  else if (cm === 160) note = t(locale, 'pg.chart.note.160');
+  else if (cm === 162) note = t(locale, 'pg.chart.note.162');
+  else if (cm === 166) note = t(locale, 'pg.chart.note.166');
+  else if (cm === 170) note = t(locale, 'pg.chart.note.170');
+  else if (cm === 174) note = t(locale, 'pg.chart.note.174');
+  else if (cm === 176) note = t(locale, 'pg.chart.note.176');
+  else if (cm === 178) note = t(locale, 'pg.chart.note.178');
+  else if (cm === 180) note = t(locale, 'pg.chart.note.180');
+  else if (cm === 182) note = t(locale, 'pg.chart.note.182');
+  else if (cm === 188) note = t(locale, 'pg.chart.note.188');
+  else if (cm === 196) note = t(locale, 'pg.chart.note.196');
+  else if (cm === 198) note = t(locale, 'pg.chart.note.198');
+  else if (cm === 210) note = t(locale, 'pg.chart.note.210');
 
   chartRows.push({ cm, meters: exactMeters, feet, inches, formatted, note });
 }
 
-const faqs = [
-  {
-    question: 'How do I convert centimeters to feet and inches accurately?',
-    answer: 'Divide the number of centimeters by 2.54 to get total inches. Then divide total inches by 12 to find whole feet. The remainder is inches. Example: 178 cm / 2.54 = 70.07 inches = 5 feet 10.1 inches.',
-  },
-  {
-    question: 'What is the global average height for men and women?',
-    answer: 'According to NCD Risk Factor Collaboration and anthropometric surveys, the worldwide adult average is ~175 cm (5\'9") for men and ~162 cm (5\'4") for women.',
-  },
-  {
-    question: 'What height is considered "tall" worldwide?',
-    answer: 'Globally, a stature of 183 cm (6 ft 0 in) or higher places an adult male in the top 15% of global height. For adult females, 170 cm (5 ft 7 in) or higher is considered tall.',
-  },
-  {
-    question: 'Can I visualize any row of this height chart on the comparison tool?',
-    answer: 'Yes! Click "Compare" beside any height benchmark in the table to open it directly in the HowHeight visual workspace.',
-  },
-];
+const faqs = [1, 2, 3, 4].map((n) => ({
+  question: t(locale, `pg.chart.faq${n}q`),
+  answer: t(locale, `pg.chart.faq${n}a`),
+}));
 ---
 
 <Layout
-  title={`Height Comparison Chart | ${SITE.name}`}
-  description="Comprehensive height comparison conversion chart comparing centimeters, feet, inches, meters, and benchmark anthropometric statures."
+  title={`${t(locale, 'pg.chart.title')} | ${SITE.name}`}
+  description={t(locale, 'pg.chart.metaDesc')}
   canonicalUrl={canonicalUrl}
   locale={locale}
 >
@@ -79,9 +65,9 @@ const faqs = [
     <Breadcrumbs
       locale={locale}
       items={[
-        { name: 'Home', url: '/' },
-        { name: 'Height Comparison', url: '/height-comparison/' },
-        { name: 'Height Comparison Chart', url: '/height-comparison-chart/' },
+        { name: t(locale, 'nav.home'), url: '/' },
+        { name: t(locale, 'nav.compare'), url: '/height-comparison/' },
+        { name: t(locale, 'pg.chart.title'), url: '/height-comparison-chart/' },
       ]}
     />
 
@@ -93,20 +79,20 @@ const faqs = [
           <line x1="12" y1="20" x2="12" y2="4"/>
           <line x1="6" y1="20" x2="6" y2="14"/>
         </svg>
-        <span>Standard Metric &amp; Imperial Stature Guide</span>
+        <span>{t(locale, 'pg.chart.badge')}</span>
       </div>
       <h1 class="text-3xl sm:text-5xl font-black text-slate-900 tracking-tight leading-tight">
-        Height Comparison Chart
+        {t(locale, 'pg.chart.title')}
       </h1>
       <p class="text-base sm:text-lg text-slate-600 mt-3 leading-relaxed max-w-3xl mx-auto">
-        Search, convert, and compare standard stature benchmarks in centimeters, meters, and feet/inches with direct visual comparison links.
+        {t(locale, 'pg.chart.intro')}
       </p>
     </header>
 
     <!-- Category Shortcuts -->
     <div class="mb-10 p-5 rounded-2xl bg-white border border-slate-200 shadow-soft">
       <span class="text-xs font-bold uppercase tracking-wider text-slate-400 block mb-3">
-        Jump to Category Height Directories
+        {t(locale, 'pg.chart.jump')}
       </span>
       <div class="flex flex-wrap gap-2">
         {CATEGORIES.map((c) => (
@@ -115,7 +101,7 @@ const faqs = [
             class="px-3 py-1.5 rounded-lg bg-slate-100 hover:bg-brand-50 hover:text-brand-600 text-xs font-semibold text-slate-700 transition-colors flex items-center gap-1.5 group"
           >
             <CategoryIcon categoryId={c.id} className="w-3.5 h-3.5 text-slate-500 group-hover:text-brand-600" />
-            <span>{c.name}</span>
+            <span>{getLocalizedCategory(c, locale).name}</span>
           </a>
         ))}
       </div>
@@ -126,18 +112,18 @@ const faqs = [
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
         <div>
           <h2 class="text-xl sm:text-2xl font-black text-slate-900">
-            Centimeters to Feet &amp; Inches Conversion Matrix
+            {t(locale, 'pg.chart.matrixTitle')}
           </h2>
           <p class="text-xs sm:text-sm text-slate-500 mt-1">
-            Displaying full range from 140 cm (4'7") to 215 cm (7'0.7")
+            {t(locale, 'pg.chart.matrixSub')}
           </p>
         </div>
         <div class="w-full sm:w-64">
-          <label for="chart-search" class="sr-only">Search height</label>
+          <label for="chart-search" class="sr-only">{t(locale, 'pg.chart.searchLabel')}</label>
           <input
             type="text"
             id="chart-search"
-            placeholder="Filter by cm or feet (e.g. 175, 5'10)..."
+            placeholder={t(locale, 'pg.chart.searchPh')}
             class="w-full px-3.5 py-2 text-xs sm:text-sm rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 focus:outline-none"
           />
         </div>
@@ -148,12 +134,12 @@ const faqs = [
         <table class="w-full text-left border-collapse text-xs sm:text-sm">
           <thead class="sticky top-0 bg-slate-100 border-b border-slate-200 text-slate-700 font-bold z-10 shadow-xs">
             <tr>
-              <th class="py-3 px-4">Centimeters</th>
-              <th class="py-3 px-4">Meters</th>
-              <th class="py-3 px-4">Feet &amp; Inches</th>
-              <th class="py-3 px-4">Total Inches</th>
-              <th class="py-3 px-4">Benchmark Note</th>
-              <th class="py-3 px-4 text-right">Action</th>
+              <th class="py-3 px-4">{t(locale, 'pg.chart.thCm')}</th>
+              <th class="py-3 px-4">{t(locale, 'pg.chart.thM')}</th>
+              <th class="py-3 px-4">{t(locale, 'pg.chart.thFtIn')}</th>
+              <th class="py-3 px-4">{t(locale, 'pg.chart.thTotalIn')}</th>
+              <th class="py-3 px-4">{t(locale, 'pg.chart.thNote')}</th>
+              <th class="py-3 px-4 text-right">{t(locale, 'pg.chart.thAction')}</th>
             </tr>
           </thead>
           <tbody id="chart-body" class="divide-y divide-slate-100 text-slate-600 bg-white">
@@ -177,7 +163,7 @@ const faqs = [
                     href={`/compare/?h1=${row.cm}`}
                     class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-bold text-brand-600 hover:text-white hover:bg-brand-600 border border-brand-200 hover:border-transparent transition-all"
                   >
-                    Compare →
+                    {t(locale, 'pg.chart.compare')}
                   </a>
                 </td>
               </tr>
@@ -190,17 +176,17 @@ const faqs = [
     <!-- Quick Height Reference Cards -->
     <section class="mb-12">
       <h2 class="text-xl font-bold text-slate-900 mb-4">
-        Global Population Stature Milestones
+        {t(locale, 'pg.chart.milesTitle')}
       </h2>
       <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
         <div class="p-5 rounded-2xl bg-white border border-slate-200 shadow-soft">
           <div class="w-8 h-8 rounded-lg bg-pink-50 text-pink-600 flex items-center justify-center font-bold mb-3">
             ♀
           </div>
-          <h3 class="font-extrabold text-slate-900 text-base">Female Median (162 cm)</h3>
-          <span class="text-xs font-bold text-pink-600 block mt-0.5">5 feet 4 inches</span>
+          <h3 class="font-extrabold text-slate-900 text-base">{t(locale, 'pg.chart.mileF.t')}</h3>
+          <span class="text-xs font-bold text-pink-600 block mt-0.5">{t(locale, 'pg.chart.mileF.sub')}</span>
           <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-            Standard worldwide benchmark for adult women, commonly ranging between 158 cm and 168 cm across regions.
+            {t(locale, 'pg.chart.mileF.d')}
           </p>
         </div>
 
@@ -208,10 +194,10 @@ const faqs = [
           <div class="w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold mb-3">
             ♂
           </div>
-          <h3 class="font-extrabold text-slate-900 text-base">Male Median (175 cm)</h3>
-          <span class="text-xs font-bold text-blue-600 block mt-0.5">5 feet 9 inches</span>
+          <h3 class="font-extrabold text-slate-900 text-base">{t(locale, 'pg.chart.mileM.t')}</h3>
+          <span class="text-xs font-bold text-blue-600 block mt-0.5">{t(locale, 'pg.chart.mileM.sub')}</span>
           <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-            Worldwide adult male median stature, representing the global center of gravity for clothing and furniture standards.
+            {t(locale, 'pg.chart.mileM.d')}
           </p>
         </div>
 
@@ -219,10 +205,10 @@ const faqs = [
           <div class="w-8 h-8 rounded-lg bg-purple-50 text-purple-600 flex items-center justify-center font-bold mb-3">
             🏆
           </div>
-          <h3 class="font-extrabold text-slate-900 text-base">6-Foot Threshold (183 cm)</h3>
-          <span class="text-xs font-bold text-purple-600 block mt-0.5">6 feet 0 inches</span>
+          <h3 class="font-extrabold text-slate-900 text-base">{t(locale, 'pg.chart.mile6.t')}</h3>
+          <span class="text-xs font-bold text-purple-600 block mt-0.5">{t(locale, 'pg.chart.mile6.sub')}</span>
           <p class="text-xs text-slate-500 mt-2 leading-relaxed">
-            The popular height milestone representing approximately the 85th percentile for adult men globally.
+            {t(locale, 'pg.chart.mile6.d')}
           </p>
         </div>
       </div>
@@ -232,10 +218,10 @@ const faqs = [
     <section class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700 mb-8">
       <div class="mb-4">
         <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
-          Related Height Comparison Tools
+          {t(locale, 'pg.shared.relTitle')}
         </h2>
         <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-          Explore additional visual tools and calculators across the HowHeight cluster.
+          {t(locale, 'pg.shared.relSubChart')}
         </p>
       </div>
 
@@ -245,10 +231,10 @@ const faqs = [
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Height Comparison Hub
+            {t(locale, 'pg.shared.hubT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Complete measurement guide &amp; multi-category visual library.
+            {t(locale, 'pg.shared.hubD')}
           </span>
         </a>
         <a
@@ -256,10 +242,10 @@ const faqs = [
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Height Comparison Calculator
+            {t(locale, 'pg.shared.calcT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Calculate exact mathematical height differences and percentage ratios.
+            {t(locale, 'pg.shared.calcD')}
           </span>
         </a>
         <a
@@ -267,10 +253,10 @@ const faqs = [
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Height Comparison Visualizer
+            {t(locale, 'pg.shared.vizT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            2D scale canvas for side-by-side human, celebrity &amp; animal figures.
+            {t(locale, 'pg.shared.vizD')}
           </span>
         </a>
         <a
@@ -278,17 +264,17 @@ const faqs = [
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Couple Height Comparison
+            {t(locale, 'pg.shared.coupleT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Partner comparison with eye-level alignment &amp; difference metrics.
+            {t(locale, 'pg.shared.coupleD')}
           </span>
         </a>
       </div>
     </section>
 
     <!-- FAQ Section -->
-    <FAQSection faqs={faqs} />
+    <FAQSection title={t(locale, 'pg.shared.faqTitle')} faqs={faqs} />
   </div>
 </Layout>
 

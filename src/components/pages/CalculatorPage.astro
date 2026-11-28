@@ -44,9 +44,9 @@ const initialCompareHref = `${compareBaseUrl.endsWith('/') ? compareBaseUrl : co
 const quickMatchups = [
   { nameA: 'Dwayne Johnson', cmA: 196, nameB: 'Tom Cruise', cmB: 170, label: 'Dwayne Johnson vs Tom Cruise' },
   { nameA: 'Virat Kohli', cmA: 175, nameB: 'MS Dhoni', cmB: 178, label: 'Virat Kohli vs MS Dhoni' },
-  { nameA: 'Average Male', cmA: 176, nameB: 'Average Female', cmB: 162, label: 'Average Male vs Female' },
-  { nameA: 'Dwayne Johnson', cmA: 196, nameB: 'Riding Horse (withers)', cmB: 160, label: 'Dwayne Johnson vs Horse' },
-  { nameA: 'Average Male', cmA: 176, nameB: 'Standard Door', cmB: 210, label: 'Human vs Door' },
+  { nameA: t(locale, 'pg.calc.muAvgNameA'), cmA: 176, nameB: t(locale, 'pg.calc.muAvgNameB'), cmB: 162, label: t(locale, 'pg.calc.muAvgLabel') },
+  { nameA: 'Dwayne Johnson', cmA: 196, nameB: t(locale, 'pg.calc.muHorseNameB'), cmB: 160, label: t(locale, 'pg.calc.muHorseLabel') },
+  { nameA: t(locale, 'pg.calc.muDoorNameA'), cmA: 176, nameB: t(locale, 'pg.calc.muDoorNameB'), cmB: 210, label: t(locale, 'pg.calc.muDoorLabel') },
 ];
 const isComparisonCalculator = canonicalPath.includes('height-comparison-calculator');
 const pageTitle = isComparisonCalculator && locale === 'en' ? `Height Comparison Calculator | ${SITE.name}` : calc.seo.title;
@@ -77,8 +77,8 @@ const pageDesc = isComparisonCalculator && locale === 'en' ? 'Interactive height
     <Breadcrumbs
       locale={locale}
       items={[
-        { name: 'Home', url: '/' },
-        { name: 'Height Comparison', url: '/height-comparison/' },
+        { name: t(locale, 'nav.home'), url: '/' },
+        { name: t(locale, 'nav.compare'), url: '/height-comparison/' },
         { name: pageH1, url: canonicalPath },
       ]}
     />
@@ -108,7 +108,7 @@ const pageDesc = isComparisonCalculator && locale === 'en' ? 'Interactive height
       <!-- Quick Comparison Matchups from Database -->
       <div class="mb-8 p-4 sm:p-5 rounded-2xl bg-slate-50 dark:bg-slate-900/60 border border-slate-200 dark:border-slate-700">
         <span class="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 block mb-2.5">
-          Quick Preset Comparisons (From Verified Database)
+          {t(locale, 'pg.calc.presetsTitle')}
         </span>
         <div class="flex flex-wrap gap-2">
           {quickMatchups.map((m) => (
@@ -364,10 +364,10 @@ const pageDesc = isComparisonCalculator && locale === 'en' ? 'Interactive height
     <section class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-700 mb-8">
       <div class="mb-4">
         <h2 class="text-xl sm:text-2xl font-black text-slate-900 dark:text-white tracking-tight">
-          Related Height Comparison Tools
+          {t(locale, 'pg.shared.relTitle')}
         </h2>
         <p class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mt-1">
-          Explore additional visualizers, charts, and specialized comparison tools.
+          {t(locale, 'pg.shared.relSubCalc')}
         </p>
       </div>
 
@@ -377,10 +377,10 @@ const pageDesc = isComparisonCalculator && locale === 'en' ? 'Interactive height
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Height Comparison Hub
+            {t(locale, 'pg.shared.hubT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Complete guide &amp; multi-category visual comparison workspace.
+            {t(locale, 'pg.shared.hubDCalc')}
           </span>
         </a>
         <a
@@ -388,10 +388,10 @@ const pageDesc = isComparisonCalculator && locale === 'en' ? 'Interactive height
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Height Comparison Visualizer
+            {t(locale, 'pg.shared.vizT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            2D scale canvas for side-by-side human, celebrity &amp; animal figures.
+            {t(locale, 'pg.shared.vizD')}
           </span>
         </a>
         <a
@@ -399,10 +399,10 @@ const pageDesc = isComparisonCalculator && locale === 'en' ? 'Interactive height
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Height Comparison Chart
+            {t(locale, 'pg.shared.chartT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Authoritative conversion table in centimeters, meters &amp; feet/inches.
+            {t(locale, 'pg.shared.chartD')}
           </span>
         </a>
         <a
@@ -410,17 +410,17 @@ const pageDesc = isComparisonCalculator && locale === 'en' ? 'Interactive height
           class="p-4 rounded-2xl bg-white dark:bg-slate-800 border border-slate-200/80 dark:border-slate-700 hover:border-brand-500 hover:shadow-soft transition-all group"
         >
           <span class="text-xs font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-blue-400 block mb-1">
-            Couple Height Comparison
+            {t(locale, 'pg.shared.coupleT')}
           </span>
           <span class="text-[11px] text-slate-500 dark:text-slate-400 block">
-            Partner comparison with eye-level alignment &amp; difference metrics.
+            {t(locale, 'pg.shared.coupleD')}
           </span>
         </a>
       </div>
     </section>
 
     <!-- FAQ Section -->
-    <FAQSection faqs={calc.faqs} />
+    <FAQSection title={t(locale, 'pg.shared.faqTitle')} faqs={calc.faqs} />
   </div>
 </Layout>
 

@@ -3,6 +3,7 @@ import { calculateScale, generateRulerTicks } from './comparison';
 import { formatHeight } from './height';
 import { renderEntitySvg } from './renderModel';
 import { getArchetypeAsset, type ArchetypeAsset } from './archetypes';
+import { cs } from './i18n-client';
 
 // In-memory cache for raw SVG content to prevent redundant HTTP requests
 const svgTextCache = new Map<string, string>();
@@ -209,11 +210,11 @@ export async function downloadChartAsPng(
   // 2. Header & Branding
   ctx.fillStyle = '#0f172a';
   ctx.font = 'bold 24px Inter, system-ui, sans-serif';
-  ctx.fillText('Height Comparison Tool', 40, 52);
+  ctx.fillText(cs('app.export.title'), 40, 52);
 
   ctx.fillStyle = '#64748b';
   ctx.font = '14px Inter, system-ui, sans-serif';
-  ctx.fillText('Human, Celebrity, Animal & Object Comparison • Accurate Scale', 40, 76);
+  ctx.fillText(cs('app.export.subtitle'), 40, 76);
 
   // 3. Draw Horizontal Grid Lines and Ruler Ticks (Dual Metric cm & Imperial ft)
   const cmTicks = generateRulerTicks(rulerMaxCm, 'cm');
@@ -281,9 +282,9 @@ export async function downloadChartAsPng(
   ctx.fillStyle = '#475569';
   ctx.font = 'bold 12px Inter, sans-serif';
   ctx.textAlign = 'left';
-  ctx.fillText('FLOOR (0 cm)', rulerLeft, chartBottom + 20);
+  ctx.fillText(cs('app.export.floorCm'), rulerLeft, chartBottom + 20);
   ctx.textAlign = 'right';
-  ctx.fillText('(0 ft) FLOOR', chartEndX, chartBottom + 20);
+  ctx.fillText(cs('app.export.floorFt'), chartEndX, chartBottom + 20);
 
   // 5. Draw Entities (Figures, Animals, Objects)
   for (let i = 0; i < metrics.length; i++) {
@@ -343,31 +344,15 @@ export async function downloadChartAsPng(
     ctx.fillStyle = '#0f172a';
     ctx.fillText(item.name, centerX, chartBottom + 40);
 
-    let typeSubtitle = 'Entity';
+    let typeSubtitle: string;
     if (item.category === 'custom' || item.customImageUrl) {
-      typeSubtitle = 'Custom Image';
-    } else if (item.category === 'male' || item.category === 'female') {
-      typeSubtitle = item.category === 'male' ? 'Male' : 'Female';
-    } else if (item.category === 'animals') {
-      typeSubtitle = 'Animal';
-    } else if (item.category === 'objects') {
-      typeSubtitle = 'Object';
-    } else if (item.category === 'apparel') {
-      typeSubtitle = 'Apparel';
-    } else if (item.category === 'fictional') {
-      typeSubtitle = 'Fictional';
-    } else if (item.category === 'plants') {
-      typeSubtitle = 'Plant';
-    } else if (item.category === 'sports') {
-      typeSubtitle = 'Sports';
-    } else if (item.category === 'anime') {
-      typeSubtitle = 'Anime';
-    } else if (item.category === 'films') {
-      typeSubtitle = 'Film';
-    } else if (item.category === 'celebrities') {
-      typeSubtitle = 'Celebrity';
+      typeSubtitle = cs('app.typeDetail.custom');
+    } else if (
+      ['male', 'female', 'animals', 'objects', 'apparel', 'fictional', 'plants', 'sports', 'anime', 'films', 'celebrities'].includes(item.category)
+    ) {
+      typeSubtitle = cs(`appcat.${item.category}`);
     } else {
-      typeSubtitle = (item as any).profession || (item as any).gender || 'Entity';
+      typeSubtitle = (item as any).profession || (item as any).gender || cs('app.export.entity');
     }
     ctx.fillStyle = '#64748b';
     ctx.font = '12px Inter, sans-serif';

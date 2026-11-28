@@ -24,7 +24,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
       </div>
       <div class="min-w-0">
         <h2 id="form-title" class="font-bold text-slate-900 text-sm leading-tight truncate">{t(locale, 'sidebar.assetLibrary')}</h2>
-        <p id="form-subtitle" class="text-[11px] text-slate-500 truncate">1,400+ figures + Custom Image</p>
+        <p id="form-subtitle" class="text-[11px] text-slate-500 truncate">{t(locale, 'app.figuresCount')}</p>
       </div>
     </div>
   </div>
@@ -41,7 +41,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
       type="button"
       id="upload-custom-image-btn"
       class="w-full py-2 px-3 rounded-xl bg-gradient-to-r from-brand-600 to-indigo-600 hover:from-brand-700 hover:to-indigo-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-soft-sm hover:shadow-soft transition-all active:scale-[0.98]"
-      title="Upload your own photo or custom silhouette to compare"
+      title={t(locale, 'app.uploadTitle')}
     >
       <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
         <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
@@ -100,7 +100,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
             class="category-tab-btn flex items-center justify-between px-2 py-1 rounded-lg text-[11px] font-semibold transition-all text-slate-600 hover:text-slate-900 hover:bg-white/60"
             data-category={cat.id}
           >
-            <span class="truncate">{cat.label}</span>
+            <span class="truncate">{t(locale, `appcat.${cat.id}`)}</span>
             <span class="text-[10px] text-slate-400 font-medium ml-0.5">{count}</span>
           </button>
         );
@@ -114,7 +114,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
       <span class="text-[11px] font-bold uppercase tracking-wider text-slate-600">
         {t(locale, 'action.add')}
       </span>
-      <span class="text-[9px] text-slate-400 font-medium">Auto scales</span>
+      <span class="text-[9px] text-slate-400 font-medium">{t(locale, 'app.autoScales')}</span>
     </div>
     
     <div 
@@ -136,9 +136,9 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
           data-viewbox={asset.viewBox}
           data-anchor={asset.measurementAnchor ? `${asset.measurementAnchor.groundY},${asset.measurementAnchor.measurementY}` : ''}
           data-is-png={Boolean(asset.filename?.endsWith('.png') || asset.publicPath?.endsWith('.png')) ? 'true' : 'false'}
-          title={asset.status === 'verified' && asset.heightCm 
-            ? `Click to add ${asset.name} (${asset.heightCm} cm)` 
-            : `Click to add ${asset.name} (Needs review / Height unavailable)`}
+          title={asset.status === 'verified' && asset.heightCm
+            ? t(locale, 'app.clickToAdd', { name: asset.name, cm: asset.heightCm })
+            : t(locale, 'app.clickToAddReview', { name: asset.name })}
         >
           <!-- SVG Thumbnail via lazy-loaded img -->
           <div class="w-full h-14 flex items-end justify-center py-0.5 overflow-hidden pointer-events-none relative">
@@ -151,7 +151,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
             />
             {asset.status !== 'verified' && (
               <span class="absolute top-0.5 right-0.5 text-[8px] font-bold text-amber-700 bg-amber-100/90 px-1 py-0.2 rounded leading-tight">
-                Review
+                {t(locale, 'card.review')}
               </span>
             )}
           </div>
@@ -166,7 +166,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
               </span>
             ) : (
               <span class="text-[8.5px] font-medium text-slate-400 truncate">
-                Height unavailable
+                {t(locale, 'app.heightUnavailable')}
               </span>
             )}
           </div>
@@ -174,7 +174,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
       ))}
     </div>
     <p id="no-assets-msg" class="hidden text-xs text-center py-4 text-slate-400 font-medium">
-      No assets found matching your search.
+      {t(locale, 'app.noAssets')}
     </p>
   </div>
 
@@ -183,28 +183,28 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
     <div class="flex items-center justify-between">
       <span class="text-xs font-bold uppercase tracking-wider text-slate-900 flex items-center gap-1.5">
         <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-        <span id="edit-panel-title">Selected Entity Controls</span>
+        <span id="edit-panel-title">{t(locale, 'app.selectedControls')}</span>
       </span>
       <button 
         type="button" 
         id="deselect-entity-btn" 
         class="text-[11px] font-semibold text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 px-2 py-1 rounded transition-colors"
       >
-        Done
+        {t(locale, 'app.done')}
       </button>
     </div>
 
     <!-- Edit Name -->
     <div>
       <label for="edit-entity-name" class="block text-[11px] font-semibold uppercase tracking-wider text-slate-600 mb-1">
-        Label / Name
+        {t(locale, 'app.labelName')}
       </label>
       <input
         type="text"
         id="edit-entity-name"
         maxlength="40"
         class="w-full px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500 transition-all"
-        placeholder="Name"
+        placeholder={t(locale, 'app.nameShort')}
       />
     </div>
 
@@ -212,7 +212,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
     <div>
       <div class="flex items-center justify-between mb-1">
         <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-600">
-          Physical Height
+          {t(locale, 'app.physicalHeight')}
         </label>
         <div class="flex items-center bg-slate-100 p-0.5 rounded text-[10px] font-semibold" role="tablist">
           <button type="button" id="unit-tab-ft" class="px-2 py-0.5 rounded font-bold text-brand-600 bg-white shadow-soft-sm" data-unit="ft">
@@ -280,7 +280,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
     <!-- Color Chips -->
     <div>
       <label class="block text-[11px] font-semibold uppercase tracking-wider text-slate-600 mb-1">
-        Silhouette Color
+        {t(locale, 'app.silhouetteColor')}
       </label>
       <div class="flex flex-wrap gap-1.5" id="color-picker-chips">
         {PRESET_COLORS.map((col, idx) => (
@@ -299,7 +299,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
     <div>
       <div class="flex items-center justify-between mb-1">
         <label for="edit-opacity-slider" class="block text-[11px] font-semibold uppercase tracking-wider text-slate-600">
-          Opacity
+          {t(locale, 'app.opacity')}
         </label>
         <span id="opacity-val-label" class="text-[10px] font-bold text-slate-500">100%</span>
       </div>
@@ -325,7 +325,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
           <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
           <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
         </svg>
-        Duplicate
+        {t(locale, 'app.duplicate')}
       </button>
       <button
         type="button"
@@ -336,7 +336,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
           <polyline points="3 6 5 6 21 6"></polyline>
           <path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path>
         </svg>
-        Delete
+        {t(locale, 'app.delete')}
       </button>
     </div>
   </div>
@@ -357,32 +357,32 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
             <circle cx="8.5" cy="8.5" r="1.5"></circle>
             <polyline points="21 15 16 10 5 21"></polyline>
           </svg>
-          Add Custom Figure
+          {t(locale, 'sidebar.addPerson')}
         </h3>
         <button type="button" id="close-custom-modal-btn" class="text-slate-400 hover:text-slate-700 p-1 rounded-lg text-sm font-bold">✕</button>
       </div>
 
       <!-- Preview -->
       <div class="flex flex-col items-center justify-center p-3 bg-slate-50 border border-dashed border-slate-200 rounded-xl">
-        <img id="custom-modal-preview-img" src="" alt="Preview" class="max-h-36 object-contain rounded-lg shadow-sm" />
-        <span id="custom-modal-aspect-hint" class="text-[10px] text-slate-400 mt-1.5 font-medium">Aspect ratio detected</span>
+        <img id="custom-modal-preview-img" src="" alt={t(locale, 'app.preview')} class="max-h-36 object-contain rounded-lg shadow-sm" />
+        <span id="custom-modal-aspect-hint" class="text-[10px] text-slate-400 mt-1.5 font-medium">{t(locale, 'app.aspectDetected')}</span>
       </div>
 
       <!-- Form Inputs -->
       <div class="space-y-3">
         <div>
-          <label for="custom-modal-name" class="block text-[11px] font-bold text-slate-700 mb-1">Figure Label / Name</label>
+          <label for="custom-modal-name" class="block text-[11px] font-bold text-slate-700 mb-1">{t(locale, 'app.figureLabel')}</label>
           <input 
             type="text" 
             id="custom-modal-name" 
-            placeholder="e.g. My Photo" 
+            placeholder={t(locale, 'app.myPhoto')} 
             maxlength="40"
             class="w-full px-3 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-900 focus:bg-white focus:outline-none focus:ring-2 focus:ring-brand-500"
           />
         </div>
 
         <div>
-          <label for="custom-modal-height" class="block text-[11px] font-bold text-slate-700 mb-1">Physical Height (cm)</label>
+          <label for="custom-modal-height" class="block text-[11px] font-bold text-slate-700 mb-1">{t(locale, 'app.physicalHeightCm')}</label>
           <div class="flex items-center gap-2">
             <input 
               type="number" 
@@ -398,7 +398,7 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
         </div>
 
         <div>
-          <label class="block text-[11px] font-bold text-slate-700 mb-1">Label Color Accent</label>
+          <label class="block text-[11px] font-bold text-slate-700 mb-1">{t(locale, 'app.colorAccent')}</label>
           <div class="flex flex-wrap gap-1.5" id="custom-modal-color-chips">
             {PRESET_COLORS.slice(0, 8).map((col) => (
               <button
@@ -420,14 +420,14 @@ const initialStaticAssets = ASSET_REGISTRY.filter((a) => a.searchable).slice(0, 
           id="cancel-custom-modal-btn"
           class="flex-1 py-2 px-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-slate-100 text-slate-700 text-xs font-semibold transition-colors"
         >
-          Cancel
+          {t(locale, 'app.cancel')}
         </button>
         <button
           type="button"
           id="confirm-custom-modal-btn"
           class="flex-1 py-2 px-3 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-xs font-bold shadow-soft-sm transition-colors"
         >
-          Add to Canvas
+          {t(locale, 'app.addToCanvas')}
         </button>
       </div>
     </div>

@@ -11,6 +11,25 @@ import {
   BENCHMARK_SCALE_PRESET,
 } from '../lib/constants';
 import { calculateDifference, calculateScale, generateRulerTicks, sortPeople } from '../lib/comparison';
+import { cs, initClientStrings } from '../lib/i18n-client';
+
+/** Localized asset-category label (falls back to the raw category id). */
+function catLabel(category: string): string {
+  const v = cs(`appcat.${category}`);
+  return v.startsWith('appcat.') ? category.toUpperCase() : v;
+}
+
+/** Localized chart type label (falls back to the category label, uppercased). */
+function typeLabelFor(category: string): string {
+  const v = cs(`app.type.${category}`);
+  return v.startsWith('app.type.') ? catLabel(category).toUpperCase() : v;
+}
+
+/** Localized summary type detail (falls back to the category label). */
+function typeDetailFor(category: string): string {
+  const v = cs(`app.typeDetail.${category}`);
+  return v.startsWith('app.typeDetail.') ? catLabel(category) : v;
+}
 import { cmToFeetInches, feetInchesToCm, formatHeight, formatHeightFull } from '../lib/height';
 import { copyToClipboard, decodePeopleFromUrl, encodePeopleToUrl } from '../lib/share';
 import { renderEntitySvg, fetchSvgData, hasCachedSvg, setModelResolver } from '../lib/renderModel';
@@ -241,6 +260,7 @@ class HeightComparisonApp {
   private hasActuallyMovedDrawing: boolean = false;
 
   init() {
+    initClientStrings();
     this.cacheDomElements();
     this.loadInitialState();
     this.attachEventListeners();
@@ -547,17 +567,17 @@ class HeightComparisonApp {
       const heightDisplay =
         asset.status === 'verified' && asset.heightCm
           ? `<span class="text-[9px] font-semibold text-slate-500">${asset.heightCm} cm</span>`
-          : `<span class="text-[8.5px] font-medium text-slate-400 truncate">Height unavailable</span>`;
+          : `<span class="text-[8.5px] font-medium text-slate-400 truncate">${cs('app.heightUnavailable')}</span>`;
 
       const reviewBadge =
         asset.status !== 'verified'
-          ? `<span class="absolute top-0.5 right-0.5 text-[8px] font-bold text-amber-700 bg-amber-100/90 px-1 py-0.2 rounded leading-tight">Review</span>`
+          ? `<span class="absolute top-0.5 right-0.5 text-[8px] font-bold text-amber-700 bg-amber-100/90 px-1 py-0.2 rounded leading-tight">${cs('card.review')}</span>`
           : '';
 
       const cardTitle =
         asset.status === 'verified' && asset.heightCm
-          ? `Click to add ${escapeHtml(asset.name)} (${asset.heightCm} cm)`
-          : `Click to add ${escapeHtml(asset.name)} (Needs review / Height unavailable)`;
+          ? cs('app.clickToAdd', { name: escapeHtml(asset.name), cm: asset.heightCm ?? '' })
+          : cs('app.clickToAddReview', { name: escapeHtml(asset.name) });
 
       const tagsAttr = (asset.tags || []).join(',');
       const aliasesAttr = (asset.aliases || []).join(',');
@@ -631,7 +651,7 @@ class HeightComparisonApp {
       const totalCount = filteredAssets.length;
 
       if (this.assetCountBadge) {
-        this.assetCountBadge.textContent = `${totalCount} Available`;
+        this.assetCountBadge.textContent = cs('app.available', { count: totalCount });
       }
 
       if (this.noAssetsMsg) {
@@ -803,7 +823,7 @@ class HeightComparisonApp {
       if (!file) return;
 
       if (!file.type.startsWith('image/')) {
-        alert('Please select an image file (PNG, JPG, WebP, SVG).');
+        alert(cs('app.alert.selectImage'));
         return;
       }
 
@@ -821,7 +841,7 @@ class HeightComparisonApp {
             this.customModalPreviewImg.src = dataUrl;
           }
           if (this.customModalAspectHint) {
-            this.customModalAspectHint.textContent = `Aspect ratio: ${this.pendingCustomImageAspect.toFixed(2)}:1 (${img.naturalWidth} × ${img.naturalHeight}px)`;
+            this.customModalAspectHint.textContent = cs('app.aspectRatio', { ratio: this.pendingCustomImageAspect.toFixed(2), w: img.naturalWidth, h: img.naturalHeight });
           }
           if (this.customModalNameInput) {
             this.customModalNameInput.value = file.name.replace(/\.[^/.]+$/, '').trim() || 'My Photo';
@@ -945,7 +965,7 @@ class HeightComparisonApp {
     });
 
     this.drawClearBtn?.addEventListener('click', () => {
-      if (this.drawStrokes.length > 0 && confirm('Clear all drawings from the canvas?')) {
+      if (this.drawStrokes.length > 0 && confirm(cs('app.draw.clearConfirm'))) {
         this.pushDrawUndo();
         this.drawStrokes = [];
         this.redrawAllStrokes();
@@ -989,7 +1009,7 @@ class HeightComparisonApp {
     this.isDrawingMode = active;
     if (active) {
       this.toggleDrawModeBtn?.classList.add('bg-brand-50', 'text-brand-700', 'border-brand-300', 'ring-2', 'ring-brand-500');
-      if (this.drawBtnText) this.drawBtnText.textContent = 'Drawing...';
+      if (this.drawBtnText) this.drawBtnText.textContent = cs('app.chart.drawing');
       this.drawingToolbar?.classList.remove('hidden');
       this.drawingCanvas?.classList.remove('pointer-events-none');
       this.drawingCanvas?.classList.add('pointer-events-auto');
@@ -997,7 +1017,7 @@ class HeightComparisonApp {
       this.resizeDrawingCanvas();
     } else {
       this.toggleDrawModeBtn?.classList.remove('bg-brand-50', 'text-brand-700', 'border-brand-300', 'ring-2', 'ring-brand-500');
-      if (this.drawBtnText) this.drawBtnText.textContent = 'Draw';
+      if (this.drawBtnText) this.drawBtnText.textContent = cs('canvas.draw');
       this.drawingToolbar?.classList.add('hidden');
       this.drawingCanvas?.classList.remove('pointer-events-auto');
       this.drawingCanvas?.classList.add('pointer-events-none');
@@ -1471,19 +1491,19 @@ class HeightComparisonApp {
 
     if (!this.state.selectedId) {
       this.entityEditPanel.classList.add('opacity-50', 'pointer-events-none');
-      if (this.editPanelTitle) this.editPanelTitle.textContent = 'No Entity Selected';
+      if (this.editPanelTitle) this.editPanelTitle.textContent = cs('app.noEntitySelected');
       return;
     }
 
     const item = this.getSelectedItem();
     if (!item) {
       this.entityEditPanel.classList.add('opacity-50', 'pointer-events-none');
-      if (this.editPanelTitle) this.editPanelTitle.textContent = 'No Entity Selected';
+      if (this.editPanelTitle) this.editPanelTitle.textContent = cs('app.noEntitySelected');
       return;
     }
 
     this.entityEditPanel.classList.remove('opacity-50', 'pointer-events-none');
-    if (this.editPanelTitle) this.editPanelTitle.textContent = `Controls: ${item.name}`;
+    if (this.editPanelTitle) this.editPanelTitle.textContent = cs('app.controlsFor', { name: item.name });
 
     if (this.editEntityNameInput && document.activeElement !== this.editEntityNameInput) {
       this.editEntityNameInput.value = item.name;
@@ -2072,7 +2092,7 @@ class HeightComparisonApp {
     this.precisionToolbar.classList.remove('hidden');
     if (this.selectedItemColorDot) this.selectedItemColorDot.style.backgroundColor = item.color;
     if (this.selectedItemName) this.selectedItemName.textContent = item.name;
-    if (this.selectedItemBadge) this.selectedItemBadge.textContent = item.category.toUpperCase();
+    if (this.selectedItemBadge) this.selectedItemBadge.textContent = catLabel(item.category);
 
     if (this.selectedHeightDisplay) {
       this.selectedHeightDisplay.textContent = formatHeight(item.heightCm, this.state.rulerUnit);
@@ -2103,7 +2123,7 @@ class HeightComparisonApp {
 
   private async handleShare() {
     if (this.state.people.length === 0) {
-      alert('Please add at least one item to share.');
+      alert(cs('app.share.needItem'));
       return;
     }
 
@@ -2115,7 +2135,7 @@ class HeightComparisonApp {
     const copied = await copyToClipboard(url);
     if (copied && this.shareBtn && this.shareBtnText) {
       const originalText = this.shareBtnText.textContent;
-      this.shareBtnText.textContent = 'Link copied!';
+      this.shareBtnText.textContent = cs('app.share.linkCopied');
       this.shareBtn.classList.add('text-emerald-600', 'border-emerald-300', 'bg-emerald-50');
 
       setTimeout(() => {
@@ -2123,13 +2143,13 @@ class HeightComparisonApp {
         this.shareBtn?.classList.remove('text-emerald-600', 'border-emerald-300', 'bg-emerald-50');
       }, 2500);
     } else {
-      prompt('Copy your comparison link:', url);
+      prompt(cs('app.share.copyPrompt'), url);
     }
   }
 
   private async handleDownload() {
     if (this.state.people.length === 0) {
-      alert('Please add at least one item to export.');
+      alert(cs('app.export.needItem'));
       return;
     }
 
@@ -2153,7 +2173,7 @@ class HeightComparisonApp {
   }
 
   private handleReset() {
-    if (confirm('Reset comparison back to the default demo items?')) {
+    if (confirm(cs('app.alert.resetConfirm'))) {
       this.pushHistory();
       this.state.people = INITIAL_PEOPLE.map((it) => this.migrateItem(it));
       this.state.sortMode = 'added';
@@ -2197,7 +2217,7 @@ class HeightComparisonApp {
       .map((item) => {
         const isSelected = this.state.selectedId === item.id;
         const formattedFtIn = cmToFeetInches(item.heightCm).formatted;
-        const typeSubtitle = (item.category === 'custom' || item.customImageUrl) ? 'CUSTOM IMAGE' : item.category.toUpperCase();
+        const typeSubtitle = (item.category === 'custom' || item.customImageUrl) ? cs('app.type.custom') : catLabel(item.category);
 
         return `
           <div class="flex items-center justify-between p-2.5 rounded-xl border ${
@@ -2219,8 +2239,8 @@ class HeightComparisonApp {
                 type="button"
                 class="delete-person-btn p-1.5 text-slate-400 hover:text-rose-600 hover:bg-white rounded-lg transition-colors"
                 data-id="${item.id}"
-                title="Delete ${item.name}"
-                aria-label="Delete ${item.name}"
+                title="${cs('app.deleteItem', { name: item.name })}"
+                aria-label="${cs('app.deleteItem', { name: item.name })}"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polyline points="3 6 5 6 21 6"></polyline>
@@ -2261,7 +2281,7 @@ class HeightComparisonApp {
     const count = items.length;
 
     if (this.chartTotalCount) {
-      this.chartTotalCount.textContent = `${count} ${count === 1 ? 'Item' : 'Items'}`;
+      this.chartTotalCount.textContent = `${count} ${cs(count === 1 ? 'app.chart.item' : 'app.chart.items')}`;
     }
 
     if (count === 0) {
@@ -2351,16 +2371,10 @@ class HeightComparisonApp {
         const fullDetails = formatHeightFull(item.heightCm);
         const isSelected = this.state.selectedId === item.id;
 
-        let typeLabel = item.category.toUpperCase();
-        if (item.category === 'male') typeLabel = 'MALE (VERTEX)';
-        else if (item.category === 'female') typeLabel = 'FEMALE (VERTEX)';
-        else if (item.category === 'animals') typeLabel = 'ANIMAL (SHOULDER/WITHERS)';
-        else if (item.category === 'objects') typeLabel = 'OBJECT (GROUND TO TOP)';
-        else if (item.category === 'apparel') typeLabel = 'APPAREL (REFERENCE SCALE)';
-        else if (item.category === 'fictional') typeLabel = 'FICTIONAL (SCALE BENCHMARK)';
-        else if (item.category === 'plants') typeLabel = 'PLANT (MAX REACH)';
-        else if (item.category === 'sports') typeLabel = 'SPORTS (REGULATION HEIGHT)';
-        else if (item.category === 'custom' || item.customImageUrl) typeLabel = 'CUSTOM IMAGE';
+        const typeLabel =
+          item.category === 'custom' || item.customImageUrl
+            ? cs('app.type.custom')
+            : typeLabelFor(item.category);
 
         const positionStyle = isManual
           ? `position: absolute; left: ${item.positionX ?? 50}px; bottom: 0; width: 140px;`
@@ -2407,7 +2421,7 @@ class HeightComparisonApp {
               } items-center justify-center cursor-ns-resize touch-none select-none group/handle"
               style="bottom: ${Math.max(measurementHeightPx, totalSvgHeightPx) + labelOffset + 26}px;"
               data-id="${item.id}"
-              title="Drag up/down to adjust physical height (Shift for 5 cm snap)"
+              title="${cs('app.chart.dragHandleTitle')}"
             >
               <div class="w-6 h-6 rounded-full bg-white border-2 border-brand-600 shadow-md flex items-center justify-center text-brand-600 hover:scale-110 hover:bg-brand-50 transition-all">
                 <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -2726,12 +2740,12 @@ class HeightComparisonApp {
     this.diffStatement.textContent = diff.statement;
 
     if (diff.isEqual) {
-      this.diffBadgeImperial.textContent = '0 in difference';
-      this.diffBadgeMetric.textContent = '0 cm difference';
+      this.diffBadgeImperial.textContent = cs('app.diff.zeroIn');
+      this.diffBadgeMetric.textContent = cs('app.diff.zeroCm');
     } else {
-      const inchWord = diff.diffInchesRounded === 1 ? 'inch' : 'inches';
-      this.diffBadgeImperial.textContent = `${diff.diffInchesRounded} ${inchWord} difference`;
-      this.diffBadgeMetric.textContent = `${diff.diffCm} cm difference`;
+      const inchWord = cs(diff.diffInchesRounded === 1 ? 'app.diff.inch' : 'app.diff.inches');
+      this.diffBadgeImperial.textContent = cs('app.diff.badgeIn', { n: diff.diffInchesRounded, inchWord });
+      this.diffBadgeMetric.textContent = cs('app.diff.badgeCm', { cm: diff.diffCm });
     }
   }
 
@@ -2755,10 +2769,10 @@ class HeightComparisonApp {
 
     const tallestItem = items.find((p) => p.heightCm === maxHeight);
     if (this.summaryTallestStat && tallestItem) {
-      this.summaryTallestStat.textContent = `Tallest: ${tallestItem.name} (${formatHeight(maxHeight, this.state.rulerUnit)})`;
+      this.summaryTallestStat.textContent = cs('app.summary.tallestStat', { name: tallestItem.name, height: formatHeight(maxHeight, this.state.rulerUnit) });
     }
     if (this.summaryAverageStat) {
-      this.summaryAverageStat.textContent = `Average: ${formatHeight(avgHeight, this.state.rulerUnit)}`;
+      this.summaryAverageStat.textContent = cs('app.summary.averageStat', { height: formatHeight(avgHeight, this.state.rulerUnit) });
     }
 
     this.summaryTableBody.innerHTML = items
@@ -2766,31 +2780,10 @@ class HeightComparisonApp {
         const diffFromTallest = maxHeight - item.heightCm;
         const diffText =
           diffFromTallest === 0
-            ? '<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">Tallest</span>'
+            ? `<span class="text-xs font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded">${cs('app.summary.tallest')}</span>`
             : `<span class="text-xs text-slate-500">-${(diffFromTallest / 2.54).toFixed(1)} in (-${diffFromTallest.toFixed(1)} cm)</span>`;
 
-        let typeDetail = item.category.toUpperCase();
-        if (item.category === 'male' || item.category === 'female') {
-          typeDetail = item.category === 'male' ? 'Male Human' : 'Female Human';
-        } else if (item.category === 'animals') {
-          typeDetail = 'Animal (Shoulder/Withers)';
-        } else if (item.category === 'objects') {
-          typeDetail = 'Object (Ground to Top)';
-        } else if (item.category === 'apparel') {
-          typeDetail = 'Apparel / Gear';
-        } else if (item.category === 'fictional') {
-          typeDetail = 'Fictional Creature';
-        } else if (item.category === 'plants') {
-          typeDetail = 'Plant / Flora';
-        } else if (item.category === 'sports') {
-          typeDetail = 'Sports Equipment';
-        } else if (item.category === 'anime') {
-          typeDetail = 'Anime Character';
-        } else if (item.category === 'films') {
-          typeDetail = 'Film Character / Item';
-        } else if (item.category === 'celebrities') {
-          typeDetail = 'Celebrity Figure';
-        }
+        const typeDetail = typeDetailFor(item.category);
 
         return `
           <tr class="hover:bg-slate-50/80 transition-colors">
@@ -2798,7 +2791,7 @@ class HeightComparisonApp {
               <span class="w-3 h-3 rounded-full flex-shrink-0" style="background-color: ${item.color};"></span>
               <span class="font-bold text-slate-900">${item.name}</span>
             </td>
-            <td class="py-3 px-4 capitalize font-medium text-slate-700">${item.category}</td>
+            <td class="py-3 px-4 capitalize font-medium text-slate-700">${catLabel(item.category)}</td>
             <td class="py-3 px-4 text-xs text-slate-600">${typeDetail}</td>
             <td class="py-3 px-4 font-semibold text-slate-800">${cmToFeetInches(item.heightCm).formatted}</td>
             <td class="py-3 px-4 font-semibold text-slate-800">${Math.round(item.heightCm)} cm</td>
@@ -2813,23 +2806,10 @@ class HeightComparisonApp {
         const diffFromTallest = maxHeight - item.heightCm;
         const diffLabel =
           diffFromTallest === 0
-            ? '<span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">Tallest</span>'
+            ? `<span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded">${cs('app.summary.tallest')}</span>`
             : `<span class="text-[11px] text-slate-500">-${(diffFromTallest / 2.54).toFixed(1)} in</span>`;
 
-        let typeDetail = item.category.toUpperCase();
-        if (item.category === 'male' || item.category === 'female') {
-          typeDetail = item.category === 'male' ? 'Male Human' : 'Female Human';
-        } else if (item.category === 'animals') {
-          typeDetail = 'Animal (Shoulder/Withers)';
-        } else if (item.category === 'objects') {
-          typeDetail = 'Object (Ground to Top)';
-        } else if (item.category === 'anime') {
-          typeDetail = 'Anime Character';
-        } else if (item.category === 'films') {
-          typeDetail = 'Film Character / Item';
-        } else if (item.category === 'celebrities') {
-          typeDetail = 'Celebrity Figure';
-        }
+        const typeDetail = typeDetailFor(item.category);
 
         return `
           <div class="p-3.5 rounded-xl border border-slate-200/80 bg-slate-50/50 flex flex-col gap-1.5">
@@ -2838,7 +2818,7 @@ class HeightComparisonApp {
                 <span class="w-3 h-3 rounded-full" style="background-color: ${item.color};"></span>
                 <span class="font-bold text-sm text-slate-900">${item.name}</span>
               </div>
-              <span class="text-xs font-semibold uppercase text-brand-600 bg-brand-50 px-1.5 py-0.5 rounded">${item.category}</span>
+              <span class="text-xs font-semibold uppercase text-brand-600 bg-brand-50 px-1.5 py-0.5 rounded">${catLabel(item.category)}</span>
             </div>
             <div class="text-xs text-slate-500">${typeDetail}</div>
             <div class="flex items-center justify-between text-xs pt-1 border-t border-slate-100">
